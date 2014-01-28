@@ -28,10 +28,10 @@
 <config>
     <global>
         <install>
-            <date><![CDATA[Mon, 27 Jan 2014 21:09:43 +0000]]></date>
+            <date><![CDATA[Tue, 28 Jan 2014 02:29:29 +0000]]></date>
         </install>
         <crypt>
-            <key><![CDATA[dacb95af9599c7aa86f7f246adf7538f]]></key>
+            <key><![CDATA[17adde3f67eabdaa6453b74210185c33]]></key>
         </crypt>
         <disable_local_modules>false</disable_local_modules>
         <resources>
@@ -43,7 +43,7 @@
                     <host><![CDATA[localhost]]></host>
                     <username><![CDATA[jack]]></username>
                     <password><![CDATA[jack]]></password>
-                    <dbname><![CDATA[artxchange]]></dbname>
+                    <dbname><![CDATA[magento]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
                     <type><![CDATA[pdo_mysql]]></type>
