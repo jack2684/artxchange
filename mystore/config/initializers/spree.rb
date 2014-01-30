@@ -12,3 +12,8 @@ Spree.config do |config|
 end
 
 Spree.user_class = "Spree::User"
+
+Spree.config do |config|
+  config.site_name = "Jack's Toybox"
+  config.logo = "store/artxchange_267x84.png"
+end
