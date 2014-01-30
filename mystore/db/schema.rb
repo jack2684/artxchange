@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140129054337) do
+ActiveRecord::Schema.define(version: 20140130001017) do
 
   create_table "spree_activators", force: true do |t|
     t.string   "description"
@@ -674,6 +674,7 @@ ActiveRecord::Schema.define(version: 20140129054337) do
     t.string   "cost_currency"
     t.boolean  "track_inventory",                         default: true
     t.datetime "updated_at"
+    t.decimal  "sale_price"
   end
 
   add_index "spree_variants", ["product_id"], name: "index_spree_variants_on_product_id"

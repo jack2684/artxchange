@@ -1,0 +1,2 @@
+module SpreeHelper
+end

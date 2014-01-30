@@ -60,4 +60,7 @@ Mystore::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  # a router for tutorial extension
+  # get "/sale" => "home#sale"
 end

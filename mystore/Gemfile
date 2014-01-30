@@ -48,4 +48,8 @@ gem 'spree', '2.1.4'
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-1-stable'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-1-stable'
 
+# This is the fancy theme
 gem 'spree_fancy', :github => 'spree/spree_fancy', :branch => '2-1-stable'
+
+# This is the tutorial extension 
+gem 'spree_simple_sales', :path => '../spree_simple_sales'
