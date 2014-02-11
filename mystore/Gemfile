@@ -53,3 +53,6 @@ gem 'spree_fancy', :github => 'spree/spree_fancy', :branch => '2-1-stable'
 
 # This is the tutorial extension 
 gem 'spree_simple_sales', :path => '../spree_simple_sales'
+
+# try cms 
+#gem 'spree_simple_cms', :git => 'git://github.com/damianogiacomello/spree_simple_cms'
