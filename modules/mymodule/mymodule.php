@@ -48,7 +48,8 @@ class MyModule extends Module
         $this->context->smarty->assign(
             array(
                 'my_module_name' => Configuration::get('MYMODULE_NAME'),
-                'my_module_link' => $this->context->link->getModuleLink('mymodule', 'display')
+                'my_module_link' => $this->context->link->getModuleLink('mymodule', 'display'),
+                'my_module_message' => $this->l('This is a simple text message.')
             )
         );
         return $this->display(__FILE__, 'mymodule.tpl');
@@ -62,6 +63,86 @@ class MyModule extends Module
     public function hookDisplayHeader()
     {
         $this->context->controller->addCSS($this->_path.'css/mymodule.css', 'all');
+    }
+
+    public function getContent()
+    {
+        $output = null;
+        if (Tools::isSubmit('submit'.$this->name))
+        {
+            $my_module_name = strval(Tools::getValue('MYMODULE_NAME'));
+            if(!$my_module_name || empty($my_module_name) || !Validate::isGenericName($my_module_name))
+            {
+                $output .= $this->displayError($this->l('Invalid Configuration value'));
+            }
+            else
+            {
+                Configuration::updateValue('MYMODULE_NAME', $my_module_name);
+                $output .= $this->displayConfirmation($this->l("Settings updated by artx team"));
+            }
+        }
+        return $output.$this->displayForm();
+    }
+
+    public function displayForm()
+    {
+        // Get default language
+        $default_lang = (int) Configuration::get('PS_LANG_DEFAULT');
+
+        // Init field form array
+        $fields_form[0]['form'] = [
+            'legend' => [
+                'title' => $this->l('Settings page from artx team'),
+            ],
+            'input' => [
+                [
+                    'type' => 'text',
+                    'label' => $this->l('Configuration value'),
+                    'name' => 'MYMODULE_NAME',
+                    'size' => 20,
+                    'required' => true,
+                    'class' => 'jackguan'
+                ],
+            ],
+            'submit' => array(
+                'title' => $this->l('Save'),
+                'class' => 'button'
+            ),
+        ];
+
+        $helper = new HelperForm();
+
+        // Module, token and current index
+        $helper->module = $this;
+        $helper->name_controller = $this->name;
+        $helper->token = Tools::getAdminTokenLite('AdminModules');
+        $helper->currentIndex = AdminController::$currentIndex.'&configure='.$this->name;
+
+        // Language
+        $helper->default_form_language = $default_lang;
+        $helper->allow_employee_form_lang = $default_lang;
+
+        // Title and toolbar
+        $helper->title = $this->displayName;
+        $helper->show_toolbar = true;
+        $helper->toolbar_scroll = true;
+        $helper->submit_action = 'submit'.$this->name;
+        $helper->toolbar_btn = [
+            'save' => array(
+                'desc' => $this->l('Save'),
+                'href' => AdminController::$currentIndex.'&configure='.$this->name.'&save'.$this->name.
+                    '&token='.Tools::getAdminTokenLite('AdminModules'),
+            ),
+            'back' => array(
+                'href' => AdminController::$currentIndex.'&token='.Tools::getAdminTokenLite('AdminModules'),
+                'desc' => $this->l('Back to list')
+            )
+        ];
+
+        // Load current value
+        $helper->fields_value['MYMODULE_NAME'] = Configuration::get('MYMODULE_NAME');
+
+        return $helper->generateForm($fields_form);
     }
 }
 

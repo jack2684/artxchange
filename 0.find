@@ -1,0 +1,4 @@
+modules/mymodule/mymodule.php:37:        Configuration::updateValue('MYMODULE_NAME', 'my friend');
+modules/referralprogram/views/templates/front/program.tpl:78:	<li><a href="#idTab1" title="{l s='Sponsor my friends' mod='referralprogram'}" {if $activeTab eq 'sponsor'}class="selected"{/if} rel="nofollow">{l s='Sponsor my friends' mod='referralprogram'}</a></li>
+modules/referralprogram/views/templates/front/program.tpl:146:			{l s='These friends have not yet placed an order on this Website since you sponsored them, but you can try again! To do so, mark the checkboxes of the friend(s) you want to remind, then click on the button "Remind my friend(s)"' mod='referralprogram'}
+modules/referralprogram/views/templates/front/program.tpl:176:				<input type="submit" value="{l s='Remind my friend(s)' mod='referralprogram'}" name="revive" id="revive" class="button_large" />
