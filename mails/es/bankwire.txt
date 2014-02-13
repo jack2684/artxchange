@@ -1,0 +1,27 @@
+Hola {firstname} {lastname},
+
+Su pedido con la referencia: {order_name} ha sido recibido correctamente y será enviado en cuanto recibamos el pago.
+
+Por favor, recuerde que ha seleccionado transferencia bancaria como forma de pago.
+
+Detalles de la consignación:
+
+Beneficiario: {bankwire_owner}
+
+Total: {total_paid}
+
+Detalles de la cuenta:
+{bankwire_details}
+
+Dirección del banco:
+{bankwire_address}
+
+Puede revisar su pedido y descargar la factura en la sección: "Historia y detalles de mis pedidos" dentro de su cuenta.
+
+Si tiene una cuenta de invitado, puede seguir su pedido haciendo clic en: {guest_tracking_url}
+
+Gracias por comprar en {shop_name}!
+
+{shop_name} - {shop_url}
+
+{shop_url} desarrollado por PrestaShop™

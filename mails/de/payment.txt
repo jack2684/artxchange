@@ -1,0 +1,13 @@
+Hallo {firstname} {lastname},
+
+vielen Dank für Ihren Einkauf bei {shop_name}. 
+ 
+Wir haben Ihre Zahlung für die Bestell-Nr. {order_name} dankend erhalten.
+ 
+Sie können diese Bestellung ansehen und Ihre Rechnung aus dem Abschnitt "Bestellverlauf" Ihres Kontos downloaden, indem Sie auf unserer Webseite auf "Mein Konto" klicken.
+ 
+Wenn Sie sich als Gast angemeldet haben, können Sie Ihre Bestellung über diesen Link verfolgen:{guest_tracking_url}
+
+{shop_name} - {shop_url}
+
+{shop_name} powered by PrestaShop™ 

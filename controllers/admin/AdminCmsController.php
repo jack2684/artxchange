@@ -110,10 +110,10 @@ class AdminCmsControllerCore extends AdminController
 					'type' => 'text',
 					'label' => $this->l('Meta title:'),
 					'name' => 'meta_title',
-					'id' => 'name', // for copyMeta2friendlyURL compatibility
+					'id' => 'name', // for copy2friendlyUrl compatibility
 					'lang' => true,
 					'required' => true,
-					'class' => 'copyMeta2friendlyURL',
+					'class' => 'copy2friendlyUrl',
 					'hint' => $this->l('Invalid characters:').' <>;=#{}',
 					'size' => 50
 				),
@@ -151,26 +151,6 @@ class AdminCmsControllerCore extends AdminController
 					'rows' => 5,
 					'cols' => 40,
 					'hint' => $this->l('Invalid characters:').' <>;=#{}'
-				),
-				array(
-					'type' => 'radio',
-					'label' => $this->l('Indexation (by search engines):'),
-					'name' => 'indexation',
-					'required' => false,
-					'class' => 't',
-					'is_bool' => true,
-					'values' => array(
-						array(
-							'id' => 'indexation_on',
-							'value' => 1,
-							'label' => $this->l('Enabled')
-						),
-						array(
-							'id' => 'indexation_off',
-							'value' => 0,
-							'label' => $this->l('Disabled')
-						)
-					),
 				),
 				array(
 					'type' => 'radio',
@@ -240,28 +220,11 @@ class AdminCmsControllerCore extends AdminController
 		$this->displayListFooter($token);
 	}
 	
-	/**
-	* Modifying initial getList method to display position feature (drag and drop)
-	*/
-	public function getList($id_lang, $order_by = null, $order_way = null, $start = 0, $limit = null, $id_lang_shop = false)
+	public function postProcess()
 	{
 		if (Tools::isSubmit($this->table.'Orderby') || Tools::isSubmit($this->table.'Orderway'))
 			$this->filter = true;
 		
-		if ($order_by && $this->context->cookie->__get($this->table.'Orderby'))
-			$order_by = $this->context->cookie->__get($this->table.'Orderby');
-		else
-			$order_by = 'position';
-		
-		if (is_null($order_way))
-			$order_way = Tools::getValue($this->table.'Orderway', 'ASC');
-
-		parent::getList($id_lang, $order_by, $order_way, $start, $limit, $id_lang_shop);
-	}
-	
-	public function postProcess()
-	{
-	
 		if (Tools::isSubmit('viewcms') && ($id_cms = (int)Tools::getValue('id_cms')) && ($cms = new CMS($id_cms, $this->context->language->id)) && Validate::isLoadedObject($cms))
 		{
 			$redir = $this->context->link->getCMSLink($cms);

@@ -37,7 +37,7 @@ class RequestSqlCore extends ObjectModel
 		'primary' => 'id_request_sql',
 		'fields' => array(
 			'name' => 	array('type' => self::TYPE_STRING, 'validate' => 'isString', 'required' => true, 'size' => 200),
-			'sql' => 	array('type' => self::TYPE_STRING, 'validate' => 'isString', 'required' => true),
+			'sql' => 	array('type' => self::TYPE_STRING, 'validate' => 'isString', 'required' => true, 'size' => 1000),
 		),
 	);
 
@@ -232,6 +232,8 @@ class RequestSqlCore extends ObjectModel
 		{
 			if ($attribut = $this->cutAttribute(trim($attr), $from))
 				$tab[] = $attribut;
+			else
+				return false;
 		}
 		return $tab;
 	}
@@ -245,10 +247,9 @@ class RequestSqlCore extends ObjectModel
 	 */
 	public function cutAttribute($attr, $from)
 	{
-		$matches = array();
-		if (preg_match('/((`(\()?([a-z0-9_])+`(\))?)|((\()?([a-z0-9_])+(\))?))\.((`(\()?([a-z0-9_])+`(\))?)|((\()?([a-z0-9_])+(\))?))$/i', $attr, $matches, PREG_OFFSET_CAPTURE))
+		if (preg_match('#^((`(\()?([a-z0-9_])+`(\))?)|((\()?([a-z0-9_])+(\))?))\.((`(\()?([a-z0-9_])+`(\))?)|((\()?([a-z0-9_])+(\))?))$#i', $attr))
 		{
-			$tab = explode('.', str_replace(array('`', '(', ')'), '', $matches[0][0]));
+			$tab = explode('.', str_replace(array('`', '(', ')'), '', $attr));
 			if (!$table = $this->returnNameTable($tab[0], $from))
 				return false;
 			else
@@ -257,9 +258,9 @@ class RequestSqlCore extends ObjectModel
 							'attribut' => $tab[1],
 							'string' => $attr);
 		}
-		elseif (preg_match('/((`(\()?([a-z0-9_])+`(\))?)|((\()?([a-z0-9_])+(\))?))$/i', $attr, $matches, PREG_OFFSET_CAPTURE))
+		elseif (preg_match('#^((`(\()?([a-z0-9_])+`(\))?)|((\()?([a-z0-9_])+(\))?))$#i', $attr))
 		{
-			$attribut = str_replace(array('`', '(', ')'), '', $matches[0][0]);
+			$attribut = str_replace(array('`', '(', ')'), '', $attr);
 			if (!$table = $this->returnNameTable(false, $from))
 				return false;
 			else

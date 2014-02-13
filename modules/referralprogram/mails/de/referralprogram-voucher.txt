@@ -1,0 +1,12 @@
+Hallo {firstname} {lastname},
+
+Für Ihre Empfehlung erhalten Sie von uns einems ein Gutschein auf Ihren Namen.
+
+Hier ist der Code für Ihren Gutschein: {voucher_num} über {voucher_amount}.
+Bei der nächsten Bestellung kopieren Sie bitte einfach diesen Code und setzen ihn beim Zahlungsvorgang ein.
+
+Danke für Ihren Kauf bei {shop_name}.
+
+
+
+{shop_url} powered by PrestaShop™

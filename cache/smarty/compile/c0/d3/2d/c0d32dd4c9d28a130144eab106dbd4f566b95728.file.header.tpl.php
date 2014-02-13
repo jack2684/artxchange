@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-12 21:17:58
+<?php /* Smarty version Smarty-3.1.13, created on 2014-02-13 20:10:47
          compiled from "/var/www/artxchange/themes/default/header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:185421789552fc2b56831c30-10953260%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:58415724252fd26c7b54175-63640867%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'c0d32dd4c9d28a130144eab106dbd4f566b95728' => 
     array (
       0 => '/var/www/artxchange/themes/default/header.tpl',
-      1 => 1390229662,
+      1 => 1366914192,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '185421789552fc2b56831c30-10953260',
+  'nocache_hash' => '58415724252fd26c7b54175-63640867',
   'function' => 
   array (
   ),
@@ -55,10 +55,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'HOOK_LEFT_COLUMN' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52fc2b568c1430_97664667',
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_52fd26c7beb195_90792290',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52fc2b568c1430_97664667')) {function content_52fc2b568c1430_97664667($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/artxchange/tools/smarty/plugins/modifier.escape.php';
+<?php if ($_valid && !is_callable('content_52fd26c7beb195_90792290')) {function content_52fd26c7beb195_90792290($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/artxchange/tools/smarty/plugins/modifier.escape.php';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 " lang="<?php echo $_smarty_tpl->tpl_vars['lang_iso']->value;?>
@@ -94,13 +94,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ?<?php echo $_smarty_tpl->tpl_vars['img_update_time']->value;?>
 " />
 		<script type="text/javascript">
-			var baseDir = '<?php echo addslashes($_smarty_tpl->tpl_vars['content_dir']->value);?>
+			var baseDir = '<?php echo $_smarty_tpl->tpl_vars['content_dir']->value;?>
 ';
-			var baseUri = '<?php echo addslashes($_smarty_tpl->tpl_vars['base_uri']->value);?>
+			var baseUri = '<?php echo $_smarty_tpl->tpl_vars['base_uri']->value;?>
 ';
-			var static_token = '<?php echo addslashes($_smarty_tpl->tpl_vars['static_token']->value);?>
+			var static_token = '<?php echo $_smarty_tpl->tpl_vars['static_token']->value;?>
 ';
-			var token = '<?php echo addslashes($_smarty_tpl->tpl_vars['token']->value);?>
+			var token = '<?php echo $_smarty_tpl->tpl_vars['token']->value;?>
 ';
 			var priceDisplayPrecision = <?php echo $_smarty_tpl->tpl_vars['priceDisplayPrecision']->value*$_smarty_tpl->tpl_vars['currency']->value->decimals;?>
 ;
@@ -137,8 +137,7 @@ $_smarty_tpl->tpl_vars['js_uri']->_loop = true;
 	</head>
 	
 	<body <?php if (isset($_smarty_tpl->tpl_vars['page_name']->value)){?>id="<?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['page_name']->value, 'htmlall', 'UTF-8');?>
-"<?php }?> class="<?php if (isset($_smarty_tpl->tpl_vars['page_name']->value)){?><?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['page_name']->value, 'htmlall', 'UTF-8');?>
-<?php }?><?php if ($_smarty_tpl->tpl_vars['hide_left_column']->value){?> hide-left-column<?php }?><?php if ($_smarty_tpl->tpl_vars['hide_right_column']->value){?> hide-right-column<?php }?><?php if ($_smarty_tpl->tpl_vars['content_only']->value){?> content_only<?php }?>">
+"<?php }?> class="<?php if ($_smarty_tpl->tpl_vars['hide_left_column']->value){?>hide-left-column<?php }?> <?php if ($_smarty_tpl->tpl_vars['hide_right_column']->value){?>hide-right-column<?php }?> <?php if ($_smarty_tpl->tpl_vars['content_only']->value){?> content_only <?php }?>">
 	<?php if (!$_smarty_tpl->tpl_vars['content_only']->value){?>
 		<?php if (isset($_smarty_tpl->tpl_vars['restricted_country_mode']->value)&&$_smarty_tpl->tpl_vars['restricted_country_mode']->value){?>
 		<div id="restricted-country">
@@ -158,7 +157,7 @@ $_smarty_tpl->tpl_vars['js_uri']->_loop = true;
 " alt="<?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['shop_name']->value, 'htmlall', 'UTF-8');?>
 " <?php if ($_smarty_tpl->tpl_vars['logo_image_width']->value){?>width="<?php echo $_smarty_tpl->tpl_vars['logo_image_width']->value;?>
 "<?php }?> <?php if ($_smarty_tpl->tpl_vars['logo_image_height']->value){?>height="<?php echo $_smarty_tpl->tpl_vars['logo_image_height']->value;?>
-" <?php }?>/>
+" <?php }?> />
 				</a>
 				<div id="header_right" class="grid_9 omega">
 					<?php echo $_smarty_tpl->tpl_vars['HOOK_TOP']->value;?>

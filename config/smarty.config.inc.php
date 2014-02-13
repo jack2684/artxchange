@@ -37,17 +37,14 @@ if (!Tools::getSafeModeStatus())
 $smarty->setConfigDir(_PS_SMARTY_DIR_.'configs');
 $smarty->caching = false;
 $smarty->force_compile = (Configuration::get('PS_SMARTY_FORCE_COMPILE') == _PS_SMARTY_FORCE_COMPILE_) ? true : false;
-$smarty->compile_check = (Configuration::get('PS_SMARTY_FORCE_COMPILE') >= _PS_SMARTY_CHECK_COMPILE_) ? true : false;
+$smarty->compile_check = (Configuration::get('PS_SMARTY_FORCE_COMPILE') <= _PS_SMARTY_CHECK_COMPILE_) ? true : false;
 
 // Production mode
 $smarty->debugging = false;
 $smarty->debugging_ctrl = 'NONE';
 
 if (Configuration::get('PS_SMARTY_CONSOLE') == _PS_SMARTY_CONSOLE_OPEN_BY_URL_)
-{
 	$smarty->debugging_ctrl = 'URL';
-	$smarty->smarty_debug_id = Configuration::get('PS_SMARTY_CONSOLE_KEY');
-}
 else if (Configuration::get('PS_SMARTY_CONSOLE') == _PS_SMARTY_CONSOLE_OPEN_)
 	$smarty->debugging = true;
 
@@ -70,8 +67,7 @@ smartyRegisterFunction($smarty, 'function', 'd', 'smartyDieObject'); // Debug on
 smartyRegisterFunction($smarty, 'function', 'l', 'smartyTranslate', false);
 smartyRegisterFunction($smarty, 'function', 'hook', 'smartyHook');
 smartyRegisterFunction($smarty, 'function', 'toolsConvertPrice', 'toolsConvertPrice');
-smartyRegisterFunction($smarty, 'modifier', 'json_encode', array('Tools', 'jsonEncode'));
-smartyRegisterFunction($smarty, 'modifier', 'json_decode', array('Tools', 'jsonDecode'));
+
 smartyRegisterFunction($smarty, 'function', 'dateFormat', array('Tools', 'dateFormat'));
 smartyRegisterFunction($smarty, 'function', 'convertPrice', array('Product', 'convertPrice'));
 smartyRegisterFunction($smarty, 'function', 'convertPriceWithCurrency', array('Product', 'convertPriceWithCurrency'));
@@ -125,8 +121,6 @@ function smarty_modifier_truncate($string, $length = 80, $etc = '...', $break_wo
 {
 	if (!$length)
 		return '';
-
-	$string = trim($string);
 
 	if (Tools::strlen($string) > $length)
 	{
@@ -182,7 +176,6 @@ function smartyHook($params, &$smarty)
 	{
 		$id_module = null;
 		$hook_params = $params;
-		$hook_params['smarty'] = $smarty;
 		if (!empty($params['mod']))
 		{
 			$module = Module::getInstanceByName($params['mod']);

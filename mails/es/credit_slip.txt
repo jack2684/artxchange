@@ -1,0 +1,11 @@
+Hola {firstname} {lastname},
+
+Se ha generado un vale de compra a su favor con la referencia: {order_name}.
+
+Puede revisar este vale y descargar la factura en la sección: "Seguimiento de pedido" dentro de su cuenta.
+
+Gracias por comprar en {shop_name}
+
+{shop_name} - {shop_url}
+
+{shop_url} desarrollado por PrestaShop™

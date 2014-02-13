@@ -71,7 +71,6 @@ class AdminCmsCategoriesControllerCore extends AdminController
 	{
 		$this->initToolbar();
         $this->toolbar_btn['new']['href'] .= '&amp;id_parent='.(int)Tools::getValue('id_cms_category');
-        $this->initTabModuleList();
 		return parent::renderList();
 	}
 

@@ -38,7 +38,6 @@ class BlockCMSModel extends ObjectModel
 
 	const LEFT_COLUMN = 0;
 	const RIGHT_COLUMN = 1;
-	const FOOTER = 2;
 
 	/**
 	 * @see ObjectModel::$definition
@@ -336,7 +335,7 @@ class BlockCMSModel extends ObjectModel
 			ON (bc.`id_cms_category` = ccl.`id_cms_category`)
 			INNER JOIN `'._DB_PREFIX_.'cms_block_lang` bcl
 			ON (bc.`id_cms_block` = bcl.`id_cms_block`)
-			WHERE bc.`location` = '.(int)$location.'
+			WHERE bc.`location` = '.(int)($location).'
 			AND ccl.`id_lang` = '.(int)$context->language->id.'
 			AND bcl.`id_lang` = '.(int)$context->language->id.'
 			AND bcs.id_shop = '.($id_shop ? (int)$id_shop : (int)$context->shop->id).'
@@ -364,20 +363,15 @@ class BlockCMSModel extends ObjectModel
 		return Db::getInstance()->executeS($sql);
 	}
 
-	public static function getCMSBlockPages($id_block, $id_shop = false)
+	public static function getCMSBlockPages($id_block)
 	{
-        $id_shop = ($id_shop !== false) ? $id_shop : Context::getContext()->shop->id;
-
 		$sql = 'SELECT cl.`id_cms`, cl.`meta_title`, cl.`link_rewrite`
 			FROM `'._DB_PREFIX_.'cms_block_page` bcp
 			INNER JOIN `'._DB_PREFIX_.'cms_lang` cl
 			ON (bcp.`id_cms` = cl.`id_cms`)
 			INNER JOIN `'._DB_PREFIX_.'cms` c
 			ON (bcp.`id_cms` = c.`id_cms`)
-			INNER JOIN `'._DB_PREFIX_.'cms_shop` cs
-			ON (c.`id_cms` = cs.`id_cms`)
 			WHERE bcp.`id_cms_block` = '.(int)$id_block.'
-			AND cs.`id_shop` = '.(int)$id_shop.'
 			AND cl.`id_lang` = '.(int)Context::getContext()->language->id.'
 			AND bcp.`is_category` = 0
 			AND c.`active` = 1
@@ -539,13 +533,14 @@ class BlockCMSModel extends ObjectModel
 			{
 				$key = (int)$cmsCategory['id_cms_block'];
 				$content[$key]['display_store'] = $cmsCategory['display_store'];
-				$content[$key]['cms'] = BlockCMSModel::getCMSBlockPages($cmsCategory['id_cms_block'], $id_shop);
+				$content[$key]['cms'] = BlockCMSModel::getCMSBlockPages($cmsCategory['id_cms_block']);
+
 				$links = array();
 				if (count($content[$key]['cms']))
 				{
 					foreach ($content[$key]['cms'] as $row)
 					{
-						$row['link'] = $context->link->getCMSLink((int)$row['id_cms'], $row['link_rewrite']);
+						$row['link'] = $context->link->getCMSLink((int)($row['id_cms']), $row['link_rewrite']);
 						$links[] = $row;
 					}
 				}

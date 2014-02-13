@@ -1,0 +1,15 @@
+Hallo,
+
+Ihre Nachricht wurde an unseren Kundendienst weitergeleitet.
+ 
+Ihre Nachricht: 
+
+{message}
+
+Bestell-Nr.: {order_name}
+
+Angehängte Datei: {attached_file}
+ 
+Wir werden so schnell wie möglich antworten.
+ 
+{shop_name} powered by PrestaShop™

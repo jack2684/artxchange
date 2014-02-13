@@ -127,20 +127,16 @@ class ImageTypeCore extends ObjectModel
 	 * @param string $name
 	 * @param string $type
 	 */
-	public static function getByNameNType($name, $type = null, $order = null)
+	public static function getByNameNType($name, $type = null)
 	{
-		if (!isset(self::$images_types_name_cache[$name.'_'.$type.'_'.$order]))
+		if (!isset(self::$images_types_name_cache[$name.'_'.$type]))
 		{
-			self::$images_types_name_cache[$name.'_'.$type.'_'.$order] = Db::getInstance()->getRow('
+			self::$images_types_name_cache[$name.'_'.$type] = Db::getInstance()->getRow('
 				SELECT `id_image_type`, `name`, `width`, `height`, `products`, `categories`, `manufacturers`, `suppliers`, `scenes` 
 				FROM `'._DB_PREFIX_.'image_type` 
-				WHERE 
-				`name` LIKE \''.pSQL($name).'\''
-				.(!is_null($type) ? ' AND `'.pSQL($type).'` = 1' : '')
-				.(!is_null($order) ? ' ORDER BY `'.bqSQL($order).'` ASC' : '')
-			);
+				WHERE `name` = \''.pSQL($name).'\' '.(!is_null($type) ? 'AND `'.pSQL($type).'` = 1' : ''));
 		}
-		return self::$images_types_name_cache[$name.'_'.$type.'_'.$order];
+		return self::$images_types_name_cache[$name.'_'.$type];
 	}
 	
 	public static function getFormatedName($name)

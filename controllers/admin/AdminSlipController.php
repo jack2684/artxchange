@@ -142,7 +142,6 @@ class AdminSlipControllerCore extends AdminController
 
 	public function initContent()
 	{
-		$this->initTabModuleList();
 		$this->initToolbar();
 		$this->content .= $this->renderList();
 		$this->content .= $this->renderForm();

@@ -92,15 +92,13 @@ class BlockStore extends Module
 					return $this->displayError($this->l('Invalid image'));
 				else
 				{
-					$ext = substr($_FILES['store_img']['name'], strrpos($_FILES['store_img']['name'], '.') + 1);
-					$file_name = md5($_FILES['store_img']['name']).'.'.$ext;
-					if (!move_uploaded_file($_FILES['store_img']['tmp_name'], dirname(__FILE__).'/'.$file_name))
+					if (!move_uploaded_file($_FILES['store_img']['tmp_name'], dirname(__FILE__).'/'.$_FILES['store_img']['name']))
 						return $this->displayError($this->l('An error occurred while attempting to upload the file.'));
 					else
 					{
-						if (Configuration::hasContext('BLOCKSTORE_IMG', null, Shop::getContext()) && Configuration::get('BLOCKSTORE_IMG') != $file_name)
+						if (Configuration::hasContext('BLOCKSTORE_IMG', null, Shop::getContext()) && Configuration::get('BLOCKSTORE_IMG') != $_FILES['store_img']['name'])
 							@unlink(dirname(__FILE__).'/'.Configuration::get('BLOCKSTORE_IMG'));
-						Configuration::updateValue('BLOCKSTORE_IMG', $file_name);
+						Configuration::updateValue('BLOCKSTORE_IMG', $_FILES['store_img']['name']);
 						$this->_clearCache('blockstore.tpl');
 						return $this->displayConfirmation($this->l('The settings have been updated.'));
 					}

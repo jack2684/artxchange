@@ -62,9 +62,6 @@ if (_PS_DEBUG_PROFILING_)
 	include_once(_PS_TOOL_DIR_.'profiling/Tools.php');
 }
 
-if (Tools::isPHPCLI())
-	Tools::argvToGET($argc, $argv);
-
 /* Redefine REQUEST_URI if empty (on some webservers...) */
 if (!isset($_SERVER['REQUEST_URI']) || empty($_SERVER['REQUEST_URI']))
 {
@@ -90,18 +87,8 @@ if (!isset($_SERVER['HTTP_HOST']) || empty($_SERVER['HTTP_HOST']))
 $context = Context::getContext();
 
 /* Initialize the current Shop */
-try 
-{
-	$context->shop = Shop::initialize();
-	if (Tools::isEmpty($theme_name = $context->shop->getTheme()) && !defined('_PS_ADMIN_DIR_'))
- 		throw new PrestaShopException(Tools::displayError('Current theme unselected. Please check your theme configuration.'));
-}
-catch (PrestaShopException $e)
-{
-	$e->displayMessage();
-}
-
-define('_THEME_NAME_', $theme_name);
+$context->shop = Shop::initialize();
+define('_THEME_NAME_', $context->shop->getTheme());
 define('__PS_BASE_URI__', $context->shop->getBaseURI());
 
 /* Include all defines related to base uri and theme name */

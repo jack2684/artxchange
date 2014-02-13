@@ -1,0 +1,14 @@
+Hola {firstname} {lastname}, 
+
+Gracias por su pedido en {shop_name}!
+
+Tiene {nbProducts} producto(s) para descargar.
+
+Hágalo a través de este enlace:
+{virtualProducts}
+
+Puede revisar su pedido y descargar la factura en la sección: "Historia y detalles de mis pedidos" dentro de su cuenta.
+
+Si tiene una cuenta de invitado, puede seguir su pedido haciendo clic en: {guest_tracking_url}
+
+{shop_url} desarrollado por PrestaShop™

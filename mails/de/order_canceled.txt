@@ -1,0 +1,11 @@
+Hallo {firstname} {lastname},
+ 
+Ihre Bestellung Nr.{id_order}
+ 
+Ihre Bestellung wurde abgebrochen.
+ 
+ie können in unserem Shop auf "Mein Konto"  klicken, um Ihre Bestellung zu sehen und Ihre Rechnung im Menü "Bestellverlauf" downloaden.
+
+Wenn Sie ein Gast-Konto haben, können Sie Ihre Bestellung im Abschnitt "Bestellverfolgung Gast" auf unserer Webseite verfolgen.
+ 
+{shop_name} powered by PrestaShop™

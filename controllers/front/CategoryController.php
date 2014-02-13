@@ -53,8 +53,6 @@ class CategoryControllerCore extends FrontController
 
 	public function canonicalRedirection($canonicalURL = '')
 	{
-		if (Tools::getValue('live_edit'))
-			return ;
 		if (!Validate::isLoadedObject($this->category) || !$this->category->inShop() || !$this->category->isAssociatedToShop())
 		{
 			$this->redirect_after = '404';
@@ -111,12 +109,11 @@ class CategoryControllerCore extends FrontController
 		
 		$this->assignScenes();
 		$this->assignSubcategories();
-		if (!in_array($this->category->id, array(Configuration::get('PS_HOME_CATEGORY'), Configuration::get('PS_ROOT_CATEGORY'))))
+		if ($this->category->id != 1)
 			$this->assignProductList();
 
 		$this->context->smarty->assign(array(
 			'category' => $this->category,
-			'description_short' => Tools::truncateString($this->category->description),
 			'products' => (isset($this->cat_products) && $this->cat_products) ? $this->cat_products : null,
 			'id_category' => (int)$this->category->id,
 			'id_category_parent' => (int)$this->category->id_parent,
@@ -207,14 +204,6 @@ class CategoryControllerCore extends FrontController
 		}
 
 		$this->context->smarty->assign('nb_products', $this->nbProducts);
-	}
-	
-	/**
-	 * Get instance of current category
-	 */
-	public function getCategory()
-	{
-		return $this->category;
 	}
 }
 

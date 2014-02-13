@@ -1,0 +1,14 @@
+Hola {firstname} {lastname},
+		
+Uno o más productos de su pedido {order_name} no están en el inventario. Esto puede originar un retraso en el envío.
+
+Trabajeremos lo más rápido posible para solucionarlo. Por favor acepte nuestras disculpas.
+
+Puede revisar su pedido y descargar la factura en la sección: "Historia y detalles de mis pedidos" dentro de su cuenta.
+Si tiene una cuenta de invitado, puede seguir su pedido haciendo clic en: {guest_tracking_url}
+
+Gracias por comprar en {shop_name}!
+		
+{shop_name} - {shop_url}
+
+{shop_url} desarrollado por PrestaShop™

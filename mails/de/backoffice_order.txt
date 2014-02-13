@@ -1,0 +1,9 @@
+Guten Tag, {firstname} {lastname},
+
+eine neue Anforderung wurde für Sie erstellt.
+
+Klicken Sie bitte auf {order_link}, um Ihren Kauf abzuschließen.
+
+{shop_name} - {shop_url}
+
+{shop_url} powered by PrestaShop™

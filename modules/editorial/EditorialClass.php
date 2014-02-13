@@ -68,7 +68,10 @@ class EditorialClass extends ObjectModel
 	static public function getByIdShop($id_shop)
 	{
 		$id = Db::getInstance()->getValue('SELECT `id_editorial` FROM `'._DB_PREFIX_.'editorial` WHERE `id_shop` ='.(int)$id_shop);
-		return new EditorialClass($id);
+		if ($id)
+			return new EditorialClass((int)$id);
+		else
+			return false;
 	}
 
 	public function copyFromPost()

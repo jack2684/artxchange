@@ -72,7 +72,7 @@ class CarrierCompare extends Module
 			$this->postProcess();
 		
 		$this->smarty->assign('refresh_method', Configuration::get('SE_RERESH_METHOD'));
-		return $this->display(__FILE__, 'template/configuration.tpl');
+		return $this->smarty->fetch($this->template_directory .'configuration.tpl');
 	}
 	
 	public function postProcess()
@@ -155,7 +155,7 @@ class CarrierCompare extends Module
 			'refresh_method' => ($refresh_method === false) ? 0 : $refresh_method
 		));
 
-		return $this->display(__FILE__, 'template/carriercompare.tpl');
+		return $this->smarty->fetch($this->template_directory.'carriercompare.tpl');
 	}
 
 	/*

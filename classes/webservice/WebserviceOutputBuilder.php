@@ -47,8 +47,6 @@ class WebserviceOutputBuilderCore
 	protected $virtualFields = array();
 	protected $statusInt;
 	protected $wsParamOverrides;
-	
-	protected static $_cache_ws_parameters = array();
 
 	// Header properties
 	protected $headerParams = array(
@@ -285,7 +283,7 @@ class WebserviceOutputBuilderCore
 		if (is_null($this->wsResource))
 			throw new WebserviceException ('You must set web service resource for get the resources list.', array(82, 500));
 		$output = '';
-		$more_attr = array('shop_name' => htmlspecialchars(Configuration::get('PS_SHOP_NAME')));
+		$more_attr = array('shop_name' => htmlentities(Configuration::get('PS_SHOP_NAME')));
 		$output .= $this->objectRender->renderNodeHeader('api', array(), $more_attr);
 		foreach ($this->wsResource as $resourceName => $resource)
 		{
@@ -361,11 +359,7 @@ class WebserviceOutputBuilderCore
 			$type_of_view = self::VIEW_DETAILS;
 		}
 
-		$class = get_class($objects['empty']);
-		if (!isset(WebserviceOutputBuilder::$_cache_ws_parameters[$class]))
-			WebserviceOutputBuilder::$_cache_ws_parameters[$class] = $objects['empty']->getWebserviceParameters();
-		$ws_params = WebserviceOutputBuilder::$_cache_ws_parameters[$class];
-
+		$ws_params = $objects['empty']->getWebserviceParameters();
 		foreach ($this->wsParamOverrides AS $p)
 		{
 			$object = $p['object'];
@@ -382,7 +376,7 @@ class WebserviceOutputBuilderCore
 			{
 				if ($key !== 'empty')
 				{
-					if ($this->fieldsToDisplay === 'minimum')
+					if ($this->fieldsToDisplay  === 'minimum')
 						$output .= $this->renderEntityMinimum($object, $depth);
 					else
 						$output .= $this->renderEntity($object, $depth);
@@ -412,11 +406,7 @@ class WebserviceOutputBuilderCore
 	 */
 	public function renderEntityMinimum($object, $depth)
 	{
-		$class = get_class($object);
-		if (!isset(WebserviceOutputBuilder::$_cache_ws_parameters[$class]))
-			WebserviceOutputBuilder::$_cache_ws_parameters[$class] = $object->getWebserviceParameters();
-		$ws_params = WebserviceOutputBuilder::$_cache_ws_parameters[$class];
-
+		$ws_params = $object->getWebserviceParameters();
 		$more_attr['id'] = $object->id;
 		$more_attr['xlink_resource'] = $this->wsUrl.$ws_params['objectsNodeName'].'/'.$object->id;
 		$output = $this->setIndent($depth).$this->objectRender->renderNodeHeader($ws_params['objectNodeName'], $ws_params, $more_attr, false);
@@ -456,12 +446,7 @@ class WebserviceOutputBuilderCore
 	public function renderEntity($object, $depth)
 	{
 		$output = '';
-		
-		$class = get_class($object);
-		if (!isset(WebserviceOutputBuilder::$_cache_ws_parameters[$class]))
-			WebserviceOutputBuilder::$_cache_ws_parameters[$class] = $object->getWebserviceParameters();
-		$ws_params = WebserviceOutputBuilder::$_cache_ws_parameters[$class];
-		
+		$ws_params = $object->getWebserviceParameters();
 		foreach ($this->wsParamOverrides AS $p)
 		{
 			$o = $p['object'];

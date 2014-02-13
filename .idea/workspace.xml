@@ -1,699 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89717976-ce0e-47ea-8730-1ebee2f4983b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/mymodule/controllers/front/display.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/mymodule/views/templates/front/display.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/mymodule/css/mymodule.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/mymodule/views/templates/hook/mymodule.tpl" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/smarty/cache/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/smarty/compile/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/transaction/transaction.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/0016d9c4471a9ac68ed09d3d142798e2.jpg" afterPath="$PROJECT_DIR$/img/tmp/0016d9c4471a9ac68ed09d3d142798e2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/04d84ed536874b39df227543c4a7cf31.jpg" afterPath="$PROJECT_DIR$/img/tmp/04d84ed536874b39df227543c4a7cf31.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/06fcdaec92feedf62fd80e36e56db10a.jpg" afterPath="$PROJECT_DIR$/img/tmp/06fcdaec92feedf62fd80e36e56db10a.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/1-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/1-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/m/1-large_default.jpg" afterPath="$PROJECT_DIR$/img/m/1-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/1-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/1-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/su/1-large_default.jpg" afterPath="$PROJECT_DIR$/img/su/1-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/scenes/1-m_scene_default.jpg" afterPath="$PROJECT_DIR$/img/scenes/1-m_scene_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/scenes/thumbs/1-m_scene_default.jpg" afterPath="$PROJECT_DIR$/img/scenes/thumbs/1-m_scene_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/m/1-medium_default.jpg" afterPath="$PROJECT_DIR$/img/m/1-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/1-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/1-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/st/1-medium_default.jpg" afterPath="$PROJECT_DIR$/img/st/1-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/su/1-medium_default.jpg" afterPath="$PROJECT_DIR$/img/su/1-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/scenes/1-scene_default.jpg" afterPath="$PROJECT_DIR$/img/scenes/1-scene_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/m/1-small_default.jpg" afterPath="$PROJECT_DIR$/img/m/1-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/1-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/1-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/su/1-small_default.jpg" afterPath="$PROJECT_DIR$/img/su/1-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/1-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/1-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/os/1.gif" afterPath="$PROJECT_DIR$/img/os/1.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/genders/1.jpg" afterPath="$PROJECT_DIR$/img/genders/1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/l/1.jpg" afterPath="$PROJECT_DIR$/img/l/1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/m/1.jpg" afterPath="$PROJECT_DIR$/img/m/1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/1.jpg" afterPath="$PROJECT_DIR$/img/p/1/1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/scenes/1.jpg" afterPath="$PROJECT_DIR$/img/scenes/1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/st/1.jpg" afterPath="$PROJECT_DIR$/img/st/1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/su/1.jpg" afterPath="$PROJECT_DIR$/img/su/1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/0/10-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/0/10-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/0/10-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/0/10-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/0/10-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/0/10-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/0/10-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/0/10-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/0/10-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/0/10-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/os/10.gif" afterPath="$PROJECT_DIR$/img/os/10.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/0/10.jpg" afterPath="$PROJECT_DIR$/img/p/1/0/10.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/1/11-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/1/11-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/1/11-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/1/11-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/1/11-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/1/11-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/1/11-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/1/11-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/1/11-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/1/11-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/os/11.gif" afterPath="$PROJECT_DIR$/img/os/11.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/1/11.jpg" afterPath="$PROJECT_DIR$/img/p/1/1/11.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/2/12-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/2/12-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/2/12-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/2/12-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/2/12-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/2/12-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/2/12-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/2/12-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/2/12-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/2/12-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/os/12.gif" afterPath="$PROJECT_DIR$/img/os/12.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/2/12.jpg" afterPath="$PROJECT_DIR$/img/p/1/2/12.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/3/13-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/3/13-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/3/13-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/3/13-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/3/13-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/3/13-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/3/13-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/3/13-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/3/13-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/3/13-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/3/13.jpg" afterPath="$PROJECT_DIR$/img/p/1/3/13.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/4/14-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/4/14-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/4/14-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/4/14-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/4/14-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/4/14-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/4/14-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/4/14-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/4/14-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/4/14-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/4/14.jpg" afterPath="$PROJECT_DIR$/img/p/1/4/14.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/5/15-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/5/15-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/5/15-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/5/15-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/5/15-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/5/15-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/5/15-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/5/15-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/5/15-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/5/15-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/5/15.jpg" afterPath="$PROJECT_DIR$/img/p/1/5/15.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/6/16-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/6/16-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/6/16-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/6/16-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/6/16-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/6/16-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/6/16-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/6/16-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/6/16-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/6/16-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/6/16.jpg" afterPath="$PROJECT_DIR$/img/p/1/6/16.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/7/17-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/7/17-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/7/17-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/7/17-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/7/17-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/7/17-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/7/17-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/7/17-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/7/17-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/7/17-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/7/17.jpg" afterPath="$PROJECT_DIR$/img/p/1/7/17.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/8/18-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/8/18-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/8/18-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/8/18-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/8/18-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/8/18-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/8/18-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/8/18-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/8/18-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/8/18-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/8/18.jpg" afterPath="$PROJECT_DIR$/img/p/1/8/18.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/9/19-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/9/19-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/9/19-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/9/19-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/9/19-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/9/19-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/9/19-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/9/19-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/9/19-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/1/9/19-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/9/19.jpg" afterPath="$PROJECT_DIR$/img/p/1/9/19.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/190584f13053e7f3952a60567ef1bee8.jpg" afterPath="$PROJECT_DIR$/img/tmp/190584f13053e7f3952a60567ef1bee8.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/1e41cb4ea151e8c38ead1547fe804264.jpg" afterPath="$PROJECT_DIR$/img/tmp/1e41cb4ea151e8c38ead1547fe804264.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/2-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/2-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/m/2-large_default.jpg" afterPath="$PROJECT_DIR$/img/m/2-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/2-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/2-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/su/2-large_default.jpg" afterPath="$PROJECT_DIR$/img/su/2-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/scenes/2-m_scene_default.jpg" afterPath="$PROJECT_DIR$/img/scenes/2-m_scene_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/scenes/thumbs/2-m_scene_default.jpg" afterPath="$PROJECT_DIR$/img/scenes/thumbs/2-m_scene_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/m/2-medium_default.jpg" afterPath="$PROJECT_DIR$/img/m/2-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/2-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/2-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/st/2-medium_default.jpg" afterPath="$PROJECT_DIR$/img/st/2-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/su/2-medium_default.jpg" afterPath="$PROJECT_DIR$/img/su/2-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/scenes/2-scene_default.jpg" afterPath="$PROJECT_DIR$/img/scenes/2-scene_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/m/2-small_default.jpg" afterPath="$PROJECT_DIR$/img/m/2-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/2-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/2-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/su/2-small_default.jpg" afterPath="$PROJECT_DIR$/img/su/2-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/2-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/2-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/os/2.gif" afterPath="$PROJECT_DIR$/img/os/2.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/genders/2.jpg" afterPath="$PROJECT_DIR$/img/genders/2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/m/2.jpg" afterPath="$PROJECT_DIR$/img/m/2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/2.jpg" afterPath="$PROJECT_DIR$/img/p/2/2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/scenes/2.jpg" afterPath="$PROJECT_DIR$/img/scenes/2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/st/2.jpg" afterPath="$PROJECT_DIR$/img/st/2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/su/2.jpg" afterPath="$PROJECT_DIR$/img/su/2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/0/20-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/0/20-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/0/20-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/0/20-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/0/20-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/0/20-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/0/20-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/0/20-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/0/20-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/0/20-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/0/20.jpg" afterPath="$PROJECT_DIR$/img/p/2/0/20.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/1/21-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/1/21-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/1/21-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/1/21-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/1/21-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/1/21-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/1/21-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/1/21-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/1/21-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/1/21-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/1/21.jpg" afterPath="$PROJECT_DIR$/img/p/2/1/21.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/211444cf451f0f786b7ccfb2f348e8cb.jpg" afterPath="$PROJECT_DIR$/img/tmp/211444cf451f0f786b7ccfb2f348e8cb.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/2/22-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/2/22-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/2/22-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/2/22-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/2/22-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/2/22-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/2/22-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/2/22-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/2/22-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/2/22-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/2/22.jpg" afterPath="$PROJECT_DIR$/img/p/2/2/22.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/2286be8dfbf5e376427e580f71967141.jpg" afterPath="$PROJECT_DIR$/img/tmp/2286be8dfbf5e376427e580f71967141.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/3/23-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/3/23-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/3/23-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/3/23-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/3/23-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/3/23-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/3/23-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/3/23-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/3/23-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/3/23-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/3/23.jpg" afterPath="$PROJECT_DIR$/img/p/2/3/23.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/23763c67134338e6a1a65c0cdacd8001.jpg" afterPath="$PROJECT_DIR$/img/tmp/23763c67134338e6a1a65c0cdacd8001.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/239e65c03fade8d6f7ef2388cc970560.jpg" afterPath="$PROJECT_DIR$/img/tmp/239e65c03fade8d6f7ef2388cc970560.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/4/24-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/4/24-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/4/24-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/4/24-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/4/24-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/4/24-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/4/24-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/4/24-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/4/24-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/4/24-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/4/24.jpg" afterPath="$PROJECT_DIR$/img/p/2/4/24.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/5/25-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/5/25-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/5/25-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/5/25-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/5/25-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/5/25-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/5/25-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/5/25-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/5/25-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/5/25-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/5/25.jpg" afterPath="$PROJECT_DIR$/img/p/2/5/25.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/6/26-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/6/26-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/6/26-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/6/26-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/6/26-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/6/26-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/6/26-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/6/26-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/6/26-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/2/6/26-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/6/26.jpg" afterPath="$PROJECT_DIR$/img/p/2/6/26.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/3-category_default.jpg" afterPath="$PROJECT_DIR$/img/c/3-category_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/3/3-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/3/3-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/3-large_default.jpg" afterPath="$PROJECT_DIR$/img/c/3-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/3/3-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/3/3-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/scenes/3-m_scene_default.jpg" afterPath="$PROJECT_DIR$/img/scenes/3-m_scene_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/scenes/thumbs/3-m_scene_default.jpg" afterPath="$PROJECT_DIR$/img/scenes/thumbs/3-m_scene_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/3-medium_default.jpg" afterPath="$PROJECT_DIR$/img/c/3-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/3/3-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/3/3-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/st/3-medium_default.jpg" afterPath="$PROJECT_DIR$/img/st/3-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/scenes/3-scene_default.jpg" afterPath="$PROJECT_DIR$/img/scenes/3-scene_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/3-small_default.jpg" afterPath="$PROJECT_DIR$/img/c/3-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/3/3-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/3/3-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/3/3-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/3/3-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/os/3.gif" afterPath="$PROJECT_DIR$/img/os/3.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/3.jpg" afterPath="$PROJECT_DIR$/img/c/3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/3/3.jpg" afterPath="$PROJECT_DIR$/img/p/3/3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/scenes/3.jpg" afterPath="$PROJECT_DIR$/img/scenes/3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/st/3.jpg" afterPath="$PROJECT_DIR$/img/st/3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/332a85452678c3979b5a696f11f9a8bc.jpg" afterPath="$PROJECT_DIR$/img/tmp/332a85452678c3979b5a696f11f9a8bc.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/3e2afa7fc776f1295d33aec4167c99f3.jpg" afterPath="$PROJECT_DIR$/img/tmp/3e2afa7fc776f1295d33aec4167c99f3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/3fbffc293b384d63905f5cb47a2d89fd.jpg" afterPath="$PROJECT_DIR$/img/tmp/3fbffc293b384d63905f5cb47a2d89fd.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/4-category_default.jpg" afterPath="$PROJECT_DIR$/img/c/4-category_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/4/4-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/4/4-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/4-large_default.jpg" afterPath="$PROJECT_DIR$/img/c/4-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/4/4-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/4/4-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/4-medium_default.jpg" afterPath="$PROJECT_DIR$/img/c/4-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/4/4-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/4/4-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/st/4-medium_default.jpg" afterPath="$PROJECT_DIR$/img/st/4-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/4-small_default.jpg" afterPath="$PROJECT_DIR$/img/c/4-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/4/4-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/4/4-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/4/4-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/4/4-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/os/4.gif" afterPath="$PROJECT_DIR$/img/os/4.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/4.jpg" afterPath="$PROJECT_DIR$/img/c/4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/4/4.jpg" afterPath="$PROJECT_DIR$/img/p/4/4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/st/4.jpg" afterPath="$PROJECT_DIR$/img/st/4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/4ba4d2120747600d25a729c7ccde1fc5.jpg" afterPath="$PROJECT_DIR$/img/tmp/4ba4d2120747600d25a729c7ccde1fc5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/4fbd22dd3dfa0ed7b202872fe28a3802.jpg" afterPath="$PROJECT_DIR$/img/tmp/4fbd22dd3dfa0ed7b202872fe28a3802.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/5-category_default.jpg" afterPath="$PROJECT_DIR$/img/c/5-category_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/5/5-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/5/5-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/5-large_default.jpg" afterPath="$PROJECT_DIR$/img/c/5-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/5/5-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/5/5-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/5-medium_default.jpg" afterPath="$PROJECT_DIR$/img/c/5-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/5/5-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/5/5-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/st/5-medium_default.jpg" afterPath="$PROJECT_DIR$/img/st/5-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/5-small_default.jpg" afterPath="$PROJECT_DIR$/img/c/5-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/5/5-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/5/5-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/5/5-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/5/5-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/os/5.gif" afterPath="$PROJECT_DIR$/img/os/5.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/5.jpg" afterPath="$PROJECT_DIR$/img/c/5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/5/5.jpg" afterPath="$PROJECT_DIR$/img/p/5/5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/st/5.jpg" afterPath="$PROJECT_DIR$/img/st/5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/5450caa1fdcc6aeea114c065f5e231e4.jpg" afterPath="$PROJECT_DIR$/img/tmp/5450caa1fdcc6aeea114c065f5e231e4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/599df630d46c3112733dfae681b5c938.jpg" afterPath="$PROJECT_DIR$/img/tmp/599df630d46c3112733dfae681b5c938.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/5d934f7688dee729b21ec2e2cf4d245a.jpg" afterPath="$PROJECT_DIR$/img/tmp/5d934f7688dee729b21ec2e2cf4d245a.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/6/6-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/6/6-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/6/6-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/6/6-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/6/6-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/6/6-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/6/6-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/6/6-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/6/6-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/6/6-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/os/6.gif" afterPath="$PROJECT_DIR$/img/os/6.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/6/6.jpg" afterPath="$PROJECT_DIR$/img/p/6/6.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/6101ccb8fad9f9248bd5380962d51740.jpg" afterPath="$PROJECT_DIR$/img/tmp/6101ccb8fad9f9248bd5380962d51740.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/64ecedb2ff98edac86296a806cffc4c2.jpg" afterPath="$PROJECT_DIR$/img/tmp/64ecedb2ff98edac86296a806cffc4c2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/7/7-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/7/7-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/7/7-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/7/7-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/7/7-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/7/7-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/7/7-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/7/7-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/7/7-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/7/7-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/os/7.gif" afterPath="$PROJECT_DIR$/img/os/7.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/7/7.jpg" afterPath="$PROJECT_DIR$/img/p/7/7.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/8/8-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/8/8-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/8/8-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/8/8-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/8/8-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/8/8-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/8/8-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/8/8-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/8/8-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/8/8-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/os/8.gif" afterPath="$PROJECT_DIR$/img/os/8.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/8/8.jpg" afterPath="$PROJECT_DIR$/img/p/8/8.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/9/9-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/9/9-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/9/9-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/9/9-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/9/9-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/9/9-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/9/9-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/9/9-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/9/9-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/9/9-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/os/9.gif" afterPath="$PROJECT_DIR$/img/os/9.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/9/9.jpg" afterPath="$PROJECT_DIR$/img/p/9/9.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/9be53e0a12dcfc55cbc5230b90f73bcd.jpg" afterPath="$PROJECT_DIR$/img/tmp/9be53e0a12dcfc55cbc5230b90f73bcd.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/9f1b4bc5c99213aa75d9faac0f1a6e95.jpg" afterPath="$PROJECT_DIR$/img/tmp/9f1b4bc5c99213aa75d9faac0f1a6e95.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminAccess.gif" afterPath="$PROJECT_DIR$/img/t/AdminAccess.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminAddonsCatalog.gif" afterPath="$PROJECT_DIR$/img/t/AdminAddonsCatalog.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminAddresses.gif" afterPath="$PROJECT_DIR$/img/t/AdminAddresses.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminAdmin.gif" afterPath="$PROJECT_DIR$/img/t/AdminAdmin.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminAdminPreferences.gif" afterPath="$PROJECT_DIR$/img/t/AdminAdminPreferences.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminAttachments.gif" afterPath="$PROJECT_DIR$/img/t/AdminAttachments.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminAttributesGroups.gif" afterPath="$PROJECT_DIR$/img/t/AdminAttributesGroups.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminBackup.gif" afterPath="$PROJECT_DIR$/img/t/AdminBackup.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminCarriers.gif" afterPath="$PROJECT_DIR$/img/t/AdminCarriers.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminCartRules.gif" afterPath="$PROJECT_DIR$/img/t/AdminCartRules.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminCarts.gif" afterPath="$PROJECT_DIR$/img/t/AdminCarts.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminCatalog.gif" afterPath="$PROJECT_DIR$/img/t/AdminCatalog.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminCms.gif" afterPath="$PROJECT_DIR$/img/t/AdminCms.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminContacts.gif" afterPath="$PROJECT_DIR$/img/t/AdminContacts.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminCountries.gif" afterPath="$PROJECT_DIR$/img/t/AdminCountries.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminCurrencies.gif" afterPath="$PROJECT_DIR$/img/t/AdminCurrencies.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminCustomerPreferences.gif" afterPath="$PROJECT_DIR$/img/t/AdminCustomerPreferences.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminCustomerThreads.gif" afterPath="$PROJECT_DIR$/img/t/AdminCustomerThreads.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminCustomers.gif" afterPath="$PROJECT_DIR$/img/t/AdminCustomers.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminDeliverySlip.gif" afterPath="$PROJECT_DIR$/img/t/AdminDeliverySlip.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminEmails.gif" afterPath="$PROJECT_DIR$/img/t/AdminEmails.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminEmployees.gif" afterPath="$PROJECT_DIR$/img/t/AdminEmployees.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminFeatures.gif" afterPath="$PROJECT_DIR$/img/t/AdminFeatures.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminGenders.gif" afterPath="$PROJECT_DIR$/img/t/AdminGenders.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminGeolocation.gif" afterPath="$PROJECT_DIR$/img/t/AdminGeolocation.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminGroups.gif" afterPath="$PROJECT_DIR$/img/t/AdminGroups.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminHome.gif" afterPath="$PROJECT_DIR$/img/t/AdminHome.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminImages.gif" afterPath="$PROJECT_DIR$/img/t/AdminImages.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminImport.gif" afterPath="$PROJECT_DIR$/img/t/AdminImport.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminInformation.gif" afterPath="$PROJECT_DIR$/img/t/AdminInformation.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminInvoices.gif" afterPath="$PROJECT_DIR$/img/t/AdminInvoices.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminLanguages.gif" afterPath="$PROJECT_DIR$/img/t/AdminLanguages.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminLocalization.gif" afterPath="$PROJECT_DIR$/img/t/AdminLocalization.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminLogs.gif" afterPath="$PROJECT_DIR$/img/t/AdminLogs.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminMaintenance.gif" afterPath="$PROJECT_DIR$/img/t/AdminMaintenance.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminManufacturers.gif" afterPath="$PROJECT_DIR$/img/t/AdminManufacturers.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminMeta.gif" afterPath="$PROJECT_DIR$/img/t/AdminMeta.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminModules.gif" afterPath="$PROJECT_DIR$/img/t/AdminModules.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminModulesPositions.gif" afterPath="$PROJECT_DIR$/img/t/AdminModulesPositions.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminOrderMessage.gif" afterPath="$PROJECT_DIR$/img/t/AdminOrderMessage.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminOrderPreferences.gif" afterPath="$PROJECT_DIR$/img/t/AdminOrderPreferences.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminOrders.gif" afterPath="$PROJECT_DIR$/img/t/AdminOrders.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminPPreferences.gif" afterPath="$PROJECT_DIR$/img/t/AdminPPreferences.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminParentCustomer.gif" afterPath="$PROJECT_DIR$/img/t/AdminParentCustomer.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminParentLocalization.gif" afterPath="$PROJECT_DIR$/img/t/AdminParentLocalization.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminParentModules.gif" afterPath="$PROJECT_DIR$/img/t/AdminParentModules.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminParentOrders.gif" afterPath="$PROJECT_DIR$/img/t/AdminParentOrders.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminParentPreferences.gif" afterPath="$PROJECT_DIR$/img/t/AdminParentPreferences.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminParentShipping.gif" afterPath="$PROJECT_DIR$/img/t/AdminParentShipping.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminParentStats.gif" afterPath="$PROJECT_DIR$/img/t/AdminParentStats.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminPayment.gif" afterPath="$PROJECT_DIR$/img/t/AdminPayment.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminPerformance.gif" afterPath="$PROJECT_DIR$/img/t/AdminPerformance.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminPreferences.gif" afterPath="$PROJECT_DIR$/img/t/AdminPreferences.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminPriceRule.gif" afterPath="$PROJECT_DIR$/img/t/AdminPriceRule.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminProfiles.gif" afterPath="$PROJECT_DIR$/img/t/AdminProfiles.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminQuickAccesses.gif" afterPath="$PROJECT_DIR$/img/t/AdminQuickAccesses.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminReferrers.gif" afterPath="$PROJECT_DIR$/img/t/AdminReferrers.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminReturn.gif" afterPath="$PROJECT_DIR$/img/t/AdminReturn.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminScenes.gif" afterPath="$PROJECT_DIR$/img/t/AdminScenes.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminSearch.gif" afterPath="$PROJECT_DIR$/img/t/AdminSearch.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminSearchConf.gif" afterPath="$PROJECT_DIR$/img/t/AdminSearchConf.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminSearchEngines.gif" afterPath="$PROJECT_DIR$/img/t/AdminSearchEngines.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminShipping.gif" afterPath="$PROJECT_DIR$/img/t/AdminShipping.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminShop.gif" afterPath="$PROJECT_DIR$/img/t/AdminShop.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminShopGroup.gif" afterPath="$PROJECT_DIR$/img/t/AdminShopGroup.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminSlip.gif" afterPath="$PROJECT_DIR$/img/t/AdminSlip.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminStates.gif" afterPath="$PROJECT_DIR$/img/t/AdminStates.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminStats.gif" afterPath="$PROJECT_DIR$/img/t/AdminStats.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminStatuses.gif" afterPath="$PROJECT_DIR$/img/t/AdminStatuses.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminStock.gif" afterPath="$PROJECT_DIR$/img/t/AdminStock.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminStockConfiguration.gif" afterPath="$PROJECT_DIR$/img/t/AdminStockConfiguration.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminStockManagement.gif" afterPath="$PROJECT_DIR$/img/t/AdminStockManagement.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminStockMvt.gif" afterPath="$PROJECT_DIR$/img/t/AdminStockMvt.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminStores.gif" afterPath="$PROJECT_DIR$/img/t/AdminStores.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminSuppliers.gif" afterPath="$PROJECT_DIR$/img/t/AdminSuppliers.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminTabs.gif" afterPath="$PROJECT_DIR$/img/t/AdminTabs.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminTags.gif" afterPath="$PROJECT_DIR$/img/t/AdminTags.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminTaxRulesGroup.gif" afterPath="$PROJECT_DIR$/img/t/AdminTaxRulesGroup.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminTaxes.gif" afterPath="$PROJECT_DIR$/img/t/AdminTaxes.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminThemes.gif" afterPath="$PROJECT_DIR$/img/t/AdminThemes.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminTools.gif" afterPath="$PROJECT_DIR$/img/t/AdminTools.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminTracking.gif" afterPath="$PROJECT_DIR$/img/t/AdminTracking.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminTranslations.gif" afterPath="$PROJECT_DIR$/img/t/AdminTranslations.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminWebservice.gif" afterPath="$PROJECT_DIR$/img/t/AdminWebservice.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/t/AdminZones.gif" afterPath="$PROJECT_DIR$/img/t/AdminZones.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/a1383b4c462824889b2c537f48f671a9.jpg" afterPath="$PROJECT_DIR$/img/tmp/a1383b4c462824889b2c537f48f671a9.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/a3cdd7fbc29753da7e3d1b48373dab9e.jpg" afterPath="$PROJECT_DIR$/img/tmp/a3cdd7fbc29753da7e3d1b48373dab9e.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/accpmark_tarjdeb_mx.png" afterPath="$PROJECT_DIR$/modules/paypalusa/img/accpmark_tarjdeb_mx.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/add.png" afterPath="$PROJECT_DIR$/modules/themeinstallator/add.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/addff63c706a4988d7224f623c000b90.jpg" afterPath="$PROJECT_DIR$/img/tmp/addff63c706a4988d7224f623c000b90.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/img/badge_locked.png" afterPath="$PROJECT_DIR$/modules/gamification/views/img/badge_locked.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/img/badge_unlocked.png" afterPath="$PROJECT_DIR$/modules/gamification/views/img/badge_unlocked.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/img/badges_achievement.png" afterPath="$PROJECT_DIR$/modules/gamification/views/img/badges_achievement.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/img/badges_feature.png" afterPath="$PROJECT_DIR$/modules/gamification/views/img/badges_feature.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/img/badges_international.png" afterPath="$PROJECT_DIR$/modules/gamification/views/img/badges_international.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/bec15dd3bcc8ae3041d8e27c7814fee3.jpg" afterPath="$PROJECT_DIR$/img/tmp/bec15dd3bcc8ae3041d8e27c7814fee3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/img/bg_bar_global.png" afterPath="$PROJECT_DIR$/modules/gamification/views/img/bg_bar_global.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/bg_btn-blue.png" afterPath="$PROJECT_DIR$/modules/paypalusa/img/bg_btn-blue.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/img/bg_locked_badge.png" afterPath="$PROJECT_DIR$/modules/gamification/views/img/bg_locked_badge.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/bloc_mx_tips.png" afterPath="$PROJECT_DIR$/modules/paypalusa/img/bloc_mx_tips.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/boton_terminar_compra.png" afterPath="$PROJECT_DIR$/modules/paypalusa/img/boton_terminar_compra.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/bottom-left.gif" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/bottom-left.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/bottom-left.png" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/bottom-left.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/bottom-middle.gif" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/bottom-middle.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/bottom-middle.png" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/bottom-middle.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/bottom-right.gif" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/bottom-right.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/bottom-right.png" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/bottom-right.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/c2b6d47d3f7a4c51f21413cc691a410d.jpg" afterPath="$PROJECT_DIR$/img/tmp/c2b6d47d3f7a4c51f21413cc691a410d.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/ca56398d51ac24ec66fb5e2f0487ac77.jpg" afterPath="$PROJECT_DIR$/img/tmp/ca56398d51ac24ec66fb5e2f0487ac77.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/cab68726c685ccfc5a57b67b95bab6ff.jpg" afterPath="$PROJECT_DIR$/img/tmp/cab68726c685ccfc5a57b67b95bab6ff.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/caeb5dd3bf9598053733c1ee58f65e69.jpg" afterPath="$PROJECT_DIR$/img/tmp/caeb5dd3bf9598053733c1ee58f65e69.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/checked_case.png" afterPath="$PROJECT_DIR$/modules/paypalusa/img/checked_case.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/checkmark-blue.png" afterPath="$PROJECT_DIR$/modules/paypalusa/img/checkmark-blue.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_background.png" afterPath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_background.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_hex.png" afterPath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_hex.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_hsb_b.png" afterPath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_hsb_b.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_hsb_h.png" afterPath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_hsb_h.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_hsb_s.png" afterPath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_hsb_s.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_indic.gif" afterPath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_indic.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_overlay.png" afterPath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_overlay.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_rgb_b.png" afterPath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_rgb_b.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_rgb_g.png" afterPath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_rgb_g.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_rgb_r.png" afterPath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_rgb_r.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_select.gif" afterPath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_select.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_submit.png" afterPath="$PROJECT_DIR$/modules/paypalusa/img/colorpicker_submit.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/credit_card.png" afterPath="$PROJECT_DIR$/modules/paypalusa/img/credit_card.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/d41d8cd98f00b204e9800998ecf8427e.jpg" afterPath="$PROJECT_DIR$/img/tmp/d41d8cd98f00b204e9800998ecf8427e.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/dac52ab00c406e3804be7d74ea8cc1de.jpg" afterPath="$PROJECT_DIR$/img/tmp/dac52ab00c406e3804be7d74ea8cc1de.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/delete.png" afterPath="$PROJECT_DIR$/modules/themeinstallator/delete.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/eco_mx.png" afterPath="$PROJECT_DIR$/modules/paypalusa/img/eco_mx.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/en-default-category_default.jpg" afterPath="$PROJECT_DIR$/img/c/en-default-category_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/l/en-default-category_default.jpg" afterPath="$PROJECT_DIR$/img/l/en-default-category_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/en-default-home_default.jpg" afterPath="$PROJECT_DIR$/img/c/en-default-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/l/en-default-home_default.jpg" afterPath="$PROJECT_DIR$/img/l/en-default-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/en-default-home_default.jpg" afterPath="$PROJECT_DIR$/img/p/en-default-home_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/en-default-large_default.jpg" afterPath="$PROJECT_DIR$/img/c/en-default-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/l/en-default-large_default.jpg" afterPath="$PROJECT_DIR$/img/l/en-default-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/m/en-default-large_default.jpg" afterPath="$PROJECT_DIR$/img/m/en-default-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/en-default-large_default.jpg" afterPath="$PROJECT_DIR$/img/p/en-default-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/su/en-default-large_default.jpg" afterPath="$PROJECT_DIR$/img/su/en-default-large_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/en-default-m_scene_default.jpg" afterPath="$PROJECT_DIR$/img/c/en-default-m_scene_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/l/en-default-m_scene_default.jpg" afterPath="$PROJECT_DIR$/img/l/en-default-m_scene_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/scenes/en-default-m_scene_default.jpg" afterPath="$PROJECT_DIR$/img/scenes/en-default-m_scene_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/en-default-medium_default.jpg" afterPath="$PROJECT_DIR$/img/c/en-default-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/l/en-default-medium_default.jpg" afterPath="$PROJECT_DIR$/img/l/en-default-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/m/en-default-medium_default.jpg" afterPath="$PROJECT_DIR$/img/m/en-default-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/en-default-medium_default.jpg" afterPath="$PROJECT_DIR$/img/p/en-default-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/st/en-default-medium_default.jpg" afterPath="$PROJECT_DIR$/img/st/en-default-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/su/en-default-medium_default.jpg" afterPath="$PROJECT_DIR$/img/su/en-default-medium_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/en-default-scene_default.jpg" afterPath="$PROJECT_DIR$/img/c/en-default-scene_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/l/en-default-scene_default.jpg" afterPath="$PROJECT_DIR$/img/l/en-default-scene_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/scenes/en-default-scene_default.jpg" afterPath="$PROJECT_DIR$/img/scenes/en-default-scene_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/en-default-small_default.jpg" afterPath="$PROJECT_DIR$/img/c/en-default-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/l/en-default-small_default.jpg" afterPath="$PROJECT_DIR$/img/l/en-default-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/m/en-default-small_default.jpg" afterPath="$PROJECT_DIR$/img/m/en-default-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/en-default-small_default.jpg" afterPath="$PROJECT_DIR$/img/p/en-default-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/su/en-default-small_default.jpg" afterPath="$PROJECT_DIR$/img/su/en-default-small_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/en-default-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/c/en-default-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/l/en-default-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/l/en-default-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/en-default-thickbox_default.jpg" afterPath="$PROJECT_DIR$/img/p/en-default-thickbox_default.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/c/en.jpg" afterPath="$PROJECT_DIR$/img/c/en.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/l/en.jpg" afterPath="$PROJECT_DIR$/img/l/en.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/m/en.jpg" afterPath="$PROJECT_DIR$/img/m/en.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/en.jpg" afterPath="$PROJECT_DIR$/img/p/en.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/scenes/en.jpg" afterPath="$PROJECT_DIR$/img/scenes/en.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/st/en.jpg" afterPath="$PROJECT_DIR$/img/st/en.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/su/en.jpg" afterPath="$PROJECT_DIR$/img/su/en.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/express_checkout_mx.png" afterPath="$PROJECT_DIR$/modules/paypalusa/img/express_checkout_mx.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/f1ef9667719542f4ff8370ba6f48d3c9.jpg" afterPath="$PROJECT_DIR$/img/tmp/f1ef9667719542f4ff8370ba6f48d3c9.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/img/gamification-bar-bg.png" afterPath="$PROJECT_DIR$/modules/gamification/views/img/gamification-bar-bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/logo-mx.jpg" afterPath="$PROJECT_DIR$/modules/paypalusa/img/logo-mx.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/logo-slogan.gif" afterPath="$PROJECT_DIR$/modules/paypalusa/img/logo-slogan.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/logo.gif" afterPath="$PROJECT_DIR$/modules/gamification/logo.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/logo.gif" afterPath="$PROJECT_DIR$/modules/paypalusa/logo.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/logo.gif" afterPath="$PROJECT_DIR$/modules/themeinstallator/logo.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/logo.png" afterPath="$PROJECT_DIR$/modules/gamification/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/logo.png" afterPath="$PROJECT_DIR$/modules/paypalusa/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/logo.png" afterPath="$PROJECT_DIR$/modules/paypalusa/img/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/logo.png" afterPath="$PROJECT_DIR$/modules/themeinstallator/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/img/mail_icon.png" afterPath="$PROJECT_DIR$/modules/gamification/views/img/mail_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/middle-left.gif" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/middle-left.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/middle-left.png" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/middle-left.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/middle-right.gif" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/middle-right.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/middle-right.png" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/middle-right.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/img/not_validated.png" afterPath="$PROJECT_DIR$/modules/gamification/views/img/not_validated.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/img/notif_gadges.png" afterPath="$PROJECT_DIR$/modules/gamification/views/img/notif_gadges.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/paypal.gif" afterPath="$PROJECT_DIR$/modules/paypalusa/img/paypal.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/paypal_usa-btn-arrow.png" afterPath="$PROJECT_DIR$/modules/paypalusa/img/paypal_usa-btn-arrow.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/img/phone_icon.png" afterPath="$PROJECT_DIR$/modules/gamification/views/img/phone_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/product_mini_1_1.jpg" afterPath="$PROJECT_DIR$/img/tmp/product_mini_1_1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/product_mini_2_1.jpg" afterPath="$PROJECT_DIR$/img/tmp/product_mini_2_1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/product_mini_3_1.jpg" afterPath="$PROJECT_DIR$/img/tmp/product_mini_3_1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/product_mini_4_1.jpg" afterPath="$PROJECT_DIR$/img/tmp/product_mini_4_1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/product_mini_5_1.jpg" afterPath="$PROJECT_DIR$/img/tmp/product_mini_5_1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/product_mini_5_11.jpg" afterPath="$PROJECT_DIR$/img/tmp/product_mini_5_11.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/product_mini_6_1.jpg" afterPath="$PROJECT_DIR$/img/tmp/product_mini_6_1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/product_mini_7_0.jpg" afterPath="$PROJECT_DIR$/img/tmp/product_mini_7_0.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/tmp/product_mini_7_1.jpg" afterPath="$PROJECT_DIR$/img/tmp/product_mini_7_1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/settings.gif" afterPath="$PROJECT_DIR$/modules/paypalusa/img/settings.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/tail-bottom.gif" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/tail-bottom.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/tail-bottom.png" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/tail-bottom.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/tail-left.gif" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/tail-left.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/tail-left.png" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/tail-left.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/tail-right.gif" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/tail-right.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/tail-right.png" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/tail-right.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/tail-top.gif" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/tail-top.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/tail-top.png" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/tail-top.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/tooltip.png" afterPath="$PROJECT_DIR$/modules/paypalusa/img/tooltip.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/top-left.gif" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/top-left.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/top-left.png" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/top-left.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/top-middle.gif" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/top-middle.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/top-middle.png" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/top-middle.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/top-right.gif" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/ie/top-right.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/top-right.png" afterPath="$PROJECT_DIR$/modules/gamification/views/jquerybubblepopup-themes/black/top-right.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/img/validated.png" afterPath="$PROJECT_DIR$/modules/gamification/views/img/validated.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/controllers/admin/AdminGamificationController.php" afterPath="$PROJECT_DIR$/modules/gamification/controllers/admin/AdminGamificationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/classes/Advice.php" afterPath="$PROJECT_DIR$/modules/gamification/classes/Advice.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/classes/Badge.php" afterPath="$PROJECT_DIR$/modules/gamification/classes/Badge.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/classes/Condition.php" afterPath="$PROJECT_DIR$/modules/gamification/classes/Condition.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/backward_compatibility/Context.php" afterPath="$PROJECT_DIR$/modules/paypalusa/backward_compatibility/Context.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/backward_compatibility/Context.php" afterPath="$PROJECT_DIR$/modules/themeinstallator/backward_compatibility/Context.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/backward_compatibility/Display.php" afterPath="$PROJECT_DIR$/modules/paypalusa/backward_compatibility/Display.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/backward_compatibility/Display.php" afterPath="$PROJECT_DIR$/modules/themeinstallator/backward_compatibility/Display.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/classes/GamificationTools.php" afterPath="$PROJECT_DIR$/modules/gamification/classes/GamificationTools.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/views/templates/admin/admin-order.tpl" afterPath="$PROJECT_DIR$/modules/paypalusa/views/templates/admin/admin-order.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artxchange.iml" afterPath="$PROJECT_DIR$/.idea/artxchange.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/backward_compatibility/backward.ini" afterPath="$PROJECT_DIR$/modules/paypalusa/backward_compatibility/backward.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/backward_compatibility/backward.ini" afterPath="$PROJECT_DIR$/modules/themeinstallator/backward_compatibility/backward.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/backward_compatibility/backward.php" afterPath="$PROJECT_DIR$/modules/paypalusa/backward_compatibility/backward.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/backward_compatibility/backward.php" afterPath="$PROJECT_DIR$/modules/themeinstallator/backward_compatibility/backward.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/css/bubble-popup.css" afterPath="$PROJECT_DIR$/modules/gamification/views/css/bubble-popup.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/js/bubble-popup.js" afterPath="$PROJECT_DIR$/modules/gamification/views/js/bubble-popup.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/class_index.php" afterPath="$PROJECT_DIR$/cache/class_index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/css/colorpicker.css" afterPath="$PROJECT_DIR$/modules/paypalusa/css/colorpicker.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/js/colorpicker.js" afterPath="$PROJECT_DIR$/modules/paypalusa/js/colorpicker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/config.xml" afterPath="$PROJECT_DIR$/modules/gamification/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/mymodule/config.xml" afterPath="$PROJECT_DIR$/modules/mymodule/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/config.xml" afterPath="$PROJECT_DIR$/modules/paypalusa/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/config.xml" afterPath="$PROJECT_DIR$/modules/themeinstallator/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/views/templates/admin/configuration-mx.tpl" afterPath="$PROJECT_DIR$/modules/paypalusa/views/templates/admin/configuration-mx.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/views/templates/admin/configuration.tpl" afterPath="$PROJECT_DIR$/modules/paypalusa/views/templates/admin/configuration.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/translations/cs.php" afterPath="$PROJECT_DIR$/modules/gamification/translations/cs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/translations/cs.php" afterPath="$PROJECT_DIR$/modules/themeinstallator/translations/cs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/data/data_EN_USD_US.json" afterPath="$PROJECT_DIR$/modules/gamification/data/data_EN_USD_US.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/de.php" afterPath="$PROJECT_DIR$/modules/gamification/de.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/translations/de.php" afterPath="$PROJECT_DIR$/modules/gamification/translations/de.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/de.php" afterPath="$PROJECT_DIR$/modules/themeinstallator/de.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/translations/de.php" afterPath="$PROJECT_DIR$/modules/themeinstallator/translations/de.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/xml/default_country_modules_list.xml" afterPath="$PROJECT_DIR$/config/xml/default_country_modules_list.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/bankwire/translations/en.php" afterPath="$PROJECT_DIR$/modules/bankwire/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blockadvertising/translations/en.php" afterPath="$PROJECT_DIR$/modules/blockadvertising/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blockbestsellers/translations/en.php" afterPath="$PROJECT_DIR$/modules/blockbestsellers/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blockcart/translations/en.php" afterPath="$PROJECT_DIR$/modules/blockcart/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blockcategories/translations/en.php" afterPath="$PROJECT_DIR$/modules/blockcategories/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blockcms/translations/en.php" afterPath="$PROJECT_DIR$/modules/blockcms/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blockcontact/translations/en.php" afterPath="$PROJECT_DIR$/modules/blockcontact/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blockcontactinfos/translations/en.php" afterPath="$PROJECT_DIR$/modules/blockcontactinfos/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blockcurrencies/translations/en.php" afterPath="$PROJECT_DIR$/modules/blockcurrencies/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blockcustomerprivacy/translations/en.php" afterPath="$PROJECT_DIR$/modules/blockcustomerprivacy/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blocklayered/translations/en.php" afterPath="$PROJECT_DIR$/modules/blocklayered/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blocklink/translations/en.php" afterPath="$PROJECT_DIR$/modules/blocklink/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blockmanufacturer/translations/en.php" afterPath="$PROJECT_DIR$/modules/blockmanufacturer/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blockmyaccountfooter/translations/en.php" afterPath="$PROJECT_DIR$/modules/blockmyaccountfooter/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blocknewproducts/translations/en.php" afterPath="$PROJECT_DIR$/modules/blocknewproducts/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blocknewsletter/translations/en.php" afterPath="$PROJECT_DIR$/modules/blocknewsletter/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blockpaymentlogo/translations/en.php" afterPath="$PROJECT_DIR$/modules/blockpaymentlogo/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blockpermanentlinks/translations/en.php" afterPath="$PROJECT_DIR$/modules/blockpermanentlinks/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blockreinsurance/translations/en.php" afterPath="$PROJECT_DIR$/modules/blockreinsurance/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blockrss/translations/en.php" afterPath="$PROJECT_DIR$/modules/blockrss/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blocksearch/translations/en.php" afterPath="$PROJECT_DIR$/modules/blocksearch/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blocksocial/translations/en.php" afterPath="$PROJECT_DIR$/modules/blocksocial/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blockspecials/translations/en.php" afterPath="$PROJECT_DIR$/modules/blockspecials/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blockstore/translations/en.php" afterPath="$PROJECT_DIR$/modules/blockstore/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blocksupplier/translations/en.php" afterPath="$PROJECT_DIR$/modules/blocksupplier/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blocktags/translations/en.php" afterPath="$PROJECT_DIR$/modules/blocktags/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blocktopmenu/translations/en.php" afterPath="$PROJECT_DIR$/modules/blocktopmenu/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blockuserinfo/translations/en.php" afterPath="$PROJECT_DIR$/modules/blockuserinfo/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blockviewed/translations/en.php" afterPath="$PROJECT_DIR$/modules/blockviewed/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/blockwishlist/translations/en.php" afterPath="$PROJECT_DIR$/modules/blockwishlist/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/carriercompare/translations/en.php" afterPath="$PROJECT_DIR$/modules/carriercompare/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/cashondelivery/translations/en.php" afterPath="$PROJECT_DIR$/modules/cashondelivery/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/cheque/translations/en.php" afterPath="$PROJECT_DIR$/modules/cheque/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/crossselling/translations/en.php" afterPath="$PROJECT_DIR$/modules/crossselling/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/dateofdelivery/translations/en.php" afterPath="$PROJECT_DIR$/modules/dateofdelivery/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/editorial/translations/en.php" afterPath="$PROJECT_DIR$/modules/editorial/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/followup/translations/en.php" afterPath="$PROJECT_DIR$/modules/followup/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/homefeatured/translations/en.php" afterPath="$PROJECT_DIR$/modules/homefeatured/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/homeslider/translations/en.php" afterPath="$PROJECT_DIR$/modules/homeslider/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/importerosc/translations/en.php" afterPath="$PROJECT_DIR$/modules/importerosc/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/loyalty/translations/en.php" afterPath="$PROJECT_DIR$/modules/loyalty/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/mailalerts/translations/en.php" afterPath="$PROJECT_DIR$/modules/mailalerts/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/newsletter/translations/en.php" afterPath="$PROJECT_DIR$/modules/newsletter/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/pagesnotfound/translations/en.php" afterPath="$PROJECT_DIR$/modules/pagesnotfound/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/productcomments/translations/en.php" afterPath="$PROJECT_DIR$/modules/productcomments/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/productscategory/translations/en.php" afterPath="$PROJECT_DIR$/modules/productscategory/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/producttooltip/translations/en.php" afterPath="$PROJECT_DIR$/modules/producttooltip/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/pscleaner/translations/en.php" afterPath="$PROJECT_DIR$/modules/pscleaner/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/referralprogram/translations/en.php" afterPath="$PROJECT_DIR$/modules/referralprogram/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/sekeywords/translations/en.php" afterPath="$PROJECT_DIR$/modules/sekeywords/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/sendtoafriend/translations/en.php" afterPath="$PROJECT_DIR$/modules/sendtoafriend/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/shopimporter/translations/en.php" afterPath="$PROJECT_DIR$/modules/shopimporter/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/statsbestcategories/translations/en.php" afterPath="$PROJECT_DIR$/modules/statsbestcategories/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/statsbestcustomers/translations/en.php" afterPath="$PROJECT_DIR$/modules/statsbestcustomers/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/statsbestmanufacturers/translations/en.php" afterPath="$PROJECT_DIR$/modules/statsbestmanufacturers/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/statsbestproducts/translations/en.php" afterPath="$PROJECT_DIR$/modules/statsbestproducts/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/statsbestsuppliers/translations/en.php" afterPath="$PROJECT_DIR$/modules/statsbestsuppliers/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/statsbestvouchers/translations/en.php" afterPath="$PROJECT_DIR$/modules/statsbestvouchers/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/statscarrier/translations/en.php" afterPath="$PROJECT_DIR$/modules/statscarrier/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/statscatalog/translations/en.php" afterPath="$PROJECT_DIR$/modules/statscatalog/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/statscheckup/translations/en.php" afterPath="$PROJECT_DIR$/modules/statscheckup/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/statsdata/translations/en.php" afterPath="$PROJECT_DIR$/modules/statsdata/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/statsforecast/translations/en.php" afterPath="$PROJECT_DIR$/modules/statsforecast/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/statsgeolocation/translations/en.php" afterPath="$PROJECT_DIR$/modules/statsgeolocation/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/statslive/translations/en.php" afterPath="$PROJECT_DIR$/modules/statslive/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/statsnewsletter/translations/en.php" afterPath="$PROJECT_DIR$/modules/statsnewsletter/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/statsorigin/translations/en.php" afterPath="$PROJECT_DIR$/modules/statsorigin/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/statspersonalinfos/translations/en.php" afterPath="$PROJECT_DIR$/modules/statspersonalinfos/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/statsproduct/translations/en.php" afterPath="$PROJECT_DIR$/modules/statsproduct/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/statsregistrations/translations/en.php" afterPath="$PROJECT_DIR$/modules/statsregistrations/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/statssales/translations/en.php" afterPath="$PROJECT_DIR$/modules/statssales/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/statssearch/translations/en.php" afterPath="$PROJECT_DIR$/modules/statssearch/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/statsstock/translations/en.php" afterPath="$PROJECT_DIR$/modules/statsstock/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/statsvisits/translations/en.php" afterPath="$PROJECT_DIR$/modules/statsvisits/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/trackingfront/translations/en.php" afterPath="$PROJECT_DIR$/modules/trackingfront/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/vatnumber/translations/en.php" afterPath="$PROJECT_DIR$/modules/vatnumber/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/watermark/translations/en.php" afterPath="$PROJECT_DIR$/modules/watermark/translations/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/default/lang/en.php" afterPath="$PROJECT_DIR$/themes/default/lang/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/views/templates/front/errors-messages.tpl" afterPath="$PROJECT_DIR$/modules/paypalusa/views/templates/front/errors-messages.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/translations/es.php" afterPath="$PROJECT_DIR$/modules/gamification/translations/es.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/es.php" afterPath="$PROJECT_DIR$/modules/themeinstallator/es.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/translations/es.php" afterPath="$PROJECT_DIR$/modules/themeinstallator/translations/es.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/views/templates/front/express-checkout-messages.tpl" afterPath="$PROJECT_DIR$/modules/paypalusa/views/templates/front/express-checkout-messages.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/views/templates/hook/express-checkout.tpl" afterPath="$PROJECT_DIR$/modules/paypalusa/views/templates/hook/express-checkout.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/expresscheckout.php" afterPath="$PROJECT_DIR$/modules/paypalusa/expresscheckout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/controllers/front/expresscheckout.php" afterPath="$PROJECT_DIR$/modules/paypalusa/controllers/front/expresscheckout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/templates/admin/gamification/helpers/view/filters.tpl" afterPath="$PROJECT_DIR$/modules/gamification/views/templates/admin/gamification/helpers/view/filters.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/templates/admin/gamification/helpers/view/filters_bt.tpl" afterPath="$PROJECT_DIR$/modules/gamification/views/templates/admin/gamification/helpers/view/filters_bt.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/fr.php" afterPath="$PROJECT_DIR$/modules/gamification/fr.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/translations/fr.php" afterPath="$PROJECT_DIR$/modules/gamification/translations/fr.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/fr.php" afterPath="$PROJECT_DIR$/modules/themeinstallator/fr.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/translations/fr.php" afterPath="$PROJECT_DIR$/modules/themeinstallator/translations/fr.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/css/gamification.css" afterPath="$PROJECT_DIR$/modules/gamification/views/css/gamification.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/js/gamification.js" afterPath="$PROJECT_DIR$/modules/gamification/views/js/gamification.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/gamification.php" afterPath="$PROJECT_DIR$/modules/gamification/gamification.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/js/gamification_bt.js" afterPath="$PROJECT_DIR$/modules/gamification/views/js/gamification_bt.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/index.php" afterPath="$PROJECT_DIR$/config/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/index.php" afterPath="$PROJECT_DIR$/img/p/1/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/0/index.php" afterPath="$PROJECT_DIR$/img/p/1/0/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/1/index.php" afterPath="$PROJECT_DIR$/img/p/1/1/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/2/index.php" afterPath="$PROJECT_DIR$/img/p/1/2/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/3/index.php" afterPath="$PROJECT_DIR$/img/p/1/3/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/4/index.php" afterPath="$PROJECT_DIR$/img/p/1/4/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/5/index.php" afterPath="$PROJECT_DIR$/img/p/1/5/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/6/index.php" afterPath="$PROJECT_DIR$/img/p/1/6/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/7/index.php" afterPath="$PROJECT_DIR$/img/p/1/7/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/8/index.php" afterPath="$PROJECT_DIR$/img/p/1/8/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/1/9/index.php" afterPath="$PROJECT_DIR$/img/p/1/9/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/index.php" afterPath="$PROJECT_DIR$/img/p/2/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/0/index.php" afterPath="$PROJECT_DIR$/img/p/2/0/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/1/index.php" afterPath="$PROJECT_DIR$/img/p/2/1/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/2/index.php" afterPath="$PROJECT_DIR$/img/p/2/2/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/3/index.php" afterPath="$PROJECT_DIR$/img/p/2/3/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/4/index.php" afterPath="$PROJECT_DIR$/img/p/2/4/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/5/index.php" afterPath="$PROJECT_DIR$/img/p/2/5/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/2/6/index.php" afterPath="$PROJECT_DIR$/img/p/2/6/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/3/index.php" afterPath="$PROJECT_DIR$/img/p/3/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/4/index.php" afterPath="$PROJECT_DIR$/img/p/4/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/5/index.php" afterPath="$PROJECT_DIR$/img/p/5/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/6/index.php" afterPath="$PROJECT_DIR$/img/p/6/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/7/index.php" afterPath="$PROJECT_DIR$/img/p/7/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/8/index.php" afterPath="$PROJECT_DIR$/img/p/8/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/p/9/index.php" afterPath="$PROJECT_DIR$/img/p/9/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/index.php" afterPath="$PROJECT_DIR$/modules/gamification/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/controllers/index.php" afterPath="$PROJECT_DIR$/modules/gamification/controllers/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/translations/index.php" afterPath="$PROJECT_DIR$/modules/gamification/translations/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/index.php" afterPath="$PROJECT_DIR$/modules/paypalusa/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/backward_compatibility/index.php" afterPath="$PROJECT_DIR$/modules/paypalusa/backward_compatibility/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/controllers/index.php" afterPath="$PROJECT_DIR$/modules/paypalusa/controllers/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/controllers/front/index.php" afterPath="$PROJECT_DIR$/modules/paypalusa/controllers/front/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/css/index.php" afterPath="$PROJECT_DIR$/modules/paypalusa/css/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/img/index.php" afterPath="$PROJECT_DIR$/modules/paypalusa/img/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/js/index.php" afterPath="$PROJECT_DIR$/modules/paypalusa/js/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/translations/index.php" afterPath="$PROJECT_DIR$/modules/paypalusa/translations/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/views/index.php" afterPath="$PROJECT_DIR$/modules/paypalusa/views/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/views/templates/index.php" afterPath="$PROJECT_DIR$/modules/paypalusa/views/templates/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/views/templates/admin/index.php" afterPath="$PROJECT_DIR$/modules/paypalusa/views/templates/admin/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/views/templates/front/index.php" afterPath="$PROJECT_DIR$/modules/paypalusa/views/templates/front/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/views/templates/hook/index.php" afterPath="$PROJECT_DIR$/modules/paypalusa/views/templates/hook/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/index.php" afterPath="$PROJECT_DIR$/modules/themeinstallator/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/backward_compatibility/index.php" afterPath="$PROJECT_DIR$/modules/themeinstallator/backward_compatibility/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/export/index.php" afterPath="$PROJECT_DIR$/modules/themeinstallator/export/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/import/index.php" afterPath="$PROJECT_DIR$/modules/themeinstallator/import/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/upgrade/install-1.4.9.php" afterPath="$PROJECT_DIR$/modules/gamification/upgrade/install-1.4.9.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/upgrade/install-1.6.6.php" afterPath="$PROJECT_DIR$/modules/gamification/upgrade/install-1.6.6.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/upgrade/install-1.7.3.php" afterPath="$PROJECT_DIR$/modules/gamification/upgrade/install-1.7.3.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/upgrade/install-1.7.6.php" afterPath="$PROJECT_DIR$/modules/gamification/upgrade/install-1.7.6.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/upgrade/install-1.7.7.php" afterPath="$PROJECT_DIR$/modules/gamification/upgrade/install-1.7.7.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/css/isotope.css" afterPath="$PROJECT_DIR$/modules/gamification/views/css/isotope.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/translations/it.php" afterPath="$PROJECT_DIR$/modules/gamification/translations/it.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/it.php" afterPath="$PROJECT_DIR$/modules/themeinstallator/it.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/translations/it.php" afterPath="$PROJECT_DIR$/modules/themeinstallator/translations/it.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/js/jquery.isotope.js" afterPath="$PROJECT_DIR$/modules/gamification/views/js/jquery.isotope.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/js/jquery.lightbox_me.js" afterPath="$PROJECT_DIR$/modules/paypalusa/js/jquery.lightbox_me.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/css/layout.css" afterPath="$PROJECT_DIR$/modules/paypalusa/css/layout.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/xml/must_have_modules_list.xml" afterPath="$PROJECT_DIR$/config/xml/must_have_modules_list.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/translations/mx.php" afterPath="$PROJECT_DIR$/modules/paypalusa/translations/mx.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/mymodule/mymodule.php" afterPath="$PROJECT_DIR$/modules/mymodule/mymodule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/templates/hook/notification.tpl" afterPath="$PROJECT_DIR$/modules/gamification/views/templates/hook/notification.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/templates/hook/notification_bt.tpl" afterPath="$PROJECT_DIR$/modules/gamification/views/templates/hook/notification_bt.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/views/templates/hook/order-confirmation.tpl" afterPath="$PROJECT_DIR$/modules/paypalusa/views/templates/hook/order-confirmation.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/views/templates/hook/payment-advanced.tpl" afterPath="$PROJECT_DIR$/modules/paypalusa/views/templates/hook/payment-advanced.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/css/paypal-usa.css" afterPath="$PROJECT_DIR$/modules/paypalusa/css/paypal-usa.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/js/paypalusa.js" afterPath="$PROJECT_DIR$/modules/paypalusa/js/paypalusa.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/paypalusa.php" afterPath="$PROJECT_DIR$/modules/paypalusa/paypalusa.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/translations/pl.php" afterPath="$PROJECT_DIR$/modules/gamification/translations/pl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/translations/pl.php" afterPath="$PROJECT_DIR$/modules/themeinstallator/translations/pl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/xml/preactivation.xml" afterPath="$PROJECT_DIR$/config/xml/preactivation.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/prestashop.pub" afterPath="$PROJECT_DIR$/modules/gamification/prestashop.pub" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/translations/ru.php" afterPath="$PROJECT_DIR$/modules/gamification/translations/ru.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/translations/ru.php" afterPath="$PROJECT_DIR$/modules/themeinstallator/translations/ru.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/script.js" afterPath="$PROJECT_DIR$/modules/themeinstallator/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/settings.inc.php" afterPath="$PROJECT_DIR$/config/settings.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/sql_install.php" afterPath="$PROJECT_DIR$/modules/gamification/sql_install.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/views/templates/hook/standard.tpl" afterPath="$PROJECT_DIR$/modules/paypalusa/views/templates/hook/standard.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/xml/tab_modules_list.xml" afterPath="$PROJECT_DIR$/config/xml/tab_modules_list.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/themeinstallator.js" afterPath="$PROJECT_DIR$/modules/themeinstallator/themeinstallator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/themeinstallator/themeinstallator.php" afterPath="$PROJECT_DIR$/modules/themeinstallator/themeinstallator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/validation.php" afterPath="$PROJECT_DIR$/modules/paypalusa/validation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/paypalusa/controllers/front/validation.php" afterPath="$PROJECT_DIR$/modules/paypalusa/controllers/front/validation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/templates/admin/gamification/helpers/view/view.tpl" afterPath="$PROJECT_DIR$/modules/gamification/views/templates/admin/gamification/helpers/view/view.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gamification/views/templates/admin/gamification/helpers/view/view_bt.tpl" afterPath="$PROJECT_DIR$/modules/gamification/views/templates/admin/gamification/helpers/view/view_bt.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="26fadfb4-8239-44a2-8a4f-0e304f6f31b2" name="Default" comment="" />
     <ignored path="artxchange.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -718,30 +26,8 @@
       <file leaf-file-name="mymodule.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/mymodule/mymodule.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="63" selection-start="3162" selection-end="3162" vertical-scroll-proportion="-0.5180723" vertical-offset="2126" max-vertical-offset="2790">
+            <state line="57" column="31" selection-start="1765" selection-end="1772" vertical-scroll-proportion="0.33283132" vertical-offset="805" max-vertical-offset="2790">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mymodule.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/mymodule/views/templates/hook/mymodule.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="12" selection-start="377" selection-end="377" vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="468">
-              <folding>
-                <marker date="1392257601292" expanded="true" signature="199:287" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="display.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/mymodule/controllers/front/display.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="1" selection-start="283" selection-end="283" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="378">
-              <folding>
-                <element signature="e#6#85#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -749,16 +35,7 @@
       <file leaf-file-name="display.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/mymodule/views/templates/front/display.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="108">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mymodule.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/mymodule/css/mymodule.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="1" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="108">
               <folding />
             </state>
           </provider>
@@ -771,63 +48,11 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/modules/mymodule/mymodule.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="changedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/mystore/app/controllers/home_controller.rb" />
-        <option value="$PROJECT_DIR$/mystore/config/routes.rb" />
-        <option value="$PROJECT_DIR$/spree_simple_sales/app/views/spree/home/sale.html.erb" />
-        <option value="$PROJECT_DIR$/spree_simple_sales/config/routes.rb" />
-        <option value="$PROJECT_DIR$/spree_simple_sales/app/models/spree/variant_decorator.rb" />
-        <option value="$PROJECT_DIR$/spree_simple_sales/spec/models/spree/variant_decorator_spec.rb" />
-        <option value="$PROJECT_DIR$/mystore/config/application.rb" />
-        <option value="$PROJECT_DIR$/mystore/config/initializers/spree.rb" />
-        <option value="$PROJECT_DIR$/mystore/app/overrides/add_sale_price_to_product_edit.rb" />
-        <option value="$PROJECT_DIR$/spree_simple_sales/app/models/spree/product_decorator.rb" />
-        <option value="$PROJECT_DIR$/spree_simple_sales/app/overrides/add_sale_price_to_product_edit.rb" />
-        <option value="$PROJECT_DIR$/modules/transaction/transaction.php" />
-        <option value="$PROJECT_DIR$/modules/transaction/mymodule.php" />
-        <option value="$PROJECT_DIR$/modules/mymodule/css/mymodule.css" />
-        <option value="$PROJECT_DIR$/modules/mymodule/views/display.php" />
-        <option value="$PROJECT_DIR$/modules/mymodule/views/templates/display.tpl" />
-        <option value="$PROJECT_DIR$/modules/mymodule/views/templates/hook/mymodule.tpl" />
-        <option value="$PROJECT_DIR$/modules/mymodule/mymodule.php" />
-      </list>
-    </option>
-  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="y" value="24" />
     <option name="width" value="1600" />
     <option name="height" value="852" />
-  </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>PHP</id>
-          </State>
-          <State>
-            <id>UndefinedPHP</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>PhpUndefinedFieldInspection</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -980,37 +205,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mymodule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="artxchange" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="artxchange" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mymodule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="front" />
+              <option name="myItemId" value="blockmyaccount" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1019,42 +214,17 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="appearance" />
-    <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
-    <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/modules/mymodule/views/templates/front" />
-      <recent name="$PROJECT_DIR$/modules/mymodule/controllers/front" />
-    </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="89717976-ce0e-47ea-8730-1ebee2f4983b" name="Default" comment="" />
-      <created>1391042510446</created>
-      <updated>1391042510446</updated>
+      <changelist id="26fadfb4-8239-44a2-8a4f-0e304f6f31b2" name="Default" comment="" />
+      <created>1392327441650</created>
+      <updated>1392327441650</updated>
     </task>
     <servers />
   </component>
@@ -1062,20 +232,20 @@
     <frame x="0" y="24" width="1600" height="852" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.249375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288948" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1099,41 +269,16 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/modules/mymodule/css/mymodule.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="1" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mymodule/controllers/front/display.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="1" selection-start="283" selection-end="283" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="378">
-          <folding>
-            <element signature="e#6#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/mymodule/views/templates/front/display.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="694">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="721">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mymodule/views/templates/hook/mymodule.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="12" selection-start="377" selection-end="377" vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="468">
-          <folding>
-            <marker date="1392257601292" expanded="true" signature="199:287" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/mymodule/mymodule.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="63" selection-start="3162" selection-end="3162" vertical-scroll-proportion="-0.5180723" vertical-offset="2126" max-vertical-offset="2790">
+        <state line="57" column="31" selection-start="1765" selection-end="1772" vertical-scroll-proportion="0.33283132" vertical-offset="805" max-vertical-offset="2790">
           <folding />
         </state>
       </provider>

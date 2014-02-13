@@ -1,0 +1,9 @@
+Hola,
+		
+Advertencia: ha recibido una nueva alerta en el Back Office.
+
+Puede verificarla en la sección: "Herramientas > Logs" del Back Office
+
+{shop_name} - {shop_url}
+
+{shop_url} desarrollado PrestaShop™

@@ -1,0 +1,20 @@
+Hallo {firstname} {lastname},
+ 
+vielen Dank für die Anlage eines Kundenkontos bei {shop_name}. 
+
+Hier Ihre Anmeldedaten:
+ 
+E-Mail-Adresse: {email}
+Passwort: {passwd}
+ 
+Sicherheitstipps:
+
+* Schützen Sie Ihre Anmeldedaten.
+* Geben Sie Ihre Login-Details nicht an Dritte weiter.
+* Ändern Sie Ihr Passwortregelmäßig.
+* Falls Sie vermuten, dass jemand Ihr Konto unerlaubt benutzt, benachrichtigen Sie uns bitte sofort.
+ 
+Sie können nun Bestellungen auf unserer Webseite vornehmen: {shop_name}.
+ 
+{shop_name} powered byPrestaShop™ 
+

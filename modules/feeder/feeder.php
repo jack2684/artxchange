@@ -35,7 +35,7 @@ class Feeder extends Module
 	{
 		$this->name = 'feeder';
 		$this->tab = 'front_office_features';
-		$this->version = 0.4;
+		$this->version = 0.3;
 		$this->author = 'PrestaShop';
 		$this->need_instance = 0;
 		
@@ -53,9 +53,10 @@ class Feeder extends Module
 	
 	function hookHeader($params)
 	{
+		
 		if (!($id_category = (int)Tools::getValue('id_category')))
 		{
-			if (isset($_SERVER['HTTP_REFERER']) && strstr($_SERVER['HTTP_REFERER'], Tools::getHttpHost()) && preg_match('!^(.*)\/([0-9]+)\-(.*[^\.])|(.*)id_category=([0-9]+)(.*)$!', $_SERVER['HTTP_REFERER'], $regs))
+			if (isset($_SERVER['HTTP_REFERER']) && preg_match('!^(.*)\/([0-9]+)\-(.*[^\.])|(.*)id_category=([0-9]+)(.*)$!', $_SERVER['HTTP_REFERER'], $regs) && !strstr($_SERVER['HTTP_REFERER'], '.html'))
 			{
 				if (isset($regs[2]) && is_numeric($regs[2]))
 					$id_category = (int)($regs[2]);

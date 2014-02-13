@@ -39,7 +39,7 @@ class HTMLTemplateInvoiceCore extends HTMLTemplate
 		$this->smarty = $smarty;
 
 		// header informations
-		$this->date = Tools::displayDate($order_invoice->date_add);
+		$this->date = Tools::displayDate($order_invoice->date_add, (int)$this->order->id_lang);
 
 		$id_lang = Context::getContext()->language->id;
 		$this->title = HTMLTemplateInvoice::l('Invoice ').' #'.Configuration::get('PS_INVOICE_PREFIX', $id_lang, null, (int)$this->order->id_shop).sprintf('%06d', $order_invoice->number);
@@ -89,8 +89,7 @@ class HTMLTemplateInvoiceCore extends HTMLTemplate
 			$tax_exempt = Configuration::get('VATNUMBER_MANAGEMENT')
 								&& !empty($address->vat_number)
 								&& $address->id_country != Configuration::get('VATNUMBER_COUNTRY');
-			$carrier = new Carrier($this->order->id_carrier);
-			
+
 			$this->smarty->assign(array(
 				'tax_exempt' => $tax_exempt,
 				'use_one_after_another_method' => $this->order_invoice->useOneAfterAnotherTaxComputationMethod(),
@@ -99,8 +98,7 @@ class HTMLTemplateInvoiceCore extends HTMLTemplate
 				'ecotax_tax_breakdown' => $this->order_invoice->getEcoTaxTaxesBreakdown(),
 				'wrapping_tax_breakdown' => $this->order_invoice->getWrappingTaxesBreakdown(),
 				'order' => $this->order,
-				'order_invoice' => $this->order_invoice,
-				'carrier' => $carrier
+				'order_invoice' => $this->order_invoice
 			));
 
 			return $this->smarty->fetch($this->getTemplate('invoice.tax-tab'));
@@ -139,7 +137,7 @@ class HTMLTemplateInvoiceCore extends HTMLTemplate
 	 */
 	public function getFilename()
 	{
-		return Configuration::get('PS_INVOICE_PREFIX', Context::getContext()->language->id, null, $this->order->id_shop).sprintf('%06d', $this->order_invoice->number).'.pdf';
+		return Configuration::get('PS_INVOICE_PREFIX').sprintf('%06d', $this->order_invoice->number).'.pdf';
 	}
 }
 

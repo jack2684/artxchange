@@ -36,11 +36,10 @@ class PasswordControllerCore extends FrontController
 	{
 		if (Tools::isSubmit('email'))
 		{
-			if (!($email = trim(Tools::getValue('email'))) || !Validate::isEmail($email))
+			if (!($email = Tools::getValue('email')) || !Validate::isEmail($email))
 				$this->errors[] = Tools::displayError('Invalid email address.');
 			else
 			{
-
 				$customer = new Customer();
 				$customer->getByemail($email);
 				if (!Validate::isLoadedObject($customer))
@@ -58,7 +57,7 @@ class PasswordControllerCore extends FrontController
 						'{url}' => $this->context->link->getPageLink('password', true, null, 'token='.$customer->secure_key.'&id_customer='.(int)$customer->id)
 					);
 					if (Mail::Send($this->context->language->id, 'password_query', Mail::l('Password query confirmation'), $mail_params, $customer->email, $customer->firstname.' '.$customer->lastname))
-						$this->context->smarty->assign(array('confirmation' => 2, 'customer_email' => $customer->email));
+						$this->context->smarty->assign(array('confirmation' => 2, 'email' => $customer->email));
 					else
 						$this->errors[] = Tools::displayError('An error occurred while sending the email.');
 				}
@@ -91,7 +90,7 @@ class PasswordControllerCore extends FrontController
 							'{passwd}' => $password
 						);
 						if (Mail::Send($this->context->language->id, 'password', Mail::l('Your new password'), $mail_params, $customer->email, $customer->firstname.' '.$customer->lastname))
-							$this->context->smarty->assign(array('confirmation' => 1, 'customer_email' => $customer->email));
+							$this->context->smarty->assign(array('confirmation' => 1, 'email' => $customer->email));
 						else
 							$this->errors[] = Tools::displayError('An error occurred while sending the email.');
 					}

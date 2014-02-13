@@ -1,0 +1,13 @@
+Hallo {firstname} {lastname},
+
+vielen Dank für Ihre Bestellung bei {shop_name}.
+
+Wir haben Ihre Bestellung Nr. {order_name} verschickt.
+ 
+ISie können Ihr Paket verfolgen, indem Sie auf den folgenden Link klicken: {followup}
+ 
+Sie können in unserem Shop auf "Mein Konto"  klicken, um Ihre Bestellung zu sehen und Ihre Rechnung im Menü "Bestellverlauf" downloaden.
+
+Wenn Sie ein Gast-Konto haben, können Sie Ihre Bestellung im Abschnitt "Bestellverfolgung Gast" auf unserer Webseite verfolgen.
+ 
+{shop_name} powered by PrestaShop™

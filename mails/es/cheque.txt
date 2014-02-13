@@ -1,0 +1,23 @@
+Hola {firstname} {lastname},
+
+Gracias por compar en {shop_name}!
+
+Su pedido con la referencia: {order_name} ha sido recibido correctamente y será enviado en cuanto recibamos el pago.
+
+Por favor, recuerde que ha seleccionado pagar con cheque. Rellénelo con:
+
+Total: {total_paid}
+
+Por el pedido de: {cheque_name}
+
+Por favor envíelo a:
+
+{cheque_address}
+
+Puede revisar su pedido y descargar la factura en la sección: "Historia y detalles de mis pedidos" dentro de su cuenta.
+
+Si tiene una cuenta de invitado, puede seguir su pedido haciendo clic en: {guest_tracking_url}
+
+{shop_name} - {shop_url}
+
+{shop_url} desarrollado por PrestaShop™

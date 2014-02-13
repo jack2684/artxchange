@@ -62,8 +62,7 @@ class AdminEmailsControllerCore extends AdminController
 						),
 						'js' => array(
 							1 => 'onclick="$(\'#smtp\').slideUp();"', 
-							2 => 'onclick="$(\'#smtp\').slideDown();"',
-							3 => 'onclick="$(\'#smtp\').slideUp();"'
+							2 => 'onclick="$(\'#smtp\').slideDown();"'
 						),
 						'visibility' => Shop::CONTEXT_ALL
 					),
@@ -165,15 +164,6 @@ class AdminEmailsControllerCore extends AdminController
 			)
 		);
 	}
-	
-	public function updateOptionPsMailPasswd($value)
-	{
-		if (Tools::getValue('PS_MAIL_PASSWD') == '' && Configuration::get('PS_MAIL_PASSWD'))
-			return true;
-		else
-			Configuration::updateValue('PS_MAIL_PASSWD', Tools::getValue('PS_MAIL_PASSWD'));
-	}	
-	
 	
 	/**
 	 * AdminController::initContent() override

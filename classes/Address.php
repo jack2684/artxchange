@@ -222,7 +222,7 @@ class AddressCore extends ObjectModel
 	public function validateController($htmlentities = true)
 	{
 		$errors = parent::validateController($htmlentities);
-		if (!Configuration::get('VATNUMBER_MANAGEMENT') || !Configuration::get('VATNUMBER_CHECKING'))
+		if (!Configuration::get('VATNUMBER_CHECKING'))
 			return $errors;
 		include_once(_PS_MODULE_DIR_.'vatnumber/vatnumber.php');
 		if (class_exists('VatNumber', false))
@@ -237,8 +237,6 @@ class AddressCore extends ObjectModel
 	 */
 	public static function getZoneById($id_address)
 	{
-		if(!isset($id_address) || empty($id_address))
-			return false;
 		if (isset(self::$_idZones[$id_address]))
 			return self::$_idZones[$id_address];
 
@@ -261,20 +259,13 @@ class AddressCore extends ObjectModel
 	 */
 	public static function isCountryActiveById($id_address)
 	{
-		if(!isset($id_address) || empty($id_address))
+		if (!$result = Db::getInstance(_PS_USE_SQL_SLAVE_)->getRow('
+		SELECT c.`active`
+		FROM `'._DB_PREFIX_.'address` a
+		LEFT JOIN `'._DB_PREFIX_.'country` c ON c.`id_country` = a.`id_country`
+		WHERE a.`id_address` = '.(int)$id_address))
 			return false;
-
-		$cache_id = 'Address::isCountryActiveById_'.(int)$id_address;
-		if (!Cache::isStored($cache_id))
-		{
-			$result = (bool)Db::getInstance(_PS_USE_SQL_SLAVE_)->getvalue('
-			SELECT c.`active`
-			FROM `'._DB_PREFIX_.'address` a
-			LEFT JOIN `'._DB_PREFIX_.'country` c ON c.`id_country` = a.`id_country`
-			WHERE a.`id_address` = '.(int)$id_address);
-			Cache::store($cache_id, $result);
-		}
-		return Cache::retrieve($cache_id);
+		return ($result['active']);
 	}
 
 	/**
@@ -317,10 +308,11 @@ class AddressCore extends ObjectModel
 	{
 		$key = 'address_exists_'.(int)$id_address;
 		if (!Cache::isStored($key))
-		{
-			$id_address = Db::getInstance(_PS_USE_SQL_SLAVE_)->getValue('SELECT `id_address` FROM '._DB_PREFIX_.'address a WHERE a.`id_address` = '.(int)$id_address);
-			Cache::store($key, (bool)$id_address);
-		}
+				Cache::store(
+					$key, Db::getInstance(_PS_USE_SQL_SLAVE_)->getRow('
+							SELECT `id_address`
+							FROM '._DB_PREFIX_.'address a
+							WHERE a.`id_address` = '.(int)$id_address));
 		return Cache::retrieve($key);
 	}
 
@@ -328,17 +320,12 @@ class AddressCore extends ObjectModel
 	{
 		if (!$id_customer)
 			return false;
-		$cache_id = 'Address::getFirstCustomerAddressId_'.(int)$id_customer.'-'.(bool)$active;
-		if (!Cache::isStored($cache_id))
-		{
-			$result = (int)Db::getInstance(_PS_USE_SQL_SLAVE_)->getValue('
-				SELECT `id_address`
-				FROM `'._DB_PREFIX_.'address`
-				WHERE `id_customer` = '.(int)$id_customer.' AND `deleted` = 0'.($active ? ' AND `active` = 1' : '')
-			);
-			Cache::store($cache_id, $result);
-		}
-		return Cache::retrieve($cache_id);
+
+		return Db::getInstance(_PS_USE_SQL_SLAVE_)->getValue('
+			SELECT `id_address`
+			FROM `'._DB_PREFIX_.'address`
+			WHERE `id_customer` = '.(int)$id_customer.' AND `deleted` = 0'.($active ? ' AND `active` = 1' : '')
+		);
 	}
 
 	/**
@@ -389,3 +376,4 @@ class AddressCore extends ObjectModel
 		return Db::getInstance(_PS_USE_SQL_SLAVE_)->getValue($query);
 	}
 }
+

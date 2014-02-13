@@ -36,7 +36,7 @@ class HomeFeatured extends Module
 	{
 		$this->name = 'homefeatured';
 		$this->tab = 'front_office_features';
-		$this->version = '1.1';
+		$this->version = '0.9';
 		$this->author = 'PrestaShop';
 		$this->need_instance = 0;
 
@@ -48,24 +48,9 @@ class HomeFeatured extends Module
 
 	function install()
 	{
-		$this->_clearCache('homefeatured.tpl');
-		Configuration::updateValue('HOME_FEATURED_NBR', 8);
-
-		if (!parent::install()
-			|| !$this->registerHook('displayHome')
-			|| !$this->registerHook('header')
-			|| !$this->registerHook('addproduct')
-			|| !$this->registerHook('updateproduct')
-			|| !$this->registerHook('deleteproduct')
-		)
+		if (!Configuration::updateValue('HOME_FEATURED_NBR', 8) || !parent::install() || !$this->registerHook('displayHome') || !$this->registerHook('header'))
 			return false;
 		return true;
-	}
-	
-	public function uninstall()
-	{
-		$this->_clearCache('homefeatured.tpl');
-		return parent::uninstall();
 	}
 
 	public function getContent()
@@ -73,7 +58,7 @@ class HomeFeatured extends Module
 		$output = '<h2>'.$this->displayName.'</h2>';
 		if (Tools::isSubmit('submitHomeFeatured'))
 		{
-			$nbr = (int)Tools::getValue('nbr');
+			$nbr = (int)(Tools::getValue('nbr'));
 			if (!$nbr OR $nbr <= 0 OR !Validate::isInt($nbr))
 				$errors[] = $this->l('An invalid number of products has been specified.');
 			else
@@ -116,33 +101,16 @@ class HomeFeatured extends Module
 
 	public function hookDisplayHome($params)
 	{
-		if (!$this->isCached('homefeatured.tpl', $this->getCacheId('homefeatured')))
-		{
-			$category = new Category(Context::getContext()->shop->getCategory(), (int)Context::getContext()->language->id);
-			$nb = (int)Configuration::get('HOME_FEATURED_NBR');
-			$products = $category->getProducts((int)Context::getContext()->language->id, 1, ($nb ? $nb : 8), "position");
+		$category = new Category(Context::getContext()->shop->getCategory(), (int)Context::getContext()->language->id);
+		$nb = (int)(Configuration::get('HOME_FEATURED_NBR'));
+		$products = $category->getProducts((int)Context::getContext()->language->id, 1, ($nb ? $nb : 10));
 
-			$this->smarty->assign(array(
-				'products' => $products,
-				'add_prod_display' => Configuration::get('PS_ATTRIBUTE_CATEGORY_DISPLAY'),
-				'homeSize' => Image::getSize(ImageType::getFormatedName('home')),
-			));
-		}
-		return $this->display(__FILE__, 'homefeatured.tpl', $this->getCacheId('homefeatured'));
-	}
+		$this->smarty->assign(array(
+			'products' => $products,
+			'add_prod_display' => Configuration::get('PS_ATTRIBUTE_CATEGORY_DISPLAY'),
+			'homeSize' => Image::getSize(ImageType::getFormatedName('home')),
+		));
 
-	public function hookAddProduct($params)
-	{
-		$this->_clearCache('homefeatured.tpl');
-	}
-
-	public function hookUpdateProduct($params)
-	{
-		$this->_clearCache('homefeatured.tpl');
-	}
-
-	public function hookDeleteProduct($params)
-	{
-		$this->_clearCache('homefeatured.tpl');
+		return $this->display(__FILE__, 'homefeatured.tpl');
 	}
 }

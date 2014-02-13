@@ -1,0 +1,9 @@
+Hallo {firstname} {lastname},
+ 
+für Ihre Bestellung Nr. {order_name} haben wir Ihnen eine Gutschrift erstellt.
+ 
+Wenn Sie in unserem Shop auf "Mein Konto" klicken. finden Sie unter dem Menüpunkt  "Ihre Gutschriften" die Gutschrift zum Download bereit.
+
+{shop_name} - {shop_url}
+ 
+{shop_name} powered by PrestaShop™

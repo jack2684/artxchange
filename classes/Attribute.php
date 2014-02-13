@@ -71,7 +71,7 @@ class AttributeCore extends ObjectModel
 
 	public function delete()
 	{
-		if (!$this->hasMultishopEntries() || Shop::getContext() == Shop::CONTEXT_ALL)
+		if (!$this->hasMultishopEntries())
 		{
 			$result = Db::getInstance()->executeS('SELECT id_product_attribute FROM '._DB_PREFIX_.'product_attribute_combination WHERE id_attribute = '.(int)$this->id);
 			foreach ($result as $row)
@@ -139,7 +139,7 @@ class AttributeCore extends ObjectModel
 				ON (a.`id_attribute` = al.`id_attribute` AND al.`id_lang` = '.(int)$id_lang.')
 			'.Shop::addSqlAssociation('attribute_group', 'ag').'
 			'.Shop::addSqlAssociation('attribute', 'a').'
-			'.($not_null ? 'WHERE a.`id_attribute` IS NOT NULL AND al.`name` IS NOT NULL AND agl.`id_attribute_group` IS NOT NULL' : '').'
+			'.($not_null ? 'WHERE a.`id_attribute` IS NOT NULL AND al.`name` IS NOT NULL' : '').'
 			ORDER BY agl.`name` ASC, a.`position` ASC
 		');
 	}

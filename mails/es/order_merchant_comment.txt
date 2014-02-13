@@ -1,0 +1,10 @@
+Hola {firstname} {lastname},
+
+Ha recibido un mensaje de {shop_name} sobre el pedido con referencia {order_name}.
+
+Mensaje:
+{message}
+
+Gracias por comprar en {shop_name}!
+
+{shop_url} desarrollado por PrestaShop™

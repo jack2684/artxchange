@@ -1,0 +1,9 @@
+Sehr geehrte Händler,
+
+Sie haben eine Nachricht von einen Kunden Ihres Shop {shop_name} erhalten.
+ 
+E-Mail Kunde: {email}
+
+Nachricht Kunde: {message}
+ 
+{shop_name} powered by PrestaShop™

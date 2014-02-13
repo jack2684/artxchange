@@ -33,8 +33,7 @@ if (isset($_GET['secure_key']))
 	if (!empty($secureKey) AND $secureKey === $_GET['secure_key'])
 	{
 		$followup = new Followup();
-		if ($followup->active)
-			$followup->cronTask();
+		$followup->cronTask();
 	}
 }
 

@@ -1,32 +1,32 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-12 16:36:42
+<?php /* Smarty version Smarty-3.1.13, created on 2014-02-13 20:10:43
          compiled from "/var/www/artxchange/themes/default/authentication.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:203142150952fbe96ab84930-88079863%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:184249327052fd26c3d71626-88059241%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '832c02ec3dcd1df2db70808b4d31259ee9cc8e9b' => 
     array (
       0 => '/var/www/artxchange/themes/default/authentication.tpl',
-      1 => 1390229662,
+      1 => 1366914192,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '203142150952fbe96ab84930-88079863',
+  'nocache_hash' => '184249327052fd26c3d71626-88059241',
   'function' => 
   array (
   ),
   'variables' => 
   array (
-    'email_create' => 0,
-    'link' => 0,
-    'navigationPipe' => 0,
     'countries' => 0,
     'country' => 0,
     'state' => 0,
+    'address' => 0,
+    'email_create' => 0,
     'back' => 0,
     'authentification_error' => 0,
     'account_error' => 0,
     'v' => 0,
+    'link' => 0,
     'inOrderProcess' => 0,
     'PS_GUEST_CHECKOUT_ENABLED' => 0,
     'genders' => 0,
@@ -44,42 +44,29 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'newsletter' => 0,
     'dlv_all_fields' => 0,
     'field_name' => 0,
-    'b2b_enable' => 0,
     'sl_country' => 0,
-    'postCodeExist' => 0,
-    'stateExist' => 0,
-    'dniExist' => 0,
     'one_phone_at_least' => 0,
-    'inv_all_fields' => 0,
+    'stateExist' => 0,
     'HOOK_CREATE_ACCOUNT_FORM' => 0,
     'HOOK_CREATE_ACCOUNT_TOP' => 0,
+    'b2b_enable' => 0,
     'PS_REGISTRATION_PROCESS_TYPE' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52fbe96b103858_97511007',
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_52fd26c4132109_66487996',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52fbe96b103858_97511007')) {function content_52fbe96b103858_97511007($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/artxchange/tools/smarty/plugins/modifier.escape.php';
+<?php if ($_valid && !is_callable('content_52fd26c4132109_66487996')) {function content_52fd26c4132109_66487996($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/artxchange/tools/smarty/plugins/modifier.escape.php';
 ?>
 
-<?php $_smarty_tpl->_capture_stack[0][] = array('path', null, null); ob_start(); ?>
-	<?php if (!isset($_smarty_tpl->tpl_vars['email_create']->value)){?><?php echo smartyTranslate(array('s'=>'Authentication'),$_smarty_tpl);?>
-<?php }else{ ?>
-		<a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('authentication',true), ENT_QUOTES, 'UTF-8', true);?>
-" rel="nofollow" title="<?php echo smartyTranslate(array('s'=>'Authentication'),$_smarty_tpl);?>
-"><?php echo smartyTranslate(array('s'=>'Authentication'),$_smarty_tpl);?>
-</a>
-		<span class="navigation-pipe"><?php echo $_smarty_tpl->tpl_vars['navigationPipe']->value;?>
-</span><?php echo smartyTranslate(array('s'=>'Create your account'),$_smarty_tpl);?>
-
-	<?php }?>
+<?php $_smarty_tpl->_capture_stack[0][] = array('path', null, null); ob_start(); ?><?php echo smartyTranslate(array('s'=>'Login'),$_smarty_tpl);?>
 <?php list($_capture_buffer, $_capture_assign, $_capture_append) = array_pop($_smarty_tpl->_capture_stack[0]);
 if (!empty($_capture_buffer)) {
  if (isset($_capture_assign)) $_smarty_tpl->assign($_capture_assign, ob_get_contents());
  if (isset( $_capture_append)) $_smarty_tpl->append( $_capture_append, ob_get_contents());
  Smarty::$_smarty_vars['capture'][$_capture_buffer]=ob_get_clean();
 } else $_smarty_tpl->capture_error();?>
-	<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tpl_dir']->value)."./breadcrumb.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tpl_dir']->value)."./breadcrumb.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
 <script type="text/javascript">
@@ -88,7 +75,7 @@ var idSelectedCountry = <?php if (isset($_POST['id_state'])){?><?php echo intval
 <?php }else{ ?>false<?php }?>;
 var countries = new Array();
 var countriesNeedIDNumber = new Array();
-var countriesNeedZipCode = new Array();
+var countriesNeedZipCode = new Array(); 
 <?php if (isset($_smarty_tpl->tpl_vars['countries']->value)){?>
 	<?php  $_smarty_tpl->tpl_vars['country'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['country']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['countries']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -120,49 +107,37 @@ $_smarty_tpl->tpl_vars['state']->_loop = true;
 		<?php }?>
 	<?php } ?>
 <?php }?>
+$(function(){
+	$('.id_state option[value=<?php if (isset($_POST['id_state'])){?><?php echo intval($_POST['id_state']);?>
+<?php }else{ ?><?php if (isset($_smarty_tpl->tpl_vars['address']->value)){?><?php echo intval($_smarty_tpl->tpl_vars['address']->value->id_state);?>
+<?php }?><?php }?>]').attr('selected', true);
+});
 //]]>
 
 $(document).ready(function() {
-	$('#company').on('input',function(){
+	$('#company').blur(function(){
 		vat_number();
 	});
-	$('#company_invoice').on('input',function(){
-		vat_number_invoice();
-	});
+	vat_number();
 	function vat_number()
 	{
-		if (($('#company').length) && ($('#company').val() != '')) 
+		if ($('#company').val() != '')
 			$('#vat_number').show();
 		else
 			$('#vat_number').hide();
 	}
-	function vat_number_invoice()
-	{
-		if (($('#company_invoice').length) && ($('#company_invoice').val() != '')) 
-			$('#vat_number_block_invoice').show();
-		else
-			$('#vat_number_block_invoice').hide();
-	}
-	vat_number();
-	vat_number_invoice();
-
-	$('.id_state option[value=<?php if (isset($_POST['id_state'])){?><?php echo intval($_POST['id_state']);?>
-<?php }?>]').prop('selected', true);
-
 });
 
 </script>
 
-<h1><?php if (!isset($_smarty_tpl->tpl_vars['email_create']->value)){?><?php echo smartyTranslate(array('s'=>'Authentication'),$_smarty_tpl);?>
+<h1><?php if (!isset($_smarty_tpl->tpl_vars['email_create']->value)){?><?php echo smartyTranslate(array('s'=>'Log in'),$_smarty_tpl);?>
 <?php }else{ ?><?php echo smartyTranslate(array('s'=>'Create an account'),$_smarty_tpl);?>
 <?php }?></h1>
 <?php if (!isset($_smarty_tpl->tpl_vars['back']->value)||$_smarty_tpl->tpl_vars['back']->value!='my-account'){?><?php $_smarty_tpl->tpl_vars['current_step'] = new Smarty_variable('login', null, 0);?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tpl_dir']->value)."./order-steps.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-<?php }?>
+<?php }?> 
 <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tpl_dir']->value)."./errors.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <?php $_smarty_tpl->tpl_vars['stateExist'] = new Smarty_variable(false, null, 0);?>
-<?php $_smarty_tpl->tpl_vars["postCodeExist"] = new Smarty_variable(false, null, 0);?>
-<?php $_smarty_tpl->tpl_vars["dniExist"] = new Smarty_variable(false, null, 0);?>
 <?php if (!isset($_smarty_tpl->tpl_vars['email_create']->value)){?>
 	<script type="text/javascript">
 	
@@ -174,10 +149,6 @@ $(document).ready(function() {
 			submitFunction();
 			return false;
 		});
-		$('#invoice_address').click(function() {
-			bindCheckbox();
-		});
-		bindCheckbox();
 	});
 	function submitFunction()
 	{
@@ -214,7 +185,7 @@ $(document).ready(function() {
 					$('#center_column').html('<div id="noSlide">'+$('#center_column').html()+'</div>');
 					$('#noSlide').fadeOut('slow', function(){
 						$('#noSlide').html(jsonData.page);
-						// update the state (when this file is called from AJAX you still need to update the state)
+						// update the state (when this file is called from AJAX you still need to update the state)									
 						bindStateInputAndUpdate();
 						$(this).fadeIn('slow', function(){
 							document.location = '#account-creation';
@@ -227,26 +198,6 @@ $(document).ready(function() {
 				alert("TECHNICAL ERROR: unable to load form.\n\nDetails:\nError thrown: " + XMLHttpRequest + "\n" + 'Text status: ' + textStatus);
 			}
 		});
-	}
-	function bindCheckbox()
-	{
-		if ($('#invoice_address:checked').length > 0)
-		{
-			$('#opc_invoice_address').slideDown('slow');
-			if ($('#company_invoice').val() == '')
-				$('#vat_number_block_invoice').hide();
-			updateState('invoice');
-			updateNeedIDNumber('invoice');
-			updateZipCode('invoice');
-
-			$('.id_state option[value=<?php if (isset($_POST['id_state'])){?><?php echo intval($_POST['id_state']);?>
-<?php }?>]').prop('selected', true);
-			$('.id_state_invoice option[value=<?php if (isset($_POST['id_state_invoice'])){?><?php echo intval($_POST['id_state_invoice']);?>
-<?php }?>]').prop('selected', true);
-
-		}
-		else
-			$('#opc_invoice_address').slideUp('slow');
 	}
 	
 	</script>
@@ -272,14 +223,14 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 		</ol>
 	</div>
 	<?php }?>-->
-	<form action="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('authentication',true), ENT_QUOTES, 'UTF-8', true);?>
+	<form action="<?php echo $_smarty_tpl->tpl_vars['link']->value->getPageLink('authentication',true);?>
 " method="post" id="create-account_form" class="std">
 		<fieldset>
 			<h3><?php echo smartyTranslate(array('s'=>'Create an account'),$_smarty_tpl);?>
 </h3>
 			<div class="form_content clearfix">
 				<p class="title_block"><?php echo smartyTranslate(array('s'=>'Please enter your email address to create an account.'),$_smarty_tpl);?>
-</p>
+.</p>
 				<div class="error" id="create_account_error" style="display:none"></div>
 				<p class="text">
 					<label for="email_create"><?php echo smartyTranslate(array('s'=>'Email address'),$_smarty_tpl);?>
@@ -288,7 +239,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 <?php }?>" class="account_input" /></span>
 				</p>
 				<p class="submit">
-					<?php if (isset($_smarty_tpl->tpl_vars['back']->value)){?><input type="hidden" class="hidden" name="back" value="<?php echo $_smarty_tpl->tpl_vars['back']->value;?>
+					<?php if (isset($_smarty_tpl->tpl_vars['back']->value)){?><input type="hidden" class="hidden" name="back" value="<?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['back']->value, 'htmlall', 'UTF-8');?>
 " /><?php }?>
 					<input type="submit" id="SubmitCreate" name="SubmitCreate" class="button_large" value="<?php echo smartyTranslate(array('s'=>'Create an account'),$_smarty_tpl);?>
 " />
@@ -299,7 +250,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 		</fieldset>
 	</form>
 
-	<form action="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('authentication',true), ENT_QUOTES, 'UTF-8', true);?>
+	<form action="<?php echo $_smarty_tpl->tpl_vars['link']->value->getPageLink('authentication',true);?>
 " method="post" id="login_form" class="std">
 		<fieldset>
 			<h3><?php echo smartyTranslate(array('s'=>'Already registered?'),$_smarty_tpl);?>
@@ -317,14 +268,13 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 					<span><input type="password" id="passwd" name="passwd" value="<?php if (isset($_POST['passwd'])){?><?php echo stripslashes($_POST['passwd']);?>
 <?php }?>" class="account_input" /></span>
 				</p>
-				<p class="lost_password"><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('password'), ENT_QUOTES, 'UTF-8', true);?>
-" title="<?php echo smartyTranslate(array('s'=>'Recover your forgotten password'),$_smarty_tpl);?>
-" rel="nofollow"><?php echo smartyTranslate(array('s'=>'Forgot your password?'),$_smarty_tpl);?>
+				<p class="lost_password"><a href="<?php echo $_smarty_tpl->tpl_vars['link']->value->getPageLink('password');?>
+"><?php echo smartyTranslate(array('s'=>'Forgot your password?'),$_smarty_tpl);?>
 </a></p>
 				<p class="submit">
 					<?php if (isset($_smarty_tpl->tpl_vars['back']->value)){?><input type="hidden" class="hidden" name="back" value="<?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['back']->value, 'htmlall', 'UTF-8');?>
 " /><?php }?>
-					<input type="submit" id="SubmitLogin" name="SubmitLogin" class="button" value="<?php echo smartyTranslate(array('s'=>'Authentication'),$_smarty_tpl);?>
+					<input type="submit" id="SubmitLogin" name="SubmitLogin" class="button" value="<?php echo smartyTranslate(array('s'=>'Log in'),$_smarty_tpl);?>
 " />
 				</p>
 			</div>
@@ -332,7 +282,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 	</form>
 
 	<?php if (isset($_smarty_tpl->tpl_vars['inOrderProcess']->value)&&$_smarty_tpl->tpl_vars['inOrderProcess']->value&&$_smarty_tpl->tpl_vars['PS_GUEST_CHECKOUT_ENABLED']->value){?>
-	<form action="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('authentication',true,null,"back=".((string)$_smarty_tpl->tpl_vars['back']->value)), ENT_QUOTES, 'UTF-8', true);?>
+	<form action="<?php echo $_smarty_tpl->tpl_vars['link']->value->getPageLink('authentication',true,null,"back=".((string)$_smarty_tpl->tpl_vars['back']->value));?>
 " method="post" id="new_account_form" class="std clearfix">
 		<fieldset>
 			<h3><?php echo smartyTranslate(array('s'=>'Instant checkout'),$_smarty_tpl);?>
@@ -424,12 +374,12 @@ $_smarty_tpl->tpl_vars['year']->_loop = true;
 				</p>
 				<?php if (isset($_smarty_tpl->tpl_vars['newsletter']->value)&&$_smarty_tpl->tpl_vars['newsletter']->value){?>
 					<p class="checkbox">
-						<input type="checkbox" name="newsletter" id="newsletter" value="1" <?php if (isset($_POST['newsletter'])&&$_POST['newsletter']=='1'){?>checked="checked"<?php }?> autocomplete="off"/>
+						<input type="checkbox" name="newsletter" id="newsletter" value="1" <?php if (isset($_POST['newsletter'])&&$_POST['newsletter']=='1'){?>checked="checked"<?php }?> />
 						<label for="newsletter"><?php echo smartyTranslate(array('s'=>'Sign up for our newsletter!'),$_smarty_tpl);?>
 </label>
 					</p>
 					<p class="checkbox">
-						<input type="checkbox" name="optin" id="optin" value="1" <?php if (isset($_POST['optin'])&&$_POST['optin']=='1'){?>checked="checked"<?php }?> autocomplete="off"/>
+						<input type="checkbox" name="optin" id="optin" value="1" <?php if (isset($_POST['optin'])&&$_POST['optin']=='1'){?>checked="checked"<?php }?> />
 						<label for="optin"><?php echo smartyTranslate(array('s'=>'Receive special offers from our partners!'),$_smarty_tpl);?>
 </label>
 					</p>
@@ -441,14 +391,14 @@ $_smarty_tpl->tpl_vars['year']->_loop = true;
 foreach ($_from as $_smarty_tpl->tpl_vars['field_name']->key => $_smarty_tpl->tpl_vars['field_name']->value){
 $_smarty_tpl->tpl_vars['field_name']->_loop = true;
 ?>
-					<?php if ($_smarty_tpl->tpl_vars['field_name']->value=="company"&&$_smarty_tpl->tpl_vars['b2b_enable']->value){?>
+					<?php if ($_smarty_tpl->tpl_vars['field_name']->value=="company"){?>
 						<p class="text">
 							<label for="company"><?php echo smartyTranslate(array('s'=>'Company'),$_smarty_tpl);?>
 </label>
 							<input type="text" class="text" id="company" name="company" value="<?php if (isset($_POST['company'])){?><?php echo $_POST['company'];?>
 <?php }?>" />
 						</p>
-					<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="vat_number"){?>
+						<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="vat_number"){?>
 						<div id="vat_number" style="display:none;">
 							<p class="text">
 								<label for="vat_number"><?php echo smartyTranslate(array('s'=>'VAT number'),$_smarty_tpl);?>
@@ -457,32 +407,21 @@ $_smarty_tpl->tpl_vars['field_name']->_loop = true;
 <?php }?>" />
 							</p>
 						</div>
-					<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="dni"){?>
-					<?php $_smarty_tpl->tpl_vars['dniExist'] = new Smarty_variable(true, null, 0);?>
-						<p class="text">
-							<label for="dni"><?php echo smartyTranslate(array('s'=>'Identification number'),$_smarty_tpl);?>
-</label>
-							<input type="text" class="text" name="dni" id="dni" value="<?php if (isset($_POST['dni'])){?><?php echo $_POST['dni'];?>
-<?php }?>" />
-							<span class="form_info"><?php echo smartyTranslate(array('s'=>'DNI / NIF / NIE'),$_smarty_tpl);?>
-</span>
-						</p>
-					<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="address1"){?>
+						<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="address1"){?>
 						<p class="required text">
 							<label for="address1"><?php echo smartyTranslate(array('s'=>'Address'),$_smarty_tpl);?>
  <sup>*</sup></label>
 							<input type="text" class="text" name="address1" id="address1" value="<?php if (isset($_POST['address1'])){?><?php echo $_POST['address1'];?>
 <?php }?>" />
 						</p>
-					<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="postcode"){?>
-					<?php $_smarty_tpl->tpl_vars['postCodeExist'] = new Smarty_variable(true, null, 0);?>
+						<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="postcode"){?>
 						<p class="required postcode text">
 							<label for="postcode"><?php echo smartyTranslate(array('s'=>'Zip / Postal Code'),$_smarty_tpl);?>
  <sup>*</sup></label>
 							<input type="text" class="text" name="postcode" id="postcode" value="<?php if (isset($_POST['postcode'])){?><?php echo $_POST['postcode'];?>
 <?php }?>" onblur="$('#postcode').val($('#postcode').val().toUpperCase());" />
 						</p>
-					<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="city"){?>
+						<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="city"){?>
 						<p class="required text">
 							<label for="city"><?php echo smartyTranslate(array('s'=>'City'),$_smarty_tpl);?>
  <sup>*</sup></label>
@@ -493,24 +432,26 @@ $_smarty_tpl->tpl_vars['field_name']->_loop = true;
 							   if customer hasn't update his layout address, country has to be verified
 							   but it's deprecated
 						   -->
-					<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="Country:name"||$_smarty_tpl->tpl_vars['field_name']->value=="country"){?>
+						<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="Country:name"||$_smarty_tpl->tpl_vars['field_name']->value=="country"){?>
 						<p class="required select">
 							<label for="id_country"><?php echo smartyTranslate(array('s'=>'Country'),$_smarty_tpl);?>
  <sup>*</sup></label>
 							<select name="id_country" id="id_country">
+								<option value="">-</option>
 								<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['countries']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
 $_smarty_tpl->tpl_vars['v']->_loop = true;
 ?>
 									<option value="<?php echo $_smarty_tpl->tpl_vars['v']->value['id_country'];?>
-"<?php if ((isset($_POST['id_country'])&&$_POST['id_country']==$_smarty_tpl->tpl_vars['v']->value['id_country'])||(!isset($_POST['id_country'])&&$_smarty_tpl->tpl_vars['sl_country']->value==$_smarty_tpl->tpl_vars['v']->value['id_country'])){?> selected="selected"<?php }?>><?php echo $_smarty_tpl->tpl_vars['v']->value['name'];?>
+" <?php if (($_smarty_tpl->tpl_vars['sl_country']->value==$_smarty_tpl->tpl_vars['v']->value['id_country'])){?> selected="selected"<?php }?>><?php echo $_smarty_tpl->tpl_vars['v']->value['name'];?>
 </option>
 								<?php } ?>
 							</select>
 						</p>
-					<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="State:name"){?>
+						<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="State:name"){?>
 						<?php $_smarty_tpl->tpl_vars['stateExist'] = new Smarty_variable(true, null, 0);?>
+
 						<p class="required id_state select">
 							<label for="id_state"><?php echo smartyTranslate(array('s'=>'State'),$_smarty_tpl);?>
  <sup>*</sup></label>
@@ -518,18 +459,17 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 								<option value="">-</option>
 							</select>
 						</p>
+						<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="phone"){?>
+						<p class="<?php if (isset($_smarty_tpl->tpl_vars['one_phone_at_least']->value)&&$_smarty_tpl->tpl_vars['one_phone_at_least']->value){?>required <?php }?>text">
+							<label for="phone"><?php echo smartyTranslate(array('s'=>'Phone'),$_smarty_tpl);?>
+<?php if (isset($_smarty_tpl->tpl_vars['one_phone_at_least']->value)&&$_smarty_tpl->tpl_vars['one_phone_at_least']->value){?> <sup>*</sup><?php }?></label>
+							<input type="text" class="text" name="phone" id="phone" value="<?php if (isset($_POST['phone'])){?><?php echo $_POST['phone'];?>
+<?php }?>"/>
+						</p>
 					<?php }?>
 				<?php } ?>
-				<?php if ($_smarty_tpl->tpl_vars['postCodeExist']->value==false){?>
-					<p class="required postcode text hidden">
-						<label for="postcode"><?php echo smartyTranslate(array('s'=>'Zip / Postal Code'),$_smarty_tpl);?>
- <sup>*</sup></label>
-						<input type="text" class="text" name="postcode" id="postcode" value="<?php if (isset($_POST['postcode'])){?><?php echo $_POST['postcode'];?>
-<?php }?>" onblur="$('#postcode').val($('#postcode').val().toUpperCase());" />
-					</p>
-				<?php }?>
 				<?php if ($_smarty_tpl->tpl_vars['stateExist']->value==false){?>
-					<p class="required id_state select hidden">
+					<p class="required id_state select">
 						<label for="id_state"><?php echo smartyTranslate(array('s'=>'State'),$_smarty_tpl);?>
  <sup>*</sup></label>
 						<select name="id_state" id="id_state">
@@ -537,168 +477,23 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 						</select>
 					</p>
 				<?php }?>
-				<?php if ($_smarty_tpl->tpl_vars['dniExist']->value==false){?>
-				<p class="required text dni">
-					<label for="dni"><?php echo smartyTranslate(array('s'=>'Identification number'),$_smarty_tpl);?>
- <sup>*</sup></label>
-					<input type="text" class="text" name="dni" id="dni" value="<?php if (isset($_POST['dni'])){?><?php echo $_POST['dni'];?>
-<?php }?>" />
-					<span class="form_info"><?php echo smartyTranslate(array('s'=>'DNI / NIF / NIE'),$_smarty_tpl);?>
-</span>
-				</p>
-				<?php }?>
-				<p class="<?php if (isset($_smarty_tpl->tpl_vars['one_phone_at_least']->value)&&$_smarty_tpl->tpl_vars['one_phone_at_least']->value){?>required <?php }?>text">
-					<label for="phone_mobile"><?php echo smartyTranslate(array('s'=>'Mobile phone'),$_smarty_tpl);?>
-<?php if (isset($_smarty_tpl->tpl_vars['one_phone_at_least']->value)&&$_smarty_tpl->tpl_vars['one_phone_at_least']->value){?> <sup>*</sup><?php }?></label>
-					<input type="text" class="text" name="phone_mobile" id="phone_mobile" value="<?php if (isset($_POST['phone_mobile'])){?><?php echo $_POST['phone_mobile'];?>
-<?php }?>" />
-				</p>
 				<input type="hidden" name="alias" id="alias" value="<?php echo smartyTranslate(array('s'=>'My address'),$_smarty_tpl);?>
 " />
 				<input type="hidden" name="is_new_customer" id="is_new_customer" value="0" />
-				<p class="checkbox">
-					<input type="checkbox" name="invoice_address" id="invoice_address"<?php if (isset($_POST['invoice_address'])&&$_POST['invoice_address']){?> checked="checked"<?php }?> autocomplete="off"/>
-					<label for="invoice_address"><b><?php echo smartyTranslate(array('s'=>'Please use another address for invoice'),$_smarty_tpl);?>
-</b></label>
-				</p>
-				<div id="opc_invoice_address" class="hidden">
-					<?php $_smarty_tpl->tpl_vars['stateExist'] = new Smarty_variable(false, null, 0);?>
-					<?php $_smarty_tpl->tpl_vars['postCodeExist'] = new Smarty_variable(false, null, 0);?>
-					<?php $_smarty_tpl->tpl_vars['dniExist'] = new Smarty_variable(false, null, 0);?>
-					<h3><?php echo smartyTranslate(array('s'=>'Invoice address'),$_smarty_tpl);?>
-</h3>
-					<?php  $_smarty_tpl->tpl_vars['field_name'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['field_name']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['inv_all_fields']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['field_name']->key => $_smarty_tpl->tpl_vars['field_name']->value){
-$_smarty_tpl->tpl_vars['field_name']->_loop = true;
-?>
-					<?php if ($_smarty_tpl->tpl_vars['field_name']->value=="company"&&$_smarty_tpl->tpl_vars['b2b_enable']->value){?>
-					<p class="text">
-						<label for="company_invoice"><?php echo smartyTranslate(array('s'=>'Company'),$_smarty_tpl);?>
-</label>
-						<input type="text" class="text" id="company_invoice" name="company_invoice" value="<?php if (isset($_POST['company_invoice'])){?><?php echo $_POST['company_invoice'];?>
-<?php }?>" />
-					</p>
-					<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="vat_number"){?>
-					<div id="vat_number_block_invoice" class="hidden">
-						<p class="text">
-							<label for="vat_number_invoice"><?php echo smartyTranslate(array('s'=>'VAT number'),$_smarty_tpl);?>
-</label>
-							<input type="text" class="text" id="vat_number_invoice" name="vat_number_invoice" value="<?php if (isset($_POST['vat_number_invoice'])){?><?php echo $_POST['vat_number_invoice'];?>
-<?php }?>" />
-						</p>
-					</div>
-					<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="dni"){?>
-					<?php $_smarty_tpl->tpl_vars['dniExist'] = new Smarty_variable(true, null, 0);?>
-					<p class="text">
-						<label for="dni_invoice"><?php echo smartyTranslate(array('s'=>'Identification number'),$_smarty_tpl);?>
-</label>
-						<input type="text" class="text" name="dni_invoice" id="dni_invoice" value="<?php if (isset($_POST['dni_invoice'])){?><?php echo $_POST['dni_invoice'];?>
-<?php }?>" />
-						<span class="form_info"><?php echo smartyTranslate(array('s'=>'DNI / NIF / NIE'),$_smarty_tpl);?>
-</span>
-					</p>
-					<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="firstname"){?>
-					<p class="required text">
-						<label for="firstname_invoice"><?php echo smartyTranslate(array('s'=>'First name'),$_smarty_tpl);?>
- <sup>*</sup></label>
-						<input type="text" class="text" id="firstname_invoice" name="firstname_invoice" value="<?php if (isset($_POST['firstname_invoice'])){?><?php echo $_POST['firstname_invoice'];?>
-<?php }?>" />
-					</p>
-					<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="lastname"){?>
-					<p class="required text">
-						<label for="lastname_invoice"><?php echo smartyTranslate(array('s'=>'Last name'),$_smarty_tpl);?>
- <sup>*</sup></label>
-						<input type="text" class="text" id="lastname_invoice" name="lastname_invoice" value="<?php if (isset($_POST['firstname_invoice'])){?><?php echo $_POST['firstname_invoice'];?>
-<?php }?>" />
-					</p>
-					<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="address1"){?>
-					<p class="required text">
-						<label for="address1_invoice"><?php echo smartyTranslate(array('s'=>'Address'),$_smarty_tpl);?>
- <sup>*</sup></label>
-						<input type="text" class="text" name="address1_invoice" id="address1_invoice" value="<?php if (isset($_POST['address1_invoice'])){?><?php echo $_POST['address1_invoice'];?>
-<?php }?>" />
-					</p>
-					<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="postcode"){?>
-					<?php $_smarty_tpl->tpl_vars['postCodeExist'] = new Smarty_variable(true, null, 0);?>
-					<p class="required postcode_invoice text">
-						<label for="postcode_invoice"><?php echo smartyTranslate(array('s'=>'Zip / Postal Code'),$_smarty_tpl);?>
- <sup>*</sup></label>
-						<input type="text" class="text" name="postcode_invoice" id="postcode_invoice" value="<?php if (isset($_POST['postcode_invoice'])){?><?php echo $_POST['postcode_invoice'];?>
-<?php }?>" onkeyup="$('#postcode').val($('#postcode').val().toUpperCase());" />
-					</p>
-					<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="city"){?>
-					<p class="required text">
-						<label for="city_invoice"><?php echo smartyTranslate(array('s'=>'City'),$_smarty_tpl);?>
- <sup>*</sup></label>
-						<input type="text" class="text" name="city_invoice" id="city_invoice" value="<?php if (isset($_POST['city_invoice'])){?><?php echo $_POST['city_invoice'];?>
-<?php }?>" />
-					</p>
-					<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="country"||$_smarty_tpl->tpl_vars['field_name']->value=="Country:name"){?>
-					<p class="required select">
-						<label for="id_country_invoice"><?php echo smartyTranslate(array('s'=>'Country'),$_smarty_tpl);?>
- <sup>*</sup></label>
-						<select name="id_country_invoice" id="id_country_invoice">
-							<option value="">-</option>
-							<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['countries']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
-$_smarty_tpl->tpl_vars['v']->_loop = true;
-?>
-							<option value="<?php echo $_smarty_tpl->tpl_vars['v']->value['id_country'];?>
-"<?php if ((isset($_POST['id_country_invoice'])&&$_POST['id_country_invoice']==$_smarty_tpl->tpl_vars['v']->value['id_country'])||(!isset($_POST['id_country_invoice'])&&$_smarty_tpl->tpl_vars['sl_country']->value==$_smarty_tpl->tpl_vars['v']->value['id_country'])){?> selected="selected"<?php }?>><?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['v']->value['name'], 'htmlall', 'UTF-8');?>
-</option>
-							<?php } ?>
-						</select>
-					</p>
-					<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="state"||$_smarty_tpl->tpl_vars['field_name']->value=='State:name'){?>
-					<?php $_smarty_tpl->tpl_vars['stateExist'] = new Smarty_variable(true, null, 0);?>
-					<p class="required id_state_invoice select" style="display:none;">
-						<label for="id_state_invoice"><?php echo smartyTranslate(array('s'=>'State'),$_smarty_tpl);?>
- <sup>*</sup></label>
-						<select name="id_state_invoice" id="id_state_invoice">
-							<option value="">-</option>
-						</select>
-					</p>
-					<?php }?>
-					<?php } ?>
-					<?php if (!$_smarty_tpl->tpl_vars['postCodeExist']->value){?>
-					<p class="required postcode_invoice text hidden">
-						<label for="postcode_invoice"><?php echo smartyTranslate(array('s'=>'Zip / Postal Code'),$_smarty_tpl);?>
- <sup>*</sup></label>
-						<input type="text" class="text" name="postcode_invoice" id="postcode_invoice" value="<?php if (isset($_POST['postcode_invoice'])){?><?php echo $_POST['postcode_invoice'];?>
-<?php }?>" onkeyup="$('#postcode').val($('#postcode').val().toUpperCase());" />
-					</p>
-					<?php }?>					
-					<?php if (!$_smarty_tpl->tpl_vars['stateExist']->value){?>
-					<p class="required id_state_invoice select hidden">
-						<label for="id_state_invoice"><?php echo smartyTranslate(array('s'=>'State'),$_smarty_tpl);?>
- <sup>*</sup></label>
-						<select name="id_state_invoice" id="id_state_invoice">
-							<option value="">-</option>
-						</select>
-					</p>
-					<?php }?>
-					<?php if (!$_smarty_tpl->tpl_vars['dniExist']->value){?>
-					<p class="required text dni_invoice">
-						<label for="dni_invoice"><?php echo smartyTranslate(array('s'=>'Identification number'),$_smarty_tpl);?>
- <sup>*</sup></label>
-						<input type="text" class="text" name="dni_invoice" id="dni_invoice" value="<?php if (isset($_POST['dni_invoice'])){?><?php echo $_POST['dni_invoice'];?>
-<?php }?>" />
-						<span class="form_info"><?php echo smartyTranslate(array('s'=>'DNI / NIF / NIE'),$_smarty_tpl);?>
-</span>
-					</p>
-					<?php }?>
-					<p class="<?php if (isset($_smarty_tpl->tpl_vars['one_phone_at_least']->value)&&$_smarty_tpl->tpl_vars['one_phone_at_least']->value){?>required <?php }?>text">
-						<label for="phone_mobile_invoice"><?php echo smartyTranslate(array('s'=>'Mobile phone'),$_smarty_tpl);?>
-<?php if (isset($_smarty_tpl->tpl_vars['one_phone_at_least']->value)&&$_smarty_tpl->tpl_vars['one_phone_at_least']->value){?> <sup>*</sup><?php }?></label>
-						<input type="text" class="text" name="phone_mobile_invoice" id="phone_mobile_invoice" value="<?php if (isset($_POST['phone_mobile_invoice'])){?><?php echo $_POST['phone_mobile_invoice'];?>
-<?php }?>" />
-					</p>
-					<input type="hidden" name="alias_invoice" id="alias_invoice" value="<?php echo smartyTranslate(array('s'=>'My Invoice address'),$_smarty_tpl);?>
-" />
-				</div>
+				<!-- END Account -->
 			</div>
+		</fieldset>
+		<fieldset class="account_creation dni">
+			<h3><?php echo smartyTranslate(array('s'=>'Tax identification'),$_smarty_tpl);?>
+</h3>
+			<p class="required text">
+				<label for="dni"><?php echo smartyTranslate(array('s'=>'Identification number'),$_smarty_tpl);?>
+</label>
+				<input type="text" class="text" name="dni" id="dni" value="<?php if (isset($_POST['dni'])){?><?php echo $_POST['dni'];?>
+<?php }?>" />
+				<span class="form_info"><?php echo smartyTranslate(array('s'=>'DNI / NIF / NIE'),$_smarty_tpl);?>
+</span>
+			</p>
 		</fieldset>
 		<?php echo $_smarty_tpl->tpl_vars['HOOK_CREATE_ACCOUNT_FORM']->value;?>
 
@@ -734,7 +529,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 		</ol>
 	</div>
 	<?php }?>-->
-<form action="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('authentication',true), ENT_QUOTES, 'UTF-8', true);?>
+<form action="<?php echo $_smarty_tpl->tpl_vars['link']->value->getPageLink('authentication',true);?>
 " method="post" id="account-creation_form" class="std">
 	<?php echo $_smarty_tpl->tpl_vars['HOOK_CREATE_ACCOUNT_TOP']->value;?>
 
@@ -829,12 +624,12 @@ $_smarty_tpl->tpl_vars['year']->_loop = true;
 		</p>
 		<?php if ($_smarty_tpl->tpl_vars['newsletter']->value){?>
 		<p class="checkbox" >
-			<input type="checkbox" name="newsletter" id="newsletter" value="1" <?php if (isset($_POST['newsletter'])&&$_POST['newsletter']==1){?> checked="checked"<?php }?> autocomplete="off"/>
+			<input type="checkbox" name="newsletter" id="newsletter" value="1" <?php if (isset($_POST['newsletter'])&&$_POST['newsletter']==1){?> checked="checked"<?php }?> />
 			<label for="newsletter"><?php echo smartyTranslate(array('s'=>'Sign up for our newsletter!'),$_smarty_tpl);?>
 </label>
 		</p>
 		<p class="checkbox" >
-			<input type="checkbox"name="optin" id="optin" value="1" <?php if (isset($_POST['optin'])&&$_POST['optin']==1){?> checked="checked"<?php }?> autocomplete="off"/>
+			<input type="checkbox"name="optin" id="optin" value="1" <?php if (isset($_POST['optin'])&&$_POST['optin']==1){?> checked="checked"<?php }?> />
 			<label for="optin"><?php echo smartyTranslate(array('s'=>'Receive special offers from our partners!'),$_smarty_tpl);?>
 </label>
 		</p>
@@ -880,14 +675,12 @@ foreach ($_from as $_smarty_tpl->tpl_vars['field_name']->key => $_smarty_tpl->tp
 $_smarty_tpl->tpl_vars['field_name']->_loop = true;
 ?>
 			<?php if ($_smarty_tpl->tpl_vars['field_name']->value=="company"){?>
-				<?php if (!$_smarty_tpl->tpl_vars['b2b_enable']->value){?>
-					<p class="text">
-						<label for="company"><?php echo smartyTranslate(array('s'=>'Company'),$_smarty_tpl);?>
+				<p class="text">
+					<label for="company"><?php echo smartyTranslate(array('s'=>'Company'),$_smarty_tpl);?>
 </label>
-						<input type="text" class="text" id="company" name="company" value="<?php if (isset($_POST['company'])){?><?php echo $_POST['company'];?>
+					<input type="text" class="text" id="company" name="company" value="<?php if (isset($_POST['company'])){?><?php echo $_POST['company'];?>
 <?php }?>" />
-					</p>
-				<?php }?>
+				</p>
 			<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="vat_number"){?>
 				<div id="vat_number" style="display:none;">
 					<p class="text">
@@ -930,7 +723,6 @@ $_smarty_tpl->tpl_vars['field_name']->_loop = true;
 </span>
 				</p>
 			<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="postcode"){?>
-			<?php $_smarty_tpl->tpl_vars['postCodeExist'] = new Smarty_variable(true, null, 0);?>
 				<p class="required postcode text">
 					<label for="postcode"><?php echo smartyTranslate(array('s'=>'Zip / Postal Code'),$_smarty_tpl);?>
  <sup>*</sup></label>
@@ -960,7 +752,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v
 $_smarty_tpl->tpl_vars['v']->_loop = true;
 ?>
 						<option value="<?php echo $_smarty_tpl->tpl_vars['v']->value['id_country'];?>
-"<?php if ((isset($_POST['id_country'])&&$_POST['id_country']==$_smarty_tpl->tpl_vars['v']->value['id_country'])||(!isset($_POST['id_country'])&&$_smarty_tpl->tpl_vars['sl_country']->value==$_smarty_tpl->tpl_vars['v']->value['id_country'])){?> selected="selected"<?php }?>><?php echo $_smarty_tpl->tpl_vars['v']->value['name'];?>
+" <?php if (($_smarty_tpl->tpl_vars['sl_country']->value==$_smarty_tpl->tpl_vars['v']->value['id_country'])){?> selected="selected"<?php }?>><?php echo $_smarty_tpl->tpl_vars['v']->value['name'];?>
 </option>
 						<?php } ?>
 					</select>
@@ -976,16 +768,8 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 				</p>
 			<?php }?>
 		<?php } ?>
-		<?php if ($_smarty_tpl->tpl_vars['postCodeExist']->value==false){?>
-			<p class="required postcode text hidden">
-				<label for="postcode"><?php echo smartyTranslate(array('s'=>'Zip / Postal Code'),$_smarty_tpl);?>
- <sup>*</sup></label>
-				<input type="text" class="text" name="postcode" id="postcode" value="<?php if (isset($_POST['postcode'])){?><?php echo $_POST['postcode'];?>
-<?php }?>" onkeyup="$('#postcode').val($('#postcode').val().toUpperCase());" />
-			</p>
-		<?php }?>
 		<?php if ($_smarty_tpl->tpl_vars['stateExist']->value==false){?>
-			<p class="required id_state select hidden">
+			<p class="required id_state select">
 				<label for="id_state"><?php echo smartyTranslate(array('s'=>'State'),$_smarty_tpl);?>
  <sup>*</sup></label>
 				<select name="id_state" id="id_state">
@@ -1000,16 +784,16 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 <?php }?></textarea>
 		</p>
 		<?php if (isset($_smarty_tpl->tpl_vars['one_phone_at_least']->value)&&$_smarty_tpl->tpl_vars['one_phone_at_least']->value){?>
-			<p class="inline-infos required"><?php echo smartyTranslate(array('s'=>'You must register at least one phone number.'),$_smarty_tpl);?>
+			<p class="inline-infos"><?php echo smartyTranslate(array('s'=>'You must register at least one phone number.'),$_smarty_tpl);?>
 </p>
-		<?php }?>								
+		<?php }?>
 		<p class="text">
 			<label for="phone"><?php echo smartyTranslate(array('s'=>'Home phone'),$_smarty_tpl);?>
 </label>
 			<input type="text" class="text" name="phone" id="phone" value="<?php if (isset($_POST['phone'])){?><?php echo $_POST['phone'];?>
 <?php }?>" />
 		</p>
-		<p class="<?php if (isset($_smarty_tpl->tpl_vars['one_phone_at_least']->value)&&$_smarty_tpl->tpl_vars['one_phone_at_least']->value){?>required <?php }?>text">
+		<p class="<?php if (isset($_smarty_tpl->tpl_vars['one_phone_at_least']->value)&&$_smarty_tpl->tpl_vars['one_phone_at_least']->value){?>required <?php }?> text">
 			<label for="phone_mobile"><?php echo smartyTranslate(array('s'=>'Mobile phone'),$_smarty_tpl);?>
 <?php if (isset($_smarty_tpl->tpl_vars['one_phone_at_least']->value)&&$_smarty_tpl->tpl_vars['one_phone_at_least']->value){?> <sup>*</sup><?php }?></label>
 			<input type="text" class="text" name="phone_mobile" id="phone_mobile" value="<?php if (isset($_POST['phone_mobile'])){?><?php echo $_POST['phone_mobile'];?>
@@ -1049,5 +833,4 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 </span>
 	</p>
 </form>
-<?php }?>
-<?php }} ?>
+<?php }?><?php }} ?>

@@ -1,0 +1,17 @@
+Hola {firstname} {lastname},
+		
+Su cuenta de invitado se ha transformado en cuenta de cliente
+	
+E-mail: {email}
+Clave: {passwd}
+	
+Puede acceder a su cuenta a través de nuestra página web: {shop_url}
+
+Consejos de Seguridad:
+* Mantenga los datos de su cuenta en un lugar seguro.
+* No comparta los detalles de su cuenta con otras personas.
+* Cambie su clave regularmente.
+* Si sospecha que alguien está usando ilegalmente su cuenta, avísenos inmediatamente.
+
+
+{shop_url} desarrollado por PrestaShop™

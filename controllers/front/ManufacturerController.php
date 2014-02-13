@@ -40,8 +40,6 @@ class ManufacturerControllerCore extends FrontController
 
 	public function canonicalRedirection($canonicalURL = '')
 	{
-		if (Tools::getValue('live_edit'))
-			return ;
 		if (Validate::isLoadedObject($this->manufacturer))
 			parent::canonicalRedirection($this->context->link->getManufacturerLink($this->manufacturer));
 	}
@@ -115,9 +113,6 @@ class ManufacturerControllerCore extends FrontController
 		{
 			$data = Manufacturer::getManufacturers(true, $this->context->language->id, true, false, false, false);
 			$nbProducts = count($data);
-			$this->n = abs((int)(Tools::getValue('n', Configuration::get('PS_PRODUCTS_PER_PAGE'))));
-			$this->p = abs((int)(Tools::getValue('p', 1)));
-			$data = Manufacturer::getManufacturers(true, $this->context->language->id, true, $this->p, $this->n, false);
 			$this->pagination($nbProducts);
 
 			foreach ($data as &$item)
@@ -133,13 +128,5 @@ class ManufacturerControllerCore extends FrontController
 		}
 		else
 			$this->context->smarty->assign('nbManufacturers', 0);
-	}
-	
-	/**
-	 * Get instance of current manufacturer
-	 */
-	public function getManufacturer()
-	{
-		return $this->manufacturer;
 	}
 }

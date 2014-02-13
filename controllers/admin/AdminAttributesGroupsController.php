@@ -54,8 +54,6 @@ class AdminAttributesGroupsControllerCore extends AdminController
 				'title' => $this->l('Values count'),
 				'width' => 120,
 				'align' => 'center',
-				'orderby' => false,
-				'search' => false
 			),
 			'position' => array(
 				'title' => $this->l('Position'),
@@ -264,7 +262,7 @@ class AdminAttributesGroupsControllerCore extends AdminController
 			'input' => array(
 				array(
 					'type' => 'select',
-					'label' => $this->l('Attribute group:'),
+					'label' => $this->l('Attribute type:'),
 					'name' => 'id_attribute_group',
 					'required' => true,
 					'options' => array(
@@ -272,7 +270,7 @@ class AdminAttributesGroupsControllerCore extends AdminController
 						'id' => 'id_attribute_group',
 						'name' => 'name'
 					),
-					'desc' => $this->l('Choose the group of the attribute')
+					'desc' => $this->l('Choose the type of the attribute')
 				),
 				array(
 					'type' => 'text',
@@ -329,11 +327,6 @@ class AdminAttributesGroupsControllerCore extends AdminController
 			'type' => 'current_texture',
 			'label' => $this->l('Current texture:'),
 			'name' => 'current_texture'
-		);
-		
-		$this->fields_form['input'][] = array(
-			'type' => 'closediv',
-			'name' => ''
 		);
 
 		$this->fields_form['submit'] = array(
@@ -435,7 +428,6 @@ class AdminAttributesGroupsControllerCore extends AdminController
 	 */
 	public function initContent()
 	{
-		$this->initTabModuleList();
 		if (!Combination::isFeatureActive())
 		{
 			$this->displayWarning($this->l('This feature has been disabled. You can activate it at:').
@@ -694,11 +686,7 @@ class AdminAttributesGroupsControllerCore extends AdminController
 		{
 			foreach ($this->_list as &$list)
 				if (file_exists(_PS_IMG_DIR_.$this->fieldImageSettings['dir'].'/'.(int)$list['id_attribute'].'.jpg'))
-				{
-					if (!isset($list['color']) || !is_array($list['color']))
-						$list['color'] = array();
 					$list['color']['texture'] = '../img/'.$this->fieldImageSettings['dir'].'/'.(int)$list['id_attribute'].'.jpg';
-				}
 		}
 		else
 		{

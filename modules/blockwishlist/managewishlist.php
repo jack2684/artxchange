@@ -68,11 +68,6 @@ if ($context->customer->isLogged())
 						$combination_imgs = $obj->getCombinationImages($context->language->id);
 						if (isset($combination_imgs[$products[$i]['id_product_attribute']][0]))
 							$products[$i]['cover'] = $obj->id.'-'.$combination_imgs[$products[$i]['id_product_attribute']][0]['id_image'];
-						else 
-						{
-							$cover = Product::getCover($obj->id);
-							$products[$i]['cover'] = $obj->id.'-'.$cover['id_image'];
-						}
 					}
 					else
 					{

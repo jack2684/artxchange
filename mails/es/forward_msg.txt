@@ -1,0 +1,7 @@
+{employee} agregó un comentario:
+Comentario: {comment}
+
+Historial de la conversación:
+{messages}
+
+{shop_name} desarrollado PrestaShop™

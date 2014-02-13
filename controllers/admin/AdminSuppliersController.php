@@ -94,8 +94,7 @@ class AdminSuppliersControllerCore extends AdminController
 					'rows' => 10,
 					'lang' => true,
 					'hint' => $this->l('Invalid characters:').' <>;=#{}',
-					'desc' => $this->l('Will appear in the supplier list'),
-					'autoload_rte' => 'rte' //Enable TinyMCE editor for short description
+					'desc' => $this->l('Will appear in the supplier list')
 				),
 				array(
 					'type' => 'text',
@@ -147,6 +146,7 @@ class AdminSuppliersControllerCore extends AdminController
 						'id' => 'id_country',
 						'name' => 'name',
 					),
+					'desc' => $this->l('Country where the state, region or city is located')
 				),
 				array(
 					'type' => 'select',
@@ -262,24 +262,6 @@ class AdminSuppliersControllerCore extends AdminController
 		return parent::renderForm();
 	}
 
-	/**
-	 * AdminController::initToolbar() override
-	 * @see AdminController::initToolbar()
-	 *
-	 */
-	public function initToolbar()
-	{
-		switch ($this->display)
-		{
-			default:
-				parent::initToolbar();
-				$this->toolbar_btn['import'] = array(
-					'href' => $this->context->link->getAdminLink('AdminImport', true).'&import_type=suppliers',
-					'desc' => $this->l('Import')
-				);
-		}
-	}
-
 	public function renderView()
 	{
 		$products = $this->object->getProductsLite($this->context->language->id);
@@ -354,11 +336,6 @@ class AdminSuppliersControllerCore extends AdminController
 				if (!ImageManager::resize($file, _PS_SUPP_IMG_DIR_.$id_supplier.'-'.stripslashes($image_type['name']).'.jpg', (int)$image_type['width'], (int)$image_type['height']))
 					$return = false;
 			}
-
-			$current_logo_file = _PS_TMP_IMG_DIR_.'supplier_mini_'.$id_supplier.'_'.$this->context->shop->id.'.jpg';
-
-			if (file_exists($current_logo_file))
-				unlink($current_logo_file);
 		}
 		return $return;
 	}

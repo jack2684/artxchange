@@ -1,0 +1,11 @@
+Hallo {firstname} {lastname},
+ 
+Ihre Bestellung Nr. {order_name} bei {shop_name} befindet sich aktuell in der Bearbeitung.
+ 
+Sie können diese Bestellung ansehen und Ihre Rechnung aus dem Abschnitt "Bestellverlauf" Ihres Kontos downloaden, indem Sie auf unserer Webseite auf "Mein Konto" klicken.
+Wenn Sie ein Gast-Konto haben, können Sie Ihre Bestellung im Abschnitt "Bestellverfolgung Gast" auf unserer Webseite verfolgen.
+
+{shop_name} - {shop_url}
+ 
+{shop_name} powered by PrestaShop™ 
+

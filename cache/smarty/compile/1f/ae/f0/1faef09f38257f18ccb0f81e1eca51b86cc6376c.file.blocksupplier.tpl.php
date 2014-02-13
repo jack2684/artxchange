@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-12 21:17:58
+<?php /* Smarty version Smarty-3.1.13, created on 2014-02-13 20:10:44
          compiled from "/var/www/artxchange/themes/default/modules/blocksupplier/blocksupplier.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:111635700852fc2b562c9541-66886807%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:53633559752fd26c4db6587-83349698%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1faef09f38257f18ccb0f81e1eca51b86cc6376c' => 
     array (
       0 => '/var/www/artxchange/themes/default/modules/blocksupplier/blocksupplier.tpl',
-      1 => 1390229662,
+      1 => 1366914192,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '111635700852fc2b562c9541-66886807',
+  'nocache_hash' => '53633559752fd26c4db6587-83349698',
   'function' => 
   array (
   ),
@@ -26,15 +26,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'form_list' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52fc2b56313af6_06730186',
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_52fd26c4dfb4d1_31357387',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52fc2b56313af6_06730186')) {function content_52fc2b56313af6_06730186($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/artxchange/tools/smarty/plugins/modifier.escape.php';
+<?php if ($_valid && !is_callable('content_52fd26c4dfb4d1_31357387')) {function content_52fd26c4dfb4d1_31357387($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/artxchange/tools/smarty/plugins/modifier.escape.php';
 ?>
 
 <!-- Block suppliers module -->
 <div id="suppliers_block_left" class="block blocksupplier">
-	<p class="title_block"><?php if ($_smarty_tpl->tpl_vars['display_link_supplier']->value){?><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('supplier'), ENT_QUOTES, 'UTF-8', true);?>
+	<p class="title_block"><?php if ($_smarty_tpl->tpl_vars['display_link_supplier']->value){?><a href="<?php echo $_smarty_tpl->tpl_vars['link']->value->getPageLink('supplier');?>
 " title="<?php echo smartyTranslate(array('s'=>'Suppliers','mod'=>'blocksupplier'),$_smarty_tpl);?>
 "><?php }?><?php echo smartyTranslate(array('s'=>'Suppliers','mod'=>'blocksupplier'),$_smarty_tpl);?>
 <?php if ($_smarty_tpl->tpl_vars['display_link_supplier']->value){?></a><?php }?></p>
@@ -60,7 +60,7 @@ $_smarty_tpl->tpl_vars['supplier']->_loop = true;
 ?>
 		<?php if ($_smarty_tpl->getVariable('smarty')->value['foreach']['supplier_list']['iteration']<=$_smarty_tpl->tpl_vars['text_list_nb']->value){?>
 		<li class="<?php if ($_smarty_tpl->getVariable('smarty')->value['foreach']['supplier_list']['last']){?>last_item<?php }elseif($_smarty_tpl->getVariable('smarty')->value['foreach']['supplier_list']['first']){?>first_item<?php }else{ ?>item<?php }?>">
-			<a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getsupplierLink($_smarty_tpl->tpl_vars['supplier']->value['id_supplier'],$_smarty_tpl->tpl_vars['supplier']->value['link_rewrite']), ENT_QUOTES, 'UTF-8', true);?>
+			<a href="<?php echo $_smarty_tpl->tpl_vars['link']->value->getsupplierLink($_smarty_tpl->tpl_vars['supplier']->value['id_supplier'],$_smarty_tpl->tpl_vars['supplier']->value['link_rewrite']);?>
 " title="<?php echo smartyTranslate(array('s'=>'More about','mod'=>'blocksupplier'),$_smarty_tpl);?>
  <?php echo $_smarty_tpl->tpl_vars['supplier']->value['name'];?>
 "><?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['supplier']->value['name'], 'htmlall', 'UTF-8');?>
@@ -82,7 +82,7 @@ $_smarty_tpl->tpl_vars['supplier']->_loop = true;
 foreach ($_from as $_smarty_tpl->tpl_vars['supplier']->key => $_smarty_tpl->tpl_vars['supplier']->value){
 $_smarty_tpl->tpl_vars['supplier']->_loop = true;
 ?>
-					<option value="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getsupplierLink($_smarty_tpl->tpl_vars['supplier']->value['id_supplier'],$_smarty_tpl->tpl_vars['supplier']->value['link_rewrite']), ENT_QUOTES, 'UTF-8', true);?>
+					<option value="<?php echo $_smarty_tpl->tpl_vars['link']->value->getsupplierLink($_smarty_tpl->tpl_vars['supplier']->value['id_supplier'],$_smarty_tpl->tpl_vars['supplier']->value['link_rewrite']);?>
 "><?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['supplier']->value['name'], 'htmlall', 'UTF-8');?>
 </option>
 				<?php } ?>

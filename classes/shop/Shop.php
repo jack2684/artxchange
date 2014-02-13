@@ -187,21 +187,18 @@ class ShopCore extends ObjectModel
 
 	public function setUrl()
 	{
-		$cache_id = 'Shop::setUrl_'.(int)$this->id;
-		if (!Cache::isStored($cache_id))
-		{
-			$row = Db::getInstance()->getRow('
-			SELECT su.physical_uri, su.virtual_uri, su.domain, su.domain_ssl, t.id_theme, t.name, t.directory
-			FROM '._DB_PREFIX_.'shop s
-			LEFT JOIN '._DB_PREFIX_.'shop_url su ON (s.id_shop = su.id_shop)
-			LEFT JOIN '._DB_PREFIX_.'theme t ON (t.id_theme = s.id_theme)
-			WHERE s.id_shop = '.(int)$this->id.'
-			AND s.active = 1 AND s.deleted = 0 AND su.main = 1');
-			Cache::store($cache_id, $row);
-		}
-		$row = Cache::retrieve($cache_id);
-		if (!$row)
-			return false;
+		$sql = 'SELECT su.physical_uri, su.virtual_uri,
+			su.domain, su.domain_ssl, t.id_theme, t.name, t.directory
+				FROM '._DB_PREFIX_.'shop s
+				LEFT JOIN '._DB_PREFIX_.'shop_url su ON (s.id_shop = su.id_shop)
+				LEFT JOIN '._DB_PREFIX_.'theme t ON (t.id_theme = s.id_theme)
+				WHERE s.id_shop = '.(int)$this->id.'
+					AND s.active = 1
+					AND s.deleted = 0
+					AND su.main = 1';
+
+		if (!$row = Db::getInstance()->getRow($sql))
+			return;
 
 		$this->theme_id = $row['id_theme'];
 		$this->theme_name = $row['name'];
@@ -225,7 +222,7 @@ class ShopCore extends ObjectModel
 	{
 		$res = parent::add($autodate, $null_values);
 		Shop::cacheShops(true);
-		Db::getInstance()->execute('INSERT INTO '._DB_PREFIX_.'employee_shop (id_employee, id_shop) (SELECT id_employee, '.(int)$this->id.' FROM '._DB_PREFIX_.'employee WHERE id_profile = '.(int)_PS_ADMIN_PROFILE_.')');
+		Db::getInstance()->Execute('INSERT INTO '._DB_PREFIX_.'employee_shop (id_employee, id_shop) (SELECT id_employee, '.(int)$this->id.' FROM '._DB_PREFIX_.'employee WHERE id_profile = '.(int)_PS_ADMIN_PROFILE_.')');
 		return $res;
 	}
 
@@ -352,29 +349,12 @@ class ShopCore extends ObjectModel
 			}
 		}
 
-		if ((!$id_shop && defined('_PS_ADMIN_DIR_')) || Tools::isPHPCLI())
+		if (!$id_shop && defined('_PS_ADMIN_DIR_'))
 		{
 			// If in admin, we can access to the shop without right URL
-			if ((!$id_shop && Tools::isPHPCLI()) || defined('_PS_ADMIN_DIR_'))
-				$id_shop = (int)Configuration::get('PS_SHOP_DEFAULT');
-
-			$shop = new Shop((int)$id_shop);
-			if (!Validate::isLoadedObject($shop))
-				$shop = new Shop((int)Configuration::get('PS_SHOP_DEFAULT'));
-
+			$shop = new Shop(Configuration::get('PS_SHOP_DEFAULT'));
 			$shop->physical_uri = preg_replace('#/+#', '/', str_replace('\\', '/', dirname(dirname($_SERVER['SCRIPT_NAME']))).'/');
 			$shop->virtual_uri = '';
-			
-			// Define some $_SERVER variables like HTTP_HOST if PHP is launched with php-cli
-			if (Tools::isPHPCLI())
-			{
-				if (!isset($_SERVER['HTTP_HOST']) || empty($_SERVER['HTTP_HOST']))
-					$_SERVER['HTTP_HOST'] = $shop->domain;
-				if (!isset($_SERVER['SERVER_NAME']) || empty($_SERVER['SERVER_NAME']))
-					$_SERVER['SERVER_NAME'] = $shop->domain;
-				if (!isset($_SERVER['REMOTE_ADDR']) || empty($_SERVER['REMOTE_ADDR']))
-					$_SERVER['REMOTE_ADDR'] = '127.0.0.1';
-			}
 		}
 		else
 		{
@@ -804,7 +784,7 @@ class ShopCore extends ObjectModel
 	{
 		if (Shop::getContext() == Shop::CONTEXT_SHOP)
 			$list = ($share) ? Shop::getSharedShops(Shop::getContextShopID(), $share) : array(Shop::getContextShopID());
-		elseif (Shop::getContext() == Shop::CONTEXT_GROUP)
+		else if (Shop::getContext() == Shop::CONTEXT_GROUP)
 			$list = Shop::getShops(true, Shop::getContextShopGroupID(), true);
 		else
 			$list = Shop::getShops(true, null, true);

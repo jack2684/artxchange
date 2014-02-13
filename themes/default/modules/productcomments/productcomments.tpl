@@ -24,14 +24,9 @@
 *}
 <script type="text/javascript">
 var productcomments_controller_url = '{$productcomments_controller_url}';
-var confirm_report_message = '{l s='Are you sure you want report this comment?' mod='productcomments' js=1}';
-var secure_key = '{$secure_key}';
+var confirm_report_message = "{l s='Are you sure you want report this comment?' mod='productcomments'}";
+var secure_key = "{$secure_key}";
 var productcomments_url_rewrite = '{$productcomments_url_rewriting_activated}';
-var productcomment_added = '{l s='Your comment has been added!' mod='productcomments' js=1}';
-var productcomment_added_moderation = '{l s='Your comment has been added and will be available once approved by a moderator' mod='productcomments' js=1}';
-var productcomment_title = '{l s='New comment' mod='productcomments' js=1}';
-var productcomment_ok = '{l s='OK' mod='productcomments' js=1}';
-var moderation_active = {$moderation_active};
 </script>
 
 <div id="idTab5">
@@ -76,13 +71,8 @@ var moderation_active = {$moderation_active};
 			</div>
 			{/if}
 		{/foreach}
-        {if (!$too_early AND ($logged OR $allow_guests))}
-		<p class="align_center">
-			<a id="new_comment_tab_btn" class="open-comment-form" href="#new_comment_form">{l s='Write your review' mod='productcomments'} !</a>
-		</p>
-        {/if}
 	{else}
-		{if (!$too_early AND ($logged OR $allow_guests))}
+		{if ($too_early == false AND ($logged OR $allow_guests))}
 		<p class="align_center">
 			<a id="new_comment_tab_btn" class="open-comment-form" href="#new_comment_form">{l s='Be the first to write your review' mod='productcomments'} !</a>
 		</p>
@@ -92,25 +82,24 @@ var moderation_active = {$moderation_active};
 	{/if}	
 	</div>
 </div>
-{if isset($product) && $product}
+
 <!-- Fancybox -->
 <div style="display: none;">
 	<div id="new_comment_form">
-		<form id="id_new_comment_form" action="#">
+		<form action="#">
 			<h2 class="title">{l s='Write your review' mod='productcomments'}</h2>
-			{if isset($product) && $product}
 			<div class="product clearfix">
-				<img src="{$link->getImageLink($product->link_rewrite, $productcomment_cover, 'home_default')|escape:'html'}" height="{$homeSize.height}" width="{$homeSize.width}" alt="{$product->name|escape:html:'UTF-8'}" />
+				<img src="{$link->getImageLink($product->link_rewrite, $productcomment_cover, 'home_default')}" height="{$homeSize.height}" width="{$homeSize.width}" alt="{$product->name|escape:html:'UTF-8'}" />
 				<div class="product_desc">
 					<p class="product_name"><strong>{$product->name}</strong></p>
 					{$product->description_short}
 				</div>
 			</div>
-			{/if}
+
 			<div class="new_comment_form_content">
 				<h2>{l s='Write your review' mod='productcomments'}</h2>
 
-				<div id="new_comment_form_error" class="error" style="display: none; padding: 15px 25px">
+				<div id="new_comment_form_error" class="error" style="display: none;">
 					<ul></ul>
 				</div>
 
@@ -144,7 +133,7 @@ var moderation_active = {$moderation_active};
 				{/if}
 
 				<div id="new_comment_form_footer">
-					<input id="id_product_comment_send" name="id_product" type="hidden" value='{$id_product_comment_form}' />
+					<input id="id_product_comment_send" name="id_product" type="hidden" value='{$id_product_comment_form}'></input>
 					<p class="fl required"><sup>*</sup> {l s='Required fields' mod='productcomments'}</p>
 					<p class="fr">
 						<button id="submitNewMessage" name="submitMessage" type="submit">{l s='Send' mod='productcomments'}</button>&nbsp;
@@ -157,4 +146,3 @@ var moderation_active = {$moderation_active};
 	</div>
 </div>
 <!-- End fancybox -->
-{/if}

@@ -48,9 +48,7 @@ class BlockMyAccount extends Module
 		if (!$this->addMyAccountBlockHook() 
 			|| !parent::install() 
 			|| !$this->registerHook('displayLeftColumn') 
-			|| !$this->registerHook('displayHeader')
-			|| !$this->registerHook('actionModuleRegisterHookAfter')
-			|| !$this->registerHook('actionModuleUnRegisterUnHookAfter'))
+			|| !$this->registerHook('displayHeader'))
 			return false;
 		return true;
 	}
@@ -58,17 +56,6 @@ class BlockMyAccount extends Module
 	public function uninstall()
 	{
 		return (parent::uninstall() && $this->removeMyAccountBlockHook());
-	}
-
-	public function hookActionUnModuleRegisterHookAfter($params)
-	{
-		return $this->hookActionModuleRegisterHookAfter($params);
-	}
-
-	public function hookActionModuleRegisterHookAfter($params)
-	{
-		if ($params['hook_name'] == 'displayMyAccountBlock')
-			$this->_clearCache('blockmyaccount.tpl');
 	}
 
 	public function hookDisplayLeftColumn($params)

@@ -1,0 +1,13 @@
+Hola {firstname} {lastname},
+
+Se ha creado un cupón de descuento para usted como resultado de su pedido {order_name}.
+
+Código del cupón: {voucher_num}, por la cantidad de: {voucher_amount}.
+
+Copie y pegue este código durante el proceso de pago de su próximo pedido.
+
+Gracias por comprar en {shop_name}.
+
+{shop_name} - {shop_url}
+
+{shop_url} desarrollado por PrestaShop™

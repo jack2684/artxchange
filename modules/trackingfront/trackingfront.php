@@ -33,7 +33,7 @@ class TrackingFront extends Module
 	{
 		$this->name = 'trackingfront';
 		$this->tab = 'shipping_logistics';
-		$this->version = 1.1;
+		$this->version = 1.0;
 		$this->author = 'PrestaShop';
 		$this->need_instance = 0;
 
@@ -50,7 +50,6 @@ class TrackingFront extends Module
 			$fakeEmployee = new Employee();
 			$fakeEmployee->stats_date_from = $this->context->cookie->stats_date_from;
 			$fakeEmployee->stats_date_to = $this->context->cookie->stats_date_to;
-
 			$result = Db::getInstance()->getRow('
 			SELECT `id_referrer`
 			FROM `'._DB_PREFIX_.'referrer`
@@ -62,7 +61,7 @@ class TrackingFront extends Module
 		{
 			unset($this->context->cookie->tracking_id);
 			unset($this->context->cookie->tracking_passwd);
-			Tools::redirect(Tools::getShopDomain(true, false).__PS_BASE_URI__.'modules/trackingfront/stats.php');
+			Tools::redirect('modules/trackingfront/stats.php');
 		}
 		elseif (Tools::isSubmit('submitLoginTracking'))
 		{
@@ -90,19 +89,16 @@ class TrackingFront extends Module
 				{
 					$this->context->cookie->tracking_id = $tracking_id;
 					$this->context->cookie->tracking_passwd = $passwd;
-					Tools::redirect(Tools::getShopDomain(true, false).__PS_BASE_URI__.'modules/trackingfront/stats.php');
+					Tools::redirect('modules/trackingfront/stats.php');
 				}
 			}
 			$this->smarty->assign('errors', $errors);
 		}
 
-		$from = date('Y-m-d');
-		$to = date('Y-m-d');
-
 		if (Tools::isSubmit('submitDatePicker'))
 		{
-			$from = Tools::getValue('datepickerFrom');
-			$to= Tools::getValue('datepickerTo');
+			$this->context->cookie->stats_date_from = Tools::getValue('datepickerFrom');
+			$this->context->cookie->stats_date_to = Tools::getValue('datepickerTo');
 		}
 		if (Tools::isSubmit('submitDateDay'))
 		{
@@ -137,8 +133,6 @@ class TrackingFront extends Module
 			$from = (date('Y') - 1).date('-01-01');
 			$to = (date('Y') - 1).date('-12-31');
 		}
-		$this->context->cookie->stats_date_from = $from;
-		$this->context->cookie->stats_date_to = $to;
 	}
 	
 	public function isLogged()
@@ -193,16 +187,15 @@ class TrackingFront extends Module
 		
 		$echo = '
 		<script type="text/javascript">
-			$(document).ready(function() {
-				$("#datepickerFrom").datepicker({
-					prevText:"",
-					nextText:"",
-					dateFormat:"yy-mm-dd"});
-				$("#datepickerTo").datepicker({
-					prevText:"",
-					nextText:"",
-					dateFormat:"yy-mm-dd"});
-			});
+			$("#datepickerFrom").datepicker({
+				prevText:"",
+				nextText:"",
+				dateFormat:"yy-mm-dd"});
+			$("#datepickerTo").datepicker({
+				prevText:"",
+				nextText:"",
+				dateFormat:"yy-mm-dd"});
+			
 			function updateValues()
 			{
 				$.getJSON("stats.php",{ajaxProductFilter:1,id_referrer:'.$referrer->id.',token:"'.$this->context->cookie->tracking_passwd.'",id_product:0},

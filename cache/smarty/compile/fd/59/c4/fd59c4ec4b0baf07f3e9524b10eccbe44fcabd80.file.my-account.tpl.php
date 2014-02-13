@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-12 16:37:13
+<?php /* Smarty version Smarty-3.1.13, created on 2014-02-13 20:10:43
          compiled from "/var/www/artxchange/themes/default/my-account.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:94579779952fbe989089668-92458890%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:50307399152fd26c3ce8323-40193978%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'fd59c4ec4b0baf07f3e9524b10eccbe44fcabd80' => 
     array (
       0 => '/var/www/artxchange/themes/default/my-account.tpl',
-      1 => 1390229662,
+      1 => 1366914192,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '94579779952fbe989089668-92458890',
+  'nocache_hash' => '50307399152fd26c3ce8323-40193978',
   'function' => 
   array (
   ),
@@ -27,10 +27,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'base_dir' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52fbe98910dfe1_46593144',
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_52fd26c3d6ed23_55717975',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52fbe98910dfe1_46593144')) {function content_52fbe98910dfe1_46593144($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_52fd26c3d6ed23_55717975')) {function content_52fd26c3d6ed23_55717975($_smarty_tpl) {?>
 
 <?php $_smarty_tpl->_capture_stack[0][] = array('path', null, null); ob_start(); ?><?php echo smartyTranslate(array('s'=>'My account'),$_smarty_tpl);?>
 <?php list($_capture_buffer, $_capture_assign, $_capture_append) = array_pop($_smarty_tpl->_capture_stack[0]);
@@ -54,47 +54,47 @@ if (!empty($_capture_buffer)) {
 </p>
 <ul class="myaccount_lnk_list">
 	<?php if ($_smarty_tpl->tpl_vars['has_customer_an_address']->value){?>
-	<li><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('address',true), ENT_QUOTES, 'UTF-8', true);?>
+	<li><a href="<?php echo $_smarty_tpl->tpl_vars['link']->value->getPageLink('address',true);?>
 " title="<?php echo smartyTranslate(array('s'=>'Add my first address'),$_smarty_tpl);?>
 "><img src="<?php echo $_smarty_tpl->tpl_vars['img_dir']->value;?>
 icon/addrbook.gif" alt="<?php echo smartyTranslate(array('s'=>'Add my first address'),$_smarty_tpl);?>
 " class="icon" /> <?php echo smartyTranslate(array('s'=>'Add my first address'),$_smarty_tpl);?>
 </a></li>
 	<?php }?>
-	<li><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('history',true), ENT_QUOTES, 'UTF-8', true);?>
+	<li><a href="<?php echo $_smarty_tpl->tpl_vars['link']->value->getPageLink('history',true);?>
 " title="<?php echo smartyTranslate(array('s'=>'Orders'),$_smarty_tpl);?>
 "><img src="<?php echo $_smarty_tpl->tpl_vars['img_dir']->value;?>
 icon/order.gif" alt="<?php echo smartyTranslate(array('s'=>'Orders'),$_smarty_tpl);?>
 " class="icon" /> <?php echo smartyTranslate(array('s'=>'Order history and details '),$_smarty_tpl);?>
 </a></li>
 	<?php if ($_smarty_tpl->tpl_vars['returnAllowed']->value){?>
-		<li><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('order-follow',true), ENT_QUOTES, 'UTF-8', true);?>
+		<li><a href="<?php echo $_smarty_tpl->tpl_vars['link']->value->getPageLink('order-follow',true);?>
 " title="<?php echo smartyTranslate(array('s'=>'Merchandise returns'),$_smarty_tpl);?>
 "><img src="<?php echo $_smarty_tpl->tpl_vars['img_dir']->value;?>
 icon/return.gif" alt="<?php echo smartyTranslate(array('s'=>'Merchandise returns'),$_smarty_tpl);?>
 " class="icon" /> <?php echo smartyTranslate(array('s'=>'My merchandise returns'),$_smarty_tpl);?>
 </a></li>
 	<?php }?>
-	<li><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('order-slip',true), ENT_QUOTES, 'UTF-8', true);?>
+	<li><a href="<?php echo $_smarty_tpl->tpl_vars['link']->value->getPageLink('order-slip',true);?>
 " title="<?php echo smartyTranslate(array('s'=>'Credit slips'),$_smarty_tpl);?>
 "><img src="<?php echo $_smarty_tpl->tpl_vars['img_dir']->value;?>
 icon/slip.gif" alt="<?php echo smartyTranslate(array('s'=>'Credit slips'),$_smarty_tpl);?>
 " class="icon" /> <?php echo smartyTranslate(array('s'=>'My credit slips'),$_smarty_tpl);?>
 </a></li>
-	<li><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('addresses',true), ENT_QUOTES, 'UTF-8', true);?>
+	<li><a href="<?php echo $_smarty_tpl->tpl_vars['link']->value->getPageLink('addresses',true);?>
 " title="<?php echo smartyTranslate(array('s'=>'Addresses'),$_smarty_tpl);?>
 "><img src="<?php echo $_smarty_tpl->tpl_vars['img_dir']->value;?>
 icon/addrbook.gif" alt="<?php echo smartyTranslate(array('s'=>'Addresses'),$_smarty_tpl);?>
 " class="icon" /> <?php echo smartyTranslate(array('s'=>'My addresses'),$_smarty_tpl);?>
 </a></li>
-	<li><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('identity',true), ENT_QUOTES, 'UTF-8', true);?>
+	<li><a href="<?php echo $_smarty_tpl->tpl_vars['link']->value->getPageLink('identity',true);?>
 " title="<?php echo smartyTranslate(array('s'=>'Information'),$_smarty_tpl);?>
 "><img src="<?php echo $_smarty_tpl->tpl_vars['img_dir']->value;?>
 icon/userinfo.gif" alt="<?php echo smartyTranslate(array('s'=>'Information'),$_smarty_tpl);?>
 " class="icon" /> <?php echo smartyTranslate(array('s'=>'My personal information'),$_smarty_tpl);?>
 </a></li>
 	<?php if ($_smarty_tpl->tpl_vars['voucherAllowed']->value){?>
-		<li><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('discount',true), ENT_QUOTES, 'UTF-8', true);?>
+		<li><a href="<?php echo $_smarty_tpl->tpl_vars['link']->value->getPageLink('discount',true);?>
 " title="<?php echo smartyTranslate(array('s'=>'Vouchers'),$_smarty_tpl);?>
 "><img src="<?php echo $_smarty_tpl->tpl_vars['img_dir']->value;?>
 icon/voucher.gif" alt="<?php echo smartyTranslate(array('s'=>'Vouchers'),$_smarty_tpl);?>

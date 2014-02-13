@@ -56,6 +56,8 @@ class ParentOrderControllerCore extends FrontController
 		header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 
 		$this->nbProducts = $this->context->cart->nbProducts();
+
+		global $isVirtualCart;
 		
 		if (!$this->context->customer->isLogged(true) && $this->context->getMobileDevice() && Tools::getValue('step'))
 			Tools::redirect($this->context->link->getPageLink('authentication', true, (int)$this->context->language->id, $params));
@@ -111,9 +113,7 @@ class ParentOrderControllerCore extends FrontController
 							else
 							{
 								$this->context->cart->addCartRule($cartRule->id);
-								if (Configuration::get('PS_ORDER_PROCESS_TYPE') == 1)
-									Tools::redirect('index.php?controller=order-opc&addingCartRule=1');
-								Tools::redirect('index.php?controller=order&addingCartRule=1');
+								Tools::redirect('index.php?controller=order-opc');
 							}
 						}
 						else
@@ -151,10 +151,10 @@ class ParentOrderControllerCore extends FrontController
 		if ((Configuration::get('PS_ORDER_PROCESS_TYPE') == 0 && Tools::getValue('step') == 1) || Configuration::get('PS_ORDER_PROCESS_TYPE') == 1)
 			$this->addJS(_THEME_JS_DIR_.'order-address.js');
 		$this->addJqueryPlugin('fancybox');
-		if ((int)(Configuration::get('PS_BLOCK_CART_AJAX')) || Configuration::get('PS_ORDER_PROCESS_TYPE') == 1 || Tools::getValue('step') == 2)
+		if ((int)(Configuration::get('PS_BLOCK_CART_AJAX')) || Configuration::get('PS_ORDER_PROCESS_TYPE') == 1)
 		{
-			$this->addJqueryPlugin('typewatch');
 			$this->addJS(_THEME_JS_DIR_.'cart-summary.js');
+			$this->addJqueryPlugin('typewatch');
 		}
 	}
 
@@ -372,7 +372,6 @@ class ParentOrderControllerCore extends FrontController
 			'currencyFormat' => $this->context->currency->format,
 			'currencyBlank' => $this->context->currency->blank,
 			'show_option_allow_separate_package' => $show_option_allow_separate_package,
-			'smallSize' => Image::getSize(ImageType::getFormatedName('small')),
 				
 		));
 
@@ -400,12 +399,10 @@ class ParentOrderControllerCore extends FrontController
 
 			// Getting a list of formated address fields with associated values
 			$formatedAddressFieldsValuesList = array();
-
-			foreach ($customerAddresses as $i => $address)
+			foreach ($customerAddresses as $address)
 			{
-				if (!Address::isCountryActiveById((int)($address['id_address'])))
-					unset($customerAddresses[$i]);										
 				$tmpAddress = new Address($address['id_address']);
+
 				$formatedAddressFieldsValuesList[$address['id_address']]['ordered_fields'] = AddressFormat::getOrderedAddressFields($address['id_country']);
 				$formatedAddressFieldsValuesList[$address['id_address']]['formated_fields_values'] = AddressFormat::getFormattedAddressFieldsValues(
 					$tmpAddress,
@@ -413,21 +410,6 @@ class ParentOrderControllerCore extends FrontController
 
 				unset($tmpAddress);
 			}
-
-			if (key($customerAddresses) != 0)
-				$customerAddresses = array_values($customerAddresses);
-
-			if (!count($customerAddresses))
-			{
-				$bad_delivery = false;
-				if (($bad_delivery = (bool)!Address::isCountryActiveById((int)$this->context->cart->id_address_delivery)) || (!Address::isCountryActiveById((int)$this->context->cart->id_address_invoice)))
-				{
-					$back_url = $this->context->link->getPageLink('order', true, (int)$this->context->language->id, array('step' => Tools::getValue('step'), 'multi-shipping' => (int)Tools::getValue('multi-shipping')));
-					$params = array('multi-shipping' => (int)Tools::getValue('multi-shipping'), 'id_address' => ($bad_delivery ? (int)$this->context->cart->id_address_delivery : (int)$this->context->cart->id_address_invoice), 'back' => $back_url);
-					Tools::redirect($this->context->link->getPageLink('address', true, (int)$this->context->language->id, $params));
-				}
-			}
-
 			$this->context->smarty->assign(array(
 				'addresses' => $customerAddresses,
 				'formatedAddressFieldsValuesList' => $formatedAddressFieldsValuesList));
@@ -512,7 +494,7 @@ class ParentOrderControllerCore extends FrontController
 
 		// TOS
 		$cms = new CMS(Configuration::get('PS_CONDITIONS_CMS_ID'), $this->context->language->id);
-		$this->link_conditions = $this->context->link->getCMSLink($cms, $cms->link_rewrite, (bool)Configuration::get('PS_SSL_ENABLED'));
+		$this->link_conditions = $this->context->link->getCMSLink($cms, $cms->link_rewrite, false);
 		if (!strpos($this->link_conditions, '?'))
 			$this->link_conditions .= '?content_only=1';
 		else

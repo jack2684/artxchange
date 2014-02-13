@@ -1,0 +1,15 @@
+Hola,
+
+Su mensaje ha sido enviado correctamenta a nuestro centro de atención al Cliente. 
+
+Su mensaje:
+
+{message}
+
+Referencia del pedido: {order_name}
+
+Archivo: {attached_file}
+
+Le responderemos en el menor tiempo posible.
+
+{shop_url} desarrollado por PrestaShop™

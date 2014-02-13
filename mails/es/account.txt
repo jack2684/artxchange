@@ -1,0 +1,21 @@
+Hola {firstname} {lastname},
+
+Gracias por crear una cuenta en {shop_name}.
+
+Detalles de su cuenta:
+
+Email: {email}
+Clave: {passwd}
+ 
+Ahora podrá guardar y consultar sus pedidos en nuestra tienda: {shop_url}
+
+Consejos de Seguridad:
+
+1. Mantenga los datos de su cuenta en un lugar seguro.
+2. No comparta los detalles de su cuenta con otras personas.
+3. Cambie su clave regularmente.
+4. Si sospecha que alguien está usando ilegalmente su cuenta, avísenos inmediatamente.
+
+Ahora podrá realizar pedidos en nuestra tienda: {shop_name}.
+
+{shop_url} desarrollado por PrestaShop™

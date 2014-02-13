@@ -1,0 +1,8 @@
+Hallo,
+		
+Achtung: Sie haben einen neuen Eintrag in der Log-Datei.
+
+Sie können Sie einsehen im Back Office unter Erweiterte Einstellungen --> Log-Datei.	
+
+
+{shop_url} powered by PrestaShop™
