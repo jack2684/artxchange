@@ -1,7 +1,1160 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26fadfb4-8239-44a2-8a4f-0e304f6f31b2" name="Default" comment="" />
+    <list default="true" id="26fadfb4-8239-44a2-8a4f-0e304f6f31b2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockcart/img/icon/1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/leobtslider/themes/default/assets/images/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/leobtslider/themes/default/assets/images/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/productcomments/img/accept.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/add.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockwishlist/img/icon/add.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/img/icon/add.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/favoriteproducts/img/add_favorite.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/addrbook.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/img/icon/addrbook.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/address_alias_full_width.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/address_alias_left.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/address_alias_right.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/ajax-loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/img/ajax-loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/img/ajax-loader.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/leobtslider/themes/default/assets/images/arrow-control.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/leobtslidermini/themes/default/assets/images/arrow-control.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocknewproducts/img/arrow_right_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/arrow_right_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockpermanentlinks/img/arrow_right_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockwishlist/img/arrow_right_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/arrow_right_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/img/arrow_right_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/arrow_rotate_anticlockwise.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockleotopmenu/img/arrows-ffffff.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocktopmenu/img/arrows-ffffff.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/available.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockcart/img/icon/basket.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockcart/img/icon/basket_go.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/default/bg-body.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/lofmanufacturerscroll2/assets/images/bg-border.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/leotwitter/themes/default/assets/images/bg-bottom-tw.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/lofadvancecustom/tmpl/default/assets/images/bg-footer-po1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/lofadvancecustom/tmpl/default/assets/images/bg-footer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/default/bg-header-wrap.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/default/bg-header.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/leobtslidermini/themes/default/assets/images/bg-infor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/default/bg-leoheader.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockleotopmenu/img/bg-li.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocktopmenu/img/bg-li.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/blue/images/bg-li.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/gold/images/bg-li.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/pink/images/bg-li.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/purple/images/bg-li.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/red/images/bg-li.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockleotopmenu/img/bg-search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocksearch/img/bg-search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocktopmenu/img/bg-search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/blue/images/bg-search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/gold/images/bg-search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/pink/images/bg-search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/purple/images/bg-search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/red/images/bg-search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/leobtslider/themes/default/assets/images/bg-slider.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/leobtslidermini/themes/default/assets/images/bg-slider.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/lofadvancecustom/tmpl/default/assets/images/bg-sociallink.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockleotopmenu/img/bg-ul.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocktopmenu/img/bg-ul.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/blue/images/bg-ul.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/gold/images/bg-ul.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/pink/images/bg-ul.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/purple/images/bg-ul.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/red/images/bg-ul.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/bg_404.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/bg_account.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/bg_address_title.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockleotopmenu/img/bg_blocktopmenu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockleotopmenu/img/bg_blocktopmenu_li_hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockleotopmenu/img/bg_blocktopmenu_li_seleted.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocktopmenu/img/bg_blocktopmenu_li_seleted.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/productcomments/img/bg_bt.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/bg_bt.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/bg_bt_2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/bg_bt_compare.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocknewsletter/img/bg_bt_newsletter_ok.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/bg_bt_newsletter_ok.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/bg_cart_voucher_submit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/bg_discount_name.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/bg_form_h3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/bg_header_user_info_a.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/bg_input.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/productcomments/img/bg_li.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockleotopmenu/img/bg_li_blocktopmenu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/bg_li_idTabs.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/bg_maintenance.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/img/bg_maintenance.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockspecials/img/bg_reduction.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/bg_reduction.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocksearch/img/bg_search_input.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/bg_search_input.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocksearch/img/bg_search_submit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/bg_search_submit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/bg_table_th.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockcontact/images/bloc_contact_a_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockcontact/img/bloc_contact_a_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/block_bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/block_bg_myaccount.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/block_category_item_bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockcontact/images/block_contact_bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockcontact/img/block_contact_bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockcontact/images/block_contact_pict_tel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockcontact/img/block_contact_pict_tel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/block_exclusive_bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/block_exclusive_footer.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/block_footer.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/block_footer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/block_footer_myaccount.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/block_footer_page.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/block_footer_page_footer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/block_header.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/block_header.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/block_header_exclusive.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/block_header_exclusive.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/block_header_exclusive_cart.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/block_header_exclusive_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/block_header_large.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/block_header_large.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/block_header_myaccount.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockcurrencies/img/block_languages_top_p_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocklanguages/img/block_languages_top_p_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/block_languages_top_p_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/block_myaccount_header_large.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/block_search_bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockleotopmenu/img/blocktopmenu.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocktopmenu/img/blocktopmenu.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockleotopmenu/img/blocktopmenu_hover.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocktopmenu/img/blocktopmenu_hover.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockleotopmenu/img/blocktopmenu_left.gif.old" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockleotopmenu/img/blocktopmenu_left.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocktopmenu/img/blocktopmenu_left.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockleotopmenu/img/blocktopmenu_right.gif.old" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockleotopmenu/img/blocktopmenu_right.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocktopmenu/img/blocktopmenu_right.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/leobtslider/themes/default/assets/images/border-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/default/btn-next.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/default/btn-prev.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/lofadvancecustom/tmpl/default/assets/images/bullet-li.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/bullet.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/bullet_alt.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/bullet_myaccount.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/bullet_price.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/button-account-large.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/button-account-mini.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/button-account-small.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/button-account.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/button-large.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/button-large.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/button-large_exclusive.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/button-medium.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/button-medium.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/button-medium_exclusive.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/button-medium_exclusive.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/button-mini.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/button-mini.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/button-mini_exclusive.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/lofmanufacturerscroll2/assets/images/button-next.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/lofmanufacturerscroll2/assets/images/button-previous.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/button-small.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/button-small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/button-small_exclusive.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/cancel.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/cancel_11x13.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/cancel_16x18.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/cart.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockcart/img/icon/checkout.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/cible.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/productcomments/img/comment.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/productcomments/img/comments_delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/contact.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/favoriteproducts/img/del_favorite.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockwishlist/img/delete.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockwishlist/img/icon/delete.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/productcomments/img/delete.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/delete.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/img/delete.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/img/icon/delete.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockcart/img/icon/delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockwishlist/img/icon/delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/productcomments/img/delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/img/icon/delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/download_product.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/error.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/img/icon/favorite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/favoriteproducts/img/favorites.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/flag_new_bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/lofadvancecustom/tmpl/default/assets/images/footer-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/footer_account.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/form-input-bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/form_bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockwishlist/img/gift.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/gift.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/img/gift.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/img/icon/gift.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/glyphicons-halflings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/glyphicons-halflings_blue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/gold/images/glyphicons-halflings_gold.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/blue/images/glyphicons-halflings_green.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/pink/images/glyphicons-halflings_pink.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/purple/images/glyphicons-halflings_purple.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/red/images/glyphicons-halflings_red.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/header_account.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/home.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/img/icon/home.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/default/icon-before-cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/default/icon-bt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/lofadvancecustom/tmpl/default/assets/images/icon-call.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/blue/images/icon-call.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/gold/images/icon-call.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/pink/images/icon-call.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/purple/images/icon-call.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/red/images/icon-call.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/leobtslidermini/themes/default/assets/images/icon-carousel-control.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockuserinfo/img/icon-cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/blue/images/icon-cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/gold/images/icon-cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/pink/images/icon-cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/purple/images/icon-cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/red/images/icon-cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/lofadvancecustom/tmpl/default/assets/images/icon-footer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockcurrencies/img/icon-languages.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocklanguages/img/icon-languages.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocknewsletter/img/icon-letter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/blue/images/icon-letter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/gold/images/icon-letter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/pink/images/icon-letter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/purple/images/icon-letter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/red/images/icon-letter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/default/icon-navigation.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/default/icon-payment.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/default/icon-productsview.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/lofadvancecustom/tmpl/default/assets/images/icon-shipping.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/blue/images/icon-shipping.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/gold/images/icon-shipping.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/pink/images/icon-shipping.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/purple/images/icon-shipping.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/red/images/icon-shipping.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/img/icons-18-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/img/icons-18-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/img/icons-36-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/img/icons-36-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/img/img_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/info.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/infos.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/default/left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/less.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockuserinfo/img/icon/login.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/login.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocktags/logo.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/logo.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/img/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/logo_paiement_mastercard.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/logo_paiement_paypal.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/logo_paiement_visa.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockuserinfo/img/icon/logout.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/logout.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/jquery/macFFBgHack.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/magnify.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/more.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockuserinfo/img/icon/my-account.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/my-account.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/img/icon/my-account.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/nav-logout.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocknewsletter/img/icon/newsletter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/newsletter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/next.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/no.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/productcomments/img/note.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/productcomments/img/note_go.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/onsale_en.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/onsale_es.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/onsale_fr.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/order.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/img/icon/order.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockwishlist/img/icon/package.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/img/icon/package.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockwishlist/img/icon/package_go.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/img/icon/package_go.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/pagination-bg-current.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/pagination-next-border.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/pagination-prev-border.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/pagination-prevnext-bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/pagination_bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/patterns/pattern1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/patterns/pattern10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/patterns/pattern11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/patterns/pattern12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/patterns/pattern13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/patterns/pattern14.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/patterns/pattern15.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/patterns/pattern16.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/patterns/pattern2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/patterns/pattern3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/patterns/pattern4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/patterns/pattern5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/patterns/pattern6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/patterns/pattern7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/patterns/pattern8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/patterns/pattern9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/pdf.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockcart/img/icon/pict_add_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/pict_add_cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/pict_add_wishlist.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/pict_cart_block_h4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/picto_fb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/preview.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/previous.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/print.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/product-buy-bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/product-short-desc-bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/img/px-ccc.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/quantity_down.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/quantity_down_off.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/quantity_up.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/recyclable.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/return.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/img/icon/return.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/default/right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/rss.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockleotopmenu/img/search.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocktopmenu/img/search.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/search.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/send_friend.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/serial_scroll_left.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/serial_scroll_right.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockleotopmenu/img/shadow-left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocktopmenu/img/shadow-left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockleotopmenu/img/shadow-right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocktopmenu/img/shadow-right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockleotopmenu/img/shadow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocktopmenu/img/shadow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/sitemap-horizontal.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/sitemap-horizontal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/sitemap-last.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/sitemap-top.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/sitemap.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/sitemap_long.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/img/slider_home.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/slip.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/img/icon/slip.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/lofadvancecustom/tmpl/default/assets/images/social_fb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/lofadvancecustom/tmpl/default/assets/images/social_in.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/lofadvancecustom/tmpl/default/assets/images/social_rss.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/lofadvancecustom/tmpl/default/assets/images/social_skype.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/lofadvancecustom/tmpl/default/assets/images/social_twitter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/sort_asc.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/sort_asc_disabled.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/sort_asc_white.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/sort_asc_white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/sort_desc.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/sort_desc_disabled.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/sort_desc_white.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/sort_desc_white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockwishlist/img/star.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/productcomments/img/star.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/star.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/img/star.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/step_current.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/step_current_span.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/step_done.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/step_end.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/step_end_current.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/step_standard.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/step_start.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/tab_bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/tab_bg_selected.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/tab_bg_selected_short.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/tab_bg_short.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/table_footer.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/table_header.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/thumbs_left.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/default/thumbs_left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/blue/images/thumbs_left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/gold/images/thumbs_left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/pink/images/thumbs_left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/purple/images/thumbs_left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/red/images/thumbs_left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/thumbs_right.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/default/thumbs_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/blue/images/thumbs_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/gold/images/thumbs_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/pink/images/thumbs_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/purple/images/thumbs_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/red/images/thumbs_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/title_bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/title_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/title_bg_large.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/leotwitter/themes/default/assets/images/twitter-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/unavailable.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/up.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/update.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/userinfo.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/img/icon/userinfos.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/voucher.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/img/icon/voucher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/yes.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/zoom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/404.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/404.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/override/controllers/front/AuthController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/address.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/address.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/addresses.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/addresses.css_" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/addresses.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/addresses.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/modules/blockcart/ajax-cart.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/authentication-choice.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/authentication-create-account.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/authentication.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/authentication.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/authentication.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/authentication1.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/best-sales.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/best-sales.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockcart/blockcart.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcart/blockcart.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockcontact/blockcontact.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockcurrencies/blockcurrencies.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocklanguages/blocklanguages.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocklanguages/blocklanguages.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleoprodcarousel/blockleoprodcarousel.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleorelatedproducts/blockleorelatedproducts.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockleotopmenu/css/blockleotopmenu.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocknewproducts/blocknewproducts.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocknewsletter/blocknewsletter.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockpermanentlinks/blockpermanentlinks-header.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockpermanentlinks/blockpermanentlinks.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockpermanentlinks/blockpermanentlinks.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocksearch/blocksearch-instantsearch.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocksearch/blocksearch-top.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocksearch/blocksearch.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocksearch/blocksearch.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockspecials/blockspecials.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockstore/blockstore.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocktags/blocktags.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockuserinfo/blockuserinfo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockuserinfo/blockuserinfo.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/blockwishlist-ajax.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/blockwishlist-extra.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockwishlist/blockwishlist.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/blockwishlist.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/bootstrap-responsive.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/bootstrap-tooltip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/translations/br.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/breadcrumb.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/cart-summary.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/js/cart.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/category-cms-tree-branch.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/category-cms-tree-branch.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/category-count.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/category-product-list.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/category-product-sort.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/category-tree-branch.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/category-tree-branch.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/category.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/category.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/category.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/cms.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/cms.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/cms.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/cms.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/comparator.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/contact-form.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/contact-form.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/contact-form.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/contact-form.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/custom.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/custom1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/custom_.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/lang/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/bankwire/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockadvertising/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockbestsellers/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcart/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcategories/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcontact/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcurrencies/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcustomerprivacy/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocklanguages/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleocustom1/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleocustom3/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleoprodcarousel/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleorelatedproducts/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleotopmenu/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockmanufacturer/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockmyaccount/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocknewproducts/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocknewsletter/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockpaymentlogo/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockpermanentlinks/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocksearch/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocksharefb/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockspecials/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockstore/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocksupplier/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocktags/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockuserinfo/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockviewed/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/carriercompare/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/cheque/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/favoriteproducts/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/feeder/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/gamification/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphartichow/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphgooglechart/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphvisifire/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphxmlswfcharts/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/gridhtml/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leobtslider/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leobtslidermini/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leotempcp/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leotwitter/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/lofadvancecustom/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/lofmanufacturerscroll2/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/pagesnotfound/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/productcomments/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/sekeywords/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/sendtoafriend/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestcategories/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestcustomers/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestproducts/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestsuppliers/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestvouchers/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statscarrier/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statscatalog/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statscheckup/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsdata/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsequipment/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsforecast/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statslive/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsnewsletter/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsorigin/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statspersonalinfos/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsproduct/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsregistrations/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statssales/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statssearch/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsstock/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsvisits/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/themeinstallator/translations/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leobtslidermini/themes/default/default.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/lofadvancecustom/tmpl/default/default.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/discount.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/discount.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/lang/en.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/bankwire/translations/en.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcart/translations/en.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocksearch/translations/en.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockstore/translations/en.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/cheque/translations/en.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/errors.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/errors.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/lang/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/bankwire/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockadvertising/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockbestsellers/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcart/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcategories/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcontact/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcurrencies/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcustomerprivacy/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocklanguages/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleocustom1/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleocustom3/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleoprodcarousel/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleorelatedproducts/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleotopmenu/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockmanufacturer/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockmyaccount/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocknewproducts/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocknewsletter/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockpaymentlogo/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockpermanentlinks/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocksearch/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocksharefb/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockspecials/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockstore/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocksupplier/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocktags/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockuserinfo/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockviewed/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/carriercompare/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/cheque/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/favoriteproducts/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/feeder/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/gamification/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphartichow/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphgooglechart/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphvisifire/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphxmlswfcharts/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/gridhtml/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leobtslider/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leobtslidermini/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leotempcp/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leotwitter/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/lofadvancecustom/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/lofmanufacturerscroll2/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/pagesnotfound/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/productcomments/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/sekeywords/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/sendtoafriend/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestcategories/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestcustomers/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestproducts/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestsuppliers/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestvouchers/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statscarrier/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statscatalog/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statscheckup/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsdata/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsequipment/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsforecast/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statslive/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsnewsletter/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsorigin/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statspersonalinfos/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsproduct/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsregistrations/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statssales/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statssearch/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsstock/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsvisits/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/themeinstallator/translations/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/favoriteproducts/favoriteproducts-account.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/favoriteproducts/views/templates/front/favoriteproducts-account.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/favoriteproducts/views/templates/hook/favoriteproducts-extra.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/favoriteproducts/views/templates/hook/favoriteproducts-header.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/favoriteproducts/favoriteproducts.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/fix-browser.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/fonts.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/footer.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/footer.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/info/assets/form.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/info/assets/form.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/lang/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/bankwire/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockadvertising/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockbestsellers/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcart/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcategories/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcontact/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcurrencies/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcustomerprivacy/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocklanguages/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleocustom1/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleocustom3/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleoprodcarousel/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleorelatedproducts/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleotopmenu/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockmanufacturer/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockmyaccount/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocknewproducts/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocknewsletter/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockpaymentlogo/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockpermanentlinks/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocksearch/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocksharefb/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockspecials/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockstore/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocksupplier/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocktags/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockuserinfo/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockviewed/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/carriercompare/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/cheque/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/favoriteproducts/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/feeder/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/gamification/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphartichow/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphgooglechart/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphvisifire/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphxmlswfcharts/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/gridhtml/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leobtslider/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leobtslidermini/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leotempcp/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leotwitter/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/lofadvancecustom/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/lofmanufacturerscroll2/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/pagesnotfound/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/productcomments/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/sekeywords/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/sendtoafriend/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestcategories/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestcustomers/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestproducts/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestsuppliers/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestvouchers/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statscarrier/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statscatalog/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statscheckup/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsdata/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsequipment/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsforecast/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statslive/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsnewsletter/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsorigin/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statspersonalinfos/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsproduct/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsregistrations/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statssales/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statssearch/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsstock/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsvisits/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/themeinstallator/translations/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/global.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/css/global.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/js/global.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/guest-tracking.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/header.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/header.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/history.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/history.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/js/history.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/history.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/history.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/modules/homeslider/js/homeslider.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/identity.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/identity.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/identity.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/lofmanufacturerscroll2/assets/images/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/blue/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/blue/css/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/gold/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/gold/css/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/pink/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/pink/css/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/purple/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/purple/css/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/red/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/red/css/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/cache/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockcart/img/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockcart/img/icon/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockcontact/images/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockcontact/img/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockcurrencies/img/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocklanguages/img/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockleotopmenu/css/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockleotopmenu/img/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocknewproducts/img/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocknewsletter/img/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocknewsletter/img/icon/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockpermanentlinks/img/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocksearch/img/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockspecials/img/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocktopmenu/css/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocktopmenu/img/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockuserinfo/img/icon/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockwishlist/img/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blockwishlist/img/icon/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/favoriteproducts/img/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/productcomments/img/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/fonts/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/icon/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/img/jquery/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/modules/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/tools/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/lang/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/css/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/img/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/img/icon/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/js/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/bankwire/translations/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/bankwire/views/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/bankwire/views/templates/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/bankwire/views/templates/front/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcart/translations/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocksearch/translations/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockstore/translations/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockuserinfo/translations/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/img/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/img/icon/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/translations/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/cheque/translations/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/cheque/views/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/cheque/views/templates/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/cheque/views/templates/front/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/favoriteproducts/translations/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/pdf/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/index.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/index.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/info/info.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/lang/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/bankwire/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockadvertising/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockbestsellers/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcart/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcategories/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcontact/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcurrencies/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcustomerprivacy/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocklanguages/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleocustom1/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleocustom3/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleoprodcarousel/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleorelatedproducts/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleotopmenu/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockmanufacturer/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockmyaccount/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocknewproducts/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocknewsletter/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockpaymentlogo/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockpermanentlinks/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocksearch/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocksharefb/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockspecials/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockstore/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocksupplier/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocktags/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockuserinfo/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockviewed/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/carriercompare/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/cheque/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/favoriteproducts/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/feeder/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/gamification/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphartichow/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphgooglechart/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphvisifire/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphxmlswfcharts/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/gridhtml/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leobtslider/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leobtslidermini/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leotempcp/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leotwitter/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/lofadvancecustom/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/lofmanufacturerscroll2/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/pagesnotfound/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/productcomments/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/sekeywords/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/sendtoafriend/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestcategories/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestcustomers/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestproducts/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestsuppliers/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestvouchers/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statscarrier/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statscatalog/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statscheckup/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsdata/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsequipment/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsforecast/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statslive/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsnewsletter/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsorigin/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statspersonalinfos/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsproduct/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsregistrations/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statssales/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statssearch/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsstock/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsvisits/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/themeinstallator/translations/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/css/jqm-docs.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/js/jqm-docs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/modules/homeslider/js/jquery.bxSlider.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/css/jquery.mobile-1.3.0.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/js/jquery.mobile-1.3.0.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/js/jquery.touch-gallery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/layout.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/layout.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/lofmanufacturerscroll2/lofmanufacturerscroll2.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/maintenance.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/css/maintenance.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/maintenance.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/maintenance.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/managewishlist.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/manufacturer-list.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/manufacturer-list.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/manufacturer.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/manufacturer.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/my-account.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/my-account.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/my-account.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/my-account.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/favoriteproducts/views/templates/hook/my-account.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/my-account_.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/mywishlist.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/views/templates/front/mywishlist.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/nbr-product-page.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/new-products.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/new-products.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/translations/nl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/js/opc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/order-address-multishipping-products.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/order-address-multishipping.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/order-address-product-line.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/order-address.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/order-address.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/order-address.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/order-carrier.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/order-carrier.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/order-confirmation.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/order-detail-product-li.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/order-detail.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/order-detail.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/order-follow.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/order-follow.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/order-opc-address.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/order-opc-carrier.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/order-opc-new-account.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/order-opc-payment.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/order-opc.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/order-opc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/order-opc.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/order-opc.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/order-payment.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/order-payment.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/order-return.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/order-slip.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/order-slip.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/order-steps.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/order-steps_.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/page-title.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/pages-list.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/pagination.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/pagination.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/paneltool.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/info/paneltool.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/password.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/password.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/bankwire/payment_execution.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/bankwire/views/templates/front/payment_execution.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/cheque/payment_execution.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/cheque/views/templates/front/payment_execution.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/lang/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/bankwire/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockadvertising/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockbestsellers/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcart/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcategories/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcontact/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcurrencies/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcustomerprivacy/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocklanguages/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleocustom1/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleocustom3/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleoprodcarousel/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleorelatedproducts/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleotopmenu/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockmanufacturer/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockmyaccount/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocknewproducts/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocknewsletter/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockpaymentlogo/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockpermanentlinks/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocksearch/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocksharefb/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockspecials/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockstore/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocksupplier/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocktags/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockuserinfo/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockviewed/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/carriercompare/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/cheque/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/favoriteproducts/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/feeder/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/gamification/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphartichow/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphgooglechart/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphvisifire/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphxmlswfcharts/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/gridhtml/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leobtslider/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leobtslidermini/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leotempcp/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leotwitter/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/lofadvancecustom/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/lofmanufacturerscroll2/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/pagesnotfound/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/productcomments/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/sekeywords/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/sendtoafriend/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestcategories/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestcustomers/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestproducts/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestsuppliers/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestvouchers/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statscarrier/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statscatalog/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statscheckup/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsdata/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsequipment/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsforecast/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statslive/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsnewsletter/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsorigin/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statspersonalinfos/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsproduct/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsregistrations/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statssales/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statssearch/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsstock/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsvisits/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/themeinstallator/translations/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/prices-drop.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/prices-drop.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/product-attributes.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/product-compare.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/product-desc-features.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/product-images.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/product-js.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/product-list.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/product-prices.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/product-quantity-discount.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/product-sort.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/product.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/product.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/js/product.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/product.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/product.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/product_list.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/productcomments/productcomments.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/products-comparison.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/products-comparison.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleoprodcarousel/products.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleorelatedproducts/products.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/responsive.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/restricted-country.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/restricted-country.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/rtl.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/lang/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/bankwire/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockadvertising/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockbestsellers/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcart/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcategories/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcontact/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcurrencies/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockcustomerprivacy/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocklanguages/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleocustom1/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleocustom3/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleoprodcarousel/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleorelatedproducts/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockleotopmenu/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockmanufacturer/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockmyaccount/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocknewproducts/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocknewsletter/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockpaymentlogo/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockpermanentlinks/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocksearch/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocksharefb/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockspecials/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockstore/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocksupplier/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blocktags/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockuserinfo/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockviewed/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/carriercompare/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/cheque/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/favoriteproducts/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/feeder/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/gamification/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphartichow/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphgooglechart/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphvisifire/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/graphxmlswfcharts/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/gridhtml/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leobtslider/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leobtslidermini/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leotempcp/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/leotwitter/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/lofadvancecustom/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/lofmanufacturerscroll2/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/pagesnotfound/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/productcomments/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/sekeywords/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/sendtoafriend/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestcategories/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestcustomers/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestproducts/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestsuppliers/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsbestvouchers/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statscarrier/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statscatalog/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statscheckup/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsdata/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsequipment/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsforecast/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statslive/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsnewsletter/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsorigin/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statspersonalinfos/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsproduct/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsregistrations/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statssales/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statssearch/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsstock/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/statsvisits/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/themeinstallator/translations/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/scenes.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/scenes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/scenes.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/search.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/search.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/shopping-cart-gift-line.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/shopping-cart-product-line.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/shopping-cart-product-line.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/shopping-cart.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/shopping-cart.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/sitemap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/sitemap.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/sitemap.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/blue/css/skin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/gold/css/skin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/pink/css/skin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/purple/css/skin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/skins/red/css/skin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/tools/statesManagement.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/store_infos.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/stores.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/stores.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/js/stores.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/stores.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/stores.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/leotwitter/themes/default/assets/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/lofadvancecustom/tmpl/default/assets/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/lofmanufacturerscroll2/assets/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/leobtslider/themes/default/assets/styles.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/leobtslidermini/themes/default/assets/styles.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/css/modules/blocktopmenu/css/superfish-modified.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/supplier-list.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/supplier-list.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/supplier.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/mobile/supplier.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/tools.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/js/tools/treeManagement.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/artxchange/modules/blockwishlist/view.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/profiling/Tools.php" afterPath="$PROJECT_DIR$/tools/profiling/Tools.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/class_index.php" afterPath="$PROJECT_DIR$/cache/class_index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="artxchange.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,19 +1176,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mymodule.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/modules/mymodule/mymodule.php">
+      <file leaf-file-name="AuthController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/override/controllers/front/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="31" selection-start="1765" selection-end="1772" vertical-scroll-proportion="0.33283132" vertical-offset="805" max-vertical-offset="2790">
-              <folding />
+            <state line="170" column="54" selection-start="5381" selection-end="5381" vertical-scroll-proportion="-13.280702" vertical-offset="2303" max-vertical-offset="12780">
+              <folding>
+                <element signature="e#6#974#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="display.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/mymodule/views/templates/front/display.tpl">
+      <file leaf-file-name="authentication.tpl" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/artxchange/authentication.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="108">
+            <state line="69" column="9" selection-start="2412" selection-end="2412" vertical-scroll-proportion="1.4992658" vertical-offset="221" max-vertical-offset="12420">
               <folding />
             </state>
           </provider>
@@ -48,11 +1203,30 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/modules/statsregistrations/statsregistrations.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/controllers/front/AuthController.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/override/controllers/front/AuthController.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/tools/profiling/Tools.php" />
+        <option value="$PROJECT_DIR$/themes/leoconv/authentication.tpl" />
+        <option value="$PROJECT_DIR$/override/controllers/front/AuthController.php" />
+        <option value="$PROJECT_DIR$/controllers/front/AuthController.php" />
+      </list>
+    </option>
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
+    <option name="x" value="-1" />
     <option name="y" value="24" />
-    <option name="width" value="1600" />
-    <option name="height" value="852" />
+    <option name="width" value="1602" />
+    <option name="height" value="853" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -80,7 +1254,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -109,7 +1282,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
+              <option name="myItemId" value="themes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -123,11 +1296,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
+              <option name="myItemId" value="themes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mymodule" />
+              <option name="myItemId" value="artxchange" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -141,23 +1314,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mymodule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hook" />
+              <option name="myItemId" value="override" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -171,19 +1328,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
+              <option name="myItemId" value="override" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mymodule" />
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="override" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -201,25 +1368,82 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="blockmyaccount" />
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="SearchEverywhereHistory" value="&#10;LICENSE.txt&#10;Controller.php&#10;FrontController&#10;authentication.tpl&#10;account-creation" />
+    <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/themes" />
+      <recent name="$PROJECT_DIR$/themes/leoconv" />
+      <recent name="$PROJECT_DIR$/override/controllers/front" />
+    </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="26fadfb4-8239-44a2-8a4f-0e304f6f31b2" name="Default" comment="" />
@@ -229,20 +1453,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1600" height="852" extended-state="6" />
+    <frame x="-1" y="24" width="1602" height="853" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288948" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -269,16 +1493,152 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/modules/mymodule/views/templates/front/display.tpl">
+    <entry file="file://$PROJECT_DIR$/controllers/front/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="721">
+        <state line="169" column="48" selection-start="5315" selection-end="5315" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="12780">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/override/controllers/front/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="157" column="54" selection-start="5009" selection-end="5009" vertical-scroll-proportion="0.0" vertical-offset="2285" max-vertical-offset="12780">
+          <folding>
+            <element signature="e#6#974#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leoconv/authentication.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="12420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mymodule/controllers/front/display.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="5" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="378" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/front/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="16" selection-start="3076" selection-end="3076" vertical-scroll-proportion="0.0" vertical-offset="1872" max-vertical-offset="12366">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mymodule/controllers/front/display.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="5" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="378" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/default/css/authentication.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="19" selection-start="207" selection-end="207" vertical-scroll-proportion="0.083217755" vertical-offset="84" max-vertical-offset="1548" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mymodule/views/templates/front/display.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="669" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/modules/mymodule/mymodule.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="31" selection-start="1765" selection-end="1772" vertical-scroll-proportion="0.33283132" vertical-offset="805" max-vertical-offset="2790">
+        <state line="57" column="31" selection-start="1765" selection-end="1772" vertical-scroll-proportion="0.33283132" vertical-offset="805" max-vertical-offset="2790" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/blockmyaccount/blockmyaccount.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="0" selection-start="2501" selection-end="2501" vertical-scroll-proportion="0.9471366" vertical-offset="111" max-vertical-offset="864" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/blockmyaccount/blockmyaccount.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="5" selection-start="2252" selection-end="2252" vertical-scroll-proportion="0.17050691" vertical-offset="843" max-vertical-offset="1494" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="19" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.34361234" vertical-offset="0" max-vertical-offset="681" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/statsregistrations/statsregistrations.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="65" selection-start="971" selection-end="971" vertical-scroll-proportion="-3.6451614" vertical-offset="2787" max-vertical-offset="3438" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/db/Db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="41" selection-start="1294" selection-end="1294" vertical-scroll-proportion="0.4229075" vertical-offset="0" max-vertical-offset="12492" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/profiling/Tools.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="69" selection-start="1497" selection-end="1497" vertical-scroll-proportion="0.4149856" vertical-offset="0" max-vertical-offset="1332" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/controller/FrontController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="44" selection-start="1010" selection-end="1020" vertical-scroll-proportion="-0.94736844" vertical-offset="0" max-vertical-offset="20232" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/controller/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="28" selection-start="1728" selection-end="1728" vertical-scroll-proportion="0.40210843" vertical-offset="579" max-vertical-offset="6156" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/artxchange/authentication1.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="969" selection-end="969" vertical-scroll-proportion="0.6585366" vertical-offset="0" max-vertical-offset="10872">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leoconv/authentication.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="66" selection-start="480" selection-end="480" vertical-scroll-proportion="0.30414745" vertical-offset="0" max-vertical-offset="12420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/artxchange/js/tools/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="721" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/tcpdf/LICENSE.TXT">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="60" selection-start="1432" selection-end="1434" vertical-scroll-proportion="0.3323263" vertical-offset="374" max-vertical-offset="15552" />
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mymodule/controllers/front/display.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="35" selection-start="261" selection-end="268" vertical-scroll-proportion="0.2074928" vertical-offset="0" max-vertical-offset="694" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/front/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="157" column="8" selection-start="4963" selection-end="4963" vertical-scroll-proportion="0.5545315" vertical-offset="2051" max-vertical-offset="12366">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/override/controllers/front/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="170" column="54" selection-start="5381" selection-end="5381" vertical-scroll-proportion="-13.280702" vertical-offset="2303" max-vertical-offset="12780">
+          <folding>
+            <element signature="e#6#974#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/artxchange/authentication.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="9" selection-start="2412" selection-end="2412" vertical-scroll-proportion="1.4992658" vertical-offset="221" max-vertical-offset="12420">
           <folding />
         </state>
       </provider>
