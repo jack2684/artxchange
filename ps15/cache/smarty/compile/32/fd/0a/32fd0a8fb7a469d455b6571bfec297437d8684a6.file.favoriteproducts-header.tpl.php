@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 04:02:57
+<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 16:32:01
          compiled from "/var/www/artxchange/ps15/modules/favoriteproducts/views/templates/hook/favoriteproducts-header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:207849356052ff2d416c18d0-06903190%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:157813894352ffdcd1a77b39-10333796%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '207849356052ff2d416c18d0-06903190',
+  'nocache_hash' => '157813894352ffdcd1a77b39-10333796',
   'function' => 
   array (
   ),
@@ -21,9 +21,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_52ff2d416e9063_84894536',
+  'unifunc' => 'content_52ffdcd1a9f324_38775628',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52ff2d416e9063_84894536')) {function content_52ff2d416e9063_84894536($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_52ffdcd1a9f324_38775628')) {function content_52ffdcd1a9f324_38775628($_smarty_tpl) {?>
 <script type="text/javascript">
 	var favorite_products_url_add = '<?php echo $_smarty_tpl->tpl_vars['link']->value->getModuleLink('favoriteproducts','actions',array('process'=>'add'),false);?>
 ';

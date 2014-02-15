@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 04:02:59
+<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 16:32:02
          compiled from "/var/www/artxchange/ps15/modules/leotwitter/themes/default/default.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:220307352ff2d4339ade1-69197450%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:146422306552ffdcd2b37222-46817405%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '220307352ff2d4339ade1-69197450',
+  'nocache_hash' => '146422306552ffdcd2b37222-46817405',
   'function' => 
   array (
   ),
@@ -24,9 +24,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_52ff2d43474c45_32612859',
+  'unifunc' => 'content_52ffdcd2c0c455_39698431',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52ff2d43474c45_32612859')) {function content_52ff2d43474c45_32612859($_smarty_tpl) {?><div id="itw-container">
+<?php if ($_valid && !is_callable('content_52ffdcd2c0c455_39698431')) {function content_52ffdcd2c0c455_39698431($_smarty_tpl) {?><div id="itw-container">
     <div id="itw">
         <?php if ($_smarty_tpl->tpl_vars['leotwitter']->value['show_header']){?>
         <div id="itw-header">

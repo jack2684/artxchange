@@ -210,7 +210,7 @@
   'AttributeGroup' => '',
   'AttributeGroupCore' => 'classes/AttributeGroup.php',
   'AuthController' => '',
-  'AuthControllerCore' => 'controllers/front/AuthController.php',
+  'AuthControllerCore' => 'override/controllers/front/AuthController.php',
   'Autoload' => 'classes/Autoload.php',
   'Backup' => '',
   'BackupCore' => 'classes/Backup.php',

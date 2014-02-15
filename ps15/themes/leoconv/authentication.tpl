@@ -483,6 +483,17 @@ $(document).ready(function() {
 				</select>
 			</div>
 		</div>
+        <div class="select control-group">
+            <label class="control-label">{l s='Role'}</label>
+            <div class="controls">
+                <select id="artx_roles" name="artx_roles"  >
+                    <option value="0">{l s=$sl_artx_roles}&nbsp;</option>
+                    {foreach from=$artx_roles key=k item=role}
+                        <option value="{$k}" {if ($artx_sl_roles == $role)} selected="selected"{/if}>{l s=$role}&nbsp;</option>
+                    {/foreach}
+                </select>
+            </div>
+        </div>
 		{if $newsletter}
 		<div class="checkbox control-group" >
 			<div class="control-label">

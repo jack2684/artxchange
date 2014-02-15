@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 04:02:57
+<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 16:32:01
          compiled from "/var/www/artxchange/ps15/modules/blockcurrencies/blockcurrencies.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:142133982052ff2d41747d02-58199536%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:131080354152ffdcd1b06697-86128906%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '142133982052ff2d41747d02-58199536',
+  'nocache_hash' => '131080354152ffdcd1b06697-86128906',
   'function' => 
   array (
   ),
@@ -25,9 +25,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_52ff2d417771d8_51563824',
+  'unifunc' => 'content_52ffdcd1b37890_31592711',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52ff2d417771d8_51563824')) {function content_52ff2d417771d8_51563824($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_52ffdcd1b37890_31592711')) {function content_52ffdcd1b37890_31592711($_smarty_tpl) {?>
 
 <!-- Block currencies module -->
 <script type="text/javascript">

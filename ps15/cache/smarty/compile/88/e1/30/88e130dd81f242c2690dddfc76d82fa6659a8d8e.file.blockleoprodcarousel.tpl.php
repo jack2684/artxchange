@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 04:02:58
+<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 16:32:02
          compiled from "/var/www/artxchange/ps15/themes/leoconv/modules/blockleoprodcarousel/blockleoprodcarousel.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:95680956452ff2d4291ae01-73606686%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:167129060452ffdcd274e584-78173260%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '95680956452ff2d4291ae01-73606686',
+  'nocache_hash' => '167129060452ffdcd274e584-78173260',
   'function' => 
   array (
   ),
@@ -22,9 +22,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_52ff2d42932b95_48240530',
+  'unifunc' => 'content_52ffdcd2767888_02070532',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52ff2d42932b95_48240530')) {function content_52ff2d42932b95_48240530($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_52ffdcd2767888_02070532')) {function content_52ffdcd2767888_02070532($_smarty_tpl) {?>
 
 <!-- MODULE Block specials -->
 <div id="categoriesprodtabs" class="block products_block exclusive blockleoprodcarousel">

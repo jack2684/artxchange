@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 04:02:59
+<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 16:32:02
          compiled from "/var/www/artxchange/ps15/modules/blockleotopmenu/blockleotopmenu.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:163963618952ff2d437435f3-49602488%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:91885556952ffdcd2ec4037-01810900%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '163963618952ff2d437435f3-49602488',
+  'nocache_hash' => '91885556952ffdcd2ec4037-01810900',
   'function' => 
   array (
   ),
@@ -21,9 +21,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_52ff2d4374d3c9_45751992',
+  'unifunc' => 'content_52ffdcd2ece927_98774274',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52ff2d4374d3c9_45751992')) {function content_52ff2d4374d3c9_45751992($_smarty_tpl) {?><?php if ($_smarty_tpl->tpl_vars['MENU']->value!=''){?>
+<?php if ($_valid && !is_callable('content_52ffdcd2ece927_98774274')) {function content_52ffdcd2ece927_98774274($_smarty_tpl) {?><?php if ($_smarty_tpl->tpl_vars['MENU']->value!=''){?>
 	<!-- Menu -->
 	<div class="navbar"><div class="navbar-inner">
 		<button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">

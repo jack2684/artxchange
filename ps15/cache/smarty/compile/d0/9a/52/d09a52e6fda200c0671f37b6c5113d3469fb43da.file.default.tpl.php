@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 04:02:59
+<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 16:32:02
          compiled from "/var/www/artxchange/ps15/themes/leoconv/modules/lofadvancecustom/tmpl/default/default.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:30129141752ff2d434e2577-71178343%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:92499964552ffdcd2c6fed5-89516591%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '30129141752ff2d434e2577-71178343',
+  'nocache_hash' => '92499964552ffdcd2c6fed5-89516591',
   'function' => 
   array (
   ),
@@ -27,9 +27,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_52ff2d4359c745_12385143',
+  'unifunc' => 'content_52ffdcd2d1c374_10149748',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52ff2d4359c745_12385143')) {function content_52ff2d4359c745_12385143($_smarty_tpl) {?><div style="clear:both"></div>
+<?php if ($_valid && !is_callable('content_52ffdcd2d1c374_10149748')) {function content_52ffdcd2d1c374_10149748($_smarty_tpl) {?><div style="clear:both"></div>
 <div id="lofadvafooter<?php echo $_smarty_tpl->tpl_vars['pos']->value;?>
 " class="lofadvafooter">
 	<?php  $_smarty_tpl->tpl_vars['blocks'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['blocks']->_loop = false;
