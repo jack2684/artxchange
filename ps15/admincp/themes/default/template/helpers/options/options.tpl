@@ -34,7 +34,7 @@
 
 {block name="defaultOptions"}
 <form action="{$current}&token={$token}"
-	id="{if $table == null}configuration_form{else}{$table}_form{/if}"
+	id="{$table}_form"
 	{if isset($categoryData['name'])} name={$categoryData['name']}{/if}
 	{if isset($categoryData['id'])} id={$categoryData['id']} {/if}
 	method="post"

@@ -11,8 +11,6 @@ $_MODULE['<{blockspecials}prestashop>blockspecials_41385d2dca40c2a2c7062ed7019a2
 $_MODULE['<{blockspecials}prestashop>blockspecials_00d23a76e43b46dae9ec7aa9dcbebb32'] = 'Aktiviert';
 $_MODULE['<{blockspecials}prestashop>blockspecials_b9f5c797ebbf55adccdd8539a65a0241'] = 'Deaktiviert';
 $_MODULE['<{blockspecials}prestashop>blockspecials_a8a670d89a6d2f3fa59942fc591011ef'] = 'Block anzeigen, auch wenn kein Produkt verfügbar ist.';
-$_MODULE['<{blockspecials}prestashop>blockspecials_805b7a76c72691ce8af0a5f458280237'] = 'Anzahl der Cache-Dateien';
-$_MODULE['<{blockspecials}prestashop>blockspecials_3744927eb20f857847c982a14df23b69'] = 'Sonderangebote werden nach Zufallsauswahl im Front Office angezeigt. Um dafür nicht zuviel Ressourcen zu binden, soltten die Ergebnisse gecacht werden. Der Cache-Speicher wird täglich aktualisiert. Eingabe von 0 deaktiviert das Caching.';
 $_MODULE['<{blockspecials}prestashop>blockspecials_c9cc8cce247e49bae79f15173ce97354'] = 'Speichern';
 $_MODULE['<{blockspecials}prestashop>blockspecials_d1aa22a3126f04664e0fe3f598994014'] = 'Sonderangebote';
 $_MODULE['<{blockspecials}prestashop>blockspecials_b4f95c1ea534936cc60c6368c225f480'] = 'Alle Specials';

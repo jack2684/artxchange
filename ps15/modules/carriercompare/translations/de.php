@@ -31,7 +31,7 @@ $_MODULE['<{carriercompare}prestashop>configuration_a2d3779b2b18f09740a46050388e
 $_MODULE['<{carriercompare}prestashop>configuration_20015706a8cbd457cbb6ea3e7d5dc9b3'] = 'Konfiguration aktualisiert';
 $_MODULE['<{carriercompare}prestashop>configuration_99e09df7d3344d2d04153f297163affa'] = 'Das Modul ist nur bei 5 Schritte Bestellung einsetzbar. Bei OPC ist der Lieferant bereits verfügbar.';
 $_MODULE['<{carriercompare}prestashop>configuration_6408d076fa6417e7bc8ddc3cdf9a0644'] = 'Globale Einstellungen';
-$_MODULE['<{carriercompare}prestashop>configuration_4c1f76824b0d7333652d5f64a3e07ef5'] = 'Immer';
+$_MODULE['<{carriercompare}prestashop>configuration_4c1f76824b0d7333652d5f64a3e07ef5'] = 'Jederzeit';
 $_MODULE['<{carriercompare}prestashop>configuration_31efb362f3723b55bfa28f3551a672f7'] = 'Alle erforderlichen Informationen eingegeben.';
 $_MODULE['<{carriercompare}prestashop>configuration_9c7cc22fb61d22cf2560f172ea85ab7b'] = 'Legen Sie fest, wie die Informationen für einen Kunden aktualisiert werden sollen?';
 $_MODULE['<{carriercompare}prestashop>configuration_a4d3b161ce1309df1c4e25df28694b7b'] = 'Abschicken';

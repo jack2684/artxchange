@@ -116,8 +116,7 @@ class AdminPPreferencesControllerCore extends AdminController
 							array('id' => '3', 'name' => $this->l('Product modified date')),
 							array('id' => '4', 'name' => $this->l('Position inside category')),
 							array('id' => '5', 'name' => $this->l('Manufacturer')),
-							array('id' => '6', 'name' => $this->l('Product quantity')),
-							array('id' => '7', 'name' => $this->l('Product reference')) 
+							array('id' => '6', 'name' => $this->l('Product quantity'))
 						),
 						'identifier' => 'id'
 					),
@@ -180,15 +179,7 @@ class AdminPPreferencesControllerCore extends AdminController
 						'validation' => 'isBool',
 						'cast' => 'intval',
 						'type' => 'bool'
-					),
-					'PS_DISPLAY_DISCOUNT_PRICE' => array(
-						'title' => $this->l('Display discounted price'),
-						'desc' => $this->l('Instead of showing the discount (-5%) it will instead show the new price with the discount applied'),
-						'validation' => 'isBool',
-						'cast' => 'intval',
-						'required' => false,
-						'type' => 'bool'
-					),
+					)
 				)
 			),
 			'stock' => array(
@@ -240,7 +231,7 @@ class AdminPPreferencesControllerCore extends AdminController
 
 		// if advanced stock management is disabled, updates concerned tables
 		if (Configuration::get('PS_ADVANCED_STOCK_MANAGEMENT') == 1 &&
-			(int)Tools::getValue('PS_ADVANCED_STOCK_MANAGEMENT') == 0 && Context::getContext()->shop->getContext() == Shop::CONTEXT_ALL)
+			(int)Tools::getValue('PS_ADVANCED_STOCK_MANAGEMENT') == 0)
 		{
 			ObjectModel::updateMultishopTable('Product', array('advanced_stock_management' => 0), 'product_shop.`advanced_stock_management` = 1');
 

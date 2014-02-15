@@ -1,12 +1,12 @@
-Hallo {firstname} {lastname},
+Hi {firstname} {lastname},
 
-Sie haben einen Gutschein von uns erhalten.
+This is to inform you about the creation of a voucher.
 
-Hier Ihr persönlicher Gutscheincode: {voucher_num}.
+Here is the code of your voucher : {voucher_num}.
 
-Kopieren Sie diesen Code bei Ihrer nächsten Bestellung während des Bezahlvorgangs einfach in das Gutscheinfeld.
+Simply copy/paste this code during the payment process for your next order.
 
-Vielen Dank für Ihren Einkauf bei {shop_name}.
+Thank you for shopping at {shop_name}.
 
 {shop_name} - {shop_url}
 

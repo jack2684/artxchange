@@ -19,8 +19,7 @@
 * needs please refer to http://www.prestashop.com for more information.
 *
 *  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2013 PrestaShop SA
-
+*  @copyright  2007-2013 PrestaShop SA
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 */
@@ -37,7 +36,7 @@ class blocksharefb extends Module
 			$this->tab = 'front_office_features';
 		else
 			$this->tab = 'Blocks';
-		$this->version = '1.1';
+		$this->version = '1.0';
 
 		parent::__construct();
 
@@ -64,7 +63,7 @@ class blocksharefb extends Module
 
 		if (isset($id_product) && $id_product != '')
 		{		
-			$product_infos = $this->context->controller->getProduct();
+			$product_infos = new Product((int)$id_product, true, $cookie->id_lang);
 			$smarty->assign(array(
 				'product_link' => urlencode($link->getProductLink($product_infos)),
 				'product_title' => urlencode($product_infos->name),

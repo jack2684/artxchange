@@ -38,4 +38,3 @@ $_MODULE['<{statsproduct}prestashop>statsproduct_e22269bb51f9f2394e148716babbafb
 $_MODULE['<{statsproduct}prestashop>statsproduct_5e9613e58f3bdbc89b1fef07274c0877'] = 'Visitas (x100)';
 $_MODULE['<{statsproduct}prestashop>statsproduct_287234a1ff35a314b5b6bc4e5828e745'] = 'Atributos';
 $_MODULE['<{statsproduct}prestashop>statsproduct_27ce7f8b5623b2e2df568d64cf051607'] = 'Existencias';
-$_MODULE['<{statsproduct}prestashop>statsproduct_20b9641efab51dee7d27eed2b6773ef0'] = 'Si por el contrario, un producto es muy consultado pero se vende mal le aconsejamos que compruebe de nuevo o modifique las informaciones, descripción o fotografía(s) presentes en su ficha producto.';

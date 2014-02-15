@@ -1,6 +1,6 @@
 Hallo,
 
-Sie haben unseren Newsletter abonniert. Als Dankeschön erhalten Sie den folgenden Gutschein: {discount}
+Sie haben unseren Newsletter abonniert. Wir freuen uns, Ihnen den folgenden Gutschein zu schenken: {discount}
 
 {shop_name} - {shop_url}
 

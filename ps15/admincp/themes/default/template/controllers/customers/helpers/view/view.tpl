@@ -35,7 +35,7 @@
 			$.ajax({
 				type: "POST",
 				url: "index.php",
-				data: "token={getAdminToken tab='AdminCustomers'}&tab=AdminCustomers&ajax=1&action=updateCustomerNote&id_customer={$customer->id}&note="+encodeURIComponent(noteContent),
+				data: "token={getAdminToken tab='AdminCustomers'}&tab=AdminCustomers&ajax=1&action=updateCustomerNote&id_customer={$customer->id}&note="+noteContent,
 				async : true,
 				success: function(r) {
 					$('#note_feedback').html('').hide();
@@ -149,7 +149,7 @@
 	</div>
 	
 	<div style="width:50%;float:left;">
-		<div style="margin-left:15px;">
+		<div style="margin-left:15px;"
 			<h2>{l s='Vouchers'} ({count($discounts)})</h2>
 			{if count($discounts)}
 				<table cellspacing="0" cellpadding="0" class="table">

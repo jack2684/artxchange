@@ -1,9 +1,9 @@
-Salve {firstname} {lastname},
+Hi {firstname} {lastname},
 
-Un nuovo ordine è stato generato per te.
+A new command has been generated to you.
 
-Vai a {order_link} per finalizzare il pagamento.
+Go on {order_link} to finalize the payment.
 
 {shop_name} - {shop_url}
 
-{shop_url} powered by PrestaShop™
+{shop_url} réalisé par PrestaShop™

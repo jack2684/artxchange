@@ -29,9 +29,6 @@
 	{if $input.type == 'color'}
 		<div id="colorAttributeProperties" style="display:{if $colorAttributeProperties}block{else}none{/if};">
 	{/if}
-	{if $input.type == 'closediv'}
-		</div>
-	{/if}
 	{$smarty.block.parent}
 {/block}
 

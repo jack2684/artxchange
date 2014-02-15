@@ -5,7 +5,7 @@ $_LANGPDF = array();
 
 $_LANGPDF['PDF065ab3a28ca4f16f55f103adc7d0226f'] = 'Livraison';
 $_LANGPDF['PDF6c2fbe34c186a6b5725d212ad8cd2432'] = 'Facture';
-$_LANGPDF['PDF88fd044d00c4ad47557c8bd9bf74e585'] = 'Retour de commande %s';
+$_LANGPDF['PDF9a40e5f45fab9e73d0bc7dad94f6caa3'] = 'Retour de commande';
 $_LANGPDF['PDFc7d76074f459eaa296d3eb71efc23eba'] = 'Retour #';
 $_LANGPDF['PDFf771e4a4df40bf061607fdb8e3f140dc'] = 'Bon de commande fournisseur';
 $_LANGPDF['PDF3a80d6ec5285dd5d3930db30d04e2b9e'] = 'RE : Remises exclues';
@@ -17,7 +17,6 @@ $_LANGPDF['PDFd8b2145d049378e78bd41e65b31213f0'] = 'Numéro de commande :';
 $_LANGPDF['PDF8a5a12ba783d8cbb761974430d0a4d6a'] = 'Date de commande :';
 $_LANGPDF['PDFd36a6948b01d3a75ed99858e2bfea939'] = 'Mode de paiement :';
 $_LANGPDF['PDFe40007b408ac5f66d2c2e6c54f787c99'] = 'Pas de paiement';
-$_LANGPDF['PDFf8617a92ba0a0a4eabee724eab7c9f48'] = 'Transporteur :';
 $_LANGPDF['PDFf6244b08d5e0715572f9d4631b425eae'] = 'PRODUITS A LIVRER';
 $_LANGPDF['PDFdcd320d017d7f3c317bc8b234287bc9f'] = 'REFERENCE';
 $_LANGPDF['PDFe36ba4b339b83cbb3c807bd0eb5610bc'] = 'QTE';

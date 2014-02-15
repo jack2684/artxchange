@@ -60,9 +60,9 @@
 			$("#states-label").hide();
 		} else {
 			$.ajax({
-				url: "index.php",
+				url: "ajax.php",
 				cache: false,
-				data: "ajax=1&tab=AdminStates&token={getAdminToken tab='AdminStates'}&action=states&id_country="+id_country+"&id_state="+id_state+"&empty_value={l s='All'}",
+				data: "ajaxStates=1&id_country="+id_country+"&id_state="+id_state+"&empty_value={l s='All'}",
 				success: function(html){
 					if (html == "false")
 					{
@@ -88,10 +88,10 @@
 	{
 		$.ajax({
 			type: 'POST',
-			url: 'index.php',
+			url: 'ajax.php',
 			async: true,
 			dataType: 'json',
-			data: 'ajax=1&tab=AdminTaxRulesGroup&token={getAdminToken tab='AdminTaxRulesGroup'}&ajaxStates=1&action=updateTaxRule&id_tax_rule='+id_tax_rule,
+			data: 'ajaxStates=1&ajaxUpdateTaxRule=1&id_tax_rule='+id_tax_rule,
 			success: function(data){
 				$('#tax_rule_form').show();
 				$('#id_tax_rule').val(data.id);

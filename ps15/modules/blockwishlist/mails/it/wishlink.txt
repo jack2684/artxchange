@@ -4,4 +4,4 @@ Salve,
 
 {message}
 
-{shop_url} powered by PrestaShop™
+{shop_url} realised by PrestaShop™

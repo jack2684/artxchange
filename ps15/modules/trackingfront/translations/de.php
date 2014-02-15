@@ -40,7 +40,7 @@ $_MODULE['<{trackingfront}prestashop>trackingfront_c41c77e4dddc04b1e0752a6050ae5
 $_MODULE['<{trackingfront}prestashop>trackingfront_10965b2740f42ad4887932c35cee26ab'] = 'Einmalige Besucher';
 $_MODULE['<{trackingfront}prestashop>trackingfront_ae5d01b6efa819cc7a7c05a8c57fcc2c'] = 'Besucher';
 $_MODULE['<{trackingfront}prestashop>trackingfront_d7e637a6e9ff116de2fa89551240a94d'] = 'Besuche';
-$_MODULE['<{trackingfront}prestashop>trackingfront_d3139f39f1ad6324c80a9ddd50cc7867'] = 'Seitenaufrufe';
+$_MODULE['<{trackingfront}prestashop>trackingfront_d3139f39f1ad6324c80a9ddd50cc7867'] = 'Setenaufrufe';
 $_MODULE['<{trackingfront}prestashop>trackingfront_a28735af01fbb1e35371cb120985ac47'] = 'Anmeldungen';
 $_MODULE['<{trackingfront}prestashop>trackingfront_7442e29d7d53e549b78d93c46b8cdcfc'] = 'Bestellungen';
 $_MODULE['<{trackingfront}prestashop>trackingfront_2e27c4006a026eacfc1f85b41bf9bc4c'] = 'Grundgebühr';

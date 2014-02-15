@@ -42,7 +42,7 @@ if (!$context->customer->isLogged())
 
 $context->controller->addJqueryPlugin(array('dimensions', 'cluetip'));
 
-$customerPoints = (int)LoyaltyModule::getPointsByCustomer((int)$cookie->id_customer);
+$customerPoints = (int)(LoyaltyModule::getPointsByCustomer((int)($cookie->id_customer)));
 
 /* transform point into voucher if needed */
 if (Tools::getValue('transform-points') == 'true' AND $customerPoints > 0)
@@ -99,8 +99,7 @@ if (Tools::getValue('transform-points') == 'true' AND $customerPoints > 0)
 		$cartRule->add();
 
 	/* Register order(s) which contributed to create this voucher */
-	if (!LoyaltyModule::registerDiscount($cartRule))
-		$cartRule->delete();
+	LoyaltyModule::registerDiscount($cartRule);
 
 	Tools::redirect('modules/loyalty/loyalty-program.php');
 }

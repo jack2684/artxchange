@@ -63,6 +63,12 @@ $_MODULE['<{blocklayered}prestashop>blocklayered_64646db703ca003a37bd1e73977a3a4
 $_MODULE['<{blocklayered}prestashop>blocklayered_d758a9754eb9f36db05c22ad0c77e38e'] = 'Выберите одну или несколько категорий используя этот фильтр';
 $_MODULE['<{blocklayered}prestashop>blocklayered_5965d2ce192837f00d743d8a674382c1'] = 'Нажмите кнопку \"Сохранить этот выбор\" или закройте окно чтобы сохранить';
 $_MODULE['<{blocklayered}prestashop>blocklayered_fa03eb688ad8aa1db593d33dabd89bad'] = 'Корневая';
+$_MODULE['<{blocklayered}prestashop>blocklayered_8cf04a9734132302f96da8e113e80ce5'] = 'Главная';
+$_MODULE['<{blocklayered}prestashop>blocklayered_b56c3bda503a8dc4be356edb0cc31793'] = 'Свернуть все';
+$_MODULE['<{blocklayered}prestashop>blocklayered_5ffd7a335dd836b3373f5ec570a58bdc'] = 'Развернуть все';
+$_MODULE['<{blocklayered}prestashop>blocklayered_5e9df908eafa83cb51c0a3720e8348c7'] = 'Выделить Всё';
+$_MODULE['<{blocklayered}prestashop>blocklayered_9747d23c8cc358c5ef78c51e59cd6817'] = 'Снять выделение Всё';
+$_MODULE['<{blocklayered}prestashop>blocklayered_d0f06038b6b3aa5edc07c7a6fd3ca3f9'] = 'Поиск категории';
 $_MODULE['<{blocklayered}prestashop>blocklayered_72dd03f11489ff6f604a4eb57c957202'] = 'Сохранить выбор';
 $_MODULE['<{blocklayered}prestashop>blocklayered_2e527847e8c785f3fd99651f64006798'] = 'Шаг 2 / 3 - Выберите фильтры';
 $_MODULE['<{blocklayered}prestashop>blocklayered_3488a51eb7f723d65daeff912e69b177'] = 'Выбранные фильтры';

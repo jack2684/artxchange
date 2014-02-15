@@ -32,7 +32,7 @@
 		{
 			$.ajax({
 				type: 'GET',
-				url: '{$link->getAdminLink('AdminInformation')|addslashes}',
+				url: '{$link->getAdminLink('AdminInformation')}',
 				data: {
 					'action': 'checkFiles',
 					'ajax': 1

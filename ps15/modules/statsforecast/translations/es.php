@@ -28,11 +28,11 @@ $_MODULE['<{statsforecast}prestashop>statsforecast_87cac5a0b60008003ccf46dc1d49e
 $_MODULE['<{statsforecast}prestashop>statsforecast_5a9e532b24379dca2ab0e973172a78e1'] = 'Visitantes inscritos';
 $_MODULE['<{statsforecast}prestashop>statsforecast_b4aec469184819e8369588e5d84b38fb'] = 'Dirigir a los visitantes hacia el pago';
 $_MODULE['<{statsforecast}prestashop>statsforecast_38f2d5f34a773b7c0668f03e6b8eb6dc'] = 'Beneficio por visitante';
-$_MODULE['<{statsforecast}prestashop>statsforecast_8ca76c564cccfd5a2ff4d2e08f46db5a'] = 'Beneficio por visitante inscrito';
-$_MODULE['<{statsforecast}prestashop>statsforecast_3fa6443ce3f838b6901b70cd812abf0d'] = 'Repartición por modos de pago';
+$_MODULE['<{statsforecast}prestashop>statsforecast_8ca76c564cccfd5a2ff4d2e08f46db5a'] = 'Beneficio por visitante registrado';
+$_MODULE['<{statsforecast}prestashop>statsforecast_3fa6443ce3f838b6901b70cd812abf0d'] = 'Distribución del pago';
 $_MODULE['<{statsforecast}prestashop>statsforecast_dd6e1ab3a8a2c8cb93d0dde0f512f4c4'] = 'Las cantidades son <b>con</b> impuestos por lo que puede conseguir una estimación de la comisión gracias al método de pago.';
 $_MODULE['<{statsforecast}prestashop>statsforecast_e6e42855066e7a3ae050b2c698021b14'] = 'Zona:';
-$_MODULE['<{statsforecast}prestashop>statsforecast_5ed26836c96d7dcae8a40307e8e250c3'] = '-No hay filtros-';
+$_MODULE['<{statsforecast}prestashop>statsforecast_5ed26836c96d7dcae8a40307e8e250c3'] = '- Ningún filtro -';
 $_MODULE['<{statsforecast}prestashop>statsforecast_e55f75a29310d7b60f7ac1d390c8ae42'] = 'Módulo';
 $_MODULE['<{statsforecast}prestashop>statsforecast_e93f994f01c537c4e2f7d8528c3eb5e9'] = 'Cálculo';
 $_MODULE['<{statsforecast}prestashop>statsforecast_a85eba4c6c699122b2bb1387ea4813ad'] = 'Carrito';

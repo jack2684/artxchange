@@ -53,7 +53,6 @@ $_MODULE['<{referralprogram}prestashop>referralprogram_a82e0d057f443115e807bd6ca
 $_MODULE['<{referralprogram}prestashop>referralprogram_8b80d4b6307990874b832cc15a92e5a3'] = 'Отсутствуют параметры';
 $_MODULE['<{referralprogram}prestashop>program_d3d2e617335f08df83599665eef8a418'] = 'Закрыть';
 $_MODULE['<{referralprogram}prestashop>program_7a81aa9275331bb0f5e6adb5e8650a03'] = 'или клавиша Esc';
-$_MODULE['<{referralprogram}prestashop>program_36c94bd456cf8796723ad09eac258aef'] = 'Управление аккаунтом';
 $_MODULE['<{referralprogram}prestashop>program_d95cf4ab2cbf1dfb63f066b50558b07d'] = 'Мой профиль';
 $_MODULE['<{referralprogram}prestashop>program_6540b502e953f4c05abeb8f234cd50bf'] = 'Реферальная программа';
 $_MODULE['<{referralprogram}prestashop>program_6b31baf25848e7a6563ecc3946626c80'] = 'Реферальная программа';
@@ -68,15 +67,13 @@ $_MODULE['<{referralprogram}prestashop>program_79cd362fc64832faa0a2079f1142aa12'
 $_MODULE['<{referralprogram}prestashop>program_2b90ca4a7b1c83e0a3bb65899725cd65'] = 'Электронные письма с напоминанием были отправлены друзьям!';
 $_MODULE['<{referralprogram}prestashop>program_819e52b3c6ca4db131dcfea19188a0c3'] = 'Электронные письма с напоминанием были отправлены другу!';
 $_MODULE['<{referralprogram}prestashop>program_46ee2fe8845962d24bf5178a26e109f3'] = 'Отправить друзьям';
-$_MODULE['<{referralprogram}prestashop>program_7e9b0e998138fefac8749975c737ac27'] = 'Отправить друзьям';
 $_MODULE['<{referralprogram}prestashop>program_c56567bc42584de1a7ac430039b3a87e'] = 'Рефералы друзей';
-$_MODULE['<{referralprogram}prestashop>program_b9ebe5bbe91ed6e7e23285fb6c595ab4'] = 'Я приглашаю друзей';
 $_MODULE['<{referralprogram}prestashop>program_58c7f2542ab2e2c3e4e39e851ea0f225'] = 'Я реферал у';
-$_MODULE['<{referralprogram}prestashop>program_586615ffcf1ddd4cbd8f2f22f49fa4d5'] = 'Получите скидку %1$d %2$s для себя и ваших друзей, порекомендовав этот сайт.';
+$_MODULE['<{referralprogram}prestashop>program_07b0f879b9bf9ec028d99df3880922f9'] = 'Получите скидку %d для вас и ваших друзей порекомендовав этот сайт.';
 $_MODULE['<{referralprogram}prestashop>program_8d3ae82bfa996855cdf841dd9e15a7e3'] = 'Это легко и быстро. Просто укажите имя, фамилию, и e-mail адрес(а) друга(друзей) в поле ниже.';
 $_MODULE['<{referralprogram}prestashop>program_c92182a305ac874bae5e54d75bbd9327'] = 'Когда один из них сделает хотя-бы %d заказов';
 $_MODULE['<{referralprogram}prestashop>program_6e8dedb6b5dcad23e24d07c10aff29d8'] = 'Когда один из них сделает хотя-бы %d заказ';
-$_MODULE['<{referralprogram}prestashop>program_649f8a44daeeb7a09048eaede6e319b7'] = 'он или она получить купон на %1$d %2$s и вы получите свой купона на %3$d %4$s.';
+$_MODULE['<{referralprogram}prestashop>program_3aa40545dad78313e27017aa28c6cb7d'] = 'он или она получит %1$d купон, а вы получите %2$d купон.';
 $_MODULE['<{referralprogram}prestashop>program_8d3f5eff9c40ee315d452392bed5309b'] = 'Фамилия';
 $_MODULE['<{referralprogram}prestashop>program_20db0bfeecd8fe60533206a2b5e9891a'] = 'Имя';
 $_MODULE['<{referralprogram}prestashop>program_1e884e3078d9978e216a027ecd57fb34'] = 'Эл.адрес';

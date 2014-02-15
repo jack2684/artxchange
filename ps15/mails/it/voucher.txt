@@ -1,13 +1,14 @@
 Salve {firstname} {lastname},
 
-Vorremmo informarti della creazione di un buono sconto a tuo nome in seguito al tuo ordine con riferimento {order_name}.
+Vorremmo informarti della creazione di un buono sconto a tuo nome in seguito al tuo ordine n.{id_order}.
 
-Codice del tuo buono: {voucher_num}, per l'importo di {voucher_amount}.
+Ecco il codice del tuo buono: {voucher_num}, per l'importo di {voucher_amount}.
 
-Sarà sufficiente che al momento di pagare per il prossimo ordine, tu inserisca questo codice.
+Basta che durante il processo di pagamento del prossimo ordine tu copi/incolli questo codice.
 
-Grazie per aver ordinato presso {shop_name}!
+Grazie di aver acquistato a {shop_name}.
 
 {shop_name} - {shop_url}
+
 
 {shop_url} powered by PrestaShop™

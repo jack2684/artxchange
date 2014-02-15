@@ -1,12 +1,15 @@
-Salve {firstname} {lastname},
+	Salve {firstname} {lastname},
+		
+	Il tuo account ospite è stato trasformato in account cliente:
+	
+	Indirizzo e-mail: {email}
+	Password: {passwd}
+	
+	
+	Puoi accedere al tuo account nel nostro sito web: {shop_url}
 
-Il tuo account ospite presso {shop_name} è stato trasformato in account cliente.
+	Fai attenzione a non condividere con altri i tuoi dati di login.
 
-Indirizzo email: {email}
-Password: {passwd}
 
-Puoi accedere al tuo account nel nostro sito: {shop_url}
 
-Fai attenzione nel condividere con altri i tuoi dati di accesso.
-
-{shop_url} powered by PrestaShop™
+	{shop_url} powered by PrestaShop™

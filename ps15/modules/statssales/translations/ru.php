@@ -10,11 +10,11 @@ $_MODULE['<{statssales}prestashop>statssales_d7778d0c64b6ba21494c97f77a66885a'] 
 $_MODULE['<{statssales}prestashop>statssales_35214bc44485bc7161f9d1bdbacad5b8'] = 'Эти графы представляют изменения вашего товарооборота заказов и продаж в установленный период. Этот инструмент учитывает продемонстрирует краткий обзор жизнеспособности вашего магазина. Вы можете также наблюдать различие между периодами времени (таких, как праздничный сезон). Только действительные заказы включены в эти два графика.';
 $_MODULE['<{statssales}prestashop>statssales_9ccb8353e945f1389a9585e7f21b5a0d'] = 'Заказы:';
 $_MODULE['<{statssales}prestashop>statssales_156e5c5872c9af24a5c982da07a883c2'] = 'Купленные продукты :';
-$_MODULE['<{statssales}prestashop>statssales_998e4c5c80f27dec552e99dfed34889a'] = 'Export CSV';
+$_MODULE['<{statssales}prestashop>statssales_998e4c5c80f27dec552e99dfed34889a'] = 'Экспорт в CSV';
 $_MODULE['<{statssales}prestashop>statssales_ec3e48bb9aa902ba2ad608547fdcbfdc'] = 'Продажи:';
 $_MODULE['<{statssales}prestashop>statssales_14b2ae2d824b5dfd798a8caf35732136'] = 'Вы можете видеть распределение заказов ниже';
 $_MODULE['<{statssales}prestashop>statssales_da80af4de99df74dd59e665adf1fac8f'] = 'Нет заказов на этот период.';
-$_MODULE['<{statssales}prestashop>statssales_6602bbeb2956c035fb4cb5e844a4861b'] = 'Guide';
+$_MODULE['<{statssales}prestashop>statssales_6602bbeb2956c035fb4cb5e844a4861b'] = 'Руководство пользователя';
 $_MODULE['<{statssales}prestashop>statssales_75288849ad081e6ef15e00c37b7570f2'] = 'Различные статусы заказов';
 $_MODULE['<{statssales}prestashop>statssales_ecfa88580e342ade21a8403765c0dde6'] = 'В вашем бэк-офисе вы можете найти следующие статусы заказов: Ожидает оплаты, оплачен, подготовлен, доставляется, доставлен, отменен, возвращен,  ошибка оплата, на складе, и ожидают оплаты (банковским переводом).';
 $_MODULE['<{statssales}prestashop>statssales_d60bf28bef003143f1b95edbbc08cd68'] = 'Статусы не могут быть удалены из бэк-офиса, но у вас есть возможность добавить еще.';

@@ -28,8 +28,6 @@ class OrderOpcControllerCore extends ParentOrderController
 {
 	public $php_self = 'order-opc';
 	public $isLogged;
-	
-	protected $ajax_refresh = false;	
 
 	/**
 	 * Initialize order opc controller
@@ -40,7 +38,7 @@ class OrderOpcControllerCore extends ParentOrderController
 		parent::init();
 
 		if ($this->nbProducts)
-			$this->context->smarty->assign('virtual_cart', $this->context->cart->isVirtualCart());
+			$this->context->smarty->assign('virtual_cart', false);
 		
 		$this->context->smarty->assign('is_multi_address_delivery', $this->context->cart->isMultiAddressDelivery() || ((int)Tools::getValue('multi-shipping') == 1));
 		$this->context->smarty->assign('open_multishipping_fancybox', (int)Tools::getValue('multi-shipping') == 1);
@@ -201,28 +199,8 @@ class OrderOpcControllerCore extends ParentOrderController
 									}
 
 									// Address has changed, so we check if the cart rules still apply
-									$cart_rules = $this->context->cart->getCartRules();
 									CartRule::autoRemoveFromCart($this->context);
 									CartRule::autoAddToCart($this->context);
-									if ((int)Tools::getValue('allow_refresh'))
-									{
-										// If the cart rules has changed, we need to refresh the whole cart
-										$cart_rules2 = $this->context->cart->getCartRules();
-										if (count($cart_rules2) != count($cart_rules))
-											$this->ajax_refresh = true;
-										else
-										{
-											$rule_list = array();
-											foreach ($cart_rules2 as $rule)
-												$rule_list[] = $rule['id_cart_rule'];
-											foreach ($cart_rules as $rule)
-												if (!in_array($rule['id_cart_rule'], $rule_list))
-												{
-													$this->ajax_refresh = true;
-													break;
-												}
-										}
-									}									
 		
 									if (!$this->context->cart->isMultiAddressDelivery())
 										$this->context->cart->setNoMultishipping(); // As the cart is no multishipping, set each delivery address lines with the main delivery address
@@ -237,8 +215,7 @@ class OrderOpcControllerCore extends ParentOrderController
 											'HOOK_TOP_PAYMENT' => Hook::exec('displayPaymentTop'),
 											'HOOK_PAYMENT' => $this->_getPaymentMethods(),
 											'gift_price' => Tools::displayPrice(Tools::convertPrice(Product::getTaxCalculationMethod() == 1 ? $wrapping_fees : $wrapping_fees_tax_inc, new Currency((int)($this->context->cookie->id_currency)))),
-											'carrier_data' => $this->_getCarrierList(),
-											'refresh' => (bool)$this->ajax_refresh),
+											'carrier_data' => $this->_getCarrierList()),
 											$this->getFormatedSummaryDetail()
 										);
 										die(Tools::jsonEncode($result));
@@ -399,9 +376,6 @@ class OrderOpcControllerCore extends ParentOrderController
 		$customer = $this->context->customer;
 		$address_delivery = new Address($this->context->cart->id_address_delivery);
 
-		$id_address_invoice = $this->context->cart->id_address_invoice != $this->context->cart->id_address_delivery ? (int)$this->context->cart->id_address_invoice : 0;
-		$address_invoice = new Address($id_address_invoice);
-
 		if ($customer->birthday)
 			$birthday = explode('-', $customer->birthday);
 		else
@@ -430,36 +404,7 @@ class OrderOpcControllerCore extends ParentOrderController
 			'id_gender' => (int)$customer->id_gender,
 			'sl_year' => $birthday[0],
 			'sl_month' => $birthday[1],
-			'sl_day' => $birthday[2],
-			'id_address_invoice' => $id_address_invoice,
-			'company_invoice' => Tools::htmlentitiesUTF8($address_invoice->company),
-			'lastname_invoice' => Tools::htmlentitiesUTF8($address_invoice->lastname),
-			'firstname_invoice' => Tools::htmlentitiesUTF8($address_invoice->firstname),
-			'vat_number_invoice' => Tools::htmlentitiesUTF8($address_invoice->vat_number),
-			'dni_invoice' => Tools::htmlentitiesUTF8($address_invoice->dni),
-			'address1_invoice' => Tools::htmlentitiesUTF8($address_invoice->address1),
-			'address2_invoice' => Tools::htmlentitiesUTF8($address_invoice->address2),
-			'postcode_invoice' => Tools::htmlentitiesUTF8($address_invoice->postcode),
-			'city_invoice' => Tools::htmlentitiesUTF8($address_invoice->city),
-			'phone_invoice' => Tools::htmlentitiesUTF8($address_invoice->phone),
-			'phone_mobile_invoice' => Tools::htmlentitiesUTF8($address_invoice->phone_mobile),
-			'id_country_invoice' => (int)($address_invoice->id_country),
-			'id_state_invoice' => (int)($address_invoice->id_state),
-			'id_address_invoice' => $id_address_invoice,
-			'invoice_company' => Tools::htmlentitiesUTF8($address_invoice->company),
-			'invoice_lastname' => Tools::htmlentitiesUTF8($address_invoice->lastname),
-			'invoice_firstname' => Tools::htmlentitiesUTF8($address_invoice->firstname),
-			'invoice_vat_number' => Tools::htmlentitiesUTF8($address_invoice->vat_number),
-			'invoice_dni' => Tools::htmlentitiesUTF8($address_invoice->dni),
-			'invoice_address' => $this->context->cart->id_address_invoice !== $this->context->cart->id_address_delivery,
-			'invoice_address1' => Tools::htmlentitiesUTF8($address_invoice->address1),
-			'invoice_address2' => Tools::htmlentitiesUTF8($address_invoice->address2),
-			'invoice_postcode' => Tools::htmlentitiesUTF8($address_invoice->postcode),
-			'invoice_city' => Tools::htmlentitiesUTF8($address_invoice->city),
-			'invoice_phone' => Tools::htmlentitiesUTF8($address_invoice->phone),
-			'invoice_phone_mobile' => Tools::htmlentitiesUTF8($address_invoice->phone_mobile),
-			'invoice_id_country' => (int)($address_invoice->id_country),
-			'invoice_id_state' => (int)($address_invoice->id_state),
+			'sl_day' => $birthday[2]
 		);
 	}
 
@@ -529,8 +474,8 @@ class OrderOpcControllerCore extends ParentOrderController
 		$minimalPurchase = Tools::convertPrice((float)Configuration::get('PS_PURCHASE_MINIMUM'), $currency);
 		if ($this->context->cart->getOrderTotal(false, Cart::ONLY_PRODUCTS) < $minimalPurchase)
 			return '<p class="warning">'.sprintf(
-				Tools::displayError('A minimum purchase total of %1s (tax excl.) is required in order to validate your order, current purchase total is %2s (tax excl.).'),
-				Tools::displayPrice($minimal_purchase, $currency), Tools::displayPrice($this->context->cart->getOrderTotal(false, Cart::ONLY_PRODUCTS), $currency)
+				Tools::displayError('A minimum purchase total of %s is required in order to validate your order.'),
+				Tools::displayPrice($minimalPurchase, $currency)
 			).'</p>';
 
 		/* Bypass payment step if total is 0 */
@@ -548,7 +493,7 @@ class OrderOpcControllerCore extends ParentOrderController
 		$address_delivery = new Address($this->context->cart->id_address_delivery);
 		
 		$cms = new CMS(Configuration::get('PS_CONDITIONS_CMS_ID'), $this->context->language->id);
-		$link_conditions = $this->context->link->getCMSLink($cms, $cms->link_rewrite);
+		$link_conditions = $this->context->link->getCMSLink($cms, $cms->link_rewrite, true);
 		if (!strpos($link_conditions, '?'))
 			$link_conditions .= '?content_only=1';
 		else
@@ -569,9 +514,7 @@ class OrderOpcControllerCore extends ParentOrderController
 				$free_shipping = true;
 				break;
 			}			
-		}
-		
-		$this->context->smarty->assign('isVirtualCart', $this->context->cart->isVirtualCart());
+		}		
 
 		$vars = array(
 			'free_shipping' => $free_shipping,
@@ -631,21 +574,13 @@ class OrderOpcControllerCore extends ParentOrderController
 
 	protected function _processAddressFormat()
 	{
+		$selectedCountry = (int)(Configuration::get('PS_COUNTRY_DEFAULT'));
+
 		$address_delivery = new Address((int)$this->context->cart->id_address_delivery);
 		$address_invoice = new Address((int)$this->context->cart->id_address_invoice);
 
 		$inv_adr_fields = AddressFormat::getOrderedAddressFields((int)$address_delivery->id_country, false, true);
 		$dlv_adr_fields = AddressFormat::getOrderedAddressFields((int)$address_invoice->id_country, false, true);
-		$requireFormFieldsList = AddressFormat::$requireFormFieldsList;
-
-		// Add missing require fields for a new user susbscription form
-		foreach ($requireFormFieldsList as $fieldName)
-			if (!in_array($fieldName, $dlv_adr_fields))
-				$dlv_adr_fields[] = trim($fieldName);
-
-		foreach ($requireFormFieldsList as $fieldName)
-			if (!in_array($fieldName, $inv_adr_fields))
-				$inv_adr_fields[] = trim($fieldName);
 
 		$inv_all_fields = array();
 		$dlv_all_fields = array();
@@ -655,9 +590,6 @@ class OrderOpcControllerCore extends ParentOrderController
 			foreach (${$adr_type.'_adr_fields'} as $fields_line)
 				foreach (explode(' ', $fields_line) as $field_item)
 					${$adr_type.'_all_fields'}[] = trim($field_item);
-
-			${$adr_type.'_adr_fields'} = array_unique(${$adr_type.'_adr_fields'});
-			${$adr_type.'_all_fields'} = array_unique(${$adr_type.'_all_fields'});
 
 			$this->context->smarty->assign($adr_type.'_adr_fields', ${$adr_type.'_adr_fields'});
 			$this->context->smarty->assign($adr_type.'_all_fields', ${$adr_type.'_all_fields'});

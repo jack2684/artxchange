@@ -85,12 +85,9 @@ class LoyaltyModule extends ObjectModel
 		$total = 0;
 		if (Validate::isLoadedObject($cart))
 		{
-			$currentContext = Context::getContext();
-			$context = clone $currentContext;
+			$context = Context::getContext();
 			$context->cart = $cart;
-			// if customer is logged we do not recreate it
-			if(!$context->customer->isLogged(true))
-				$context->customer = new Customer($context->cart->id_customer);
+			$context->customer = new Customer($context->cart->id_customer);
 			$context->language = new Language($context->cart->id_lang);
 			$context->shop = new Shop($context->cart->id_shop);
 			$context->currency = new Currency($context->cart->id_currency, null, $context->shop->id);
@@ -101,9 +98,9 @@ class LoyaltyModule extends ObjectModel
 			{
 				$cartProductsNew['id_product'] = (int)$newProduct->id;
 				if ($taxesEnabled == PS_TAX_EXC)
-					$cartProductsNew['price'] = number_format($newProduct->getPrice(false, (int)$newProduct->getIdProductAttributeMostExpensive()), 2, '.', '');
+					$cartProductsNew['price'] = number_format($newProduct->getPrice(false, (int)$newProduct->getDefaultIdProductAttribute()), 2, '.', '');
 				else
-					$cartProductsNew['price_wt'] = number_format($newProduct->getPrice(true, (int)$newProduct->getIdProductAttributeMostExpensive()), 2, '.', '');
+					$cartProductsNew['price_wt'] = number_format($newProduct->getPrice(true, (int)$newProduct->getDefaultIdProductAttribute()), 2, '.', '');
 				$cartProductsNew['cart_quantity'] = 1;
 				$cartProducts[] = $cartProductsNew;
 			}
@@ -118,11 +115,7 @@ class LoyaltyModule extends ObjectModel
 				$total += ($taxesEnabled == PS_TAX_EXC ? $product['price'] : $product['price_wt'])* (int)($product['cart_quantity']);
 			}
 			foreach ($cart->getCartRules(false) AS $cart_rule)
-				if ($taxesEnabled == PS_TAX_EXC)
-					$total -= $cart_rule['value_tax_exc'];
-				else
-					$total -= $cart_rule['value_real'];
-				
+				$total -= $cart_rule['value_real'];
 		}
 
 		return self::getNbPointsByPrice($total);
@@ -204,23 +197,20 @@ class LoyaltyModule extends ObjectModel
 		if (!Validate::isLoadedObject($cartRule))
 			die(Tools::displayError('Incorrect object CartRule.'));
 		$items = self::getAllByIdCustomer((int)$cartRule->id_customer, NULL, true);
-		$associated = false;
 		foreach ($items AS $item)
 		{
-			$lm = new LoyaltyModule((int)$item['id_loyalty']);
+			$f = new LoyaltyModule((int)$item['id_loyalty']);
 			
 			/* Check for negative points for this order */
 			$negativePoints = (int)Db::getInstance()->getValue('SELECT SUM(points) points FROM '._DB_PREFIX_.'loyalty WHERE id_order = '.(int)$f->id_order.' AND id_loyalty_state = '.(int)LoyaltyStateModule::getCancelId().' AND points < 0');
 			
-			if ($lm->points + $negativePoints <= 0)
+			if ($f->points + $negativePoints <= 0)
 				continue;
 			
-			$lm->id_cart_rule = (int)$cartRule->id;
-			$lm->id_loyalty_state = (int)LoyaltyStateModule::getConvertId();
-			$lm->save();
-			$associated = true;
+			$f->id_cart_rule = (int)$cartRule->id;
+			$f->id_loyalty_state = (int)LoyaltyStateModule::getConvertId();
+			$f->save();
 		}
-		return $associated;
 	}
 
 	public static function getOrdersByIdDiscount($id_cart_rule)

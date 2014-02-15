@@ -79,7 +79,12 @@ abstract class DbCore
 	/**
 	 * @var array Object instance for singleton
 	 */
-	protected static $_servers = array();
+	protected static $_servers = array(
+		array('server' => _DB_SERVER_, 'user' => _DB_USER_, 'password' => _DB_PASSWD_, 'database' => _DB_NAME_), /* MySQL Master server */
+		// Add here your slave(s) server(s)
+			// array('server' => '192.168.0.15', 'user' => 'rep', 'password' => '123456', 'database' => 'rep'),
+			// array('server' => '192.168.0.3', 'user' => 'myuser', 'password' => 'mypassword', 'database' => 'mydatabase'),
+	);
 
 	/**
 	 * Store last executed query
@@ -164,8 +169,6 @@ abstract class DbCore
 
 	/* do not remove, useful for some modules */
 	abstract public function set_db($db_name);
-	
-	abstract public function getBestEngine();
 
 	/**
 	 * Get Db object instance
@@ -176,15 +179,6 @@ abstract class DbCore
 	public static function getInstance($master = true)
 	{
 		static $id = 0;
-
-		// This MUST not be declared with the class members because some defines (like _DB_SERVER_) may not exist yet (the constructor can be called directly with params)
-		if (!self::$_servers)
-			self::$_servers = array(
-				array('server' => _DB_SERVER_, 'user' => _DB_USER_, 'password' => _DB_PASSWD_, 'database' => _DB_NAME_), /* MySQL Master server */
-				// Add here your slave(s) server(s)
-					// array('server' => '192.168.0.15', 'user' => 'rep', 'password' => '123456', 'database' => 'rep'),
-					// array('server' => '192.168.0.3', 'user' => 'myuser', 'password' => 'mypassword', 'database' => 'mydatabase'),
-			);
 
 		$total_servers = count(self::$_servers);
 		if ($master || $total_servers == 1)
@@ -523,13 +517,13 @@ abstract class DbCore
 			$this->last_cached = true;
 			return $result;
 		}
+
 		$this->result = $this->query($sql);
 		if (!$this->result)
 			return false;
+
 		$this->last_cached = false;
 		$result = $this->nextRow($this->result);
-		if (is_null($result))
-			$result = false;
 		if ($use_cache && $this->is_cache_enabled)
 			Cache::getInstance()->setQuery($sql, $result);
 		return $result;
@@ -680,7 +674,7 @@ abstract class DbCore
 		return call_user_func_array(array(Db::getClass(), 'hasTableWithSamePrefix'), array($server, $user, $pwd, $db, $prefix));
 	}
 
-	public static function checkCreatePrivilege($server, $user, $pwd, $db, $prefix, $engine = null)
+	public static function checkCreatePrivilege($server, $user, $pwd, $db, $prefix, $engine)
 	{
 		return call_user_func_array(array(Db::getClass(), 'checkCreatePrivilege'), array($server, $user, $pwd, $db, $prefix, $engine));
 	}

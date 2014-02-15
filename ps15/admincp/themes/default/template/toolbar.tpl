@@ -23,7 +23,7 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-<div id="{$table}_toolbar" class="toolbar-placeholder">
+<div class="toolbar-placeholder">
 	<div class="toolbarBox {if $toolbar_scroll}toolbarHead{/if}">
 		{block name=toolbarBox}
 			<ul class="cc_button">
@@ -36,9 +36,9 @@
 						{if $k == 'modules-list'}
 							<div id="modules_list_container" style="display:none">
 							<div style="float:right;margin:5px">
-								<a href="#" onclick="$('#modules_list_container').slideUp();return false;"><img alt="X" src="../img/admin/close.png" /></a>
+								<a href="#" onclick="$('#modules_list_container').slideUp();return false;"><img alt="X" src="../img/admin/close.png"></a>
 							</div>
-							<div id="modules_list_loader"><img src="../img/loader.gif" alt="" border="0" /></div>
+							<div id="modules_list_loader"><img src="../img/loader.gif" alt="" border="0"></div>
 							<div id="modules_list_container_tab" style="display:none;"></div>
 							</div>
 						{/if}
@@ -52,7 +52,7 @@
 				var modules_list_loaded = false;
 				$(function() {
 					//get reference on save link
-					btn_save = $('#{$table}_toolbar span[class~="process-icon-save"]').parent();
+					btn_save = $('span[class~="process-icon-save"]').parent();
 
 					//get reference on form submit button
 					btn_submit = $('#{$table}_form_submit_btn');
@@ -87,15 +87,12 @@
 						btn_submit.hide();
 						//bind enter key press to validate form
 						$('#{$table}_form').keypress(function (e) {
-							if (e.which == 13 && e.target.localName != 'textarea' && !e.target.hasClass('tagify'))
+							if (e.which == 13 && e.target.localName != 'textarea')
 								$('#desc-{$table}-save').click();
 						});
 						//submit the form
 						{block name=formSubmit}
 							btn_save.click(function() {
-								// Vars
-								var btn_submit = $('#{$table}_form_submit_btn');
-
 								// Avoid double click
 								if (submited)
 									return false;

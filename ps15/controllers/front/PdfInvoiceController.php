@@ -63,8 +63,23 @@ class PdfInvoiceControllerCore extends FrontController
 		$order_invoice_list = $this->order->getInvoicesCollection();
 		Hook::exec('actionPDFInvoiceRender', array('order_invoice_list' => $order_invoice_list));
 
-		$pdf = new PDF($order_invoice_list, PDF::TEMPLATE_INVOICE, $this->context->smarty);
+		$pdf = new PDF($order_invoice_list, PDF::TEMPLATE_INVOICE, $this->context->smarty, $this->context->language->id);
 		$pdf->render();
 	}
 
+
+	/**
+	 * Returns the invoice template associated to the country iso_code
+	 * @param string $iso_user
+	 */
+	public function getTemplate($iso_country)
+	{
+		$template = _PS_THEME_PDF_DIR_.'/invoice.tpl';
+
+		$iso_template = _PS_THEME_PDF_DIR_.'/invoice.'.$iso_country.'.tpl';
+		if (file_exists($iso_template))
+			$template = $iso_template;
+
+		return $template;
+	}
 }

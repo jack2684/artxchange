@@ -1,13 +1,11 @@
-Salve {firstname} {lastname},
+{firstname} {lastname}, grazie del tuo ordine su {shop_name}!
 
-Grazie per aver ordinato su {shop_name}!
+Hai {nbProducts} prodotto/i da scaricare.
 
-Hai {nbProducts} prodotto/i disponibili per il download tramite i seguenti link:
-
+Qui di seguito troverai i link per questi prodotti:
 {virtualProducts}
 
-Puoi rivedere questo ordine e scaricare la fattura dalla sezione "Cronologia ordine" del tuo account cliccando su "Il mio account" nel nostro sito.
-
+Puoi rivedere questo ordine e scaricare la fattura dalla sezione "Cronologia ordini" del tuo account cliccando su "Il mio account" nel nostro sito web. 
 Se hai un account ospite, puoi seguire il tuo ordine in questa pagina: {guest_tracking_url}
 
 {shop_url} powered by PrestaShop™

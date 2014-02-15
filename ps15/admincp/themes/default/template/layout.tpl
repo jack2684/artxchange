@@ -35,7 +35,7 @@
 		</span>
 		
 		{if count($errors) == 1}
-			{reset($errors)}
+			{$errors[0]}
 		{else}
 			{l s='%d errors' sprintf=$errors|count}
 			<br/>

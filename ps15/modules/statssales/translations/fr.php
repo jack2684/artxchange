@@ -13,9 +13,9 @@ $_MODULE['<{statssales}prestashop>statssales_156e5c5872c9af24a5c982da07a883c2'] 
 $_MODULE['<{statssales}prestashop>statssales_998e4c5c80f27dec552e99dfed34889a'] = 'Export CSV';
 $_MODULE['<{statssales}prestashop>statssales_ec3e48bb9aa902ba2ad608547fdcbfdc'] = 'Chiffre d\'affaires :';
 $_MODULE['<{statssales}prestashop>statssales_14b2ae2d824b5dfd798a8caf35732136'] = 'La répartition des états de commande est représentée ci-dessous.';
-$_MODULE['<{statssales}prestashop>statssales_da80af4de99df74dd59e665adf1fac8f'] = 'Aucune commande pour cette période';
+$_MODULE['<{statssales}prestashop>statssales_da80af4de99df74dd59e665adf1fac8f'] = 'Aucune commande pour cette période.';
 $_MODULE['<{statssales}prestashop>statssales_6602bbeb2956c035fb4cb5e844a4861b'] = 'Guide';
-$_MODULE['<{statssales}prestashop>statssales_75288849ad081e6ef15e00c37b7570f2'] = 'Plusieurs statuts de commande';
+$_MODULE['<{statssales}prestashop>statssales_75288849ad081e6ef15e00c37b7570f2'] = 'Plusieurs états de commande';
 $_MODULE['<{statssales}prestashop>statssales_ecfa88580e342ade21a8403765c0dde6'] = 'Au sein de votre back-office, plusieurs états de commande sont disponibles : En attente du paiement par chèque, Paiement accepté, Préparation en cours, En cours de livraison, Livré, Annulé, Remboursé, Erreur de paiement, Produits indisponibles et En attente du paiement par virement bancaire.';
 $_MODULE['<{statssales}prestashop>statssales_d60bf28bef003143f1b95edbbc08cd68'] = 'Ces états ne peuvent être supprimés depuis le back-office, cependant vous pouvez en ajouter de nouveaux.';
 $_MODULE['<{statssales}prestashop>statssales_bb7ad89807bf69ddca986c142311f936'] = 'Commandes et produits';

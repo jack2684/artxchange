@@ -49,12 +49,9 @@ try
 	AdminTab::$currentIndex = $currentIndex;
 
 	$iso = $context->language->iso_code;
-	if (file_exists(_PS_TRANSLATIONS_DIR_.$iso.'/errors.php'))
-		include(_PS_TRANSLATIONS_DIR_.$iso.'/errors.php');
-	if (file_exists(_PS_TRANSLATIONS_DIR_.$iso.'/fields.php'))
-		include(_PS_TRANSLATIONS_DIR_.$iso.'/fields.php');
-	if (file_exists(_PS_TRANSLATIONS_DIR_.$iso.'/admin.php'))
-		include(_PS_TRANSLATIONS_DIR_.$iso.'/admin.php');
+	include(_PS_TRANSLATIONS_DIR_.$iso.'/errors.php');
+	include(_PS_TRANSLATIONS_DIR_.$iso.'/fields.php');
+	include(_PS_TRANSLATIONS_DIR_.$iso.'/admin.php');
 
 	/* Server Params */
 	$protocol_link = (Configuration::get('PS_SSL_ENABLED')) ? 'https://' : 'http://';

@@ -18,8 +18,8 @@ $_MODULE['<{statscatalog}prestashop>statscatalog_c09d09e371989d89847049c9574b6b8
 $_MODULE['<{statscatalog}prestashop>statscatalog_65275d1b04037d8c8e42425002110363'] = 'Numero medio di immagini:';
 $_MODULE['<{statscatalog}prestashop>statscatalog_51b8891d531ad91128ba58c8928322ab'] = 'I prodotti mai visti:';
 $_MODULE['<{statscatalog}prestashop>statscatalog_8725647ef741e5d48c1e6f652ce80b50'] = 'Prodotti mai comprati:';
-$_MODULE['<{statscatalog}prestashop>statscatalog_b86770bc713186bcf43dbb1164c5fd28'] = 'Tasso di conversione*:';
-$_MODULE['<{statscatalog}prestashop>statscatalog_0468e0edbf9f5807c25c106248bd7401'] = 'Tasso medio di conversione per la pagina del prodotto. È possibile acquistare un prodotto senza visualizzare la pagina del prodotto, quindi questo tasso può essere maggiore di 1.';
+$_MODULE['<{statscatalog}prestashop>statscatalog_b86770bc713186bcf43dbb1164c5fd28'] = 'Tasso di conversione *:';
+$_MODULE['<{statscatalog}prestashop>statscatalog_0468e0edbf9f5807c25c106248bd7401'] = 'Tasso medio di conversione per la pagina del prodotto. E\' possibile acquistare un prodotto senza visualizzare la pagina del prodotto, quindi questo tasso può essere maggiore di 1.';
 $_MODULE['<{statscatalog}prestashop>statscatalog_58a714d3e9bb2902a5b688c99bd4d8e6'] = 'Prodotti mai comprati';
 $_MODULE['<{statscatalog}prestashop>statscatalog_b718adec73e04ce3ec720dd11a06a308'] = 'ID';
 $_MODULE['<{statscatalog}prestashop>statscatalog_49ee3087348e8d44e1feda1917443987'] = 'Nome';

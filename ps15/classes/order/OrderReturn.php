@@ -144,7 +144,6 @@ class OrderReturnCore extends ObjectModel
 			$data[$k]['type'] = 'Return';
 			$data[$k]['tracking_number'] = $or['id_order_return'];
 			$data[$k]['can_edit'] = false;
-			$data[$k]['reference'] = Order::getUniqReferenceOf($or['id_order']);
 		}
 		return $data;
 	}

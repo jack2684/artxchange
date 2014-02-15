@@ -1,11 +1,12 @@
 Salve {firstname} {lastname},
 
-Grazie per aver ordinato presso {shop_name}!
+Vogliamo informarti della creazione di una nota di credito a tuo nome dell'ordine n.{id_order}.
 
-Vogliamo informarti della creazione di una nota di credito a tuo nome dall'ordine con riferimento {order_name}.
+Puoi rivedere questa nota di credito e scaricare la fattura dalla sezione "Controllo ordini" del tuo account cliccando su "Il mio account" nel nostro sito web.
 
-Puoi rivedere questa nota di credito e scaricare la fattura dalla sezione "Note di credito" del tuo account cliccando su "Il mio account" nel nostro sito.
+Grazie di aver acquistato con {shop_name}.
 
 {shop_name} - {shop_url}
+
 
 {shop_url} powered by PrestaShop™

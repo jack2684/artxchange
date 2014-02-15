@@ -8,8 +8,8 @@ $_MODULE['<{statsregistrations}prestashop>statsregistrations_5eaafc713c2425b1620
 $_MODULE['<{statsregistrations}prestashop>statsregistrations_247b3bdef50a59d5a83f23c4f1c8fa47'] = 'Посетители, прекратившие регистрацию на первом шаге:';
 $_MODULE['<{statsregistrations}prestashop>statsregistrations_479c1246d97709e234574e1d2921994d'] = 'Посетители, которые разместили заказ непосредственно после регистрации:';
 $_MODULE['<{statsregistrations}prestashop>statsregistrations_a751e9cc4ed4c7585ecc0d97781cb48a'] = 'Всего зарегестрированных аккаунтов покупателей:';
-$_MODULE['<{statsregistrations}prestashop>statsregistrations_998e4c5c80f27dec552e99dfed34889a'] = 'Export CSV';
-$_MODULE['<{statsregistrations}prestashop>statsregistrations_6602bbeb2956c035fb4cb5e844a4861b'] = 'Guide';
+$_MODULE['<{statsregistrations}prestashop>statsregistrations_998e4c5c80f27dec552e99dfed34889a'] = 'экспорт CSV';
+$_MODULE['<{statsregistrations}prestashop>statsregistrations_6602bbeb2956c035fb4cb5e844a4861b'] = 'Руководство';
 $_MODULE['<{statsregistrations}prestashop>statsregistrations_fba0e64541196123bbf8e3737bf9287b'] = 'Количество созданных учетных записей';
 $_MODULE['<{statsregistrations}prestashop>statsregistrations_76dcf557776c2b40d47b72ebcd9ac6b7'] = 'Общее количество созданных учетных записей не является само по себе важной информацией. Однако, оно необходимо, чтобы проанализировать динамику регистраций. Это укажет, идете ли вы по верному пути.';
 $_MODULE['<{statsregistrations}prestashop>statsregistrations_57a6f41a27c9baa5b402d30e97d4c1e8'] = 'Как следить за эволюцией регистраций?';

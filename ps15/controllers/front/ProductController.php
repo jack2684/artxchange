@@ -69,8 +69,6 @@ class ProductControllerCore extends FrontController
 
 	public function canonicalRedirection($canonical_url = '')
 	{
-		if (Tools::getValue('live_edit'))
-			return ;
 		if (Validate::isLoadedObject($this->product))
 			parent::canonicalRedirection($this->context->link->getProductLink($this->product));
 	}
@@ -143,31 +141,25 @@ class ProductControllerCore extends FrontController
 			else
 			{
 				// Load category
-				$id_category = false;
-				if (isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] == Tools::secureReferrer($_SERVER['HTTP_REFERER']) // Assure us the previous page was one of the shop
-					&& preg_match('~^.*(?<!\/content)\/([0-9]+)\-(.*[^\.])|(.*)id_(category|product)=([0-9]+)(.*)$~', $_SERVER['HTTP_REFERER'], $regs))
+				if (isset($_SERVER['HTTP_REFERER'])
+					&& strstr($_SERVER['HTTP_REFERER'], Tools::getHttpHost()) // Assure us the previous page was one of the shop
+					&& preg_match('!^(.*)\/([0-9]+)\-(.*[^\.])|(.*)id_category=([0-9]+)(.*)$!', $_SERVER['HTTP_REFERER'], $regs))
 				{
 					// If the previous page was a category and is a parent category of the product use this category as parent category
-					$id_object = false;
-					if (isset($regs[1]) && is_numeric($regs[1]))
-						$id_object = (int)$regs[2];
-					elseif (isset($regs[5]) && is_numeric($regs[5]))
-						$id_object = (int)$regs[6];
-					if ($id_object)
+					if (isset($regs[2]) && is_numeric($regs[2]))
 					{
-						$referers = array($_SERVER['HTTP_REFERER'],urldecode($_SERVER['HTTP_REFERER']));
-						if (in_array($this->context->link->getCategoryLink($id_object), $referers))	
-							$id_category = (int)$id_object;
-						elseif (isset($this->context->cookie->last_visited_category) && (int)$this->context->cookie->last_visited_category && in_array($this->context->link->getProductLink($id_object), $referers))
-							$id_category = (int)$this->context->cookie->last_visited_category;
+						if (Product::idIsOnCategoryId((int)$this->product->id, array('0' => array('id_category' => (int)$regs[2]))))
+							$this->category = new Category($regs[2], (int)$this->context->cookie->id_lang);
 					}
-
+					else if (isset($regs[5]) && is_numeric($regs[5]))
+					{
+						if (Product::idIsOnCategoryId((int)$this->product->id, array('0' => array('id_category' => (int)$regs[5]))))
+							$this->category = new Category($regs[5], (int)$this->context->cookie->id_lang);
+					}
 				}
-				if (!$id_category || !Category::inShopStatic($id_category, $this->context->shop) || !Product::idIsOnCategoryId((int)$this->product->id, array('0' => array('id_category' => $id_category))))
-					$id_category = (int)$this->product->id_category_default;
-				$this->category = new Category((int)$id_category, (int)$this->context->cookie->id_lang);
-				if (isset($this->context->cookie) && isset($this->category->id_category) && !(Module::isInstalled('blockcategories') && Module::isEnabled('blockcategories')))
-					$this->context->cookie->last_visited_category = (int)$this->category->id_category;
+				else
+					// Set default product category
+					$this->category = new Category($this->product->id_category_default, (int)$this->context->cookie->id_lang);
 			}
 		}
 	}
@@ -294,7 +286,7 @@ class ProductControllerCore extends FrontController
 		$id_country = (int)$id_customer ? Customer::getCurrentCountry($id_customer) : Configuration::get('PS_COUNTRY_DEFAULT');
 
 		$group_reduction = GroupReduction::getValueForProduct($this->product->id, $id_group);
-		if ($group_reduction === false)
+		if ($group_reduction == 0)
 			$group_reduction = Group::getReduction((int)$this->context->cookie->id_customer) / 100;
 
 		// Tax
@@ -462,7 +454,7 @@ class ProductControllerCore extends FrontController
 					{
 						if (isset($this->context->smarty->tpl_vars['images']->value))
 							$product_images = $this->context->smarty->tpl_vars['images']->value;
-						if (isset($product_images) && is_array($product_images) && isset($product_images[$id_image]))
+						if (is_array($product_images) && isset($product_images[$id_image]))
 						{
 							$product_images[$id_image]['cover'] = 1;
 							$this->context->smarty->assign('mainImage', $product_images[$id_image]);
@@ -471,7 +463,7 @@ class ProductControllerCore extends FrontController
 						}
 						if (isset($this->context->smarty->tpl_vars['cover']->value))
 							$cover = $this->context->smarty->tpl_vars['cover']->value;
-						if (isset($cover) && is_array($cover) && isset($product_images) && is_array($product_images))
+						if (is_array($cover) && is_array($product_images))
 						{
 							$product_images[$cover['id_image']]['cover'] = 0;
 							if (isset($product_images[$id_image]))
@@ -518,12 +510,9 @@ class ProductControllerCore extends FrontController
 	protected function assignAttributesCombinations()
 	{
 		$attributes_combinations = Product::getAttributesInformationsByProduct($this->product->id);
-		if (is_array($attributes_combinations) && count($attributes_combinations))
-			foreach ($attributes_combinations as &$ac)
-				foreach ($ac as &$val)
-					$val = str_replace('-', '_', Tools::link_rewrite(str_replace(array(',', '.'), '-', $val)));
-		else
-			$attributes_combinations = array();
+		foreach ($attributes_combinations as &$ac)
+			foreach ($ac as &$val)
+				$val = str_replace('-', '_', Tools::link_rewrite(str_replace(array(',', '.'), '-', $val)));
 		$this->context->smarty->assign('attributesCombinations', $attributes_combinations);
 	}
 
@@ -534,26 +523,27 @@ class ProductControllerCore extends FrontController
 	{
 		// Assign category to the template
 		if ($this->category !== false && Validate::isLoadedObject($this->category) && $this->category->inShop() && $this->category->isAssociatedToShop())
+		{
 			$path = Tools::getPath($this->category->id, $this->product->name, true);
+			$this->context->smarty->assign(array(
+				'category' => $this->category,
+				'subCategories' => $this->category->getSubCategories($this->context->language->id, true),
+				'id_category_current' => (int)$this->category->id,
+				'id_category_parent' => (int)$this->category->id_parent,
+				'return_category_name' => Tools::safeOutput($this->category->name)
+			));
+		}
 		elseif (Category::inShopStatic($this->product->id_category_default, $this->context->shop))
 		{
-			$this->category = new Category((int)$this->product->id_category_default);
-			if (Validate::isLoadedObject( $this->category) &&  $this->category->active &&  $this->category->isAssociatedToShop())
+			$cat_default = new Category((int)$this->product->id_category_default);
+			if (Validate::isLoadedObject($cat_default) && $cat_default->active && $cat_default->isAssociatedToShop())
 				$path = Tools::getPath((int)$this->product->id_category_default, $this->product->name);
 		}
 		if (!isset($path) || !$path)
 			$path = Tools::getPath((int)$this->context->shop->id_category, $this->product->name);
+		$this->context->smarty->assign('path', $path);
 		
-		// various assignements before Hook::exec
-		$this->context->smarty->assign(array(
-			'path' => $path,
-			'category' => $this->category,
-			'subCategories' => $this->category->getSubCategories($this->context->language->id, true),
-			'id_category_current' => (int)$this->category->id,
-			'id_category_parent' => (int)$this->category->id_parent,
-			'return_category_name' => Tools::safeOutput($this->category->name),
-			'categories' => Category::getHomeCategories($this->context->language->id, true, (int)$this->context->shop->id)
-		));
+		$this->context->smarty->assign('categories', Category::getHomeCategories($this->context->language->id));
 		$this->context->smarty->assign(array('HOOK_PRODUCT_FOOTER' => Hook::exec('displayFooterProduct', array('product' => $this->product, 'category' => $this->category))));
 	}
 
@@ -664,10 +654,5 @@ class ProductControllerCore extends FrontController
 			$row['nextQuantity'] = (isset($specific_prices[$key + 1]) ? (int)$specific_prices[$key + 1]['from_quantity'] : -1);
 		}
 		return $specific_prices;
-	}
-	
-	public function getProduct()
-	{
-	    return $this->product;
 	}
 }

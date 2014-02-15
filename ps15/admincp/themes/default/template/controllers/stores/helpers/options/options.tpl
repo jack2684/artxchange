@@ -30,9 +30,9 @@
     function ajaxStoreStates(id_state_selected)
 {
     $.ajax({
-	url: "index.php",
+	url: "ajax.php",
 	cache: false,
-	data: "ajax=1&tab=AdminStates&token={getAdminToken tab='AdminStates'}&action=states&id_country="+$('#PS_SHOP_COUNTRY_ID').val() + "&id_state=" + $('#PS_SHOP_STATE_ID').val(),
+	data: "ajaxStates=1&id_country="+$('#PS_SHOP_COUNTRY_ID').val() + "&id_state=" + $('#PS_SHOP_STATE_ID').val(),
 	success: function(html)
 	{
 	    if (html == 'false')

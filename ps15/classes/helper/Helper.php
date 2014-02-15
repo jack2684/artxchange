@@ -27,7 +27,7 @@
 class HelperCore
 {
 	public $currentIndex;
-	public $table = 'configuration';
+	public $table;
 	public $identifier;
 	public $token;
 	public $toolbar_btn;
@@ -86,9 +86,9 @@ class HelperCore
 				$override_tpl_path = _PS_MODULE_DIR_.$this->module->name.'/views/templates/admin/_configure/'.$this->override_folder.$this->base_folder.$tpl_name;
 			else
 			{
-				if (file_exists($this->context->smarty->getTemplateDir(1).$this->override_folder.$this->base_folder.$tpl_name))
-					$override_tpl_path = $this->context->smarty->getTemplateDir(1).$this->override_folder.$this->base_folder.$tpl_name;
-				else if (file_exists($this->context->smarty->getTemplateDir(0).'controllers'.DIRECTORY_SEPARATOR.$this->override_folder.$this->base_folder.$tpl_name))
+				if (file_exists($this->context->smarty->getTemplateDir(1).DIRECTORY_SEPARATOR.$this->override_folder.$this->base_folder.$tpl_name))
+					$override_tpl_path = $this->context->smarty->getTemplateDir(1).DIRECTORY_SEPARATOR.$this->override_folder.$this->base_folder.$tpl_name;
+				else if (file_exists($this->context->smarty->getTemplateDir(0).DIRECTORY_SEPARATOR.'controllers'.DIRECTORY_SEPARATOR.$this->override_folder.$this->base_folder.$tpl_name))
 					$override_tpl_path = $this->context->smarty->getTemplateDir(0).'controllers'.DIRECTORY_SEPARATOR.$this->override_folder.$this->base_folder.$tpl_name;
 
 			}
@@ -213,18 +213,20 @@ class HelperCore
 
 		$html = '
 		<script type="text/javascript">
-			var inputName = \''.addcslashes($input_name, '\'').'\';'."\n";
+			var inputName = "'.$input_name.'";
+		';
 		if (count($selected_cat) > 0)
 		{
 			if (isset($selected_cat[0]))
-				$html .= '			var selectedCat = '.(int)implode(',', $selected_cat).';'."\n";
+				$html .= 'var selectedCat = "'.implode(',', $selected_cat).'";';
 			else
-				$html .= '			var selectedCat = '.(int)implode(',', array_keys($selected_cat)).';'."\n";
+				$html .= 'var selectedCat = "'.implode(',', array_keys($selected_cat)).'";';
 		}
 		else
-			$html .= '			var selectedCat = \'\';'."\n";
-		$html .= '			var selectedLabel = \''.$translations['selected'].'\';
-			var home = \''.addcslashes($root['name'], '\'').'\';
+			$html .= 'var selectedCat = "";';
+		$html .= '
+			var selectedLabel = \''.$translations['selected'].'\';
+			var home = \''.$root['name'].'\';
 			var use_radio = '.(int)$use_radio.';';
 		if (!$use_in_popup)
 			$html .= '
@@ -237,14 +239,17 @@ class HelperCore
 
 		$html .= '
 		<div class="category-filter">
-			<span><a href="#" id="collapse_all">'.$translations['Collapse All'].'</a>|&nbsp;</span>
-			<span><a href="#" id="expand_all">'.$translations['Expand All'].'</a>|&nbsp;</span>
+			<span><a href="#" id="collapse_all" >'.$translations['Collapse All'].'</a>
+			| </span>
+			<span><a href="#" id="expand_all" >'.$translations['Expand All'].'</a>
 			'.(!$use_radio ? '
-				<span><a href="#" id="check_all">'.$translations['Check All'].'</a>|&nbsp;</span>
-				<span><a href="#" id="uncheck_all">'.$translations['Uncheck All'].'</a>|&nbsp;</span>' : '')
-			.($use_search ? '
-				<span>'.$translations['search'].': <input type="text" name="search_cat" id="search_cat"/></span>' : '')
-		.'</div>';
+			 |</span>
+			 <span> <a href="#" id="check_all" >'.$translations['Check All'].'</a>
+			 |</span>
+			 <span><a href="#" id="uncheck_all" >'.$translations['Uncheck All'].'</a>|</span>
+			 ' : '').($use_search ? '<span>'.$translations['search'].' : <input type="text" name="search_cat" id="search_cat"></span>' : '').'
+		</div>
+		';
 
 		$home_is_selected = false;
 		foreach ($selected_cat as $cat)
@@ -349,6 +354,7 @@ class HelperCore
 	public function renderModulesList($modules_list)
 	{
 		$this->tpl_vars = array('modules_list' => $modules_list);
+		
 		$tpl = $this->createTemplate('helpers/modules_list/list.tpl');
 		$tpl->assign($this->tpl_vars);
 

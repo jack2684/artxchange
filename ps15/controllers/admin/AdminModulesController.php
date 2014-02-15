@@ -98,8 +98,6 @@ class AdminModulesControllerCore extends AdminController
 		$this->list_modules_categories['others']['name'] = $this->l('Other Modules');
 		$this->list_modules_categories['mobile']['name'] = $this->l('Mobile');
 
-		uasort($this->list_modules_categories, array($this, 'checkCategoriesNames'));
-
 		// Set Id Employee, Iso Default Country and Filter Configuration
 		$this->id_employee = (int)$this->context->employee->id;
 		$this->iso_default_country = $this->context->country->iso_code;
@@ -129,14 +127,6 @@ class AdminModulesControllerCore extends AdminController
 		// Check if logged on Addons
 		if (isset($this->context->cookie->username_addons) && isset($this->context->cookie->password_addons) && !empty($this->context->cookie->username_addons) && !empty($this->context->cookie->password_addons))
 			$this->logged_on_addons = true;
-	}
-	
-	public function checkCategoriesNames($a, $b)
-	{
-		if ($a['name'] === $this->l('Other Modules'))
-			return true;
-
-		return (bool)($a['name'] > $b['name']);
 	}
 	
 	public function setMedia()
@@ -581,8 +571,7 @@ class AdminModulesControllerCore extends AdminController
 					else
 					{
 						// Uninstall the module before deleting the files, but do not block the process if uninstall returns false
-						if (Module::isInstalled($module->name))
-							$module->uninstall();
+						$module->uninstall();
 						$moduleDir = _PS_MODULE_DIR_.str_replace(array('.', '/', '\\'), array('', '', ''), Tools::getValue('module_name'));
 						$this->recursiveDeleteOnDisk($moduleDir);
 						Tools::redirectAdmin(self::$currentIndex.'&conf=22&token='.$this->token.'&tab_module='.Tools::getValue('tab_module').'&module_name='.Tools::getValue('module_name'));
@@ -640,8 +629,9 @@ class AdminModulesControllerCore extends AdminController
 
 										if (!$download_ok)
 											$this->errors[] = $this->l('Error on downloading the lastest version');
-										elseif (!$this->extractArchive(_PS_MODULE_DIR_.$modaddons->name.'.zip', false))
-											$this->errors[] = $this->l(sprintf("Module %s can't be upgraded: ", $modaddons->name));
+										else
+											if(!$this->extractArchive(_PS_MODULE_DIR_.$modaddons->name.'.zip', false))
+												$this->errors[] = $this->l(sprintf("Module %s can't be upgraded: ", $modaddons->name));
 									}
 							}
 					}
@@ -651,7 +641,7 @@ class AdminModulesControllerCore extends AdminController
 						$this->errors[] = $this->l('Module not found');
 					elseif ($key == 'install' && $this->tabAccess['add'] !== '1')
 						$this->errors[] = Tools::displayError('You do not have permission to install this module.');
-					elseif ($key == 'delete' && ($this->tabAccess['delete'] !== '1' || !$module->getPermission('configure')))
+					elseif ($key == 'uninstall' && ($this->tabAccess['delete'] !== '1' || !$module->getPermission('configure')))
 						$this->errors[] = Tools::displayError('You do not have permission to delete this module.');
 					elseif ($key == 'configure' && ($this->tabAccess['edit'] !== '1' || !$module->getPermission('configure') || !Module::isInstalled(urldecode($name))))
 						$this->errors[] = Tools::displayError('You do not have permission to configure this module.');
@@ -683,18 +673,14 @@ class AdminModulesControllerCore extends AdminController
 
 							// Get the return value of current method
 							$echo = $module->{$method}();
-
-							// After a successful install of a single module that has a configuration method, to the configuration page
-							if ($key == 'install' && $echo === true && strpos(Tools::getValue('install'), '|') === false && method_exists($module, 'getContent'))
-								Tools::redirectAdmin(self::$currentIndex.'&token='.$this->token.'&configure='.$module->name.'&conf=12');
 						}
-
+						
 						// If the method called is "configure" (getContent method), we show the html code of configure page
 						if ($key == 'configure' && Module::isInstalled($module->name))
 						{
 							if (isset($module->multishop_context))
 								$this->multishop_context = $module->multishop_context;
-
+							
 							$backlink = self::$currentIndex.'&token='.$this->token.'&tab_module='.$module->tab.'&module_name='.$module->name;
 							$hooklink = 'index.php?tab=AdminModulesPositions&token='.Tools::getAdminTokenLite('AdminModulesPositions').'&show_modules='.(int)$module->id;
 							$tradlink = 'index.php?tab=AdminTranslations&token='.Tools::getAdminTokenLite('AdminTranslations').'&type=modules&lang=';
@@ -714,7 +700,7 @@ class AdminModulesControllerCore extends AdminController
 								$activateOnclick = 'onclick="location.href = \''.$this->getCurrentUrl('enable').'&enable=\'+(($(this).attr(\'checked\')) ? 1 : 0)"';
 								$toolbar .= '<tr>
 										<th colspan="4">
-											<input type="checkbox" name="activateModule" value="1" '.($module->isEnabledForShopContext() ? 'checked="checked"' : '').' '.$activateOnclick.' /> '.$this->l('Activate module for').' ';
+											<input type="checkbox" name="activateModule" value="1" '.(($module->active) ? 'checked="checked"' : '').' '.$activateOnclick.' /> '.$this->l('Activate module for').' ';
 								if (Shop::getContext() == Shop::CONTEXT_SHOP)
 									$toolbar .= 'shop <b>'.$this->context->shop->name.'</b>';
 								elseif (Shop::getContext() == Shop::CONTEXT_GROUP)
@@ -776,15 +762,13 @@ class AdminModulesControllerCore extends AdminController
 				Tools::redirectAdmin('index.php?controller=adminmodules&configure='.Tools::getValue('module_name').'&token='.Tools::getValue('token').'&module_name='.Tools::getValue('module_name').$params);
 			Tools::redirectAdmin(self::$currentIndex.'&conf='.$return.'&token='.$this->token.'&tab_module='.$module->tab.'&module_name='.$module->name.'&anchor=anchor'.ucfirst($module->name).(isset($modules_list_save) ? '&modules_list='.$modules_list_save : '').$params);
 		}
-
-		if (isset($_GET['update']))
-			Tools::redirectAdmin(self::$currentIndex.'&token='.$this->token.'&updated=1tab_module='.$module->tab.'&module_name='.$module->name.'&anchor=anchor'.ucfirst($module->name).(isset($modules_list_save) ? '&modules_list='.$modules_list_save : ''));
 	}
 	
 	public function postProcess()
 	{
 		// Parent Post Process
 		parent::postProcess();
+
 
 		// Get the list of installed module ans prepare it for ajax call.
 		if (($list = Tools::getValue('installed_modules')))
@@ -1024,14 +1008,6 @@ class AdminModulesControllerCore extends AdminController
 		// Browse modules list
 		foreach ($modules as $km => $module)
 		{
-			//Add succes message for one module update
-			if (Tools::getValue('updated') && Tools::getValue('module_name'))
-			{
-				if ($module->name === (string)Tools::getValue('module_name'))
-					$module_success[] = array('name' => $module->displayName, 'message' => array(
-							0 => $this->l('Current version:').$module->version));
-			}
-
 			//if we are in favorites view we only display installed modules
 			if (Tools::getValue('select') == 'favorites' && !$module->id)
 			{
@@ -1108,8 +1084,8 @@ class AdminModulesControllerCore extends AdminController
 					$modules[$km]->preferences = $modules_preferences[$modules[$km]->name];
 			}
 			unset($object);
-			if ($module->installed && isset($module->version_addons) && $module->version_addons)
-				$upgrade_available[] = array('anchor' => ucfirst($module->name), 'name' => $module->displayName);
+			if (isset($module->version_addons))
+				$upgrade_available[] = array('anchor' => ucfirst($module->name), 'name' => $module->displayName);;
 		}
 
 		// Don't display categories without modules

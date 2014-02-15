@@ -38,7 +38,7 @@ class AdminCurrenciesControllerCore extends AdminController
 			'iso_code' => array('title' => $this->l('ISO code'), 'align' => 'center', 'width' => 80),
 			'iso_code_num' => array('title' => $this->l('ISO code number'), 'align' => 'center', 'width' => 120),
 			'sign' => array('title' => $this->l('Symbol'), 'width' => 20, 'align' => 'center', 'orderby' => false, 'search' => false),
-			'conversion_rate' => array('title' => $this->l('Exchange rate'), 'type' => 'float', 'align' => 'center', 'width' => 130, 'search' => false, 'filter_key' => 'currency_shop!conversion_rate'),
+			'conversion_rate' => array('title' => $this->l('Conversion rate'), 'type' => 'float', 'align' => 'center', 'width' => 130, 'search' => false),
 			'active' => array('title' => $this->l('Enabled'), 'width' => 25, 'align' => 'center', 'active' => 'status', 'type' => 'bool', 'orderby' => false),
 		);
 
@@ -130,12 +130,12 @@ class AdminCurrenciesControllerCore extends AdminController
 				),
 				array(
 					'type' => 'text',
-					'label' => $this->l('Exchange rate:'),
+					'label' => $this->l('Conversion rate:'),
 					'name' => 'conversion_rate',
 					'size' => 3,
 					'maxlength' => 11,
 					'required' => true,
-					'desc' => $this->l('Exchange rates are calculated from one unit of your shop\'s default currency. For example, if the default currency is euros and your chosen currency is dollars, type "1.20"').' 1&euro; = $1.20',
+					'desc' => $this->l('Conversion rates are calculated from one unit of your shop\'s default currency. For example, if the default currency is euros and your chosen currency is dollars, type "1.20"').' 1&euro; = $1.20',
 				),
 				array(
 					'type' => 'select',
@@ -151,7 +151,7 @@ class AdminCurrenciesControllerCore extends AdminController
 							array('key' => 2, 'name' => '0 000,00X ('.$this->l('as with Euros').')'),
 							array('key' => 3, 'name' => 'X0.000,00'),
 							array('key' => 4, 'name' => '0,000.00X'),
-							array('key' => 5, 'name' => 'X0\'000.00') // Added for the switzerland currency
+							array('key' => 5, 'name' => '0 000.00X') // Added for the switzerland currency
 						),
 						'name' => 'name',
 						'id' => 'key'
@@ -346,8 +346,6 @@ class AdminCurrenciesControllerCore extends AdminController
 		}
 		if (Tools::isSubmit('submitAddcurrency') && !Tools::getValue('id_currency') && Currency::exists(Tools::getValue('iso_code'), Tools::getValue('iso_code_num')))
 				$this->errors[] = Tools::displayError('This currency already exists.');
-		if (Tools::isSubmit('submitAddcurrency') && (float)Tools::getValue('conversion_rate') <= 0)
-				$this->errors[] = Tools::displayError('This currency conversion rate can not be equal to 0.');
 		parent::initProcess();
 	}
 }

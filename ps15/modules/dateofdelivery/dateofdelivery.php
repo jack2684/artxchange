@@ -35,7 +35,7 @@ class DateOfDelivery extends Module
 	{
 		$this->name = 'dateofdelivery';
 		$this->tab = 'shipping_logistics';
-		$this->version = '1.2';
+		$this->version = '1.1';
 		$this->author = 'PrestaShop';
 		$this->need_instance = 0;
 		
@@ -128,9 +128,8 @@ class DateOfDelivery extends Module
 								$oos = true;
 								break;
 							}
-
-						$available_date = Product::getAvailableDate($product['id_product'], $product['id_product_attribute']);
-						$date_range = $this->_getDatesOfDelivery($id_carrier, $oos, $available_date);
+						
+						$date_range = $this->_getDatesOfDelivery($id_carrier, $oos);
 						if (is_null($date_from) || $date_from < $date_range[0])
 						{
 							$date_from = $date_range[0][1];
@@ -196,8 +195,8 @@ class DateOfDelivery extends Module
 
 		$id_carrier = (int)OrderInvoice::getCarrierId($order_invoice->id);
 		$return = '';
-		if (($datesDelivery = $this->_getDatesOfDelivery($id_carrier, $oos, $order_invoice->date_add)) && isset($datesDelivery[0][0]) && isset($datesDelivery[1][0]))
-			$return = sprintf($this->l('Approximate date of delivery is between %1$s and %2$s'), $datesDelivery[0][0], $datesDelivery[1][0]);
+		if ($datesDelivery = $this->_getDatesOfDelivery($id_carrier, $oos, $order_invoice->date_add))
+			$return = sprintf($this->l('Approximate date of delivery is between %1$s and %2$s'), $datesDelivery[0], $datesDelivery[1]);
 
 		return $return;
 	}
@@ -494,9 +493,9 @@ class DateOfDelivery extends Module
 	}
 
 	/**
-	 * @param int    $id_carrier
-	 * @param bool   $product_oos
-	 * @param string $date
+	 * @param $id_carrier
+	 * @param bool $product_oos
+	 * @param null $date
 	 *
 	 * @return array|bool returns the min & max delivery date
 	 */

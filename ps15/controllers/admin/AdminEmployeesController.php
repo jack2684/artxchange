@@ -190,7 +190,7 @@ class AdminEmployeesControllerCore extends AdminController
 					'size' => 33,
 					'desc' => ($obj->id ?
 								$this->l('Leave this field blank if you do not want to change your password.') :
-									$this->l('Minimum of eight characters'))
+									$this->l('Minimum of eight characters (use only letters and numbers)').' -_')
 				),
 				array(
 					'type' => 'text',
@@ -297,7 +297,7 @@ class AdminEmployeesControllerCore extends AdminController
 					}
 			$this->fields_form['input'][] = array(
 				'type' => 'select',
-				'label' => $this->l('Profile Permission:'),
+				'label' => $this->l('Profile:'),
 				'name' => 'id_profile',
 				'required' => true,
 				'options' => array(
@@ -341,21 +341,23 @@ class AdminEmployeesControllerCore extends AdminController
 		if (!($obj = $this->loadObject(true)))
 			return false;
 		$email = $this->getFieldValue($obj, 'email');
-		if (Validate::isEmail($email) && Employee::employeeExists($email) && (!Tools::getValue('id_employee') ||  ($employee = new Employee((int)Tools::getValue('id_employee'))) && $employee->email != $email))
+		if (!Validate::isEmail($email))
+	 		$this->errors[] = Tools::displayError('Invalid email address.');
+		elseif (Employee::employeeExists($email) && (!Tools::getValue('id_employee') ||  ($employee = new Employee((int)Tools::getValue('id_employee'))) && $employee->email != $email))
 			$this->errors[] = Tools::displayError('An account already exists for this email address:').' '.$email;
 	}
 
 	public function postProcess()
 	{
-		/* PrestaShop demo mode */
-		if ((Tools::isSubmit('deleteemployee') || Tools::isSubmit('status') || Tools::isSubmit('statusemployee') || Tools::isSubmit('submitAddemployee')) && _PS_MODE_DEMO_)
-		{
-				$this->errors[] = Tools::displayError('This functionality has been disabled.');
-				return;
-		}
-
 		if (Tools::isSubmit('deleteemployee') || Tools::isSubmit('status') || Tools::isSubmit('statusemployee'))
 		{
+			/* PrestaShop demo mode */
+			if (_PS_MODE_DEMO_ && $id_employee = Tools::getValue('id_employee') && (int)$id_employee == _PS_DEMO_MAIN_BO_ACCOUNT_)
+			{
+				$this->errors[] = Tools::displayError('This functionality has been disabled.');
+				return;
+			}
+
 			if ($this->context->employee->id == Tools::getValue('id_employee'))
 			{
 				$this->errors[] = Tools::displayError('You cannot disable or delete your own account.');
@@ -461,24 +463,6 @@ class AdminEmployeesControllerCore extends AdminController
 		return parent::initContent();
 	}
 
-	protected function afterUpdate($object)
-	{
-		$res = parent::afterUpdate($object);
-		// Update cookie if needed
-		if (Tools::getValue('id_employee') == $this->context->employee->id && Tools::getValue('passwd') && $object->passwd != $this->context->employee->passwd)
-			$this->context->cookie->passwd = $this->context->employee->passwd = $object->passwd;
-
-		return $res;
-	}
-	
-	protected function ajaxProcessFormLanguage()
-	{
-		$this->context->cookie->employee_form_lang = (int)Tools::getValue('form_language_id');
-		if (!$this->context->cookie->write())
-			die ('Error while updating cookie.');
-		die ('Form language updated.');
-	}
-	
 	public function ajaxProcessGetTabByIdProfile()
 	{
 		$id_profile = Tools::getValue('id_profile');

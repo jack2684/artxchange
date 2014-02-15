@@ -1,4 +1,4 @@
-Hallo {firstname} {lastname},
+Hallo {name},
 
 
 {customer} hat Ihnen einen Link zu dem Produkt gesandt, das Sie interessieren könnte.

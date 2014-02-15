@@ -3,12 +3,12 @@
 global $_MODULE;
 $_MODULE = array();
 
-$_MODULE['<{bankwire}prestashop>bankwire_85ee0d0492a4e37e6c183520f5d59c40'] = 'Virement Bancaire';
+$_MODULE['<{bankwire}prestashop>bankwire_85ee0d0492a4e37e6c183520f5d59c40'] = 'Virement bancaire';
 $_MODULE['<{bankwire}prestashop>bankwire_65104b0722c068ec3e8ac48153af597b'] = 'Accepter les paiements par virement.';
 $_MODULE['<{bankwire}prestashop>bankwire_cbe0a99684b145e77f3e14174ac212e3'] = 'Êtes-vous certain de vouloir effacer vos données ?';
 $_MODULE['<{bankwire}prestashop>bankwire_0ea0227283d959415eda0cfa31d9f718'] = 'Le titulaire du compte et les informations bancaires doivent être configurés.';
 $_MODULE['<{bankwire}prestashop>bankwire_a02758d758e8bec77a33d7f392eb3f8a'] = 'Aucune devise disponible pour ce module';
-$_MODULE['<{bankwire}prestashop>bankwire_bfa43217dfe8261ee7cb040339085677'] = 'Les détails du compte sont requis';
+$_MODULE['<{bankwire}prestashop>bankwire_bfa43217dfe8261ee7cb040339085677'] = 'Les détails du compte sont requis.';
 $_MODULE['<{bankwire}prestashop>bankwire_ccab155f173ac76f79eb192703f86b18'] = 'Le titulaire du compte est requis.';
 $_MODULE['<{bankwire}prestashop>bankwire_c888438d14855d7d96a2724ee9c306bd'] = 'Mise à jour réussie';
 $_MODULE['<{bankwire}prestashop>bankwire_c1be305030739396775edaca9813f77d'] = 'Ce module vous permet d\'accepter les paiements par virement bancaire.';

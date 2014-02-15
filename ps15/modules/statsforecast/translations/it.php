@@ -12,7 +12,7 @@ $_MODULE['<{statsforecast}prestashop>statsforecast_7cbb885aa1164b390a0bc050a64e1
 $_MODULE['<{statsforecast}prestashop>statsforecast_537c66b24ef5c83b7382cdc3f34885f2'] = 'Anno';
 $_MODULE['<{statsforecast}prestashop>statsforecast_d7e637a6e9ff116de2fa89551240a94d'] = 'Visite';
 $_MODULE['<{statsforecast}prestashop>statsforecast_591411cc8927851db2002208676d8330'] = 'Reg.';
-$_MODULE['<{statsforecast}prestashop>statsforecast_12c500ed0b7879105fb46af0f246be87'] = 'ordini';
+$_MODULE['<{statsforecast}prestashop>statsforecast_12c500ed0b7879105fb46af0f246be87'] = 'Ordini';
 $_MODULE['<{statsforecast}prestashop>statsforecast_9dea4016dbcc290b773ab2fae678aaa8'] = 'Articoli';
 $_MODULE['<{statsforecast}prestashop>statsforecast_e46b5c15331f34b9ff653fdf1ea0a7f0'] = '% Reg.';
 $_MODULE['<{statsforecast}prestashop>statsforecast_1d34a18a13e480b0aa6a799bb8a49c1b'] = '% Ordini';
@@ -30,7 +30,6 @@ $_MODULE['<{statsforecast}prestashop>statsforecast_b4aec469184819e8369588e5d84b3
 $_MODULE['<{statsforecast}prestashop>statsforecast_38f2d5f34a773b7c0668f03e6b8eb6dc'] = 'Ogni visitatore rende';
 $_MODULE['<{statsforecast}prestashop>statsforecast_8ca76c564cccfd5a2ff4d2e08f46db5a'] = 'Ogni visitatore registrato rende';
 $_MODULE['<{statsforecast}prestashop>statsforecast_3fa6443ce3f838b6901b70cd812abf0d'] = 'Distribuzione del pagamento';
-$_MODULE['<{statsforecast}prestashop>statsforecast_dd6e1ab3a8a2c8cb93d0dde0f512f4c4'] = 'I valori sono tasse <b>incluse</b>, quindi puoi ottenere una stima delle commissioni a partire dal metodo di pagamento.';
 $_MODULE['<{statsforecast}prestashop>statsforecast_e6e42855066e7a3ae050b2c698021b14'] = 'Zona:';
 $_MODULE['<{statsforecast}prestashop>statsforecast_5ed26836c96d7dcae8a40307e8e250c3'] = '- Nessun Filtro -';
 $_MODULE['<{statsforecast}prestashop>statsforecast_e55f75a29310d7b60f7ac1d390c8ae42'] = 'Modulo';
@@ -43,7 +42,7 @@ $_MODULE['<{statsforecast}prestashop>statsforecast_41b63feded4acc3719f9bcd016388
 $_MODULE['<{statsforecast}prestashop>statsforecast_a170b5c062acab0443b1110292e38b26'] = 'Prezzo medio';
 $_MODULE['<{statsforecast}prestashop>statsforecast_88183b946cc5f0e8c96b2e66e1c74a7e'] = 'Sconosciuto';
 $_MODULE['<{statsforecast}prestashop>statsforecast_f1dd68fb6a00d3e4d7f751deacde995d'] = 'Lingua di distribuzione';
-$_MODULE['<{statsforecast}prestashop>statsforecast_4b6f7d34a58ba399f077685951d06738'] = 'clienti';
+$_MODULE['<{statsforecast}prestashop>statsforecast_4b6f7d34a58ba399f077685951d06738'] = 'Clienti';
 $_MODULE['<{statsforecast}prestashop>statsforecast_0bcef9c45bd8a48eda1b26eb0c61c869'] = '%';
 $_MODULE['<{statsforecast}prestashop>statsforecast_699aed86dada6ca01ef74013a4464066'] = 'Crescita';
 $_MODULE['<{statsforecast}prestashop>statsforecast_07aa83862ec591697b4325b66d36a78b'] = 'Zone di distribuzione';

@@ -139,7 +139,7 @@ class AdminMetaControllerCore extends AdminController
 			$this->url = ShopUrl::getShopUrls($this->context->shop->id)->where('main', '=', 1)->getFirst();
 			if ($this->url)
 			{
-				$shop_url_options['description'] = $this->l('Here you can set the URL for your shop. If you migrate your shop to a new URL, remember to change the values below.');
+				$shop_url_options['description'] = $this->l('Here you can set the URL for your shop. If you migrate your shop to a new URL, remember to change the values bellow.');
 				$shop_url_options['fields'] = array(
 					'domain' => array(
 						'title' =>	$this->l('Shop domain'),
@@ -227,12 +227,6 @@ class AdminMetaControllerCore extends AdminController
 	public function renderForm()
 	{
 		$files = Meta::getPages(true, ($this->object->page ? $this->object->page : false));
-		
-		$is_index = false;
-		foreach ($this->object->url_rewrite as $rewrite)
-			if($is_index != true)
-				$is_index = ($this->object->page == 'index' && empty($rewrite)) ? true : false;
-
 		$pages = array(
 			'common' => array(
 				'name' => $this->l('Default pages'),
@@ -316,7 +310,6 @@ class AdminMetaControllerCore extends AdminController
 					'name' => 'url_rewrite',
 					'lang' => true,
 					'required' => true,
-					'disabled' => (bool)$is_index,
 					'hint' => $this->l('Only letters and hyphens are allowed'),
 					'desc' => $this->l('e.g. "contacts" for http://mysite.com/shop/contacts to redirect to http://mysite.com/shop/contact-form.php'),
 					'size' => 50
@@ -370,9 +363,6 @@ class AdminMetaControllerCore extends AdminController
 		else if (Tools::isSubmit('submitRobots'))
 			$this->generateRobotsFile();
 
-		if (Tools::isSubmit('PS_ROUTE_product_rule'))
-			Tools::clearCache($this->context->smarty);		
-
 		return parent::postProcess();
 	}
 
@@ -408,7 +398,7 @@ class AdminMetaControllerCore extends AdminController
 			{
 				fwrite($write_fd, "# Directories\n");
 				foreach ($this->rb_data['Directories'] as $dir)
-					fwrite($write_fd, 'Disallow: */'.$dir."\n");
+					fwrite($write_fd, 'Disallow: /*'.$dir."\n");
 			}
 			
 			// Files
@@ -477,6 +467,7 @@ class AdminMetaControllerCore extends AdminController
 			else
 				Configuration::updateValue('PS_ROUTE_'.$route_id, $rule);
 		}
+		
 	}
 
 	/**
@@ -485,25 +476,11 @@ class AdminMetaControllerCore extends AdminController
 	public function updateOptionPsRewritingSettings()
 	{
 		Configuration::updateValue('PS_REWRITING_SETTINGS', (int)Tools::getValue('PS_REWRITING_SETTINGS'));
-		$this->updateOptionDomain(Tools::getValue('domain'));
-		$this->updateOptionDomainSsl(Tools::getValue('domain_ssl'));
-		$this->updateOptionUri(Tools::getValue('uri'));
+		Tools::generateHtaccess($this->ht_file, null, null, '', Tools::getValue('PS_HTACCESS_DISABLE_MULTIVIEWS'), false, Tools::getValue('PS_HTACCESS_DISABLE_MODSEC'));
 
-		if (Tools::generateHtaccess($this->ht_file, null, null, '', Tools::getValue('PS_HTACCESS_DISABLE_MULTIVIEWS'), false, Tools::getValue('PS_HTACCESS_DISABLE_MODSEC')))
-		{
-			Tools::enableCache();
-			Tools::clearCache($this->context->smarty);
-			Tools::restoreCacheSettings();
-		}
-		else
-		{
-			Configuration::updateValue('PS_REWRITING_SETTINGS', 0);
-			// Message copied/pasted from the information tip
-			$message = $this->l('Before being able to use this tool, you need to:');
-			$message .= '<br />- '.$this->l('Create a blank .htaccess in your root directory.');
-			$message .= '<br />- '.$this->l('Give it write permissions (CHMOD 666 on Unix system)');
-			$this->errors[] = $message;
-		}
+		Tools::enableCache();
+		Tools::clearCache($this->context->smarty);
+		Tools::restoreCacheSettings();
 	}
 
 	public function updateOptionPsRouteProductRule()
@@ -552,7 +529,6 @@ class AdminMetaControllerCore extends AdminController
 			{
 				$this->url->domain = $value;
 				$this->url->update();
-				Configuration::updateGlobalValue('PS_SHOP_DOMAIN', $value);
 			}
 			else
 				$this->errors[] = Tools::displayError('This domain is not valid.');
@@ -570,7 +546,6 @@ class AdminMetaControllerCore extends AdminController
 			{
 				$this->url->domain_ssl = $value;
 				$this->url->update();
-				Configuration::updateGlobalValue('PS_SHOP_DOMAIN_SSL', $value);
 			}
 			else
 				$this->errors[] = Tools::displayError('The SSL domain is not valid.');
@@ -673,7 +648,7 @@ class AdminMetaControllerCore extends AdminController
 		}
 
 		$tab['GB'] = array(
-			'orderby=','orderway=','tag=','id_currency=','search_query=','back=','n='
+			'orderby=','orderway=','tag=','id_currency=','search_query=','back=','utm_source=','utm_medium=','utm_campaign=','n='
 		);
 
 		foreach ($disallow_controllers as $controller)

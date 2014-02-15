@@ -29,4 +29,3 @@ $_MODULE['<{watermark}prestashop>watermark_489f2e730102b59aec48b5c27d2cbe1c'] = 
 $_MODULE['<{watermark}prestashop>watermark_8d92a725c5abead5353e60e0b2fc7d6d'] = 'Elija el tipo de imagen para proteger la filigrana';
 $_MODULE['<{watermark}prestashop>watermark_b17f3f4dcf653a5776792498a9b44d6a'] = 'Ajustes actualizados';
 $_MODULE['<{watermark}prestashop>watermark_220d9102465c9223781b8f99af48c154'] = 'Su imagen filigrana no es un verdadero formato gif, conviértalo en lugar de renombrarlo';
-$_MODULE['<{watermark}prestashop>watermark_fdd00b4cd42d738f3f030331cd23a6c5'] = 'Transparencia de la marca de agua (1-100)';

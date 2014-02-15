@@ -10,5 +10,5 @@ $_MODULE['<{blockpaymentlogo}prestashop>blockpaymentlogo_efc226b17e0532afff43be8
 $_MODULE['<{blockpaymentlogo}prestashop>blockpaymentlogo_5c5e5371da7ab2c28d1af066a1a1cc0d'] = 'Strona CMS nie jest dostępna';
 $_MODULE['<{blockpaymentlogo}prestashop>blockpaymentlogo_f1206f9fadc5ce41694f69129aecac26'] = 'Konfiguruj';
 $_MODULE['<{blockpaymentlogo}prestashop>blockpaymentlogo_4b3c34d991275b9fdb0facfcea561be9'] = 'Strona CMS do linku';
-$_MODULE['<{blockpaymentlogo}prestashop>blockpaymentlogo_01bb71b3e70e9e5057c9678a903d47ac'] = 'Wybierz stronę';
+$_MODULE['<{blockpaymentlogo}prestashop>blockpaymentlogo_01bb71b3e70e9e5057c9678a903d47ac'] = 'Wybier stronę';
 $_MODULE['<{blockpaymentlogo}prestashop>blockpaymentlogo_d4dccb8ca2dac4e53c01bd9954755332'] = 'Zapisz ustawienia';

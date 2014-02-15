@@ -3,7 +3,7 @@
 global $_MODULE;
 $_MODULE = array();
 
-$_MODULE['<{blockrss}prestashop>blockrss_2516c13a12d3dbaf4efa88d9fce2e7da'] = 'Block RSS-Feed';
+$_MODULE['<{blockrss}prestashop>blockrss_2516c13a12d3dbaf4efa88d9fce2e7da'] = 'RSS-Feed-Block';
 $_MODULE['<{blockrss}prestashop>blockrss_04396664ce529aa4204b0f7ad753fad1'] = 'Fügt einen Block hinzu, der ein RSS-Feed anzeigt';
 $_MODULE['<{blockrss}prestashop>blockrss_9680162225162baf2a085dfdc2814deb'] = 'RSS-Feed';
 $_MODULE['<{blockrss}prestashop>blockrss_6706b6d8ba45cc4f0eda0506ba1dc3c8'] = 'Ungültige Feed-URL';

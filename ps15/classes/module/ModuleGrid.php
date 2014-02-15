@@ -164,8 +164,7 @@ abstract class ModuleGridCore extends Module
 
 	protected function _displayCsv()
 	{
-		if (ob_get_level() && ob_get_length() > 0)
-			ob_end_clean();
+		ob_end_clean();
 		header('Content-Type: application/octet-stream');
 		header('Content-Disposition: attachment; filename="'.$this->displayName.' - '.time().'.csv"');
 		echo $this->_csv;

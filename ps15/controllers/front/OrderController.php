@@ -58,8 +58,8 @@ class OrderControllerCore extends ParentOrderController
 		{
 			$this->step = 0;
 			$this->errors[] = sprintf(
-				Tools::displayError('A minimum purchase total of %1s (tax excl.) is required in order to validate your order, current purchase total is %2s (tax excl.).'),
-				Tools::displayPrice($minimal_purchase, $currency), Tools::displayPrice($this->context->cart->getOrderTotal(false, Cart::ONLY_PRODUCTS), $currency)
+				Tools::displayError('A minimum purchase total of %s is required in order to validate your order.'),
+				Tools::displayPrice($minimal_purchase, $currency)
 			);
 		}
 		if (!$this->context->customer->isLogged(true) && in_array($this->step, array(1, 2, 3)))
@@ -94,6 +94,8 @@ class OrderControllerCore extends ParentOrderController
 	 */
 	public function initContent()
 	{
+		global $isVirtualCart;
+
 		parent::initContent();
 
 		if (Tools::isSubmit('ajax') && Tools::getValue('method') == 'updateExtraCarrier')
@@ -115,7 +117,7 @@ class OrderControllerCore extends ParentOrderController
 		}
 
 		if ($this->nbProducts)
-			$this->context->smarty->assign('virtual_cart', $this->context->cart->isVirtualCart());
+			$this->context->smarty->assign('virtual_cart', $isVirtualCart);
 
 		// 4 steps to the order
 		switch ((int)$this->step)
@@ -153,18 +155,14 @@ class OrderControllerCore extends ParentOrderController
 					Tools::redirect('index.php?controller=order&step=2');
 				Context::getContext()->cookie->check_cgv = true;
 
-				// Check the delivery option is set
+				// Check the delivery option is setted
 				if (!$this->context->cart->isVirtualCart())
 				{
 					if (!Tools::getValue('delivery_option') && !Tools::getValue('id_carrier') && !$this->context->cart->delivery_option && !$this->context->cart->id_carrier)
 						Tools::redirect('index.php?controller=order&step=2');
 					elseif (!Tools::getValue('id_carrier') && !$this->context->cart->id_carrier)
 					{
-						$deliveries_options = Tools::getValue('delivery_option');
-						if (!$deliveries_options) {
-							$deliveries_options = $this->context->cart->delivery_option;
-						}
-						foreach ($deliveries_options as $delivery_option)
+						foreach (Tools::getValue('delivery_option') as $delivery_option)
 							if (empty($delivery_option))
 								Tools::redirect('index.php?controller=order&step=2');
 					}
@@ -223,11 +221,12 @@ class OrderControllerCore extends ParentOrderController
 	 */
 	public function autoStep()
 	{
+		global $isVirtualCart;
 
 		if ($this->step >= 2 && (!$this->context->cart->id_address_delivery || !$this->context->cart->id_address_invoice))
 			Tools::redirect('index.php?controller=order&step=1');
 
-		if ($this->step > 2 && !$this->context->cart->isVirtualCart() && count($this->context->cart->getDeliveryOptionList()) == 0)
+		if ($this->step > 2 && !$isVirtualCart && count($this->context->cart->getDeliveryOptionList()) == 0)
 			Tools::redirect('index.php?controller=order&step=2');
 
 		$delivery = new Address((int)$this->context->cart->id_address_delivery);

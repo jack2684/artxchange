@@ -33,9 +33,19 @@ $module = new SendToAFriend();
 
 if (Tools::getValue('action') == 'sendToMyFriend' && Tools::getValue('secure_key') == $module->secure_key)
 {
-		$friendName = Tools::getValue('name');
-		$friendMail = Tools::getValue('email');
-		$id_product = Tools::getValue('id_product');
+		$friend_infos = Tools::jsonDecode(Tools::getValue('friend'));
+		$friendName = "";
+		$friendMail = "";
+		$id_product = null;
+		foreach ($friend_infos as $entry)
+		{
+			if ($entry->key == "friend_name")
+				$friendName = $entry->value;
+			else if ($entry->key == "friend_email")
+				$friendMail = $entry->value;
+			else if ($entry->key == "id_product")
+				$id_product = $entry->value;
+		}
 		if (!$friendName || !$friendMail || !$id_product)
 			die('0');
 

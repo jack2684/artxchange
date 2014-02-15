@@ -170,7 +170,7 @@ function bindInputs()
 					for(var error in jsonData.errors)
 						//IE6 bug fix
 						if(error !== 'indexOf')
-							errors += $('<div />').html(jsonData.errors[error]).text() + "\n";
+							errors += jsonData.errors[error] + "\n";
 					alert(errors);
 				}
 			else
@@ -254,7 +254,7 @@ function updateCarrierSelectionAndGift()
 				for(var error in jsonData.errors)
 					//IE6 bug fix
 					if(error !== 'indexOf')
-						errors += $('<div />').html(jsonData.errors[error]).text() + "\n";
+						errors += jsonData.errors[error] + "\n";
 				alert(errors);
 			}
 			else

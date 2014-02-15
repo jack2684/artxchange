@@ -27,7 +27,7 @@
 
 {block name="override_tpl"}
 	<script type="text/javascript">
-	var admin_order_tab_link = "{$link->getAdminLink('AdminOrders')|addslashes}";
+	var admin_order_tab_link = "{$link->getAdminLink('AdminOrders')}";
 	var id_order = {$order->id};
 	var id_lang = {$current_id_lang};
 	var id_currency = {$order->id_currency};
@@ -59,13 +59,13 @@
 
 	{assign var="hook_invoice" value={hook h="displayInvoice" id_order=$order->id}}
 	{if ($hook_invoice)}
-	<div style="float: right; margin: -40px 40px 10px 0;">{$hook_invoice}</div><br class="clear" />
+	<div style="float: right; margin: -40px 40px 10px 0;">{$hook_invoice}</div><br class="clear" />';
 	{/if}
 
 <div class="bloc-command">
 	<div class="button-command">
 			{if (count($invoices_collection))}
-				<a class="button" href="{$link->getAdminLink('AdminPdf')|escape:'htmlall':'UTF-8'}&submitAction=generateInvoicePDF&id_order={$order->id}">
+				<a class="button" href="{$link->getAdminLink('AdminPdf')|escape:'htmlall':'UTF-8'}&submitAction=generateInvoicePDF&id_order={$order->id}" target="_blank">
 					<img src="../img/admin/charged_ok.gif" alt="{l s='View invoice'}" /> {l s='View invoice'}
 				</a>
 			{else}
@@ -73,7 +73,7 @@
 			{/if}
 			 |
 			{if (($currentState && $currentState->delivery) || $order->delivery_number)}
-				<a class="button"  href="{$link->getAdminLink('AdminPdf')|escape:'htmlall':'UTF-8'}&submitAction=generateDeliverySlipPDF&id_order={$order->id}">
+				<a class="button"  href="{$link->getAdminLink('AdminPdf')|escape:'htmlall':'UTF-8'}&submitAction=generateDeliverySlipPDF&id_order={$order->id}" target="_blank">
 					<img src="../img/admin/delivery.gif" alt="{l s='View delivery slip'}" /> {l s='View delivery slip'}
 				</a>
 			{else}
@@ -113,7 +113,9 @@
 			<form action="{$currentIndex}&vieworder&token={$smarty.get.token}" method="post">
 				<select id="id_order_state" name="id_order_state">
 				{foreach from=$states item=state}
-					<option value="{$state['id_order_state']}"{if $state['id_order_state'] == $currentState->id} selected="selected" disabled="disabled"{/if}>{$state['name']|stripslashes}</option>
+					{if $state['id_order_state'] != $currentState->id}
+					<option value="{$state['id_order_state']}">{$state['name']|stripslashes}</option>
+					{/if}
 				{/foreach}
 				</select>
 				<input type="hidden" name="id_order" value="{$order->id}" />
@@ -124,10 +126,10 @@
 			<!-- History of status -->
 			<table cellspacing="0" cellpadding="0" class="table history-status" style="width: 100%;">
 				<colgroup>
-					<col width="1%"/>
-					<col width=""/>
-					<col width="20%"/>
-					<col width="20%"/>
+					<col width="1%">
+					<col width="">
+					<col width="20%">
+					<col width="20%">
 				</colgroup>
 			{foreach from=$history item=row key=key}
 				{if ($key == 0)}
@@ -153,7 +155,7 @@
 			<br />
 			<fieldset>
 				<legend><img src="../img/admin/tab-customers.gif" /> {l s='Customer information'}</legend>
-				<span style="font-weight: bold; font-size: 14px;"><a href="?tab=AdminCustomers&id_customer={$customer->id}&viewcustomer&token={getAdminToken tab='AdminCustomers'}"> {$gender->name|escape:'htmlall':'UTF-8'} {$customer->firstname} {$customer->lastname}</a></span> ({l s='#'}{$customer->id})<br />
+				<span style="font-weight: bold; font-size: 14px;"><a href="?tab=AdminCustomers&id_customer={$customer->id}&viewcustomer&token={getAdminToken tab='AdminCustomers'}"> {$customer->firstname} {$customer->lastname}</a></span> ({l s='#'}{$customer->id})<br />
 				(<a href="mailto:{$customer->email}">{$customer->email}</a>)<br /><br />
 				{if ($customer->isGuest())}
 					{l s='This order has been placed by a guest.'}
@@ -170,9 +172,9 @@
 					{l s='Account registered:'} <b>{dateFormat date=$customer->date_add full=true}</b><br />
 					{l s='Valid orders placed:'} <b>{$customerStats['nb_orders']}</b><br />
 					{l s='Total spent since registration:'} <b>{displayPrice price=Tools::ps_round(Tools::convertPrice($customerStats['total_orders'], $currency), 2) currency=$currency->id}</b><br />
+			</fieldset>
 				{/if}
 			{/if}
-			</fieldset>
 
 			<!-- Sources block -->
 			{if (sizeof($sources))}
@@ -264,8 +266,8 @@
 
 				{if (!$order->valid && sizeof($currencies) > 1)}
 				<form method="post" action="{$currentIndex}&vieworder&id_order={$order->id}&token={$smarty.get.token|escape:'htmlall':'UTF-8'}">
-					<p class="warn">{l s='Do not forget to update your exchange rate before making this change.'}</p>
-					<label>{l s='Do not forget to update your exchange rate before making this change.'}</label>
+					<p class="warn">{l s='Don\'t forget to update your conversion rate before making this change.'}</p>
+					<label>{l s='Don\'t forget to update your conversion rate before making this change.'}</label>
 					<select name="new_currency">
 						{foreach from=$currencies item=currency_change}
 							{if $currency_change['id_currency'] != $order->id_currency}
@@ -299,12 +301,12 @@
 				<form id="formAddPayment" method="post" action="{$current_index}&vieworder&id_order={$order->id}&token={$smarty.get.token|escape:'htmlall':'UTF-8'}">
 					<table class="table" width="100%" cellspacing="0" cellpadding="0">
 						<colgroup>
-							<col width="15%"/>
-							<col width=""/>
-							<col width="20%"/>
-							<col width="10%"/>
-							<col width="10%"/>
-							<col width="1%"/>
+							<col width="15%">
+							<col width="">
+							<col width="20%">
+							<col width="10%">
+							<col width="10%">
+							<col width="1%">
 						</colgroup>
 						<thead>
 							<tr>
@@ -325,7 +327,7 @@
 								<td>{displayPrice price=$payment->amount currency=$payment->id_currency}</td>
 								<td>
 								{if $invoice = $payment->getOrderInvoice($order->id)}
-									{$invoice->getInvoiceNumberFormatted($current_id_lang, $order->id_shop)}
+									{$invoice->getInvoiceNumberFormatted($current_id_lang)}
 								{else}
 									{l s='No invoice'}
 								{/if}
@@ -404,7 +406,7 @@
 								<td>
 									<select name="payment_invoice" id="payment_invoice">
 									{foreach from=$invoices_collection item=invoice}
-										<option value="{$invoice->id}" selected="selected">{$invoice->getInvoiceNumberFormatted($current_id_lang, $order->id_shop)}</option>
+										<option value="{$invoice->id}" selected="selected">{$invoice->getInvoiceNumberFormatted($current_id_lang)}</option>
 									{/foreach}
 									</select>
 								</td>
@@ -592,7 +594,6 @@
 						<th>{l s='Product'}</th>
 						<th style="width: 15%; text-align: center">{l s='Unit Price'} <sup>*</sup></th>
 						<th style="width: 4%; text-align: center">{l s='Qty'}</th>
-						{if $display_warehouse}<th style="text-align: center">{l s='Warehouse'}</th>{/if}
 						{if ($order->hasBeenPaid())}<th style="width: 3%; text-align: center">{l s='Refunded'}</th>{/if}
 						{if ($order->hasBeenDelivered() || $order->hasProductReturned())}<th style="width: 3%; text-align: center">{l s='Returned'}</th>{/if}
 						{if $stock_management}<th style="width: 10%; text-align: center">{l s='Available quantity'}</th>{/if}
@@ -751,7 +752,7 @@
 			<a href="{$link->getAdminLink('AdminCustomerThreads')|escape:'htmlall':'UTF-8'}"><b>{l s='Click here'}</b> {l s='to see all messages.'}</a><br>
 			<div id="message" style="display: {if Tools::getValue('message')}block{else}none{/if}">
 						<select name="order_message" id="order_message" onchange="orderOverwriteMessage(this, '{l s='Do you want to overwrite your existing message?'}')">
-							<option value="0" selected="selected">- {l s='Choose a standard message'} -</option>
+							<option value="0" selected="selected">-- {l s='Choose a standard message'} --</option>
 			{foreach from=$orderMessages item=orderMessage}
 				<option value="{$orderMessage['message']|escape:'htmlall':'UTF-8'}">{$orderMessage['name']}</option>
 			{/foreach}
@@ -787,6 +788,8 @@
 		</fieldset>
 	{/if}
 	</div>
+
+
 	<div class="clear">&nbsp;</div>
 	<br /><br /><a href="{$current_index}&token={$smarty.get.token}"><img src="../img/admin/arrow2.gif" /> {l s='Back to list'}</a><br />
 {/block}

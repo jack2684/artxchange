@@ -1,8 +1,3 @@
-Salve,
-
-Questa è una email di prova da parte del tuo negozio.
-
-Se riesci a leggere questo messaggio, la prova è riuscita!
-
-A presto,
-{shop_url} powered by PrestaShop™
+	Salve,
+	
+	Questa è una mail di prova da parte del tuo negozio online PrestaShop™.

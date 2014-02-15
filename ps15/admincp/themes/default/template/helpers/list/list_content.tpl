@@ -49,7 +49,6 @@
 					{/if}
 					class="{if !$no_link}pointer{/if}
 					{if isset($params.position) && $order_by == 'position'  && $order_way != 'DESC'} dragHandle{/if}
-					{if isset($params.class)} {$params.class}{/if}
 					{if isset($params.align)} {$params.align}{/if}"
 					{if (!isset($params.position) && !$no_link && !isset($params.remove_onclick))}
 						onclick="document.location = '{$current_index}&{$identifier}={$tr.$identifier}{if $view}&view{else}&update{/if}{$table}&token={$token}'">
@@ -60,7 +59,7 @@
 			{block name="td_content"}
 				{if isset($params.prefix)}{$params.prefix}{/if}
 				{if isset($params.color) && isset($tr[$params.color])}
-					<span class="color_field" style="background-color:{$tr[$params.color]};color:{if Tools::getBrightness($tr[$params.color]) < 128}white{else}#383838{/if}">
+					<span class="color_field" style="background-color:{$tr.color};color:{if Tools::getBrightness($tr.color) < 128}white{else}#383838{/if}">
 				{/if}
 				{if isset($tr.$key)}
 					{if isset($params.active)}

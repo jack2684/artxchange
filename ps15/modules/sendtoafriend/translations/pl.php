@@ -5,10 +5,8 @@ $_MODULE = array();
 
 $_MODULE['<{sendtoafriend}prestashop>product_page_2107f6398c37b4b9ee1e1b5afb5d3b2a'] = 'Wyślij do znajomego';
 $_MODULE['<{sendtoafriend}prestashop>sendtoafriend_ajax_22c4733a9ceb239bf825a0cecd1cfaec'] = 'Znajomy';
-$_MODULE['<{sendtoafriend}prestashop>sendtoafriend-extra_11cbd9ec2e4b628c371094b6361b9c96'] = 'Twój e-mail został poprawnie wysłany';
-$_MODULE['<{sendtoafriend}prestashop>sendtoafriend-extra_36fb3f59b4a75949a0db90e7011b21f2'] = 'Nie można było wysłać Twojego e-maila. Sprawdź adres e-mail i spróbuj ponownie.';
-$_MODULE['<{sendtoafriend}prestashop>sendtoafriend-extra_2107f6398c37b4b9ee1e1b5afb5d3b2a'] = 'Wyślij do znajomego';
 $_MODULE['<{sendtoafriend}prestashop>sendtoafriend-extra_d1f092e79827eaffce4a33fa011fde24'] = 'Nie wypełniłeś wszystkich wymaganych pól';
+$_MODULE['<{sendtoafriend}prestashop>sendtoafriend-extra_2107f6398c37b4b9ee1e1b5afb5d3b2a'] = 'Wyślij do znajomego';
 $_MODULE['<{sendtoafriend}prestashop>sendtoafriend-extra_5d6103b662f41b07e10687f03aca8fdc'] = 'Odbiorca:';
 $_MODULE['<{sendtoafriend}prestashop>sendtoafriend-extra_bb6aa0be8236a10e6d3b315ebd5f2547'] = 'Nazwa Twojego znajomego';
 $_MODULE['<{sendtoafriend}prestashop>sendtoafriend-extra_099bc8914b5be9e522a29e48cb3c01c4'] = 'Adres e-mail Twojego znajomego';

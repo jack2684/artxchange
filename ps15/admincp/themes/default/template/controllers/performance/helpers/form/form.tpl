@@ -40,9 +40,6 @@
 		</div>
 	{/if}
 	{$smarty.block.parent}
-	{if $input.type == 'radio' && $input.name == 'smarty_cache'}
-			<a href="{$current}&token={$token}&empty_smarty_cache=1" class="clear button" href="">{l s='Clear Smarty cache & Autoload cache'}</a>
-	{/if}		
 {/block}
 
 {block name="description"}
@@ -189,7 +186,7 @@
 			return false;
 		});
 
-		$('input[name="smarty_force_compile"], input[name="smarty_cache"], input[name="smarty_console"], input[name="smarty_console_key"]').change(function(){
+		$('input[name="smarty_force_compile"], input[name="smarty_cache"], input[name="smarty_console"]').change(function(){
 			$('#smarty_up').val(1);
 		});
 

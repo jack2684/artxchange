@@ -1,7 +1,6 @@
 Hallo,
 
-{firstname} {lastname} hat angegeben, dass Sie seine/ihre Wunschliste {wishlist}  sehen möchten:
-
+{firstname} {lastname} hat angegeben, dass Sie seine/ ihr Wunschliste sehen möchten {wishlist} :
 {message}
 
 

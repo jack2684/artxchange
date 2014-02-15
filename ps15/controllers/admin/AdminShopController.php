@@ -148,7 +148,7 @@ class AdminShopControllerCore extends AdminController
 		$this->list_simple_header = true;
 		parent::initContent();
 
-		$this->addJqueryPlugin('cooki-plugin');
+		$this->addJqueryPlugin('cookie-plugin');
 		$this->addJqueryPlugin('jstree');
 		$this->addCSS(_PS_JS_DIR_.'jquery/plugins/jstree/themes/classic/style.css');
 
@@ -226,8 +226,13 @@ class AdminShopControllerCore extends AdminController
 		
 		if (Tools::isSubmit('submitAddshopAndStay') || Tools::isSubmit('submitAddshop'))
 		{
-			$shop_group = new ShopGroup((int)Tools::getValue('id_shop_group'));
-			if ($shop_group->shopNameExists(Tools::getValue('name'), (int)Tools::getValue('id_shop')))
+			$same_name = Db::getInstance()->getValue('
+			SELECT id_shop
+			FROM '._DB_PREFIX_.'shop
+			WHERE name = "'.pSQL(Tools::getValue('name')).'"
+			AND id_shop_group = '.(int)Tools::getValue('id_shop_group').'
+			'.(Tools::getValue('id_shop') ? 'AND id_shop != '.(int)Tools::getValue('id_shop') : ''));
+			if ($same_name)
 				$this->errors[] = Tools::displayError('You cannot have two shops with the same name in the same group.');
 		}
 
@@ -282,10 +287,7 @@ class AdminShopControllerCore extends AdminController
 
 	protected function afterUpdate($new_shop)
 	{
-		$categories = Tools::getValue('categoryBox');
-		array_unshift($categories, Configuration::get('PS_ROOT_CATEGORY'));
-
-		if (!Category::updateFromShop($categories, $new_shop->id))
+		if (!Category::updateFromShop(Tools::getValue('categoryBox'), $new_shop->id))
 			$this->errors[] = $this->l('You need to select at least the root category.');
 		if (Tools::getValue('useImportData') && ($import_data = Tools::getValue('importData')) && is_array($import_data))
 			$new_shop->copyShopData((int)Tools::getValue('importFromShop'), $import_data);
@@ -389,7 +391,7 @@ class AdminShopControllerCore extends AdminController
 		$this->fields_form['input'][] = array(
 			'type' => 'select',
 			'label' => $this->l('Category root:'),
-			'desc' => $this->l('This is the root category of the store that you\'ve created. To define a new root category for your store,').'&nbsp;<a href="'.$this->context->link->getAdminLink('AdminCategories').'&addcategoryroot" target="_blank">'.$this->l('Please click here').'</a>',
+			'desc' => $this->l('This is the root category of the store that you\'ve created. To define a new root category for your store,').'&nbsp;<a href="'.$this->context->link->getAdminLink('AdminCategories').'&addcategoryroot">'.$this->l('Please click here').'</a>',
 			'name' => 'id_category',
 			'options' => array(
 				'query' => $categories,
@@ -607,9 +609,7 @@ class AdminShopControllerCore extends AdminController
 				StockAvailable::copyStockAvailableFromShopToShop($id_src_shop, $object->id);
 		}
 
-		$categories = Tools::getValue('categoryBox');
-		array_unshift($categories, Configuration::get('PS_ROOT_CATEGORY'));
-		Category::updateFromShop($categories, $object->id);
+		Category::updateFromShop(Tools::getValue('categoryBox'), $object->id);
 		Search::indexation(true);
 		return $object;
 	}

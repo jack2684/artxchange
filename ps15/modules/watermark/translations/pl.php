@@ -29,4 +29,3 @@ $_MODULE['<{watermark}prestashop>watermark_489f2e730102b59aec48b5c27d2cbe1c'] = 
 $_MODULE['<{watermark}prestashop>watermark_8d92a725c5abead5353e60e0b2fc7d6d'] = 'Wybierz typ obrazu do ochorny znakiem wodnym.';
 $_MODULE['<{watermark}prestashop>watermark_b17f3f4dcf653a5776792498a9b44d6a'] = 'Aktualizacja ustawień';
 $_MODULE['<{watermark}prestashop>watermark_220d9102465c9223781b8f99af48c154'] = 'Ten obraz znaku wodengo nie jest prawdziwym plikiem GIF, skonwertuj obraz.';
-$_MODULE['<{watermark}prestashop>watermark_fdd00b4cd42d738f3f030331cd23a6c5'] = 'Przezroczystość znaku wodnego (1-100)';

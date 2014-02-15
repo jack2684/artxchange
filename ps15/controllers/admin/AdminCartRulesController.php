@@ -31,8 +31,8 @@ class AdminCartRulesControllerCore extends AdminController
 		$this->table = 'cart_rule';
 	 	$this->className = 'CartRule';
 	 	$this->lang = true;
-		$this->addRowAction('edit');
 		$this->addRowAction('delete');
+		$this->addRowAction('edit');
 	 	$this->bulk_actions = array('delete' => array('text' => $this->l('Delete selected'), 'confirm' => $this->l('Delete selected items?')));
 
 		$this->fields_list = array(
@@ -128,8 +128,6 @@ class AdminCartRulesControllerCore extends AdminController
 				$this->errors[] = Tools::displayError('Reduction amount cannot be lower than zero.');
 			if (Tools::getValue('code') && ($same_code = (int)CartRule::getIdByCode(Tools::getValue('code'))) && $same_code != Tools::getValue('id_cart_rule'))
 				$this->errors[] = sprintf(Tools::displayError('This cart rule code is already used (conflict with cart rule %d)'), $same_code);
-			if (Tools::getValue('apply_discount') == 'off' && !Tools::getValue('free_shipping') && !Tools::getValue('free_gift'))
-				$this->errors[] = Tools::displayError('An action is required for this cart rule.');
 		}
 
 		return parent::postProcess();
@@ -580,7 +578,7 @@ class AdminCartRulesControllerCore extends AdminController
 	public function displayAjaxSearchCartRuleVouchers()
 	{
 		$found = false;
-		if ($vouchers = CartRule::getCartsRuleByCode(Tools::getValue('q'), (int)$this->context->language->id, true))
+		if ($vouchers = CartRule::getCartsRuleByCode(Tools::getValue('q'), (int)$this->context->language->id))
 			$found = true;
 		echo Tools::jsonEncode(array('found' => $found, 'vouchers' => $vouchers));
 	}

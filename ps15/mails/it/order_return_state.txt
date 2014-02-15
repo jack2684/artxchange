@@ -1,9 +1,11 @@
 Salve {firstname} {lastname},
 
-Abbiamo aggiornato lo stato del tuo buono di restituzione n.{id_order_return}, il nuovo stato è: "{state_order_return}"
+La cronologia del tuo buono di restituzione n.{id_order_return} è cambiata in "{state_order_return}".
 
-Puoi rivedere questo ordine nella sezione "Cronologia ordine" del tuo account cliccando su "Il mio account" nel nostro sito.
+Puoi rivedere questa restituzione dell'ordine nella sezione "Cronologia ordine" del tuo account cliccando su "Il mio account" nel nostro sito web.
 
 {shop_name} - {shop_url}
+
+
 
 {shop_url} powered by PrestaShop™

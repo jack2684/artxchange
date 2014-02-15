@@ -3,8 +3,8 @@
 global $_MODULE;
 $_MODULE = array();
 
-$_MODULE['<{cheque}prestashop>cheque_7b4cc4f79be9aae43efd53b4ae5cba4d'] = 'Платеж чеком';
-$_MODULE['<{cheque}prestashop>cheque_14e41f4cfd99b10766cc15676d8cda66'] = 'Этот модуль позволяет вам принимать платежи чеком (векселем).';
+$_MODULE['<{cheque}prestashop>cheque_7b4cc4f79be9aae43efd53b4ae5cba4d'] = 'Проверить';
+$_MODULE['<{cheque}prestashop>cheque_14e41f4cfd99b10766cc15676d8cda66'] = 'Этот модуль позволяет Вам принимать платежи чеком (векселем).';
 $_MODULE['<{cheque}prestashop>cheque_e09484ba6c16bc20236b63cc0d87ee95'] = 'Вы уверены, что хотите удалить информацию о себе?';
 $_MODULE['<{cheque}prestashop>cheque_10afbbb4dcb65d825785d196ffb294dd'] = 'Поля \"К заказу\" и адрес должны быть сконфигурированы, чтобы использовать этот модуль корректно.';
 $_MODULE['<{cheque}prestashop>cheque_e2d93539acef2afbbadf8542351fb2b4'] = 'Для этого модуля не выбрана валюта';
@@ -21,13 +21,14 @@ $_MODULE['<{cheque}prestashop>cheque_b17f3f4dcf653a5776792498a9b44d6a'] = 'Со�
 $_MODULE['<{cheque}prestashop>validation_e2b7dec8fa4b498156dfee6e4c84b156'] = 'Метод оплаты не доступен.';
 $_MODULE['<{cheque}prestashop>payment_execution_8520b283b0884394b13b80d5689628b3'] = 'Оплата чеком';
 $_MODULE['<{cheque}prestashop>payment_execution_f1d3b424cd68795ecaa552883759aceb'] = 'Информация про заказ';
+$_MODULE['<{cheque}prestashop>payment_execution_879f6b8877752685a966564d072f498f'] = 'Ваша корзина пуста.';
 $_MODULE['<{cheque}prestashop>payment_execution_060bf2d587991d8f090a1309b285291c'] = 'чек';
 $_MODULE['<{cheque}prestashop>payment_execution_76ca011e4772bfcce26aecd42c598510'] = 'Вы выбрали оплату чеком.';
 $_MODULE['<{cheque}prestashop>payment_execution_c884ed19483d45970c5bf23a681e2dd2'] = 'Вот краткая информация по вашему заказу';
 $_MODULE['<{cheque}prestashop>payment_execution_3b3b41f131194e747489ef93e778ed0d'] = 'Итого к оплате по вашему заказу';
 $_MODULE['<{cheque}prestashop>payment_execution_1f87346a16cf80c372065de3c54c86d9'] = '(вкл. налог)';
 $_MODULE['<{cheque}prestashop>payment_execution_7b1c6e78d93817f61f2b1bbc2108a803'] = 'Мы принимаем разные валюты.';
-$_MODULE['<{cheque}prestashop>payment_execution_a7a08622ee5c8019b57354b99b7693b2'] = 'Выберите что-то  из ниже указанного:';
+$_MODULE['<{cheque}prestashop>payment_execution_a7a08622ee5c8019b57354b99b7693b2'] = 'Выберете что-то  из ниже указанного:';
 $_MODULE['<{cheque}prestashop>payment_execution_f73ad0f08052884ff465749bf48b55ce'] = 'Мы принимаем такую валюту для оплаты чеком:';
 $_MODULE['<{cheque}prestashop>payment_execution_7135ff14c7931e1c8e9d33aff3dfc7f7'] = 'Владелец чека и адрес будут отображены на следующей странице.';
 $_MODULE['<{cheque}prestashop>payment_execution_0881a11f7af33bc1b43e437391129d66'] = 'Пожалуйста, подтвердите ваш заказ, нажав на \"Я подтверждаю заказ\"';

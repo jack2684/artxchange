@@ -9,7 +9,7 @@ $_MODULE['<{homefeatured}prestashop>homefeatured_8f31eb2413dea86c661532d4cf973d2
 $_MODULE['<{homefeatured}prestashop>homefeatured_6af91e35dff67a43ace060d1d57d5d1a'] = 'Actualización realizada con éxito';
 $_MODULE['<{homefeatured}prestashop>homefeatured_f4f70727dc34561dfde1a3c529b6205c'] = 'Configuración';
 $_MODULE['<{homefeatured}prestashop>homefeatured_4cad5369b27bff0ba256a479a575eb6f'] = 'Para añadir productos a su página de inicio, sólo tiene que añadirlas en la categoía  \"Inicio\" .';
-$_MODULE['<{homefeatured}prestashop>homefeatured_87ae431d2f8285c91660bd00d330a257'] = 'Número de productos mostrados';
+$_MODULE['<{homefeatured}prestashop>homefeatured_87ae431d2f8285c91660bd00d330a257'] = 'Número de productos mostrados.';
 $_MODULE['<{homefeatured}prestashop>homefeatured_b263d5a770ca788195f4038d1a0ea6fc'] = 'Indique el número de productos que le gustaría mostrar en la portada (por defecto: 8).';
 $_MODULE['<{homefeatured}prestashop>homefeatured_c9cc8cce247e49bae79f15173ce97354'] = 'Guardar';
 $_MODULE['<{homefeatured}prestashop>homefeatured_ca7d973c26c57b69e0857e7a0332d545'] = 'Productos destacados';

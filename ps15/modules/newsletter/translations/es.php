@@ -19,7 +19,7 @@ $_MODULE['<{newsletter}prestashop>newsletter_82e5e0bc0f9c776c98253d569c111c0f'] 
 $_MODULE['<{newsletter}prestashop>newsletter_04e7c39a16e4d89fe9c3861af82ececa'] = 'El fichero .CSV ha sido exportado correctamente. (%d clientes encontrados)';
 $_MODULE['<{newsletter}prestashop>newsletter_48e3d5f66961b621c78f709afcd7d437'] = 'Descargar el fichero';
 $_MODULE['<{newsletter}prestashop>newsletter_faa1115fbab933e7178ee43ce1590977'] = 'ATENCION: Si trata de abrir el fichero .CSV con Excel, no olvide seleccionar el UTF-8 para el encodage, si no aparecerán caracteres incorrectos';
-$_MODULE['<{newsletter}prestashop>newsletter_81573e0ea79138f02fd2cee94786d7e9'] = 'Error: no se puede escribir';
+$_MODULE['<{newsletter}prestashop>newsletter_81573e0ea79138f02fd2cee94786d7e9'] = 'Error: imposible escribir en';
 $_MODULE['<{newsletter}prestashop>newsletter_8d550e9bf69bfc7a09be6eeb1622ae23'] = 'Hay dos tipos de módulos:';
 $_MODULE['<{newsletter}prestashop>newsletter_23e8f8a55548b88bfbdcd1f6ba26a010'] = 'Las personas que hayan suscrito utilizando el bloque newsletter en la página de inicio.';
 $_MODULE['<{newsletter}prestashop>newsletter_27d1ec406fd2baf49d03f81a4bb41122'] = 'Esta será una lista de direcciones de correo para las personas que visiten su tienda y no se convierta en clientes, pero que desean obtener su newsletter. Use \"Newsletter Suscriptores de exportación\" más abajo para generar una . CSV sobre la base de los usuarios de los datos del bloque Newsletter.';

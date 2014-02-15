@@ -1,14 +1,11 @@
 Hallo {firstname} {lastname},
  
-für Ihre Bestellung Nr. {order_name} erhalten Sie einen Gutschein auf Ihren Namen.
+Verlauf Ihrer Bestellung Nr.{id_order}
  
-Gutscheincode: {voucher_num} in Höhe von {voucher_amount}
+Damit werden Sie über die Erstellung eines Gutscheins auf Ihrem Namen nach Ihrer Bestellung Nr. informiert.{id_order}.
  
-Kopieren Sie diesen Code bei Ihrer nächsten Bestellung während des Bezahlvorgangs einfach in das Gutscheinfeld.
-
-Vielen Dank für Ihren Einkauf bei {shop_name}
+Hier ist der Code Ihres Gutscheins: {voucher_num}, über einen Betrag von {voucher_amount}.
+Für Ihre nächste Bestellung müssen Sie diesen Code einfach nur während des Bezahlvorgangs kopieren.
  
-{shop_name} - {shop_url}
-
-{shop_url} powered with PrestaShop™ 
+{shop_name} powered with PrestaShop™ 
 

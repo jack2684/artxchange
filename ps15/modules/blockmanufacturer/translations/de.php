@@ -16,7 +16,7 @@ $_MODULE['<{blockmanufacturer}prestashop>blockmanufacturer_b9987a246a537f4fe86f1
 $_MODULE['<{blockmanufacturer}prestashop>blockmanufacturer_aa56a2e65d8106aef3c61e4f6bf94fdb'] = 'Elemente';
 $_MODULE['<{blockmanufacturer}prestashop>blockmanufacturer_c6dfa38603c2ea64217d462000a09da4'] = 'So zeigen Hersteller in einer Nur-Text-Liste';
 $_MODULE['<{blockmanufacturer}prestashop>blockmanufacturer_ac88955a067710291274d21dec443904'] = 'Verwenden Sie eine Dropdown-Liste';
-$_MODULE['<{blockmanufacturer}prestashop>blockmanufacturer_56353167778d1520bfecc70c470e6d8a'] = 'Hersteller als Dropdown-Liste anzeigen';
+$_MODULE['<{blockmanufacturer}prestashop>blockmanufacturer_56353167778d1520bfecc70c470e6d8a'] = 'Um Hersteller als Dropdown-Liste anzuzeigen';
 $_MODULE['<{blockmanufacturer}prestashop>blockmanufacturer_c9cc8cce247e49bae79f15173ce97354'] = 'Speichern';
 $_MODULE['<{blockmanufacturer}prestashop>blockmanufacturer_2377be3c2ad9b435ba277a73f0f1ca76'] = 'Hersteller';
 $_MODULE['<{blockmanufacturer}prestashop>blockmanufacturer_9d098ff02f6813055b869f6f9acd831c'] = 'Nähere Infos';

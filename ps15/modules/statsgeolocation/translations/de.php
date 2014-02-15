@@ -14,6 +14,6 @@ $_MODULE['<{statsgeolocation}prestashop>statsgeolocation_25e8f2fd2871c8423bbe4e2
 $_MODULE['<{statsgeolocation}prestashop>statsgeolocation_e7173e323991c8c33ad2dae1d528fc2e'] = 'Koordinaten aktualisieren';
 $_MODULE['<{statsgeolocation}prestashop>statsgeolocation_60e421611f85e8faa9f6950ce71dab7a'] = 'Klicken Sie auf einen Ländernamen und bestimmen Sie seine Position auf der Karte';
 $_MODULE['<{statsgeolocation}prestashop>statsgeolocation_64d80b7a177f4bd0a1f1dde09741852d'] = 'Klicken Sie auf die Karte, um die Position einzustellen:';
-$_MODULE['<{statsgeolocation}prestashop>statsgeolocation_dc25612aeb2ba1c2705fc2e9c947f084'] = 'Fehler: Sie müssen auf die Karte klicken oder auf Abbrechen';
+$_MODULE['<{statsgeolocation}prestashop>statsgeolocation_dc25612aeb2ba1c2705fc2e9c947f084'] = 'Fehler: Sie müssen auf die Karte klicken oder auf die Schaltfläche Abbrechen';
 $_MODULE['<{statsgeolocation}prestashop>statsgeolocation_ea4788705e6873b424c65e91c2846b19'] = 'Abbrechen';
 $_MODULE['<{statsgeolocation}prestashop>statsgeolocation_ad3d06d03d94223fa652babc913de686'] = 'Bestätigen';

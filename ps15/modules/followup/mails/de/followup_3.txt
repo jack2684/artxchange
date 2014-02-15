@@ -6,4 +6,4 @@ Als Anerkennung für Ihre Treue möchten wir Ihnen einen Rabatt über {amount}% 
  
 Hier ist Ihr Gutschein: {voucher_num}
 
-Kopieren Sie diesen Code bei Ihrer nächsten Bestellung während des Bezahlvorgangs einfach in das Gutscheinfeld.
+Geben Sie diesen Code in Ihrem Warenkorb-Fenster ein, um Ihren Rabatt zu erhalten.

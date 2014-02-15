@@ -52,7 +52,6 @@ class ChequePaymentModuleFrontController extends ModuleFrontController
 			'chequeName' => $this->module->chequeName,
 			'chequeAddress' => Tools::nl2br($this->module->address),
 			'this_path' => $this->module->getPathUri(),
-			'this_path_cheque' => $this->module->getPathUri(),
 			'this_path_ssl' => Tools::getShopDomainSsl(true, true).__PS_BASE_URI__.'modules/'.$this->module->name.'/'
 		));
 

@@ -52,21 +52,6 @@ class DbMySQLiCore extends Db
 
 		return $this->link;
 	}
-	
-	public static function createDatabase($host, $user, $password, $dbname, $dropit = false)
-	{
-		if (strpos($host, ':') !== false)
-		{
-			list($host, $port) = explode(':', $host);
-			$link = @new mysqli($host, $this->user, $this->password, null, $port);
-		}
-		else
-			$link = @new mysqli($host, $user, $password);
-		$success = $link->query('CREATE DATABASE `'.str_replace('`', '\\`', $dbname).'`');
-		if ($dropit && ($link->query('DROP DATABASE `'.str_replace('`', '\\`', $dbname).'`') !== false))
-			return true;
-		return $success;
-	}
 
 	/**
 	 * @see DbCore::disconnect()
@@ -184,40 +169,24 @@ class DbMySQLiCore extends Db
 		if (!$link->options(MYSQLI_OPT_CONNECT_TIMEOUT, $timeout))
 			return 1;
 
-		// There is an @ because mysqli throw a warning when the database does not exists
-		if (!@$link->real_connect($server, $user, $pwd, $db))
+		if (!$link->real_connect($server, $user, $pwd, $db))
 			return (mysqli_connect_errno() == 1049) ? 2 : 1;
 
+		if (strtolower($engine) == 'innodb')
+		{
+			$sql = 'SHOW VARIABLES WHERE Variable_name = \'have_innodb\'';
+			$result = $link->query($sql);
+			if (!$result)
+				return 4;
+			$row = $result->fetch_assoc();
+			if (!$row || strtolower($row['Value']) != 'yes')
+				return 4;
+		}
 		$link->close();
 		return 0;
 	}
 	
-	public function getBestEngine()
-	{
-		$value = 'InnoDB';
-		
-		$sql = 'SHOW VARIABLES WHERE Variable_name = \'have_innodb\'';
-		$result = $this->link->query($sql);
-		if (!$result)
-			$value = 'MyISAM';
-		$row = $result->fetch_assoc();
-		if (!$row || strtolower($row['Value']) != 'yes')
-			$value = 'MyISAM';
-			
-		/* MySQL >= 5.6 */
-		$sql = 'SHOW ENGINES';
-		$result = $this->link->query($sql);
-		while ($row = $result->fetch_assoc())
-			if ($row['Engine'] == 'InnoDB')
-			{
-				if (in_array($row['Support'], array('DEFAULT', 'YES')))
-					$value = 'InnoDB';
-				break;
-			}
-		return $value;
-	}
-	
-	public static function checkCreatePrivilege($server, $user, $pwd, $db, $prefix, $engine = null)
+	public static function checkCreatePrivilege($server, $user, $pwd, $db, $prefix, $engine)
 	{
 		$link = @new mysqli($server, $user, $pwd, $db);
 		if (mysqli_connect_error())

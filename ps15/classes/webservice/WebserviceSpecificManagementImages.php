@@ -845,13 +845,11 @@ class WebserviceSpecificManagementImagesCore implements WebserviceSpecificManage
 				$imaged = imagegif($destImage, $newPath);
 				break;
 			case 'png':
-				$quality = (Configuration::get('PS_PNG_QUALITY') === false ? 7 : Configuration::get('PS_PNG_QUALITY'));
-				$imaged = imagepng($destImage, $newPath, (int)$quality);
+				$imaged = imagepng($destImage, $newPath, 7);
 				break;
 			case 'jpeg':
 			default:
-				$quality = (Configuration::get('PS_JPEG_QUALITY') === false ? 90 : Configuration::get('PS_JPEG_QUALITY'));
-				$imaged = imagejpeg($destImage, $newPath, (int)$quality);
+				$imaged = imagejpeg($destImage, $newPath, 90);
 				break;
 		}
 		imagedestroy($destImage);

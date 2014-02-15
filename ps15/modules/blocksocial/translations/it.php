@@ -4,7 +4,7 @@ global $_MODULE;
 $_MODULE = array();
 
 $_MODULE['<{blocksocial}prestashop>blocksocial_3c3fcc2aa9705117ce4b589ed5a72853'] = 'Blocco Social';
-$_MODULE['<{blocksocial}prestashop>blocksocial_012a4601e8b615cf6aea084a1b334889'] = 'Ti permette di aggiungere informazioni sui tuoi social network.';
+$_MODULE['<{blocksocial}prestashop>blocksocial_012a4601e8b615cf6aea084a1b334889'] = 'Ti permette di aggiungere informazioni sui social network';
 $_MODULE['<{blocksocial}prestashop>blocksocial_20015706a8cbd457cbb6ea3e7d5dc9b3'] = 'Configurazione aggiornata';
 $_MODULE['<{blocksocial}prestashop>blocksocial_f95f7cbc540537a1010c5b545eb67339'] = 'URL Facebook:';
 $_MODULE['<{blocksocial}prestashop>blocksocial_e62adc7f2754307e0a31f145e29f6be1'] = 'URL Twitter:';

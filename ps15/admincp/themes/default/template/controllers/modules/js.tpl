@@ -87,7 +87,7 @@
 		});
 
 		// Method to check / uncheck all modules checkbox
-		$('#moduleContainer').on("click", "#checkme", function()
+		$('#checkme').click(function()
 		{
 			if ($(this).attr("rel") == 'false')
 			{
@@ -321,8 +321,8 @@
 			catch(e){}
 			return false;
 		});
-
-		$('#moduleContainer').on("click", ".toggle_favorite", function()
+		
+		$('.toggle_favorite').live('click', function(event)
 	    {
 	      var el = $(this);
 	      var value_pref = el.data('value');

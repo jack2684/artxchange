@@ -3,7 +3,7 @@
 global $_MODULE;
 $_MODULE = array();
 
-$_MODULE['<{homeslider}prestashop>homeslider_9582801267616d564272ae7a4f622c93'] = 'Diaporama (image slider) pour votre page d\'accueil.';
+$_MODULE['<{homeslider}prestashop>homeslider_9582801267616d564272ae7a4f622c93'] = 'Carrousel d\'image (slider) pour votre page d\'accueil';
 $_MODULE['<{homeslider}prestashop>homeslider_c17aed434289cedd02618451e12c8da6'] = 'Ajouter un carrousel d\'images à votre page d\'accueil';
 $_MODULE['<{homeslider}prestashop>homeslider_17167898123700e4b4f9bc17c1e0608d'] = 'Configuration du carrousel';
 $_MODULE['<{homeslider}prestashop>homeslider_e933dc24fb245d863a43b4fefe9b45f5'] = 'Hauteur :';

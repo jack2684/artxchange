@@ -49,6 +49,7 @@ class ConfigurationTestCore
 			'mysql_support' => false,
 			'config_dir' => 'config',
 			'cache_dir' => 'cache',
+			'sitemap' => 'sitemap.xml',
 			'log_dir' => 'log',
 			'img_dir' => 'img',
 			'mails_dir' => 'mails',
@@ -58,8 +59,7 @@ class ConfigurationTestCore
 			'theme_cache_dir' => 'themes/'._THEME_NAME_.'/cache/',
 			'translations_dir' => 'translations',
 			'customizable_products_dir' => 'upload',
-			'virtual_products_dir' => 'download',
-			'files' => false
+			'virtual_products_dir' => 'download'
 		);
 	}
 
@@ -168,7 +168,7 @@ class ConfigurationTestCore
 			return false;
 		}
 		$dummy = rtrim($dir, '\\/').DIRECTORY_SEPARATOR.uniqid();
-		if (@file_put_contents($dummy, 'test'))
+		if (false && @file_put_contents($dummy, 'test'))
 		{
 			@unlink($dummy);
 			if (!$recursive)
@@ -318,22 +318,5 @@ class ConfigurationTestCore
 	public static function test_dom()
 	{
 		return extension_loaded('Dom');
-	}
-	
-	public static function test_files()
-	{
-		$files = array(
-			'/cache/smarty/compile/index.php',
-			'/classes/log/index.php',
-			'/classes/cache/index.php',
-			'/config/index.php',
-			'/tools/tar/Archive_Tar.php',
-			'/tools/pear/PEAR.php',
-			'/index.php'
-		);
-		foreach ($files as $file)
-			if (!file_exists(rtrim(_PS_ROOT_DIR_, DIRECTORY_SEPARATOR).str_replace('/', DIRECTORY_SEPARATOR, $file)))
-				return false;
-		return true;		
 	}
 }

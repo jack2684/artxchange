@@ -15,7 +15,7 @@ $_MODULE['<{statspersonalinfos}prestashop>statspersonalinfos_9fde3510abe63111086
 $_MODULE['<{statspersonalinfos}prestashop>statspersonalinfos_6602bbeb2956c035fb4cb5e844a4861b'] = 'Erklärung';
 $_MODULE['<{statspersonalinfos}prestashop>statspersonalinfos_ce2dd26ca39bdbc6444f4dad3fa5d5fe'] = 'Visieren Sie Ihre Zielgruppe an';
 $_MODULE['<{statspersonalinfos}prestashop>statspersonalinfos_74036f0101d2f3f9b082b8de981c18dc'] = 'Damit jede Nachricht ihre Wirkung erzielt, müssen Sie wissen,an wen sie gerichtet werden sollte.';
-$_MODULE['<{statspersonalinfos}prestashop>statspersonalinfos_daa0ad6a8b07a64f18b26e0f5e1255bd'] = 'Entscheidend für die Wahl der richtigen Mittelist es, sich an die richtige Zielgruppe zu wenden, um sie zu überzeugen.';
+$_MODULE['<{statspersonalinfos}prestashop>statspersonalinfos_daa0ad6a8b07a64f18b26e0f5e1255bd'] = 'Sich an die richtige Zielgruppe zu wendenist entscheidend für die Wahl der richtigen Mittel, um sie zu überzeugen.';
 $_MODULE['<{statspersonalinfos}prestashop>statspersonalinfos_4f7fe9e063af69bcd7f73d2011722c00'] = 'Es empfiehlt sich, eine Aktion auf eine Gruppe oder bestimmte Gruppen von Kunden zu begrenzen.';
 $_MODULE['<{statspersonalinfos}prestashop>statspersonalinfos_04cac0902d33f8d779111bddde436f03'] = 'Informationen zu registrierten Kunden helfen Ihnen dabei, das typische Kundenprofil genauer zu bestimmen, so dass Sie Ihre Sonderangebote unterschiedlichen Anforderungen anpassen können.';
 $_MODULE['<{statspersonalinfos}prestashop>statspersonalinfos_1b97d8091d4b383e8316b5bf85b2194c'] = 'Sie sollten diese Informationen zur Steigerung Ihrer Umsätze nutzen, indem Sie:';

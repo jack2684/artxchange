@@ -16,7 +16,7 @@ Details zu Ihrer Bestellung:
 
 Versand
 
-	Versanddienst: {carrier}
+	Spediteur: {carrier}
 
 	Lieferanschrift:
 

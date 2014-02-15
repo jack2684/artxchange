@@ -53,8 +53,6 @@ class StockAvailableCore extends ObjectModel
 	/** @var bool determine if a product is out of stock - it was previously in Product class */
 	public $out_of_stock = false;
 
-	protected static $cache_quantity_available;
-
 	/**
 	 * @see ObjectModel::$definition
 	 */
@@ -307,7 +305,11 @@ class StockAvailableCore extends ObjectModel
 		if (!Validate::isUnsignedId($id_product))
 			return false;
 
-		$existing_id = StockAvailable::getStockAvailableIdByProductId((int)$id_product, (int)$id_product_attribute, $id_shop);
+		if ($id_shop === null)
+			$id_shop = Context::getContext()->shop->id;
+
+		$existing_id = StockAvailable::getStockAvailableIdByProductId((int)$id_product, (int)$id_product_attribute, (int)$id_shop);
+
 		if ($existing_id > 0)
 		{
 			Db::getInstance()->update(
@@ -345,23 +347,18 @@ class StockAvailableCore extends ObjectModel
 		if ($id_product_attribute === null)
 			$id_product_attribute = 0;
 
-		$key = (int)$id_product.'-'.(int)$id_product_attribute.'-'.(int)$id_shop;
-		if (!isset(self::$cache_quantity_available[$key]))
-		{
-			$query = new DbQuery();
-			$query->select('SUM(quantity)');
-			$query->from('stock_available');
-	
-			// if null, it's a product without attributes
-			if ($id_product !== null)
-				$query->where('id_product = '.(int)$id_product);
-	
-			$query->where('id_product_attribute = '.(int)$id_product_attribute);
-			$query = StockAvailable::addSqlShopRestriction($query, $id_shop);
+		$query = new DbQuery();
+		$query->select('SUM(quantity)');
+		$query->from('stock_available');
 
-			self::$cache_quantity_available[$key] = (int)Db::getInstance(_PS_USE_SQL_SLAVE_)->getValue($query);
-		}
-		return self::$cache_quantity_available[$key];
+		// if null, it's a product without attributes
+		if ($id_product !== null)
+			$query->where('id_product = '.(int)$id_product);
+
+		$query->where('id_product_attribute = '.(int)$id_product_attribute);
+		$query = StockAvailable::addSqlShopRestriction($query, $id_shop);
+
+		return (int)Db::getInstance(_PS_USE_SQL_SLAVE_)->getValue($query);
 	}
 
 	/**
@@ -683,7 +680,7 @@ class StockAvailableCore extends ObjectModel
 
 		// if there is no $id_shop, gets the context one
 		// get shop group too
-		if ($shop === null || $shop === $context->shop->id)
+		if ($shop === null)
 		{
 			if (Shop::getContext() == Shop::CONTEXT_GROUP)
 				$shop_group = Shop::getContextShopGroup();

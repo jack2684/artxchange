@@ -1,11 +1,14 @@
 Salve {firstname} {lastname},
 
-Il tuo ordine presso {shop_name} con riferimento {order_name} è stato annullato.
+Riguardo al tuo ordine n.{id_order}:
 
-Puoi rivedere questo ordine e scaricare la tua fattura dalla sezione "Cronologia ordine" del tuo account cliccando su "Il mio account" nel nostro sito.
+Il tuo ordine è stato cancellato.
 
+Puoi rivedere questo ordine e scaricare la tua fattura dalla sezione "Cronologia ordine" del tuo account cliccando su "Il mio account" nel nostro sito web. 
 Se hai un account ospite, puoi seguire l'ordine in questa pagina: {guest_tracking_url}
 
 {shop_name} - {shop_url}
+
+
 
 {shop_url} powered by PrestaShop™

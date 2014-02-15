@@ -14,4 +14,4 @@ $_MODULE['<{blockcontactinfos}prestashop>blockcontactinfos_b17f3f4dcf653a5776792
 $_MODULE['<{blockcontactinfos}prestashop>blockcontactinfos_02d4482d332e1aef3437cd61c9bcc624'] = 'Свяжитесь с нами';
 $_MODULE['<{blockcontactinfos}prestashop>blockcontactinfos_2e006b735fbd916d8ab26978ae6714d4'] = 'Телефон:';
 $_MODULE['<{blockcontactinfos}prestashop>blockcontactinfos_d0398e90769ea6ed2823a3857bcc19ea'] = 'Тел.:';
-$_MODULE['<{blockcontactinfos}prestashop>blockcontactinfos_6a1e265f92087bb6dd18194833fe946b'] = 'Email';
+$_MODULE['<{blockcontactinfos}prestashop>blockcontactinfos_6a1e265f92087bb6dd18194833fe946b'] = 'Email:';

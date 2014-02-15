@@ -30,7 +30,7 @@
 	<fieldset>
 		<ul>
 			<li><span style="font-weight: bold; font-size: 13px; color:#000;">{l s='Name:'}</span> {$group->name[$language->id]}</li>
-		<li><span style="font-weight: bold; font-size: 13px; color:#000;">{l s='Discount: %.2f%%' sprintf=$group->reduction}</span></li>
+		<li><span style="font-weight: bold; font-size: 13px; color:#000;">{l s='Discount: %d%%' sprintf=$group->reduction}</span></li>
 		<li><span style="font-weight: bold; font-size: 13px; color:#000;">{l s='Current category discount:'}</span>
 			{if !$categorieReductions}
 				{l s='None'}
@@ -39,7 +39,7 @@
 					{foreach $categorieReductions key=key item=category }
 						<tr class="alt_row">
 							<td>{$category.path}</td>
-							<td>{l s='Discount: %.2f%%' sprintf=$category.reduction}</td>
+							<td>{l s='Discount: %d%%' sprintf=$category.reduction}</td>
 						</tr>
 					{/foreach}
 				</table>
@@ -58,7 +58,6 @@
 		</ul>
 	</fieldset>
 	<h2>{l s='Members of this customer group'}</h2>
-	<p>{l s='Limited to the first 100 customers.'} {l s='Please use filters to narrow your search.'}</p>
 	{$customerList}
 
 {/block}

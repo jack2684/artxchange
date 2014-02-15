@@ -14,42 +14,34 @@
 			<td>&nbsp;</td>
 		</tr>
 		<tr>
-			<td align="left">Gl&uuml;ckwunsch! <b>{shop_name}</b> hat eine neue Bestellung erhalten von<br />
-			<strong style="color:{color};">{firstname} {lastname} ({email})</strong>.</td>
+			<td align="left">Sie haben eine neue Bestellung erhalten von <strong style="color: #db3484;">{firstname} {lastname}</strong>.</td>
 		</tr>
 		<tr>
 			<td>&nbsp;</td>
 		</tr>
 		<tr>
-			<td align="left" style="background-color:{color}; color: #fff; font-size: 12px; font-weight: bold; padding: 0.5em 1em;">Einzelheiten zur Bestellung</td>
+			<td align="left" style="background-color: #db3484; color: #fff; font-size: 12px; font-weight: bold; padding: 0.5em 1em;">Einzelheiten zur Bestellung</td>
 		</tr>
 		<tr>
 			<td>&nbsp;</td>
 		</tr>
 		<tr>
-			<td align="left">
-			<p>Bestell-Nr. <strong><span style="color:{color};">{order_name}</span> ausgef&uuml;hrt am {date}</strong></p>
-
-			<p><br />
-			Zahlung: <strong>{payment}</strong></p>
-			</td>
+			<td align="left">Bestellung: <strong><span style="color: #db3484;">{order_name}</span> ausgef&uuml;hrt am {date}</strong><br />
+			Zahlung: <strong>{payment}</strong></td>
 		</tr>
 		<tr>
 			<td>&nbsp;</td>
 		</tr>
 		<tr>
-			<td align="left">
-			<table style="width: 100%; font-family: Verdana,sans-serif; font-size: 11px; color: #374953;"><!-- Title -->
+			<td align="left">{items}
+			<table style="width: 100%; font-family: Verdana,sans-serif; font-size: 11px; color: #374953;">
 				<tbody>
 					<tr style="background-color: #b9babe; text-align: center;">
-						<th style="width: 15%; padding: 0.6em 0;">Artikelnr.</th>
-						<th style="width: 35%; padding: 0.6em 0;">Produkt</th>
+						<th style="width: 15%; padding: 0.6em 0;">Referenz</th>
+						<th>Produkt</th>
 						<th style="width: 15%; padding: 0.6em 0;">St&uuml;ckpreis</th>
 						<th style="width: 15%; padding: 0.6em 0;">Menge</th>
 						<th style="width: 20%; padding: 0.6em 0;">Gesamtpreis</th>
-					</tr>
-					<tr>
-						<td colspan="5">{items}</td>
 					</tr>
 					<tr style="text-align: right;">
 						<td colspan="4" style="background-color: #b9babe; padding: 0.6em 0.4em;">Produkte</td>
@@ -68,8 +60,8 @@
 						<td style="background-color: #dde2e6; padding: 0.6em 0.4em;">{total_shipping}</td>
 					</tr>
 					<tr style="text-align: right; font-weight: bold;">
-						<td colspan="4" style="background-color: #b9babe; padding: 0.6em 0.4em;">Gesamt bezahlt</td>
-						<td style="background-color: #b9babe; padding: 0.6em 0.4em;">{total_paid}</td>
+						<td colspan="4" style="background-color: #f1aecf; padding: 0.6em 0.4em;">Gesamt bezahlt</td>
+						<td style="background-color: #f1aecf; padding: 0.6em 0.4em;">{total_paid}</td>
 					</tr>
 				</tbody>
 			</table>
@@ -79,13 +71,13 @@
 			<td>&nbsp;</td>
 		</tr>
 		<tr>
-			<td align="left" style="background-color: {color}; color: #fff; font-size: 12px; font-weight: bold; padding: 0.5em 1em;">Versand</td>
+			<td align="left" style="background-color: #db3484; color: #fff; font-size: 12px; font-weight: bold; padding: 0.5em 1em;">Versand</td>
 		</tr>
 		<tr>
 			<td>&nbsp;</td>
 		</tr>
 		<tr>
-			<td align="left">Versanddienst: <strong>{carrier}</strong></td>
+			<td align="left">Lieferer: <strong>{carrier}</strong></td>
 		</tr>
 		<tr>
 			<td>&nbsp;</td>
@@ -95,8 +87,8 @@
 			<table style="width: 100%; font-family: Verdana,sans-serif; font-size: 11px; color: #374953;">
 				<tbody>
 					<tr style="background-color: #b9babe; text-transform: uppercase;">
-						<th style="text-align: left; padding: 0.3em 1em;">Lieferanschrift</th>
-						<th style="text-align: left; padding: 0.3em 1em;">Rechnungsanschrift</th>
+						<th style="text-align: left; padding: 0.3em 1em;">LIEFERadressE</th>
+						<th style="text-align: left; padding: 0.3em 1em;">RECHNUNGSadressE</th>
 					</tr>
 					<tr>
 						<td style="padding: 0.5em 0 0.5em 0.5em; background-color: #ebecee;">{delivery_block_html}</td>
@@ -110,7 +102,7 @@
 			<td>&nbsp;</td>
 		</tr>
 		<tr>
-			<td align="left" style="background-color:{color}; color: #fff; font-size: 12px; font-weight: bold; padding: 0.5em 1em;">Kundennachricht</td>
+			<td align="left" style="background-color: #db3484; color: #fff; font-size: 12px; font-weight: bold; padding: 0.5em 1em;">Kundennachricht</td>
 		</tr>
 		<tr>
 			<td>&nbsp;</td>
@@ -122,7 +114,7 @@
 			<td>&nbsp;</td>
 		</tr>
 		<tr>
-			<td align="center" style="font-size: 10px; border-top: 1px solid #D9DADE;"><a href="versions/1.4.1.0/mails/en/{shop_url}" style="color:{color}; font-weight: bold; text-decoration: none;">{shop_name}</a> powered by <a href="http://www.prestashop.com/" style="text-decoration: none; color:{color};">PrestaShop</a></td>
+			<td align="center" style="font-size: 10px; border-top: 1px solid #D9DADE;"><a href="versions/1.4.1.0/mails/en/%7Bshop_url%7D" style="color: #db3484; font-weight: bold; text-decoration: none;">{shop_name}</a> powered by <a href="http://www.prestashop.com/" style="text-decoration: none; color: #374953;">PrestaShop&trade;</a></td>
 		</tr>
 	</tbody>
 </table>

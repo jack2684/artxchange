@@ -25,7 +25,7 @@
 
 <script type="text/javascript">
 var Customer = new Object();
-var product_url = '{$link->getAdminLink('AdminProducts', true)|addslashes}';
+var product_url = '{$link->getAdminLink('AdminProducts', true)}';
 var ecotax_tax_excl = parseFloat({$ecotax_tax_excl});
 $(document).ready(function () {
 	Customer = {
@@ -56,7 +56,7 @@ $(document).ready(function () {
 			Customer.showLoader();
 			jQuery.ajax({
 				"type": "POST",
-				"url": "{$link->getAdminLink('AdminCustomers')|addslashes}",
+				"url": "{$link->getAdminLink('AdminCustomers')}",
 				"async": true,
 				"dataType": "json",
 				"data": {
@@ -178,7 +178,7 @@ $(document).ready(function () {
 	</tr>
 	<tr {if !$ps_use_ecotax} style="display:none;"{/if}>
 		<td class="col-left">
-			{include file="controllers/products/multishop/checkbox.tpl" field="ecotax" type="default"}
+			{include file="controllers/products/multishop/checkbox.tpl" field="ecot" type="default"}
 			<label>{l s='Eco-tax (tax incl.):'}</label>
 		</td>
 		<td>
@@ -223,7 +223,7 @@ $(document).ready(function () {
 	<tr>
 		<td class="col-left"><label><b>{l s='Final retail price:'}</b></label></td>
 		<td>
-			<span>
+			<span {if !$country_display_tax_label}style="display:none"{/if} >
 			{$currency->prefix}<span id="finalPrice" style="font-weight: bold;">0.00</span>{$currency->suffix}<span {if $ps_tax}style="display:none;"{/if}> ({l s='tax incl.'})</span>
 			</span>
 			<span {if $ps_tax}style="display:none;"{/if} >
@@ -249,7 +249,7 @@ $(document).ready(function () {
 	<script type="text/javascript">
 	var product_prices = new Array();
 	{foreach from=$combinations item='combination'}
-		product_prices['{$combination.id_product_attribute}'] = '{$combination.price|@addcslashes:'\''}';
+		product_prices['{$combination.id_product_attribute}'] = '{$combination.price}';
 	{/foreach}
 	</script>
 	<div id="add_specific_price" style="display: none;">
@@ -375,7 +375,7 @@ $(document).ready(function () {
 		<div class="margin-form">
 			<input type="text" name="sp_reduction" value="0.00" size="11" />
 			<select name="sp_reduction_type">
-				<option selected="selected">-</option>
+				<option selected="selected">---</option>
 				<option value="amount">{l s='Amount'}</option>
 				<option value="percentage">{l s='Percentage'}</option>
 			</select>

@@ -10,7 +10,6 @@ $_MODULE['<{homefeatured}prestashop>homefeatured_6af91e35dff67a43ace060d1d57d5d1
 $_MODULE['<{homefeatured}prestashop>homefeatured_f4f70727dc34561dfde1a3c529b6205c'] = 'Настройки';
 $_MODULE['<{homefeatured}prestashop>homefeatured_4cad5369b27bff0ba256a479a575eb6f'] = 'Для того, чтобы добавить популярные товары на главную страницу, просто добавьте их в \"домашнюю\" категорию.';
 $_MODULE['<{homefeatured}prestashop>homefeatured_87ae431d2f8285c91660bd00d330a257'] = 'Количество отображаемых товаров';
-$_MODULE['<{homefeatured}prestashop>homefeatured_b263d5a770ca788195f4038d1a0ea6fc'] = 'Укажите количество товаров, которое Вы хотели бы поместить на домашнюю страницу (количество по умолчанию:8).';
 $_MODULE['<{homefeatured}prestashop>homefeatured_c9cc8cce247e49bae79f15173ce97354'] = 'Сохранить';
 $_MODULE['<{homefeatured}prestashop>homefeatured_ca7d973c26c57b69e0857e7a0332d545'] = 'Избранные товары';
 $_MODULE['<{homefeatured}prestashop>homefeatured_03c2e7e41ffc181a4e84080b4710e81e'] = 'Новые';

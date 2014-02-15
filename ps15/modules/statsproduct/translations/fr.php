@@ -6,7 +6,7 @@ $_MODULE = array();
 $_MODULE['<{statsproduct}prestashop>statsproduct_78e454064a7d3a7755a011a3b79f31a7'] = 'Détail produit';
 $_MODULE['<{statsproduct}prestashop>statsproduct_285201dab507840d082d58dc13602b00'] = 'Propose des statistiques détaillées pour chaque produit';
 $_MODULE['<{statsproduct}prestashop>statsproduct_3ec365dd533ddb7ef3d1c111186ce872'] = 'Détails';
-$_MODULE['<{statsproduct}prestashop>statsproduct_981a6013008c8f4b75836b0f415b05b8'] = 'Total des achats';
+$_MODULE['<{statsproduct}prestashop>statsproduct_981a6013008c8f4b75836b0f415b05b8'] = 'Total des achats :';
 $_MODULE['<{statsproduct}prestashop>statsproduct_af7cba0f47dac2ad181cc0471979a746'] = 'CA (hors taxes) :';
 $_MODULE['<{statsproduct}prestashop>statsproduct_b262bbde88b3b8dca3b27d730aca69bf'] = 'Total des consultations';
 $_MODULE['<{statsproduct}prestashop>statsproduct_bebbab2c1ac732ccef4181f51ed52967'] = 'Taux de conversion';
@@ -27,7 +27,7 @@ $_MODULE['<{statsproduct}prestashop>statsproduct_0173374ac20f5843d58b553d5b226ef
 $_MODULE['<{statsproduct}prestashop>statsproduct_b1c94ca2fbc3e78fc30069c8d0f01680'] = 'Toutes';
 $_MODULE['<{statsproduct}prestashop>statsproduct_818f7defe18dbc97da82d054831df2ad'] = 'Cliquez sur un produit pour accéder à ses statistiques.';
 $_MODULE['<{statsproduct}prestashop>statsproduct_6ccf03bc05e4b749b74b5d577c7e7d3a'] = 'Produits disponibles';
-$_MODULE['<{statsproduct}prestashop>statsproduct_12d3c7a4296542c62474856ec452c045'] = 'Ref.';
+$_MODULE['<{statsproduct}prestashop>statsproduct_12d3c7a4296542c62474856ec452c045'] = 'Réf.';
 $_MODULE['<{statsproduct}prestashop>statsproduct_49ee3087348e8d44e1feda1917443987'] = 'Nom';
 $_MODULE['<{statsproduct}prestashop>statsproduct_7bd5825a187064017975513b95d7f7de'] = 'Quantité disponible à la vente';
 $_MODULE['<{statsproduct}prestashop>statsproduct_6602bbeb2956c035fb4cb5e844a4861b'] = 'Guide';
@@ -38,4 +38,3 @@ $_MODULE['<{statsproduct}prestashop>statsproduct_e22269bb51f9f2394e148716babbafb
 $_MODULE['<{statsproduct}prestashop>statsproduct_5e9613e58f3bdbc89b1fef07274c0877'] = 'Visites (x100)';
 $_MODULE['<{statsproduct}prestashop>statsproduct_287234a1ff35a314b5b6bc4e5828e745'] = 'Attributs';
 $_MODULE['<{statsproduct}prestashop>statsproduct_27ce7f8b5623b2e2df568d64cf051607'] = 'Stock';
-$_MODULE['<{statsproduct}prestashop>statsproduct_20b9641efab51dee7d27eed2b6773ef0'] = 'Si au contraire un produit connait un grand nombre de consultations mais est très peu acheté : nous vous conseillons alors de vérifier à nouveau ou de modifier les informations, description ou photographie(s) présentes dans sa fiche produit.';
