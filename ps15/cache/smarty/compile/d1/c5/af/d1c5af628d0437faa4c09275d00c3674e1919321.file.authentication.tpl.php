@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 11:27:02
+<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 11:45:03
          compiled from "/var/www/artxchange/ps15/themes/leoconv/authentication.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:134630695252ff9556b1f983-60559083%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd1c5af628d0437faa4c09275d00c3674e1919321' => 
     array (
       0 => '/var/www/artxchange/ps15/themes/leoconv/authentication.tpl',
-      1 => 1376752554,
+      1 => 1392482470,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_52ff95572e2475_41165779',
   'variables' => 
   array (
     'countries' => 0,
@@ -53,8 +55,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'PS_REGISTRATION_PROCESS_TYPE' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_52ff95572e2475_41165779',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52ff95572e2475_41165779')) {function content_52ff95572e2475_41165779($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/artxchange/ps15/tools/smarty/plugins/modifier.escape.php';
 ?>
@@ -578,7 +578,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 	<?php echo $_smarty_tpl->tpl_vars['HOOK_CREATE_ACCOUNT_TOP']->value;?>
 
 	<fieldset class="account_creation">
-		<h3><?php echo smartyTranslate(array('s'=>'Your personal information'),$_smarty_tpl);?>
+		<h3><?php echo smartyTranslate(array('s'=>'Your personal information mark'),$_smarty_tpl);?>
 </h3>
 		<div class="radio required control-group">
 			<label class="control-label"><?php echo smartyTranslate(array('s'=>'Title'),$_smarty_tpl);?>

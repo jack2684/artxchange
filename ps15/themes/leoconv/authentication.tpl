@@ -411,7 +411,7 @@ $(document).ready(function() {
 <form action="{$link->getPageLink('authentication', true)}" method="post" id="account-creation_form" class="std form-horizontal">
 	{$HOOK_CREATE_ACCOUNT_TOP}
 	<fieldset class="account_creation">
-		<h3>{l s='Your personal information'}</h3>
+		<h3>{l s='Your personal information mark'}</h3>
 		<div class="radio required control-group">
 			<label class="control-label">{l s='Title'}</label>
 			<div class="controls">
