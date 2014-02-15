@@ -63,7 +63,7 @@ class Tools extends ToolsCore
 
 		header('Refresh: 5; url='.$url);
 		echo '<h1>Redirection automatique dans 5 secondes</h1><a href='.$url.'>'.$url.'</a>';
-		exit;``
+		exit;
 	}
 
 	public static function redirectLink($url)

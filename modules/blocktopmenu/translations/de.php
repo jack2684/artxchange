@@ -20,7 +20,9 @@ $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_f4f70727dc34561dfde1a3c529b6205
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_9dea4016dbcc290b773ab2fae678aaa8'] = 'Artikel';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_c7da501f54544eba6787960200d9efdb'] = 'Content Management System';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_ec136b444eede3bc85639fac0dd06229'] = 'Lieferant';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_ecf253735ac0cba84a9d2eeff1f1b87c'] = 'Alle Lieferanten';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_c0bd7654d5b278e65f21cf4e9153fdb4'] = 'Hersteller';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_bf24faeb13210b5a703f3ccef792b000'] = 'Alle Hersteller';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_af1b98adf7f686b84cd0b443e022b7a0'] = 'Kategorien';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_12a521af593422cd508f7707662c9eb2'] = 'Shops';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_068f80c7519d0528fb08e82137a72131'] = 'Produkte';
@@ -44,3 +46,5 @@ $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_4443702c8a13a65ac66d074b7a82af9
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_004bf6c9a40003140292e97330236c53'] = 'Aktion';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_93cba07454f06a4a960172bbd6e2a435'] = 'Ja';
 $_MODULE['<{blocktopmenu}prestashop>blocktopmenu_bafd7322c6e97d25b6299b5d6fe8920b'] = 'Nein';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_3ee3549ff0c93372a730749f784e9438'] = 'Sie können jeweils nur einen Menüpunkt auswählen.';
+$_MODULE['<{blocktopmenu}prestashop>blocktopmenu_e1b11c03820641dd1d1441bf68898d08'] = 'Position ändern';

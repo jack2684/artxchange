@@ -13,7 +13,7 @@ $_MODULE['<{blocklayered}prestashop>blocklayered_7b250cb374c12c42a75227ba75df777
 $_MODULE['<{blocklayered}prestashop>blocklayered_a4020753b3e63fd8a1d0c0b2b33fc999'] = 'Spezifische Format für Meta-Titel';
 $_MODULE['<{blocklayered}prestashop>blocklayered_b3786b970611c1a3809dd51b630812a7'] = '\"%s\" ist keine gültige URL';
 $_MODULE['<{blocklayered}prestashop>blocklayered_c3ef60194d18cf4026d22051b3a19428'] = 'indizierbar:';
-$_MODULE['<{blocklayered}prestashop>blocklayered_a075d40d1a15460220cbf564b7b9b591'] = 'Verwenden Sie in der URL dieses durch das Modul Facetten-Navigation generierte Merkmal';
+$_MODULE['<{blocklayered}prestashop>blocklayered_a075d40d1a15460220cbf564b7b9b591'] = 'Verwenden Sie in der URL dieses vom Modul Facetten-Navigation generierte Merkmal';
 $_MODULE['<{blocklayered}prestashop>blocklayered_ccc12c5568381293a27db0232877937b'] = 'Bezeichnung der Filter-Vorlage erforderlich (Feld darf nicht leer sein)';
 $_MODULE['<{blocklayered}prestashop>blocklayered_817c37b9c1f5cd4a450dad384e63e6c7'] = 'Ihre Filter';
 $_MODULE['<{blocklayered}prestashop>blocklayered_3185cefd67b575e582063148e4f15860'] = 'wurde erfolgreich aktualisiert.';
@@ -26,11 +26,11 @@ $_MODULE['<{blocklayered}prestashop>blocklayered_df2bbc994d10995dcffdf96dbb7acbb
 $_MODULE['<{blocklayered}prestashop>blocklayered_ad3e7eb269d8ba0ac388267627f45b5a'] = 'Indizierung läuft. Bitte verlassen Sie diese Seite nicht';
 $_MODULE['<{blocklayered}prestashop>blocklayered_5e2420d2318025812dc3e231ddb66b0b'] = 'Index aller fehlenden Preise';
 $_MODULE['<{blocklayered}prestashop>blocklayered_9612e005e96ad32b8830be4d0377e7e6'] = 'Gesamten Preisindex neu erstellen';
-$_MODULE['<{blocklayered}prestashop>blocklayered_d47f700b6db025d98cae0b340ed847e9'] = 'Build-Attribut-Index';
+$_MODULE['<{blocklayered}prestashop>blocklayered_d47f700b6db025d98cae0b340ed847e9'] = 'Attribut-Index erstellen';
 $_MODULE['<{blocklayered}prestashop>blocklayered_341ce134fbec9978d185ff533931b1b3'] = 'URL-Index erstellen';
-$_MODULE['<{blocklayered}prestashop>blocklayered_53795c3624ae2361363780589aa2aa42'] = 'Sie können einen Cron-Job erstellen, umden Preisindex zu aktualisieren  wenn Sie dieser URL folgen:';
-$_MODULE['<{blocklayered}prestashop>blocklayered_94f6d9bfb2c36037040b5764e73dca47'] = 'Sie können einen Cron-Job erstellen, der den URL-Index neu erstellt, wenn Sie dieser URL folgen:';
-$_MODULE['<{blocklayered}prestashop>blocklayered_e43b32b88c77e49f06144cd1ffaeba96'] = 'Sie können einen Cron-Job erstellen, der den Attribut-Index neu erstellt, wenn Sie dieser URL folgen:';
+$_MODULE['<{blocklayered}prestashop>blocklayered_53795c3624ae2361363780589aa2aa42'] = 'Um einen Cron-Job zu erstellen, der den Preisindex automatisch aktualisiert, rufen Sie einfach die folgende URL auf:';
+$_MODULE['<{blocklayered}prestashop>blocklayered_94f6d9bfb2c36037040b5764e73dca47'] = 'Um einen Cron-Job zu erstellen, der den URL-Index automatisch aktualisiert, rufen Sie einfach die folgende URL auf:';
+$_MODULE['<{blocklayered}prestashop>blocklayered_e43b32b88c77e49f06144cd1ffaeba96'] = 'Um einen Cron-Job zu erstellen, der den Attribut-Index automatisch aktualisiert, rufen Sie einfach die folgende URL auf:';
 $_MODULE['<{blocklayered}prestashop>blocklayered_16349835364cf839e6670b0de7da6362'] = 'Die Reindizierung sollte am Besten über Nacht erfolgen.';
 $_MODULE['<{blocklayered}prestashop>blocklayered_56fc8142961f1f3e9f9ec0c178881b69'] = '(läuft)';
 $_MODULE['<{blocklayered}prestashop>blocklayered_4c0d1a1d7b01bec7b820c0655dda7b1f'] = 'URL-Indexaufbau beendet';
@@ -63,12 +63,6 @@ $_MODULE['<{blocklayered}prestashop>blocklayered_64646db703ca003a37bd1e73977a3a4
 $_MODULE['<{blocklayered}prestashop>blocklayered_d758a9754eb9f36db05c22ad0c77e38e'] = 'Wählen Sie eine oder mehrere Kategorien mit dieser Filter-Vorlage';
 $_MODULE['<{blocklayered}prestashop>blocklayered_5965d2ce192837f00d743d8a674382c1'] = 'Drücken Sie \"Diese Auswahl speichern\" oder schließen das Fenster zum Speichern';
 $_MODULE['<{blocklayered}prestashop>blocklayered_fa03eb688ad8aa1db593d33dabd89bad'] = 'Stammverzeichnis';
-$_MODULE['<{blocklayered}prestashop>blocklayered_8cf04a9734132302f96da8e113e80ce5'] = 'Startseite';
-$_MODULE['<{blocklayered}prestashop>blocklayered_b56c3bda503a8dc4be356edb0cc31793'] = 'Alle schließen';
-$_MODULE['<{blocklayered}prestashop>blocklayered_5ffd7a335dd836b3373f5ec570a58bdc'] = 'Alle öffnen';
-$_MODULE['<{blocklayered}prestashop>blocklayered_5e9df908eafa83cb51c0a3720e8348c7'] = 'Alle überprüfen';
-$_MODULE['<{blocklayered}prestashop>blocklayered_9747d23c8cc358c5ef78c51e59cd6817'] = 'Alle deaktivieren';
-$_MODULE['<{blocklayered}prestashop>blocklayered_d0f06038b6b3aa5edc07c7a6fd3ca3f9'] = 'Kategorie suchen';
 $_MODULE['<{blocklayered}prestashop>blocklayered_72dd03f11489ff6f604a4eb57c957202'] = 'Diese Auswahl speichern';
 $_MODULE['<{blocklayered}prestashop>blocklayered_2e527847e8c785f3fd99651f64006798'] = 'Schritt 2/3 - Wählen Sie Filter aus';
 $_MODULE['<{blocklayered}prestashop>blocklayered_3488a51eb7f723d65daeff912e69b177'] = 'Ausgewählte Filter';

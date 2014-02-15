@@ -21,7 +21,6 @@ $_MODULE['<{cheque}prestashop>cheque_b17f3f4dcf653a5776792498a9b44d6a'] = 'Aktua
 $_MODULE['<{cheque}prestashop>validation_e2b7dec8fa4b498156dfee6e4c84b156'] = 'Zahlungsart nicht verfügbar';
 $_MODULE['<{cheque}prestashop>payment_execution_8520b283b0884394b13b80d5689628b3'] = 'Scheckzahlung';
 $_MODULE['<{cheque}prestashop>payment_execution_f1d3b424cd68795ecaa552883759aceb'] = 'Bestellsumme';
-$_MODULE['<{cheque}prestashop>payment_execution_879f6b8877752685a966564d072f498f'] = 'Ihr Warenkorb ist leer.';
 $_MODULE['<{cheque}prestashop>payment_execution_060bf2d587991d8f090a1309b285291c'] = 'Scheck';
 $_MODULE['<{cheque}prestashop>payment_execution_76ca011e4772bfcce26aecd42c598510'] = 'Sie haben die Bezahlung per Scheck gewählt.';
 $_MODULE['<{cheque}prestashop>payment_execution_c884ed19483d45970c5bf23a681e2dd2'] = 'Kurze Zusammenfassung Ihrer Bestellung:';

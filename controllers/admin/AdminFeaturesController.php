@@ -142,7 +142,7 @@ class AdminFeaturesControllerCore extends AdminController
 			$this->_where = sprintf('AND `id_feature` = %d', (int)$id);
 
 			// get list and force no limit clause in the request
-			$this->getList($this->context->language->id);
+			$this->getList($this->context->language->id, 'id_feature_value', 'ASC');
 
 			// Render list
 			$helper = new HelperList();
@@ -151,8 +151,6 @@ class AdminFeaturesControllerCore extends AdminController
 			$helper->shopLinkType = '';
 			$helper->identifier = $this->identifier;
 			$helper->toolbar_scroll = false;
-			$helper->orderBy = 'position';
-			$helper->orderWay = 'ASC';
 			$helper->currentIndex = self::$currentIndex;
 			$helper->token = $this->token;
 			$helper->table = $this->table;
@@ -321,6 +319,7 @@ class AdminFeaturesControllerCore extends AdminController
 	 */
 	public function initContent()
 	{
+		$this->initTabModuleList();
 		if (Feature::isFeatureActive())
 		{
 			// toolbar (save, cancel, new, ..)
@@ -455,7 +454,7 @@ class AdminFeaturesControllerCore extends AdminController
 	 * AdminController::getList() override
 	 * @see AdminController::getList()
 	 */
-	public function getList($id_lang, $order_by = null, $order_way = null, $start = 0, $limit = null, $id_lang_shop = false)
+	public function getList($id_lang, $order_by = null, $order_way = null, $start = 0, $limit = false, $id_lang_shop = false)
 	{
 		if ($this->table == 'feature_value')
 			$this->_where .= ' AND a.custom = 0';

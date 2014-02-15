@@ -30,4 +30,4 @@ $_MODULE['<{newsletter}prestashop>newsletter_a60401e616125189d78605b2ddd7ff45'] 
 $_MODULE['<{newsletter}prestashop>newsletter_769050278dda5e93374adda37811e413'] = 'Solo iscritti alla newsletter senza un account nel negozio saranno esportati.';
 $_MODULE['<{newsletter}prestashop>newsletter_dbb392a2dc9b38722e69f6032faea73e'] = 'Esporta file. CSV';
 $_MODULE['<{newsletter}prestashop>newsletter_4713ef5f2d6fc1e8f088c850e696a04b'] = 'Esporta clienti';
-$_MODULE['<{newsletter}prestashop>newsletter_2a96d838a5e89b86792669f0ab422987'] = 'Genera un file. CSV dai dati account clienti.';
+$_MODULE['<{newsletter}prestashop>newsletter_2a96d838a5e89b86792669f0ab422987'] = 'Genera un file .CSV dai dati account clienti.';

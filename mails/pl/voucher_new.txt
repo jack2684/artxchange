@@ -1,14 +1,14 @@
-Hi {firstname} {lastname},
+Witaj {firstname} {lastname},
 
-This is to inform you about the creation of a voucher.
+Chcemy poinformować Ciebie, że utworzony został nowy bon.
 
-Here is the code of your voucher : {voucher_num}.
+Oto kod Twojego bonu: {voucher_num}.
 
-Simply copy/paste this code during the payment process for your next order.
+Po prostu skopiuj/wklej ten kod podczas procesu płatności za swoje kolejne zamówienie.
 
-Thank you for shopping at {shop_name}.
+Dziękujemy za zakupy w {shop_name}.
 
 {shop_name} - {shop_url}
 
 
-{shop_url} powered by PrestaShop™
+{shop_url} wspierany przez PrestaShop™

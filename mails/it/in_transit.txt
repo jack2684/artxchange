@@ -1,16 +1,15 @@
 Salve {firstname} {lastname},
 
-Il tuo ordine è attualmente in viaggio.
+Grazie per aver ordinato presso {shop_name}!
 
-Puoi controllare la posizione del tuo pacco cliccando nel link seguente: {followup}
+Il tuo ordine con riferimento {order_name} è attualmente in viaggio.
 
-Puoi anche rivedere questo ordine e scaricare la tua fattura dalla sezione "Cronologia ordine" del tuo account cliccando su "Il mio account" nel nostro sito web. 
+Puoi controllare la posizione del tuo pacco cliccando il seguente link: {followup}
+
+Puoi anche rivedere questo ordine e scaricare la tua fattura dalla sezione "Cronologia ordine" del tuo account cliccando su "Il mio account" nel nostro sito.
+
 Se hai un account ospite, puoi seguire l'ordine in questa pagina: {guest_tracking_url}
 
-Grazie per aver acquistato con {shop_name}!
-
 {shop_name} - {shop_url}
-
-
 
 {shop_url} powered by PrestaShop™

@@ -1,9 +1,16 @@
-Il tuo messaggio è stato correttamente inviato al nostro Servizio Clienti.
+Salve,
+
+Il tuo messaggio è stato correttamente inviato al servizio clienti di {shop_name}.
 
 Il tuo messaggio:
 
 {message}
 
+Riferimento ordine : {order_name}
+
+Prodotto: {product_name}
+
+File allegato : {attached_file}
 
 Risponderemo quanto prima.
 

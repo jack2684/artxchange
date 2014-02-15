@@ -11,6 +11,6 @@ $_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_20015706a8cbd45
 $_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_d8b716e21c731aba4b94ba9f3ac4858c'] = 'Message concernant la confidentialité des données clients';
 $_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_03e1a999dcdb904300ee1b1e767c83c9'] = 'Le message sera affiché sur le formulaire de création de compte.';
 $_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_b51d73fb490ad1245fa9b87042bbbbb7'] = 'Astuce : si votre texte est trop long pour être affiché entièrement sur le formulaire d\'inscription sans gêner la navigation, vous pouvez à la place indiquer un lien vers une des pages que vous avez créées via la page \"CMS\".';
-$_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_c9cc8cce247e49bae79f15173ce97354'] = 'Sauvegarder';
+$_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_c9cc8cce247e49bae79f15173ce97354'] = 'Enregistrer';
 $_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_fb32badede7c8613fddb8502d847c18b'] = 'Veuillez accepter nos conditions concernant la confidentialité des données clients, en cochant la case ci-dessous.';
 $_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_fb0440f9ca32a8b49eded51b09e70821'] = 'Confidentialité des données clients';

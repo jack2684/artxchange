@@ -8,7 +8,7 @@ $_MODULE['<{statsnewsletter}prestashop>statsnewsletter_02fdcd14459a8b5b8b0e3ac87
 $_MODULE['<{statsnewsletter}prestashop>statsnewsletter_61a898af87607e3f4d41c3613d8761c7'] = 'Регистрация клиентов:';
 $_MODULE['<{statsnewsletter}prestashop>statsnewsletter_7fe462207f98012d9ff00cf0e6633c94'] = 'Регистрация посетителей:';
 $_MODULE['<{statsnewsletter}prestashop>statsnewsletter_64342cd480b27dfeefb08bace6e82fdc'] = 'Оба:';
-$_MODULE['<{statsnewsletter}prestashop>statsnewsletter_998e4c5c80f27dec552e99dfed34889a'] = 'Экспорт CSV';
+$_MODULE['<{statsnewsletter}prestashop>statsnewsletter_998e4c5c80f27dec552e99dfed34889a'] = 'Export CSV';
 $_MODULE['<{statsnewsletter}prestashop>statsnewsletter_116858de0aefceca03e4f05150e5084b'] = 'Модуль Блок Рассылки  должен быть установлен';
 $_MODULE['<{statsnewsletter}prestashop>statsnewsletter_cf74c2815ab62be1efa55a4a5d3f46a4'] = 'Статистика рассылки';
 $_MODULE['<{statsnewsletter}prestashop>statsnewsletter_4b6f7d34a58ba399f077685951d06738'] = 'Клиенты';

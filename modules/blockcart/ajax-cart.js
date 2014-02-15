@@ -131,6 +131,9 @@ var ajaxCart = {
 			success: function(jsonData)
 			{
 				ajaxCart.updateCart(jsonData);
+			},
+			error: function(XMLHttpRequest, textStatus, errorThrown) {
+				alert("TECHNICAL ERROR: \n\nDetails:\nError thrown: " + XMLHttpRequest + "\n" + 'Text status: ' + textStatus);
 			}
 		});
 	},
@@ -175,7 +178,7 @@ var ajaxCart = {
 	},
 
 	// add a product in the cart via ajax
-	add : function(idProduct, idCombination, addedFromProductPage, callerElement, quantity, whishlist){
+	add : function(idProduct, idCombination, addedFromProductPage, callerElement, quantity, wishlist){
 		if (addedFromProductPage && !checkCustomizations())
 		{
 			alert(fieldRequired);
@@ -204,9 +207,9 @@ var ajaxCart = {
 			data: 'controller=cart&add=1&ajax=true&qty=' + ((quantity && quantity != null) ? quantity : '1') + '&id_product=' + idProduct + '&token=' + static_token + ( (parseInt(idCombination) && idCombination != null) ? '&ipa=' + parseInt(idCombination): ''),
 			success: function(jsonData,textStatus,jqXHR)
 			{
-				// add appliance to whishlist module
-				if (whishlist && !jsonData.errors)
-					WishlistAddProductCart(whishlist[0], idProduct, idCombination, whishlist[1]);
+				// add appliance to wishlist module
+				if (wishlist && !jsonData.errors)
+					WishlistAddProductCart(wishlist[0], idProduct, idCombination, wishlist[1]);
 
 				// add the picture to the cart
 				var $element = $(callerElement).parent().parent().find('a.product_image img,a.product_img_link img');
@@ -214,25 +217,46 @@ var ajaxCart = {
 					$element = $('#bigpic');
 				var $picture = $element.clone();
 				var pictureOffsetOriginal = $element.offset();
+				pictureOffsetOriginal.right = $(window).innerWidth() - pictureOffsetOriginal.left - $element.width();
 
-				if ($picture.size())
-					$picture.css({'position': 'absolute', 'top': pictureOffsetOriginal.top, 'left': pictureOffsetOriginal.left});
+				if ($picture.length)
+				{
+					$picture.css({
+						position: 'absolute',
+						top: pictureOffsetOriginal.top,
+						right: pictureOffsetOriginal.right
+					});
+				}
 
 				var pictureOffset = $picture.offset();
-				if ($('#cart_block')[0] && $('#cart_block').offset().top && $('#cart_block').offset().left)
-					var cartBlockOffset = $('#cart_block').offset();
-				else
-					var cartBlockOffset = $('#shopping_cart').offset();
+				var cartBlock = $('#cart_block');
+				if (!$('#cart_block')[0] || !$('#cart_block').offset().top || !$('#cart_block').offset().left)
+					cartBlock = $('#shopping_cart');
+				var cartBlockOffset = cartBlock.offset();
+				cartBlockOffset.right = $(window).innerWidth() - cartBlockOffset.left - cartBlock.width();
 
 				// Check if the block cart is activated for the animation
-				if (cartBlockOffset != undefined && $picture.size())
+				if (cartBlockOffset != undefined && $picture.length)
 				{
 					$picture.appendTo('body');
-					$picture.css({ 'position': 'absolute', 'top': $picture.css('top'), 'left': $picture.css('left'), 'z-index': 4242 })
-					.animate({ 'width': $element.attr('width')*0.66, 'height': $element.attr('height')*0.66, 'opacity': 0.2, 'top': cartBlockOffset.top + 30, 'left': cartBlockOffset.left + 15 }, 1000)
-					.fadeOut(100, function() {
-						ajaxCart.updateCartInformation(jsonData, addedFromProductPage);
-					});
+					$picture
+						.css({
+							position: 'absolute',
+							top: pictureOffsetOriginal.top,
+							right: pictureOffsetOriginal.right,
+							zIndex: 4242
+						})
+						.animate({
+							width: $element.attr('width')*0.66,
+							height: $element.attr('height')*0.66,
+							opacity: 0.2,
+							top: cartBlockOffset.top + 30,
+							right: cartBlockOffset.right + 15
+						}, 1000)
+						.fadeOut(100, function() {
+							ajaxCart.updateCartInformation(jsonData, addedFromProductPage);
+							$(this).remove();
+						});
 				}
 				else
 					ajaxCart.updateCartInformation(jsonData, addedFromProductPage);
@@ -347,7 +371,8 @@ var ajaxCart = {
 				});
 			});
 		}
-		var removeLinks = $('#cart_block_product_' + domIdProduct).find('a.ajax_cart_block_remove_link');
+
+		var removeLinks = $('#' + domIdProduct).find('.ajax_cart_block_remove_link');
 		if (!product.hasCustomizedDatas && !removeLinks.length)
 			$('#' + domIdProduct + ' span.remove_link').html('<a class="ajax_cart_block_remove_link" rel="nofollow" href="' + baseUri + '?controller=cart&amp;delete=1&amp;id_product=' + product['id'] + '&amp;ipa=' + product['idCombination'] + '&amp;token=' + static_token + '"> </a>');
 		if (product.is_gift)
@@ -376,8 +401,7 @@ var ajaxCart = {
 		else
 		{
 			$('#vouchers tbody').html('');
-		
-			for (i=0;i<jsonData.discounts.length;i++)
+			for (i=0; i < jsonData.discounts.length; i++)
 			{
 				if (parseFloat(jsonData.discounts[i].price_float) > 0)
 				{
@@ -386,15 +410,14 @@ var ajaxCart = {
 						delete_link = '<a class="delete_voucher" href="'+jsonData.discounts[i].link+'" title="'+delete_txt+'"><img src="'+img_dir+'icon/delete.gif" alt="'+delete_txt+'" class="icon" /></a>';
 					$('#vouchers tbody').append($(
 						'<tr class="bloc_cart_voucher" id="bloc_cart_voucher_'+jsonData.discounts[i].id+'">'
-						+'	<td class="quantity">1x</td>'
-						+'	<td class="name" title="'+jsonData.discounts[i].description+'">'+jsonData.discounts[i].name+'</td>'
-						+'	<td class="price">-'+jsonData.discounts[i].price+'</td>'
-						+'	<td class="delete">' + delete_link + '</td>'
-						+'</tr>'
+						+ '<td class="quantity">1x</td>'
+						+ '<td class="name" title="'+jsonData.discounts[i].description+'">'+jsonData.discounts[i].name+'</td>'
+						+ '<td class="price">-'+jsonData.discounts[i].price+'</td>'
+						+ '<td class="delete">' + delete_link + '</td>'
+						+ '</tr>'
 					));
 				}
 			}
-
 			$('#vouchers').show();
 		}
 
@@ -427,7 +450,7 @@ var ajaxCart = {
 			if (this.id != undefined)
 			{
 				//create a container for listing the products and hide the 'no product in the cart' message (only if the cart was empty)
-				
+
 				if ($('#cart_block dl.products').length == 0)
 				{
 					$('#cart_block_no_products').before('<dl class="products"></dl>');
@@ -442,10 +465,11 @@ var ajaxCart = {
 					var productAttributeId = (this.hasAttributes ? parseInt(this.attributes) : 0);
 					var content =  '<dt class="hidden" id="cart_block_product_' + domIdProduct + '">';
 					content += '<span class="quantity-formated"><span class="quantity">' + this.quantity + '</span>x</span>';
-					var name = (this.name.length > 12 ? this.name.substring(0, 10) + '...' : this.name);
-					content += '<a href="' + this.link + '" title="' + this.name + '">' + name + '</a>';
-					
-					if (parseFloat(this.price_float) > 0)
+					var name = $('<span />').html(this.name).text();
+					name = (name.length > 12 ? name.substring(0, 10) + '...' : name);
+					content += '<a href="' + this.link + '" title="' + this.name + '" class="cart_block_product_name">' + name + '</a>';
+
+					if (typeof(this.is_gift) == 'undefined' || this.is_gift == 0)
 						content += '<span class="remove_link"><a rel="nofollow" class="ajax_cart_block_remove_link" href="' + baseUri + '?controller=cart&amp;delete=1&amp;id_product=' + productId + '&amp;token=' + static_token + (this.hasAttributes ? '&amp;ipa=' + parseInt(this.idCombination) : '') + '"> </a></span>';
 					else
 						content += '<span class="remove_link"></span>';
@@ -567,10 +591,10 @@ var ajaxCart = {
 		if (jsonData.hasError)
 		{
 			var errors = '';
-			for(error in jsonData.errors)
+			for (error in jsonData.errors)
 				//IE6 bug fix
-				if(error != 'indexOf')
-					errors += jsonData.errors[error] + "\n";
+				if (error != 'indexOf')
+					errors += $('<div />').html(jsonData.errors[error]).text() + "\n";
 			alert(errors);
 		}
 		else
@@ -594,7 +618,7 @@ var ajaxCart = {
 	//update general cart informations everywhere in the page
 	updateCartEverywhere : function(jsonData) {
 		$('.ajax_cart_total').text($.trim(jsonData.productTotal));
-		
+
 		if (parseFloat(jsonData.shippingCostFloat) > 0 || jsonData.nbTotalProducts < 1)
 			$('.ajax_cart_shipping_cost').text(jsonData.shippingCost);
 		else if (typeof(freeShippingTranslation) != 'undefined')
@@ -604,7 +628,7 @@ var ajaxCart = {
 		$('.ajax_block_cart_total').text(jsonData.total);
 
 		this.nb_total_products = jsonData.nbTotalProducts;
-		
+
 		if (parseInt(jsonData.nbTotalProducts) > 0)
 		{
 			$('.ajax_cart_no_product').hide();
@@ -668,20 +692,27 @@ $(document).ready(function(){
 			ajaxCart.expand();
 	});
 	ajaxCart.overrideButtonsInThePage();
-	ajaxCart.refresh();
+
+	var cart_qty = 0;
+	var current_timestamp = parseInt(new Date().getTime() / 1000);
+
+	if (typeof $('.ajax_cart_quantity').html() == 'undefined' || (typeof generated_date != 'undefined' && generated_date != null && (parseInt(generated_date) + 30) < current_timestamp))
+		ajaxCart.refresh();
+	else
+		cart_qty = parseInt($('.ajax_cart_quantity').html());
 
 	/* roll over cart */
-	var cart_block = new HoverWatcher('#cart_block');
+	var cart_block = new HoverWatcher('#header #cart_block');
 	var shopping_cart = new HoverWatcher('#shopping_cart');
 
 	$("#shopping_cart a:first").hover(
 		function() {
 			$(this).css('border-radius', '3px 3px 0px 0px');
-			if (ajaxCart.nb_total_products > 0)
-				$("#cart_block").stop(true, true).slideDown(450);
+			if (ajaxCart.nb_total_products > 0 || cart_qty > 0)
+				$("#header #cart_block").stop(true, true).slideDown(450);
 		},
 		function() {
-			$('#header #shopping_cart a').css('border-radius', '3px');
+			$('#shopping_cart a').css('border-radius', '3px');
 			setTimeout(function() {
 				if (!shopping_cart.isHoveringOver() && !cart_block.isHoveringOver())
 					$("#header #cart_block").stop(true, true).slideUp(450);
@@ -689,7 +720,7 @@ $(document).ready(function(){
 		}
 	);
 
-	$("#cart_block").hover(
+	$("#header #cart_block").hover(
 		function() {
 			$('#shopping_cart a').css('border-radius', '3px 3px 0px 0px');
 		},
@@ -701,14 +732,17 @@ $(document).ready(function(){
 			}, 200);
 		}
 	);
-	
+
 	$('.delete_voucher').live('click', function() {
 		$.ajax({
-			type: 'POST',			
+			type: 'POST',
 			headers: { "cache-control": "no-cache" },
 			async: true,
-			cache: false,			
-			url:$(this).attr('href') + '?rand=' + new Date().getTime()
+			cache: false,
+			url:$(this).attr('href') + '?rand=' + new Date().getTime(),
+			error: function(XMLHttpRequest, textStatus, errorThrown) {
+				alert("TECHNICAL ERROR: \n\nDetails:\nError thrown: " + XMLHttpRequest + "\n" + 'Text status: ' + textStatus);
+			}
 		});
 		$(this).parent().parent().remove();
 		if ($('body').attr('id') == 'order' || $('body').attr('id') == 'order-opc')
@@ -719,5 +753,10 @@ $(document).ready(function(){
 				location.reload();
 		}
 		return false;
+	});
+
+	$('#cart_navigation input').click(function(){
+		$(this).attr('disabled', true).removeClass('exclusive').addClass('exclusive_disabled');
+		$(this).closest("form").get(0).submit();
 	});
 });

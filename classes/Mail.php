@@ -50,9 +50,11 @@ class MailCore
 	 * @param bool $modeSMTP
 	 * @param string $template_path
 	 * @param bool $die
+         * @param string $bcc Bcc recipient
 	 */
 	public static function Send($id_lang, $template, $subject, $template_vars, $to,
-		$to_name = null, $from = null, $from_name = null, $file_attachment = null, $mode_smtp = null, $template_path = _PS_MAIL_DIR_, $die = false, $id_shop = null)
+		$to_name = null, $from = null, $from_name = null, $file_attachment = null, $mode_smtp = null,
+		$template_path = _PS_MAIL_DIR_, $die = false, $id_shop = null, $bcc = null)
 	{
 		$configuration = Configuration::getMultiple(array(
 			'PS_SHOP_EMAIL',
@@ -63,7 +65,6 @@ class MailCore
 			'PS_SHOP_NAME',
 			'PS_MAIL_SMTP_ENCRYPTION',
 			'PS_MAIL_SMTP_PORT',
-			'PS_MAIL_METHOD',
 			'PS_MAIL_TYPE'
 		), null, null, $id_shop);
 		
@@ -127,37 +128,56 @@ class MailCore
 		}
 
 		/* Construct multiple recipients list if needed */
+		$to_list = new Swift_RecipientList();
 		if (is_array($to) && isset($to))
 		{
-			$to_list = new Swift_RecipientList();
 			foreach ($to as $key => $addr)
 			{
-				$to_name = null;
 				$addr = trim($addr);
 				if (!Validate::isEmail($addr))
 				{
 					Tools::dieOrLog(Tools::displayError('Error: invalid e-mail address'), $die);
 					return false;
 				}
+
 				if (is_array($to_name))
 				{
 					if ($to_name && is_array($to_name) && Validate::isGenericName($to_name[$key]))
 						$to_name = $to_name[$key];
 				}
-				if ($to_name == null)
-					$to_name = $addr;
-				/* Encode accentuated chars */
-				$to_list->addTo($addr, '=?UTF-8?B?'.base64_encode($to_name).'?=');
+
+				if ($to_name == null || $to_name == $addr)
+					$to_name = '';
+				else
+				{
+					if (function_exists('mb_encode_mimeheader'))
+						$to_name = mb_encode_mimeheader($to_name, 'utf-8');
+					else
+						$to_name = self::mimeEncode($to_name);
+				}
+
+				$to_list->addTo($addr, $to_name);
 			}
 			$to_plugin = $to[0];
-			$to = $to_list;
 		} else {
 			/* Simple recipient, one address */
 			$to_plugin = $to;
-			if ($to_name == null)
-				$to_name = $to;
-			$to = new Swift_Address($to, '=?UTF-8?B?'.base64_encode($to_name).'?=');
+			if ($to_name == null || $to_name == $to)
+				$to_name = '';
+			else
+			{
+				if (function_exists('mb_encode_mimeheader'))
+					$to_name = mb_encode_mimeheader($to_name, 'utf-8');
+				else
+					$to_name = self::mimeEncode($to_name);
+			}
+
+			$to_list->addTo($to, $to_name);
 		}
+		if(isset($bcc)) {
+			$to_list->addBcc($bcc);
+		}
+		$to = $to_list;
 		try {
 			/* Connect with the appropriate configuration */
 			if ($configuration['PS_MAIL_METHOD'] == 2)
@@ -225,11 +245,18 @@ class MailCore
 					include_once($template_path.$iso.'/lang.php');
 			else if ($module_name && file_exists($theme_path.'mails/'.$iso.'/lang.php'))
 				include_once($theme_path.'mails/'.$iso.'/lang.php');
-			else
+			else if (file_exists(_PS_MAIL_DIR_.$iso.'/lang.php'))
 				include_once(_PS_MAIL_DIR_.$iso.'/lang.php');
+			else
+			{
+				Tools::dieOrLog(Tools::displayError('Error - The lang file is missing for :').' '.$iso, $die);
+				return false;
+			}
 
 			/* Create mail and attach differents parts */
 			$message = new Swift_Message('['.Configuration::get('PS_SHOP_NAME', null, null, $id_shop).'] '.$subject);
+
+			$message->setCharset('utf-8');
 
 			/* Set Message-ID - getmypid() is blocked on some hosting */
 			$message->setId(Mail::generateId());
@@ -245,10 +272,13 @@ class MailCore
 				else
 					$template_vars['{shop_logo}'] = '';
 			}
-
+			ShopUrl::cacheMainDomainForShop((int)$id_shop);
 			/* don't attach the logo as */
 			if (isset($logo))
 				$template_vars['{shop_logo}'] = $message->attach(new Swift_Message_EmbeddedFile(new Swift_File($logo), null, ImageManager::getMimeTypeByExtension($logo)));
+
+			if ((Context::getContext()->link instanceof Link) === false)
+				Context::getContext()->link = new Link();
 
 			$template_vars['{shop_name}'] = Tools::safeOutput(Configuration::get('PS_SHOP_NAME', null, null, $id_shop));
 			$template_vars['{shop_url}'] = Context::getContext()->link->getPageLink('index', true, Context::getContext()->language->id);
@@ -274,6 +304,9 @@ class MailCore
 			/* Send mail */
 			$send = $swift->send($message, $to, new Swift_Address($from, $from_name));
 			$swift->disconnect();
+
+			ShopUrl::resetMainDomainCache();			
+
 			return $send;
 		}
 		catch (Swift_Exception $e) {
@@ -339,11 +372,11 @@ class MailCore
 
 		$file_core = _PS_ROOT_DIR_.'/mails/'.$iso_code.'/lang.php';
 		if (Tools::file_exists_cache($file_core) && empty($_LANGMAIL))
-			include_once($file_core);
+			include($file_core);
 
 		$file_theme = _PS_THEME_DIR_.'mails/'.$iso_code.'/lang.php';
 		if (Tools::file_exists_cache($file_theme))
-			include_once($file_theme);
+			include($file_theme);
 
 		if (!is_array($_LANGMAIL))
 			return (str_replace('"', '&quot;', $string));
@@ -367,4 +400,68 @@ class MailCore
 		return vsprintf("<%s.%d.%s@%s>", $midparams);
 	}
 	
+	public static function isMultibyte($data)
+	{
+		$length = strlen($data);
+
+		for ($i = 0; $i < $length; $i++)
+		{
+			$result = ord(($data[$i]));
+
+			if ($result > 128)
+			{
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	public static function mimeEncode($string, $charset = 'UTF-8', $newline = "\r\n")
+	{
+		if (!self::isMultibyte($string) && strlen($string) < 75)
+		{
+			return $string;
+		}
+
+		$charset = strtoupper($charset);
+		$start   = '=?' . $charset . '?B?';
+		$end     = '?=';
+		$sep     = $end . $newline . ' ' . $start;
+		$length  = 75 - strlen($start) - strlen($end);
+		$length  = $length - ($length % 4);
+
+		if ($charset === 'UTF-8')
+		{
+			$parts = array();
+			$maxchars = floor(($length * 3) / 4);
+			$stringLength = strlen($string);
+
+			while ($stringLength > $maxchars)
+			{
+				$i = (int)$maxchars;
+				$result = ord($string[$i]);
+
+				while ($result >= 128 && $result <= 191)
+				{
+					$i--;
+					$result = ord($string[$i]);
+				}
+
+				$parts[] = base64_encode(substr($string, 0, $i));
+				$string = substr($string, $i);
+				$stringLength = strlen($string);
+			}
+
+			$parts[] = base64_encode($string);
+			$string = implode($sep, $parts);
+		}
+		else
+		{
+			$string = chunk_split(base64_encode($string), $length, $sep);
+			$string = preg_replace('/' . preg_quote($sep) . '$/', '', $string);
+		}
+
+		return $start . $string . $end;
+	}
 }

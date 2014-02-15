@@ -42,7 +42,7 @@ class HomeSlider extends Module
 	{
 		$this->name = 'homeslider';
 		$this->tab = 'front_office_features';
-		$this->version = '1.2.1';
+		$this->version = '1.2.2';
 		$this->author = 'PrestaShop';
 		$this->need_instance = 0;
 		$this->secure_key = Tools::encrypt($this->name);
@@ -416,8 +416,8 @@ class HomeSlider extends Module
 		/* Save */
 		$this->_html .= '
 		<p class="center">
-			<input type="submit" class="button" name="submitSlide" value="'.$this->l('Save').'" />
-			<a class="button" style="position:relative; padding:3px 3px 4px 3px; top:1px" href="'.AdminController::$currentIndex.'&configure='.$this->name.'&token='.Tools::getAdminTokenLite('AdminModules').'">'.$this->l('Cancel').'</a>
+			<input style="min-height:26px" type="submit" class="button" name="submitSlide" value="'.$this->l('Save').'" />
+			<a class="button" style="position:relative; padding:4px 3px;" href="'.AdminController::$currentIndex.'&configure='.$this->name.'&token='.Tools::getAdminTokenLite('AdminModules').'">'.$this->l('Cancel').'</a>
 		</p>';
 
 		/* End of fieldset & form */
@@ -696,7 +696,7 @@ class HomeSlider extends Module
 			color:#000;
 		}
 		</style>
-		<script type="text/javascript" src="'.__PS_BASE_URI__.'js/jquery/jquery-ui.will.be.removed.in.1.6.js"></script>
+		
 		<script type="text/javascript">
 			$(function() {
 				var $mySlides = $("#slides");
@@ -705,7 +705,7 @@ class HomeSlider extends Module
 					cursor: "move",
 					update: function() {
 						var order = $(this).sortable("serialize") + "&action=updateSlidesPosition";
-						$.post("'._PS_BASE_URL_.__PS_BASE_URI__.'modules/'.$this->name.'/ajax_'.$this->name.'.php?secure_key='.$this->secure_key.'", order);
+						$.post("'.$this->context->shop->physical_uri.$this->context->shop->virtual_uri.'modules/'.$this->name.'/ajax_'.$this->name.'.php?secure_key='.$this->secure_key.'", order);
 						}
 					});
 				$mySlides.hover(function() {

@@ -136,6 +136,7 @@ class AdminStatusesControllerCore extends AdminController
 	{
 		$this->table = 'order_return_state';
 		$this->_defaultOrderBy = $this->identifier = 'id_order_return_state';
+		$this->list_id = 'order_return_state';
 		$this->deleted = false;
 		$this->_orderBy = null;
 
@@ -231,14 +232,6 @@ class AdminStatusesControllerCore extends AdminController
 	}
 	
 	public function renderForm()
-	{
-		if (Tools::isSubmit('updateorder_state') || Tools::isSubmit('addorder_state'))
-			return $this->renderOrderStatusForm();
-		else if (Tools::isSubmit('updateorder_return_state') || Tools::isSubmit('addorder_return_state'))
-			return $this->renderOrderReturnsForm();
-	}
-	
-	protected function renderOrderStatusForm()
 	{
 		$this->fields_form = array(
 			'tinymce' => true,
@@ -366,7 +359,17 @@ class AdminStatusesControllerCore extends AdminController
 				'class' => 'button'
 			)
 		);
-
+	
+		if (Tools::isSubmit('updateorder_state') || Tools::isSubmit('addorder_state'))
+			return $this->renderOrderStatusForm();
+		else if (Tools::isSubmit('updateorder_return_state') || Tools::isSubmit('addorder_return_state'))
+			return $this->renderOrderReturnsForm();
+		else
+			return parent::renderForm();			
+	}
+	
+	protected function renderOrderStatusForm()
+	{
 		if (!($obj = $this->loadObject(true)))
 			return;
 
@@ -535,5 +538,21 @@ class AdminStatusesControllerCore extends AdminController
 		elseif ($this->table == 'order_return_state')
 			$this->initOrdersReturnsList();
 		return parent::filterToField($key, $filter);
+	}
+
+	protected function afterImageUpload()
+	{
+		parent::afterImageUpload();
+
+		if (($id_order_state = (int)Tools::getValue('id_order_state')) &&
+			 isset($_FILES) && count($_FILES) && file_exists(_PS_ORDER_STATE_IMG_DIR_.$id_order_state.'.gif'))
+		{
+			$current_file = _PS_TMP_IMG_DIR_.'order_state_mini_'.$id_order_state.'_'.$this->context->shop->id.'.gif';
+
+			if (file_exists($current_file))
+				unlink($current_file);
+		}
+
+		return true;
 	}
 }

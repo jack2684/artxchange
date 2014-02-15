@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-02-13 15:14:49
+<?php /* Smarty version Smarty-3.1.14, created on 2014-02-15 00:48:21
          compiled from "/var/www/artxchange/modules/blockcart/blockcart-json.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:89885493952fd27b99dda43-98742339%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:177244538652feffa512d0e5-61636403%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b5111f5d4daf5dafc6346c1492f723c49aa80ba2' => 
     array (
       0 => '/var/www/artxchange/modules/blockcart/blockcart-json.tpl',
-      1 => 1366914190,
+      1 => 1392442882,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '89885493952fd27b99dda43-98742339',
+  'nocache_hash' => '177244538652feffa512d0e5-61636403',
   'function' => 
   array (
   ),
@@ -43,10 +43,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'error' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_52fd27b9b94497_25867284',
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52feffa52ccc69_70696145',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52fd27b9b94497_25867284')) {function content_52fd27b9b94497_25867284($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include '/var/www/artxchange/tools/smarty/plugins/modifier.replace.php';
+<?php if ($_valid && !is_callable('content_52feffa52ccc69_70696145')) {function content_52feffa52ccc69_70696145($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include '/var/www/artxchange/tools/smarty/plugins/modifier.replace.php';
 ?>
 {
 "products": [
@@ -73,7 +73,7 @@ $_smarty_tpl->tpl_vars['product']->_loop = true;
 		"priceByLine":   "<?php if ($_smarty_tpl->tpl_vars['priceDisplay']->value==@constant('PS_TAX_EXC')){?><?php ob_start();?><?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['displayWtPrice'][0][0]->displayWtPrice(array('p'=>$_smarty_tpl->tpl_vars['product']->value['total']),$_smarty_tpl);?>
 <?php echo html_entity_decode(ob_get_clean(),2,'UTF-8')?><?php }else{ ?><?php ob_start();?><?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['displayWtPrice'][0][0]->displayWtPrice(array('p'=>$_smarty_tpl->tpl_vars['product']->value['total_wt']),$_smarty_tpl);?>
 <?php echo html_entity_decode(ob_get_clean(),2,'UTF-8')?><?php }?>",
-		"name":          "<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_MODIFIER]['truncate'][0][0]->smarty_modifier_truncate(mb_convert_encoding(htmlspecialchars(html_entity_decode($_smarty_tpl->tpl_vars['product']->value['name'],2,'UTF-8'), ENT_QUOTES, 'UTF-8', true), "HTML-ENTITIES", 'UTF-8'),15,'...',true);?>
+		"name":          "<?php echo mb_convert_encoding(htmlspecialchars($_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_MODIFIER]['truncate'][0][0]->smarty_modifier_truncate(html_entity_decode($_smarty_tpl->tpl_vars['product']->value['name'],2,'UTF-8'),15,'...',true), ENT_QUOTES, 'UTF-8', true), "HTML-ENTITIES", 'UTF-8');?>
 ",
 		"price":         "<?php if ($_smarty_tpl->tpl_vars['priceDisplay']->value==@constant('PS_TAX_EXC')){?><?php ob_start();?><?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['displayWtPrice'][0][0]->displayWtPrice(array('p'=>$_smarty_tpl->tpl_vars['product']->value['total']),$_smarty_tpl);?>
 <?php echo html_entity_decode(ob_get_clean(),2,'UTF-8')?><?php }else{ ?><?php ob_start();?><?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['displayWtPrice'][0][0]->displayWtPrice(array('p'=>$_smarty_tpl->tpl_vars['product']->value['total_wt']),$_smarty_tpl);?>
@@ -145,9 +145,9 @@ $_smarty_tpl->tpl_vars['data']->_loop = true;
 						{
 						"index":			<?php echo $_smarty_tpl->tpl_vars['index']->value;?>
 ,
-						"value":			"<?php echo smarty_modifier_replace(addslashes($_smarty_tpl->tpl_vars['data']->value['value']),'\\\'','\'');?>
+						"value":			"<?php echo Tools::nl2br(smarty_modifier_replace(addslashes($_smarty_tpl->tpl_vars['data']->value['value']),'\\\'','\''));?>
 ",
-						"truncatedValue":	"<?php echo smarty_modifier_replace(addslashes($_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_MODIFIER]['truncate'][0][0]->smarty_modifier_truncate($_smarty_tpl->tpl_vars['data']->value['value'],28,'...')),'\\\'','\'');?>
+						"truncatedValue":	"<?php echo Tools::nl2br(smarty_modifier_replace(addslashes($_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_MODIFIER]['truncate'][0][0]->smarty_modifier_truncate($_smarty_tpl->tpl_vars['data']->value['value'],28,'...')),'\\\'','\''));?>
 "
 						}<?php if (!$_smarty_tpl->getVariable('smarty')->value['foreach']['datas']['last']){?>,<?php }?>
 					<?php } ?>]
@@ -183,7 +183,7 @@ $_smarty_tpl->tpl_vars['discount']->_loop = true;
 ",
 		"code":            "<?php echo $_smarty_tpl->tpl_vars['discount']->value['code'];?>
 ",
-		"link":            "<?php echo $_smarty_tpl->tpl_vars['link']->value->getPageLink(((string)$_smarty_tpl->tpl_vars['order_process']->value),true,null,"deleteDiscount=".((string)$_smarty_tpl->tpl_vars['discount']->value['id_discount']));?>
+		"link":            "<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink(((string)$_smarty_tpl->tpl_vars['order_process']->value),true,null,"deleteDiscount=".((string)$_smarty_tpl->tpl_vars['discount']->value['id_discount'])), ENT_QUOTES, 'UTF-8', true);?>
 ",
 		"price":           "<?php if ($_smarty_tpl->tpl_vars['priceDisplay']->value==1){?><?php ob_start();?><?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['convertPrice'][0][0]->convertPrice(array('price'=>$_smarty_tpl->tpl_vars['discount']->value['value_tax_exc']),$_smarty_tpl);?>
 <?php echo html_entity_decode(ob_get_clean(),2,'UTF-8')?><?php }else{ ?><?php ob_start();?><?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['convertPrice'][0][0]->convertPrice(array('price'=>$_smarty_tpl->tpl_vars['discount']->value['value_real']),$_smarty_tpl);?>

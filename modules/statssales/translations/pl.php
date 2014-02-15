@@ -10,11 +10,11 @@ $_MODULE['<{statssales}prestashop>statssales_d7778d0c64b6ba21494c97f77a66885a'] 
 $_MODULE['<{statssales}prestashop>statssales_35214bc44485bc7161f9d1bdbacad5b8'] = 'Te wykresy pokazują ewolucję Twoich zamówień i stopy zwrotu dla zadanego okresu czasu. To narzędzie daje Ci szybki pogląd na rentowność Twojego sklepu. Możesz także obserwować różnice pomiędzy różnymi okresami (w porównaniu np. do sezonu wakacyjnego). Tylko prawidłowe zamówienia są uwzględnione w tych dwóch wykresach.';
 $_MODULE['<{statssales}prestashop>statssales_9ccb8353e945f1389a9585e7f21b5a0d'] = 'Złożone zamówienia:';
 $_MODULE['<{statssales}prestashop>statssales_156e5c5872c9af24a5c982da07a883c2'] = 'Kupione produkty:';
-$_MODULE['<{statssales}prestashop>statssales_998e4c5c80f27dec552e99dfed34889a'] = 'Eksport do CSV';
+$_MODULE['<{statssales}prestashop>statssales_998e4c5c80f27dec552e99dfed34889a'] = 'Export CSV';
 $_MODULE['<{statssales}prestashop>statssales_ec3e48bb9aa902ba2ad608547fdcbfdc'] = 'Sprzedaż:';
 $_MODULE['<{statssales}prestashop>statssales_14b2ae2d824b5dfd798a8caf35732136'] = 'Możesz zobaczyć rozład stanu zamówień poniżej.';
 $_MODULE['<{statssales}prestashop>statssales_da80af4de99df74dd59e665adf1fac8f'] = 'Brak zamówień dla tego okresu.';
-$_MODULE['<{statssales}prestashop>statssales_6602bbeb2956c035fb4cb5e844a4861b'] = 'Przewodnik';
+$_MODULE['<{statssales}prestashop>statssales_6602bbeb2956c035fb4cb5e844a4861b'] = 'Guide';
 $_MODULE['<{statssales}prestashop>statssales_75288849ad081e6ef15e00c37b7570f2'] = 'Różne statusy zamówień';
 $_MODULE['<{statssales}prestashop>statssales_ecfa88580e342ade21a8403765c0dde6'] = 'W zapleczu administracyjnym możesz znaleźć następujące statusy zamówień: Oczekuje na płatność czekiem, Płatność zatwierdzona, W trakcie przygotowania, Wysyłka, Doręczono, Anulowano, Zwrot, Błąd płatności, Brak na stanie, Oczekuje na płatność przelewem.';
 $_MODULE['<{statssales}prestashop>statssales_d60bf28bef003143f1b95edbbc08cd68'] = 'Statusy nie mogą być usunięte z zaplecza administracyjnego, ale masz możliwość dodania więcej.';

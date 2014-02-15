@@ -26,6 +26,9 @@
 include(dirname(__FILE__).'/../../config/config.inc.php');
 require_once(dirname(__FILE__).'/../../init.php');
 
+if (!Module::getInstanceByName('feeder')->active)
+	exit;
+
 // Get data
 $number = ((int)(Tools::getValue('n')) ? (int)(Tools::getValue('n')) : 10);
 $orderBy = Tools::getProductsOrder('by', Tools::getValue('orderby'));
@@ -34,6 +37,7 @@ $id_category = ((int)(Tools::getValue('id_category')) ? (int)(Tools::getValue('i
 $products = Product::getProducts((int)Context::getContext()->language->id, 0, ($number > 10 ? 10 : $number), $orderBy, $orderWay, $id_category, true);
 $currency = new Currency((int)Context::getContext()->currency->id);
 $affiliate = (Tools::getValue('ac') ? '?ac='.(int)(Tools::getValue('ac')) : '');
+$metas = Meta::getMetaByPage('index', (int)Context::getContext()->language->id);
 
 // Send feed
 header("Content-Type:text/xml; charset=utf-8");
@@ -42,8 +46,9 @@ echo '<?xml version="1.0" encoding="UTF-8"?>'."\n";
 <rss version="2.0">
 	<channel>
 		<title><![CDATA[<?php echo Configuration::get('PS_SHOP_NAME') ?>]]></title>
+		<description><![CDATA[<?php echo $metas['description'] ?>]]></description>
 		<link><?php echo _PS_BASE_URL_.__PS_BASE_URI__; ?></link>
-		<mail><?php echo Configuration::get('PS_SHOP_EMAIL') ?></mail>
+		<webMaster><?php echo Configuration::get('PS_SHOP_EMAIL') ?></webMaster>
 		<generator>PrestaShop</generator>
 		<language><?php echo Context::getContext()->language->iso_code; ?></language>
 		<image>
@@ -62,7 +67,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>'."\n";
 		if (is_array($image) AND sizeof($image))
 		{
 			$imageObj = new Image($image[0]['id_image']);
-			echo "<![CDATA[<img src='"._PS_BASE_URL_._THEME_PROD_DIR_.$imageObj->getExistingImgPath()."-small_default.jpg' title='".str_replace('&', '', $product['name'])."' alt='thumb' />";
+			echo "<![CDATA[<img src='".$link->getImageLink($product['link_rewrite'], $image[0]['id_image'], 'small_default')."' title='".str_replace('&', '', $product['name'])."' alt='thumb' />";
 			$cdata = false;
 		}
 		if ($cdata)

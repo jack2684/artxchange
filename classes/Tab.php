@@ -140,7 +140,11 @@ class TabCore extends ObjectModel
 	public function delete()
 	{
 	 	if (Db::getInstance()->execute('DELETE FROM '._DB_PREFIX_.'access WHERE `id_tab` = '.(int)$this->id) && parent::delete())
+		{
+			if (is_array(self::$_getIdFromClassName) && isset(self::$_getIdFromClassName[strtolower($this->class_name)]))
+				unset(self::$_getIdFromClassName[strtolower($this->class_name)]);
 			return $this->cleanPositions($this->id_parent);
+		}
 		return false;
 	}
 
@@ -165,12 +169,18 @@ class TabCore extends ObjectModel
 	 */
 	public static function getCurrentParentId()
 	{
-	 	if ($result = Db::getInstance(_PS_USE_SQL_SLAVE_)->getRow('
-	 		SELECT `id_parent`
-	 		FROM `'._DB_PREFIX_.'tab`
-	 		WHERE LOWER(class_name) = \''.pSQL(Tools::strtolower(Tools::getValue('controller'))).'\''))
-		 	return $result['id_parent'];
- 		return -1;
+		$cache_id = 'getCurrentParentId_'.Tools::strtolower(Tools::getValue('controller'));
+		if (!Cache::isStored($cache_id))
+		{
+			$value = Db::getInstance(_PS_USE_SQL_SLAVE_)->getValue('
+			SELECT `id_parent`
+			FROM `'._DB_PREFIX_.'tab`
+			WHERE LOWER(class_name) = \''.pSQL(Tools::strtolower(Tools::getValue('controller'))).'\'');
+			if (!$value)
+				$value = -1;
+			Cache::store($cache_id, $value);
+		}
+		return Cache::retrieve($cache_id);
 	}
 
 	/**
@@ -180,14 +190,20 @@ class TabCore extends ObjectModel
 	 */
 	public static function getTab($id_lang, $id_tab)
 	{
-		/* Tabs selection */
-		return Db::getInstance(_PS_USE_SQL_SLAVE_)->getRow('
-			SELECT *
-			FROM `'._DB_PREFIX_.'tab` t
-			LEFT JOIN `'._DB_PREFIX_.'tab_lang` tl
-				ON (t.`id_tab` = tl.`id_tab` AND tl.`id_lang` = '.(int)$id_lang.')
-			WHERE t.`id_tab` = '.(int)$id_tab
-		);
+		$cache_id = 'Tab::getTab_'.(int)$id_lang.'-'.(int)$id_tab;
+		if (!Cache::isStored($cache_id))
+		{
+			/* Tabs selection */
+			$result = Db::getInstance(_PS_USE_SQL_SLAVE_)->getRow('
+				SELECT *
+				FROM `'._DB_PREFIX_.'tab` t
+				LEFT JOIN `'._DB_PREFIX_.'tab_lang` tl
+					ON (t.`id_tab` = tl.`id_tab` AND tl.`id_lang` = '.(int)$id_lang.')
+				WHERE t.`id_tab` = '.(int)$id_tab
+			);
+			Cache::store($cache_id, $result);
+		}
+		return Cache::retrieve($cache_id);
 	}
 
 	/**
@@ -534,11 +550,10 @@ class TabCore extends ObjectModel
 					foreach($tab->attributes() as $key => $value)
 						if ($key == 'display_type')
 							$display_type = (string)$value;
-							
+
 					foreach ($tab->children() as $module)
-						foreach ($module->attributes() as $k => $v)
-							if ($k == 'name')
-								$modules_list[$display_type][] = (string)$v;
+						$modules_list[$display_type][(int)$module['position']] = (string)$module['name'];
+					ksort($modules_list[$display_type]);
 				}
 			}
 		

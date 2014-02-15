@@ -200,7 +200,7 @@ class StatsProduct extends ModuleGraph
 				foreach ($sales as $sale)
 					$this->html .= '
 					<tr>
-						<td>'.Tools::displayDate($sale['date_add'], (int)$this->context->language->id, false).'</td>
+						<td>'.Tools::displayDate($sale['date_add'],null , false).'</td>
 						<td align="center"><a href="?tab=AdminOrders&id_order='.$sale['id_order'].'&vieworder&token='.$tokenOrder.'">'.(int)($sale['id_order']).'</a></td>
 						<td align="center"><a href="?tab=AdminCustomers&id_customer='.$sale['id_customer'].'&viewcustomer&token='.$tokenCustomer.'">'.(int)($sale['id_customer']).'</a></td>
 						'.($hasAttribute ? '<td>'.$sale['product_name'].'</td>' : '').'
@@ -284,8 +284,7 @@ class StatsProduct extends ModuleGraph
 				'.$this->l('After choosing a category and selecting a product, informational graphs will appear.').'
 				<ul>
 					<li class="bullet">'.$this->l('If you notice that a product is often purchased but viewed infrequently, you should display it more prominently in your Front Office. ').'</li>
-					<li class="bullet">'.$this->l('On the other hand, if a product has many viewings but is not often purchased,
-						we advise you to check or modify this product\'s information, description and photography again.').'
+					<li class="bullet">'.$this->l('On the other hand, if a product has many viewings but is not often purchased, we advise you to check or modify this product\'s information, description and photography again.').'
 					</li>
 				</ul>
 			</p>

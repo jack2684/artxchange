@@ -4,7 +4,7 @@ global $_MODULE;
 $_MODULE = array();
 
 $_MODULE['<{statslive}prestashop>statslive_fa55230e9791f2b71322869318a5f00f'] = 'Visiteurs en ligne';
-$_MODULE['<{statslive}prestashop>statslive_b8a5ea9b6e7f2d0b56fbb18e5b6b9246'] = 'Affiche la liste des clients et visiteurs en ligne actuellement.';
+$_MODULE['<{statslive}prestashop>statslive_b8a5ea9b6e7f2d0b56fbb18e5b6b9246'] = 'Affiche la liste des clients et visiteurs en ligne actuellement';
 $_MODULE['<{statslive}prestashop>statslive_e6214c05e17c56f81e4a56f4c4fdce8c'] = 'Vous devez activer l\'option \"pages vues pour chaque client\" dans le module \"Récupération des données statistiques\" pour visualiser les pages consultées par vos clients.';
 $_MODULE['<{statslive}prestashop>statslive_5c948349bdf1a7a77ba54497d019e4ca'] = 'Clients en ligne';
 $_MODULE['<{statslive}prestashop>statslive_66c4c5112f455a19afde47829df363fa'] = 'Total :';
@@ -21,3 +21,6 @@ $_MODULE['<{statslive}prestashop>statslive_b6f05e5ddde1ec63d992d61144452dfa'] = 
 $_MODULE['<{statslive}prestashop>statslive_ec0fc0100c4fc1ce4eea230c3dc10360'] = 'Indéfini';
 $_MODULE['<{statslive}prestashop>statslive_6adf97f83acf6453d4a6a4b1070f3754'] = 'aucun';
 $_MODULE['<{statslive}prestashop>statslive_a55533db46597bee3cd16899c007257e'] = 'Il n\'y a aucun visiteur en ligne actuellement.';
+$_MODULE['<{statslive}prestashop>statslive_24efa7ee4511563b16144f39706d594f'] = 'Avertissement';
+$_MODULE['<{statslive}prestashop>statslive_fd33b4dbb1e1434f53c866256861aa7c'] = 'Les connexions en provenance d\'adresses IP de maintenance sont exclues des statistiques des visiteurs.';
+$_MODULE['<{statslive}prestashop>statslive_05b564d49dbd9049f0df80a45cfe7d1c'] = 'Ajouter ou supprimer une adresse IP.';

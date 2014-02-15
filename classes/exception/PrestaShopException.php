@@ -51,7 +51,7 @@ class PrestaShopExceptionCore extends Exception
 			</style>';
 			echo '<div id="psException">';
 			echo '<h2>['.get_class($this).']</h2>';
-			echo $this->getExentedMessage();
+			echo $this->getExtendedMessage();
 
 			$this->displayFileDebug($this->getFile(), $this->getLine());
 
@@ -66,14 +66,15 @@ class PrestaShopExceptionCore extends Exception
 				echo '<b>'.((isset($trace['class'])) ? $trace['class'] : '').((isset($trace['type'])) ? $trace['type'] : '').$trace['function'].'</b>';
 				echo ' - <a href="#" style="font-size: 12px; color: #000000" onclick="document.getElementById(\'psTrace_'.$id.'\').style.display = (document.getElementById(\'psTrace_'.$id.'\').style.display != \'block\') ? \'block\' : \'none\'; return false">[line '.$current_line.' - '.$relative_file.']</a>';
 
-				if (count($trace['args']))
+				if (isset($trace['args']) && count($trace['args']))
 					echo ' - <a href="#" onclick="document.getElementById(\'psArgs_'.$id.'\').style.display = (document.getElementById(\'psArgs_'.$id.'\').style.display != \'block\') ? \'block\' : \'none\'; return false">['.count($trace['args']).' Arguments]</a>';
 				else
 					echo ' - <span style="font-size: 12px;">[0 Argument]</a>';
 
 				if ($relative_file)
 					$this->displayFileDebug($trace['file'], $trace['line'], $id);
-				$this->displayArgsDebug($trace['args'], $id);
+				if (isset($trace['args']) && count($trace['args']))
+					$this->displayArgsDebug($trace['args'], $id);
 				echo '</li>';
 			}
 			echo '</ul>';
@@ -145,14 +146,23 @@ class PrestaShopExceptionCore extends Exception
 	{
 		$logger = new FileLogger();
 		$logger->setFilename(_PS_ROOT_DIR_.'/log/'.date('Ymd').'_exception.log');
-		$logger->logError($this->getExentedMessage(false));
+		$logger->logError($this->getExtendedMessage(false));
+	}
+	
+	/**
+	 * @deprecated 1.5.5
+	 */
+	protected function getExentedMessage($html = true)
+	{
+		Tools::displayAsDeprecated();
+		return $this->getExtendedMessage($html);
 	}
 	
 	/**
 	 * Return the content of the Exception
 	 * @return string content of the exception
 	 */
-	protected function getExentedMessage($html = true)
+	protected function getExtendedMessage($html = true)
 	{
 		$format = '<p><b>%s</b><br /><i>at line </i><b>%d</b><i> in file </i><b>%s</b></p>';
 		if (!$html)

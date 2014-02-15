@@ -5,5 +5,9 @@ Sie haben eine Nachricht von einen Kunden Ihres Shop {shop_name} erhalten.
 E-Mail Kunde: {email}
 
 Nachricht Kunde: {message}
+
+Bestell-Nr. {order_name}
+
+Dateianhang: {attached_file}
  
 {shop_name} powered by PrestaShop™

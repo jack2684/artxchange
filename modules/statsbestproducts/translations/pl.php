@@ -15,4 +15,4 @@ $_MODULE['<{statsbestproducts}prestashop>statsbestproducts_7664a37e0cc56aaf39aeb
 $_MODULE['<{statsbestproducts}prestashop>statsbestproducts_6e71d214907cd43403f4bbde5731a9a3'] = 'Dostępna ilość na sprzedaż';
 $_MODULE['<{statsbestproducts}prestashop>statsbestproducts_b9ef20f6c20406b631db52374a519b1f'] = 'Najlepsze produkty';
 $_MODULE['<{statsbestproducts}prestashop>statsbestproducts_dec6192cbc59ba37d38a3fdc5c3ed7f7'] = 'Lista najlepszych produktów';
-$_MODULE['<{statsbestproducts}prestashop>statsbestproducts_998e4c5c80f27dec552e99dfed34889a'] = 'Eksport do CSV';
+$_MODULE['<{statsbestproducts}prestashop>statsbestproducts_998e4c5c80f27dec552e99dfed34889a'] = 'Export CSV';

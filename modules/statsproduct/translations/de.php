@@ -36,5 +36,6 @@ $_MODULE['<{statsproduct}prestashop>statsproduct_6e13e61b8535a66feb27d285f5c4285
 $_MODULE['<{statsproduct}prestashop>statsproduct_ff7008d8daed8cf92213ca8955a42d92'] = 'Wenn Sie merken, dass ein Produkt erfolgreich ist, zwar oft gekauft, aber selten angesehen wird, sollten Sie es gut sichtbar weiter h vorne in Ihrem Shop platzieren.';
 $_MODULE['<{statsproduct}prestashop>statsproduct_e22269bb51f9f2394e148716babbafbb'] = 'Beliebtheit';
 $_MODULE['<{statsproduct}prestashop>statsproduct_5e9613e58f3bdbc89b1fef07274c0877'] = 'Besuche (x100)';
-$_MODULE['<{statsproduct}prestashop>statsproduct_287234a1ff35a314b5b6bc4e5828e745'] = 'Attribute';
+$_MODULE['<{statsproduct}prestashop>statsproduct_287234a1ff35a314b5b6bc4e5828e745'] = 'Varianten';
 $_MODULE['<{statsproduct}prestashop>statsproduct_27ce7f8b5623b2e2df568d64cf051607'] = 'Lager';
+$_MODULE['<{statsproduct}prestashop>statsproduct_20b9641efab51dee7d27eed2b6773ef0'] = 'Wenn aber ein Produkt oft aufgerufen, aber nicht gekauft wurde, raten wir Ihnen, diese Produktinformationen Beschreibungen und Fotografien zu überprüfen oder zu ändern.';

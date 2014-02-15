@@ -65,6 +65,9 @@ class FrontControllerCore extends Controller
 
 		parent::__construct();
 
+		if (Configuration::get('PS_SSL_ENABLED') && Configuration::get('PS_SSL_ENABLED_EVERYWHERE'))
+			$this->ssl = true;
+
 		if (isset($useSSL))
 			$this->ssl = $useSSL;
 		else
@@ -108,27 +111,24 @@ class FrontControllerCore extends Controller
 
 		// If current URL use SSL, set it true (used a lot for module redirect)
 		if (Tools::usingSecureMode())
-			$useSSL = $this->ssl = true;
+			$useSSL = true;
 
 		// For compatibility with globals, DEPRECATED as of version 1.5
 		$css_files = $this->css_files;
 		$js_files = $this->js_files;
 
-		if ($this->ssl && !Tools::usingSecureMode() && Configuration::get('PS_SSL_ENABLED'))
-		{
+		// If we call a SSL controller without SSL or a non SSL controller with SSL, we redirect with the right protocol
+		if (Configuration::get('PS_SSL_ENABLED') && ($_SERVER['REQUEST_METHOD'] != 'POST') && $this->ssl != Tools::usingSecureMode())
+		{	
 			header('HTTP/1.1 301 Moved Permanently');
 			header('Cache-Control: no-cache');
-			header('Location: '.Tools::getShopDomainSsl(true).$_SERVER['REQUEST_URI']);
+			if ($this->ssl)					
+				header('Location: '.Tools::getShopDomainSsl(true).$_SERVER['REQUEST_URI']);
+			else						
+				header('Location: '.Tools::getShopDomain(true).$_SERVER['REQUEST_URI']);
 			exit();
 		}
-		elseif (Configuration::get('PS_SSL_ENABLED') && Tools::usingSecureMode() && !($this->ssl))
-		{
-			header('HTTP/1.1 301 Moved Permanently');
-			header('Cache-Control: no-cache');
-			header('Location: '.Tools::getShopDomain(true).$_SERVER['REQUEST_URI']);
-			exit();
-		}
-
+		
 		if ($this->ajax)
 		{
 			$this->display_header = false;
@@ -147,8 +147,6 @@ class FrontControllerCore extends Controller
 		// Init cookie language
 		// @TODO This method must be moved into switchLanguage
 		Tools::setCookieLanguage($this->context->cookie);
-		
-		$currency = Tools::setCurrency($this->context->cookie);
 
 		$protocol_link = (Configuration::get('PS_SSL_ENABLED') || Tools::usingSecureMode()) ? 'https://' : 'http://';
 		$useSSL = ((isset($this->ssl) && $this->ssl && Configuration::get('PS_SSL_ENABLED')) || Tools::usingSecureMode()) ? true : false;
@@ -164,11 +162,13 @@ class FrontControllerCore extends Controller
 
 		/* Theme is missing */
 		if (!is_dir(_PS_THEME_DIR_))
-			die(sprintf(Tools::displayError('Current theme unavailable "%s". Please check your theme directory name and permissions.'), basename(rtrim(_PS_THEME_DIR_, '/\\'))));
+			throw new PrestaShopException((sprintf(Tools::displayError('Current theme unavailable "%s". Please check your theme directory name and permissions.'), basename(rtrim(_PS_THEME_DIR_, '/\\')))));
 
 		if (Configuration::get('PS_GEOLOCATION_ENABLED'))
 			if (($newDefault = $this->geolocationManagement($this->context->country)) && Validate::isLoadedObject($newDefault))
 				$this->context->country = $newDefault;
+
+		$currency = Tools::setCurrency($this->context->cookie);
 
 		if (isset($_GET['logout']) || ($this->context->customer->logged && Customer::isBanned($this->context->customer->id)))
 		{
@@ -251,6 +251,8 @@ class FrontControllerCore extends Controller
 			$this->context->cart = $cart;
 			CartRule::autoAddToCart($this->context);
 		}
+		else
+			$this->context->cart = $cart;	
 
 		/* get page name to display it in body id */
 
@@ -325,7 +327,7 @@ class FrontControllerCore extends Controller
 			'currencies' => Currency::getCurrencies(),
 			'languages' => $languages,
 			'meta_language' => implode('-', $meta_language),
-			'priceDisplay' => Product::getTaxCalculationMethod(),
+			'priceDisplay' => Product::getTaxCalculationMethod((int)$this->context->cookie->id_customer),
 			'add_prod_display' => (int)Configuration::get('PS_ATTRIBUTE_CATEGORY_DISPLAY'),
 			'shop_name' => Configuration::get('PS_SHOP_NAME'),
 			'roundMode' => (int)Configuration::get('PS_PRICE_ROUND_MODE'),
@@ -336,7 +338,8 @@ class FrontControllerCore extends Controller
 			'opc' => (bool)Configuration::get('PS_ORDER_PROCESS_TYPE'),
 			'PS_CATALOG_MODE' => (bool)Configuration::get('PS_CATALOG_MODE') || !(bool)Group::getCurrent()->show_prices,
 			'b2b_enable' => (bool)Configuration::get('PS_B2B_ENABLE'),
-			'request' => $link->getPaginationLink(false, false, false, true)
+			'request' => $link->getPaginationLink(false, false, false, true),
+			'PS_STOCK_MANAGEMENT' => Configuration::get('PS_STOCK_MANAGEMENT')
 		));
 
 		// Add the tpl files directory for mobile
@@ -514,7 +517,7 @@ class FrontControllerCore extends Controller
 			if (Configuration::get('PS_CSS_THEME_CACHE'))
 				$this->css_files = Media::cccCSS($this->css_files);
 			//JS compressor management
-			if (Configuration::get('PS_JS_THEME_CACHE'))
+			if (Configuration::get('PS_JS_THEME_CACHE') && !$this->context->getMobileDevice())
 				$this->js_files = Media::cccJs($this->js_files);
 		}
 
@@ -577,6 +580,9 @@ class FrontControllerCore extends Controller
 				header('HTTP/1.1 503 temporarily overloaded');
 				
 				$this->context->smarty->assign($this->initLogoAndFavicon());
+				$this->context->smarty->assign(array(
+					'HOOK_MAINTENANCE' => Hook::exec('displayMaintenance', array()),
+				));
 
 				$template_dir = ($this->context->getMobileDevice() == true ? _PS_THEME_MOBILE_DIR_ : _PS_THEME_DIR_);
 				$this->smartyOutputContent($template_dir.'maintenance.tpl');
@@ -596,10 +602,10 @@ class FrontControllerCore extends Controller
 
 	protected function canonicalRedirection($canonical_url = '')
 	{
-		if (!$canonical_url || !Configuration::get('PS_CANONICAL_REDIRECT') || strtoupper($_SERVER['REQUEST_METHOD']) != 'GET')
+		if (!$canonical_url || !Configuration::get('PS_CANONICAL_REDIRECT') || strtoupper($_SERVER['REQUEST_METHOD']) != 'GET' || Tools::getValue('live_edit'))
 			return;
 
-		$match_url = (($this->ssl && Configuration::get('PS_SSL_ENABLED')) ? 'https://' : 'http://').$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+		$match_url = (Configuration::get('PS_SSL_ENABLED') && ($this->ssl || Configuration::get('PS_SSL_ENABLED_EVERYWHERE')) ? 'https://' : 'http://').$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 		$match_url = rawurldecode($match_url);
 		if (!preg_match('/^'.Tools::pRegexp(rawurldecode($canonical_url), '/').'([&?].*)?$/', $match_url))
 		{
@@ -669,6 +675,7 @@ class FrontControllerCore extends Controller
 						}
 					}
 				}
+
 				if (isset($this->context->cookie->iso_code_country) && $this->context->cookie->iso_code_country && !Validate::isLanguageIsoCode($this->context->cookie->iso_code_country))
 					$this->context->cookie->iso_code_country = Country::getIsoById(Configuration::get('PS_COUNTRY_DEFAULT'));
 				if (isset($this->context->cookie->iso_code_country) && ($id_country = Country::getByIso(strtoupper($this->context->cookie->iso_code_country))))
@@ -775,9 +782,11 @@ class FrontControllerCore extends Controller
 	
 	public function checkLiveEditAccess()
 	{
-		$live_token = Tools::getAdminToken('AdminModulesPositions'.(int)Tab::getIdFromClassName('AdminModulesPositions').(int)Tools::getValue('id_employee'));
-		$ad = Tools::getValue('ad');
-		return Tools::isSubmit('live_edit') && $ad && Tools::getValue('liveToken') == $live_token && is_dir(_PS_ROOT_DIR_.DIRECTORY_SEPARATOR.$ad);
+		if (!Tools::isSubmit('live_edit') || !Tools::getValue('ad') || !Tools::getValue('liveToken'))
+			return false;
+		if (Tools::getValue('liveToken') != Tools::getAdminToken('AdminModulesPositions'.(int)Tab::getIdFromClassName('AdminModulesPositions').(int)Tools::getValue('id_employee')))
+			return false;
+		return is_dir(_PS_ROOT_DIR_.DIRECTORY_SEPARATOR.Tools::getValue('ad'));
 	}
 	
 	public function getLiveEditFooter()
@@ -806,7 +815,7 @@ class FrontControllerCore extends Controller
 		// 'orderwaydefault' => Tools::getProductsOrder('way'),
 
 		$stock_management = Configuration::get('PS_STOCK_MANAGEMENT') ? true : false; // no display quantity order if stock management disabled
-		$order_by_values = array(0 => 'name', 1 => 'price', 2 => 'date_add', 3 => 'date_upd', 4 => 'position', 5 => 'manufacturer_name', 6 => 'quantity');
+		$order_by_values = array(0 => 'name', 1 => 'price', 2 => 'date_add', 3 => 'date_upd', 4 => 'position', 5 => 'manufacturer_name', 6 => 'quantity', 7 => 'reference');
 		$order_way_values = array(0 => 'asc', 1 => 'desc');
 		$this->orderBy = Tools::strtolower(Tools::getValue('orderby', $order_by_values[(int)Configuration::get('PS_PRODUCTS_ORDER_BY')]));
 		$this->orderWay = Tools::strtolower(Tools::getValue('orderway', $order_way_values[(int)Configuration::get('PS_PRODUCTS_ORDER_WAY')]));
@@ -841,14 +850,14 @@ class FrontControllerCore extends Controller
 		if (!is_numeric(Tools::getValue('p', 1)) || Tools::getValue('p', 1) < 0)
 			Tools::redirect(self::$link->getPaginationLink(false, false, $this->n, false, 1, false));
 
-		$current_url = tools::htmlentitiesUTF8($_SERVER['REQUEST_URI']);
+		$current_url = Tools::htmlentitiesUTF8($_SERVER['REQUEST_URI']);
 		//delete parameter page
 		$current_url = preg_replace('/(\?)?(&amp;)?p=\d+/', '$1', $current_url);
 
 		$range = 2; /* how many pages around page selected */
 
-		if ($this->p < 0)
-			$this->p = 0;
+		if ($this->p < 1)
+			$this->p = 1;
 
 		if (isset($this->context->cookie->nb_item_per_page) && $this->n != $this->context->cookie->nb_item_per_page && in_array($this->n, $nArray))
 			$this->context->cookie->nb_item_per_page = $this->n;
@@ -910,7 +919,7 @@ class FrontControllerCore extends Controller
 		$ips = array_map('trim', $ips);
 		if (is_array($ips) && count($ips))
 			foreach ($ips as $ip)
-				if (!empty($ip) && strpos($user_ip, $ip) === 0)
+				if (!empty($ip) && preg_match('/^'.$ip.'.*/', $user_ip))
 					$allowed = true;
 		return $allowed;
 	}
@@ -986,10 +995,13 @@ class FrontControllerCore extends Controller
 				$customer = new Customer((int)$cart->id_customer);
 				if (Validate::isLoadedObject($customer))
 				{
+					$customer->logged = 1;
+					$this->context->customer = $customer;
 					$this->context->cookie->id_customer = (int)$customer->id;
 					$this->context->cookie->customer_lastname = $customer->lastname;
 					$this->context->cookie->customer_firstname = $customer->firstname;
 					$this->context->cookie->logged = 1;
+					$this->context->cookie->check_cgv = 1;
 					$this->context->cookie->is_guest = $customer->isGuest();
 					$this->context->cookie->passwd = $customer->passwd;
 					$this->context->cookie->email = $customer->email;
@@ -1124,12 +1136,11 @@ class FrontControllerCore extends Controller
 	public function initLogoAndFavicon()
 	{
 		$mobile_device = $this->context->getMobileDevice();
-		$logo = _PS_IMG_.Configuration::get('PS_LOGO').'?'.Configuration::get('PS_IMG_UPDATE_TIME');
 		
 		if ($mobile_device && Configuration::get('PS_LOGO_MOBILE'))
-			$logo = _PS_IMG_.Configuration::get('PS_LOGO_MOBILE').'?'.Configuration::get('PS_IMG_UPDATE_TIME');
+			$logo = self::$link->getMediaLink(_PS_IMG_.Configuration::get('PS_LOGO_MOBILE').'?'.Configuration::get('PS_IMG_UPDATE_TIME'));
 		else
-			$logo = _PS_IMG_.Configuration::get('PS_LOGO').'?'.Configuration::get('PS_IMG_UPDATE_TIME');
+			$logo = self::$link->getMediaLink(_PS_IMG_.Configuration::get('PS_LOGO').'?'.Configuration::get('PS_IMG_UPDATE_TIME'));
 		
 		return array(
  				'favicon_url' => _PS_IMG_.Configuration::get('PS_FAVICON'),

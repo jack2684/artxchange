@@ -1,7 +1,7 @@
 Salve,
 
 Il prodotto {product} è ora disponibile.
-Infatti l'articolo è di nuovo in magazzino.
+L'articolo è di nuovo in magazzino.
 
 Puoi accedere alla pagina del prodotto su: {product_link}
 

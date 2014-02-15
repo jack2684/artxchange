@@ -15,7 +15,7 @@ $_MODULE['<{pagesnotfound}prestashop>pagesnotfound_d372ffc9065cb7d2ea24df137927d
 $_MODULE['<{pagesnotfound}prestashop>pagesnotfound_d8847bc418fc4f5a3e37c2e8390bb9ed'] = 'Очистить БД';
 $_MODULE['<{pagesnotfound}prestashop>pagesnotfound_4613b06701504f4a6664effb977b3e32'] = 'Очистить все страницы, не найденные в этот период';
 $_MODULE['<{pagesnotfound}prestashop>pagesnotfound_254b5e94768b90388cc7002d362351f0'] = 'Очистить все не найденные страницы';
-$_MODULE['<{pagesnotfound}prestashop>pagesnotfound_6602bbeb2956c035fb4cb5e844a4861b'] = 'Руководство';
+$_MODULE['<{pagesnotfound}prestashop>pagesnotfound_6602bbeb2956c035fb4cb5e844a4861b'] = 'Guide';
 $_MODULE['<{pagesnotfound}prestashop>pagesnotfound_3604249130acf7fda296e16edc996e5b'] = 'Ошибки 404';
 $_MODULE['<{pagesnotfound}prestashop>pagesnotfound_a90083861c168ef985bf70763980aa60'] = 'Как поймать эти ошибки?';
 $_MODULE['<{pagesnotfound}prestashop>pagesnotfound_f0698625adc9935b9a8d40eb128922c2'] = 'Если ваш хостинг поддерживает файлы .htaccess, вы можете создать его в корневой директории магазина и поместить в него следующие строки:';

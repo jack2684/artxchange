@@ -1,6 +1,6 @@
-﻿Salve {firstname} {lastname}, grazie del tuo ordine su {shop_name}!
+﻿Salve {firstname} {lastname},
 
-Dettagli dell'ordine
+Grazie per aver ordinato presso {shop_name}!
 
 	Ordine: {order_name} eseguito il {date}
 	Pagamento: {payment}
@@ -8,23 +8,21 @@ Dettagli dell'ordine
 	Prodotti: {total_products}
 	Sconti: {total_discounts}
 	Spedizione: {total_shipping}
-	Carta regalo: {total_wrapping}
+	Confezione regalo: {total_wrapping}
 	Totale: {total_paid}
-
-
-Spedizione
 
 	Mezzo di spedizione: {carrier}
 
-	Indirizzo di consegna:
+	Indirizzo di spedizione:
 
-	{delivery_block_html} 
+	{delivery_block_txt}
 
 	Indirizzo di fatturazione:
 
-	{delivery_block_html}
+	{invoice_block_txt}
 
-Puoi rivedere questo ordine e scaricare la fattura dalla sezione "Cronologia ordine" del tuo account cliccando su "Il mio account" nel nostro sito web. 
-Se hai un account ospite, puoi seguire il tuo ordine in questa pagina: {guest_tracking_url}
+Puoi rivedere questo ordine e scaricare la tua fattura dalla sezione "Cronologia ordine" del tuo account cliccando su "Il mio account" nel nostro sito.
+
+Se hai un account ospite, puoi seguire l'ordine in questa pagina: {guest_tracking_url}
 
 {shop_url} powered by PrestaShop™

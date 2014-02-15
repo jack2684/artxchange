@@ -36,6 +36,7 @@ class AdminCartsControllerCore extends AdminController
 		$this->addRowAction('view');
 		$this->addRowAction('delete');
 		$this->allow_export = true;
+		$this->_orderWay = 'DESC';
 
 		$this->_select = 'CONCAT(LEFT(c.`firstname`, 1), \'. \', c.`lastname`) `customer`, a.id_cart total, ca.name carrier, o.id_order, IF(co.id_guest, 1, 0) id_guest';
 		$this->_join = 'LEFT JOIN '._DB_PREFIX_.'customer c ON (c.id_customer = a.id_customer)
@@ -209,7 +210,7 @@ class AdminCartsControllerCore extends AdminController
 
 			if (!$this->context->cart->id_customer)
 				$this->context->cart->id_customer = $id_customer;
-			if ($this->context->cart->OrderExists())
+			if (Validate::isLoadedObject($this->context->cart) && $this->context->cart->OrderExists())
 				return;
 			if (!$this->context->cart->secure_key)
 				$this->context->cart->secure_key = $this->context->customer->secure_key;
@@ -273,15 +274,15 @@ class AdminCartsControllerCore extends AdminController
 					$field_id = 'customization_'.$id_product.'_'.$customization_field['id_customization_field'];
 					if ($customization_field['type'] == Product::CUSTOMIZE_TEXTFIELD)
 					{
-						if (!isset($_POST[$field_id]) || empty($_POST[$field_id]))
+						if (!Tools::getValue($field_id))
 						{
 							if ($customization_field['required'])
 								$errors[] = Tools::displayError('Please fill in all the required fields.');
 							continue;
 						}
-						if (!Validate::isMessage($_POST[$field_id]) || empty($_POST[$field_id]))
+						if (!Validate::isMessage(Tools::getValue($field_id)))
 							$errors[] = Tools::displayError('Invalid message');
-						$this->context->cart->addTextFieldToProduct((int)$product->id, (int)$customization_field['id_customization_field'], Product::CUSTOMIZE_TEXTFIELD, $_POST[$field_id]);
+						$this->context->cart->addTextFieldToProduct((int)$product->id, (int)$customization_field['id_customization_field'], Product::CUSTOMIZE_TEXTFIELD, Tools::getValue($field_id));
 					}
 					elseif ($customization_field['type'] == Product::CUSTOMIZE_FILE)
 					{
@@ -401,7 +402,7 @@ class AdminCartsControllerCore extends AdminController
 			{
 				if (Validate::isMessage($message_content))
 				{
-					$message->message = htmlentities($message_content, ENT_COMPAT, 'UTF-8');
+					$message->message = $message_content;
 					$message->id_cart = (int)$this->context->cart->id;
 					$message->id_customer = (int)$this->context->cart->id_customer;
 					$message->save();
@@ -551,6 +552,8 @@ class AdminCartsControllerCore extends AdminController
 		if (count($summary['products']))
 			foreach ($summary['products'] as &$product)
 			{
+				$product['numeric_price'] = $product['price'];
+				$product['numeric_total'] = $product['total'];
 				$product['price'] = str_replace($currency->sign, '', Tools::displayPrice($product['price'], $currency));
 				$product['total'] = str_replace($currency->sign, '', Tools::displayPrice($product['total'], $currency));
 				$product['image_link'] = $this->context->link->getImageLink($product['link_rewrite'], $product['id_image'], 'small_default');
@@ -684,18 +687,21 @@ class AdminCartsControllerCore extends AdminController
 					$free_shipping = true;
 					break;
 				}
-		return array('summary' => $this->getCartSummary(),
-						'delivery_option_list' => $this->getDeliveryOptionList(),
-						'cart' => $this->context->cart,
-						'addresses' => $this->context->customer->getAddresses((int)$this->context->cart->id_lang),
-						'id_cart' => $id_cart,
-						'order_message' => $message_content,
-						'link_order' => $this->context->link->getPageLink(
-							'order', false,
-							(int)$this->context->cart->id_lang,
-							'step=3&recover_cart='.$id_cart.'&token_cart='.md5(_COOKIE_KEY_.'recover_cart_'.$id_cart)),
-						'free_shipping' => (int)$free_shipping
-						);
+		return array(
+			'summary' => $this->getCartSummary(),
+			'delivery_option_list' => $this->getDeliveryOptionList(),
+			'cart' => $this->context->cart,
+			'currency' => new Currency($this->context->cart->id_currency),
+			'addresses' => $this->context->customer->getAddresses((int)$this->context->cart->id_lang),
+			'id_cart' => $id_cart,
+			'order_message' => $message_content,
+			'link_order' => $this->context->link->getPageLink(
+				'order', false,
+				(int)$this->context->cart->id_lang,
+				'step=3&recover_cart='.$id_cart.'&token_cart='.md5(_COOKIE_KEY_.'recover_cart_'.$id_cart)
+			),
+			'free_shipping' => (int)$free_shipping
+		);
 	}
 
 	public function initToolbar()

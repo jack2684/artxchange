@@ -43,7 +43,7 @@ class AuthControllerCore extends FrontController
 		parent::init();
 
 		if (!Tools::getIsset('step') && $this->context->customer->isLogged() && !$this->ajax)
-			Tools::redirect('index.php?controller='.(($this->authRedirection !== false) ? url_encode($this->authRedirection) : 'my-account'));
+			Tools::redirect('index.php?controller='.(($this->authRedirection !== false) ? urlencode($this->authRedirection) : 'my-account'));
 
 		if (Tools::getValue('create_account'))
 			$this->create_account = true;
@@ -85,17 +85,15 @@ class AuthControllerCore extends FrontController
 
 		$this->assignCountries();
 
-		$active_module_newsletter = false;
-		if ($module_newsletter = Module::getInstanceByName('blocknewsletter'))
-			$active_module_newsletter = $module_newsletter->active;
-
-		$this->context->smarty->assign('newsletter', (int)$active_module_newsletter);
+		$this->context->smarty->assign('newsletter', 1);
 
 		$back = Tools::getValue('back');
 		$key = Tools::safeOutput(Tools::getValue('key'));
 		if (!empty($key))
 			$back .= (strpos($back, '?') !== false ? '&' : '?').'key='.$key;
-		if (!empty($back))
+		if ($back == Tools::secureReferrer(Tools::getValue('back')))
+			$this->context->smarty->assign('back', html_entity_decode($back));
+		else
 			$this->context->smarty->assign('back', Tools::safeOutput($back));
 	
 		if (Tools::getValue('display_guest_checkout'))
@@ -107,7 +105,9 @@ class AuthControllerCore extends FrontController
 			
 			if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE']))
 			{
-				$array = preg_split('/,|-/', $_SERVER['HTTP_ACCEPT_LANGUAGE']);
+				// get all countries as language (xy) or language-country (wz-XY)
+				$array = array();
+				preg_match("#(?<=-)\w\w|\w\w(?!-)#",$_SERVER['HTTP_ACCEPT_LANGUAGE'],$array);
 				if (!Validate::isLanguageIsoCode($array[0]) || !($sl_country = Country::getByIso($array[0])))
 					$sl_country = (int)Configuration::get('PS_COUNTRY_DEFAULT');
 			}
@@ -139,6 +139,9 @@ class AuthControllerCore extends FrontController
 				'HOOK_CREATE_ACCOUNT_TOP' => Hook::exec('displayCustomerAccountFormTop')
 			));
 		
+		// Just set $this->template value here in case it's used by Ajax
+		$this->setTemplate(_PS_THEME_DIR_.'authentication.tpl');
+
 		if ($this->ajax)
 		{
 			// Call a hook to display more information on form
@@ -150,12 +153,11 @@ class AuthControllerCore extends FrontController
 			$return = array(
 				'hasError' => !empty($this->errors),
 				'errors' => $this->errors,
-				'page' => $this->context->smarty->fetch(_PS_THEME_DIR_.'authentication.tpl'),
+				'page' => $this->context->smarty->fetch($this->template),
 				'token' => Tools::getToken(false)
 			);
 			die(Tools::jsonEncode($return));
 		}
-		$this->setTemplate(_PS_THEME_DIR_.'authentication.tpl');
 	}
 
 	/**
@@ -327,9 +329,9 @@ class AuthControllerCore extends FrontController
 
 				if (!$this->ajax)
 				{
-					if ($back = Tools::getValue('back'))
+					if (($back = Tools::getValue('back')) && $back == Tools::secureReferrer($back))
 						Tools::redirect(html_entity_decode($back));
-					Tools::redirect('index.php?controller='.(($this->authRedirection !== false) ? url_encode($this->authRedirection) : 'my-account'));
+					Tools::redirect('index.php?controller='.(($this->authRedirection !== false) ? urlencode($this->authRedirection) : 'my-account'));
 				}
 			}
 		}
@@ -392,7 +394,10 @@ class AuthControllerCore extends FrontController
 		$firstnameAddress = Tools::getValue('firstname');		
 		$_POST['lastname'] = Tools::getValue('customer_lastname');
 		$_POST['firstname'] = Tools::getValue('customer_firstname');
-		
+		$addresses_types = array('address');
+		if (!Configuration::get('PS_ORDER_PROCESS_TYPE') && Configuration::get('PS_GUEST_CHECKOUT_ENABLED') && Tools::getValue('invoice_address'))
+			$addresses_types[] = 'address_invoice';
+
 		$error_phone = false;
 		if (Configuration::get('PS_ONE_PHONE_AT_LEAST'))
 		{
@@ -401,22 +406,20 @@ class AuthControllerCore extends FrontController
 				if (!Tools::getValue('phone') && !Tools::getValue('phone_mobile'))
 					$error_phone = true;
 			}
-			elseif (((Configuration::get('PS_REGISTRATION_PROCESS_TYPE') || Configuration::get('PS_ORDER_PROCESS_TYPE')) 
-					&& (Configuration::get('PS_ORDER_PROCESS_TYPE') && !Tools::getValue('email_create')))
-					&& (!Tools::getValue('phone') && !Tools::getValue('phone_mobile')))
-				$error_phone = true;
-			elseif (((Configuration::get('PS_REGISTRATION_PROCESS_TYPE') && Configuration::get('PS_ORDER_PROCESS_TYPE') && Tools::getValue('email_create')))
+			elseif (((Configuration::get('PS_REGISTRATION_PROCESS_TYPE') && Configuration::get('PS_ORDER_PROCESS_TYPE')) 
+					|| (Configuration::get('PS_ORDER_PROCESS_TYPE') && !Tools::getValue('email_create'))
+					|| (Configuration::get('PS_REGISTRATION_PROCESS_TYPE') && Tools::getValue('email_create')))
 					&& (!Tools::getValue('phone') && !Tools::getValue('phone_mobile')))
 				$error_phone = true;
 		}
 
 		if ($error_phone)
 			$this->errors[] = Tools::displayError('You must register at least one phone number.');
-		
+
 		$this->errors = array_unique(array_merge($this->errors, $customer->validateController()));
 
 		// Check the requires fields which are settings in the BO
-		$this->errors = array_merge($this->errors, $customer->validateFieldsRequiredDatabase());
+		$this->errors = $this->errors + $customer->validateFieldsRequiredDatabase();
 
 		if (!Configuration::get('PS_REGISTRATION_PROCESS_TYPE') && !$this->ajax && !Tools::isSubmit('submitGuestAccount'))
 		{
@@ -425,6 +428,7 @@ class AuthControllerCore extends FrontController
 				if (Tools::isSubmit('newsletter'))
 					$this->processCustomerNewsletter($customer);
 
+				$customer->firstname = Tools::ucwords($customer->firstname);
 				$customer->birthday = (empty($_POST['years']) ? '' : (int)$_POST['years'].'-'.(int)$_POST['months'].'-'.(int)$_POST['days']);
 				if (!Validate::isBirthDate($customer->birthday))
 					$this->errors[] = Tools::displayError('Invalid date of birth.');
@@ -462,54 +466,74 @@ class AuthControllerCore extends FrontController
 							die(Tools::jsonEncode($return));
 						}
 
-						if ($back = Tools::getValue('back'))
+						if (($back = Tools::getValue('back')) && $back == Tools::secureReferrer($back))
 							Tools::redirect(html_entity_decode($back));
 						// redirection: if cart is not empty : redirection to the cart
 						if (count($this->context->cart->getProducts(true)) > 0)
 							Tools::redirect('index.php?controller=order&multi-shipping='.(int)Tools::getValue('multi-shipping'));
 						// else : redirection to the account
 						else
-							Tools::redirect('index.php?controller='.(($this->authRedirection !== false) ? url_encode($this->authRedirection) : 'my-account'));
+							Tools::redirect('index.php?controller='.(($this->authRedirection !== false) ? urlencode($this->authRedirection) : 'my-account'));
 					}
 					else
-						$this->errors[] = Tools::displayError('An error occurred while creating your account..');
+						$this->errors[] = Tools::displayError('An error occurred while creating your account.');
 				}
 			}
 
 		}
 		else // if registration type is in one step, we save the address
 		{
-			// Preparing address
-			$address = new Address();
 			$_POST['lastname'] = $lastnameAddress;
 			$_POST['firstname'] = $firstnameAddress;
-			$address->id_customer = 1;
-			$this->errors = array_unique(array_merge($this->errors, $address->validateController()));
-
-			// US customer: normalize the address
-			if ($address->id_country == Country::getByIso('US'))
+			$post_back = $_POST;
+			// Preparing addresses
+			foreach($addresses_types as $addresses_type)
 			{
-				include_once(_PS_TAASC_PATH_.'AddressStandardizationSolution.php');
-				$normalize = new AddressStandardizationSolution;
-				$address->address1 = $normalize->AddressLineStandardization($address->address1);
-				$address->address2 = $normalize->AddressLineStandardization($address->address2);
+				$$addresses_type = new Address();
+				$$addresses_type->id_customer = 1;
+
+				if ($addresses_type == 'address_invoice')
+					foreach($_POST as $key => &$post)
+						if (isset($_POST[$key.'_invoice']))
+							$post = $_POST[$key.'_invoice'];
+
+				$this->errors = array_unique(array_merge($this->errors, $$addresses_type->validateController()));
+				if ($addresses_type == 'address_invoice')
+					$_POST = $post_back;
+
+				// US customer: normalize the address
+				if ($$addresses_type->id_country == Country::getByIso('US') && Configuration::get('PS_TAASC'))
+				{
+					include_once(_PS_TAASC_PATH_.'AddressStandardizationSolution.php');
+					$normalize = new AddressStandardizationSolution;
+					$$addresses_type->address1 = $normalize->AddressLineStandardization($$addresses_type->address1);
+					$$addresses_type->address2 = $normalize->AddressLineStandardization($$addresses_type->address2);
+				}
+	
+				if (!($country = new Country($$addresses_type->id_country)) || !Validate::isLoadedObject($country))
+					$this->errors[] = Tools::displayError('Country cannot be loaded with address->id_country');
+				$postcode = Tools::getValue('postcode');		
+				/* Check zip code format */
+				if ($country->zip_code_format && !$country->checkZipCode($postcode))
+					$this->errors[] = sprintf(Tools::displayError('The Zip/Postal code you\'ve entered is invalid. It must follow this format: %s'), str_replace('C', $country->iso_code, str_replace('N', '0', str_replace('L', 'A', $country->zip_code_format))));
+				elseif(empty($postcode) && $country->need_zip_code)
+					$this->errors[] = Tools::displayError('A Zip / Postal code is required.');
+				elseif ($postcode && !Validate::isPostCode($postcode))
+					$this->errors[] = Tools::displayError('The Zip / Postal code is invalid.');
+	
+				if ($country->need_identification_number && (!Tools::getValue('dni') || !Validate::isDniLite(Tools::getValue('dni'))))
+					$this->errors[] = Tools::displayError('The identification number is incorrect or has already been used.');
+				elseif (!$country->need_identification_number)
+					$$addresses_type->dni = null;
+
+				if (Tools::isSubmit('submitAccount') || Tools::isSubmit('submitGuestAccount'))
+					if (!($country = new Country($$addresses_type->id_country, Configuration::get('PS_LANG_DEFAULT'))) || !Validate::isLoadedObject($country))
+						$this->errors[] = Tools::displayError('Country is invalid');
+				$contains_state = isset($country) && is_object($country) ? (int)$country->contains_states: 0;
+				$id_state = isset($$addresses_type) && is_object($$addresses_type) ? (int)$$addresses_type->id_state: 0;
+				if ((Tools::isSubmit('submitAccount')|| Tools::isSubmit('submitGuestAccount')) && $contains_state && !$id_state)
+					$this->errors[] = Tools::displayError('This country requires you to choose a State.');
 			}
-
-			if (!($country = new Country($address->id_country)) || !Validate::isLoadedObject($country))
-				$this->errors[] = Tools::displayError('Country cannot be loaded with address->id_country');
-			$postcode = Tools::getValue('postcode');		
-			/* Check zip code format */
-			if ($country->zip_code_format && !$country->checkZipCode($postcode))
-				$this->errors[] = sprintf(Tools::displayError('The Zip/Postal code you\'ve entered is invalid. It must follow this format: %s'), str_replace('C', $country->iso_code, str_replace('N', '0', str_replace('L', 'A', $country->zip_code_format))));
-			elseif(empty($postcode) && $country->need_zip_code)
-				$this->errors[] = Tools::displayError('A Zip / Postal code is required.');
-			elseif ($postcode && !Validate::isPostCode($postcode))
-				$this->errors[] = Tools::displayError('The Zip / Postal code is invalid.');
-
-			if ($country->need_identification_number && (!Tools::getValue('dni') || !Validate::isDniLite(Tools::getValue('dni'))))
-				$this->errors[] = Tools::displayError('The identification number is incorrect or has already been used.');
-			elseif (!$country->need_identification_number)
-				$address->dni = null;
 		}
 
 		if (!@checkdate(Tools::getValue('months'), Tools::getValue('days'), Tools::getValue('years')) && !(Tools::getValue('months') == '' && Tools::getValue('days') == '' && Tools::getValue('years') == ''))
@@ -528,88 +552,89 @@ class AuthControllerCore extends FrontController
 
 			if (!count($this->errors))
 			{
-				// if registration type is in one step, we save the address
-				if (Configuration::get('PS_REGISTRATION_PROCESS_TYPE') || Tools::isSubmit('submitGuestAccount'))
-					if (!($country = new Country($address->id_country, Configuration::get('PS_LANG_DEFAULT'))) || !Validate::isLoadedObject($country))
-						die(Tools::displayError());
-				$contains_state = isset($country) && is_object($country) ? (int)$country->contains_states: 0;
-				$id_state = isset($address) && is_object($address) ? (int)$address->id_state: 0;
-				if (Configuration::get('PS_REGISTRATION_PROCESS_TYPE') && $contains_state && !$id_state)
-					$this->errors[] = Tools::displayError('This country requires you to chose a State.');
+				$customer->active = 1;
+				// New Guest customer
+				if (Tools::isSubmit('is_new_customer'))
+					$customer->is_guest = !Tools::getValue('is_new_customer', 1);
+				else
+					$customer->is_guest = 0;
+				if (!$customer->add())
+					$this->errors[] = Tools::displayError('An error occurred while creating your account.');
 				else
 				{
-					$customer->active = 1;
-					// New Guest customer
-					if (Tools::isSubmit('is_new_customer'))
-						$customer->is_guest = !Tools::getValue('is_new_customer', 1);
-					else
-						$customer->is_guest = 0;
-					if (!$customer->add())
-						$this->errors[] = Tools::displayError('An error occurred while creating your account..');
-					else
+					foreach($addresses_types as $addresses_type)
 					{
-						$address->id_customer = (int)$customer->id;
-						$this->errors = array_unique(array_merge($this->errors, $address->validateController()));
-						if (!count($this->errors) && (Configuration::get('PS_REGISTRATION_PROCESS_TYPE') || $this->ajax || Tools::isSubmit('submitGuestAccount')) && !$address->add())
+						$$addresses_type->id_customer = (int)$customer->id;				
+						if ($addresses_type == 'address_invoice')
+							foreach($_POST as $key => &$post)
+								if (isset($_POST[$key.'_invoice']))
+									$post = $_POST[$key.'_invoice'];
+		
+						$this->errors = array_unique(array_merge($this->errors, $$addresses_type->validateController()));
+						if ($addresses_type == 'address_invoice')
+							$_POST = $post_back;
+						if (!count($this->errors) && (Configuration::get('PS_REGISTRATION_PROCESS_TYPE') || $this->ajax || Tools::isSubmit('submitGuestAccount')) && !$$addresses_type->add())
 							$this->errors[] = Tools::displayError('An error occurred while creating your address.');
+					}
+					if (!count($this->errors))
+					{
+						if (!$customer->is_guest)
+						{
+							$this->context->customer = $customer;
+							$customer->cleanGroups();
+							// we add the guest customer in the default customer group
+							$customer->addGroups(array((int)Configuration::get('PS_CUSTOMER_GROUP')));
+							if (!$this->sendConfirmationMail($customer))
+								$this->errors[] = Tools::displayError('The email cannot be sent.');
+						}
 						else
 						{
-							if (!$customer->is_guest)
-							{
-								$this->context->customer = $customer;
-								$customer->cleanGroups();
-								// we add the guest customer in the default customer group
-								$customer->addGroups(array((int)Configuration::get('PS_CUSTOMER_GROUP')));
-								if (!$this->sendConfirmationMail($customer))
-									$this->errors[] = Tools::displayError('The email cannot be sent.');
-							}
-							else
-							{
-								$customer->cleanGroups();
-								// we add the guest customer in the guest customer group
-								$customer->addGroups(array((int)Configuration::get('PS_GUEST_GROUP')));
-							}
-							$this->updateContext($customer);
-							$this->context->cart->id_address_delivery = Address::getFirstCustomerAddressId((int)$customer->id);
-							$this->context->cart->id_address_invoice = Address::getFirstCustomerAddressId((int)$customer->id);
-
-							// If a logged guest logs in as a customer, the cart secure key was already set and needs to be updated
-							$this->context->cart->update();
-
-							// Avoid articles without delivery address on the cart
-							$this->context->cart->autosetProductAddress();
-
-							Hook::exec('actionCustomerAccountAdd', array(
-									'_POST' => $_POST,
-									'newCustomer' => $customer
-								));
-							if ($this->ajax)
-							{
-								$return = array(
-									'hasError' => !empty($this->errors),
-									'errors' => $this->errors,
-									'isSaved' => true,
-									'id_customer' => (int)$this->context->cookie->id_customer,
-									'id_address_delivery' => $this->context->cart->id_address_delivery,
-									'id_address_invoice' => $this->context->cart->id_address_invoice,
-									'token' => Tools::getToken(false)
-								);
-								die(Tools::jsonEncode($return));
-							}
-							// if registration type is in two steps, we redirect to register address
-							if (!Configuration::get('PS_REGISTRATION_PROCESS_TYPE') && !$this->ajax && !Tools::isSubmit('submitGuestAccount'))
-								Tools::redirect('index.php?controller=address');
-								
-							if ($back = Tools::getValue('back'))
-								Tools::redirect(html_entity_decode($back));
-
-							// redirection: if cart is not empty : redirection to the cart
-							if (count($this->context->cart->getProducts(true)) > 0)
-								Tools::redirect('index.php?controller=order&multi-shipping='.(int)Tools::getValue('multi-shipping'));
-							// else : redirection to the account
-							else
-								Tools::redirect('index.php?controller='.(($this->authRedirection !== false) ? url_encode($this->authRedirection) : 'my-account'));
+							$customer->cleanGroups();
+							// we add the guest customer in the guest customer group
+							$customer->addGroups(array((int)Configuration::get('PS_GUEST_GROUP')));
 						}
+						$this->updateContext($customer);
+						$this->context->cart->id_address_delivery = (int)Address::getFirstCustomerAddressId((int)$customer->id);
+						$this->context->cart->id_address_invoice = (int)Address::getFirstCustomerAddressId((int)$customer->id);
+						if (isset($address_invoice) && Validate::isLoadedObject($address_invoice))
+							$this->context->cart->id_address_invoice = (int)$address_invoice->id;
+
+						// If a logged guest logs in as a customer, the cart secure key was already set and needs to be updated
+						$this->context->cart->update();
+
+						// Avoid articles without delivery address on the cart
+						$this->context->cart->autosetProductAddress();
+
+						Hook::exec('actionCustomerAccountAdd', array(
+								'_POST' => $_POST,
+								'newCustomer' => $customer
+							));
+						if ($this->ajax)
+						{
+							$return = array(
+								'hasError' => !empty($this->errors),
+								'errors' => $this->errors,
+								'isSaved' => true,
+								'id_customer' => (int)$this->context->cookie->id_customer,
+								'id_address_delivery' => $this->context->cart->id_address_delivery,
+								'id_address_invoice' => $this->context->cart->id_address_invoice,
+								'token' => Tools::getToken(false)
+							);
+							die(Tools::jsonEncode($return));
+						}
+						// if registration type is in two steps, we redirect to register address
+						if (!Configuration::get('PS_REGISTRATION_PROCESS_TYPE') && !$this->ajax && !Tools::isSubmit('submitGuestAccount'))
+							Tools::redirect('index.php?controller=address');
+							
+						if (($back = Tools::getValue('back')) && $back == Tools::secureReferrer($back))
+							Tools::redirect(html_entity_decode($back));
+
+						// redirection: if cart is not empty : redirection to the cart
+						if (count($this->context->cart->getProducts(true)) > 0)
+							Tools::redirect('index.php?controller=order&multi-shipping='.(int)Tools::getValue('multi-shipping'));
+						// else : redirection to the account
+						else
+							Tools::redirect('index.php?controller='.(($this->authRedirection !== false) ? urlencode($this->authRedirection) : 'my-account'));
 					}
 				}
 			}
@@ -688,6 +713,9 @@ class AuthControllerCore extends FrontController
 	 */
 	protected function sendConfirmationMail(Customer $customer)
 	{
+		if (!Configuration::get('PS_CUSTOMER_CREATION_EMAIL'))
+			return true;
+
 		return Mail::Send(
 			$this->context->language->id,
 			'account',

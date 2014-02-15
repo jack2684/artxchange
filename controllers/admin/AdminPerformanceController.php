@@ -118,17 +118,84 @@ class AdminPerformanceControllerCore extends AdminController
 						)
 					)
 				),
+				array(
+					'type' => 'text',
+					'label' => $this->l('Debug console Key'),
+					'name' => 'smarty_console_key',
+					'size' => 30,
+					'desc' => $this->l('SMARTY_DEBUG parameter in the URL.')
+				),
 			)
 		);
 
 		$this->fields_value['smarty_force_compile'] = Configuration::get('PS_SMARTY_FORCE_COMPILE');
 		$this->fields_value['smarty_cache'] = Configuration::get('PS_SMARTY_CACHE');
 		$this->fields_value['smarty_console'] = Configuration::get('PS_SMARTY_CONSOLE');
+		$this->fields_value['smarty_console_key'] = Configuration::get('PS_SMARTY_CONSOLE_KEY');
+	}
+
+	public function initFieldsetDebugMode()
+	{
+		$this->fields_form[1]['form'] = array(
+			'legend' => array(
+				'title' => $this->l('Debug mode'),
+				'image' => '../img/admin/prefs.gif'
+			),
+			'input' => array(
+				array(
+					'type' => 'radio',
+					'label' => $this->l('Disable non PrestaShop modules'),
+					'name' => 'native_module',
+					'class' => 't',
+					'is_bool' => true,
+					'values' => array(
+						array(
+							'id' => 'native_module_on',
+							'value' => 1,
+							'label' => $this->l('Enabled')
+						),
+						array(
+							'id' => 'native_module_off',
+							'value' => 0,
+							'label' => $this->l('Disabled')
+						)
+					),
+					'desc' => $this->l('Enable or disable non PrestaShop Modules.')
+				),
+				array(
+					'type' => 'radio',
+					'label' => $this->l('Disable all overrides'),
+					'name' => 'overrides',
+					'class' => 't',
+					'is_bool' => true,
+					'values' => array(
+						array(
+							'id' => 'overrides_module_on',
+							'value' => 1,
+							'label' => $this->l('Enabled')
+						),
+						array(
+							'id' => 'overrides_module_off',
+							'value' => 0,
+							'label' => $this->l('Disabled')
+						)
+					),
+					'desc' => $this->l('Enable or disable all classes and controllers overrides')
+				),
+			),
+			'submit' => array(
+				'title' => $this->l('   Save   '),
+				'class' => 'button'
+			),
+		);
+
+		$this->fields_value['native_module'] = Configuration::get('PS_DISABLE_NON_NATIVE_MODULE');
+		$this->fields_value['overrides'] = Configuration::get('PS_DISABLE_OVERRIDES');
 	}
 
 	public function initFieldsetFeaturesDetachables()
 	{
-		$this->fields_form[1]['form'] = array(
+		$this->fields_form[2]['form'] = array(
 			'legend' => array(
 				'title' => $this->l('Optional features'),
 				'image' => '../img/admin/tab-plugins.gif'
@@ -189,7 +256,7 @@ class AdminPerformanceControllerCore extends AdminController
 
 	public function initFieldsetCCC()
 	{
-		$this->fields_form[2]['form'] = array(
+		$this->fields_form[3]['form'] = array(
 			'legend' => array(
 				'title' => $this->l('CCC (Combine, Compress and Cache)'),
 				'image' => '../img/admin/arrow_in.png'
@@ -309,7 +376,7 @@ class AdminPerformanceControllerCore extends AdminController
 
 	public function initFieldsetMediaServer()
 	{
-		$this->fields_form[3]['form'] = array(
+		$this->fields_form[4]['form'] = array(
 			'legend' => array(
 				'title' => $this->l('Media servers (use only with CCC)'),
 				'image' => '../img/admin/subdomain.gif'
@@ -351,7 +418,7 @@ class AdminPerformanceControllerCore extends AdminController
 
 	public function initFieldsetCiphering()
 	{
-		$this->fields_form[4]['form'] = array(
+		$this->fields_form[5]['form'] = array(
 			'legend' => array(
 				'title' => $this->l('Ciphering'),
 				'image' => '../img/admin/computer_key.png'
@@ -408,7 +475,7 @@ class AdminPerformanceControllerCore extends AdminController
 			)
 		);
 
-		$this->fields_form[5]['form'] = array(
+		$this->fields_form[6]['form'] = array(
 			'legend' => array(
 				'title' => $this->l('Caching'),
 				'image' => '../img/admin/computer_key.png'
@@ -471,31 +538,22 @@ class AdminPerformanceControllerCore extends AdminController
 		$this->tpl_form_vars['servers'] = CacheMemcache::getMemcachedServers();
 	}
 
-	public function initFieldsetCloudCache()
-	{
-		if (!class_exists('CloudCache'))
-			$this->fields_form[6]['form'] = array(
-				'legend' => array(
-					'title' => $this->l('CloudCache'),
-					'image' => '../img/admin/subdomain.gif'
-				),
-				'desc' => $this->l('Performance matters! Improve speed and conversions the easy way.').'<br />'.
-				$this->l('CloudCache supercharges your site in minutes through its state-of-the-art content delivery network.').'<br /><br />'.
-				$this->l('Subscribe now using the code "presta25" and get an exclusive 25% monthly discount on every available package.').'<br /><br />
-			<a style="color: blue" href="index.php?controller=AdminModules&token='.Tools::getAdminTokenLite('AdminModules').'&filtername=cloudcache" id="installCloudCache">&gt; '.$this->l('Click here to install the CloudCache module for PrestaShop').'</a><br />'
-		);
-	}
-
 	public function renderForm()
 	{
 		// Initialize fieldset for a form
 		$this->initFieldsetSmarty();
+
+		if (_PS_MODE_DEV_)
+			$this->initFieldsetDebugMode();
+
 		$this->initFieldsetFeaturesDetachables();
 		$this->initFieldsetCCC();
 		$this->initFieldsetMediaServer();
 		$this->initFieldsetCiphering();
 		$this->initFieldsetCaching();
-		$this->initFieldsetCloudCache();
+
+		// Reindex fields
+		$this->fields_form = array_values($this->fields_form);
 
 		// Activate multiple fieldset
 		$this->multiple_fieldsets = true;
@@ -505,23 +563,27 @@ class AdminPerformanceControllerCore extends AdminController
 
 	public function initContent()
 	{
+		$this->initTabModuleList();
 		$php_dot_net_supported_langs = array('en', 'zh', 'fr', 'de', 'ja', 'pl', 'ro', 'ru', 'fa', 'es', 'tr');
 		$php_lang = in_array($this->context->language->iso_code, $php_dot_net_supported_langs) ?
 			$this->context->language->iso_code : 'en';
 
-		if (!extension_loaded('memcache'))
+		if (_PS_CACHE_ENABLED_ && _PS_CACHING_SYSTEM_ == 'CacheMemcache' && !CacheMemcache::getMemcachedServers())
+			$this->warnings[] = $this->l('To use Memcached, you must configure memcached servers.');
+
+		if (_PS_CACHE_ENABLED_ && _PS_CACHING_SYSTEM_ == 'CacheMemcache' && !extension_loaded('memcache'))
 			$this->warnings[] = $this->l('To use Memcached, you must install the Memcache PECL extension on your server.').'
 				<a href="http://www.php.net/manual/'.substr($php_lang, 0, 2).'/memcache.installation.php" target="_blank">
 					http://www.php.net/manual/'.substr($php_lang, 0, 2).'/memcache.installation.php
 				</a>';
-		if (!extension_loaded('apc'))
+		if (_PS_CACHE_ENABLED_ && _PS_CACHING_SYSTEM_ == 'apc' && !extension_loaded('apc'))
 		{
 			$this->warnings[] = $this->l('To use APC, you must install the APC PECL extension on your server.').'
 				<a href="http://php.net/manual/'.substr($php_lang, 0, 2).'/apc.installation.php" target="_blank">
 					http://php.net/manual/'.substr($php_lang, 0, 2).'/apc.installation.php
 				</a>';
 		}
-		if (!extension_loaded('xcache'))
+		if (_PS_CACHE_ENABLED_ && _PS_CACHING_SYSTEM_ == 'xcache' && !extension_loaded('xcache'))
 			$this->warnings[] = $this->l('To use Xcache, you must install the Xcache extension on your server.').'
 				<a href="http://xcache.lighttpd.net" target="_blank">http://xcache.lighttpd.net</a>';
 
@@ -602,7 +664,8 @@ class AdminPerformanceControllerCore extends AdminController
 				Configuration::updateValue('PS_SMARTY_FORCE_COMPILE', Tools::getValue('smarty_force_compile', _PS_SMARTY_NO_COMPILE_));
 				Configuration::updateValue('PS_SMARTY_CACHE', Tools::getValue('smarty_cache', 0));
 				Configuration::updateValue('PS_SMARTY_CONSOLE', Tools::getValue('smarty_console', 0));
-				$redirectAdmin = true;
+				Configuration::updateValue('PS_SMARTY_CONSOLE_KEY', Tools::getValue('smarty_console_key', 'SMARTY_DEBUG'));
+				$redirecAdmin = true;
 			}
 			else
 				$this->errors[] = Tools::displayError('You do not have permission to edit this.');
@@ -666,6 +729,8 @@ class AdminPerformanceControllerCore extends AdminController
 					else
 						Configuration::updateValue('PS_MEDIA_SERVERS', 0);
 					rewriteSettingsFile($base_urls, null, null);
+					Tools::clearSmartyCache();
+					Media::clearCache();
 					Tools::generateHtaccess(null, null, null, '', null, array($base_urls['_MEDIA_SERVER_1_'], $base_urls['_MEDIA_SERVER_2_'], $base_urls['_MEDIA_SERVER_3_']));
 					unset($this->_fieldsGeneral['_MEDIA_SERVER_1_']);
 					unset($this->_fieldsGeneral['_MEDIA_SERVER_2_']);
@@ -749,7 +814,7 @@ class AdminPerformanceControllerCore extends AdminController
 						'define(\'_PS_CACHING_SYSTEM_\', \''.$caching_system.'\');',
 						$new_settings
 					);
-					
+
 				if ($cache_active && $caching_system == 'CacheMemcache' && !extension_loaded('memcache'))
 					$this->errors[] = Tools::displayError('To use Memcached, you must install the Memcache PECL extension on your server.').'
 						<a href="http://www.php.net/manual/en/memcache.installation.php">http://www.php.net/manual/en/memcache.installation.php</a>';
@@ -798,6 +863,26 @@ class AdminPerformanceControllerCore extends AdminController
 			else
 				$this->errors[] = Tools::displayError('You do not have permission to edit this.');
 		}
+		
+		if ((bool)Tools::getValue('empty_smarty_cache'))
+		{
+			$redirectAdmin = true;
+			Tools::clearSmartyCache();
+			Media::clearCache();
+			Autoload::getInstance()->generateIndex();
+		}
+
+		if (Tools::isSubmit('submitAddconfiguration') && _PS_MODE_DEV_)
+		{
+			Configuration::updateGlobalValue('PS_DISABLE_NON_NATIVE_MODULE', (int)Tools::getValue('native_module'));
+			Configuration::updateGlobalValue('PS_DISABLE_OVERRIDES', (int)Tools::getValue('overrides'));
+
+			if (Tools::getValue('overrides'))
+				Autoload::getInstance()->_include_override_path = false;
+
+			Autoload::getInstance()->generateIndex();
+		}
+
 		if ($redirectAdmin && (!isset($this->errors) || !count($this->errors)))
 		{
 			Hook::exec('action'.get_class($this).ucfirst($this->action).'After', array('controller' => $this, 'return' => ''));

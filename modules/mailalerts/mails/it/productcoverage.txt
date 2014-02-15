@@ -1,8 +1,8 @@
-Hi,
+Salve,
 
-The product {product} is almost out of stock.
-The stock cover is now less than the specified minimum of {warning_coverage}.
-Current stock cover : {current_coverage}
+Sono quasi esaurite le scorte di riserva di {product}.
+La quantità delle scorte di riserva sono minori della quantità indicata di {warning_coverage}.
+Scorta di riserva attuale: {current_coverage}
 
 
 

@@ -14,6 +14,6 @@ $_MODULE['<{blockstore}prestashop>blockstore_8c38cf08a0d0a01bd44c682479432350'] 
 $_MODULE['<{blockstore}prestashop>blockstore_3eedfc0fbc9042acf0ecfe0f325428c4'] = 'изображение будет отображаться в разрешении 174x115';
 $_MODULE['<{blockstore}prestashop>blockstore_c9cc8cce247e49bae79f15173ce97354'] = 'Сохранить';
 $_MODULE['<{blockstore}prestashop>blockstore_8c0caec5616160618b362bcd4427d97b'] = 'Наши магазины';
-$_MODULE['<{blockstore}prestashop>blockstore_142fe29b7422147cdac10259a0333c11'] = 'Найдите наши магазины на карте';
+$_MODULE['<{blockstore}prestashop>blockstore_28fe12f949fd191685071517628df9b3'] = 'Артикул, по убыванию';
 $_MODULE['<{blockstore}prestashop>blockstore_34c869c542dee932ef8cd96d2f91cae6'] = 'Наши магазины';
 $_MODULE['<{blockstore}prestashop>blockstore_61d5070a61ce6eb6ad2a212fdf967d92'] = 'Найти наши магазины';

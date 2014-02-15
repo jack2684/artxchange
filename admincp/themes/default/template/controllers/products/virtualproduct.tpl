@@ -58,6 +58,7 @@
 						$('#file_missing').hide();
 						$('#virtual_product_name').attr('value', fileName);
 						$("#upload-confirmation .error").remove();
+						$('#upload-confirmation div').find('span').remove();
 						$('#upload-confirmation div').prepend('<span>{l s='The file'}&nbsp;"<a class="link" href="get-file-admin.php?file='+msg+'&filename='+fileName+'">'+fileName+'</a>"&nbsp;{l s='has successfully been uploaded'}' +
 							'<input type="hidden" id="virtual_product_filename" name="virtual_product_filename" value="' + msg + '" /></span>');
 						$("#upload-confirmation").show();
@@ -159,7 +160,10 @@
 								<input type="hidden" id="virtual_product_filename" name="virtual_product_filename" value="{$up_filename}" />
 							{/if}
 							<div class="conf">
-								<a class="delete_virtual_product" id="delete_downloadable_product" onclick="return confirm('{l s='Delete this file'}')" href="{$currentIndex}&deleteVirtualProduct=true&token={$token}&id_product={$product->id}" class="red">
+							<script>
+								delete_this_file = '{l s='Delete this file'}';
+							</script>
+								<a class="delete_virtual_product" id="delete_downloadable_product" href="{$currentIndex}&deleteVirtualProduct=true&token={$token}&id_product={$product->id}" class="red">
 									<img src="../img/admin/delete.gif" alt="{l s='Delete this file'}"/>
 								</a>
 							</div>
@@ -173,7 +177,7 @@
 							</td>
 							 <td class="col-right">
 								{$product->productDownload->getHtmlLink(false, true)}
-								<a onclick="return confirm('{l s='Delete this file'})')" href="{$currentIndex}&deleteVirtualProduct=true&token={$token}&id_product={$product->id}" class="red delete_virtual_product">
+								<a href="{$currentIndex}&deleteVirtualProduct=true&token={$token}&id_product={$product->id}" class="red delete_virtual_product">
 									<img src="../img/admin/delete.gif" alt="{l s='Delete this file'}"/>
 								</a>
 							</td>

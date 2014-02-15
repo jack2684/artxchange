@@ -34,7 +34,7 @@ class ProductSaleCore
 	{
 		$sql = 'REPLACE INTO '._DB_PREFIX_.'product_sale
 				(`id_product`, `quantity`, `sale_nbr`, `date_upd`)
-				SELECT od.product_id, COUNT(od.product_id), SUM(od.product_quantity), NOW()
+				SELECT od.product_id, SUM(od.product_quantity), COUNT(od.product_id), NOW()
 							FROM '._DB_PREFIX_.'order_detail od GROUP BY od.product_id';
 		return Db::getInstance()->execute($sql);
 	}
@@ -66,12 +66,30 @@ class ProductSaleCore
 		if ($page_number < 0) $page_number = 0;
 		if ($nb_products < 1) $nb_products = 10;
 		$final_order_by = $order_by;
+		$order_table = ''; 		
 		if (is_null($order_by) || $order_by == 'position' || $order_by == 'price') $order_by = 'sales';
-		if (is_null($order_way) || $order_by == 'sales') $order_way == 'DESC';
+		if ($order_by == 'date_add' || $order_by == 'date_upd')
+			$order_table = 'product_shop'; 				
+		if (is_null($order_way) || $order_by == 'sales') $order_way = 'DESC';
 		$groups = FrontController::getCurrentCustomerGroups();
 		$sql_groups = (count($groups) ? 'IN ('.implode(',', $groups).')' : '= 1');
 		$interval = Validate::isUnsignedInt(Configuration::get('PS_NB_DAYS_NEW_PRODUCT')) ? Configuration::get('PS_NB_DAYS_NEW_PRODUCT') : 20;
 
+		//Subquery: get product ids in a separate query to (greatly!) improve performances and RAM usage
+		$sql = 'SELECT cp.`id_product`
+				FROM `'._DB_PREFIX_.'category_group` cg
+				INNER JOIN `'._DB_PREFIX_.'category_product` cp ON (cp.`id_category` = cg.`id_category`)
+				WHERE cp.`id_product` IS NOT NULL AND cg.`id_group` '.$sql_groups;
+		$products = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sql);
+		$ids = array();
+		foreach ($products as $product)
+			$ids[$product['id_product']] = 1;
+		$ids = array_keys($ids);
+		$ids = array_filter($ids);
+		sort($ids);
+		$ids = count($ids) > 0 ? implode(',', $ids) : 'NULL';
+		
+		//Main query
 		$sql = 'SELECT p.*, product_shop.*, stock.out_of_stock, IFNULL(stock.quantity, 0) as quantity,
 					pl.`description`, pl.`description_short`, pl.`link_rewrite`, pl.`meta_description`,
 					pl.`meta_keywords`, pl.`meta_title`, pl.`name`,
@@ -97,14 +115,9 @@ class ProductSaleCore
 				'.Product::sqlStock('p').'
 				WHERE product_shop.`active` = 1
 					AND p.`visibility` != \'none\'
-					AND p.`id_product` IN (
-						SELECT cp.`id_product`
-						FROM `'._DB_PREFIX_.'category_group` cg
-						LEFT JOIN `'._DB_PREFIX_.'category_product` cp ON (cp.`id_category` = cg.`id_category`)
-						WHERE cg.`id_group` '.$sql_groups.'
-					)
+					AND p.`id_product` IN ('.$ids.')
 				GROUP BY product_shop.id_product
-				ORDER BY `'.pSQL($order_by).'` '.pSQL($order_way).'
+				ORDER BY '.(!empty($order_table) ? '`'.pSQL($order_table).'`.' : '').'`'.pSQL($order_by).'` '.pSQL($order_way).'
 				LIMIT '.(int)($page_number * $nb_products).', '.(int)$nb_products;
 
 		$result = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sql);
@@ -134,11 +147,28 @@ class ProductSaleCore
 		$groups = FrontController::getCurrentCustomerGroups();
 		$sql_groups = (count($groups) ? 'IN ('.implode(',', $groups).')' : '= 1');
 
+		//Subquery: get product ids in a separate query to (greatly!) improve performances and RAM usage
+		$sql = 'SELECT cp.`id_product`
+		FROM `'._DB_PREFIX_.'category_group` cg
+		INNER JOIN `'._DB_PREFIX_.'category_product` cp ON (cp.`id_category` = cg.`id_category`)
+		WHERE cp.`id_product` IS NOT NULL AND cg.`id_group` '.$sql_groups.' AND cp.`id_product` IS NOT NULL';
+		$products = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sql);
+		$ids = array();
+		foreach ($products as $product)
+			$ids[$product['id_product']] = 1;
+		$ids = array_keys($ids);
+		sort($ids);
+		$ids = array_filter($ids);
+		$ids = count($ids) > 0 ? implode(',', $ids) : 'NULL';
+
+		//Main query
 		$sql = 'SELECT p.id_product, pl.`link_rewrite`, pl.`name`, pl.`description_short`, MAX(image_shop.`id_image`) id_image, il.`legend`,
-					ps.`quantity` AS sales, p.`ean13`, p.`upc`, cl.`link_rewrite` AS category
+					ps.`quantity` AS sales, p.`ean13`, p.`upc`, cl.`link_rewrite` AS category, p.show_price, p.available_for_order, p.quantity, p.customizable,
+					IFNULL(pa.minimal_quantity, p.minimal_quantity) as minimal_quantity, p.out_of_stock
 				FROM `'._DB_PREFIX_.'product_sale` ps
 				LEFT JOIN `'._DB_PREFIX_.'product` p ON ps.`id_product` = p.`id_product`
 				'.Shop::addSqlAssociation('product', 'p').'
+				LEFT JOIN `'._DB_PREFIX_.'product_attribute` pa ON (ps.`id_product` = pa.`id_product` AND pa.default_on = 1)
 				LEFT JOIN `'._DB_PREFIX_.'product_lang` pl
 					ON p.`id_product` = pl.`id_product`
 					AND pl.`id_lang` = '.(int)$id_lang.Shop::addSqlRestrictionOnLang('pl').'
@@ -150,15 +180,11 @@ class ProductSaleCore
 					AND cl.`id_lang` = '.(int)$id_lang.Shop::addSqlRestrictionOnLang('cl').'
 				WHERE product_shop.`active` = 1
 					AND p.`visibility` != \'none\'
-					AND p.`id_product` IN (
-						SELECT cp.`id_product`
-						FROM `'._DB_PREFIX_.'category_group` cg
-						LEFT JOIN `'._DB_PREFIX_.'category_product` cp ON (cp.`id_category` = cg.`id_category`)
-						WHERE cg.`id_group` '.$sql_groups.'
-					)
+					AND p.`id_product` IN ('.$ids.')
 				GROUP BY product_shop.id_product
 				ORDER BY sales DESC
 				LIMIT '.(int)($page_number * $nb_products).', '.(int)$nb_products;
+
 		if (!$result = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sql))
 			return false;
 
@@ -166,6 +192,13 @@ class ProductSaleCore
 		{
 		 	$row['link'] = $context->link->getProductLink($row['id_product'], $row['link_rewrite'], $row['category'], $row['ean13']);
 		 	$row['id_image'] = Product::defineProductImage($row, $id_lang);
+			$row['allow_oosp'] = Product::isAvailableWhenOutOfStock($row['out_of_stock']);
+			$row['price_tax_exc'] = Product::getPriceStatic(
+						(int)$row['id_product'],
+						false,
+						((isset($row['id_product_attribute']) && !empty($row['id_product_attribute'])) ? (int)$row['id_product_attribute'] : null),
+						(Product::$_taxCalculationMethod == PS_TAX_EXC ? 2 : 6)
+					);
 		}
 		return $result;
 	}

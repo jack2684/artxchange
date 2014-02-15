@@ -312,7 +312,7 @@ function updateDisplay()
 			var taxExclPrice = (specific_currency ? product_specific_price.price : product_specific_price.price * currencyRate) + (selectedCombination['price'] * currencyRate);
 
 		if (!displayPrice && !noTaxForThisProduct)
-			productPriceDisplay = taxExclPrice * tax; // Need to be global => no var
+			productPriceDisplay = ps_round(taxExclPrice * tax, 2); // Need to be global => no var
 		else
 			productPriceDisplay = ps_round(taxExclPrice, 2); // Need to be global => no var
 
@@ -326,7 +326,7 @@ function updateDisplay()
 				reduction = ps_round(reduction / tax, 6);
 
 		}
-		else if (product_specific_price && product_specific_price.reduction)
+		else if (product_specific_price && product_specific_price.reduction && !selectedCombination.specific_price)
 		{
 			if (product_specific_price.reduction_type == 'amount')
 				reduction_price = (specific_currency ? product_specific_price.reduction : product_specific_price.reduction * currencyRate);
@@ -372,12 +372,19 @@ function updateDisplay()
 			$('#not_impacted_by_discount').hide();
 
 		productPriceDisplay -= reduction;
-		var tmp = productPriceDisplay * group_reduction;
 		productPriceDisplay = ps_round(productPriceDisplay * group_reduction, 2);
 
 		var ecotaxAmount = !displayPrice ? ps_round(selectedCombination['ecotax'] * (1 + ecotaxTax_rate / 100), 2) : selectedCombination['ecotax'];
-		productPriceDisplay += ecotaxAmount;
-		productPriceWithoutReductionDisplay += ecotaxAmount;
+
+		if (ecotaxAmount != default_eco_tax)
+			productPriceDisplay += ecotaxAmount - default_eco_tax;
+		else
+			productPriceDisplay += ecotaxAmount;
+
+		if (ecotaxAmount != default_eco_tax)
+			productPriceWithoutReductionDisplay += ecotaxAmount - default_eco_tax;
+		else
+			productPriceWithoutReductionDisplay += ecotaxAmount;
 
 		var our_price = '';
 		if (productPriceDisplay > 0) {
@@ -387,6 +394,7 @@ function updateDisplay()
 		}
 		$('#our_price_display').text(our_price);
 		$('#old_price_display').text(formatCurrency(productPriceWithoutReductionDisplay, currencyFormat, currencySign, currencyBlank));
+
 		if (productPriceWithoutReductionDisplay > productPriceDisplay)
 			$('#old_price,#old_price_display,#old_price_display_taxes').show();
 		else
@@ -417,14 +425,21 @@ function displayImage(domAAroundImgThumb, no_animation)
 {
 	if (typeof(no_animation) == 'undefined')
 		no_animation = false;
-	if (domAAroundImgThumb.attr('href'))
+	if (domAAroundImgThumb.prop('href'))
 	{
-		var newSrc = domAAroundImgThumb.attr('href').replace('thickbox', 'large');
-		if ($('#bigpic').attr('src') != newSrc)
+		var new_src = domAAroundImgThumb.prop('href').replace('thickbox', 'large');
+		var new_title = domAAroundImgThumb.prop('title');
+		var new_href = domAAroundImgThumb.prop('href');
+		if ($('#bigpic').prop('src') != new_src)
 		{
-			$('#bigpic').attr('src', newSrc);
-			if (typeof(jqZoomEnabled) != 'undefined' && jqZoomEnabled)
-				$('#bigpic').attr('rel', domAAroundImgThumb.attr('href'));
+			$('#bigpic').prop({
+				'src' : new_src, 
+				'alt' : new_title, 
+				'title' : new_title
+			}).load(function(){
+				if (typeof(jqZoomEnabled) != 'undefined' && jqZoomEnabled)
+					$(this).prop('rel', new_href);
+			}); 
 		}
 		$('#views_block li a').removeClass('shown');
 		$(domAAroundImgThumb).addClass('shown');
@@ -441,9 +456,9 @@ function displayDiscounts(combination)
 			$(this).fadeOut('slow');
 	 });
 
-	if ($('#quantityDiscount_' + combination).length != 0)
+	if ($('#quantityDiscount_' + combination+',.quantityDiscount_' + combination).length != 0)
 	{
-		$('#quantityDiscount_' + combination).show();
+		$('#quantityDiscount_' + combination+',.quantityDiscount_' + combination).show();
 		$('#noQuantityDiscount').hide();
 	}
 	else
@@ -528,7 +543,7 @@ $(document).ready(function()
 	//set jqZoom parameters if needed
 	if (typeof(jqZoomEnabled) != 'undefined' && jqZoomEnabled)
 	{
-		$('#bigpic').attr('rel', $('#bigpic').attr('src').replace('thickbox', 'large'));
+		$('#bigpic').attr('rel', $('#bigpic').attr('src').replace('large', 'thickbox'));
 		$('img.jqzoom').jqueryzoom({
 			xzoom: 200, //zooming div default width(default width value is 200)
 			yzoom: 200, //zooming div default width(default height value is 200)
@@ -667,7 +682,7 @@ function getProductAttribute()
 		url = url.substring(0, url.indexOf('#'));
 
 	// set ipa to the customization form
-	$('#customizationForm').attr('action', $('#customizationForm').attr('action') + request)
+	$('#customizationForm').attr('action', $('#customizationForm').attr('action') + request);
 	window.location = url + request;
 }
 

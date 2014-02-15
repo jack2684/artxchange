@@ -9,7 +9,7 @@ $_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_d71315851e7e67c
 $_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_b43d08355db3df47796e65c72cfd5714'] = 'Sie können jederzeit Ihre persönlichen Angaben aktualisieren oder löschen - wählen Sie dazu bitte \"Mein Konto\".';
 $_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_20015706a8cbd457cbb6ea3e7d5dc9b3'] = 'Konfiguration aktualisiert';
 $_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_d8b716e21c731aba4b94ba9f3ac4858c'] = 'Nachricht zu Kunden-Datenschutz';
-$_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_03e1a999dcdb904300ee1b1e767c83c9'] = 'Nachricht, die beim Anmeldevorgang angezeigt wird';
+$_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_03e1a999dcdb904300ee1b1e767c83c9'] = 'Die Nachricht zum Kunden-Datenschutz wird auf dem Anmeldeformular angezeigt.';
 $_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_b51d73fb490ad1245fa9b87042bbbbb7'] = 'Tipp: Wenn der Text für das Feld zu lang geraten ist, können Sie einen Link hinzufügen, den Sie auf der \"CMS\"-Seite im Menü \"Voreinstellungen\" angelegt haben.';
 $_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_c9cc8cce247e49bae79f15173ce97354'] = 'Speichern';
 $_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_fb32badede7c8613fddb8502d847c18b'] = 'Bitte stimmen Sie den Datenschutzbedingungen zu, indem Sie auf das Kontrollkästchen unten klicken.';

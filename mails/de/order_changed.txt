@@ -1,6 +1,6 @@
-Hi {firstname} {lastname},
+Hallo {firstname} {lastname},
 
-Your order with the reference {order_name} from {shop_name} has been changed by the merchant.
+Ihre Bestellung Nr. {order_name} bei {shop_name} wurde vom Verkäufer geändert.
 
 Sie können in unserem Shop auf "Mein Konto"  klicken, um Ihre Bestellung zu sehen und Ihre Rechnung im Menü "Bestellverlauf" downloaden.
 
