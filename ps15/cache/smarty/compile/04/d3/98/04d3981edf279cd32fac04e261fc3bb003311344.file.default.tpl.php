@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-15 17:28:33
+<?php /* Smarty version Smarty-3.1.14, created on 2014-02-15 18:11:08
          compiled from "/var/www/artxchange/ps15/modules/leobtslider/themes/default/default.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:148067783252ffea11ae9c23-25618465%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:11871329152fff40cb50700-56778345%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '148067783252ffea11ae9c23-25618465',
+  'nocache_hash' => '11871329152fff40cb50700-56778345',
   'function' => 
   array (
   ),
@@ -25,9 +25,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52ffea11baddd8_43191282',
+  'unifunc' => 'content_52fff40cbe3ae6_84877127',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52ffea11baddd8_43191282')) {function content_52ffea11baddd8_43191282($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_52fff40cbe3ae6_84877127')) {function content_52fff40cbe3ae6_84877127($_smarty_tpl) {?>
 <div id="leobttslider<?php echo $_smarty_tpl->tpl_vars['leobtslider_modid']->value;?>
 " class="carousel slide leobttslider">
 	<div class="carousel-inner">

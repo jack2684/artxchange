@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-15 17:29:27
+<?php /* Smarty version Smarty-3.1.14, created on 2014-02-15 18:37:52
          compiled from "/var/www/artxchange/ps15/themes/leoconv/footer.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:16556393152ffea47bf4b98-86123792%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:80846191452fffa502de221-98237565%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '16556393152ffea47bf4b98-86123792',
+  'nocache_hash' => '80846191452fffa502de221-98237565',
   'function' => 
   array (
   ),
@@ -25,9 +25,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52ffea47c1f374_23513948',
+  'unifunc' => 'content_52fffa50301570_64342207',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52ffea47c1f374_23513948')) {function content_52ffea47c1f374_23513948($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_52fffa50301570_64342207')) {function content_52fffa50301570_64342207($_smarty_tpl) {?>
 	<?php if (!$_smarty_tpl->tpl_vars['content_only']->value){?>
 							</div><!-- 5-->
 						</div><!-- 4-->

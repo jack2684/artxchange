@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-15 17:28:33
+<?php /* Smarty version Smarty-3.1.14, created on 2014-02-15 18:11:08
          compiled from "/var/www/artxchange/ps15/themes/leoconv/modules/blockleoprodcarousel/products.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:33447030052ffea11c6b475-68590220%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:58597374852fff40ccf6e71-34496420%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '33447030052ffea11c6b475-68590220',
+  'nocache_hash' => '58597374852fff40ccf6e71-34496420',
   'function' => 
   array (
   ),
@@ -33,9 +33,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52ffea11e1ccb7_15514155',
+  'unifunc' => 'content_52fff40ce4a9f9_05048998',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52ffea11e1ccb7_15514155')) {function content_52ffea11e1ccb7_15514155($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/artxchange/ps15/tools/smarty/plugins/modifier.escape.php';
+<?php if ($_valid && !is_callable('content_52fff40ce4a9f9_05048998')) {function content_52fff40ce4a9f9_05048998($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/artxchange/ps15/tools/smarty/plugins/modifier.escape.php';
 ?><?php if (!empty($_smarty_tpl->tpl_vars['products']->value)){?>
 <div class=" carousel slide" id="<?php echo $_smarty_tpl->tpl_vars['tabname']->value;?>
 ">
