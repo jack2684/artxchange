@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 16:32:02
+<?php /* Smarty version Smarty-3.1.14, created on 2014-02-15 17:29:26
          compiled from "/var/www/artxchange/ps15/modules/blocknewsletter/views/templates/hook/blocknewsletter.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:30287119252ffdcd2c15f27-56362363%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:172319043952ffea46cc1394-43472142%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '96c6127d91e15649c940408fe5279fb799e774a5' => 
     array (
       0 => '/var/www/artxchange/ps15/modules/blocknewsletter/views/templates/hook/blocknewsletter.tpl',
-      1 => 1366914192,
+      1 => 1392502885,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '30287119252ffdcd2c15f27-56362363',
+  'nocache_hash' => '172319043952ffea46cc1394-43472142',
   'function' => 
   array (
   ),
@@ -21,13 +21,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'nw_error' => 0,
     'link' => 0,
     'value' => 0,
-    'action' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_52ffdcd2c68f65_42405544',
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52ffea46d22f37_64463615',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52ffdcd2c68f65_42405544')) {function content_52ffdcd2c68f65_42405544($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_52ffea46d22f37_64463615')) {function content_52ffea46d22f37_64463615($_smarty_tpl) {?>
 
 <!-- Block Newsletter module-->
 
@@ -39,30 +38,37 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<p class="<?php if ($_smarty_tpl->tpl_vars['nw_error']->value){?>warning_inline<?php }else{ ?>success_inline<?php }?>"><?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
 </p>
 	<?php }?>
-		<form action="<?php echo $_smarty_tpl->tpl_vars['link']->value->getPageLink('index');?>
+		<form action="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('index'), ENT_QUOTES, 'UTF-8', true);?>
 " method="post">
 			<p>
-				
-				<input type="text" name="email" size="18" 
-					value="<?php if (isset($_smarty_tpl->tpl_vars['value']->value)&&$_smarty_tpl->tpl_vars['value']->value){?><?php echo $_smarty_tpl->tpl_vars['value']->value;?>
-<?php }else{ ?><?php echo smartyTranslate(array('s'=>'Your email address','mod'=>'blocknewsletter'),$_smarty_tpl);?>
-<?php }?>" 
-					onfocus="javascript:if(this.value=='<?php echo smartyTranslate(array('s'=>'Your email address','mod'=>'blocknewsletter','js'=>1),$_smarty_tpl);?>
-')this.value='';" 
-					onblur="javascript:if(this.value=='')this.value='<?php echo smartyTranslate(array('s'=>'Your email address','mod'=>'blocknewsletter','js'=>1),$_smarty_tpl);?>
-';" 
-					class="inputNew" />
-				<!--<select name="action">
-					<option value="0"<?php if (isset($_smarty_tpl->tpl_vars['action']->value)&&$_smarty_tpl->tpl_vars['action']->value==0){?> selected="selected"<?php }?>><?php echo smartyTranslate(array('s'=>'Subscribe','mod'=>'blocknewsletter'),$_smarty_tpl);?>
-</option>
-					<option value="1"<?php if (isset($_smarty_tpl->tpl_vars['action']->value)&&$_smarty_tpl->tpl_vars['action']->value==1){?> selected="selected"<?php }?>><?php echo smartyTranslate(array('s'=>'Unsubscribe','mod'=>'blocknewsletter'),$_smarty_tpl);?>
-</option>
-				</select>-->
-					<input type="submit" value="ok" class="button_mini" name="submitNewsletter" />
+				<input class="inputNew" id="newsletter-input" type="text" name="email" size="18" value="<?php if (isset($_smarty_tpl->tpl_vars['value']->value)&&$_smarty_tpl->tpl_vars['value']->value){?><?php echo $_smarty_tpl->tpl_vars['value']->value;?>
+<?php }else{ ?><?php echo smartyTranslate(array('s'=>'your e-mail','mod'=>'blocknewsletter'),$_smarty_tpl);?>
+<?php }?>" />
+				<input type="submit" value="ok" class="button_mini" name="submitNewsletter" />
 				<input type="hidden" name="action" value="0" />
 			</p>
 		</form>
 	</div>
 </div>
 <!-- /Block Newsletter module-->
-<?php }} ?>
+
+<script type="text/javascript">
+    var placeholder = "<?php echo smartyTranslate(array('s'=>'your e-mail','mod'=>'blocknewsletter','js'=>1),$_smarty_tpl);?>
+";
+    
+        $(document).ready(function() {
+            $('#newsletter-input').on({
+                focus: function() {
+                    if ($(this).val() == placeholder) {
+                        $(this).val('');
+                    }
+                },
+                blur: function() {
+                    if ($(this).val() == '') {
+                        $(this).val(placeholder);
+                    }
+                }
+            });
+        });
+    
+</script><?php }} ?>

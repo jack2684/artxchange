@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 04:02:50
+<?php /* Smarty version Smarty-3.1.14, created on 2014-02-15 17:25:15
          compiled from "/var/www/artxchange/ps15/admincp/themes/default/template/layout.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:143720197452ff2d3ae73dc9-90103052%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:177119647252ffe94b82c155-71952651%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '48637334d3d4ca146b3db959b34b045830fc97d5' => 
     array (
       0 => '/var/www/artxchange/ps15/admincp/themes/default/template/layout.tpl',
-      1 => 1366914186,
+      1 => 1392502881,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '143720197452ff2d3ae73dc9-90103052',
+  'nocache_hash' => '177119647252ffe94b82c155-71952651',
   'function' => 
   array (
   ),
@@ -29,10 +29,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'page' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_52ff2d3af2cb91_70767530',
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52ffe94b8d2217_13651643',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52ff2d3af2cb91_70767530')) {function content_52ff2d3af2cb91_70767530($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_52ffe94b8d2217_13651643')) {function content_52ffe94b8d2217_13651643($_smarty_tpl) {?>
 <?php echo $_smarty_tpl->getSubTemplate ('header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <?php if (isset($_smarty_tpl->tpl_vars['conf']->value)){?>
@@ -48,7 +48,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		</span>
 		
 		<?php if (count($_smarty_tpl->tpl_vars['errors']->value)==1){?>
-			<?php echo $_smarty_tpl->tpl_vars['errors']->value[0];?>
+			<?php echo reset($_smarty_tpl->tpl_vars['errors']->value);?>
 
 		<?php }else{ ?>
 			<?php echo smartyTranslate(array('s'=>'%d errors','sprintf'=>count($_smarty_tpl->tpl_vars['errors']->value)),$_smarty_tpl);?>

@@ -1,6 +1,7 @@
 Hallo,
 
-Sie haben eine neue Bestellung erhalten von {firstname} {lastname} auf {shop_name}.
+Glückwunsch! {shop_name} hat eine neue Bestellung erhalten von
+{firstname} {lastname} ({email}).
 
 Bestellung: {order_name}
 Ausgeführt am: {date}
@@ -14,7 +15,7 @@ Gesamt bezahlt: {total_paid}
 
 Lieferadresse:
 
-{invoice_other}
+{delivery_block_txt}
 
 Rechnungsadresse:
 

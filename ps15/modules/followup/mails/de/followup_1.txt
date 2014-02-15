@@ -8,6 +8,6 @@ Ihr Warenkorb wurde gespeichert, Sie können Ihre Bestellung abschließen, indem
 
 Als Anreiz erhalten Sie einen Rabatt über {amount}% auf Ihre nächste Bestellung! Dieses Angebot gilt nur noch {days} Tage, also warten Sie nicht länger!
  
-Hier ist Ihr Gutschein: {voucher_num}
+Hier ist Ihr Gutscheincode: {voucher_num}
 
-Geben Sie diesen Code in Ihrem Warenkorb-Fenster ein, um Ihren Rabatt zu erhalten.
+Kopieren Sie diesen Code bei Ihrer nächsten Bestellung während des Bezahlvorgangs einfach in das Gutscheinfeld.

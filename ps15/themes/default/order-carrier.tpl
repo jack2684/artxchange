@@ -32,7 +32,7 @@
 	var currencyBlank = '{$currencyBlank|intval}';
 	var txtProduct = "{l s='Product' js=1}";
 	var txtProducts = "{l s='Products' js=1}";
-	var orderUrl = '{$link->getPageLink("order", true)}';
+	var orderUrl = '{$link->getPageLink("order", true)|addslashes}';
 
 	var msg = "{l s='You must agree to the terms of service before continuing.' js=1}";
 	{literal}
@@ -91,7 +91,7 @@
 	
 	{include file="$tpl_dir./errors.tpl"}
 	
-	<form id="form" action="{$link->getPageLink('order', true, NULL, "multi-shipping={$multi_shipping}")}" method="post" onsubmit="return acceptCGV();">
+	<form id="form" action="{$link->getPageLink('order', true, NULL, "multi-shipping={$multi_shipping}")|escape:'html'}" method="post" onsubmit="return acceptCGV();">
 {else}
 	<div id="opc_delivery_methods" class="opc-main-block">
 	<div id="opc_delivery_methods-overlay" class="opc-overlay" style="display: none;"></div>
@@ -114,7 +114,7 @@
 	{else}
 		{if $recyclablePackAllowed}
 			<p class="checkbox">
-				<input type="checkbox" name="recyclable" id="recyclable" value="1" {if $recyclable == 1}checked="checked"{/if} />
+				<input type="checkbox" name="recyclable" id="recyclable" value="1" {if $recyclable == 1}checked="checked"{/if} autocomplete="off"/>
 				<label for="recyclable">{l s='I would like to receive my order in recycled packaging.'}.</label>
 			</p>
 		{/if}
@@ -172,9 +172,13 @@
 								<div class="delivery_option_price">
 									{if $option.total_price_with_tax && (!isset($free_shipping) || (isset($free_shipping) && !$free_shipping))}
 										{if $use_taxes == 1}
-											{convertPrice price=$option.total_price_with_tax} {l s='(tax incl.)'}
+											{if $priceDisplay == 1}
+												{convertPrice price=$option.total_price_without_tax} {l s='(tax excl.)'}
+											{else}
+												{convertPrice price=$option.total_price_with_tax} {l s='(tax incl.)'}
+											{/if}
 										{else}
-											{convertPrice price=$option.total_price_without_tax} {l s='(tax excl.)'}
+											{convertPrice price=$option.total_price_without_tax}
 										{/if}
 									{else}
 										{l s='Free'}
@@ -208,7 +212,7 @@
 										{/if}
 										{* This foreach is on one line, to avoid tabulation in the title attribute of the acronym *}
 										{foreach $carrier.product_list as $product}
-										{if $product@index == 4}<acronym title="{/if}{if $product@index >= 4}{$product.name}{if !$product@last}, {else}">...</acronym>){/if}{else}{$product.name}{if !$product@last}, {else}){/if}{/if}{/foreach}
+										{if $product@index == 4}<acronym title="{/if}{if $product@index >= 4}{$product.name}{if isset($product.attributes) && $product.attributes} {$product.attributes|escape:'htmlall':'UTF-8'}{/if}{if !$product@last}, {else}">...</acronym>){/if}{else}{$product.name}{if isset($product.attributes) && $product.attributes} {$product.attributes|escape:'htmlall':'UTF-8'}{/if}{if !$product@last}, {else}){/if}{/if}{/foreach}
 									{/if}
 								</td>
 							</tr>
@@ -230,6 +234,8 @@
 					{if !$address@last}
 					<br />
 					{/if}
+				{foreachelse}
+					{l s='No carriers available.'}
 				{/foreach}
 			</p>
 		{/foreach}
@@ -241,7 +247,7 @@
 		{if $giftAllowed}
 		<h3 class="gift_title">{l s='Gift'}</h3>
 		<p class="checkbox">
-			<input type="checkbox" name="gift" id="gift" value="1" {if $cart->gift == 1}checked="checked"{/if} />
+			<input type="checkbox" name="gift" id="gift" value="1" {if $cart->gift == 1}checked="checked"{/if} autocomplete="off"/>
 			<label for="gift">{l s='I would like my order to be gift wrapped.'}</label>
 			<br />
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -264,10 +270,18 @@
 {if $conditions AND $cms_id}
 	<h3 class="condition_title">{l s='Terms of service'}</h3>
 	<p class="checkbox">
-		<input type="checkbox" name="cgv" id="cgv" value="1" {if $checkedTOS}checked="checked"{/if} />
+		<input type="checkbox" name="cgv" id="cgv" value="1" {if $checkedTOS}checked="checked"{/if} autocomplete="off"/>
 		<label for="cgv">{l s='I agree to the terms of service and will adhere to them unconditionally.'}</label> <a href="{$link_conditions}" class="iframe">{l s='(Read the Terms of Service)'}</a>
 	</p>
-	<script type="text/javascript">$('a.iframe').fancybox();</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+	        $("a.iframe").fancybox({
+	            'type' : 'iframe',
+	            'width':600,
+	            'height':600
+	        });
+	    });
+	</script>
 {/if}
 </div>
 
@@ -277,12 +291,12 @@
 		<input type="hidden" name="back" value="{$back}" />
 		{if !$is_guest}
 			{if $back}
-				<a href="{$link->getPageLink('order', true, NULL, "step=1&back={$back}&multi-shipping={$multi_shipping}")}" title="{l s='Previous'}" class="button">&laquo; {l s='Previous'}</a>
+				<a href="{$link->getPageLink('order', true, NULL, "step=1&back={$back}&multi-shipping={$multi_shipping}")|escape:'html'}" title="{l s='Previous'}" class="button">&laquo; {l s='Previous'}</a>
 			{else}
-				<a href="{$link->getPageLink('order', true, NULL, "step=1&multi-shipping={$multi_shipping}")}" title="{l s='Previous'}" class="button">&laquo; {l s='Previous'}</a>
+				<a href="{$link->getPageLink('order', true, NULL, "step=1&multi-shipping={$multi_shipping}")|escape:'html'}" title="{l s='Previous'}" class="button">&laquo; {l s='Previous'}</a>
 			{/if}
 		{else}
-				<a href="{$link->getPageLink('order', true, NULL, "multi-shipping={$multi_shipping}")}" title="{l s='Previous'}" class="button">&laquo; {l s='Previous'}</a>
+				<a href="{$link->getPageLink('order', true, NULL, "multi-shipping={$multi_shipping}")|escape:'html'}" title="{l s='Previous'}" class="button">&laquo; {l s='Previous'}</a>
 		{/if}
 		{if isset($virtual_cart) && $virtual_cart || (isset($delivery_option_list) && !empty($delivery_option_list))}
 			<input type="submit" name="processCarrier" value="{l s='Next'} &raquo;" class="exclusive" />

@@ -10,7 +10,7 @@ $_MODULE['<{statsproduct}prestashop>statsproduct_981a6013008c8f4b75836b0f415b05b
 $_MODULE['<{statsproduct}prestashop>statsproduct_af7cba0f47dac2ad181cc0471979a746'] = 'Продажи (без налогов):';
 $_MODULE['<{statsproduct}prestashop>statsproduct_b262bbde88b3b8dca3b27d730aca69bf'] = 'Всего просмотрено:';
 $_MODULE['<{statsproduct}prestashop>statsproduct_bebbab2c1ac732ccef4181f51ed52967'] = 'Курс обмена:';
-$_MODULE['<{statsproduct}prestashop>statsproduct_998e4c5c80f27dec552e99dfed34889a'] = 'Экспорт CSV';
+$_MODULE['<{statsproduct}prestashop>statsproduct_998e4c5c80f27dec552e99dfed34889a'] = 'Export CSV';
 $_MODULE['<{statsproduct}prestashop>statsproduct_c90b9dca2d3f5bb6e0d0bdceac8a631d'] = 'Определение атрибутов продажи';
 $_MODULE['<{statsproduct}prestashop>statsproduct_11ff9f68afb6b8b5b8eda218d7c83a65'] = 'Продажи';
 $_MODULE['<{statsproduct}prestashop>statsproduct_44749712dbec183e983dcd78a7736c41'] = 'Дата';
@@ -30,7 +30,7 @@ $_MODULE['<{statsproduct}prestashop>statsproduct_6ccf03bc05e4b749b74b5d577c7e7d3
 $_MODULE['<{statsproduct}prestashop>statsproduct_12d3c7a4296542c62474856ec452c045'] = 'Ссылка';
 $_MODULE['<{statsproduct}prestashop>statsproduct_49ee3087348e8d44e1feda1917443987'] = 'Название';
 $_MODULE['<{statsproduct}prestashop>statsproduct_7bd5825a187064017975513b95d7f7de'] = 'Доступное количество для продажи';
-$_MODULE['<{statsproduct}prestashop>statsproduct_6602bbeb2956c035fb4cb5e844a4861b'] = 'Руководство пользователя';
+$_MODULE['<{statsproduct}prestashop>statsproduct_6602bbeb2956c035fb4cb5e844a4861b'] = 'Guide';
 $_MODULE['<{statsproduct}prestashop>statsproduct_af6de9b8b390e324cd90cc17779783ba'] = 'Количество покупок по сравнению с числом просмотров';
 $_MODULE['<{statsproduct}prestashop>statsproduct_6e13e61b8535a66feb27d285f5c42855'] = 'После выбора категории и отбора продукта, появятся информационные графы. Тогда, вы будете в состоянии проанализировать их.';
 $_MODULE['<{statsproduct}prestashop>statsproduct_ff7008d8daed8cf92213ca8955a42d92'] = 'Если вы видите,что продукт успешен и часто покупается, но просматривается не достаточно часто, вы можете сделать его более заметным на страницах магазина.';

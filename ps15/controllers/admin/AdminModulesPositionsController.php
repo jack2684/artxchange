@@ -88,7 +88,7 @@ class AdminModulesPositionsControllerCore extends AdminController
 						{
 							if (empty($except))
 								unset($exceptions[$key]);
-							else if (!Validate::isFileName($except))
+							else if (!empty($except) && !Validate::isFileName($except))
 								$this->errors[] = Tools::displayError('No valid value for field exceptions has been defined.');
 						}
 						if (!$this->errors && !$module->registerExceptions($id_hook, $exceptions, Shop::getContextListShopID()))
@@ -128,7 +128,7 @@ class AdminModulesPositionsControllerCore extends AdminController
 
 							// Check files name
 							foreach ($exception as $except)
-								if (!Validate::isFileName($except))
+								if (!empty($except) && !Validate::isFileName($except))
 									$this->errors[] = Tools::displayError('No valid value for field exceptions has been defined.');
 
 							$exceptions[$id] = $exception;
@@ -147,7 +147,7 @@ class AdminModulesPositionsControllerCore extends AdminController
 
 						// Check files name
 						foreach ($exceptions as $except)
-							if (!Validate::isFileName($except))
+							if (!empty($except) && !Validate::isFileName($except))
 								$this->errors[] = Tools::displayError('No valid value for field exceptions has been defined.');
 
 						// Add files exceptions
@@ -220,6 +220,7 @@ class AdminModulesPositionsControllerCore extends AdminController
 
 	public function initContent()
 	{
+		$this->initTabModuleList();
 		if (array_key_exists('addToHook', $_GET) || array_key_exists('editGraft', $_GET) || (Tools::isSubmit('submitAddToHook') && $this->errors))
 		{
 			$this->display = 'edit';
@@ -270,12 +271,13 @@ class AdminModulesPositionsControllerCore extends AdminController
 			'href' => self::$currentIndex.'&addToHook'.($this->display_key ? '&show_modules='.$this->display_key : '').'&token='.$this->token,
 			'desc' => $this->l('Transplant a module')
 		);
-		
+						
 		$live_edit_params = array(
 									'live_edit' => true, 
 									'ad' => $admin_dir, 
 									'liveToken' => $this->token,
-									'id_employee' => (int)$this->context->employee->id
+									'id_employee' => (int)$this->context->employee->id,
+									'id_shop' => (int)$this->context->shop->id
 									);
 
 		$this->context->smarty->assign(array(
@@ -301,9 +303,13 @@ class AdminModulesPositionsControllerCore extends AdminController
 	
 	public function getLiveEditUrl($live_edit_params)
 	{
-		$url = $this->context->shop->getBaseURL().Dispatcher::getInstance()->createUrl('index', (int)$this->context->language->id, $live_edit_params);
-		if (Configuration::get('PS_REWRITING_SETTINGS'))
-			$url = str_replace('index.php', ((count(Language::getLanguages(true)) > 1)? Language::getIsoById($this->context->employee->id_lang).'/' : ''), $url);
+		$lang = '';
+		$admin_dir = dirname($_SERVER['PHP_SELF']);
+		$admin_dir = substr($admin_dir, strrpos($admin_dir, '/') + 1);		
+		$dir = str_replace($admin_dir, '', dirname($_SERVER['SCRIPT_NAME']));
+		if (Configuration::get('PS_REWRITING_SETTINGS') && count(Language::getLanguages(true)) > 1)
+			$lang = Language::getIsoById($this->context->employee->id_lang).'/';
+		$url = Tools::getCurrentUrlProtocolPrefix().Tools::getHttpHost().$dir.$lang.Dispatcher::getInstance()->createUrl('index', (int)$this->context->language->id, $live_edit_params);
 		return $url;
 	}
 	
@@ -391,21 +397,35 @@ class AdminModulesPositionsControllerCore extends AdminController
 		if (!is_array($file_list))
 			$file_list = ($file_list) ? array($file_list) : array();
 
-		$content = '<input type="text" name="exceptions['.$shop_id.']" size="40" value="'.implode(', ', $file_list).'" id="em_text_'.$shop_id.'">';
+		$content = '<input type="text" name="exceptions['.$shop_id.']" size="40" value="'.implode(', ', $file_list).'" id="em_text_'.$shop_id.'" />';
 		if ($shop_id)
 		{
 			$shop = new Shop($shop_id);
 			$content .= ' ('.$shop->name.')';
 		}
-		$content .= '<br /><select id="em_list_'.$shop_id.'">';
-
+		$content .= '
+				<br />
+				<select id="em_list_'.$shop_id.'" size="45" multiple="multiple" style="width:237px">
+					<option disabled="disabled">'.$this->l('___________ CUSTOM ___________').'</option>';
+		
 		// @todo do something better with controllers
 		$controllers = Dispatcher::getControllers(_PS_FRONT_CONTROLLER_DIR_);
 		ksort($controllers);
+		
+		foreach ($file_list as $k => $v)
+			if ( ! array_key_exists ($v, $controllers))
+				$content .= '
+					<option value="'.$v.'">'.$v.'</option>';
+
+		$content .= '
+					<option disabled="disabled">'.$this->l('____________ CORE ____________').'</option>';
 		foreach ($controllers as $k => $v)
-			$content .= '<option value="'.$k.'">'.$k.'</option>';
-		$content .= '</select> <input type="button" class="button" value="'.$this->l('Add').'" onclick="position_exception_add('.$shop_id.')" />
-				<input type="button" class="button" value="'.$this->l('Remove').'" onclick="position_exception_remove('.$shop_id.')" /><br /><br />';
+			$content .= '
+					<option value="'.$k.'">'.$k.'</option>';
+		
+		$content .= '
+			</select>
+			';
 
 		return $content;
 	}

@@ -122,11 +122,17 @@ class EmployeeCore extends ObjectModel
 	 */
 	public function getFields()
 	{
-		if (empty($this->stats_date_from))
-			$this->stats_date_from = date('Y-m-d 00:00:00');
+		if (empty($this->stats_date_from) || $this->stats_date_from == '0000-00-00')
+			$this->stats_date_from = date('Y-m-d', strtotime("-1 month"));
 
-		if (empty($this->stats_date_to))
-			$this->stats_date_to = date('Y-m-d 23:59:59');
+		if (empty($this->stats_compare_from) || $this->stats_compare_from == '0000-00-00')
+			$this->stats_compare_from = null;
+
+		if (empty($this->stats_date_to) || $this->stats_date_to == '0000-00-00')
+			$this->stats_date_to = date('Y-m-d');
+
+		if (empty($this->stats_compare_to) || $this->stats_compare_to == '0000-00-00')
+			$this->stats_compare_to = null;
 
 		return parent::getFields();
 	}
@@ -135,6 +141,15 @@ class EmployeeCore extends ObjectModel
 	{
 		$this->last_passwd_gen = date('Y-m-d H:i:s', strtotime('-'.Configuration::get('PS_PASSWD_TIME_BACK').'minutes'));
 	 	return parent::add($autodate, $null_values);
+	}
+
+	public function update($null_values = false)
+	{
+		if (empty($this->stats_date_from) || $this->stats_date_from == '0000-00-00')
+			$this->stats_date_from = date('Y-m-d');
+		if (empty($this->stats_date_to) || $this->stats_date_to == '0000-00-00')
+			$this->stats_date_to = date('Y-m-d');
+	 	return parent::update($null_values);
 	}
 
 	/**
@@ -244,12 +259,15 @@ class EmployeeCore extends ObjectModel
 	  */
 	public function isLoggedBack()
 	{
-		/* Employee is valid only if it can be load and if cookie password is the same as database one */
-	 	return ($this->id
-			&& Validate::isUnsignedId($this->id)
-			&& Employee::checkPassword($this->id, $this->passwd)
-			&& (!isset($this->remote_addr) || $this->remote_addr == ip2long(Tools::getRemoteAddr()) || !Configuration::get('PS_COOKIE_CHECKIP'))
-		);
+		if (!Cache::isStored('isLoggedBack'.$this->id))
+		{
+			/* Employee is valid only if it can be load and if cookie password is the same as database one */
+			Cache::store('isLoggedBack'.$this->id, (
+				$this->id && Validate::isUnsignedId($this->id) && Employee::checkPassword($this->id, Context::getContext()->cookie->passwd)
+				&& (!isset(Context::getContext()->cookie->remote_addr) || Context::getContext()->cookie->remote_addr == ip2long(Tools::getRemoteAddr()) || !Configuration::get('PS_COOKIE_CHECKIP'))
+			));
+		}
+		return Cache::retrieve('isLoggedBack'.$this->id);
 	}
 
 	/**
@@ -258,7 +276,10 @@ class EmployeeCore extends ObjectModel
 	public function logout()
 	{
 		if (isset(Context::getContext()->cookie))
+		{
 			Context::getContext()->cookie->logout();
+			Context::getContext()->cookie->write();
+		}
 		$this->id = null;
 	}
 

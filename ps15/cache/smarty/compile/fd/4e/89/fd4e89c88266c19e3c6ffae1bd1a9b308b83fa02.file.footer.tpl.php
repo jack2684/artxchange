@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 04:02:51
+<?php /* Smarty version Smarty-3.1.14, created on 2014-02-15 17:25:15
          compiled from "/var/www/artxchange/ps15/admincp/themes/default/template/footer.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:40169603152ff2d3b279f67-95814494%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:172835103052ffe94bb43dd2-00147385%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'fd4e89c88266c19e3c6ffae1bd1a9b308b83fa02' => 
     array (
       0 => '/var/www/artxchange/ps15/admincp/themes/default/template/footer.tpl',
-      1 => 1366914186,
+      1 => 1392502881,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '40169603152ff2d3b279f67-95814494',
+  'nocache_hash' => '172835103052ffe94bb43dd2-00147385',
   'function' => 
   array (
   ),
@@ -23,10 +23,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'iso_is_fr' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_52ff2d3b2a7e08_22381376',
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52ffe94bb723c5_27352229',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52ff2d3b2a7e08_22381376')) {function content_52ff2d3b2a7e08_22381376($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_52ffe94bb723c5_27352229')) {function content_52ffe94bb723c5_27352229($_smarty_tpl) {?>
 			<div style="clear:both;height:0;line-height:0">&nbsp;</div>
 		</div>
 		<div style="clear:both;height:0;line-height:0">&nbsp;</div>
@@ -44,14 +44,16 @@ s</span>
 				</div>
 				<div class="footerRight">
 					<?php if ($_smarty_tpl->tpl_vars['iso_is_fr']->value){?>
-						<span>Questions / Renseignements / Formations :</span> <strong>+33 (0)1.40.18.30.04</strong> de 09h &agrave; 18h
+						<span>Questions / Renseignements / Formations :</span> <strong>+33 (0)1.40.18.30.04</strong>
 					<?php }?>
-					|&nbsp;<a href="http://www.prestashop.com/en/contact_us/" target="_blank" class="footer_link"><?php echo smartyTranslate(array('s'=>'Contact'),$_smarty_tpl);?>
+					|&nbsp;<a href="http://www.prestashop.com/en/contact-us?utm_source=backoffice_footer" target="_blank" class="footer_link"><?php echo smartyTranslate(array('s'=>'Contact'),$_smarty_tpl);?>
 </a>
-					|&nbsp;<a href="http://forge.prestashop.com" target="_blank" class="footer_link"><?php echo smartyTranslate(array('s'=>'Bug Tracker'),$_smarty_tpl);?>
+					|&nbsp;<a href="http://forge.prestashop.com/?utm_source=backoffice_footer" target="_blank" class="footer_link"><?php echo smartyTranslate(array('s'=>'Bug Tracker'),$_smarty_tpl);?>
 </a>
-					|&nbsp;<a href="http://www.prestashop.com/forums/" target="_blank" class="footer_link"><?php echo smartyTranslate(array('s'=>'Forum'),$_smarty_tpl);?>
-</a>	
+					|&nbsp;<a href="http://www.prestashop.com/forums/?utm_source=backoffice_footer" target="_blank" class="footer_link"><?php echo smartyTranslate(array('s'=>'Forum'),$_smarty_tpl);?>
+</a>
+					|&nbsp;<a href="http://addons.prestashop.com/?utm_source=backoffice_footer" target="_blank" class="footer_link"><?php echo smartyTranslate(array('s'=>'Addons'),$_smarty_tpl);?>
+</a>
 				</div>
 			</div>
 		</div>

@@ -43,7 +43,7 @@
 				$('document').ready( function() {
 					$(".check_product_name")
 						.autocomplete(
-							'{$link->getAdminLink('AdminProducts', true)}', {
+							'{$link->getAdminLink('AdminProducts', true)|addslashes}', {
 								minChars: 3,
 								max: 10,
 								width: $(".check_product_name").width(),
@@ -166,7 +166,7 @@
 	</tr>
 	<tr class="redirect_product_options" style="display:none">
 		<td class="col-left">
-			{include file="controllers/products/multishop/checkbox.tpl" field="active" type="radio" onclick=""}
+			{include file="controllers/products/multishop/checkbox.tpl" field="redirect_type" type="radio" onclick=""}
 			<label class="text">{l s='Redirect:'}</label>
 		</td>
 		<td style="padding-bottom:5px;">
@@ -184,7 +184,7 @@
 	</tr>
 	<tr class="redirect_product_options redirect_product_options_product_choise" style="display:none">
 		<td class="col-left">
-			{include file="controllers/products/multishop/checkbox.tpl" field="active" type="radio" onclick=""}
+			{include file="controllers/products/multishop/checkbox.tpl" field="id_product_redirected" type="radio" onclick=""}
 			<label class="text">{l s='Related product:'}</label>
 		</td>
 		<td style="padding-bottom:5px;">
@@ -375,8 +375,19 @@
 			<td style="padding-bottom:5px;" class="translatable">
 				{foreach from=$languages item=language}
 					<div class="lang_{$language.id_lang}" style="{if !$language.is_default}display: none;{/if}float: left;">
+						{literal}
+						<script type="text/javascript">
+							$().ready(function () {
+								var input_id = '{/literal}tags_{$language.id_lang}{literal}';
+								$('#'+input_id).tagify({delimiters: [13,44], addTagPrompt: '{/literal}{l s='Add tag' js=1}{literal}'});
+								$({/literal}'#{$table}{literal}_form').submit( function() {
+									$(this).find('#'+input_id).val($('#'+input_id).tagify('serialize'));
+								});
+							});
+						</script>
+						{/literal}
 						<input size="55" type="text" id="tags_{$language.id_lang}" name="tags_{$language.id_lang}"
-							value="{$product->getTags($language.id_lang, true)|htmlentitiesUTF8}" />
+							value="{$product->getTags($language.id_lang, true)|htmlentitiesUTF8}" class="tagify" />
 						<span class="hint" name="help_box">{l s='Forbidden characters:'} !&lt;;&gt;;?=+#&quot;&deg;{}_$%<span class="hint-pointer">&nbsp;</span></span>
 					</div>
 				{/foreach}

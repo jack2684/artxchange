@@ -84,7 +84,7 @@ function updateAddressSelection()
 		async: true,
 		cache: false,
 		dataType : "json",
-		data: 'ajax=true&method=updateAddressesSelected&id_address_delivery=' + idAddress_delivery + '&id_address_invoice=' + idAddress_invoice + '&token=' + static_token,
+		data: 'allow_refresh=1&ajax=true&method=updateAddressesSelected&id_address_delivery=' + idAddress_delivery + '&id_address_invoice=' + idAddress_invoice + '&token=' + static_token,
 		success: function(jsonData)
 		{
 			if (jsonData.hasError)
@@ -93,11 +93,13 @@ function updateAddressSelection()
 				for(var error in jsonData.errors)
 					//IE6 bug fix
 					if(error !== 'indexOf')
-						errors += jsonData.errors[error] + "\n";
+						errors += $('<div />').html(jsonData.errors[error]).text() + "\n";
 				alert(errors);
 			}
 			else
 			{
+				if (jsonData.refresh)
+					location.reload();
 				// Update all product keys with the new address id
 				$('#cart_summary .address_'+deliveryAddress).each(function() {
 					$(this)
@@ -186,7 +188,7 @@ function getCarrierListAndUpdate()
 				for(var error in jsonData.errors)
 					//IE6 bug fix
 					if(error !== 'indexOf')
-						errors += jsonData.errors[error] + "\n";
+						errors += $('<div />').html(jsonData.errors[error]).text() + "\n";
 				alert(errors);
 			}
 			else
@@ -236,7 +238,7 @@ function updateCarrierSelectionAndGift()
 				for(var error in jsonData.errors)
 					//IE6 bug fix
 					if(error !== 'indexOf')
-						errors += jsonData.errors[error] + "\n";
+						errors += $('<div />').html(jsonData.errors[error]).text() + "\n";
 				alert(errors);
 			}
 			else
@@ -306,7 +308,7 @@ function saveAddress(type)
 	params += 'address2='+encodeURIComponent($('#address2'+(type == 'invoice' ? '_invoice' : '')).val())+'&';
 	params += 'postcode='+encodeURIComponent($('#postcode'+(type == 'invoice' ? '_invoice' : '')).val())+'&';
 	params += 'city='+encodeURIComponent($('#city'+(type == 'invoice' ? '_invoice' : '')).val())+'&';
-	params += 'id_country='+encodeURIComponent($('#id_country').val())+'&';
+	params += 'id_country='+encodeURIComponent($('#id_country'+(type == 'invoice' ? '_invoice' : '')).val())+'&';
 	if ($('#id_state'+(type == 'invoice' ? '_invoice' : '')).val())
 		params += 'id_state='+encodeURIComponent($('#id_state'+(type == 'invoice' ? '_invoice' : '')).val())+'&';
 	params += 'other='+encodeURIComponent($('#other'+(type == 'invoice' ? '_invoice' : '')).val())+'&';
@@ -445,6 +447,7 @@ $(function() {
 				$('#is_new_customer').val('0');
 				$('#opc_account_choice, #opc_invoice_address').hide();
 				$('#new_account_title').html(txtInstantCheckout);
+				$('#submitAccount').prop({id : 'submitGuestAccount', name : 'submitGuestAccount'});
 				updateState();
 				updateNeedIDNumber();
 				updateZipCode();
@@ -702,7 +705,7 @@ function bindInputs()
 					for(var error in jsonData.errors)
 						//IE6 bug fix
 						if(error !== 'indexOf')
-							errors += jsonData.errors[error] + "\n";
+							errors += $('<div />').html(jsonData.errors[error]).text() + "\n";
 					alert(errors);
 				}
 			else
@@ -763,7 +766,7 @@ function multishippingMode(it)
 			'transitionIn': 'elastic',
 			'transitionOut': 'elastic',
 			'type': 'ajax',
-			'onClosed': function()
+			'beforeClose': function()
 			{
 				// Reload the cart
 				$.ajax({
@@ -780,7 +783,7 @@ function multishippingMode(it)
 				});
 				updateCarrierSelectionAndGift();
 			},
-			'onStart': function()
+			'beforeLoad': function()
 			{
 				// Removing all ids on the cart to avoid conflic with the new one on the fancybox
 				// This action could "break" the cart design, if css rules use ids of the cart

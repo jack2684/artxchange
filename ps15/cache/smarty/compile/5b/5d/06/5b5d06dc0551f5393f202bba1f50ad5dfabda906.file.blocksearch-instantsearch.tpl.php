@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 16:32:02
+<?php /* Smarty version Smarty-3.1.14, created on 2014-02-15 17:29:49
          compiled from "/var/www/artxchange/ps15/modules/blocksearch/blocksearch-instantsearch.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:151139045252ffdcd211b664-25755530%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:12666649352ffea5d758fd1-82188947%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '5b5d06dc0551f5393f202bba1f50ad5dfabda906' => 
     array (
       0 => '/var/www/artxchange/ps15/modules/blocksearch/blocksearch-instantsearch.tpl',
-      1 => 1366914192,
+      1 => 1392502885,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '151139045252ffdcd211b664-25755530',
+  'nocache_hash' => '12666649352ffea5d758fd1-82188947',
   'function' => 
   array (
   ),
@@ -25,10 +25,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ajaxsearch' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_52ffdcd21740f1_22801244',
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52ffea5d7c8870_54224606',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52ffdcd21740f1_22801244')) {function content_52ffdcd21740f1_22801244($_smarty_tpl) {?><?php if ($_smarty_tpl->tpl_vars['instantsearch']->value){?>
+<?php if ($_valid && !is_callable('content_52ffea5d7c8870_54224606')) {function content_52ffea5d7c8870_54224606($_smarty_tpl) {?><?php if ($_smarty_tpl->tpl_vars['instantsearch']->value){?>
 	<script type="text/javascript">
 	// <![CDATA[
 		function tryToCloseInstantSearch() {
@@ -54,8 +54,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			if($(this).val().length > 0){
 				stopInstantSearchQueries();
 				instantSearchQuery = $.ajax({
-					url: '<?php if ($_smarty_tpl->tpl_vars['search_ssl']->value==1){?><?php echo $_smarty_tpl->tpl_vars['link']->value->getPageLink('search',true);?>
-<?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['link']->value->getPageLink('search');?>
+					url: '<?php if ($_smarty_tpl->tpl_vars['search_ssl']->value==1){?><?php echo addslashes($_smarty_tpl->tpl_vars['link']->value->getPageLink('search',true));?>
+<?php }else{ ?><?php echo addslashes($_smarty_tpl->tpl_vars['link']->value->getPageLink('search'));?>
 <?php }?>',
 					data: {
 						instantSearch: 1,
@@ -73,6 +73,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							$('#center_column').attr('id', 'old_center_column');
 							$('#old_center_column').after('<div id="center_column" class="' + $('#old_center_column').attr('class') + '">'+data+'</div>');
 							$('#old_center_column').hide();
+							// Button override
+							ajaxCart.overrideButtonsInThePage();
 							$("#instant_search_results a.close").click(function() {
 								$("#search_query_<?php echo $_smarty_tpl->tpl_vars['blocksearch_type']->value;?>
 ").val('');
@@ -99,8 +101,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			$("#search_query_<?php echo $_smarty_tpl->tpl_vars['blocksearch_type']->value;?>
 ")
 				.autocomplete(
-					'<?php if ($_smarty_tpl->tpl_vars['search_ssl']->value==1){?><?php echo $_smarty_tpl->tpl_vars['link']->value->getPageLink('search',true);?>
-<?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['link']->value->getPageLink('search');?>
+					'<?php if ($_smarty_tpl->tpl_vars['search_ssl']->value==1){?><?php echo addslashes($_smarty_tpl->tpl_vars['link']->value->getPageLink('search',true));?>
+<?php }else{ ?><?php echo addslashes($_smarty_tpl->tpl_vars['link']->value->getPageLink('search'));?>
 <?php }?>', {
 						minChars: 3,
 						max: 10,

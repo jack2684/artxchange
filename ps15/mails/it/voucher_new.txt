@@ -1,14 +1,13 @@
-Hi {firstname} {lastname},
+Salve {firstname} {lastname},
 
-This is to inform you about the creation of a voucher.
+Vorremmo informarti della creazione di un buono sconto a tuo nome.
 
-Here is the code of your voucher : {voucher_num}.
+Codice del buono : {voucher_num}.
 
-Simply copy/paste this code during the payment process for your next order.
+Sarà sufficiente che al momento di pagare per il prossimo ordine, tu inserisca questo codice.
 
-Thank you for shopping at {shop_name}.
+Grazie per aver ordinato presso {shop_name}!
 
 {shop_name} - {shop_url}
 
-
-{shop_url} powered by PrestaShop
+{shop_url} powered by PrestaShop™

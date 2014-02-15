@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 04:05:36
+<?php /* Smarty version Smarty-3.1.14, created on 2014-02-15 17:25:15
          compiled from "/var/www/artxchange/ps15/admincp/themes/default/template/toolbar.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:56631386952ff2de0774a93-27112574%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:73101099952ffe94b724281-79080634%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '5bbf900089556bcb69309426785cb466e185a3d4' => 
     array (
       0 => '/var/www/artxchange/ps15/admincp/themes/default/template/toolbar.tpl',
-      1 => 1366914186,
+      1 => 1392502881,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '56631386952ff2de0774a93-27112574',
+  'nocache_hash' => '73101099952ffe94b724281-79080634',
   'function' => 
   array (
   ),
   'variables' => 
   array (
+    'table' => 0,
     'toolbar_scroll' => 0,
     'toolbar_btn' => 0,
-    'table' => 0,
     'btn' => 0,
     'k' => 0,
     'tab_modules_open' => 0,
@@ -31,12 +31,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'item' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_52ff2de085f998_29661936',
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52ffe94b817be5_36270502',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52ff2de085f998_29661936')) {function content_52ff2de085f998_29661936($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_52ffe94b817be5_36270502')) {function content_52ffe94b817be5_36270502($_smarty_tpl) {?>
 
-<div class="toolbar-placeholder">
+<div id="<?php echo $_smarty_tpl->tpl_vars['table']->value;?>
+_toolbar" class="toolbar-placeholder">
 	<div class="toolbarBox <?php if ($_smarty_tpl->tpl_vars['toolbar_scroll']->value){?>toolbarHead<?php }?>">
 		
 			<ul class="cc_button">
@@ -65,9 +66,9 @@ $_smarty_tpl->tpl_vars['btn']->_loop = true;
 						<?php if ($_smarty_tpl->tpl_vars['k']->value=='modules-list'){?>
 							<div id="modules_list_container" style="display:none">
 							<div style="float:right;margin:5px">
-								<a href="#" onclick="$('#modules_list_container').slideUp();return false;"><img alt="X" src="../img/admin/close.png"></a>
+								<a href="#" onclick="$('#modules_list_container').slideUp();return false;"><img alt="X" src="../img/admin/close.png" /></a>
 							</div>
-							<div id="modules_list_loader"><img src="../img/loader.gif" alt="" border="0"></div>
+							<div id="modules_list_loader"><img src="../img/loader.gif" alt="" border="0" /></div>
 							<div id="modules_list_container_tab" style="display:none;"></div>
 							</div>
 						<?php }?>
@@ -81,7 +82,8 @@ $_smarty_tpl->tpl_vars['btn']->_loop = true;
 				var modules_list_loaded = false;
 				$(function() {
 					//get reference on save link
-					btn_save = $('span[class~="process-icon-save"]').parent();
+					btn_save = $('#<?php echo $_smarty_tpl->tpl_vars['table']->value;?>
+_toolbar span[class~="process-icon-save"]').parent();
 
 					//get reference on form submit button
 					btn_submit = $('#<?php echo $_smarty_tpl->tpl_vars['table']->value;?>
@@ -121,13 +123,17 @@ _form_submit_btn');
 						//bind enter key press to validate form
 						$('#<?php echo $_smarty_tpl->tpl_vars['table']->value;?>
 _form').keypress(function (e) {
-							if (e.which == 13 && e.target.localName != 'textarea')
+							if (e.which == 13 && e.target.localName != 'textarea' && !e.target.hasClass('tagify'))
 								$('#desc-<?php echo $_smarty_tpl->tpl_vars['table']->value;?>
 -save').click();
 						});
 						//submit the form
 						
 							btn_save.click(function() {
+								// Vars
+								var btn_submit = $('#<?php echo $_smarty_tpl->tpl_vars['table']->value;?>
+_form_submit_btn');
+
 								// Avoid double click
 								if (submited)
 									return false;

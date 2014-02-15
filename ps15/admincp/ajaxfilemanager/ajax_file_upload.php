@@ -22,26 +22,18 @@
 								
 	$upload->setInvalidFileExt(explode(",", CONFIG_UPLOAD_INVALID_EXTS));
 	if(CONFIG_SYS_VIEW_ONLY || !CONFIG_OPTIONS_UPLOAD)
-	{
 		$error = SYS_DISABLED;
-	}
 	elseif(empty($_GET['folder']) || !isUnderRoot($_GET['folder']))
-	{
 		$error = ERR_FOLDER_PATH_NOT_ALLOWED;
-	}else	if(!$upload->isFileUploaded('file'))
-	{
+	elseif (!$upload->isFileUploaded('file'))
 		$error = ERR_FILE_NOT_UPLOADED;
-	}else if(!$upload->moveUploadedFile($_GET['folder']))
-	{
-		$error = ERR_FILE_MOVE_FAILED;
-	}	
-	elseif(!$upload->isPermittedFileExt(explode(",", CONFIG_UPLOAD_VALID_EXTS)))
-	{		
+	elseif (!$upload->isPermittedFileExt(explode(",", CONFIG_UPLOAD_VALID_EXTS)))
 		$error = ERR_FILE_TYPE_NOT_ALLOWED;
-	}elseif(defined('CONFIG_UPLOAD_MAXSIZE') && CONFIG_UPLOAD_MAXSIZE && $upload->isSizeTooBig(CONFIG_UPLOAD_MAXSIZE))
-	{		
+	elseif (defined('CONFIG_UPLOAD_MAXSIZE') && CONFIG_UPLOAD_MAXSIZE && $upload->isSizeTooBig(CONFIG_UPLOAD_MAXSIZE))	
 		 $error = sprintf(ERROR_FILE_TOO_BID, transformFileSize(CONFIG_UPLOAD_MAXSIZE));
-	}else
+	elseif (!$upload->moveUploadedFile($_GET['folder']))
+		$error = ERR_FILE_MOVE_FAILED;
+	else
 	{
 							include_once(CLASS_FILE);
 							$path = $upload->getFilePath();
@@ -60,7 +52,7 @@
 									$tem[$k] = $v;
 								}
 								
-								$tem['path'] = backslashToSlash($path);		
+								$tem['path'] = addslashes(backslashToSlash($path));
 								$tem['type'] = "file";
 								$tem['size'] = transformFileSize($tem['size']);
 								$tem['ctime'] = date(DATE_TIME_FORMAT, $tem['ctime']);
@@ -73,7 +65,7 @@
 										$info .= sprintf(", %s:'%s'", $k, $v);									
 								}
 
-								$info .= sprintf(", url:'%s'",  getFileUrl($path));
+								$info .= sprintf(", url:'%s'",  addslashes(getFileUrl($path)));
 								$info .= sprintf(", tipedit:'%s'",  TIP_DOC_RENAME);		
 
 																				

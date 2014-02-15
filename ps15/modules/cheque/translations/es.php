@@ -21,7 +21,6 @@ $_MODULE['<{cheque}prestashop>cheque_b17f3f4dcf653a5776792498a9b44d6a'] = 'Actua
 $_MODULE['<{cheque}prestashop>validation_e2b7dec8fa4b498156dfee6e4c84b156'] = 'Esta forma de pago no está disponible.';
 $_MODULE['<{cheque}prestashop>payment_execution_8520b283b0884394b13b80d5689628b3'] = 'Pago por cheque';
 $_MODULE['<{cheque}prestashop>payment_execution_f1d3b424cd68795ecaa552883759aceb'] = 'Resumen del pedido';
-$_MODULE['<{cheque}prestashop>payment_execution_879f6b8877752685a966564d072f498f'] = 'Su carrito está vacío';
 $_MODULE['<{cheque}prestashop>payment_execution_060bf2d587991d8f090a1309b285291c'] = 'cheque';
 $_MODULE['<{cheque}prestashop>payment_execution_76ca011e4772bfcce26aecd42c598510'] = 'Ha elegido el pago por cheque.';
 $_MODULE['<{cheque}prestashop>payment_execution_c884ed19483d45970c5bf23a681e2dd2'] = 'Resumen de su pedido:';

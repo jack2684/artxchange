@@ -21,11 +21,11 @@ $_MODULE['<{statscheckup}prestashop>statscheckup_dc270bcf468689b19074a5eef7581b5
 $_MODULE['<{statscheckup}prestashop>statscheckup_f4abc77d498c89880f67331609406774'] = 'W porządku';
 $_MODULE['<{statscheckup}prestashop>statscheckup_ad647e4ae904c7ed54ee93040d8298c7'] = 'niższa niż';
 $_MODULE['<{statscheckup}prestashop>statscheckup_05824b7be006782aaefd1fdb97c71e06'] = 'wyższa niż';
-$_MODULE['<{statscheckup}prestashop>statscheckup_38fb7d24e0d60a048f540ecb18e13376'] = 'Zachowaj';
+$_MODULE['<{statscheckup}prestashop>statscheckup_38fb7d24e0d60a048f540ecb18e13376'] = 'Zapisz';
 $_MODULE['<{statscheckup}prestashop>statscheckup_01fda57aa6c7e9f07f5aa36b108e95cb'] = 'Sortuj wg';
 $_MODULE['<{statscheckup}prestashop>statscheckup_b718adec73e04ce3ec720dd11a06a308'] = 'ID';
 $_MODULE['<{statscheckup}prestashop>statscheckup_49ee3087348e8d44e1feda1917443987'] = 'Nazwa';
 $_MODULE['<{statscheckup}prestashop>statscheckup_7d74f3b92b19da5e606d737d339a9679'] = 'Pozycja';
-$_MODULE['<{statscheckup}prestashop>statscheckup_4d3d769b812b6faa6b76e1a8abaece2d'] = 'Aktywność';
+$_MODULE['<{statscheckup}prestashop>statscheckup_4d3d769b812b6faa6b76e1a8abaece2d'] = 'Active';
 $_MODULE['<{statscheckup}prestashop>statscheckup_3f74e68055b1123e5d7deb32cd8b0b1b'] = 'Spadek';
 $_MODULE['<{statscheckup}prestashop>statscheckup_4cc6684df7b4a92b1dec6fce3264fac8'] = 'Ogólny';

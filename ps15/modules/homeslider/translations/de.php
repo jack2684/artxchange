@@ -24,7 +24,7 @@ $_MODULE['<{homeslider}prestashop>homeslider_947c5b1ecd3021f44ae45bc176085ae1'] 
 $_MODULE['<{homeslider}prestashop>homeslider_a5220b3d801e803e8c4133edcd0dc7b4'] = 'Wählen Sie eine Datei';
 $_MODULE['<{homeslider}prestashop>homeslider_2d806bd95ceb6d3166fb5c01d3fb75f0'] = 'Konfigurieren Sie Ihre Slideshow (Scene)';
 $_MODULE['<{homeslider}prestashop>homeslider_32bd52059351cd9ac4ae44f16746da11'] = 'Slideshow bearbeiten';
-$_MODULE['<{homeslider}prestashop>homeslider_51ec9bf4aaeab1b25bb57f9f8d4de557'] = 'Anrede';
+$_MODULE['<{homeslider}prestashop>homeslider_51ec9bf4aaeab1b25bb57f9f8d4de557'] = 'Name';
 $_MODULE['<{homeslider}prestashop>homeslider_3b3d06023f6353f8fd05f859b298573e'] = 'URL:';
 $_MODULE['<{homeslider}prestashop>homeslider_8046c95f98fc714db47978092bb24264'] = 'Legende';
 $_MODULE['<{homeslider}prestashop>homeslider_d0042a700e9bdf79689d63ee6846dc0e'] = 'Beschreibung:';
@@ -36,13 +36,13 @@ $_MODULE['<{homeslider}prestashop>homeslider_a6abafe564d3940cc36ee43e2f09400b'] 
 $_MODULE['<{homeslider}prestashop>homeslider_b3e3ed438fb0ea2935b3e79eac1f1658'] = 'Ungültiger Slide-Status';
 $_MODULE['<{homeslider}prestashop>homeslider_57b620e0495c07c15deda4dde882d47b'] = 'Ungültige Slide-Position';
 $_MODULE['<{homeslider}prestashop>homeslider_76ad3ac84a702b0497cd6be8e8886d34'] = 'Ungültige Slideshow-ID (id_slide)';
-$_MODULE['<{homeslider}prestashop>homeslider_14f09fd0804a8f1cd0eb757125fc9c28'] = 'Anrede ist zu lang';
+$_MODULE['<{homeslider}prestashop>homeslider_14f09fd0804a8f1cd0eb757125fc9c28'] = 'Name ist zu lang';
 $_MODULE['<{homeslider}prestashop>homeslider_39fc40a0ebcbfcae901d20ab8980f188'] = 'Hinweistext ist zu lang';
 $_MODULE['<{homeslider}prestashop>homeslider_4477f672766f6f255f760649af8bd92a'] = 'Die URL ist zu lang';
 $_MODULE['<{homeslider}prestashop>homeslider_62239300ba982b06ab0f1aa7100ad297'] = 'Die Beschreibung ist zu lang';
 $_MODULE['<{homeslider}prestashop>homeslider_980f56796b8bf9d607283de9815fe217'] = 'Das angegebene URL-Format ist nicht korrekt';
 $_MODULE['<{homeslider}prestashop>homeslider_7a92ef6b168d77ebcdad785b01d77a8e'] = 'Ungültiger Dateiname';
-$_MODULE['<{homeslider}prestashop>homeslider_349097dadf7e6b01dd2af601d54fd59a'] = 'Keine Anrede angegeben';
+$_MODULE['<{homeslider}prestashop>homeslider_349097dadf7e6b01dd2af601d54fd59a'] = 'Name fehlt.';
 $_MODULE['<{homeslider}prestashop>homeslider_ab53605e4a73424d186afccef7b4bc03'] = 'Kein Hinweistext eingegeben';
 $_MODULE['<{homeslider}prestashop>homeslider_0f059227d0a750ce652337d911879671'] = 'URL nicht angegeben';
 $_MODULE['<{homeslider}prestashop>homeslider_8cf45ba354f4725ec8a0d31164910895'] = 'Bild wurde nicht angegeben';

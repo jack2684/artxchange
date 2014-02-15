@@ -4,8 +4,8 @@ global $_MODULE;
 $_MODULE = array();
 
 $_MODULE['<{blockadvertising}prestashop>blockadvertising_fd4c71c948857cce596a69fbaea7426b'] = 'Blok Reklamowy';
-$_MODULE['<{blockadvertising}prestashop>blockadvertising_91cd1ee56ea5324ff51578684a393a81'] = 'Dodaje blok do wyswietlenia reklamy.';
-$_MODULE['<{blockadvertising}prestashop>blockadvertising_070e16b4f77b90e802f789b5be583cfa'] = 'Błąd przenoszenia wczytywanego pliku';
+$_MODULE['<{blockadvertising}prestashop>blockadvertising_91cd1ee56ea5324ff51578684a393a81'] = 'Dodaje blok do wyświetlenia reklamy w wybranych sekcjach Twojej strony.';
+$_MODULE['<{blockadvertising}prestashop>blockadvertising_070e16b4f77b90e802f789b5be583cfa'] = 'Błąd wczytywania pliku.';
 $_MODULE['<{blockadvertising}prestashop>blockadvertising_6e7be6d836003f069c00cd217660913b'] = 'Konfiguracja bloku reklamy';
 $_MODULE['<{blockadvertising}prestashop>blockadvertising_a21056e22c4d62b400b5dd96dafe22a3'] = 'Nie możesz usunąć domyślnego zdjęcia (ale możesz mienić je poniżej).';
 $_MODULE['<{blockadvertising}prestashop>blockadvertising_83b5a65e518c21ed0a5f2b383dd9b617'] = 'Usuń obrazek';

@@ -32,7 +32,7 @@ $_MODULE['<{statsforecast}prestashop>statsforecast_8ca76c564cccfd5a2ff4d2e08f46d
 $_MODULE['<{statsforecast}prestashop>statsforecast_3fa6443ce3f838b6901b70cd812abf0d'] = 'Répartition par modes de paiement';
 $_MODULE['<{statsforecast}prestashop>statsforecast_dd6e1ab3a8a2c8cb93d0dde0f512f4c4'] = 'Les montants sont TTC de sorte à ce que vous puissiez avoir une estimation de la commission due au service de paiement utilisé.';
 $_MODULE['<{statsforecast}prestashop>statsforecast_e6e42855066e7a3ae050b2c698021b14'] = 'Zone :';
-$_MODULE['<{statsforecast}prestashop>statsforecast_5ed26836c96d7dcae8a40307e8e250c3'] = '-- Aucun filtre --';
+$_MODULE['<{statsforecast}prestashop>statsforecast_5ed26836c96d7dcae8a40307e8e250c3'] = 'Aucun filtre';
 $_MODULE['<{statsforecast}prestashop>statsforecast_e55f75a29310d7b60f7ac1d390c8ae42'] = 'Module';
 $_MODULE['<{statsforecast}prestashop>statsforecast_e93f994f01c537c4e2f7d8528c3eb5e9'] = 'Nb';
 $_MODULE['<{statsforecast}prestashop>statsforecast_a85eba4c6c699122b2bb1387ea4813ad'] = 'Panier';

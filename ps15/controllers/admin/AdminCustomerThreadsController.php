@@ -320,12 +320,15 @@ class AdminCustomerThreadsControllerCore extends AdminController
 				$cm = new CustomerMessage();
 				$cm->id_employee = (int)$this->context->employee->id;
 				$cm->id_customer_thread = (int)Tools::getValue('id_customer_thread');
-				$cm->ip_address = ip2long($_SERVER['REMOTE_ADDR']);
+				$cm->ip_address = ip2long(Tools::getRemoteAddr());
 				$current_employee = $this->context->employee;
 				$id_employee = (int)Tools::getValue('id_employee_forward');
 				$employee = new Employee($id_employee);
 				$email = Tools::getValue('email');
-				if ($id_employee && $employee && Validate::isLoadedObject($employee))
+				$message = Tools::getValue('message_forward');
+				if (($error = $cm->validateField('message', $message, null, array(), true)) !== true)
+					$this->errors[] = $error;
+				elseif ($id_employee && $employee && Validate::isLoadedObject($employee))
 				{
 					$params = array(
 					'{messages}' => Tools::nl2br(stripslashes($output)),
@@ -344,7 +347,7 @@ class AdminCustomerThreadsControllerCore extends AdminController
 						null, null, _PS_MAIL_DIR_, true))
 					{
 						$cm->private = 1;
-						$cm->message = $this->l('Message forwarded to').' '.$employee->firstname.' '.$employee->lastname."\n".$this->l('Comment:').' '.$_POST['message_forward'];
+						$cm->message = $this->l('Message forwarded to').' '.$employee->firstname.' '.$employee->lastname."\n".$this->l('Comment:').' '.$message;
 						$cm->add();
 					}
 				}
@@ -363,7 +366,7 @@ class AdminCustomerThreadsControllerCore extends AdminController
 						$current_employee->email, $current_employee->firstname.' '.$current_employee->lastname,
 						null, null, _PS_MAIL_DIR_, true))
 					{
-						$cm->message = $this->l('Message forwarded to').' '.$email."\n".$this->l('Comment:').' '.$_POST['message_forward'];
+						$cm->message = $this->l('Message forwarded to').' '.$email."\n".$this->l('Comment:').' '.$message;
 						$cm->add();
 					}
 				}
@@ -373,13 +376,17 @@ class AdminCustomerThreadsControllerCore extends AdminController
 			if (Tools::isSubmit('submitReply'))
 			{
 				$ct = new CustomerThread($id_customer_thread);
+
+				ShopUrl::cacheMainDomainForShop((int)$ct->id_shop);
+
 				$cm = new CustomerMessage();
 				$cm->id_employee = (int)$this->context->employee->id;
 				$cm->id_customer_thread = $ct->id;
-				
-				$cm->message = Tools::htmlentitiesutf8(Tools::getValue('reply_message'));
-				$cm->ip_address = ip2long($_SERVER['REMOTE_ADDR']);
-				if (isset($_FILES) && !empty($_FILES['joinFile']['name']) && $_FILES['joinFile']['error'] != 0)
+				$cm->ip_address = ip2long(Tools::getRemoteAddr());
+				$cm->message = Tools::getValue('reply_message');
+				if (($error = $cm->validateField('message', $cm->message, null, array(), true)) !== true)
+					$this->errors[] = $error;
+				elseif (isset($_FILES) && !empty($_FILES['joinFile']['name']) && $_FILES['joinFile']['error'] != 0)
 					$this->errors[] = Tools::displayError('An error occurred during the file upload process.');
 				elseif ($cm->add())
 				{
@@ -398,7 +405,7 @@ class AdminCustomerThreadsControllerCore extends AdminController
 						),
 					);
 					//#ct == id_customer_thread    #tc == token of thread   <== used in the synchronization imap
-					$contact = new Contact((int)$ct->id_contact);
+					$contact = new Contact((int)$ct->id_contact, (int)$ct->id_lang);
 					if (Validate::isLoadedObject($contact))
 					{
 						$from_name = $contact->name;
@@ -409,6 +416,7 @@ class AdminCustomerThreadsControllerCore extends AdminController
 						$from_name = null;
 						$from_email = null;
 					}
+
 					if (Mail::Send(
 						(int)$ct->id_lang,
 						'reply_msg',
@@ -466,8 +474,9 @@ class AdminCustomerThreadsControllerCore extends AdminController
 
 		if (!$extension || !Validate::isFileName($filename))
 			die(Tools::displayError());
-			
-		ob_end_clean();
+
+		if (ob_get_level() && ob_get_length() > 0)
+			ob_end_clean();
 		header('Content-Type: '.$extension);
 		header('Content-Disposition:attachment;filename="'.$filename.'"');
 		readfile(_PS_UPLOAD_DIR_.$filename);
@@ -546,7 +555,7 @@ class AdminCustomerThreadsControllerCore extends AdminController
 						$orders_ok[] = $order;
 						$total_ok += $order['total_paid_real'];
 					}
-					$orders[$key]['date_add'] = Tools::displayDate($order['date_add'], $this->context->language->id);
+					$orders[$key]['date_add'] = Tools::displayDate($order['date_add']);
 					$orders[$key]['total_paid_real'] = Tools::displayPrice($order['total_paid_real'], new Currency((int)$order['id_currency']));
 				}
 			}
@@ -554,7 +563,7 @@ class AdminCustomerThreadsControllerCore extends AdminController
 			$products = $customer->getBoughtProducts();
 			if ($products && count($products))
 				foreach ($products as $key => $product)
-					$products[$key]['date_add'] = Tools::displayDate($product['date_add'], $this->context->language->id, true);
+					$products[$key]['date_add'] = Tools::displayDate($product['date_add'], null, true);
 		}
 
 		foreach ($messages as $key => $message)
@@ -592,14 +601,21 @@ class AdminCustomerThreadsControllerCore extends AdminController
 			if (!empty($message['id_product']) && empty($message['employee_name']))
 				$id_order_product = Order::getIdOrderProduct((int)$message['id_customer'], (int)$message['id_product']);
 		}
-		$message['date_add'] = Tools::displayDate($message['date_add'], $this->context->language->id, true);
+		$message['date_add'] = Tools::displayDate($message['date_add'], null, true);
 		$message['user_agent'] = strip_tags($message['user_agent']);
+
 		$message['message'] = preg_replace(
 			'/(https?:\/\/[a-z0-9#%&_=\(\)\.\? \+\-@\/]{6,1000})([\s\n<])/Uui',
 			'<a href="\1">\1</a>\2',
 			html_entity_decode($message['message'],
-			ENT_NOQUOTES, 'UTF-8')
+			ENT_QUOTES, 'UTF-8')
 		);
+
+		$is_valid_order_id = true;
+		$order = new Order((int)$message['id_order']);
+
+		if (!Validate::isLoadedObject($order))
+			$is_valid_order_id = false;
 
 		$tpl->assign(array(
 			'current' => self::$currentIndex,
@@ -611,7 +627,8 @@ class AdminCustomerThreadsControllerCore extends AdminController
 			'PS_SHOP_NAME' => Configuration::get('PS_SHOP_NAME'),
 			'file_name' => file_exists(_PS_UPLOAD_DIR_.$message['file_name']),
 			'contacts' => $contacts,
-			'PS_CUSTOMER_SERVICE_SIGNATURE' => str_replace('\r\n', "\n", Configuration::get('PS_CUSTOMER_SERVICE_SIGNATURE', $message['id_lang']))
+			'PS_CUSTOMER_SERVICE_SIGNATURE' => str_replace('\r\n', "\n", Configuration::get('PS_CUSTOMER_SERVICE_SIGNATURE', $message['id_lang'])),
+			'is_valid_order_id' => $is_valid_order_id
 		));
 
 		return $tpl->fetch();

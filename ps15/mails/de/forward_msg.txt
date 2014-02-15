@@ -1,4 +1,12 @@
-{employee} wollte Ihnen diesen Chat weiterleiten.
-Kommentar: {comment}
- 
-{messages}
+[{shop_url}] 
+
+Hallo {firstname} {lastname},
+
+{employee} möchte Ihnen diese Nachrichten zukommen lassen. 
+
+Nachrichten chronologisch: {messages}
+
+{employee} ergänzt "{comment}" 
+
+{shop_name} [{shop_url}] powered by
+PrestaShop(tm) [http://www.prestashop.com/] 

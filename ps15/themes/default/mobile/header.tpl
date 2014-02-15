@@ -36,7 +36,7 @@
 {/if}
 		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
 		<meta name="generator" content="PrestaShop" />
-		<meta name="robots" content="{if isset($nobots)}no{/if}index,follow" />
+		<meta name="robots" content="{if isset($nobots)}no{/if}index,{if isset($nofollow) && $nofollow}no{/if}follow" />
 		<link rel="icon" type="image/vnd.microsoft.icon" href="{$favicon_url}?{$img_update_time}" />
 		<link rel="shortcut icon" type="image/x-icon" href="{$favicon_url}?{$img_update_time}" />
 		<script type="text/javascript">
@@ -69,12 +69,12 @@
 				<div class="ui-block-b">
 					<div id="block_cart" class="clearfix">
 						{if !$PS_CATALOG_MODE}
-						<a href="{$link->getPageLink('order-opc', true)}" class="link_cart" data-ajax="false">{l s='Cart'}</a>
+						<a href="{$link->getPageLink('order-opc', true)|escape:'html'}" class="link_cart" data-ajax="false">{l s='Cart'}</a>
 						{/if}
 						{if $logged}
-							<a href="{$link->getPageLink('my-account', true)}" class="link_account" data-ajax="false">{l s='My account'}</a>
+							<a href="{$link->getPageLink('my-account', true)|escape:'html'}" class="link_account" data-ajax="false">{l s='My account'}</a>
 						{else}
-							<a href="{$link->getPageLink('authentication', true)}" class="link_account" data-ajax="false">{l s='Log in'}</a>
+							<a href="{$link->getPageLink('authentication', true)|escape:'html'}" class="link_account" data-ajax="false">{l s='Authentication'}</a>
 						{/if}
 					</div>
 					{hook h="displayMobileTop"}

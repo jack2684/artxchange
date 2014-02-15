@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 04:05:36
+<?php /* Smarty version Smarty-3.1.14, created on 2014-02-15 17:25:26
          compiled from "/var/www/artxchange/ps15/admincp/themes/default/template/controllers/modules_positions/list_modules.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:149387215652ff2de0544871-95625695%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:50427790552ffe956f2f8b3-62336083%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1016fe3d26d2a9c5da34046c8797c4e11629ff50' => 
     array (
       0 => '/var/www/artxchange/ps15/admincp/themes/default/template/controllers/modules_positions/list_modules.tpl',
-      1 => 1366914186,
+      1 => 1392502880,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '149387215652ff2de0544871-95625695',
+  'nocache_hash' => '50427790552ffe956f2f8b3-62336083',
   'function' => 
   array (
   ),
@@ -36,10 +36,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'current' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_52ff2de076f9f1_93033425',
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52ffe9571feaa1_88359045',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52ff2de076f9f1_93033425')) {function content_52ff2de076f9f1_93033425($_smarty_tpl) {?><?php if (!is_callable('smarty_function_cycle')) include '/var/www/artxchange/ps15/tools/smarty/plugins/function.cycle.php';
+<?php if ($_valid && !is_callable('content_52ffe9571feaa1_88359045')) {function content_52ffe9571feaa1_88359045($_smarty_tpl) {?><?php if (!is_callable('smarty_function_cycle')) include '/var/www/artxchange/ps15/tools/smarty/plugins/function.cycle.php';
 ?>
 
 <script type="text/javascript">
@@ -61,7 +61,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ')">
 		<option value="all"><?php echo smartyTranslate(array('s'=>'All modules'),$_smarty_tpl);?>
 &nbsp;</option>
-		<option>---------------</option>
+		<option>-</option>
 
 		<?php  $_smarty_tpl->tpl_vars['module'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['module']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['modules']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}

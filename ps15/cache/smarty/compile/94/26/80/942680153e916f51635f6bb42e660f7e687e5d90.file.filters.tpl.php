@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 04:07:31
+<?php /* Smarty version Smarty-3.1.14, created on 2014-02-15 17:26:27
          compiled from "/var/www/artxchange/ps15/admincp/themes/default/template/controllers/modules/filters.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:26018609352ff2e535fb723-23181656%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:103886872252ffe9934014e0-14105214%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '942680153e916f51635f6bb42e660f7e687e5d90' => 
     array (
       0 => '/var/www/artxchange/ps15/admincp/themes/default/template/controllers/modules/filters.tpl',
-      1 => 1366914186,
+      1 => 1392502880,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '26018609352ff2e535fb723-23181656',
+  'nocache_hash' => '103886872252ffe9934014e0-14105214',
   'function' => 
   array (
   ),
@@ -32,11 +32,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'nameCountryDefault' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_52ff2e5370bd95_95806539',
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52ffe993523690_86094406',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52ff2e5370bd95_95806539')) {function content_52ff2e5370bd95_95806539($_smarty_tpl) {?>
-
+<?php if ($_valid && !is_callable('content_52ffe993523690_86094406')) {function content_52ffe993523690_86094406($_smarty_tpl) {?>
+<script type="text/javascript" src="../js/jquery/plugins/jquery.uitablefilter.js"></script>
 <?php if ($_smarty_tpl->tpl_vars['add_permission']->value=='1'){?>
 	<?php if (isset($_smarty_tpl->tpl_vars['logged_on_addons']->value)){?>
 			<!--start addons login-->
@@ -87,11 +87,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <!--start filter module-->
 <style>.ac_results { border:1px solid #C2C4D9; }</style>
 <div class="filter-module">
-	<form id="filternameForm" method="post">
-		<input type="text" value="" name="filtername" autocomplete="off" class="ac_input">
-		<input type="submit" class="button" value="<?php echo smartyTranslate(array('s'=>'Search'),$_smarty_tpl);?>
-">
-	</form>
+	<input style="float: left; margin-right: 15px" placeholder="<?php echo smartyTranslate(array('s'=>'Search'),$_smarty_tpl);?>
+" type="text" value="" name="quicksearch" autocomplete="off" onkeyup="$.uiTableFilter($('#moduleContainer').find('table'), this.value);">
 	<form method="post">
 		<div class="select-filter">
 			<label class="search-filter"><?php echo smartyTranslate(array('s'=>'Sort by'),$_smarty_tpl);?>

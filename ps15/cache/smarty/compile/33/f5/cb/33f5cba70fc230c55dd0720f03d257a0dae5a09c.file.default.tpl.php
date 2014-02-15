@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 16:32:02
+<?php /* Smarty version Smarty-3.1.14, created on 2014-02-15 17:28:33
          compiled from "/var/www/artxchange/ps15/themes/leoconv/modules/leobtslidermini/themes/default/default.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:73600065752ffdcd2a5a249-59393650%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:118829271152ffea11e73ab4-71769286%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '73600065752ffdcd2a5a249-59393650',
+  'nocache_hash' => '118829271152ffea11e73ab4-71769286',
   'function' => 
   array (
   ),
@@ -24,10 +24,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'item' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_52ffdcd2aeb676_69429771',
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52ffea12010b55_70304159',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52ffdcd2aeb676_69429771')) {function content_52ffdcd2aeb676_69429771($_smarty_tpl) {?><div class="span4 leoslidemini">
+<?php if ($_valid && !is_callable('content_52ffea12010b55_70304159')) {function content_52ffea12010b55_70304159($_smarty_tpl) {?><div class="span4 leoslidemini">
 <div id="leobttslidermini<?php echo $_smarty_tpl->tpl_vars['leobtslidermini_modid']->value;?>
 " class="carousel slide leobttslidermini block_box">
 	<h4 class="title_block">Gallary</h4>

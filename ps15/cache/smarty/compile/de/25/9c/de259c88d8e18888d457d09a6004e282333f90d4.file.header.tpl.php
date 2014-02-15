@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 04:02:50
+<?php /* Smarty version Smarty-3.1.14, created on 2014-02-15 17:25:15
          compiled from "/var/www/artxchange/ps15/admincp/themes/default/template/header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:8539947552ff2d3af300e8-37177258%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:92295196552ffe94b8d5578-57719009%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'de259c88d8e18888d457d09a6004e282333f90d4' => 
     array (
       0 => '/var/www/artxchange/ps15/admincp/themes/default/template/header.tpl',
-      1 => 1366914186,
+      1 => 1392502881,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '8539947552ff2d3af300e8-37177258',
+  'nocache_hash' => '92295196552ffe94b8d5578-57719009',
   'function' => 
   array (
   ),
@@ -62,10 +62,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'multishop_context' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_52ff2d3b274729_34357263',
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52ffe94bb333d5_16433520',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52ff2d3b274729_34357263')) {function content_52ff2d3b274729_34357263($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/artxchange/ps15/tools/smarty/plugins/modifier.escape.php';
+<?php if ($_valid && !is_callable('content_52ffe94bb333d5_16433520')) {function content_52ffe94bb333d5_16433520($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/artxchange/ps15/tools/smarty/plugins/modifier.escape.php';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 lt-ie6 " lang="en"> <![endif]-->
@@ -82,93 +82,92 @@ $_valid = $_smarty_tpl->decodeProperties(array (
  - PrestaShop&trade;</title>
 <?php if ($_smarty_tpl->tpl_vars['display_header']->value){?>
 	<script type="text/javascript">
-		var help_class_name = '<?php echo $_smarty_tpl->tpl_vars['controller_name']->value;?>
+		var help_class_name = '<?php echo addcslashes($_smarty_tpl->tpl_vars['controller_name']->value,'\'');?>
 ';
-		var iso_user = '<?php echo $_smarty_tpl->tpl_vars['iso_user']->value;?>
+		var iso_user = '<?php echo addcslashes($_smarty_tpl->tpl_vars['iso_user']->value,'\'');?>
 ';
-		var country_iso_code = '<?php echo $_smarty_tpl->tpl_vars['country_iso_code']->value;?>
+		var country_iso_code = '<?php echo addcslashes($_smarty_tpl->tpl_vars['country_iso_code']->value,'\'');?>
 ';
-		var _PS_VERSION_ = '<?php echo @constant('_PS_VERSION_');?>
+		var _PS_VERSION_ = '<?php echo addcslashes(@constant('_PS_VERSION_'),'\'');?>
 ';
-
-		var helpboxes = <?php echo $_smarty_tpl->tpl_vars['help_box']->value;?>
+		var helpboxes = <?php echo intval($_smarty_tpl->tpl_vars['help_box']->value);?>
 ;
-		var roundMode = <?php echo $_smarty_tpl->tpl_vars['round_mode']->value;?>
+		var roundMode = <?php echo intval($_smarty_tpl->tpl_vars['round_mode']->value);?>
 ;
-			<?php if (isset($_smarty_tpl->tpl_vars['shop_context']->value)){?>
-				<?php if ($_smarty_tpl->tpl_vars['shop_context']->value==Shop::CONTEXT_ALL){?>
-				var youEditFieldFor = "<?php echo smartyTranslate(array('s'=>'A modification of this field will be applied for all shops','slashes'=>1),$_smarty_tpl);?>
-";
-					<?php }elseif($_smarty_tpl->tpl_vars['shop_context']->value==Shop::CONTEXT_GROUP){?>
-				var youEditFieldFor = "<?php echo smartyTranslate(array('s'=>'A modification of this field will be applied for all shops of group ','slashes'=>1),$_smarty_tpl);?>
-<b><?php echo $_smarty_tpl->tpl_vars['shop_name']->value;?>
-</b>";
-					<?php }else{ ?>
-				var youEditFieldFor = "<?php echo smartyTranslate(array('s'=>'A modification of this field will be applied for the shop ','slashes'=>1),$_smarty_tpl);?>
-<b><?php echo $_smarty_tpl->tpl_vars['shop_name']->value;?>
-</b>";
-				<?php }?>
-				<?php }else{ ?>
-			var youEditFieldFor = '';
-			<?php }?>
-		
-		var autorefresh_notifications = '<?php echo $_smarty_tpl->tpl_vars['autorefresh_notifications']->value;?>
+<?php if (isset($_smarty_tpl->tpl_vars['shop_context']->value)){?>
+<?php if ($_smarty_tpl->tpl_vars['shop_context']->value==Shop::CONTEXT_ALL){?>
+		var youEditFieldFor = '<?php echo smartyTranslate(array('s'=>'A modification of this field will be applied for all shops','js'=>1),$_smarty_tpl);?>
 ';
-		var new_order_msg = '<?php echo smartyTranslate(array('s'=>'A new order has been placed on your shop.','slashes'=>1),$_smarty_tpl);?>
+<?php }elseif($_smarty_tpl->tpl_vars['shop_context']->value==Shop::CONTEXT_GROUP){?>
+		var youEditFieldFor = '<?php echo smartyTranslate(array('s'=>'A modification of this field will be applied for all shops of group','js'=>1),$_smarty_tpl);?>
+ <b><?php echo addcslashes($_smarty_tpl->tpl_vars['shop_name']->value,'\'');?>
+</b>';
+<?php }else{ ?>
+		var youEditFieldFor = '<?php echo smartyTranslate(array('s'=>'A modification of this field will be applied for the shop','js'=>1),$_smarty_tpl);?>
+ <b><?php echo addcslashes($_smarty_tpl->tpl_vars['shop_name']->value,'\'');?>
+</b>';
+<?php }?>
+<?php }else{ ?>
+		var youEditFieldFor = '';
+<?php }?>
+		var autorefresh_notifications = '<?php echo addcslashes($_smarty_tpl->tpl_vars['autorefresh_notifications']->value,'\'');?>
 ';
-		var order_number_msg = '<?php echo smartyTranslate(array('s'=>'Order number: ','slashes'=>1),$_smarty_tpl);?>
+		var new_order_msg = '<?php echo smartyTranslate(array('s'=>'A new order has been placed on your shop.','js'=>1),$_smarty_tpl);?>
 ';
-		var total_msg = '<?php echo smartyTranslate(array('s'=>'Total: ','slashes'=>1),$_smarty_tpl);?>
+		var order_number_msg = '<?php echo smartyTranslate(array('s'=>'Order number: ','js'=>1),$_smarty_tpl);?>
 ';
-		var from_msg = '<?php echo smartyTranslate(array('s'=>'From: ','slashes'=>1),$_smarty_tpl);?>
+		var total_msg = '<?php echo smartyTranslate(array('s'=>'Total: ','js'=>1),$_smarty_tpl);?>
 ';
-		var see_order_msg = '<?php echo smartyTranslate(array('s'=>'View this order','slashes'=>1),$_smarty_tpl);?>
+		var from_msg = '<?php echo smartyTranslate(array('s'=>'From: ','js'=>1),$_smarty_tpl);?>
 ';
-		var new_customer_msg = '<?php echo smartyTranslate(array('s'=>'A new customer registered on your shop.','slashes'=>1),$_smarty_tpl);?>
+		var see_order_msg = '<?php echo smartyTranslate(array('s'=>'View this order','js'=>1),$_smarty_tpl);?>
 ';
-		var customer_name_msg = '<?php echo smartyTranslate(array('s'=>'Customer name: ','slashes'=>1),$_smarty_tpl);?>
+		var new_customer_msg = '<?php echo smartyTranslate(array('s'=>'A new customer registered on your shop.','js'=>1),$_smarty_tpl);?>
 ';
-		var see_customer_msg = '<?php echo smartyTranslate(array('s'=>'View this customer','slashes'=>1),$_smarty_tpl);?>
+		var customer_name_msg = '<?php echo smartyTranslate(array('s'=>'Customer name: ','js'=>1),$_smarty_tpl);?>
 ';
-		var new_msg = '<?php echo smartyTranslate(array('s'=>'A new message posted on your shop.','slashes'=>1),$_smarty_tpl);?>
+		var see_customer_msg = '<?php echo smartyTranslate(array('s'=>'View this customer','js'=>1),$_smarty_tpl);?>
 ';
-		var excerpt_msg = '<?php echo smartyTranslate(array('s'=>'Excerpt: ','slashes'=>1),$_smarty_tpl);?>
+		var new_msg = '<?php echo smartyTranslate(array('s'=>'A new message posted on your shop.','js'=>1),$_smarty_tpl);?>
 ';
-		var see_msg = '<?php echo smartyTranslate(array('s'=>'Read this message','slashes'=>1),$_smarty_tpl);?>
+		var excerpt_msg = '<?php echo smartyTranslate(array('s'=>'Excerpt: ','js'=>1),$_smarty_tpl);?>
 ';
-		var token_admin_orders = '<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['getAdminToken'][0][0]->getAdminTokenLiteSmarty(array('tab'=>'AdminOrders','slashes'=>1),$_smarty_tpl);?>
+		var see_msg = '<?php echo smartyTranslate(array('s'=>'Read this message','js'=>1),$_smarty_tpl);?>
 ';
-		var token_admin_customers = '<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['getAdminToken'][0][0]->getAdminTokenLiteSmarty(array('tab'=>'AdminCustomers','slashes'=>1),$_smarty_tpl);?>
+		var token_admin_orders = '<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['getAdminToken'][0][0]->getAdminTokenLiteSmarty(array('tab'=>'AdminOrders'),$_smarty_tpl);?>
 ';
-		var token_admin_customer_threads = '<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['getAdminToken'][0][0]->getAdminTokenLiteSmarty(array('tab'=>'AdminCustomerThreads','slashes'=>1),$_smarty_tpl);?>
+		var token_admin_customers = '<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['getAdminToken'][0][0]->getAdminTokenLiteSmarty(array('tab'=>'AdminCustomers'),$_smarty_tpl);?>
 ';
-		var currentIndex = '<?php echo $_smarty_tpl->tpl_vars['currentIndex']->value;?>
+		var token_admin_customer_threads = '<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['getAdminToken'][0][0]->getAdminTokenLiteSmarty(array('tab'=>'AdminCustomerThreads'),$_smarty_tpl);?>
+';
+		var currentIndex = '<?php echo addcslashes($_smarty_tpl->tpl_vars['currentIndex']->value,'\'');?>
+';
+		var choose_language_translate = '<?php echo smartyTranslate(array('s'=>'Choose language','js'=>1),$_smarty_tpl);?>
 ';
 	</script>
 <?php }?>
-
 <?php if (isset($_smarty_tpl->tpl_vars['css_files']->value)){?>
-	<?php  $_smarty_tpl->tpl_vars['media'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['media']->_loop = false;
+<?php  $_smarty_tpl->tpl_vars['media'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['media']->_loop = false;
  $_smarty_tpl->tpl_vars['css_uri'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['css_files']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['media']->key => $_smarty_tpl->tpl_vars['media']->value){
 $_smarty_tpl->tpl_vars['media']->_loop = true;
  $_smarty_tpl->tpl_vars['css_uri']->value = $_smarty_tpl->tpl_vars['media']->key;
 ?>
-		<link href="<?php echo $_smarty_tpl->tpl_vars['css_uri']->value;?>
+	<link href="<?php echo $_smarty_tpl->tpl_vars['css_uri']->value;?>
 " rel="stylesheet" type="text/css" media="<?php echo $_smarty_tpl->tpl_vars['media']->value;?>
 " />
-	<?php } ?>
+<?php } ?>
 <?php }?>
 <?php if (isset($_smarty_tpl->tpl_vars['js_files']->value)){?>
-	<?php  $_smarty_tpl->tpl_vars['js_uri'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['js_uri']->_loop = false;
+<?php  $_smarty_tpl->tpl_vars['js_uri'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['js_uri']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['js_files']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['js_uri']->key => $_smarty_tpl->tpl_vars['js_uri']->value){
 $_smarty_tpl->tpl_vars['js_uri']->_loop = true;
 ?>
-		<script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['js_uri']->value;?>
+	<script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['js_uri']->value;?>
 "></script>
-	<?php } ?>
+<?php } ?>
 <?php }?>
 	<link rel="icon" type="image/vnd.microsoft.icon" href="<?php echo $_smarty_tpl->tpl_vars['img_dir']->value;?>
 favicon.ico" />
@@ -366,7 +365,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['t2']->key => $_smarty_tpl->tpl_vars['
 $_smarty_tpl->tpl_vars['t2']->_loop = true;
 ?>
 								<?php if ($_smarty_tpl->tpl_vars['t2']->value['active']){?>
-									<li><a href="<?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['t2']->value['href'], 'htmlall', 'UTF-8');?>
+									<li<?php if ($_smarty_tpl->tpl_vars['t2']->value['current']){?> class="active"<?php }?>><a href="<?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['t2']->value['href'], 'htmlall', 'UTF-8');?>
 "><?php if ($_smarty_tpl->tpl_vars['t2']->value['name']==''){?><?php echo $_smarty_tpl->tpl_vars['t2']->value['class_name'];?>
 <?php }else{ ?><?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['t2']->value['name'], 'htmlall', 'UTF-8');?>
 <?php }?></a></li>

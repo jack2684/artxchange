@@ -1,4 +1,3 @@
-Hallo,
 
 Ihre Nachricht wurde an unseren Kundendienst weitergeleitet.
  
@@ -7,6 +6,8 @@ Ihre Nachricht:
 {message}
 
 Bestell-Nr.: {order_name}
+
+Produkt: {product_name}
 
 Angehängte Datei: {attached_file}
  

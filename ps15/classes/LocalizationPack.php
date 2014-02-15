@@ -63,6 +63,7 @@ class LocalizationPackCore
 
 			if ($install_mode && $res && isset($this->iso_currency))
 			{
+				Cache::clean('Currency::getIdByIsoCode_*');
 				$res &= Configuration::updateValue('PS_CURRENCY_DEFAULT', (int)Currency::getIdByIsoCode($this->iso_currency));
 				Currency::refreshCurrencies();
 			}
@@ -70,8 +71,16 @@ class LocalizationPackCore
 			return $res;
 		}
 		foreach ($selection as $selected)
-			if (!Validate::isLocalizationPackSelection($selected) || !$this->{'_install'.ucfirst($selected)}($xml))
-				return false;
+			if (strtolower((string)$selected) == 'currencies')
+			{
+				if (!Validate::isLocalizationPackSelection($selected) || !$this->{'_install'.ucfirst($selected)}($xml, true))
+					return false;
+			}
+			else
+			{
+				if (!Validate::isLocalizationPackSelection($selected) || !$this->{'_install'.ucfirst($selected)}($xml))
+					return false;
+			}
 
 		return true;
 	}
@@ -239,8 +248,6 @@ class LocalizationPackCore
 	{
 		if (isset($xml->currencies->currency))
 		{
-
-
 			foreach ($xml->currencies->currency as $data)
 			{
 				$attributes = $data->attributes();
@@ -294,7 +301,7 @@ class LocalizationPackCore
 				// if we are not in an installation context or if the pack is not available in the local directory
 				if (Language::getIdByIso($attributes['iso_code']) && !$install_mode)
 					continue;
-				$errors = Language::downloadAndInstallLanguagePack($attributes['iso_code'], $attributes['version']);
+				$errors = Language::downloadAndInstallLanguagePack($attributes['iso_code'], $attributes['version'], $attributes);
 				if ($errors !== true && is_array($errors))
 					$this->_errors = array_merge($this->_errors, $errors);
 			}

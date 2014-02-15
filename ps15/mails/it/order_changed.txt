@@ -1,10 +1,10 @@
 Hi {firstname} {lastname},
 
-Your order with the reference {order_name} from {shop_name} has been changed by the merchant.
+Il tuo ordine presso {shop_name} con riferimento {order_name} è stato modificato dallo staff.
 
-You can review your order and download your invoice from the "Order history" section of your customer account by clicking "My account" on our shop.
+Puoi rivedere questo ordine e scaricare la tua fattura dalla sezione "Cronologia ordine" del tuo account cliccando su "Il mio account" nel nostro sito.
 
-If you have guest account, you can follow your order using this link: {guest_tracking_url}
+Se hai un account ospite, puoi seguire l'ordine in questa pagina: {guest_tracking_url}
 
 {shop_name} - {shop_url}
 

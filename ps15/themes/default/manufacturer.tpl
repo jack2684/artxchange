@@ -33,7 +33,7 @@
 		<div class="description_box">
 			{if !empty($manufacturer->short_description)}
 				<p>{$manufacturer->short_description}</p>
-				<p class="hide_desc">{$manufacturer->description}</p>
+				<div class="hide_desc">{$manufacturer->description}</div>
 				<a href="#" class="lnk_more" onclick="$(this).prev().slideDown('slow'); $(this).hide(); return false;">{l s='More'}</a>
 			{else}
 				<p>{$manufacturer->description}</p>
@@ -56,10 +56,11 @@
 
 	<div class="content_sortPagiBar">
 		<div class="sortPagiBar clearfix">
-			{include file="./product-sort.tpl"} {include file="./product-compare.tpl"} {include file="./nbr-product-page.tpl"}
-
+			{include file="./product-sort.tpl" paginationId='bottom'}
+			{include file="./product-compare.tpl" paginationId='bottom'}
+			{include file="./nbr-product-page.tpl" paginationId='bottom'}
 		</div>
-		{include file="./pagination.tpl"}
+		{include file="./pagination.tpl" paginationId='bottom'}
 	</div>
 	{else}
 	<p class="warning">{l s='No products for this manufacturer.'}</p>

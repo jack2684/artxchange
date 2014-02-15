@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 04:07:31
+<?php /* Smarty version Smarty-3.1.14, created on 2014-02-15 17:26:27
          compiled from "/var/www/artxchange/ps15/admincp/themes/default/template/controllers/modules/page.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:151072548752ff2e5350ad30-45445583%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:180514341052ffe993327419-00251334%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '73bb62c1818709382bebe555cac320ec6da5ad12' => 
     array (
       0 => '/var/www/artxchange/ps15/admincp/themes/default/template/controllers/modules/page.tpl',
-      1 => 1366914186,
+      1 => 1392502880,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '151072548752ff2e5350ad30-45445583',
+  'nocache_hash' => '180514341052ffe993327419-00251334',
   'function' => 
   array (
   ),
@@ -29,10 +29,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'module_category' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_52ff2e535b5134_58777815',
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52ffe9933bf792_61581424',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52ff2e535b5134_58777815')) {function content_52ff2e535b5134_58777815($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_52ffe9933bf792_61581424')) {function content_52ffe9933bf792_61581424($_smarty_tpl) {?>
 
 <div id="productBox">
 	<?php echo $_smarty_tpl->getSubTemplate ('controllers/modules/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
@@ -103,7 +103,7 @@ $_smarty_tpl->tpl_vars['module_category']->_loop = true;
 						<li <?php if (isset($_smarty_tpl->tpl_vars['categoryFiltered']->value[$_smarty_tpl->tpl_vars['module_category_key']->value])){?>style="background-color:#EBEDF4"<?php }?> class="categoryModuleFilterLink">
 							<div class="categorieWidth"><a href="<?php echo $_smarty_tpl->tpl_vars['currentIndex']->value;?>
 &token=<?php echo $_smarty_tpl->tpl_vars['token']->value;?>
-&<?php if (isset($_smarty_tpl->tpl_vars['categoryFiltered']->value[$_smarty_tpl->tpl_vars['module_category_key']->value])){?>un<?php }?>filterCategory=<?php echo $_smarty_tpl->tpl_vars['module_category_key']->value;?>
+&filterCategory=<?php echo $_smarty_tpl->tpl_vars['module_category_key']->value;?>
 "><span><?php echo $_smarty_tpl->tpl_vars['module_category']->value['name'];?>
 </span></a></div>
 							<div class="count"><?php echo $_smarty_tpl->tpl_vars['module_category']->value['nb'];?>

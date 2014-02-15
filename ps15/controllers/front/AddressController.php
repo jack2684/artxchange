@@ -138,7 +138,7 @@ class AddressControllerCore extends FrontController
 				$this->errors[] = Tools::displayError('This country requires you to chose a State.');
 
 			// US customer: normalize the address
-			if ($address->id_country == Country::getByIso('US'))
+			if ($address->id_country == Country::getByIso('US') && Configuration::get('PS_TAASC'))
 			{
 				include_once(_PS_TAASC_PATH_.'AddressStandardizationSolution.php');
 				$normalize = new AddressStandardizationSolution;
@@ -225,19 +225,19 @@ class AddressControllerCore extends FrontController
 			else // Update cart address
 				$this->context->cart->autosetProductAddress();
 
-            if ((bool)(Tools::getValue('select_address', false)) == true OR Tools::getValue('type') == 'invoice' && Configuration::get('PS_ORDER_PROCESS_TYPE'))
-            { 
-                $this->context->cart->id_address_invoice = (int)$address->id;
-                $this->context->cart->update();                
-            }
-            
+			if ((bool)(Tools::getValue('select_address', false)) == true OR (Tools::getValue('type') == 'invoice' && Configuration::get('PS_ORDER_PROCESS_TYPE')))
+				$this->context->cart->id_address_invoice = (int)$address->id;
+			elseif (Configuration::get('PS_ORDER_PROCESS_TYPE'))
+				$this->context->cart->id_address_invoice = (int)$this->context->cart->id_address_delivery;
+			$this->context->cart->update();
+
 			if ($this->ajax)
 			{
 				$return = array(
 					'hasError' => (bool)$this->errors,
 					'errors' => $this->errors,
-					'id_address_delivery' => $this->context->cart->id_address_delivery,
-					'id_address_invoice' => $this->context->cart->id_address_invoice
+					'id_address_delivery' => (int)$this->context->cart->id_address_delivery,
+					'id_address_invoice' => (int)$this->context->cart->id_address_invoice
 				);
 				die(Tools::jsonEncode($return));
 			}
@@ -245,6 +245,8 @@ class AddressControllerCore extends FrontController
 			// Redirect to old page or current page
 			if ($back = Tools::getValue('back'))
 			{
+				if ($back == Tools::secureReferrer(Tools::getValue('back')))
+					Tools::redirect(html_entity_decode($back));
 				$mod = Tools::getValue('mod');
 				Tools::redirect('index.php?controller='.$back.($mod ? '&back='.$mod : ''));
 			}
@@ -303,7 +305,9 @@ class AddressControllerCore extends FrontController
 			$selected_country = (int)$this->_address->id_country;
 		else if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE']))
 		{
-			$array = preg_split('/,|-/', $_SERVER['HTTP_ACCEPT_LANGUAGE']);
+			// get all countries as language (xy) or language-country (wz-XY)
+			$array = array();
+			preg_match("#(?<=-)\w\w|\w\w(?!-)#",$_SERVER['HTTP_ACCEPT_LANGUAGE'],$array);
 			if (!Validate::isLanguageIsoCode($array[0]) || !($selected_country = Country::getByIso($array[0])))
 				$selected_country = (int)Configuration::get('PS_COUNTRY_DEFAULT');
 		}

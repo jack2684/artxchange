@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 04:07:31
+<?php /* Smarty version Smarty-3.1.14, created on 2014-02-15 17:26:27
          compiled from "/var/www/artxchange/ps15/admincp/themes/default/template/controllers/modules/list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:71848414052ff2e53718c51-83588390%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:177926399452ffe99352bb90-72506857%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '429188f5e153c7623a2515d098b8c3c2e0ad9dd4' => 
     array (
       0 => '/var/www/artxchange/ps15/admincp/themes/default/template/controllers/modules/list.tpl',
-      1 => 1366914186,
+      1 => 1392502880,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '71848414052ff2e53718c51-83588390',
+  'nocache_hash' => '177926399452ffe99352bb90-72506857',
   'function' => 
   array (
   ),
@@ -21,10 +21,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'module' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_52ff2e538dbaf1_32990003',
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52ffe9937276b0_46080425',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52ff2e538dbaf1_32990003')) {function content_52ff2e538dbaf1_32990003($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_52ffe9937276b0_46080425')) {function content_52ffe9937276b0_46080425($_smarty_tpl) {?>
 
 <?php if (count($_smarty_tpl->tpl_vars['modules']->value)){?>
 	<table cellspacing="0" cellpadding="0" style="width: 100%; margin-bottom:10px;" class="table" id="">
@@ -60,9 +60,11 @@ $_smarty_tpl->tpl_vars['module']->_loop = true;
 <?php }?>"></td>
 				<td>
 					<div class="moduleDesc" id="anchor<?php echo ucfirst($_smarty_tpl->tpl_vars['module']->value->name);?>
+" title="<?php echo $_smarty_tpl->tpl_vars['module']->value->name;?>
 ">
 						<h3><?php echo $_smarty_tpl->tpl_vars['module']->value->displayName;?>
-
+<span style="display:none"><?php echo $_smarty_tpl->tpl_vars['module']->value->name;?>
+</span>
 							<?php if (isset($_smarty_tpl->tpl_vars['module']->value->type)&&$_smarty_tpl->tpl_vars['module']->value->type=='addonsMustHave'){?>
 								<span class="setup must-have"><?php echo smartyTranslate(array('s'=>'Must Have'),$_smarty_tpl);?>
 </span>
@@ -106,7 +108,7 @@ $_smarty_tpl->tpl_vars['module']->_loop = true;
 						<p class="desc"><?php if (isset($_smarty_tpl->tpl_vars['module']->value->description)&&$_smarty_tpl->tpl_vars['module']->value->description!=''){?><?php echo smartyTranslate(array('s'=>'Description'),$_smarty_tpl);?>
  : <?php echo $_smarty_tpl->tpl_vars['module']->value->description;?>
 <?php }else{ ?>&nbsp;<?php }?></p>
-						<?php if (isset($_smarty_tpl->tpl_vars['module']->value->message)){?><div class="conf"><?php echo $_smarty_tpl->tpl_vars['module']->value->message;?>
+						<?php if (isset($_smarty_tpl->tpl_vars['module']->value->message)&&(empty($_smarty_tpl->tpl_vars['module']->value->name)===false)&&(!isset($_smarty_tpl->tpl_vars['module']->value->type)||($_smarty_tpl->tpl_vars['module']->value->type!='addonsMustHave'||$_smarty_tpl->tpl_vars['module']->value->type!=='addonsNative'))){?><div class="conf"><?php echo $_smarty_tpl->tpl_vars['module']->value->message;?>
 </div><?php }?>
 						<div class="row-actions-module">
 							<?php if (!isset($_smarty_tpl->tpl_vars['module']->value->not_on_disk)){?>
@@ -142,7 +144,7 @@ $_smarty_tpl->tpl_vars['module']->_loop = true;
 <?php }?></span></a>
 							</li>
 						<?php }else{ ?>
-							<?php if ($_smarty_tpl->tpl_vars['module']->value->id&&isset($_smarty_tpl->tpl_vars['module']->value->version_addons)&&$_smarty_tpl->tpl_vars['module']->value->version_addons){?>
+							<?php if (isset($_smarty_tpl->tpl_vars['module']->value->version_addons)&&$_smarty_tpl->tpl_vars['module']->value->version_addons){?>
 								<li><a href="<?php echo $_smarty_tpl->tpl_vars['module']->value->options['update_url'];?>
 " class="button updated"><span><?php echo smartyTranslate(array('s'=>'Update it!'),$_smarty_tpl);?>
 </span></a></li>

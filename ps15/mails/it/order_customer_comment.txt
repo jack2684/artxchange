@@ -1,7 +1,10 @@
-Salve {firstname} {lastname},
+Salve,
 
-Hai ricevuto un nuovo messaggio riguardo all'ordine n.{id_order}:
+Hai ricevuto un nuovo messaggio da parte di un cliente riguardo all'ordine con riferimento {order_name}.
 
+Cliente: {firstname} {lastname} ({email})
+
+Messaggio:
 {message}
 
 

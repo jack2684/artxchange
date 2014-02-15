@@ -4,10 +4,10 @@ global $_MODULE;
 $_MODULE = array();
 
 $_MODULE['<{followup}prestashop>followup_9c34e90380dac7b56fdd19192a99d531'] = 'Follow-up clienti';
-$_MODULE['<{followup}prestashop>followup_57476355fcd04050bff196ae9aa4673c'] = 'Segui i tuoi clienti con e-mail quotidiane personalizzate';
-$_MODULE['<{followup}prestashop>followup_f71a41841c80c2ef0ec02a6ad5449c65'] = 'Sei sicuro di voler eliminare tutte le impostazioni ed i registri?';
+$_MODULE['<{followup}prestashop>followup_57476355fcd04050bff196ae9aa4673c'] = 'Segui i tuoi clienti con email quotidiane personalizzate';
+$_MODULE['<{followup}prestashop>followup_f71a41841c80c2ef0ec02a6ad5449c65'] = 'Sei sicuro di voler eliminare tutte le impostazioni e i registri?';
 $_MODULE['<{followup}prestashop>followup_f4f70727dc34561dfde1a3c529b6205c'] = 'Impostazioni';
-$_MODULE['<{followup}prestashop>followup_599fac49ffe947cd0f9e934e6af89879'] = 'Quattro tipi di avvisi via e-mail per rimanere in contatto con i tuoi clienti!';
+$_MODULE['<{followup}prestashop>followup_599fac49ffe947cd0f9e934e6af89879'] = 'Quattro tipi di avvisi via email per rimanere in contatto con i tuoi clienti!';
 $_MODULE['<{followup}prestashop>followup_8b1aa589b33a54906ae78f5820eab42c'] = 'Definire le impostazioni e mettere questo URL nel crontab o chiamare ogni giorno:';
 $_MODULE['<{followup}prestashop>followup_b547c073d144a57761d1d00d0b9d9f27'] = 'Carrelli cancellati';
 $_MODULE['<{followup}prestashop>followup_ea9dc62a0ddf4640f019f04a22ab9835'] = 'Per ogni carrello annullato (senza ordine), genera uno sconto e invialo al cliente';
@@ -15,8 +15,8 @@ $_MODULE['<{followup}prestashop>followup_2faec1f9f8cc7f8f40d521c4dd574f49'] = 'A
 $_MODULE['<{followup}prestashop>followup_b30690be173bcd4a83df0cd68f89a385'] = 'Importo sconto';
 $_MODULE['<{followup}prestashop>followup_2018945d252b94aeb99b0909f288717c'] = 'Validità sconto';
 $_MODULE['<{followup}prestashop>followup_225e75c29d32392d311f5dc94c792384'] = 'giorno (i)';
-$_MODULE['<{followup}prestashop>followup_dcc0220e44b6d9be3d709d5c2cd34917'] = 'Next process will send: %d e-mails';
-$_MODULE['<{followup}prestashop>followup_3ae92a92fa710dca82e5b6667da30b7b'] = 'Next process will send: %d e-mails';
+$_MODULE['<{followup}prestashop>followup_dcc0220e44b6d9be3d709d5c2cd34917'] = 'Il prossimo processo invierà: %d email';
+$_MODULE['<{followup}prestashop>followup_3ae92a92fa710dca82e5b6667da30b7b'] = 'Next process will send: %d email';
 $_MODULE['<{followup}prestashop>followup_a8b8dbd070a92fb8b17baab71d8d633f'] = 'Riordino';
 $_MODULE['<{followup}prestashop>followup_895858cf10b8a1750a42875cb9c69092'] = 'Per ogni ordine convalidato, genera uno sconto e invialo al cliente';
 $_MODULE['<{followup}prestashop>followup_8b83489bd116cb60e2f348e9c63cd7f6'] = 'Migliori clienti';
@@ -29,7 +29,7 @@ $_MODULE['<{followup}prestashop>followup_3fb7b0bbf0c95bba3ed2ba0b147ca588'] = 'E
 $_MODULE['<{followup}prestashop>followup_c9cc8cce247e49bae79f15173ce97354'] = 'Salva';
 $_MODULE['<{followup}prestashop>followup_c33e404a441c6ba9648f88af3c68a1ca'] = 'Statistiche';
 $_MODULE['<{followup}prestashop>followup_1deaabda093f617a57f732c07e635fac'] = 'Statistiche dettagliate per ultimi 30 giorni:';
-$_MODULE['<{followup}prestashop>followup_f23b0eec6c25c49afa4b29c57e671728'] = 'S = numero di e-mail inviate';
+$_MODULE['<{followup}prestashop>followup_f23b0eec6c25c49afa4b29c57e671728'] = 'S = numero di email inviate';
 $_MODULE['<{followup}prestashop>followup_fde0b9a66bffdd6ee0886613e8031d9a'] = 'U = Numero di sconti usati (solo ordini validi)';
 $_MODULE['<{followup}prestashop>followup_cceb59e78d00c10436ff5e777dd5d895'] = '% = Tasso di conversione';
 $_MODULE['<{followup}prestashop>followup_44749712dbec183e983dcd78a7736c41'] = 'Data';

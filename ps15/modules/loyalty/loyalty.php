@@ -36,11 +36,13 @@ if (!defined('_PS_VERSION_'))
 	
 class Loyalty extends Module
 {
+	protected $html = '';
+	
 	public function __construct()
 	{
 		$this->name = 'loyalty';
 		$this->tab = 'pricing_promotion';
-		$this->version = '1.8';
+		$this->version = '1.9';
 		$this->author = 'PrestaShop';
 		$this->need_instance = 0;
 
@@ -219,16 +221,15 @@ class Loyalty extends Module
 					$this->loyaltyStateNoneAward->name[$id_lang_default] = ' ';
 				$this->loyaltyStateNoneAward->save();
 
-				echo $this->displayConfirmation($this->l('Settings updated.'));
+				$this->html .= $this->displayConfirmation($this->l('Settings updated.'));
 			}
 			else
 			{
 				$errors = '';
 				foreach ($this->_errors as $error)
 					$errors .= $error.'<br />';
-				echo $this->displayError($errors);
+				$this->html .= $this->displayError($errors);
 			}
-//            redirect($this->context->link);
 		}
 	}
 
@@ -252,7 +253,7 @@ class Loyalty extends Module
 		$languages = Language::getLanguages(false);
 		$languageIds = 'voucher_details¤default_loyalty_state¤none_award_loyalty_state¤convert_loyalty_state¤validation_loyalty_state¤cancel_loyalty_state';
 
-		$html = '
+		$this->html .= '
 		<script type="text/javascript">
 			id_language = Number('.$id_lang_default.');
 		</script>
@@ -265,8 +266,9 @@ class Loyalty extends Module
 				<div class="margin-form">
 					<input type="text" size="2" id="point_rate" name="point_rate" value="'.(float)(Configuration::get('PS_LOYALTY_POINT_RATE')).'" /> '.$currency->sign.'
 					<label for="point_rate" class="t"> = '.$this->l('1 reward point').'.</label>
-					<br />
-					<label for="point_value" class="t">'.$this->l('1 point = ').'</label>
+					</div>
+					<label for="point_value">'.$this->l('1 point = ').'</label>
+					<div class="margin-form">
 					<input type="text" size="2" name="point_value" id="point_value" value="'.(float)(Configuration::get('PS_LOYALTY_POINT_VALUE')).'" /> '.$currency->sign.'
 					<label for="point_value" class="t">'.$this->l('for the discount').'.</label>
 				</div>
@@ -274,12 +276,12 @@ class Loyalty extends Module
 				<label>'.$this->l('Voucher details').'</label>
 				<div class="margin-form">';
 		foreach ($languages as $language)
-			$html .= '
+			$this->html .= '
 					<div id="voucher_details_'.$language['id_lang'].'" style="display: '.($language['id_lang'] == $id_lang_default ? 'block' : 'none').'; float: left;">
 						<input size="33" type="text" name="voucher_details_'.$language['id_lang'].'" value="'.Configuration::get('PS_LOYALTY_VOUCHER_DETAILS', (int)($language['id_lang'])).'" />
 					</div>';
-		$html .= $this->displayFlags($languages, $id_lang_default, $languageIds, 'voucher_details', true);
-		$html .= '	</div>
+		$this->html .= $this->displayFlags($languages, $id_lang_default, $languageIds, 'voucher_details', true);
+		$this->html .= '	</div>
 				<div class="clear" style="margin-top: 20px"></div>
 				<label>'.$this->l('Minimum amount in which the voucher can be used').'</label>
 				<div class="margin-form">
@@ -299,12 +301,12 @@ class Loyalty extends Module
 					<select id="id_order_state_validation" name="id_order_state_validation">';
 		foreach ($order_states as $order_state)
 		{
-			$html .= '<option value="'.$order_state['id_order_state'].'" style="background-color:'.$order_state['color'].';"';
+			$this->html .= '<option value="'.$order_state['id_order_state'].'" style="background-color:'.$order_state['color'].';"';
 			if ((int)$this->loyaltyStateValidation->id_order_state == $order_state['id_order_state'])
-				$html .= ' selected="selected"';
-			$html .= '>'.$order_state['name'].'</option>';
+				$this->html .= ' selected="selected"';
+			$this->html .= '>'.$order_state['name'].'</option>';
 		}
-		$html .= '</select>
+		$this->html .= '</select>
 				</div>
 				<div class="clear"></div>
 				<label>'.$this->l('Points are cancelled when the order is').'</label>
@@ -312,12 +314,12 @@ class Loyalty extends Module
 					<select id="id_order_state_cancel" name="id_order_state_cancel">';
 		foreach ($order_states as $order_state)
 		{
-			$html .= '<option value="'.$order_state['id_order_state'].'" style="background-color:'.$order_state['color'].';"';
+			$this->html .= '<option value="'.$order_state['id_order_state'].'" style="background-color:'.$order_state['color'].';"';
 			if ((int)$this->loyaltyStateCancel->id_order_state == $order_state['id_order_state'])
-				$html .= ' selected="selected"';
-			$html .= '>'.$order_state['name'].'</option>';
+				$this->html .= ' selected="selected"';
+			$this->html .= '>'.$order_state['name'].'</option>';
 		}
-		$html .= '</select>
+		$this->html .= '</select>
 				</div>
 				<div class="clear"></div>
 				<label>'.$this->l('Vouchers created by the loyalty system can be used in the following categories :').'</label>';
@@ -325,67 +327,67 @@ class Loyalty extends Module
 		$indexedCategories = isset($_POST['categoryBox']) ? $_POST['categoryBox'] : $index;
 
 		$helper = new Helper();
-		$html .= '<div class="margin-form">'.$helper->renderCategoryTree(null, $indexedCategories).'</div>';
-		$html .= '
+		$this->html .= '<div class="margin-form">'.$helper->renderCategoryTree(null, $indexedCategories).'</div>';
+		$this->html .= '
 				<p style="padding-left:200px;">'.$this->l('Mark the box(es) of categories in which loyalty vouchers are usable.').'</p>
 				<div class="clear"></div>
 				<h3 style="margin-top:20px">'.$this->l('Loyalty points progression').'</h3>
 				<label>'.$this->l('Initial').'</label>
 				<div class="margin-form">';
 		foreach ($languages as $language)
-			$html .= '
+			$this->html .= '
 					<div id="default_loyalty_state_'.$language['id_lang'].'" style="display: '.($language['id_lang'] == $id_lang_default ? 'block' : 'none').'; float: left;">
 						<input size="33" type="text" name="default_loyalty_state_'.$language['id_lang'].'" value="'.(isset($this->loyaltyStateDefault->name[(int)($language['id_lang'])]) ? $this->loyaltyStateDefault->name[(int)($language['id_lang'])] : $this->loyaltyStateDefault->name[(int)$id_lang_default]).'" />
 					</div>';
-		$html .= $this->displayFlags($languages, $id_lang_default, $languageIds, 'default_loyalty_state', true);
-		$html .= '	</div>
+		$this->html .= $this->displayFlags($languages, $id_lang_default, $languageIds, 'default_loyalty_state', true);
+		$this->html .= '	</div>
 				<div class="clear"></div>
 				<label>'.$this->l('Unavailable').'</label>
 				<div class="margin-form">';
 		foreach ($languages as $language)
-			$html .= '
+			$this->html .= '
 					<div id="none_award_loyalty_state_'.$language['id_lang'].'" style="display: '.($language['id_lang'] == $id_lang_default ? 'block' : 'none').'; float: left;">
 						<input size="33" type="text" name="none_award_loyalty_state_'.$language['id_lang'].'" value="'.(isset($this->loyaltyStateNoneAward->name[(int)($language['id_lang'])]) ? $this->loyaltyStateNoneAward->name[(int)($language['id_lang'])] : $this->loyaltyStateNoneAward->name[(int)$id_lang_default]).'" />
 					</div>';
-		$html .= $this->displayFlags($languages, $id_lang_default, $languageIds, 'none_award_loyalty_state', true);
-		$html .= '	</div>
+		$this->html .= $this->displayFlags($languages, $id_lang_default, $languageIds, 'none_award_loyalty_state', true);
+		$this->html .= '	</div>
 				<div class="clear"></div>
 				<label>'.$this->l('Converted').'</label>
 				<div class="margin-form">';
 		foreach ($languages as $language)
-			$html .= '
+			$this->html .= '
 					<div id="convert_loyalty_state_'.$language['id_lang'].'" style="display: '.($language['id_lang'] == $id_lang_default ? 'block' : 'none').'; float: left;">
 						<input size="33" type="text" name="convert_loyalty_state_'.$language['id_lang'].'" value="'.(isset($this->loyaltyStateConvert->name[(int)($language['id_lang'])]) ? $this->loyaltyStateConvert->name[(int)($language['id_lang'])] : $this->loyaltyStateConvert->name[(int)$id_lang_default]).'" />
 					</div>';
-		$html .= $this->displayFlags($languages, $id_lang_default, $languageIds, 'convert_loyalty_state', true);
-		$html .= '	</div>
+		$this->html .= $this->displayFlags($languages, $id_lang_default, $languageIds, 'convert_loyalty_state', true);
+		$this->html .= '	</div>
 				<div class="clear"></div>
 				<label>'.$this->l('Validation').'</label>
 				<div class="margin-form">';
 		foreach ($languages as $language)
-			$html .= '
+			$this->html .= '
 					<div id="validation_loyalty_state_'.$language['id_lang'].'" style="display: '.($language['id_lang'] == $id_lang_default ? 'block' : 'none').'; float: left;">
 						<input size="33" type="text" name="validation_loyalty_state_'.$language['id_lang'].'" value="'.(isset($this->loyaltyStateValidation->name[(int)($language['id_lang'])]) ? $this->loyaltyStateValidation->name[(int)($language['id_lang'])] : $this->loyaltyStateValidation->name[(int)$id_lang_default]).'" />
 					</div>';
-		$html .= $this->displayFlags($languages, $id_lang_default, $languageIds, 'validation_loyalty_state', true);
-		$html .= '	</div>
+		$this->html .= $this->displayFlags($languages, $id_lang_default, $languageIds, 'validation_loyalty_state', true);
+		$this->html .= '	</div>
 				<div class="clear"></div>
 				<label>'.$this->l('Cancelled').'</label>
 				<div class="margin-form">';
 		foreach ($languages as $language)
-			$html .= '
+			$this->html .= '
 					<div id="cancel_loyalty_state_'.$language['id_lang'].'" style="display: '.($language['id_lang'] == $id_lang_default ? 'block' : 'none').'; float: left;">
 						<input size="33" type="text" name="cancel_loyalty_state_'.$language['id_lang'].'" value="'.(isset($this->loyaltyStateCancel->name[(int)($language['id_lang'])]) ? $this->loyaltyStateCancel->name[(int)($language['id_lang'])] : $this->loyaltyStateCancel->name[(int)$id_lang_default]).'" />
 					</div>';
-		$html .= $this->displayFlags($languages, $id_lang_default, $languageIds, 'cancel_loyalty_state', true);
-		$html .= '	</div>
+		$this->html .= $this->displayFlags($languages, $id_lang_default, $languageIds, 'cancel_loyalty_state', true);
+		$this->html .= '	</div>
 				<div class="clear center">
 					<input type="submit" style="margin-top:20px" name="submitLoyalty" id="submitLoyalty" value="'.$this->l('   Save   ').'" class="button" />
 				</div>
 			</fieldset>
 		</form>';
 
-		return $html;
+		return $this->html;
 	}
 
 	public static function recurseCategoryForInclude($id_obj, $indexedCategories, $categories, $current, $id_category = 1, $id_category_default = null, $has_suite = array())
@@ -452,7 +454,7 @@ class Loyalty extends Module
 					$points = (int)LoyaltyModule::getNbPointsByPrice(
 						$product->getPrice(
 							Product::getTaxCalculationMethod() == PS_TAX_EXC ? false : true,
-							(int)$product->getDefaultIdProductAttribute()
+							(int)$product->getIdProductAttributeMostExpensive()
 						)
 					);
 
@@ -492,13 +494,20 @@ class Loyalty extends Module
 		include_once(dirname(__FILE__).'/LoyaltyModule.php');
 
 		$total_price = 0;
+		$taxesEnabled = Product::getTaxCalculationMethod();
 		$details = OrderReturn::getOrdersReturnDetail((int)$params['orderReturn']->id);
 		foreach ($details as $detail)
 		{
-			$total_price += Db::getInstance()->getValue('
-			SELECT ROUND(total_price_tax_incl, 2)
-			FROM '._DB_PREFIX_.'order_detail od
-			WHERE id_order_detail = '.(int)$detail['id_order_detail']);
+			if ($taxesEnabled == PS_TAX_EXC)
+				$total_price += Db::getInstance()->getValue('
+				SELECT ROUND(total_price_tax_excl, 2)
+				FROM '._DB_PREFIX_.'order_detail od
+				WHERE id_order_detail = '.(int)$detail['id_order_detail']);
+			else
+				$total_price += Db::getInstance()->getValue('
+				SELECT ROUND(total_price_tax_incl, 2)
+				FROM '._DB_PREFIX_.'order_detail od
+				WHERE id_order_detail = '.(int)$detail['id_order_detail']);
 		}
 
 		$loyalty_new = new LoyaltyModule();
@@ -601,7 +610,7 @@ class Loyalty extends Module
 		$html = '
 		<br /><h2>'.sprintf($this->l('Loyalty points (%d points)'), $points).'</h2>';
 
-		if (!$points)
+		if (!isset($points) || count($details) == 0)
 			return $html.' '.$this->l('This customer has no points');
 
 		$html .= '
@@ -619,7 +628,7 @@ class Loyalty extends Module
 			$html .= '
 			<tr style="background-color: '.($key % 2 != 0 ? '#FFF6CF' : '#FFFFFF').';">
 				<td>'.((int)$loyalty['id'] > 0 ? '<a style="color: #268CCD; font-weight: bold; text-decoration: underline;" href="'.$url.'">'.sprintf($this->l('#%d'), $loyalty['id']).'</a>' : '--').'</td>
-				<td>'.Tools::displayDate($loyalty['date'], (int)$params['cookie']->id_lang).'</td>
+				<td>'.Tools::displayDate($loyalty['date']).'</td>
 				<td>'.((int)$loyalty['id'] > 0 ? $loyalty['total_without_shipping'] : '--').'</td>
 				<td>'.(int)$loyalty['points'].'</td>
 				<td>'.$loyalty['state'].'</td>
@@ -649,8 +658,12 @@ class Loyalty extends Module
 		|| !Validate::isLoadedObject($loyalty = new LoyaltyModule((int)LoyaltyModule::getByOrderId((int)$params['order']->id))))
 			return false;
 
+		$taxesEnabled = Product::getTaxCalculationMethod();
 		$loyalty_new = new LoyaltyModule();
-		$loyalty_new->points = -1 * LoyaltyModule::getNbPointsByPrice(number_format($order_detail->total_price_tax_incl, 2, '.', ''));
+		if ($taxesEnabled == PS_TAX_EXC)
+			$loyalty_new->points = -1 * LoyaltyModule::getNbPointsByPrice(number_format($order_detail->total_price_tax_excl, 2, '.', ''));
+		else
+			$loyalty_new->points = -1 * LoyaltyModule::getNbPointsByPrice(number_format($order_detail->total_price_tax_incl, 2, '.', ''));	
 		$loyalty_new->id_loyalty_state = (int)LoyaltyStateModule::getCancelId();
 		$loyalty_new->id_order = (int)$params['order']->id;
 		$loyalty_new->id_customer = (int)$loyalty->id_customer;

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2014-02-15 04:07:31
+<?php /* Smarty version Smarty-3.1.14, created on 2014-02-15 17:26:27
          compiled from "/var/www/artxchange/ps15/admincp/themes/default/template/controllers/modules/js.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:103955846052ff2e534a8f98-92000905%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:139557589752ffe9932ccdc4-07587279%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4997f9548413818a09cfc79e798dbd899ec3580c' => 
     array (
       0 => '/var/www/artxchange/ps15/admincp/themes/default/template/controllers/modules/js.tpl',
-      1 => 1366914186,
+      1 => 1392502880,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '103955846052ff2e534a8f98-92000905',
+  'nocache_hash' => '139557589752ffe9932ccdc4-07587279',
   'function' => 
   array (
   ),
@@ -26,10 +26,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'error_module' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_52ff2e53507103_33628665',
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52ffe993323de3_20727790',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52ff2e53507103_33628665')) {function content_52ff2e53507103_33628665($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include '/var/www/artxchange/ps15/tools/smarty/plugins/modifier.replace.php';
+<?php if ($_valid && !is_callable('content_52ffe993323de3_20727790')) {function content_52ffe993323de3_20727790($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include '/var/www/artxchange/ps15/tools/smarty/plugins/modifier.replace.php';
 ?>
 
 <script type="text/javascript"><?php echo $_smarty_tpl->tpl_vars['autocompleteList']->value;?>
@@ -107,7 +107,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		});
 
 		// Method to check / uncheck all modules checkbox
-		$('#checkme').click(function()
+		$('#moduleContainer').on("click", "#checkme", function()
 		{
 			if ($(this).attr("rel") == 'false')
 			{
@@ -341,8 +341,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			catch(e){}
 			return false;
 		});
-		
-		$('.toggle_favorite').live('click', function(event)
+
+		$('#moduleContainer').on("click", ".toggle_favorite", function()
 	    {
 	      var el = $(this);
 	      var value_pref = el.data('value');

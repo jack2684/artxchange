@@ -52,8 +52,17 @@ class AdminImagesControllerCore extends AdminController
 			'stores' => array('title' => $this->l('Stores'), 'width' => 50, 'align' => 'center', 'type' => 'bool', 'callback' => 'printEntityActiveIcon', 'orderby' => false)
 		);
 		
-		// No need to display the old image system if the install has been made later than 2013-03-26
-		$this->display_move = (defined('_PS_CREATION_DATE_') && strtotime(_PS_CREATION_DATE_) > strtotime('2013-03-26')) ? false : true;
+		// No need to display the old image system migration tool except if product images are in _PS_PROD_IMG_DIR_
+		$this->display_move = false;
+		$dir = _PS_PROD_IMG_DIR_;
+		if (is_dir($dir))
+			if ($dh = opendir($dir))
+			{
+				while (($file = readdir($dh)) !== false && $this->display_move == false)
+						if (!is_dir($dir.DIRECTORY_SEPARATOR.$file) && $file[0] != '.' && is_numeric($file[0]))
+							$this->display_move = true;
+				closedir($dh);
+			}
 
 		$this->fields_options = array(
 			'images' => array(
@@ -62,7 +71,7 @@ class AdminImagesControllerCore extends AdminController
 				'top' => '',
 				'bottom' => '',
 				'description' => $this->l('JPEG images have a small file size and standard quality. PNG images have a larger file size, a higher quality and support transparency. Note that in all cases the image files will have the .jpg extension.').'
-								  <br /><br />'.$this->l('WARNING: This feature may not be compatible with your theme, or with some of your modules. In particular, PNG mode is not compatible with the Watermark module. If you encounter any issues, turn it off by selecting "Use JPEG".'),
+					<br /><br />'.$this->l('WARNING: This feature may not be compatible with your theme, or with some of your modules. In particular, PNG mode is not compatible with the Watermark module. If you encounter any issues, turn it off by selecting "Use JPEG".'),
 				'fields' =>	array(
 					'PS_IMAGE_QUALITY' => array(
 						'title' => $this->l('Image quality'),
@@ -375,6 +384,7 @@ class AdminImagesControllerCore extends AdminController
 					|| !Configuration::updateValue('PS_PNG_QUALITY', Tools::getValue('PS_PNG_QUALITY')))
 					$this->errors[] = Tools::displayError('Unknown error.');
 				else
+					$this->confirmations[] = $this->_conf[6];
 					return parent::postProcess();
 			}
 			else
@@ -428,10 +438,13 @@ class AdminImagesControllerCore extends AdminController
 		if (!is_dir($dir))
 			return false;
 		$toDel = scandir($dir);
+
 		foreach ($toDel as $d)
 			foreach ($type as $imageType)
-				if (preg_match('/^[0-9]+\-'.($product ? '[0-9]+\-' : '').$imageType['name'].'\.jpg$/', $d) || preg_match('/^([[:lower:]]{2})\-default\-(.*)\.jpg$/', $d))
-					if (file_exists($dir.$d))
+				if (preg_match('/^[0-9]+\-'.($product ? '[0-9]+\-' : '').$imageType['name'].'\.jpg$/', $d) 
+					|| (count($type) > 1 && preg_match('/^[0-9]+\-[_a-zA-Z0-9-]*\.jpg$/', $d))					
+					|| preg_match('/^([[:lower:]]{2})\-default\-'.$imageType['name'].'\.jpg$/', $d))
+					if (file_exists($dir.$d))		
 						unlink($dir.$d);
 
 		// delete product images using new filesystem.
@@ -447,10 +460,10 @@ class AdminImagesControllerCore extends AdminController
 					$toDel = scandir($dir.$imageObj->getImgFolder());
 					foreach ($toDel as $d)
 						foreach ($type as $imageType)
-							if (preg_match('/^[0-9]+\-'.$imageType['name'].'\.jpg$/', $d))
+							if (preg_match('/^[0-9]+\-'.$imageType['name'].'\.jpg$/', $d) || (count($type) > 1 && preg_match('/^[0-9]+\-[_a-zA-Z0-9-]*\.jpg$/', $d)))
 								if (file_exists($dir.$imageObj->getImgFolder().$d))
 									unlink($dir.$imageObj->getImgFolder().$d);
-	}
+				}
 			}
 		}
 	}
@@ -491,7 +504,7 @@ class AdminImagesControllerCore extends AdminController
 							elseif (!ImageManager::resize($dir.$image, $newDir.substr($image, 0, -4).'-'.stripslashes($imageType['name']).'.jpg', (int)$imageType['width'], (int)$imageType['height']))
 								$errors = true;
 						}
-						if (time() - $this->start_time > $this->max_execution_time - 4) // stop 4 seconds before the tiemout, just enough time to process the end of the page on a slow server
+						if (time() - $this->start_time > $this->max_execution_time - 4) // stop 4 seconds before the timeout, just enough time to process the end of the page on a slow server
 							return 'timeout';
 					}
 		}
@@ -508,13 +521,13 @@ class AdminImagesControllerCore extends AdminController
 							if (!ImageManager::resize($existing_img, $dir.$imageObj->getExistingImgPath().'-'.stripslashes($imageType['name']).'.jpg', (int)($imageType['width']), (int)($imageType['height'])))
 							{
 								$errors = true;
-								$this->errors[] = Tools::displayError(sprintf('Original image is corrupt (%s) or bad permission on folder', $existing_img));
+								$this->errors[] = Tools::displayError(sprintf('Original image is corrupt (%s) for product ID %2$d or bad permission on folder', $existing_img, (int)$imageObj->id_product));
 							}
 				}
 				else
 				{
 					$errors = true;
-					$this->errors[] = Tools::displayError(sprintf('Original image is missing or empty (%s)', $existing_img));
+					$this->errors[] = Tools::displayError(sprintf('Original image is missing or empty (%1$s) for product ID %2$d', $existing_img, (int)$imageObj->id_product));
 				}
 			}
 		}
@@ -533,18 +546,16 @@ class AdminImagesControllerCore extends AdminController
 	protected function _regenerateNoPictureImages($dir, $type, $languages)
 	{
 		$errors = false;
-		foreach ($type as $imageType)
-		{
+		foreach ($type as $image_type)
 			foreach ($languages as $language)
 			{
 				$file = $dir.$language['iso_code'].'.jpg';
 				if (!file_exists($file))
-					$file = _PS_PROD_IMG_DIR_.Language::getIsoById((int)(Configuration::get('PS_LANG_DEFAULT'))).'.jpg';
-				if (!file_exists($dir.$language['iso_code'].'-default-'.stripslashes($imageType['name']).'.jpg'))
-					if (!ImageManager::resize($file, $dir.$language['iso_code'].'-default-'.stripslashes($imageType['name']).'.jpg', (int)$imageType['width'], (int)$imageType['height']))
+					$file = _PS_PROD_IMG_DIR_.Language::getIsoById((int)Configuration::get('PS_LANG_DEFAULT')).'.jpg';
+				if (!file_exists($dir.$language['iso_code'].'-default-'.stripslashes($image_type['name']).'.jpg'))
+					if (!ImageManager::resize($file, $dir.$language['iso_code'].'-default-'.stripslashes($image_type['name']).'.jpg', (int)$image_type['width'], (int)$image_type['height']))
 						$errors = true;
 			}
-		}
 		return $errors;
 	}
 
@@ -642,7 +653,7 @@ class AdminImagesControllerCore extends AdminController
 	public function initMoveImages()
 	{
 		$this->context->smarty->assign(array(
-			'safe_mode' => ini_get('safe_mode'),
+			'safe_mode' => Tools::getSafeModeStatus(),
 			'link_ppreferences' => 'index.php?tab=AdminPPreferences&token='.Tools::getAdminTokenLite('AdminPPreferences').'#PS_LEGACY_IMAGES_on',
 		));
 }
