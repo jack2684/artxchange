@@ -261,6 +261,15 @@ class AdminCustomersControllerCore extends AdminController
             $list_genders[$key]['label'] = $gender->name;
         }
 
+        $list_roles = array();
+        for($key = 0; $key <= 1; $key++)
+        {
+            $list_roles[$key]['id'] = 'role_'.$key;
+            $list_roles[$key]['value'] = $key;
+            $list_roles[$key]['label'] = $key == 0 ? 'person' : 'organization';
+        }
+
+
         $years = Tools::dateYears();
         $months = Tools::dateMonths();
         $days = Tools::dateDays();
@@ -279,6 +288,14 @@ class AdminCustomersControllerCore extends AdminController
                     'required' => false,
                     'class' => 't',
                     'values' => $list_genders
+                ),
+                array(
+                    'type' => 'radio',
+                    'label' => $this->l('Role:'),
+                    'name' => 'role',
+                    'required' => false,
+                    'class' => 't',
+                    'values' => $list_roles
                 ),
                 array(
                     'type' => 'text',
