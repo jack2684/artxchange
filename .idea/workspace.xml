@@ -2,42 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26fadfb4-8239-44a2-8a4f-0e304f6f31b2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps15/override/classes/Customer.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ps_customer.sql" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/04/d3/98/04d3981edf279cd32fac04e261fc3bb003311344.file.default.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/04/d3/98/04d3981edf279cd32fac04e261fc3bb003311344.file.default.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/08/9e/50/089e50c557a6ca972ccbdf2fb6976b58c5c0380d.file.breadcrumb.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/08/9e/50/089e50c557a6ca972ccbdf2fb6976b58c5c0380d.file.breadcrumb.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/0f/0d/17/0f0d17a0829afa0048b2cd5c60c051a3b4b194d7.file.blockcustomerprivacy.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/0f/0d/17/0f0d17a0829afa0048b2cd5c60c051a3b4b194d7.file.blockcustomerprivacy.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/15/c0/83/15c083e39707f849a559609fcb4d912901cae298.file.feederHeader.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/15/c0/83/15c083e39707f849a559609fcb4d912901cae298.file.feederHeader.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/28/5c/36/285c364ad16d77affc06c4e713ca18d2a41d2cb8.file.blockcart.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/28/5c/36/285c364ad16d77affc06c4e713ca18d2a41d2cb8.file.blockcart.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/2a/9a/d6/2a9ad6b0a8692b606ff38fb08755eb2715ca555a.file.blockcontact.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/2a/9a/d6/2a9ad6b0a8692b606ff38fb08755eb2715ca555a.file.blockcontact.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/2e/3f/a0/2e3fa00ec9d5aa3f8115c5540d8b176e7d85c87c.file.blockpermanentlinks-header.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/2e/3f/a0/2e3fa00ec9d5aa3f8115c5540d8b176e7d85c87c.file.blockpermanentlinks-header.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/33/f5/cb/33f5cba70fc230c55dd0720f03d257a0dae5a09c.file.default.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/33/f5/cb/33f5cba70fc230c55dd0720f03d257a0dae5a09c.file.default.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/43/31/c4/4331c44891144a17f75a02b75f6843cf8635f28e.file.paneltool.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/43/31/c4/4331c44891144a17f75a02b75f6843cf8635f28e.file.paneltool.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/47/52/fb/4752fb48a62724cce23ac0a57035c885a3992fcf.file.blockstore.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/47/52/fb/4752fb48a62724cce23ac0a57035c885a3992fcf.file.blockstore.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/49/76/09/4976092d7dfabb09617c4346b160e23cdb4d851b.file.index.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/49/76/09/4976092d7dfabb09617c4346b160e23cdb4d851b.file.index.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/53/cb/9c/53cb9c0d86d31f87d54c4df923947993fc1280f2.file.blockcart-json.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/53/cb/9c/53cb9c0d86d31f87d54c4df923947993fc1280f2.file.blockcart-json.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/58/84/bd/5884bd8067d152bc6b1ee59c2a6d85de1ab032d8.file.blockuserinfo.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/58/84/bd/5884bd8067d152bc6b1ee59c2a6d85de1ab032d8.file.blockuserinfo.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/5b/5d/06/5b5d06dc0551f5393f202bba1f50ad5dfabda906.file.blocksearch-instantsearch.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/5b/5d/06/5b5d06dc0551f5393f202bba1f50ad5dfabda906.file.blocksearch-instantsearch.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/5e/d7/74/5ed774db463a49dd1d39484cfa1181adff3f3ec9.file.footer.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/5e/d7/74/5ed774db463a49dd1d39484cfa1181adff3f3ec9.file.footer.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/69/9f/09/699f096411f5de5a2f3d3ab4d59ca3a453723faa.file.blocklanguages.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/69/9f/09/699f096411f5de5a2f3d3ab4d59ca3a453723faa.file.blocklanguages.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/6e/7e/7b/6e7e7baf0b342f604a1edb1f04adc2e52f7311e4.file.blockleotopmenu.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/6e/7e/7b/6e7e7baf0b342f604a1edb1f04adc2e52f7311e4.file.blockleotopmenu.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/88/e1/30/88e130dd81f242c2690dddfc76d82fa6659a8d8e.file.blockleoprodcarousel.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/88/e1/30/88e130dd81f242c2690dddfc76d82fa6659a8d8e.file.blockleoprodcarousel.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/8c/9a/e6/8c9ae6313776a7cfeb8e4b97709a7a0f3d5478e8.file.blockcategories.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/8c/9a/e6/8c9ae6313776a7cfeb8e4b97709a7a0f3d5478e8.file.blockcategories.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/8d/1a/01/8d1a016663cb36384dd15ae18a3569ffecdd5117.file.errors.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/8d/1a/01/8d1a016663cb36384dd15ae18a3569ffecdd5117.file.errors.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/96/c6/12/96c6127d91e15649c940408fe5279fb799e774a5.file.blocknewsletter.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/96/c6/12/96c6127d91e15649c940408fe5279fb799e774a5.file.blocknewsletter.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/override/controllers/front/AuthController.php" afterPath="$PROJECT_DIR$/ps15/override/controllers/front/AuthController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/a1/d0/9b/a1d09bfde59940b626b2e3aebfc7f24335d8d0d6.file.header.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/a1/d0/9b/a1d09bfde59940b626b2e3aebfc7f24335d8d0d6.file.header.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/a3/18/cc/a318ccc50bbfa43cbdbcf6f841ccf8fe8cc0cd57.file.default.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/a3/18/cc/a318ccc50bbfa43cbdbcf6f841ccf8fe8cc0cd57.file.default.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/a7/85/ed/a785ed65cd9c8eb67c09a3dcf4e501930f0e1b3f.file.blocksearch-top.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/a7/85/ed/a785ed65cd9c8eb67c09a3dcf4e501930f0e1b3f.file.blocksearch-top.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/b0/df/94/b0df94be48cf0d9beebb157aa6bd033d8c5b2ac4.file.products.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/b0/df/94/b0df94be48cf0d9beebb157aa6bd033d8c5b2ac4.file.products.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/b5/2b/68/b52b6880fd73cc3d17da1c4db6fd0726e27fba9f.file.blockspecials.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/b5/2b/68/b52b6880fd73cc3d17da1c4db6fd0726e27fba9f.file.blockspecials.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/c7/00/b5/c700b5a70e61e7f0b2de6dd4cf3ceb046fd5b8cc.file.default.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/c7/00/b5/c700b5a70e61e7f0b2de6dd4cf3ceb046fd5b8cc.file.default.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/c9/e0/df/c9e0dfcf44738c1be54d83fdb4c2a14c4cfdf487.file.category-tree-branch.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/c9/e0/df/c9e0dfcf44738c1be54d83fdb4c2a14c4cfdf487.file.category-tree-branch.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/d0/39/87/d039877c5b58aa96c62df6986deb2f1425a5aa87.file.blockwishlist.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/d0/39/87/d039877c5b58aa96c62df6986deb2f1425a5aa87.file.blockwishlist.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/d0/9a/52/d09a52e6fda200c0671f37b6c5113d3469fb43da.file.default.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/d0/9a/52/d09a52e6fda200c0671f37b6c5113d3469fb43da.file.default.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/d1/c5/af/d1c5af628d0437faa4c09275d00c3674e1919321.file.authentication.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/d1/c5/af/d1c5af628d0437faa4c09275d00c3674e1919321.file.authentication.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/d5/89/aa/d589aa6837d469a806a97a1db41108aa0966c8a4.file.default.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/d5/89/aa/d589aa6837d469a806a97a1db41108aa0966c8a4.file.default.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/cache/smarty/compile/f9/5d/dc/f95ddcf108706a795b249b6afcba517d5732cae6.file.layout.tpl.php" afterPath="$PROJECT_DIR$/ps15/cache/smarty/compile/f9/5d/dc/f95ddcf108706a795b249b6afcba517d5732cae6.file.layout.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/config/xml/default_country_modules_list.xml" afterPath="$PROJECT_DIR$/ps15/config/xml/default_country_modules_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps15/config/xml/must_have_modules_list.xml" afterPath="$PROJECT_DIR$/ps15/config/xml/must_have_modules_list.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="artxchange.iws" />
@@ -61,19 +27,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="authentication.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps15/themes/leoconv/authentication.tpl">
+      <file leaf-file-name="AdminCustomersController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps15/override/controllers/admin/AdminCustomersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="564" column="45" selection-start="23816" selection-end="23825" vertical-scroll-proportion="-3.2280703" vertical-offset="9968" max-vertical-offset="12618">
-              <folding />
+            <state line="246" column="25" selection-start="8897" selection-end="8897" vertical-scroll-proportion="-12.222222" vertical-offset="4098" max-vertical-offset="17442">
+              <folding>
+                <element signature="e#6#974#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps15/override/controllers/front/AuthController.php">
+      <file leaf-file-name="Alias.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps15/classes/Alias.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="450" column="25" selection-start="16083" selection-end="16092" vertical-scroll-proportion="-7.5964913" vertical-offset="7253" max-vertical-offset="12690">
+            <state line="50" column="16" selection-start="1730" selection-end="1730" vertical-scroll-proportion="-18.0" vertical-offset="0" max-vertical-offset="2286">
               <folding />
             </state>
           </provider>
@@ -82,7 +50,7 @@
       <file leaf-file-name="Customer.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ps15/classes/Customer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="26" selection-start="2516" selection-end="2516" vertical-scroll-proportion="-4.754386" vertical-offset="1187" max-vertical-offset="15570">
+            <state line="231" column="83" selection-start="8696" selection-end="8696" vertical-scroll-proportion="-5.3703704" vertical-offset="3599" max-vertical-offset="15570">
               <folding />
             </state>
           </provider>
@@ -91,16 +59,25 @@
       <file leaf-file-name="Customer.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ps15/override/classes/Customer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="15570">
+            <state line="148" column="52" selection-start="3722" selection-end="3722" vertical-scroll-proportion="0.30335367" vertical-offset="2051" max-vertical-offset="15714">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ObjectModel.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps15/classes/ObjectModel.php">
+      <file leaf-file-name="AdminCurrenciesController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps15/controllers/admin/AdminCurrenciesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1047" column="77" selection-start="33337" selection-end="33337" vertical-scroll-proportion="-5.7017546" vertical-offset="18107" max-vertical-offset="29682">
+            <state line="32" column="28" selection-start="0" selection-end="10796" vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="6480">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminCustomersController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ps15/controllers/admin/AdminCustomersController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="244" column="32" selection-start="0" selection-end="29002" vertical-scroll-proportion="0.0" vertical-offset="4392" max-vertical-offset="17046">
               <folding />
             </state>
           </provider>
@@ -116,6 +93,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/ps15/override/controllers/front/AuthController.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
@@ -128,6 +108,8 @@
         <option value="$PROJECT_DIR$/ps_organization.sql" />
         <option value="$PROJECT_DIR$/ps15/themes/leoconv/authentication.tpl" />
         <option value="$PROJECT_DIR$/ps15/override/controllers/front/AuthController.php" />
+        <option value="$PROJECT_DIR$/ps15/override/classes/Customer.php" />
+        <option value="$PROJECT_DIR$/ps15/override/controllers/admin/AdminCustomersController.php" />
       </list>
     </option>
   </component>
@@ -223,6 +205,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -273,36 +256,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="artxchange" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="artxchange" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ps15" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="override" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistory" value="function.l.php&#10;LICENSE.txt&#10;Controller.php&#10;FrontController&#10;authentication.tpl&#10;account-creation" />
+    <property name="SearchEverywhereHistory" value="admincustomer&#10;function.l.php&#10;LICENSE.txt&#10;Controller.php&#10;FrontController&#10;authentication.tpl&#10;account-creation" />
     <property name="options.lastSelected" value="Configurable.PHP.Servers" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -313,14 +273,21 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ps15/override/controllers/admin" />
       <recent name="$PROJECT_DIR$/ps15/override/classes" />
       <recent name="$PROJECT_DIR$/ps15/override/controllers/front" />
       <recent name="$PROJECT_DIR$/themes" />
       <recent name="$PROJECT_DIR$/themes/leoconv" />
-      <recent name="$PROJECT_DIR$/override/controllers/front" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHP Script.AdminCustomersController.php">
+    <configuration default="false" name="AdminCustomersController.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/ps15/override/controllers/admin/AdminCustomersController.php">
+      <RunnerSettings RunnerId="PhpRunner" />
+      <RunnerSettings RunnerId="PhpScriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpScriptDebugRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
       <method />
@@ -331,10 +298,10 @@
     <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="CHROME" server_name="192.168.219.135" start_url="">
       <method />
     </configuration>
-    <configuration default="true" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request">
+    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug">
       <method />
     </configuration>
-    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug">
+    <configuration default="true" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request">
       <method />
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
@@ -355,7 +322,14 @@
       <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
-    <list size="0" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="PHP Script.AdminCustomersController.php" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.AdminCustomersController.php" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
@@ -420,11 +394,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -449,40 +423,49 @@
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/ps15/classes/Customer.php</url>
-          <line>224</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/ps15/override/controllers/front/AuthController.php</url>
-          <line>406</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/ps15/override/controllers/front/AuthController.php</url>
-          <line>432</line>
-          <option name="timeStamp" value="37" />
+          <url>file://$PROJECT_DIR$/ps15/override/classes/Customer.php</url>
+          <line>213</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="38" />
+      <option name="time" value="46" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ps15/themes/leoconv/authentication.tpl">
+    <entry file="file://$PROJECT_DIR$/ps15/override/controllers/admin/AdminCustomersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="690" column="67" selection-start="30038" selection-end="30051" vertical-scroll-proportion="0.0" vertical-offset="12420" max-vertical-offset="12618">
+        <state line="291" column="0" selection-start="10317" selection-end="10606" vertical-scroll-proportion="0.0" vertical-offset="5070" max-vertical-offset="17442">
+          <folding>
+            <element signature="e#6#974#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps15/controllers/admin/AdminCurrenciesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="28" selection-start="0" selection-end="10796" vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="6480">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ps15/override/controllers/front/AuthController.php">
+    <entry file="file://$PROJECT_DIR$/ps15/controllers/admin/AdminCustomersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="648" column="38" selection-start="25038" selection-end="25038" vertical-scroll-proportion="0.0" vertical-offset="9864" max-vertical-offset="9864">
+        <state line="244" column="32" selection-start="7212" selection-end="7212" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="17046">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps15/themes/leoconv/authentication.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="690" column="67" selection-start="30038" selection-end="30051" vertical-scroll-proportion="0.0" vertical-offset="12420" max-vertical-offset="12618" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps15/override/controllers/front/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="648" column="38" selection-start="25038" selection-end="25038" vertical-scroll-proportion="0.0" vertical-offset="9864" max-vertical-offset="9864" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/classes/Customer.php">
@@ -494,30 +477,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/classes/Tools.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="866" column="7" selection-start="26222" selection-end="26222" vertical-scroll-proportion="0.0" vertical-offset="15588" max-vertical-offset="50346">
-          <folding>
-            <marker date="1392502881108" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1392502881108" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1392502881108" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1392502881108" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1392502881108" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1392502881108" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="866" column="7" selection-start="26222" selection-end="26222" vertical-scroll-proportion="0.0" vertical-offset="15588" max-vertical-offset="50346" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/themes/leoconv/authentication.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="485" column="42" selection-start="20315" selection-end="20315" vertical-scroll-proportion="0.0" vertical-offset="8333" max-vertical-offset="12618">
-          <folding />
-        </state>
+        <state line="485" column="42" selection-start="20315" selection-end="20315" vertical-scroll-proportion="0.0" vertical-offset="8333" max-vertical-offset="12618" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/override/controllers/front/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="31" selection-start="2181" selection-end="2192" vertical-scroll-proportion="0.0" vertical-offset="1386" max-vertical-offset="12672">
-          <folding />
-        </state>
+        <state line="77" column="31" selection-start="2181" selection-end="2192" vertical-scroll-proportion="0.0" vertical-offset="1386" max-vertical-offset="12672" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/themes/leoconv/header.tpl">
@@ -534,44 +504,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/classes/Tools.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1091" column="27" selection-start="33203" selection-end="33203" vertical-scroll-proportion="0.0" vertical-offset="19638" max-vertical-offset="44352">
-          <folding>
-            <marker date="1392502881108" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1392502881108" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1392502881108" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1392502881108" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1392502881108" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1392502881108" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="1091" column="27" selection-start="33203" selection-end="33203" vertical-scroll-proportion="0.0" vertical-offset="19638" max-vertical-offset="44352" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/themes/leoconv/authentication.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="489" column="57" selection-start="20518" selection-end="20531" vertical-scroll-proportion="0.0" vertical-offset="8333" max-vertical-offset="12618">
-          <folding />
-        </state>
+        <state line="489" column="57" selection-start="20518" selection-end="20531" vertical-scroll-proportion="0.0" vertical-offset="8333" max-vertical-offset="12618" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/override/controllers/front/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="177" column="34" selection-start="5576" selection-end="5576" vertical-scroll-proportion="0.0" vertical-offset="3186" max-vertical-offset="12672">
-          <folding />
-        </state>
+        <state line="177" column="34" selection-start="5576" selection-end="5576" vertical-scroll-proportion="0.0" vertical-offset="3186" max-vertical-offset="12672" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/classes/Tools.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1091" column="27" selection-start="33203" selection-end="33203" vertical-scroll-proportion="0.0" vertical-offset="19638" max-vertical-offset="44352">
-          <folding>
-            <marker date="1392502881108" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1392502881108" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1392502881108" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1392502881108" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1392502881108" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1392502881108" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="1091" column="27" selection-start="33203" selection-end="33203" vertical-scroll-proportion="0.0" vertical-offset="19638" max-vertical-offset="44352" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/address.php">
@@ -586,9 +534,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/config/config.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="56" selection-start="3607" selection-end="3607" vertical-scroll-proportion="0.0" vertical-offset="1872" max-vertical-offset="3852">
-          <folding />
-        </state>
+        <state line="104" column="56" selection-start="3607" selection-end="3607" vertical-scroll-proportion="0.0" vertical-offset="1872" max-vertical-offset="3852" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/address.php">
@@ -603,9 +549,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/config/config.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="34" selection-start="3537" selection-end="3548" vertical-scroll-proportion="0.0" vertical-offset="1854" max-vertical-offset="3852">
-          <folding />
-        </state>
+        <state line="103" column="34" selection-start="3537" selection-end="3548" vertical-scroll-proportion="0.0" vertical-offset="1854" max-vertical-offset="3852" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/js/helpAccess.js">
@@ -615,9 +559,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/config/config.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="4" selection-start="3196" selection-end="3196" vertical-scroll-proportion="0.3768473" vertical-offset="1089" max-vertical-offset="3852">
-          <folding />
-        </state>
+        <state line="92" column="4" selection-start="3196" selection-end="3196" vertical-scroll-proportion="0.3768473" vertical-offset="1089" max-vertical-offset="3852" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/address.php">
@@ -664,30 +606,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/themes/leoconv/authentication1.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="45" selection-start="3034" selection-end="3034" vertical-scroll-proportion="0.98678416" vertical-offset="1020" max-vertical-offset="10872">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps15/themes/leoconv/authentication.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="564" column="45" selection-start="23816" selection-end="23825" vertical-scroll-proportion="-3.2280703" vertical-offset="9968" max-vertical-offset="12618">
-          <folding />
-        </state>
+        <state line="94" column="45" selection-start="3034" selection-end="3034" vertical-scroll-proportion="0.98678416" vertical-offset="1020" max-vertical-offset="10872" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/classes/Tools.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="320" column="55" selection-start="9839" selection-end="9839" vertical-scroll-proportion="-8.851851" vertical-offset="5107" max-vertical-offset="52020">
-          <folding>
-            <marker date="1392339551000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1392339551000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1392339551000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1392339551000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1392339551000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1392339551000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="320" column="55" selection-start="9839" selection-end="9839" vertical-scroll-proportion="-8.851851" vertical-offset="5107" max-vertical-offset="52020" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/classes/controller/Controller.php">
@@ -699,23 +623,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="976" selection-end="976" vertical-scroll-proportion="0.08071749" vertical-offset="0" max-vertical-offset="669">
-          <folding />
-        </state>
+        <state line="26" column="0" selection-start="976" selection-end="976" vertical-scroll-proportion="0.08071749" vertical-offset="0" max-vertical-offset="669" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/classes/Tools.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="866" column="7" selection-start="26222" selection-end="26222" vertical-scroll-proportion="0.0" vertical-offset="15588" max-vertical-offset="50346">
-          <folding>
-            <marker date="1392502881108" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1392502881108" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1392502881108" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1392502881108" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1392502881108" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1392502881108" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="866" column="7" selection-start="26222" selection-end="26222" vertical-scroll-proportion="0.0" vertical-offset="15588" max-vertical-offset="50346" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/tools/profiling/ObjectModel.php">
@@ -727,30 +640,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ps15/admincp/tabs/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="721" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps15/classes/Gender.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="54" selection-start="1835" selection-end="1835" vertical-scroll-proportion="0.5492958" vertical-offset="351" max-vertical-offset="990" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ps15/classes/ObjectModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1047" column="77" selection-start="33337" selection-end="33337" vertical-scroll-proportion="-5.7017546" vertical-offset="18107" max-vertical-offset="29682">
+        <state line="1047" column="77" selection-start="33337" selection-end="33337" vertical-scroll-proportion="0.51916933" vertical-offset="18107" max-vertical-offset="29682">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ps15/themes/leoconv/authentication.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="488" column="38" selection-start="20441" selection-end="20451" vertical-scroll-proportion="0.38863286" vertical-offset="8531" max-vertical-offset="12618" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ps15/override/controllers/front/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="450" column="25" selection-start="16083" selection-end="16092" vertical-scroll-proportion="-7.5964913" vertical-offset="7253" max-vertical-offset="12690">
+        <state line="380" column="37" selection-start="12850" selection-end="12921" vertical-scroll-proportion="0.6927803" vertical-offset="5975" max-vertical-offset="12690" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Core_d.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="290" column="26" selection-start="7444" selection-end="7444" vertical-scroll-proportion="0.16426513" vertical-offset="5106" max-vertical-offset="6534">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps15/controllers/admin/AdminCurrenciesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="28" selection-start="0" selection-end="10796" vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="6480">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps15/controllers/admin/AdminCustomersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="244" column="32" selection-start="0" selection-end="29002" vertical-scroll-proportion="0.0" vertical-offset="4392" max-vertical-offset="17046">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps15/override/controllers/admin/AdminCustomersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="246" column="25" selection-start="8897" selection-end="8897" vertical-scroll-proportion="-12.222222" vertical-offset="4098" max-vertical-offset="17442">
+          <folding>
+            <element signature="e#6#974#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps15/classes/Alias.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="16" selection-start="1730" selection-end="1730" vertical-scroll-proportion="-18.0" vertical-offset="0" max-vertical-offset="2286">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/classes/Customer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="26" selection-start="2516" selection-end="2516" vertical-scroll-proportion="-4.754386" vertical-offset="1187" max-vertical-offset="15570">
+        <state line="231" column="83" selection-start="8696" selection-end="8696" vertical-scroll-proportion="-5.3703704" vertical-offset="3599" max-vertical-offset="15570">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/override/classes/Customer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="15570">
+        <state line="148" column="52" selection-start="3722" selection-end="3722" vertical-scroll-proportion="0.30335367" vertical-offset="2051" max-vertical-offset="15714">
           <folding />
         </state>
       </provider>
