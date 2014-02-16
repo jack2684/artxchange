@@ -450,6 +450,7 @@ class AuthControllerCore extends FrontController
 				$customer->is_guest = (Tools::isSubmit('is_new_customer') ? !Tools::getValue('is_new_customer', 1) : 0);
 				$customer->active = 1;
 
+
 				if (!count($this->errors))
 				{
 					if ($customer->add())

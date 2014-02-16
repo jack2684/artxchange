@@ -19,22 +19,20 @@
 -- Table structure for table `ps_customer`
 --
 
-DROP TABLE IF EXISTS `ps_customer`;
+DROP TABLE IF EXISTS `ps_organization`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ps_customer` (
+CREATE TABLE `ps_organization` (
   `id_customer` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `id_shop_group` int(11) unsigned NOT NULL DEFAULT '1',
   `id_shop` int(11) unsigned NOT NULL DEFAULT '1',
-  `id_gender` int(10) unsigned NOT NULL,
   `id_default_group` int(10) unsigned NOT NULL DEFAULT '1',
   `id_lang` int(10) unsigned DEFAULT NULL,
   `id_risk` int(10) unsigned NOT NULL DEFAULT '1',
   `company` varchar(64) DEFAULT NULL,
   `siret` varchar(14) DEFAULT NULL,
   `ape` varchar(5) DEFAULT NULL,
-  `firstname` varchar(32) NOT NULL,
-  `lastname` varchar(32) NOT NULL,
+  `org_name` varchar(32) NOT NULL,
   `email` varchar(128) NOT NULL,
   `passwd` varchar(32) NOT NULL,
   `last_passwd_gen` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
