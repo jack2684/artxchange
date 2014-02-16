@@ -47,6 +47,9 @@ class CustomerCore extends ObjectModel
 	/** @var integer Current language used by the customer */
 	public $id_lang;
 
+    /** @var boolean role, 0 is person, 1 is organization */
+    public $role;
+
 	/** @var string Lastname */
 	public $lastname;
 
@@ -106,6 +109,9 @@ class CustomerCore extends ObjectModel
 
 	/** @var boolean Status */
 	public $is_guest = 0;
+
+    /** @var boolean Status */
+    public $is_seller = 0;
 
 	/** @var boolean True if carrier has been deleted (staying in database as deleted) */
 	public $deleted = 0;
@@ -182,6 +188,8 @@ class CustomerCore extends ObjectModel
 			'deleted' => 					array('type' => self::TYPE_BOOL, 'validate' => 'isBool', 'copy_post' => false),
 			'note' => 						array('type' => self::TYPE_HTML, 'validate' => 'isCleanHtml', 'size' => 65000, 'copy_post' => false),
 			'is_guest' =>					array('type' => self::TYPE_BOOL, 'validate' => 'isBool', 'copy_post' => false),
+            'is_seller' =>					array('type' => self::TYPE_BOOL, 'validate' => 'isBool', 'copy_post' => false),
+            'role' =>		    			array('type' => self::TYPE_BOOL, 'validate' => 'isBool', 'copy_post' => false),
 			'id_shop' => 					array('type' => self::TYPE_INT, 'validate' => 'isUnsignedId', 'copy_post' => false),
 			'id_shop_group' => 				array('type' => self::TYPE_INT, 'validate' => 'isUnsignedId', 'copy_post' => false),
 			'id_default_group' => 			array('type' => self::TYPE_INT, 'copy_post' => false),
