@@ -1,6 +1,6 @@
 <?php
 define('_DB_SERVER_', 'localhost');
-define('_DB_NAME_', 'artxchange_ps2');
+define('_DB_NAME_', 'artxchange_ps');
 define('_DB_USER_', 'root');
 define('_DB_PASSWD_', 'jack');
 define('_DB_PREFIX_', 'ps_');
