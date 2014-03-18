@@ -88,6 +88,8 @@ class AuthControllerCore extends FrontController
 
         $this->assignDate();
 
+        $this->assignRoles();
+
         $this->assignCountries();
 
         $this->context->smarty->assign('newsletter', 1);
@@ -191,6 +193,21 @@ class AuthControllerCore extends FrontController
             'sl_month' => (isset($selectedMonths) ? $selectedMonths : 0),
             'days' => $days,
             'sl_day' => (isset($selectedDays) ? $selectedDays : 0)
+        ));
+    }
+
+    /**
+     * Assign roles var to smarty
+     * by Junjie
+     */
+    protected function assignRoles()
+    {
+        // Generate roles, person and organization
+        $roles = ['person', 'organization'];
+
+        $this->context->smarty->assign(array(
+            'artx_roles' => $roles,
+            'artx_sl_roles' => 'person'
         ));
     }
 
@@ -423,6 +440,7 @@ class AuthControllerCore extends FrontController
                 // New Guest customer
                 $customer->is_guest = (Tools::isSubmit('is_new_customer') ? !Tools::getValue('is_new_customer', 1) : 0);
                 $customer->active = 1;
+                $customer->role = (empty($_POST['artx_roles'])) ? 0 : $_POST['artx_roles'];
 
                 if (!count($this->errors))
                 {
