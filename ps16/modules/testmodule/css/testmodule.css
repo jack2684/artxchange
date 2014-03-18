@@ -1,0 +1,7 @@
+#products_list  .ajax_block_product {
+    background:#fafafa;
+}
+
+#products_list .ajax_block_product .center_block {
+    width: 550px !important;
+}
