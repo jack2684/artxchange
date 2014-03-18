@@ -203,6 +203,7 @@ function changeLanguage(field, fieldsString, id_language_new, iso_code)
 	id_language = id_language_new;
 }
 
+// kept for retrocompatibility - you should use hideOtherLanguage(id) since 1.6
 function changeFormLanguage(id_language_new, iso_code, employee_cookie)
 {
 	$('.translatable').each(function() {
@@ -214,17 +215,8 @@ function changeFormLanguage(id_language_new, iso_code, employee_cookie)
 
 	// For multishop checkboxes
 	$('.multishop_lang_'+id_language_new).show().siblings('div[class^=\'multishop_lang_\']').hide();
-	$('.language_flags').hide();
-	if (employee_cookie)
-		$.post("index.php", {
-			action: 'formLanguage', 
-			tab: 'AdminEmployees',
-			ajax: 1,
-			token: employee_token,
-			form_language_id: id_language_new 
-		});
 	id_language = id_language_new;
-
+	changeEmployeeLanguage();
 	updateCurrentText();
 }
 
@@ -359,7 +351,8 @@ function noComma(elem)
 function gencode(size)
 {
 	getE('code').value = '';
-	var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	/* There are no O/0 in the codes in order to avoid confusion */
+	var chars = "123456789ABCDEFGHIJKLMNPQRSTUVWXYZ";
 	for (var i = 1; i <= size; ++i)
 		getE('code').value += chars.charAt(Math.floor(Math.random() * chars.length));
 }
@@ -466,6 +459,8 @@ function orderOverwriteMessage(sl, text)
 			return ;
 		$zone.val(sl_value);
 	}
+
+	$zone.trigger('autosize.resize');
 }
 
 function setCancelQuantity(itself, id_order_detail, quantity)
@@ -495,6 +490,24 @@ function stockManagementActivationAuthorization()
 		getE('PS_ADVANCED_STOCK_MANAGEMENT_off').checked = true;
 		getE('PS_ADVANCED_STOCK_MANAGEMENT_on').disabled = 'disabled';
 		getE('PS_ADVANCED_STOCK_MANAGEMENT_off').disabled = 'disabled';
+		getE('PS_FORCE_ASM_NEW_PRODUCT_off').checked = true;
+		getE('PS_FORCE_ASM_NEW_PRODUCT_on').disabled = 'disabled';
+		getE('PS_FORCE_ASM_NEW_PRODUCT_off').disabled = 'disabled';
+	}
+}
+
+function advancedStockManagementActivationAuthorization()
+{
+	if (getE('PS_ADVANCED_STOCK_MANAGEMENT_on').checked)
+	{
+		getE('PS_FORCE_ASM_NEW_PRODUCT_on').disabled = false;
+		getE('PS_FORCE_ASM_NEW_PRODUCT_off').disabled = false;
+	}
+	else
+	{
+		getE('PS_FORCE_ASM_NEW_PRODUCT_off').checked = true;
+		getE('PS_FORCE_ASM_NEW_PRODUCT_on').disabled = 'disabled';
+		getE('PS_FORCE_ASM_NEW_PRODUCT_off').disabled = 'disabled';
 	}
 }
 
@@ -784,13 +797,13 @@ $(document).ready(function()
 
 	$('#ajax_running').ajaxStop(function() {
 		var element = $(this)
-		setTimeout(function(){element.slideUp(150)}, 1000);
+		setTimeout(function(){element.hide()}, 1000);
 		clearTimeout(ajax_running_timeout);
 	});
 
 	$('#ajax_running').ajaxError(function() {
 		var element = $(this)
-		setTimeout(function(){element.slideUp(150)}, 1000);
+		setTimeout(function(){element.hide()}, 1000);
 		clearTimeout(ajax_running_timeout);
 	});
 	
@@ -945,7 +958,7 @@ function stripHTML(oldString)
  */
 function showAjaxOverlay()
 {
-	$('#ajax_running').slideDown('fast');
+	$('#ajax_running').show('fast');
 	clearTimeout(ajax_running_timeout);
 }
 
@@ -1069,11 +1082,30 @@ function quickSelect(elt)
 		location.href = eltVal;
 }
 
+function changeEmployeeLanguage()
+{
+	if (typeof allowEmployeeFormLang !== 'undefined' && allowEmployeeFormLang)
+		$.post("index.php", {
+			action: 'formLanguage', 
+			tab: 'AdminEmployees',
+			ajax: 1,
+			token: employee_token,
+			form_language_id: id_language
+		});
+}
+
 function hideOtherLanguage(id)
 {
 	$('.translatable-field').hide();
 	$('.lang-' + id).show();
+
+	var id_old_language = id_language;
 	id_language = id;
+
+	if (id_old_language != id)
+		changeEmployeeLanguage();
+
+	updateCurrentText();
 }
 
 function sendBulkAction(form, action)
@@ -1309,3 +1341,21 @@ function checkLangPack(token){
 }
 
 function redirect(new_page) { window.location = new_page; }
+
+function saveCustomerNote(customerId){
+	var noteContent = $('#noteContent').val();
+	var data = 'token=' + token_admin_customers + '&tab=AdminCustomers&ajax=1&action=updateCustomerNote&id_customer=' + customerId + '&note=' + encodeURIComponent(noteContent);
+	$.ajax({
+		type: "POST",
+		url: "index.php",
+		data: data,
+		async : true,
+		success: function(r) {
+
+			if (r == 'ok') {
+				$('#submitCustomerNote').attr('disabled', true);
+			}
+			showSuccessMessage(update_success_msg);
+		}
+	});
+}

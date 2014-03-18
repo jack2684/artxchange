@@ -116,7 +116,7 @@ function onFinishCallback(obj, context)
 		url : validate_url,
 		async: false,
 		dataType: 'json',
-		data : $('#carrier_wizard .stepContainer .content form').serialize() + '&action=finish_step&ajax=1',
+		data : $('#carrier_wizard .stepContainer .content form').serialize() + '&action=finish_step&ajax=1&step_number='+context.fromStep,
 		success : function(data) {
 			if (data.has_error)
 			{				
@@ -276,6 +276,7 @@ function displayError(errors, step_number)
 	}
 	$('#step-'+step_number).prepend(str_error+'</ul></div>');
 	$('.wizard_error').fadeIn('fast');
+	bind_inputs();
 }
 
 function resizeWizard()
@@ -285,8 +286,9 @@ function resizeWizard()
 
 function bind_inputs()
 {
-	$('div.input-group input').focus(function () {
+	$('input').focus(function () {
 		$(this).closest('div.input-group').removeClass('has-error');
+		$('#carrier_wizard .actionBar a.btn').not('.buttonFinish').removeClass('disabled');
 		$('.wizard_error').fadeOut('fast', function () { $(this).remove()});
 	});
 	

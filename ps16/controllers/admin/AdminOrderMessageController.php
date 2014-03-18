@@ -41,7 +41,13 @@ class AdminOrderMessageControllerCore extends AdminController
 		if (!Tools::getValue('realedit'))
 			$this->deleted = false;
 
-	 	$this->bulk_actions = array('delete' => array('text' => $this->l('Delete selected'), 'confirm' => $this->l('Delete selected items?')));
+		$this->bulk_actions = array(
+			'delete' => array(
+				'text' => $this->l('Delete selected'),
+				'confirm' => $this->l('Delete selected items?'),
+				'icon' => 'icon-trash'
+			)
+		);
 
 		$this->fields_list = array(
 			'id_order_message' => array(
@@ -91,7 +97,7 @@ class AdminOrderMessageControllerCore extends AdminController
 	{
 		if (empty($this->display))
 			$this->page_header_toolbar_btn['new_order_message'] = array(
-				'href' => self::$currentIndex.'&amp;addorder_message&amp;token='.$this->token,
+				'href' => self::$currentIndex.'&addorder_message&token='.$this->token,
 				'desc' => $this->l('Add new order message'),
 				'icon' => 'process-icon-new'
 			);

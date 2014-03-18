@@ -48,8 +48,8 @@ class FrontControllerCore extends Controller
 	protected $restrictedCountry = false;
 	protected $maintenance = false;
 
-	public $display_column_left;
-	public $display_column_right;
+	public $display_column_left = true;
+	public $display_column_right = true;
 
 	public static $initialized = false;
 
@@ -64,7 +64,7 @@ class FrontControllerCore extends Controller
 		global $useSSL;
 
 		parent::__construct();
-		
+
 		if (Configuration::get('PS_SSL_ENABLED') && Configuration::get('PS_SSL_ENABLED_EVERYWHERE'))
 			$this->ssl = true;
 
@@ -72,9 +72,13 @@ class FrontControllerCore extends Controller
 			$this->ssl = $useSSL;
 		else
 			$useSSL = $this->ssl;
-			
-		$this->display_column_left = (isset($this->php_self) ? Context::getContext()->theme->hasLeftColumn($this->php_self) : true);
-		$this->display_column_right = (isset($this->php_self) ? Context::getContext()->theme->hasRightColumn($this->php_self) : true);
+
+		if (isset($this->php_self)  && is_object(Context::getContext()->theme))
+		{
+			$colums = Context::getContext()->theme->hasColumns($this->php_self);
+			$this->display_column_left = $colums['left_column'];
+			$this->display_column_right = $colums['right_column'];
+		}
 	}
 
 	/**
@@ -335,6 +339,8 @@ class FrontControllerCore extends Controller
 			'languages' => $languages,
 			'meta_language' => implode(',', $meta_language),
 			'priceDisplay' => Product::getTaxCalculationMethod((int)$this->context->cookie->id_customer),
+			'is_logged' => (bool)$this->context->customer->isLogged(),
+			'is_guest' => (bool)$this->context->customer->isGuest(),
 			'add_prod_display' => (int)Configuration::get('PS_ATTRIBUTE_CATEGORY_DISPLAY'),
 			'shop_name' => Configuration::get('PS_SHOP_NAME'),
 			'roundMode' => (int)Configuration::get('PS_PRICE_ROUND_MODE'),
@@ -516,7 +522,6 @@ class FrontControllerCore extends Controller
 	{
 		Tools::safePostVars();
 
-
 		// assign css_files and js_files at the very last time
 		if ((Configuration::get('PS_CSS_THEME_CACHE') || Configuration::get('PS_JS_THEME_CACHE')) && is_writable(_PS_THEME_DIR_.'cache'))
 		{
@@ -598,7 +603,11 @@ class FrontControllerCore extends Controller
 	protected function displayRestrictedCountryPage()
 	{
 		header('HTTP/1.1 503 temporarily overloaded');
-		$this->context->smarty->assign('favicon_url', _PS_IMG_.Configuration::get('PS_FAVICON'));
+		$this->context->smarty->assign(array(
+			'shop_name' => Context::getContext()->shop->name,
+			'favicon_url' => _PS_IMG_.Configuration::get('PS_FAVICON'),
+			'logo_url' =>  self::$link->getMediaLink(_PS_IMG_.Configuration::get('PS_LOGO'))
+		));
 		$this->smartyOutputContent($this->getTemplatePath($this->getThemeDir().'restricted-country.tpl'));
 		exit;
 	}
@@ -805,7 +814,6 @@ class FrontControllerCore extends Controller
 			'PS_SHOP_NAME' => Configuration::get('PS_SHOP_NAME'),
 			'PS_ALLOW_MOBILE_DEVICE' => isset($_SERVER['HTTP_USER_AGENT']) && (bool)Configuration::get('PS_ALLOW_MOBILE_DEVICE') && @filemtime(_PS_THEME_MOBILE_DIR_)
 		));
-
 	}
 	
 	public function checkLiveEditAccess()
@@ -1237,7 +1245,7 @@ class FrontControllerCore extends Controller
 		if ($mobile_device && Configuration::get('PS_LOGO_MOBILE'))
 			$logo = self::$link->getMediaLink(_PS_IMG_.Configuration::get('PS_LOGO_MOBILE').'?'.Configuration::get('PS_IMG_UPDATE_TIME'));
 		else
-			$logo = self::$link->getMediaLink(_PS_IMG_.Configuration::get('PS_LOGO').'?'.Configuration::get('PS_IMG_UPDATE_TIME'));
+			$logo = self::$link->getMediaLink(_PS_IMG_.Configuration::get('PS_LOGO'));
 		
 		return array(
  				'favicon_url' => _PS_IMG_.Configuration::get('PS_FAVICON'),

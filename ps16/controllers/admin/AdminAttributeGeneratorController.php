@@ -119,6 +119,8 @@ class AdminAttributeGeneratorControllerCore extends AdminController
 						StockAvailable::removeProductFromStockAvailable($this->product->id, $attribute['id_product_attribute'], Context::getContext()->shop);
 				}
 
+				SpecificPriceRule::disableAnyApplication();
+
 				$this->product->deleteProductAttributes();
 				$this->product->generateMultipleCombinations($values, $this->combinations);
 
@@ -132,6 +134,10 @@ class AdminAttributeGeneratorControllerCore extends AdminController
 				}
 				else
 					StockAvailable::synchronize($this->product->id);
+
+				SpecificPriceRule::enableAnyApplication();
+				SpecificPriceRule::applyAllRules(array((int)$this->product->id));
+
 				Tools::redirectAdmin($this->context->link->getAdminLink('AdminProducts').'&id_product='.(int)Tools::getValue('id_product').'&addproduct&key_tab=Combinations&conf=4');
 			}
 			else
@@ -199,9 +205,9 @@ class AdminAttributeGeneratorControllerCore extends AdminController
 	{
 		if (!Combination::isFeatureActive())
 		{
-			$this->displayWarning($this->l('This feature has been disabled. You can activate it at:').'
-				<a href="index.php?tab=AdminPerformance&token='.Tools::getAdminTokenLite('AdminPerformance').'#featuresDetachables">'.
-					$this->l('Performance').'</a>');
+			$url = '<a href="index.php?tab=AdminPerformance&token='.Tools::getAdminTokenLite('AdminPerformance').'#featuresDetachables">'.
+					$this->l('Performance').'</a>';
+			$this->displayWarning(sprintf($this->l('This feature has been disabled. You can activate it here: %s.'), $url));
 			return;
 		}
 

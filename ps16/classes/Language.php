@@ -412,38 +412,49 @@ class LanguageCore extends ObjectModel
 
 			foreach ($langTables as $name)
 			{
+				preg_match('#^'.preg_quote(_DB_PREFIX_).'(.+)_lang$#i', $name, $m);
+				$identifier = 'id_'.$m[1];
+
 				$fields = '';
 				// We will check if the table contains a column "id_shop"
 				// If yes, we will add "id_shop" as a WHERE condition in queries copying data from default language
-				$shop_field_exists = false;
+				$shop_field_exists = $primary_key_exists = false;
 				$columns = Db::getInstance()->executeS('SHOW COLUMNS FROM `'.$name.'`');
 				foreach ($columns as $column)
 				{
 					$fields .= $column['Field'].', ';
 					if ($column['Field'] == 'id_shop')
 						$shop_field_exists = true;
+					if ($column['Field'] == $identifier)
+						$primary_key_exists = true;
 				}
 				$fields = rtrim($fields, ', ');
-				preg_match('#^'.preg_quote(_DB_PREFIX_).'(.+)_lang$#i', $name, $m);
-				$identifier = 'id_'.$m[1];
+				
+				if (!$primary_key_exists)
+					continue;
 
 				$sql = 'INSERT IGNORE INTO `'.$name.'` ('.$fields.') (SELECT ';
 
 				// For each column, copy data from default language
+				reset($columns);
 				foreach ($columns as $column)
 				{
 					if ($identifier != $column['Field'] && $column['Field'] != 'id_lang')
 					{
-						$sql .= '(SELECT `'.$column['Field'].'`	FROM `'.$name.'` tl	WHERE tl.`id_lang` = '.(int)$id_lang_default
-									.($shop_field_exists ? ' AND tl.`id_shop` = '.(int)$shop->id : '')
-									.' AND tl.`'.$identifier.'` = `'.str_replace('_lang', '', $name).'`.`'.$identifier.'`), ';
+						$sql .= '(
+							SELECT `'.bqSQL($column['Field']).'`
+							FROM `'.bqSQL($name).'` tl
+							WHERE tl.`id_lang` = '.(int)$id_lang_default.'
+							'.($shop_field_exists ? ' AND tl.`id_shop` = '.(int)$shop->id : '').'
+							AND tl.`'.bqSQL($identifier).'` = `'.bqSQL(str_replace('_lang', '', $name)).'`.`'.bqSQL($identifier).'`
+						),';
 					}
 					else
-						$sql .= '`'.$column['Field'].'`, ';
+						$sql .= '`'.bqSQL($column['Field']).'`,';
 				}
 				$sql = rtrim($sql, ', ');
-				$sql .= ' FROM `'._DB_PREFIX_.'lang` CROSS JOIN `'.str_replace('_lang', '', $name).'`) ;';
-				$return &= Db::getInstance()->execute(pSQL($sql));
+				$sql .= ' FROM `'._DB_PREFIX_.'lang` CROSS JOIN `'.bqSQL(str_replace('_lang', '', $name)).'`)';
+				$return &= Db::getInstance()->execute($sql);
 			}
 		}
 		return $return;
@@ -823,7 +834,7 @@ class LanguageCore extends ObjectModel
 			$errors[] = Tools::displayError('Archive cannot be downloaded from prestashop.com.');
 		elseif (!$lang_pack = Tools::jsonDecode($lang_pack_link))
 			$errors[] = Tools::displayError('Error occurred when language was checked according to your Prestashop version.');
-		elseif ($content = Tools::file_get_contents('http://translations.prestashop.com/download/lang_packs/gzip/'.$lang_pack->version.'/'.Tools::strtolower($lang_pack->iso_code.'.gzip')))
+		elseif (empty($lang_pack->error) && ($content = Tools::file_get_contents('http://translations.prestashop.com/download/lang_packs/gzip/'.$lang_pack->version.'/'.Tools::strtolower($lang_pack->iso_code.'.gzip'))))
 			if (!@file_put_contents($file, $content))
 			{
 				if (is_writable(dirname($file)))
@@ -834,7 +845,10 @@ class LanguageCore extends ObjectModel
 				elseif (!is_writable($file))
 					$errors[] = Tools::displayError('Server does not have permissions for writing.').' ('.$file.')';
 			}
-		if ($install && file_exists($file))
+		
+		if (!file_exists($file))
+			$errors[] = Tools::displayError('No language pack is available for your version.');
+		elseif ($install)
 		{
 			require_once(_PS_TOOL_DIR_.'tar/Archive_Tar.php');
 			$gz = new Archive_Tar($file, true);
@@ -887,8 +901,6 @@ class LanguageCore extends ObjectModel
 				AdminTranslationsController::addNewTabs($iso, $files_list);
 			}
 		}
-		else
-			$errors[] = Tools::displayError('No language pack is available for your version.');
 
 		return count($errors) ? $errors : true;
 	}
@@ -930,7 +942,8 @@ class LanguageCore extends ObjectModel
 
 				clearstatcache();
 				if (@filemtime($filegz) < (time() - (24 * 3600)))
-					Language::downloadAndInstallLanguagePack($lang['iso_code'], null, null, false);
+					if (Language::downloadAndInstallLanguagePack($lang['iso_code'], null, null, false) !== true)
+						break;
 
 				$gz = new Archive_Tar($filegz, true);
 				$files_list = Language::getLanguagePackListContent($lang['iso_code'], $gz);

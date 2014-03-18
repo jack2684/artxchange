@@ -43,8 +43,11 @@ class AddressControllerCore extends FrontController
 	public function setMedia()
 	{
 		parent::setMedia();
-		$this->addJS(_PS_JS_DIR_.'validate.js');
-		$this->addJS(_THEME_JS_DIR_.'tools/statesManagement.js');
+		$this->addJS(array(
+			_THEME_JS_DIR_.'tools/vatManagement.js',
+			_THEME_JS_DIR_.'tools/statesManagement.js',
+			_PS_JS_DIR_.'validate.js'
+		));
 	}
 
 	/**
@@ -138,23 +141,14 @@ class AddressControllerCore extends FrontController
 			if ((int)$country->contains_states && !(int)$address->id_state)
 				$this->errors[] = Tools::displayError('This country requires you to chose a State.');
 
-			// US customer: normalize the address
-			if ($address->id_country == Country::getByIso('US') && Configuration::get('PS_TAASC'))
-			{
-				include_once(_PS_TAASC_PATH_.'AddressStandardizationSolution.php');
-				$normalize = new AddressStandardizationSolution;
-				$address->address1 = $normalize->AddressLineStandardization($address->address1);
-				$address->address2 = $normalize->AddressLineStandardization($address->address2);
-			}
-			
 			$postcode = Tools::getValue('postcode');		
 			/* Check zip code format */
 			if ($country->zip_code_format && !$country->checkZipCode($postcode))
 				$this->errors[] = sprintf(Tools::displayError('The Zip/Postal code you\'ve entered is invalid. It must follow this format: %s'), str_replace('C', $country->iso_code, str_replace('N', '0', str_replace('L', 'A', $country->zip_code_format))));
 			elseif(empty($postcode) && $country->need_zip_code)
-				$this->errors[] = Tools::displayError('A Zip / Postal code is required.');
+				$this->errors[] = Tools::displayError('A Zip/Postal code is required.');
 			elseif ($postcode && !Validate::isPostCode($postcode))
-				$this->errors[] = Tools::displayError('The Zip / Postal code is invalid.');
+				$this->errors[] = Tools::displayError('The Zip/Postal code is invalid.');
 
 			// Check country DNI
 			if ($country->isNeedDni() && (!Tools::getValue('dni') || !Validate::isDniLite(Tools::getValue('dni'))))

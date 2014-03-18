@@ -239,9 +239,22 @@ class AdminPPreferencesControllerCore extends AdminController
 						'required' => false,
 						'type' => 'bool',
 						'visibility' => Shop::CONTEXT_ALL,
+						'js' => array(
+							'on' => 'onchange="advancedStockManagementActivationAuthorization()"',
+							'off' => 'onchange="advancedStockManagementActivationAuthorization()"'
+						)
+					),
+					'PS_FORCE_ASM_NEW_PRODUCT' => array(
+						'title' => $this->l('New products use advanced stock management'),
+						'hint' => $this->l('New products will automaticlly use advanced stock management and depends on stock, but no warehouse will be selected'),
+						'validation' => 'isBool',
+						'cast' => 'intval',
+						'required' => false,
+						'type' => 'bool',
+						'visibility' => Shop::CONTEXT_ALL,
 					),
 				),
-				'bottom' => '<script type="text/javascript">stockManagementActivationAuthorization();</script>',
+				'bottom' => '<script type="text/javascript">stockManagementActivationAuthorization();advancedStockManagementActivationAuthorization():</script>',
 				'submit' => array('title' => $this->l('Save'))
 			),
 		);
@@ -265,6 +278,12 @@ class AdminPPreferencesControllerCore extends AdminController
 				'UPDATE `'._DB_PREFIX_.'stock_available`
 				 SET `depends_on_stock` = 0, `quantity` = 0
 				 WHERE `depends_on_stock` = 1');
+		}
+
+		if (Tools::getIsset('PS_CATALOG_MODE'))
+		{
+			Tools::clearSmartyCache();
+			Media::clearCache();
 		}
 	}
 

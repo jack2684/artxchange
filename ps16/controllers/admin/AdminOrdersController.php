@@ -49,7 +49,8 @@ class AdminOrdersControllerCore extends AdminController
 		osl.`name` AS `osname`,
 		os.`color`,
 		IF((SELECT COUNT(so.id_order) FROM `'._DB_PREFIX_.'orders` so WHERE so.id_customer = a.id_customer) > 1, 0, 1) as new,
-		country_lang.name as cname';
+		country_lang.name as cname,
+		IF(a.valid, 1, 0) badge_success';
 
 		$this->_join = '
 		LEFT JOIN `'._DB_PREFIX_.'customer` c ON (c.`id_customer` = a.`id_customer`)
@@ -66,59 +67,72 @@ class AdminOrdersControllerCore extends AdminController
 			$this->statuses_array[$status['id_order_state']] = $status['name'];
 
 		$this->fields_list = array(
-		'id_order' => array(
-			'title' => $this->l('ID'),
-			'align' => 'center'
-		),
-		'reference' => array(
-			'title' => $this->l('Reference'),
-			'align' => 'center'
-		),
-		'new' => array(
-			'title' => $this->l('New'),
-			'align' => 'center',
-			'type' => 'bool',
-			'tmpTableFilter' => true,
-			'orderby' => false
-		),
-		'customer' => array(
-			'title' => $this->l('Customer'),
-			'havingFilter' => true,
-		),
-		'total_paid_tax_incl' => array(
-			'title' => $this->l('Total'),
-			'align' => 'right',
-			'prefix' => '<span class="badge">',
-			'suffix' => '</span>',
-			'type' => 'price',
-			'currency' => true
-		),
-		'payment' => array(
-			'title' => $this->l('Payment')
-		),
-		'osname' => array(
-			'title' => $this->l('Status'),
-			'color' => 'color',
-			'type' => 'select',
-			'list' => $this->statuses_array,
-			'filter_key' => 'os!id_order_state',
-			'filter_type' => 'int',
-			'order_key' => 'osname'
-		),
-		'date_add' => array(
-			'title' => $this->l('Date'),
-			'align' => 'right',
-			'type' => 'datetime',
-			'filter_key' => 'a!date_add'
-		),
-		'id_pdf' => array(
-			'title' => $this->l('PDF'),
-			'align' => 'center',
-			'callback' => 'printPDFIcons',
-			'orderby' => false,
-			'search' => false,
-			'remove_onclick' => true)
+			'id_order' => array(
+				'title' => $this->l('ID'),
+				'align' => 'text-center',
+				'class' => 'fixed-width-xs'
+			),
+			'reference' => array(
+				'title' => $this->l('Reference')
+			),
+			'new' => array(
+				'title' => $this->l('New client'),
+				'align' => 'text-center',
+				'type' => 'bool',
+				'tmpTableFilter' => true,
+				'orderby' => false
+			),
+			'customer' => array(
+				'title' => $this->l('Customer'),
+				'havingFilter' => true,
+			),
 		);
+
+		if (Configuration::get('PS_B2B_ENABLE'))
+		{
+			$this->fields_list = array_merge($this->fields_list, array(
+				'company' => array(
+					'title' => $this->l('Company'),
+					'filter_key' => 'c!company'
+				),
+			));
+		}
+
+		$this->fields_list = array_merge($this->fields_list, array(
+			'total_paid_tax_incl' => array(
+				'title' => $this->l('Total'),
+				'align' => 'text-right',
+				'type' => 'price',
+				'currency' => true,
+				'badge_success' => true
+			),
+			'payment' => array(
+				'title' => $this->l('Payment')
+			),
+			'osname' => array(
+				'title' => $this->l('Status'),
+				'type' => 'select',
+				'color' => 'color',
+				'list' => $this->statuses_array,
+				'filter_key' => 'os!id_order_state',
+				'filter_type' => 'int',
+				'order_key' => 'osname'
+			),
+			'date_add' => array(
+				'title' => $this->l('Date'),
+				'align' => 'text-right',
+				'type' => 'datetime',
+				'filter_key' => 'a!date_add'
+			),
+			'id_pdf' => array(
+				'title' => $this->l('PDF'),
+				'align' => 'text-center',
+				'callback' => 'printPDFIcons',
+				'orderby' => false,
+				'search' => false,
+				'remove_onclick' => true
+			)
+		));
 		
 		if (Country::isCurrentlyUsed('country', true))
 		{
@@ -155,14 +169,12 @@ class AdminOrdersControllerCore extends AdminController
 		{
 			// Save context (in order to apply cart rule)
 			$order = new Order((int)Tools::getValue('id_order'));
-			if (!Validate::isLoadedObject($order))
-				throw new PrestaShopException('Cannot load Order object');
 			$this->context->cart = new Cart($order->id_cart);
 			$this->context->customer = new Customer($order->id_customer);
 		}
 
 		$this->bulk_actions = array(
-			'updateOrderStatus' => array('text' => $this->l('Change Order Status'))
+			'updateOrderStatus' => array('text' => $this->l('Change Order Status'), 'icon' => 'icon-refresh')
 		);
 
 		parent::__construct();
@@ -217,7 +229,7 @@ class AdminOrdersControllerCore extends AdminController
 			'recyclable_pack' => (int)Configuration::get('PS_RECYCLABLE_PACK'),
 			'gift_wrapping' => (int)Configuration::get('PS_GIFT_WRAPPING'),
 			'cart' => $cart,
-			'currencies' => Currency::getCurrencies(),
+			'currencies' => Currency::getCurrenciesByIdShop(Context::getContext()->shop->id),
 			'langs' => Language::getLanguages(true, Context::getContext()->shop->id),
 			'payment_modules' => $payment_modules,
 			'order_states' => OrderState::getOrderStates((int)Context::getContext()->language->id),
@@ -278,6 +290,8 @@ class AdminOrdersControllerCore extends AdminController
 
 		$this->addJqueryUI('ui.datepicker');
 		$this->addJS(_PS_JS_DIR_.'vendor/d3.v3.min.js');
+		$this->addJS('https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false');
+
 		if ($this->tabAccess['edit'] == 1 && $this->display == 'view')
 		{
 			$this->addJS(_PS_JS_DIR_.'admin_order.js');
@@ -304,7 +318,8 @@ class AdminOrdersControllerCore extends AdminController
 	
 	public function processBulkUpdateOrderStatus()
 	{
-		if (Tools::isSubmit('submitBulkupdateOrderStatus'.$this->table) && ($id_order_state = (int)Tools::getValue('id_order_state')))
+		if (Tools::isSubmit('submitUpdateOrderStatus')
+			&& ($id_order_state = (int)Tools::getValue('id_order_state')))
 		{
 			if ($this->tabAccess['edit'] !== '1')
 				$this->errors[] = Tools::displayError('You do not have permission to edit this.');
@@ -382,7 +397,7 @@ class AdminOrdersControllerCore extends AdminController
 		{
 			$order = new Order(Tools::getValue('id_order'));
 			if (!Validate::isLoadedObject($order))
-				throw new PrestaShopException('Can\'t load Order object');
+				$this->errors[] = Tools::displayError('The order cannot be found within your database.');
 			ShopUrl::cacheMainDomainForShop((int)$order->id_shop);
 		}
 
@@ -977,7 +992,7 @@ class AdminOrdersControllerCore extends AdminController
 				$employee = new Employee((int)Context::getContext()->cookie->id_employee);
 				$payment_module->validateOrder(
 					(int)$cart->id, (int)$id_order_state,
-					$cart->getOrderTotal(true, Cart::BOTH), $payment_module->displayName, $this->l('Manual order -- Employee:').
+					$cart->getOrderTotal(true, Cart::BOTH), $payment_module->displayName, $this->l('Manual order -- Employee:').' '.
 					substr($employee->firstname, 0, 1).'. '.$employee->lastname, array(), null, false, $cart->secure_key
 				);
 				if ($payment_module->currentOrder)
@@ -1424,7 +1439,7 @@ class AdminOrdersControllerCore extends AdminController
 	{
 		$order = new Order(Tools::getValue('id_order'));
 		if (!Validate::isLoadedObject($order))
-			throw new PrestaShopException('object can\'t be loaded');
+			$this->errors[] = Tools::displayError('The order cannot be found within your database.');
 
 		$customer = new Customer($order->id_customer);
 		$carrier = new Carrier($order->id_carrier);
@@ -1524,6 +1539,11 @@ class AdminOrdersControllerCore extends AdminController
 
 		$gender = new Gender((int)$customer->id_gender, $this->context->language->id);
 
+		$history = $order->getHistory($this->context->language->id);
+
+		foreach ($history as &$order_state)
+			$order_state['text-color'] = Tools::getBrightness($order_state['color']) < 128 ? 'white' : 'black';
+
 		// Smarty assign
 		$this->tpl_view_vars = array(
 			'order' => $order,
@@ -1543,17 +1563,17 @@ class AdminOrdersControllerCore extends AdminController
 			'orders_total_paid_tax_incl' => $order->getOrdersTotalPaid(), // Get the sum of total_paid_tax_incl of the order with similar reference
 			'total_paid' => $order->getTotalPaid(),
 			'returns' => OrderReturn::getOrdersReturn($order->id_customer, $order->id),
-			'customer_thread_message' => CustomerThread::getCustomerMessages($order->id_customer, 0),
+			'customer_thread_message' => CustomerThread::getCustomerMessages($order->id_customer),
 			'orderMessages' => OrderMessage::getOrderMessages($order->id_lang),
 			'messages' => Message::getMessagesByOrderId($order->id, true),
 			'carrier' => new Carrier($order->id_carrier),
-			'history' => $order->getHistory($this->context->language->id),
+			'history' => $history,
 			'states' => OrderState::getOrderStates($this->context->language->id),
 			'warehouse_list' => $warehouse_list,
 			'sources' => ConnectionsSource::getOrderSources($order->id),
 			'currentState' => $order->getCurrentOrderState(),
 			'currency' => new Currency($order->id_currency),
-			'currencies' => Currency::getCurrencies(),
+			'currencies' => Currency::getCurrenciesByIdShop($order->id_shop),
 			'previousOrder' => $order->getPreviousOrderId(),
 			'nextOrder' => $order->getNextOrderId(),
 			'current_index' => self::$currentIndex,

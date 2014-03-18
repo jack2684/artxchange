@@ -40,6 +40,14 @@ class AdminImagesControllerCore extends AdminController
 	 	$this->addRowAction('edit');
 		$this->addRowAction('delete');
 
+		$this->bulk_actions = array(
+			'delete' => array(
+				'text' => $this->l('Delete selected'),
+				'confirm' => $this->l('Delete selected items?'),
+				'icon' => 'icon-trash'
+			)
+		);
+
 		$this->fields_list = array(
 			'id_image_type' => array('title' => $this->l('ID'), 'align' => 'center', 'class' => 'fixed-width-xs'),
 			'name' => array('title' => $this->l('Name')),
@@ -347,7 +355,7 @@ class AdminImagesControllerCore extends AdminController
 			else
 				$this->errors[] = Tools::displayError('You do not have permission to edit this.');
 		}
-		elseif (Tools::getValue('submitMoveImages'.$this->table))
+		elseif (Tools::isSubmit('submitMoveImages'.$this->table))
 		{
 			if ($this->tabAccess['edit'] === '1')
 		 	{
@@ -357,7 +365,7 @@ class AdminImagesControllerCore extends AdminController
 			else
 				$this->errors[] = Tools::displayError('You do not have permission to edit this.');
 		}
-		elseif (Tools::getValue('submitImagePreferences'))
+		elseif (Tools::isSubmit('submitImagePreferences'))
 		{
 			if ($this->tabAccess['edit'] === '1')
 			{
@@ -385,7 +393,7 @@ class AdminImagesControllerCore extends AdminController
 
 	public static function printEntityActiveIcon($value, $object)
 	{
-		return ($value ? '<i class="icon-check text-success"></i>' : '<i class="icon-remove text-danger"></i>');
+		return ($value ? '<span class="list-action-enable action-enabled"><i class="icon-check"></i></span>' : '<span class="list-action-enable action-disabled"><i class="icon-remove"></i></span>');
 	}
 
 	protected function _childValidation()
@@ -487,10 +495,13 @@ class AdminImagesControllerCore extends AdminController
 							if (!file_exists($dir.$image) || !filesize($dir.$image))
 							{
 								$errors = true;
-								$this->errors[] = sprintf(Tools::displayError('Source file does not exist or is empty (%s)', $dir.$image));
+								$this->errors[] = sprintf(Tools::displayError('Source file does not exist or is empty (%s)'), $dir.$image);
 							}
 							elseif (!ImageManager::resize($dir.$image, $newDir.substr($image, 0, -4).'-'.stripslashes($imageType['name']).'.jpg', (int)$imageType['width'], (int)$imageType['height']))
+							{
 								$errors = true;
+								$this->errors[] = sprintf(Tools::displayError('Failed to resize image file (%s)'), $dir.$image);
+							}
 						}
 						if (time() - $this->start_time > $this->max_execution_time - 4) // stop 4 seconds before the timeout, just enough time to process the end of the page on a slow server
 							return 'timeout';

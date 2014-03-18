@@ -66,6 +66,8 @@ class ProductPaymentLogos extends Module
 
 	public function hookDisplayProductButtons($params)
 	{
+		if (Configuration::get('PS_CATALOG_MODE'))
+			return;
 		if (!$this->isCached('productpaymentlogos.tpl', $this->getCacheId()))
 		{
 			$this->smarty->assign('banner_img', 'img/'.Configuration::get('PRODUCTPAYMENTLOGOS_IMG'));
@@ -85,6 +87,8 @@ class ProductPaymentLogos extends Module
 
 	public function hookHeader($params)
 	{
+		if (Configuration::get('PS_CATALOG_MODE'))
+			return;
 		$this->context->controller->addCSS($this->_path.'productpaymentlogos.css', 'all');
 	}
 
@@ -151,18 +155,14 @@ class ProductPaymentLogos extends Module
 						'type' => 'file',
 						'label' => $this->l('Block image'),
 						'name' => 'PRODUCTPAYMENTLOGOS_IMG',
-						'desc' => $this->l(
-								'If your shop\'s payment methods differ from the ones presented in the default image, then you must create your own image with the necessary logos.'
-							),
+						'desc' => $this->l('If your shop\'s payment methods differ from the ones presented in the default image, then you must create your own image with the necessary logos.'),
 						'thumb' => '../modules/'.$this->name.'/img/'.Configuration::get('PRODUCTPAYMENTLOGOS_IMG'),
 					),
 					array(
 						'type' => 'text',
 						'label' => $this->l('Image link'),
 						'name' => 'PRODUCTPAYMENTLOGOS_LINK',
-						'desc' => $this->l(
-								'You can either upload your own image using the form above, or link to it from the "Image link" option.'
-							)
+						'desc' => $this->l('You can either upload your own image using the form above, or link to it from the "Image link" option.')
 					)
 				),
 				'submit' => array(

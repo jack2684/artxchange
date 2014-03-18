@@ -17,31 +17,44 @@
 - CINS
 - Caleydon Media
 - Captain FLAM
+- Captain-FLAM
 - Chen.Zhidong
 - Chris
 - ChristopheBoucaut
 - Corentin Delcourt
 - Cosmin Hutanu
 - Cédric Mouleyre
+- DOEO
 - Damien Metzger
+- DamienMetzger
 - Damon Skelhorn
 - Daniel
 - Daniele Giachino
+- Danoosh Mir
 - David Gasperoni
 - Davy Rolink
 - Dh42
+- Dimitrios Karvounaris
 - Dinis Lage
 - Dragan Skrbic
+- Dream me up
+- DrySs
 - DrÿSs
+- DrÿSs'
+- Dvir Julius
 - Edouard Gaulué
 - Emilien Puget
 - Eric Le Lay
 - Fabio Chelly
 - Felipe Uribe
+- Francois Gaillard
 - François Gaillard
+- François-Marie de Jouvencel
+- Fran�ois Gaillard
 - Gabriel Schwardy
 - Gaelle ITZKOVITZ
 - Gamesh
+- Gordon Coubrough
 - Granger Kevin
 - Gregory Roussac
 - Grégoire Bélorgey
@@ -51,14 +64,18 @@
 - J. Danse
 - JEAN
 - Javsmile
+- Jerome Nadaud
 - Jonathan Danse
 - Julien
+- Julien Bourdeau
 - Jáchym Toušek
 - Jérôme Nadaud
 - Kevin Granger
 - Krystian Podemski
+- Kévin Dunglas
 - LOIC ROSSET ltd
 - Luca T.
+- Lucas CERDAN
 - Lucas Cerdan
 - LucasC
 - Madef
@@ -68,6 +85,7 @@
 - Mats Rynge
 - MatthieuB
 - Maxence
+- Maxime
 - Michel Courtade
 - Mickael Desgranges
 - Mikael Blotin
@@ -75,6 +93,7 @@
 - Milow
 - MustangZhong
 - Nicolas Sorosac
+- Niklas Ekman
 - Nils-Helge Garli Hegvik
 - Nino Uzelac
 - Otto Nascarella
@@ -102,18 +121,21 @@
 - Shipow
 - Staging
 - Stanislav Yordanov
+- Steven "SDF" Sulley
 - Sumh
 - Sylvain Gougouzian
 - Sylvain WITMEYER
 - Sébastien
 - Sébastien Bocahu
 - TMMeilleur
+- Thomas Blanc
 - Tom Panier
 - Tomasz Slominski
 - Vincent Augagneur
 - Vincent Schoener
 - Vincent Terenti
 - Xavier
+- Xavier Borderie
 - Xavier POITAU
 - Yoozio
 - Zollner Robert
@@ -132,13 +154,17 @@
 - cedricfontaine
 - cippest
 - cmouleyre
+- codvir
 - dMetzger
 - dSevere
+- danoosh
 - djfm
 - dlage
 - dreammeup
+- edamart
 - emilien-puget
 - emily-d
+- erickturcios
 - fBrignoli
 - fSerny
 - fchellypresta
@@ -163,6 +189,7 @@
 - jessylenne
 - jmCollin
 - joseantgv
+- julienbourdeau
 - kiropowered
 - kpodemski
 - lBrieu
@@ -176,6 +203,7 @@
 - makk1ntosh
 - marcinsz101
 - matiasiglesias
+- mchojnacki
 - minic studio
 - misthero
 - montes
@@ -194,6 +222,7 @@
 - romainberger
 - root
 - runningz
+- s-duval
 - sLorenzini
 - sThiebaut
 - sagaradonis
@@ -203,6 +232,7 @@
 - soware
 - tDidierjean
 - thoma202
+- timsit
 - tucoinfo
 - unknown
 - vAugagneur
@@ -210,4 +240,7 @@
 - vKham
 - vSchoener
 - vinvin27
+- vinzter
+- yanngarras
 - zimmi1
+

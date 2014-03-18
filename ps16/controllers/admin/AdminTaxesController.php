@@ -35,11 +35,13 @@ class AdminTaxesControllerCore extends AdminController
 		$this->addRowAction('edit');
 		$this->addRowAction('delete');
 		
-	 	$this->bulk_actions = array(
-			'delete' => array('text' => $this->l('Delete selected'), 'confirm' => $this->l('Delete selected items?')),
-			'enableSelection' => array('text' => $this->l('Enable selection')),
-			'disableSelection' => array('text' => $this->l('Disable selection'))
-			);
+		$this->bulk_actions = array(
+			'delete' => array(
+				'text' => $this->l('Delete selected'),
+				'confirm' => $this->l('Delete selected items?'),
+				'icon' => 'icon-trash'
+			)
+		);
 
 		$this->fields_list = array(
 			'id_tax' => array('title' => $this->l('ID'), 'align' => 'center', 'class' => 'fixed-width-xs'),
@@ -98,7 +100,6 @@ class AdminTaxesControllerCore extends AdminController
 				'hint' => $this->l('Define the ecotax (e.g. French ecotax: 19.6%).'),
 				'cast' => 'intval',
 				'type' => 'select',
-				'identifier' => 'id_tax',
 				'identifier' => 'id_tax_rules_group',
 				'list' => TaxRulesGroup::getTaxRulesGroupsForOptions()
 				);

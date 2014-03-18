@@ -29,6 +29,8 @@ if (!defined('_PS_VERSION_'))
 
 class BlockNewProducts extends Module
 {
+	protected static $cache_new_products;
+
 	public function __construct()
 	{
 		$this->name = 'blocknewproducts';
@@ -70,17 +72,15 @@ class BlockNewProducts extends Module
 			}
 		}
 
-		$this->_clearCache('blocknewproducts.tpl');
-		$this->_clearCache('blocknewproducts_home.tpl');
+		$this->_clearCache('*');
 
 		return $success;
 	}
 
 	public function uninstall()
 	{
-		$this->_clearCache('blocknewproducts.tpl');
-		$this->_clearCache('blocknewproducts_home.tpl');
-		$this->_clearCache('tab.tpl');
+		$this->_clearCache('*');
+
 		return parent::uninstall();
 	}
 
@@ -112,7 +112,7 @@ class BlockNewProducts extends Module
 		if (Configuration::get('PS_NB_DAYS_NEW_PRODUCT'))
 			$newProducts = Product::getNewProducts((int) $this->context->language->id, 0, (int)Configuration::get('NEW_PRODUCTS_NBR'));
 
-		if (!$newProducts && !Configuration::get('PS_BLOCK_NEWPRODUCTS_DISPLAY'))
+		if (!$newProducts && Configuration::get('PS_BLOCK_NEWPRODUCTS_DISPLAY'))
 			return;
 		return $newProducts;
 	}
@@ -121,13 +121,19 @@ class BlockNewProducts extends Module
 	{
 		if (!$this->isCached('blocknewproducts.tpl', $this->getCacheId()))
 		{
-			$newProducts = $this->getNewProducts();
+			if (!isset(BlockNewProducts::$cache_new_products))
+				BlockNewProducts::$cache_new_products = $this->getNewProducts();
 
 			$this->smarty->assign(array(
-									   'new_products' => $newProducts,
-									   'mediumSize' => Image::getSize(ImageType::getFormatedName('medium')),
-								  ));
+				'new_products' => BlockNewProducts::$cache_new_products,
+				'mediumSize' => Image::getSize(ImageType::getFormatedName('medium')),
+				'homeSize' => Image::getSize(ImageType::getFormatedName('home'))
+			));
 		}
+
+		if (BlockNewProducts::$cache_new_products === false)
+			return false;
+
 		return $this->display(__FILE__, 'blocknewproducts.tpl', $this->getCacheId());
 	}
 
@@ -145,44 +151,60 @@ class BlockNewProducts extends Module
 
 	public function hookdisplayHomeTab($params)
 	{
+		if (!$this->isCached('tab.tpl', $this->getCacheId('blocknewproducts-tab')))
+			BlockNewProducts::$cache_new_products = $this->getNewProducts();
+
+		if (BlockNewProducts::$cache_new_products === false)
+			return false;
+
 		return $this->display(__FILE__, 'tab.tpl', $this->getCacheId('blocknewproducts-tab'));
 	}
 
 	public function hookdisplayHomeTabContent($params)
 	{
-		if (!$this->isCached('blocknewproducts_home.tpl', $this->getCacheId()))
+		if (!$this->isCached('blocknewproducts_home.tpl', $this->getCacheId('blocknewproducts-home')))
 		{
-			$newProducts = $this->getNewProducts();
-
 			$this->smarty->assign(array(
-									   'new_products' => $newProducts,
-									   'mediumSize' => Image::getSize(ImageType::getFormatedName('medium')),
-								  ));
+				'new_products' => BlockNewProducts::$cache_new_products,
+				'mediumSize' => Image::getSize(ImageType::getFormatedName('medium')),
+				'homeSize' => Image::getSize(ImageType::getFormatedName('home'))
+			));
 		}
-		return $this->display(__FILE__, 'blocknewproducts_home.tpl', $this->getCacheId());
+
+		if (BlockNewProducts::$cache_new_products === false)
+			return false;
+
+		return $this->display(__FILE__, 'blocknewproducts_home.tpl', $this->getCacheId('blocknewproducts-home'));
 	}
 
 	public function hookHeader($params)
 	{
+		if (isset($this->context->controller->php_self) && $this->context->controller->php_self == 'index')
+			$this->context->controller->addCSS(_THEME_CSS_DIR_.'product_list.css');
+
 		$this->context->controller->addCSS($this->_path.'blocknewproducts.css', 'all');
 	}
 
 	public function hookAddProduct($params)
 	{
-		$this->_clearCache('blocknewproducts.tpl');
-		$this->_clearCache('blocknewproducts_home.tpl');
+		$this->_clearCache('*');
 	}
 
 	public function hookUpdateProduct($params)
 	{
-		$this->_clearCache('blocknewproducts.tpl');
-		$this->_clearCache('blocknewproducts_home.tpl');
+		$this->_clearCache('*');
 	}
 
 	public function hookDeleteProduct($params)
 	{
-		$this->_clearCache('blocknewproducts.tpl');
-		$this->_clearCache('blocknewproducts_home.tpl');
+		$this->_clearCache('*');
+	}
+
+	public function _clearCache($template, $cache_id = NULL, $compile_id = NULL)
+	{
+		parent::_clearCache('blocknewproducts.tpl');
+		parent::_clearCache('blocknewproducts_home.tpl', $this->getCacheId('blocknewproducts-home'));
+		parent::_clearCache('tab.tpl', $this->getCacheId('blocknewproducts-tab'));
 	}
 
 	public function renderForm()

@@ -12,15 +12,26 @@ function tinySetup(config)
 //    safari,pagebreak,style,table,advimage,advlink,inlinepopups,media,contextmenu,paste,fullscreen,xhtmlxtras,preview
 	default_config = {
 		selector: ".rte" ,
-		plugins : "link image paste pagebreak table contextmenu preview filemanager table code media autoresize",
-		toolbar1 : "code,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,styleselect,formatselect,|,blockquote,forecolor,backcolor,pasteword,|,bullist,numlist,|,outdent,indent,|,undo,redo,|,link,unlink,|,cleanup,|,media,image",
+		plugins : "colorpicker link image paste pagebreak table contextmenu filemanager table code media autoresize textcolor",
+		toolbar1 : "code,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,formatselect,|,blockquote,colorpicker,pasteword,|,bullist,numlist,|,outdent,indent,|,link,unlink,|,cleanup,|,media,image",
 		toolbar2: "",
 		external_filemanager_path: ad+"/filemanager/",
 		filemanager_title: "File manager" ,
 		external_plugins: { "filemanager" : ad+"/filemanager/plugin.min.js"},
 		language: iso,
 		skin: "prestashop",
-		resize: false
+		statusbar: false,
+		relative_urls : false,
+		extended_valid_elements : "em[class|name|id]",
+		menu: {
+			edit: {title: 'Edit', items: 'undo redo | cut copy paste | selectall'},
+			insert: {title: 'Insert', items: 'media image link | pagebreak'},
+			view: {title: 'View', items: 'visualaid'},
+			format: {title: 'Format', items: 'bold italic underline strikethrough superscript subscript | formats | removeformat'},
+			table: {title: 'Table', items: 'inserttable tableprops deletetable | cell row column'},
+			tools: {title: 'Tools', items: 'code'}
+		}
+
 	}
 
 	$.each(default_config, function(index, el)

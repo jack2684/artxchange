@@ -30,6 +30,9 @@ class AdminCarriersControllerCore extends AdminController
 
 	public function __construct()
 	{
+		if ($id_carrier = Tools::getValue('id_carrier'))
+			Tools::redirectAdmin(Context::getContext()->link->getAdminLink('AdminCarrierWizard').'&id_carrier='.(int)$id_carrier);
+		
 		$this->bootstrap = true;
 		$this->table = 'carrier';
 		$this->className = 'Carrier';
@@ -44,10 +47,12 @@ class AdminCarriersControllerCore extends AdminController
 		$this->context = Context::getContext();
 
 		$this->bulk_actions = array(
-			'delete' => array('text' => $this->l('Delete selected'), 'confirm' => $this->l('Are you sure that you want to delete the selected items?')),
-			'enableSelection' => array('text' => $this->l('Enable selection')),
-			'disableSelection' => array('text' => $this->l('Disable selection'))
-			);
+			'delete' => array(
+				'text' => $this->l('Delete selected'),
+				'confirm' => $this->l('Delete selected items?'),
+				'icon' => 'icon-trash'
+			)
+		);
 
 		$this->fieldImageSettings = array(
 			'name' => 'logo',

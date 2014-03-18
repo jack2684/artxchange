@@ -41,7 +41,7 @@ class AdminLocalizationControllerCore extends AdminController
 						'cast' => 'intval',
 						'type' => 'select',
 						'identifier' => 'id_lang',
-						'list' => Language::getlanguages(false)
+						'list' => Language::getLanguages(false)
 					),
 					'PS_COUNTRY_DEFAULT' => array(
 						'title' => $this->l('Default country'),
@@ -255,6 +255,7 @@ class AdminLocalizationControllerCore extends AdminController
 			'input' => array(
 				array(
 					'type' => 'select',
+					'class' => 'chosen',
 					'label' => $this->l('Localization pack you want to import'),
 					'name' => 'iso_localization_pack',
 					'options' => array(

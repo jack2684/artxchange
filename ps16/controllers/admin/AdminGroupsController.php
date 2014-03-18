@@ -36,7 +36,13 @@ class AdminGroupsControllerCore extends AdminController
 		$this->addRowAction('edit');
 		$this->addRowAction('view');
 		$this->addRowAction('delete');
-	 	$this->bulk_actions = array('delete' => array('text' => $this->l('Delete selected'), 'confirm' => $this->l('Delete selected items?')));
+		$this->bulk_actions = array(
+			'delete' => array(
+				'text' => $this->l('Delete selected'),
+				'confirm' => $this->l('Delete selected items?'),
+				'icon' => 'icon-trash'
+			)
+		);
 
 		$groups_to_keep = array(
 			Configuration::get('PS_UNIDENTIFIED_GROUP'),
@@ -219,7 +225,7 @@ class AdminGroupsControllerCore extends AdminController
 			'email' => array('title' => $this->l('Email address'), 'filter_key' => 'c!email', 'orderby' => true),
 			'birthday' => array('title' => $this->l('Birth date'), 'type' => 'date', 'class' => 'fixed-width-md', 'align' => 'center'),
 			'date_add' => array('title' => $this->l('Register date'), 'type' => 'date', 'class' => 'fixed-width-md', 'align' => 'center'),
-			'active' => array('title' => $this->l('Enabled'),'align' => 'center', 'class' => 'fixed-width-sm', 'active' => 'status','type' => 'bool', 'filter_key' => 'c!active')
+			'active' => array('title' => $this->l('Enabled'),'align' => 'center', 'class' => 'fixed-width-sm', 'active' => 'status','type' => 'bool', 'search' => false, 'orderby' => false, 'filter_key' => 'c!active')
 		));
 		$this->_select = 'c.*, a.id_group';
 		$this->_join = 'LEFT JOIN `'._DB_PREFIX_.'customer` c ON (a.`id_customer` = c.`id_customer`)';
@@ -517,6 +523,7 @@ class AdminGroupsControllerCore extends AdminController
 		$update = Db::getInstance()->execute('UPDATE `'._DB_PREFIX_.'group` SET show_prices = '.($group->show_prices ? 0 : 1).' WHERE `id_group` = '.(int)$group->id);
 		if (!$update)
 			$this->errors[] = Tools::displayError('An error occurred while updating this group.');
+		Tools::clearSmartyCache();
 		Tools::redirectAdmin(self::$currentIndex.'&token='.$this->token);
 	}
 

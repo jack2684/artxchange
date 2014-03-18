@@ -68,8 +68,7 @@ class AdminDashboardControllerCore extends AdminController
 		$forms = array(
 			'payment' => array('title' => $this->l('Average bank fees per payment method'), 'id' => 'payment'),
 			'carriers' => array('title' => $this->l('Average shipping fees per shipping method'), 'id' => 'carriers'),
-			'other' => array('title' => $this->l('Other settings'), 'id' => 'other'),
-			'expenses' => array('title' => $this->l('Other expenses (monthly)'), 'id' => 'expenses')
+			'other' => array('title' => $this->l('Other settings'), 'id' => 'other')
 		);
 		foreach ($forms as &$form)
 		{
@@ -79,8 +78,12 @@ class AdminDashboardControllerCore extends AdminController
 		}
 
 		foreach ($modules as $module)
-			if ($module->tab == 'payments_gateways' && $module->id)
+			if (isset($module->tab) && $module->tab == 'payments_gateways' && $module->id)
 			{
+				$moduleClass = Module::getInstanceByName($module->name);
+				if (!$moduleClass->isEnabledForShopContext())
+					continue;
+
 				$forms['payment']['fields']['CONF_'.strtoupper($module->name).'_FIXED'] = array(
 					'title' => $module->displayName,
 					'desc' => sprintf($this->l('Choose a fixed fee for each order placed in %1$s with %2$s.'), $currency->iso_code, $module->displayName),
@@ -127,7 +130,7 @@ class AdminDashboardControllerCore extends AdminController
 		{
 			$forms['carriers']['fields']['CONF_'.strtoupper($carrier['id_reference']).'_SHIP'] = array(
 				'title' => $carrier['name'],
-				'desc' => sprintf($this->l('%% of what you charged the customer for domestic delivery with %s.'), $carrier['name']),
+				'desc' => sprintf($this->l('For the carrier named %s, indicate the domestic delivery costs  in percentage of the price charged to customers.'), $carrier['name']),
 				'validation' => 'isPercentage',
 				'cast' => 'floatval',
 				'type' => 'text',
@@ -136,7 +139,7 @@ class AdminDashboardControllerCore extends AdminController
 			);
 			$forms['carriers']['fields']['CONF_'.strtoupper($carrier['id_reference']).'_SHIP_OVERSEAS'] = array(
 				'title' => $carrier['name'],
-				'desc' => sprintf($this->l('%% of what you charged the customer for overseas delivery with %s.'), $carrier['name']),
+				'desc' => sprintf($this->l('For the carrier named %s, indicate the overseas delivery costs in percentage of the price charged to customers.'), $carrier['name']),
 				'validation' => 'isPercentage',
 				'cast' => 'floatval',
 				'type' => 'text',
@@ -145,9 +148,11 @@ class AdminDashboardControllerCore extends AdminController
 			);
 		}
 
+		$forms['carriers']['description'] = $this->l('Method: Indicate the percentage of your carrier margin. For example, if you charge $10 of shipping fees to your customer for each shipment, but you really pay $4 to this carrier, then you should indicate "40" in the percentage field.');
+
 		$forms['other']['fields']['CONF_AVERAGE_PRODUCT_MARGIN'] = array(
-			'title' => $this->l('Average gross margin (Selling price / Buying price)'),
-			'desc' => $this->l('Only used if you do not specify your buying price for each product.'),
+			'title' => $this->l('Average gross margin'),
+			'desc' => $this->l('You should calculate this percentage as follows: ((total sales revenue) - (cost of goods sold)) / (total sales revenue) * 100. This value is only used to calculate the Dashboard approximate gross margin, if you do not specify the wholesale price for each product.'),
 			'validation' => 'isPercentage',
 			'cast' => 'intval',
 			'type' => 'text',
@@ -156,32 +161,14 @@ class AdminDashboardControllerCore extends AdminController
 		);
 
 		$forms['other']['fields']['CONF_ORDER_FIXED'] = array(
-			'title' => $this->l('Other fee per order'),
+			'title' => $this->l('Other fees per order'),
+			'desc' => $this->l('You should calculate this value by making the sum of all of your additional costs per order.'),
 			'validation' => 'isPrice',
 			'cast' => 'floatval',
 			'type' => 'text',
 			'defaultValue' => '0',
 			'suffix' => $currency->iso_code
 		);
-
-		$expense_types = array(
-			'hosting' => $this->l('Hosting'),
-			'tools' => $this->l('Tools (E-mailing, etc.)'),
-			'acounting' => $this->l('Accounting'),
-			'development' => $this->l('Development'),
-			'marketing' => $this->l('Marketing (Adwords, etc.)'),
-			'others' => $this->l('Others')
-		);
-
-		foreach ($expense_types as $expense_type => $expense_label)
-			$forms['expenses']['fields']['CONF_MONTHLY_'.strtoupper($expense_type)] = array(
-				'title' => $expense_label,
-				'validation' => 'isPrice',
-				'cast' => 'floatval',
-				'type' => 'text',
-				'defaultValue' => '0',
-				'suffix' => $currency->iso_code
-			);
 
 		return $forms;
 	}
@@ -237,17 +224,33 @@ class AdminDashboardControllerCore extends AdminController
 			'calendar' => $calendar_helper->generate(),
 			'PS_DASHBOARD_SIMULATION' => Configuration::get('PS_DASHBOARD_SIMULATION'),
 			'datepickerFrom' => Tools::getValue('datepickerFrom', $this->context->employee->stats_date_from),
-			'datepickerTo' => Tools::getValue('datepickerTo', $this->context->employee->stats_date_to)
+			'datepickerTo' => Tools::getValue('datepickerTo', $this->context->employee->stats_date_to),
+			'preselect_date_range' => Tools::getValue('preselectDateRange', $this->context->employee->preselect_date_range)
 		);
 		return parent::renderView();
 	}
 
 	public function postProcess()
 	{
+		if (Tools::isSubmit('submitDateRealTime'))
+		{
+			if ($use_realtime = (int)Tools::getValue('submitDateRealTime'))
+			{
+				$this->context->employee->stats_date_from = date('Y-m-d');
+				$this->context->employee->stats_date_to = date('Y-m-d');
+				$this->context->employee->stats_compare_option = HelperCalendar::DEFAULT_COMPARE_OPTION;
+				$this->context->employee->stats_compare_from = null;
+				$this->context->employee->stats_compare_to = null;
+				$this->context->employee->update();
+			}
+			Configuration::updateValue('PS_DASHBOARD_USE_PUSH', $use_realtime);
+		}
+
 		if (Tools::isSubmit('submitDateRange'))
 		{
 			$this->context->employee->stats_date_from = Tools::getValue('date_from');
 			$this->context->employee->stats_date_to = Tools::getValue('date_to');
+			$this->context->employee->preselect_date_range = Tools::getValue('preselectDateRange');
 
 			if (Tools::getValue('datepicker_compare'))
 			{
@@ -283,7 +286,7 @@ class AdminDashboardControllerCore extends AdminController
 				'.preg_replace('@{link}(.*){/link}@', '<a href="index.php?controller=AdminShopUrl&id_shop_url='.(int)$shop->id.'&updateshop_url&token='.Tools::getAdminTokenLite('AdminShopUrl').'">$1</a>', $this->l('If this is your main domain, please {link}change it now{/link}.'));
 			else
 				$warning .= $this->l('This is different from the domain name set in the "SEO & URLs" tab.').'
-				'.preg_replace('@{link}(.*){/link}@', '<a href="index.php?controller=AdminMeta&token='.Tools::getAdminTokenLite('AdminMeta').'#conf_id_domain">$1</a>', $this->l('If this is your main domain, please {link}change it now{/link}.'));
+				'.preg_replace('@{link}(.*){/link}@', '<a href="index.php?controller=AdminMeta&token='.Tools::getAdminTokenLite('AdminMeta').'#meta_fieldset_shop_url">$1</a>', $this->l('If this is your main domain, please {link}change it now{/link}.'));
 		}
 		return $warning;
 	}
@@ -332,8 +335,8 @@ class AdminDashboardControllerCore extends AdminController
 				if ($articles_limit > 0 && Validate::isCleanHtml((string)$item->title) && Validate::isCleanHtml((string)$item->description))
 					$return['rss'][] = array(
 						'date' => Tools::displayDate(date('Y-m-d', strtotime((string)$item->pubDate))),
-						'title' => (string)$item->title,
-						'short_desc' => substr((string)$item->description, 0, 100).'...',
+						'title' => (string)Tools::htmlentitiesUTF8($item->title),
+						'short_desc' => substr((string)Tools::htmlentitiesUTF8($item->description), 0, 100).'...',
 						'link' => (string)$item->link,
 					);
 				else
@@ -379,5 +382,3 @@ class AdminDashboardControllerCore extends AdminController
 		die(Tools::jsonEncode($return));
 	}	
 }
-
-

@@ -45,7 +45,7 @@ class infoClass extends ObjectModel
 		'fields' => array(
 			'id_shop' =>				array('type' => self::TYPE_INT, 'validate' => 'isunsignedInt', 'required' => true),
 			// Lang fields
-			'text' =>					array('type' => self::TYPE_HTML, 'lang' => true, 'validate' => 'isString', 'required' => true),
+			'text' =>					array('type' => self::TYPE_HTML, 'lang' => true, 'validate' => 'isCleanHtml', 'required' => true),
 		)
 	);
 
@@ -53,7 +53,7 @@ class infoClass extends ObjectModel
 	{
 		/* Classical fields */
 		foreach ($_POST AS $key => $value)
-			if (key_exists($key, $this) AND $key != 'id_'.$this->table)
+			if (array_key_exists($key, $this) AND $key != 'id_'.$this->table)
 				$this->{$key} = $value;
 
 		/* Multilingual fields */

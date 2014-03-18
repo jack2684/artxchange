@@ -116,6 +116,7 @@ class AdminCustomerThreadsControllerCore extends AdminController
 	 		'delete' => array(
 	 			'text' => $this->l('Delete selected'),
 	 			'confirm' => $this->l('Delete selected items?'),
+	 			'icon' => 'icon-trash'
 	 		),
 	 	);
 
@@ -289,7 +290,7 @@ class AdminCustomerThreadsControllerCore extends AdminController
 			}
 			if (isset($_POST['id_employee_forward']))
 			{
-				$messages = Db::getInstance()->executeS('
+				$messages = Db::getInstance()->getRow('
 					SELECT ct.*, cm.*, cl.name subject, CONCAT(e.firstname, \' \', e.lastname) employee_name,
 						CONCAT(c.firstname, \' \', c.lastname) customer_name, c.firstname
 					FROM '._DB_PREFIX_.'customer_thread ct
@@ -304,10 +305,7 @@ class AdminCustomerThreadsControllerCore extends AdminController
 					WHERE ct.id_customer_thread = '.(int)Tools::getValue('id_customer_thread').'
 					ORDER BY cm.date_add DESC
 				');
-				$output = '';
-				foreach ($messages as $message)
-					$output .= $this->displayMessage($message, true, (int)Tools::getValue('id_employee_forward'));
-
+				$output = $this->displayMessage($messages, true, (int)Tools::getValue('id_employee_forward'));
 				$cm = new CustomerMessage();
 				$cm->id_employee = (int)$this->context->employee->id;
 				$cm->id_customer_thread = (int)Tools::getValue('id_customer_thread');
@@ -322,9 +320,12 @@ class AdminCustomerThreadsControllerCore extends AdminController
 				elseif ($id_employee && $employee && Validate::isLoadedObject($employee))
 				{
 					$params = array(
-					'{messages}' => Tools::nl2br(stripslashes($output)),
-					'{employee}' => $current_employee->firstname.' '.$current_employee->lastname,
-					'{comment}' => stripslashes($_POST['message_forward']));
+						'{messages}' => stripslashes($output),
+						'{employee}' => $current_employee->firstname.' '.$current_employee->lastname,
+						'{comment}' => stripslashes(Tools::nl2br($_POST['message_forward'])),
+						'{firstname}' => $employee->firstname,
+						'{lastname}' => $employee->lastname,
+					);
 
 					if (Mail::Send(
 						$this->context->language->id,
@@ -345,9 +346,10 @@ class AdminCustomerThreadsControllerCore extends AdminController
 				elseif ($email && Validate::isEmail($email))
 				{
 					$params = array(
-					'{messages}' => Tools::nl2br(stripslashes($output)),
-					'{employee}' => $current_employee->firstname.' '.$current_employee->lastname,
-					'{comment}' => stripslashes($_POST['message_forward']));
+						'{messages}' => Tools::nl2br(stripslashes($output)),
+						'{employee}' => $current_employee->firstname.' '.$current_employee->lastname,
+						'{comment}' => stripslashes($_POST['message_forward'])
+					);
 
 					if (Mail::Send(
 						$this->context->language->id,
@@ -388,15 +390,19 @@ class AdminCustomerThreadsControllerCore extends AdminController
 						$file_attachment['name'] = $_FILES['joinFile']['name'];
 						$file_attachment['mime'] = $_FILES['joinFile']['type'];
 					}
+					$customer = new Customer($ct->id_customer);
 					$params = array(
 						'{reply}' => Tools::nl2br(Tools::getValue('reply_message')),
 						'{link}' => Tools::url(
 							$this->context->link->getPageLink('contact', true),
 							'id_customer_thread='.(int)$ct->id.'&token='.$ct->token
 						),
+						'{firstname}' => $customer->firstname,
+						'{lastname}' => $customer->lastname
 					);
 					//#ct == id_customer_thread    #tc == token of thread   <== used in the synchronization imap
 					$contact = new Contact((int)$ct->id_contact, (int)$ct->id_lang);
+
 					if (Validate::isLoadedObject($contact))
 					{
 						$from_name = $contact->name;
@@ -536,48 +542,62 @@ class AdminCustomerThreadsControllerCore extends AdminController
 		$messages = CustomerThread::getMessageCustomerThreads($id_customer_thread);
 
 		$next_thread = CustomerThread::getNextThread((int)$thread->id);
+		
+		$contacts = Contact::getContacts($this->context->language->id);
 
 		$actions = array();
 
 		if ($next_thread)
-			$actions['next_thread'] = array(
+			$next_thread = array(
 				'href' => self::$currentIndex.'&id_customer_thread='.(int)$next_thread.'&viewcustomer_thread&token='.$this->token,
-				'name' => $this->l('Reply to the next unanswered message in this category.')
-			);
-		else
-			$actions['next_thread'] = array(
-				'href' => false,
-				'name' => $this->l('All other messages in this category have been answered.')
+				'name' => $this->l('Reply to the next unanswered message in this thread')
 			);
 
 		if ($thread->status != 'closed')
 			$actions['closed'] = array(
 				'href' => self::$currentIndex.'&viewcustomer_thread&setstatus=2&id_customer_thread='.(int)Tools::getValue('id_customer_thread').'&viewmsg&token='.$this->token,
-				'name' => $this->l('Mark this message as "handled".')
+				'label' => $this->l('Mark as "handled"'),
+				'name' => 'setstatus',
+				'value' => 2
+			);
+		else
+			$actions['open'] = array(
+				'href' => self::$currentIndex.'&viewcustomer_thread&setstatus=1&id_customer_thread='.(int)Tools::getValue('id_customer_thread').'&viewmsg&token='.$this->token,
+				'label' => $this->l('Re-open'),
+				'name' => 'setstatus',
+				'value' => 1
 			);
 
 		if ($thread->status != 'pending1')
 			$actions['pending1'] = array(
 				'href' => self::$currentIndex.'&viewcustomer_thread&setstatus=3&id_customer_thread='.(int)Tools::getValue('id_customer_thread').'&viewmsg&token='.$this->token,
-				'name' => $this->l('Mark this message as "pending 1" (will be answered later).')
+				'label' => $this->l('Mark as "pending 1" (will be answered later)'),
+				'name' => 'setstatus',
+				'value' => 3
 			);
 		else
 			$actions['pending1'] = array(
 				'href' => self::$currentIndex.'&viewcustomer_thread&setstatus=1&id_customer_thread='.(int)Tools::getValue('id_customer_thread').'&viewmsg&token='.$this->token,
-				'name' => $this->l('Disable pending status.')
+				'label' => $this->l('Disable pending status'),
+				'name' => 'setstatus',
+				'value' => 1
 			);
 
 		if ($thread->status != 'pending2')
 			$actions['pending2'] = array(
 				'href' => self::$currentIndex.'&viewcustomer_thread&setstatus=4&id_customer_thread='.(int)Tools::getValue('id_customer_thread').'&viewmsg&token='.$this->token,
-				'name' => $this->l('Mark this message as "pending 2" (will be answered later).')
+				'label' => $this->l('Mark as "pending 2" (will be answered later)'),
+				'name' => 'setstatus',
+				'value' => 4
 			);
 		else
 			$actions['pending2'] = array(
 				'href' => self::$currentIndex.'&viewcustomer_thread&setstatus=1&id_customer_thread='.(int)Tools::getValue('id_customer_thread').'&viewmsg&token='.$this->token,
-				'name' => $this->l('Disable pending status.')
+				'label' => $this->l('Disable pending status'),
+				'name' => 'setstatus',
+				'value' => 1
 			);
-
+		
 		if ($thread->id_customer)
 		{
 			$customer = new Customer($thread->id_customer);
@@ -603,28 +623,84 @@ class AdminCustomerThreadsControllerCore extends AdminController
 				foreach ($products as $key => $product)
 					$products[$key]['date_add'] = Tools::displayDate($product['date_add'], null, true);
 		}
+		$timeline_items = $this->getTimeline($messages, $thread->id_order);
+		$first_message = $messages[0];
 
-		foreach ($messages as $key => $message)
-			$messages[$key] = $this->displayMessage($message);
+		if (!$messages[0]['id_employee'])
+			unset($messages[0]);
+
+		$contact = '';
+		foreach ($contacts as $c)
+			if ($c['id_contact'] == $thread->id_contact)
+				$contact = $c['name'];
 
 		$this->tpl_view_vars = array(
 			'id_customer_thread' => $id_customer_thread,
 			'thread' => $thread,
 			'actions' => $actions,
 			'employees' => $employees,
+			'current_employee' => $this->context->employee,
 			'messages' => $messages,
+			'first_message' => $first_message,
+			'contact' => $contact,
 			'next_thread' => $next_thread,
 			'orders' => isset($orders) ? $orders : false,
 			'customer' => isset($customer) ? $customer : false,
 			'products' => isset($products) ? $products : false,
 			'total_ok' => isset($total_ok) ?  Tools::displayPrice($total_ok, $this->context->currency) : false,
 			'orders_ok' => isset($orders_ok) ? $orders_ok : false,
-			'count_ok' => isset($orders_ok) ? count($orders_ok) : false
+			'count_ok' => isset($orders_ok) ? count($orders_ok) : false,
+			'PS_CUSTOMER_SERVICE_SIGNATURE' => str_replace('\r\n', "\n", Configuration::get('PS_CUSTOMER_SERVICE_SIGNATURE', (int)$thread->id_lang)),
+			'timeline_items' => $timeline_items,
 		);
 
+		if ($next_thread)
+			$this->tpl_view_vars['next_thread'] = $next_thread;
+		
 		return parent::renderView();
 	}
+	
+	public function getTimeline($messages, $id_order)
+	{
+		$timeline = array();
+		foreach ($messages as $message)
+		{
+			$content = $this->l('Message to: ').' <span class="badge">'.(!$message['id_employee'] ? $message['subject'] : $message['customer_name']).'</span></br>'.$message['message'];
+			
+			$timeline[$message['date_add']][] = array(
+				'arrow' => 'left',
+				'background_color' => '',
+				'icon' => 'icon-envelope',
+				'content' => $content,
+				'date' => $message['date_add'],
+			);
+		}
+		
+		$order = new Order((int)$id_order);
+		if (Validate::isLoadedObject($order))
+		{
+			$order_history = $order->getHistory($this->context->language->id);
+			foreach ($order_history as $history)
+			{
+				$link = $this->context->link->getAdminLink('AdminOrders').'&vieworder&id_order='.(int)$order->id;
+				$content = '<a class="badge" target="_blank" href="'.$link.'">'.$this->l('Order').' #'.(int)$order->id.'</a></br></br>';
+				$content .= '<span>'.$this->l('Status:').' '.$history['ostate_name'].'</span>';
 
+				$timeline[$history['date_add']][] = array(
+					'arrow' => 'right',
+					'alt' => true,
+					'background_color' => $history['color'],
+					'icon' => 'icon-credit-card',
+					'content' => $content,
+					'date' => $history['date_add'],
+					'see_more_link' => $link,
+				);
+			}
+		}
+		ksort($timeline);
+		return $timeline;
+	}
+	
 	protected function displayMessage($message, $email = false, $id_employee = null)
 	{
 		$tpl = $this->createTemplate('message.tpl');
@@ -641,7 +717,6 @@ class AdminCustomerThreadsControllerCore extends AdminController
 		}
 		$message['date_add'] = Tools::displayDate($message['date_add'], null, true);
 		$message['user_agent'] = strip_tags($message['user_agent']);
-
 		$message['message'] = preg_replace(
 			'/(https?:\/\/[a-z0-9#%&_=\(\)\.\? \+\-@\/]{6,1000})([\s\n<])/Uui',
 			'<a href="\1">\1</a>\2',
@@ -656,7 +731,9 @@ class AdminCustomerThreadsControllerCore extends AdminController
 			$is_valid_order_id = false;
 
 		$tpl->assign(array(
-			'email_base_url' => Context::getContext()->shop->getBaseUrl().dirname($_SERVER['PHP_SELF']).'/',
+			'thread_url' => Tools::getAdminUrl(basename(_PS_ADMIN_DIR_).'/'.
+				$this->context->link->getAdminLink('AdminCustomerThreads').'&amp;id_customer_thread='
+				.(int)$message['id_customer_thread'].'&amp;viewcustomer_thread=1'),
 			'link' => Context::getContext()->link,
 			'current' => self::$currentIndex,
 			'token' => $this->token,
@@ -667,7 +744,6 @@ class AdminCustomerThreadsControllerCore extends AdminController
 			'PS_SHOP_NAME' => Configuration::get('PS_SHOP_NAME'),
 			'file_name' => file_exists(_PS_UPLOAD_DIR_.$message['file_name']),
 			'contacts' => $contacts,
-			'PS_CUSTOMER_SERVICE_SIGNATURE' => str_replace('\r\n', "\n", Configuration::get('PS_CUSTOMER_SERVICE_SIGNATURE', $message['id_lang'])),
 			'is_valid_order_id' => $is_valid_order_id
 		));
 

@@ -37,9 +37,10 @@ class ProductControllerCore extends FrontController
 		if (count($this->errors))
 			return ;
 
-		if ($this->context->getMobileDevice() == false)
+		if (!$this->useMobileTheme())
 		{
 			$this->addCSS(_THEME_CSS_DIR_.'product.css');
+			$this->addCSS(_THEME_CSS_DIR_.'print.css');
 			$this->addJqueryPlugin(array('fancybox', 'idTabs', 'scrollTo', 'serialScroll', 'bxslider'));
 			$this->addJS(array(
 				_THEME_JS_DIR_.'tools.js',  // retro compat themes 1.5
@@ -96,7 +97,8 @@ class ProductControllerCore extends FrontController
 			 */
 			if (!$this->product->isAssociatedToShop() || !$this->product->active)
 			{
-				if (Tools::getValue('adtoken') == Tools::getAdminToken('AdminProducts'.(int)Tab::getIdFromClassName('AdminProducts').(int)Tools::getValue('id_employee')))
+
+				if (Tools::getValue('adtoken') == Tools::getAdminToken('AdminProducts'.(int)Tab::getIdFromClassName('AdminProducts').(int)Tools::getValue('id_employee')) && $this->product->isAssociatedToShop())
 				{
 					// If the product is not active, it's the admin preview mode
 					$this->context->smarty->assign('adminActionDisplay', true);
@@ -275,8 +277,8 @@ class ProductControllerCore extends FrontController
 				'body_classes' => array(
 					$this->php_self.'-'.$this->product->id, 
 					$this->php_self.'-'.$this->product->link_rewrite,
-					'category-'.$this->category->id,
-					'category-'.$this->category->getFieldByLang('link_rewrite')
+					'category-'.(isset($this->category) ? $this->category->id : ''),
+					'category-'.(isset($this->category) ? $this->category->getFieldByLang('link_rewrite') : '')
 				),
 				'display_discount_price' => Configuration::get('PS_DISPLAY_DISCOUNT_PRICE'),
 			));
@@ -317,6 +319,7 @@ class ProductControllerCore extends FrontController
 
 		$quantity_discounts = SpecificPrice::getQuantityDiscounts($id_product, $id_shop, $id_currency, $id_country, $id_group, null, true, (int)$this->context->customer->id);
 		foreach ($quantity_discounts as &$quantity_discount)
+		{
 			if ($quantity_discount['id_product_attribute'])
 			{
 				$combination = new Combination((int)$quantity_discount['id_product_attribute']);
@@ -325,6 +328,9 @@ class ProductControllerCore extends FrontController
 					$quantity_discount['attributes'] = $attribute['name'].' - ';
 				$quantity_discount['attributes'] = rtrim($quantity_discount['attributes'], ' - ');
 			}
+			if ((int)$quantity_discount['id_currency'] == 0 && $quantity_discount['reduction_type'] == 'amount')
+				$quantity_discount['reduction'] = Tools::convertPriceFull($quantity_discount['reduction'], null, Context::getContext()->currency);
+		}
 
 		$product_price = $this->product->getPrice(Product::$_taxCalculationMethod == PS_TAX_INC, false);
 		$address = new Address($this->context->cart->{Configuration::get('PS_TAX_ADDRESS_TYPE')});
@@ -386,6 +392,7 @@ class ProductControllerCore extends FrontController
 			'mediumSize' => Image::getSize(ImageType::getFormatedName('medium')),
 			'largeSize' => Image::getSize(ImageType::getFormatedName('large')),
 			'homeSize' => Image::getSize(ImageType::getFormatedName('home')),
+			'cartSize' => Image::getSize(ImageType::getFormatedName('cart')),
 			'col_img_dir' => _PS_COL_IMG_DIR_));
 		if (count($product_images))
 			$this->context->smarty->assign('images', $product_images);
@@ -418,6 +425,7 @@ class ProductControllerCore extends FrontController
 				}
 				if (!isset($groups[$row['id_attribute_group']]))
 					$groups[$row['id_attribute_group']] = array(
+						'group_name' => $row['group_name'],
 						'name' => $row['public_group_name'],
 						'group_type' => $row['group_type'],
 						'default' => -1,
@@ -492,11 +500,11 @@ class ProductControllerCore extends FrontController
 			{
 				foreach ($groups as &$group)
 					foreach ($group['attributes_quantity'] as $key => &$quantity)
-						if (!$quantity)
+						if ($quantity <= 0)
 							unset($group['attributes'][$key]);
 
 				foreach ($colors as $key => $color)
-					if (!$color['attributes_quantity'])
+					if ($color['attributes_quantity'] <= 0)
 						unset($colors[$key]);
 			}
 			foreach ($combinations as $id_product_attribute => $comb)
@@ -552,17 +560,23 @@ class ProductControllerCore extends FrontController
 		}
 		if (!isset($path) || !$path)
 			$path = Tools::getPath((int)$this->context->shop->id_category, $this->product->name);
-		
-		// various assignements before Hook::exec
-		$this->context->smarty->assign(array(
-			'path' => $path,
-			'category' => $this->category,
-			'subCategories' => $this->category->getSubCategories($this->context->language->id, true),
-			'id_category_current' => (int)$this->category->id,
-			'id_category_parent' => (int)$this->category->id_parent,
-			'return_category_name' => Tools::safeOutput($this->category->getFieldByLang('name')),
-			'categories' => Category::getHomeCategories($this->context->language->id, true, (int)$this->context->shop->id)
-		));
+
+		$subCategories = array();
+		if (Validate::isLoadedObject($this->category))
+		{
+			$subCategories = $this->category->getSubCategories($this->context->language->id, true);
+
+			// various assignements before Hook::exec
+			$this->context->smarty->assign(array(
+				'path' => $path,
+				'category' => $this->category,
+				'subCategories' => $subCategories,
+				'id_category_current' => (int)$this->category->id,
+				'id_category_parent' => (int)$this->category->id_parent,
+				'return_category_name' => Tools::safeOutput($this->category->getFieldByLang('name')),
+				'categories' => Category::getHomeCategories($this->context->language->id, true, (int)$this->context->shop->id)
+			));
+		}
 		$this->context->smarty->assign(array('HOOK_PRODUCT_FOOTER' => Hook::exec('displayFooterProduct', array('product' => $this->product, 'category' => $this->category))));
 	}
 

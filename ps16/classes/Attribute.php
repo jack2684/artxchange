@@ -47,7 +47,8 @@ class AttributeCore extends ObjectModel
 			'color' => 				array('type' => self::TYPE_STRING, 'validate' => 'isColor'),
 			'position' => 			array('type' => self::TYPE_INT, 'validate' => 'isInt'),
 
-			'name' => 				array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isGenericName', 'required' => true, 'size' => 64),
+			// Lang fields
+			'name' => 				array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isGenericName', 'required' => true, 'size' => 128),
 		)
 	);
 
@@ -79,7 +80,7 @@ class AttributeCore extends ObjectModel
 				$combination = new Combination($row['id_product_attribute']);
 				$combination->delete();
 			}
-		
+
 			// Delete associated restrictions on cart rules
 			CartRule::cleanProductRuleIntegrity('attributes', $this->id);
 
@@ -144,7 +145,7 @@ class AttributeCore extends ObjectModel
 		');
 	}
 
-	public static function isAttribute($name, $id_lang)
+	public static function isAttribute($id_attribute_group, $name, $id_lang)
 	{
 		if (!Combination::isFeatureActive())
 			return array();
@@ -160,7 +161,7 @@ class AttributeCore extends ObjectModel
 				ON (a.`id_attribute` = al.`id_attribute` AND al.`id_lang` = '.(int)$id_lang.')
 			'.Shop::addSqlAssociation('attribute_group', 'ag').'
 			'.Shop::addSqlAssociation('attribute', 'a').'
-			WHERE al.`name` = \''.pSQL($name).'\'
+			WHERE al.`name` = \''.pSQL($name).'\' AND ag.`id_attribute_group` = '.(int)$id_attribute_group.'
 			ORDER BY agl.`name` ASC, a.`position` ASC
 		');
 

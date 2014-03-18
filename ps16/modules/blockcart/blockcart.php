@@ -179,7 +179,10 @@ class BlockCart extends Module
 			return;
 
 		// @todo this variable seems not used
-		$this->smarty->assign('order_page', strpos($_SERVER['PHP_SELF'], 'order') !== false);
+		$this->smarty->assign(array(
+			'order_page' => (strpos($_SERVER['PHP_SELF'], 'order') !== false),
+			'blockcart_top' => (isset($params['blockcart_top']) && $params['blockcart_top']) ? true : false,
+		));
 		$this->assignContentVars($params);
 		return $this->display(__FILE__, 'blockcart.tpl');
 	}
@@ -223,13 +226,20 @@ class BlockCart extends Module
 		if ((int)(Configuration::get('PS_BLOCK_CART_AJAX')))
 		{
 			$this->context->controller->addJS(($this->_path).'ajax-cart.js');
-			$this->context->controller->addJqueryPlugin(array('scrollTo', 'serialScroll'));
+			$this->context->controller->addJqueryPlugin(array('scrollTo', 'serialScroll', 'bxslider'));
 		}
 	}
 	
 	public function hookTop($params)
 	{
+		$params['blockcart_top'] = true;
 		return $this->hookRightColumn($params);
+	}
+	
+	public function hookDisplayNav($params)
+	{
+		$params['blockcart_top'] = true;
+		return $this->hookTop($params);
 	}
 	
 	public function renderForm()

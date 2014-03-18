@@ -39,7 +39,7 @@ class AdminCartsControllerCore extends AdminController
 		$this->allow_export = true;
 		$this->_orderWay = 'DESC';
 
-		$this->_select = 'CONCAT(LEFT(c.`firstname`, 1), \'. \', c.`lastname`) `customer`, a.id_cart total, ca.name carrier, o.id_order, IF(co.id_guest, 1, 0) id_guest';
+		$this->_select = 'CONCAT(LEFT(c.`firstname`, 1), \'. \', c.`lastname`) `customer`, a.id_cart total, ca.name carrier, IFNULL(o.id_order, \''.$this->l('Non ordered').'\') id_order, IF(o.id_order, 1, 0) badge_success, IF(o.id_order, 0, 1) badge_danger, IF(co.id_guest, 1, 0) id_guest';
 		$this->_join = 'LEFT JOIN '._DB_PREFIX_.'customer c ON (c.id_customer = a.id_customer)
 		LEFT JOIN '._DB_PREFIX_.'currency cu ON (cu.id_currency = a.id_currency)
 		LEFT JOIN '._DB_PREFIX_.'carrier ca ON (ca.id_carrier = a.id_carrier)
@@ -49,16 +49,16 @@ class AdminCartsControllerCore extends AdminController
 		$this->fields_list = array(
 			'id_cart' => array(
 				'title' => $this->l('ID'),
-				'align' => 'center',
+				'align' => 'text-center',
 				'class' => 'fixed-width-xs'
 			),
 			'id_order' => array(
 				'title' => $this->l('Order ID'),
-				'align' => 'center'
+				'align' => 'text-center',
+				'badge_danger' => true
 			),
 			'customer' => array(
 				'title' => $this->l('Customer'),
-				'width' => 'auto',
 				'filter_key' => 'c!lastname'
 			),
 			'total' => array(
@@ -67,30 +67,37 @@ class AdminCartsControllerCore extends AdminController
 				'orderby' => false,
 				'search' => false,
 				'align' => 'text-right',
-				'prefix' => '<span class="badge">',
-				'suffix' => '</span>',
+				'badge_success' => true
 			),
 			'carrier' => array(
 				'title' => $this->l('Carrier'),
-				'align' => 'center',
+				'align' => 'text-center',
 				'callback' => 'replaceZeroByShopName',
 				'filter_key' => 'ca!name'
 			),
 			'date_add' => array(
 				'title' => $this->l('Date'),
-				'align' => 'right',
+				'align' => 'text-right',
 				'type' => 'datetime',
 				'filter_key' => 'a!date_add'
 			),
 			'id_guest' => array(
 				'title' => $this->l('Online'),
-				'align' => 'center',
+				'align' => 'text-center',
 				'type' => 'bool',
 				'havingFilter' => true,
 				'icon' => array(0 => 'blank.gif', 1 => 'tab-customers.gif')
 			)
 		);
  		$this->shopLinkType = 'shop';
+
+		$this->bulk_actions = array(
+			'delete' => array(
+				'text' => $this->l('Delete selected'),
+				'confirm' => $this->l('Delete selected items?'),
+				'icon' => 'icon-trash'
+			)
+		);
 
 		parent::__construct();
 	}
@@ -113,7 +120,6 @@ class AdminCartsControllerCore extends AdminController
 		$kpis = array();
 
 		/* The data generation is located in AdminStatsControllerCore */
-
 		$helper = new HelperKpi();
 		$helper->id = 'box-conversion-rate';
 		$helper->icon = 'icon-sort-by-attributes-alt';
@@ -819,9 +825,50 @@ class AdminCartsControllerCore extends AdminController
 	{
 		// don't display ordered carts
 		foreach ($this->_list as $row)
-			if ($row['id_cart'] == $id && isset($row['id_order']) && $row['id_order'])
+			if ($row['id_cart'] == $id && isset($row['id_order']) && is_numeric($row['id_order']))
 				return ;
 		
 		return $this->helper->displayDeleteLink($token, $id, $name);
+	}
+
+	public function renderList()
+	{
+		if (!($this->fields_list && is_array($this->fields_list)))
+			return false;
+		$this->getList($this->context->language->id);
+
+		$helper = new HelperList();
+		
+		// Empty list is ok
+		if (!is_array($this->_list))
+		{
+			$this->displayWarning($this->l('Bad SQL query', 'Helper').'<br />'.htmlspecialchars($this->_list_error));
+			return false;
+		}
+
+		$this->setHelperDisplay($helper);
+		$helper->tpl_vars = $this->tpl_list_vars;
+		$helper->tpl_delete_link_vars = $this->tpl_delete_link_vars;
+
+		// For compatibility reasons, we have to check standard actions in class attributes
+		foreach ($this->actions_available as $action)
+		{
+			if (!in_array($action, $this->actions) && isset($this->$action) && $this->$action)
+				$this->actions[] = $action;
+		}
+		$helper->is_cms = $this->is_cms;
+		$skip_list = array();
+
+		foreach ($this->_list as $row)
+			if (isset($row['id_order']) && is_numeric($row['id_order']))
+				$skip_list[] = $row['id_cart'];
+
+		if (array_key_exists('delete', $helper->list_skip_actions))
+			$helper->list_skip_actions['delete'] = array_merge($helper->list_skip_actions['delete'], (array)$skip_list);
+		else
+			$helper->list_skip_actions['delete'] = (array)$skip_list;
+
+		$list = $helper->generateList($this->_list, $this->fields_list);
+		return $list;
 	}
 }

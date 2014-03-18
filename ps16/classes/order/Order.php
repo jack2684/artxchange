@@ -322,14 +322,20 @@ class OrderCore extends ObjectModel
 	public function getCartProducts()
 	{
 		$product_id_list = array();
-		foreach ($this->getProducts() as $product)
+        	$products = $this->getProducts();
+		foreach ($products as &$product)
+        	{
+			$product['id_product_attribute'] = $product['product_attribute_id'];
+			$product['cart_quantity'] = $product['product_quantity'];
 			$product_id_list[] = $this->id_address_delivery.'_'
 				.$product['product_id'].'_'
 				.$product['product_attribute_id'].'_'
 				.(isset($product['id_customization']) ? $product['id_customization'] : '0');
+	        }
+	        unset($product);
 
 		$product_list = array();
-		foreach ($this->getProducts() as $product)
+		foreach ($products as $product)
 		{
 			$key = $this->id_address_delivery.'_'
 				.$product['id_product'].'_'
@@ -1575,16 +1581,8 @@ class OrderCore extends ObjectModel
 		}
 		$order_slips = $this->getOrderSlipsCollection()->getResults();
 
-		// @TODO review
-		function sortDocuments($a, $b)
-		{
-			if ($a->date_add == $b->date_add)
-				return 0;
-			return ($a->date_add < $b->date_add) ? -1 : 1;
-		}
-
 		$documents = array_merge($invoices, $order_slips, $delivery_slips);
-		usort($documents, 'sortDocuments');
+		usort($documents, array('Order', 'sortDocuments'));
 
 		return $documents;
 	}
@@ -1979,6 +1977,12 @@ class OrderCore extends ObjectModel
 				SELECT `id_order_carrier`
 				FROM `'._DB_PREFIX_.'order_carrier`
 				WHERE `id_order` = '.(int)$this->id);
-	}		
-}
+	}
 
+	public static function sortDocuments($a, $b)
+	{
+		if ($a->date_add == $b->date_add)
+			return 0;
+		return ($a->date_add < $b->date_add) ? -1 : 1;
+	}
+}

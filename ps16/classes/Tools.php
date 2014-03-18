@@ -29,6 +29,8 @@ class ToolsCore
 	protected static $file_exists_cache = array();
 	protected static $_forceCompile;
 	protected static $_caching;
+	protected static $_user_plateform;
+	protected static $_user_browser;
 
 	/**
 	* Random password generator
@@ -424,26 +426,26 @@ class ToolsCore
 					$cookie->id_currency = (int)$currency->id;
 			}
 		
-		$currency = Currency::getCurrencyInstance(Configuration::get('PS_CURRENCY_DEFAULT'));
+		$currency = null;
 		if ((int)$cookie->id_currency)
 			$currency = Currency::getCurrencyInstance((int)$cookie->id_currency);
+		if (!Validate::isLoadedObject($currency) || (bool)$currency->deleted || !(bool)$currency->active)
+			$currency = Currency::getCurrencyInstance(Configuration::get('PS_CURRENCY_DEFAULT'));
 
-		if (is_object($currency) && (int)$currency->id && (int)$currency->deleted != 1 && $currency->active)
+		$cookie->id_currency = (int)$currency->id;
+		if ($currency->isAssociatedToShop())
+			return $currency;
+		else
 		{
-			$cookie->id_currency = (int)$currency->id;
-			if ($currency->isAssociatedToShop())
-				return $currency;
-			else
+			// get currency from context
+			$currency = Shop::getEntityIds('currency', Context::getContext()->shop->id, true, true);
+			if (isset($currency[0]) && $currency[0]['id_currency'])
 			{
-				// get currency from context
-				$currency = Shop::getEntityIds('currency', Context::getContext()->shop->id, true, true);
-				if (isset($currency[0]) && $currency[0]['id_currency'])
-				{
-					$cookie->id_currency = $currency[0]['id_currency'];
-					return Currency::getCurrencyInstance((int)$cookie->id_currency);
-				}
+				$cookie->id_currency = $currency[0]['id_currency'];
+				return Currency::getCurrencyInstance((int)$cookie->id_currency);
 			}
 		}
+			
 		return $currency;
 	}
 
@@ -451,7 +453,7 @@ class ToolsCore
 	* Return price with currency sign for a given product
 	*
 	* @param float $price Product price
-	* @param object $currency Current currency (object, id_currency, NULL => context currency)
+	* @param object|array $currency Current currency (object, id_currency, NULL => context currency)
 	* @return string Price correctly formated (sign, decimal separator...)
 	*/
 	public static function displayPrice($price, $currency = null, $no_utf8 = false, Context $context = null)
@@ -532,6 +534,18 @@ class ToolsCore
 		return $ret;
 	}
 
+	// Just to fix a bug
+	// Need real CLDR functions
+	public static function displayNumber($number, $currency)
+	{
+		if (is_array($currency))
+			$format = $currency['format'];
+		elseif (is_object($currency))
+			$format = $currency->format;
+
+		return number_format($number, 0, '.', in_array($format, array(1, 4)) ? ',': ' ');
+	}
+
 	public static function displayPriceSmarty($params, &$smarty)
 	{
 		if (array_key_exists('currency', $params))
@@ -547,8 +561,10 @@ class ToolsCore
 	* Return price converted
 	*
 	* @param float $price Product price
-	* @param object $currency Current currency object
+	* @param object|array $currency Current currency object
 	* @param boolean $to_currency convert to currency or from currency to default currency
+	* @param Context $context
+	* @return float Price
 	*/
 	public static function convertPrice($price, $currency = null, $to_currency = true, Context $context = null)
 	{
@@ -751,9 +767,16 @@ class ToolsCore
  	*/
 	public static function clearXMLCache()
 	{
+		$themes = array();
+		foreach (Theme::getThemes() as $theme)
+			$themes[] = $theme->directory;
+
 		foreach (scandir(_PS_ROOT_DIR_.'/config/xml') as $file)
-			if ((pathinfo($file, PATHINFO_EXTENSION) == 'xml') && ($file != 'default.xml'))
+		{
+			$path_info = pathinfo($file, PATHINFO_EXTENSION);
+			if (($path_info == 'xml') && ($file != 'default.xml') && !in_array(basename($file, '.'.$path_info), $themes))
 				self::deleteFile(_PS_ROOT_DIR_.'/config/xml/'.$file);
+		}
 	}
 
 	/**
@@ -774,10 +797,10 @@ class ToolsCore
 		if (defined('_PS_MODE_DEV_') && _PS_MODE_DEV_ && $string == 'Fatal error')
 			return ('<pre>'.print_r(debug_backtrace(), true).'</pre>');
 		if (!is_array($_ERRORS))
-			return str_replace('"', '&quot;', $string);
+			return $htmlentities ? Tools::htmlentitiesUTF8($string) : $string;
 		$key = md5(str_replace('\'', '\\\'', $string));
-		$str = (isset($_ERRORS) && is_array($_ERRORS) && array_key_exists($key, $_ERRORS)) ? ($htmlentities ? htmlentities($_ERRORS[$key], ENT_COMPAT, 'UTF-8') : $_ERRORS[$key]) : $string;
-		return str_replace('"', '&quot;', stripslashes($str));
+		$str = (isset($_ERRORS) && is_array($_ERRORS) && array_key_exists($key, $_ERRORS)) ? $_ERRORS[$key] : $string;
+		return $htmlentities ? Tools::htmlentitiesUTF8(stripslashes($str)) : $str;
 	}
 
 	/**
@@ -961,6 +984,33 @@ class ToolsCore
 	{
 		$context = Context::getContext();
 		return Tools::getAdminToken($params['tab'].(int)Tab::getIdFromClassName($params['tab']).(int)$context->employee->id);
+	}
+
+	/**
+	* Get a valid URL to use from BackOffice
+	*
+	* @param string $url An URL to use in BackOffice
+	* @param boolean $entites Set to true to use htmlentities function on URL param
+	*/
+	public static function getAdminUrl($url = null, $entities = false)
+	{
+		$link = Tools::getHttpHost(true).__PS_BASE_URI__;
+
+		if (isset($url))
+			$link .= ($entities ? Tools::htmlentitiesUTF8($url) : $url);
+
+		return $link;
+	}
+
+	/**
+	* Get a valid image URL to use from BackOffice
+	*
+	* @param string $image Image name
+	* @param boolean $entites Set to true to use htmlentities function on image param
+	*/
+	public static function getAdminImageUrl($image = null, $entities = false)
+	{
+		return Tools::getAdminUrl(basename(_PS_IMG_DIR_).'/'.$image, $entities);
 	}
 
 	/**
@@ -1315,7 +1365,7 @@ class ToolsCore
 
 		if (!$exact)
 		{
-			$spacepos = mb_strrpos($truncate, ' ');
+			$spacepos = Tools::strrpos($truncate, ' ');
 			if ($html)
 			{
 				$truncateCheck = Tools::substr($truncate, 0, $spacepos);
@@ -1469,6 +1519,13 @@ class ToolsCore
 		if (function_exists('mb_substr'))
 			return mb_substr($str, (int)$start, ($length === false ? Tools::strlen($str) : (int)$length), $encoding);
 		return substr($str, $start, ($length === false ? Tools::strlen($str) : (int)$length));
+	}
+
+	public static function strpos($str, $find, $offset = 0, $encoding = 'UTF-8')
+	{
+		if (function_exists('mb_strpos'))
+			return mb_strpos($str, $find, $offset, $encoding);
+		return strpos($str, $find, $offset);
 	}
 
 	public static function strrpos($str, $find, $offset = 0, $encoding = 'utf-8')
@@ -1754,8 +1811,13 @@ class ToolsCore
 		$protocol_link = Tools::getCurrentUrlProtocolPrefix();
 		if (array_key_exists(1, $matches) && array_key_exists(2, $matches))
 		{
-			$tmp = dirname($current_css_file).'/'.$matches[2];
-			return $matches[1].$protocol_link.Tools::getMediaServer($tmp).$tmp;
+			if (!preg_match('/^https?:\/\//iUs', $matches[2]))
+			{
+				$tmp = dirname($current_css_file).'/'.$matches[2];
+				return $matches[1].$protocol_link.Tools::getMediaServer($tmp).$tmp;
+			} 
+			else
+				return $matches[0];
 		}
 		return false;
 	}
@@ -2049,7 +2111,7 @@ class ToolsCore
 	ExpiresByType application/javascript \"access plus 1 week\"
 	ExpiresByType application/x-javascript \"access plus 1 week\"
 	ExpiresByType image/x-icon \"access plus 1 year\"
-	ExpiresByType image/svg+xml \"access plus 1 year
+	ExpiresByType image/svg+xml \"access plus 1 year\"
 	ExpiresByType image/vnd.microsoft.icon \"access plus 1 year\"
 	ExpiresByType application/font-woff \"access plus 1 year\"
 	ExpiresByType application/x-font-woff \"access plus 1 year\"
@@ -2358,6 +2420,31 @@ exit;
 					return false;
 			return true;
 		}
+	}
+
+	public static function chmodr($path, $filemode)
+	{
+	    if (!is_dir($path))
+	        return @chmod($path, $filemode);
+	    $dh = opendir($path);
+	    while (($file = readdir($dh)) !== false)
+		{
+	        if ($file != '.' && $file != '..')
+			{
+	            $fullpath = $path.'/'.$file;
+	            if (is_link($fullpath))
+	                return false;
+	            elseif (!is_dir($fullpath) && !@chmod($fullpath, $filemode))
+	                    return false;
+	            elseif (!Tools::chmodr($fullpath, $filemode))
+	                return false;
+	        }
+	    }
+	    closedir($dh);
+	    if (@chmod($path, $filemode))
+	        return true;
+	    else
+	        return false;
 	}
 
 	/**
@@ -2878,6 +2965,48 @@ exit;
 			$value = false;
 		return (bool)$value;
 	}
+
+	public static function getUserPlatform()
+	{
+		if (isset(self::$_user_plateform))
+			return self::$_user_plateform;
+
+		$user_agent = $_SERVER['HTTP_USER_AGENT'];
+		self::$_user_plateform = 'unknown';
+
+		if (preg_match('/linux/i', $user_agent))
+			self::$_user_plateform = 'Linux';
+		elseif (preg_match('/macintosh|mac os x/i', $user_agent))
+			self::$_user_plateform = 'Mac';
+		elseif (preg_match('/windows|win32/i', $user_agent))
+			self::$_user_plateform = 'Windows';
+
+		return self::$_user_plateform;
+	}
+
+	public static function getUserBrowser()
+	{
+		if (isset(self::$_user_browser))
+			return self::$_user_browser;
+
+		$user_agent = $_SERVER['HTTP_USER_AGENT'];
+		self::$_user_browser = 'unknown';
+
+		if(preg_match('/MSIE/i',$user_agent) && !preg_match('/Opera/i',$user_agent))
+			self::$_user_browser = 'Internet Explorer';
+		elseif(preg_match('/Firefox/i',$user_agent))
+			self::$_user_browser = 'Mozilla Firefox';
+		elseif(preg_match('/Chrome/i',$user_agent))
+			self::$_user_browser = 'Google Chrome';
+		elseif(preg_match('/Safari/i',$user_agent))
+			self::$_user_browser = 'Apple Safari';
+		elseif(preg_match('/Opera/i',$user_agent))
+			self::$_user_browser = 'Opera';
+		elseif(preg_match('/Netscape/i',$user_agent))
+			self::$_user_browser = 'Netscape';
+
+		return self::$_user_browser;
+	}
 }
 
 /**
@@ -2905,3 +3034,4 @@ function cmpPriceDesc($a, $b)
 		return -1;
 	return 0;
 }
+

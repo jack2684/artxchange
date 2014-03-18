@@ -67,7 +67,13 @@ class AdminRequestSqlControllerCore extends AdminController
 			)
 		);
 
-	 	$this->bulk_actions = array('delete' => array('text' => $this->l('Delete selected'),'confirm' => $this->l('Delete selected items?')));
+		$this->bulk_actions = array(
+			'delete' => array(
+				'text' => $this->l('Delete selected'),
+				'confirm' => $this->l('Delete selected items?'),
+				'icon' => 'icon-trash'
+			)
+		);
 
 		parent::__construct();
 	}
@@ -397,7 +403,7 @@ class AdminRequestSqlControllerCore extends AdminController
 							$e[$key]['attribut'][1]
 						);
 					else if (isset($e[$key]['*']))
-						$this->errors[] = Tools::displayError('The "*" operator can be used in a nested query.');
+						$this->errors[] = Tools::displayError('The "*" operator cannot be used in a nested query.');
 					else
 						$this->errors[] = Tools::displayError('Error.');
 				break;
