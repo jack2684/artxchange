@@ -37,7 +37,6 @@ tools/smarty*/cache/*.php
 !tools/smarty*/cache/index.php
 tools/smarty*/compile/*.php
 !tools/smarty*/compile/index.php
-override/classes/*.php
 themes/default/cache/*.js
 themes/default/cache/*.css
 themes/default/modules/*/*.php
