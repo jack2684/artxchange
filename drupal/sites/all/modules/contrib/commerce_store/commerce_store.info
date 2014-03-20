@@ -1,0 +1,16 @@
+name = Commerce Store
+description = Creates the commerce_store entity type used in Commerce Marketplace
+package = Commerce Marketplace
+dependencies[] = eck
+dependencies[] = entityreference
+dependencies[] = commerce_order
+dependencies[] = commerce_shipping
+configure = admin/commerce/marketplace
+core = 7.x
+
+; Information added by Drupal.org packaging script on 2013-12-20
+version = "7.x-1.0-beta2"
+core = "7.x"
+project = "commerce_marketplace"
+datestamp = "1387558727"
+

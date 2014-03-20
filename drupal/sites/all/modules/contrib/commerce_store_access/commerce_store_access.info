@@ -1,0 +1,15 @@
+name = Commerce Store Permissions
+description = Allows store-level permissions and roles to be assigned to store members.
+package = Commerce Marketplace
+dependencies[] = eck
+dependencies[] = entityreference
+dependencies[] = commerce_store
+configure = admin/commerce/marketplace
+core = 7.x
+
+; Information added by Drupal.org packaging script on 2013-12-20
+version = "7.x-1.0-beta2"
+core = "7.x"
+project = "commerce_marketplace"
+datestamp = "1387558727"
+
