@@ -2,764 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26fadfb4-8239-44a2-8a4f-0e304f6f31b2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/ajax-loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/patterns/bedge_grunge.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/bg-button-degrade.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/bg-degrade-table.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/bg-lang.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/bg-quick.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/bg-submenu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/bg-subtab.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/bg-tab.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/bg-top.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/bg_loaderSpace.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/bullet_orange.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/button-bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/chosen-sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/chosen-sprite@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/patterns/classy_fabric.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/dashboard_loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/export-csv.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/footer-bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/header_module.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/icon-attention.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/icon-cancel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/icon-info.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/icon-multishop.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/icon-search.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/icon-search2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/icon-sprites-title.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/icon-valid-green.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/live_edit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/lock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/logout.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/module-logout.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/module-profile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/modules_list_button.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/modules_view_layout_sidebar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/modules_view_layout_sidebar_grey.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/modules_view_table_select_row.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/modules_view_table_select_row_grey.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/news-bg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/notif_customer.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/notif_message.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/notif_order.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/play.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-addProduct.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-cancel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-delete.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-duplicate.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-edit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-export-csv-details.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-export-csv.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-help-new.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-help.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-import.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-modules-list.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-new-module-addon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-new-module.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-new-url.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-new.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-partial-refund.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-preview.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-refresh-cache.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-refresh-index.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-save-and-stay.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-save-calendar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-save.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-standard-refund.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/process-icon-stats.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/searchbar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/searchbutton.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/separator.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/separator_subnav.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/tab_right.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/thead.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/tree-multishop-groups.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/tree-multishop-root.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/tree-multishop-shop.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/tree-multishop-url.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_alerts.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/modules/colors/_ambers.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/_animate.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/partials/_backward.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_badges.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/modules/colors/_blues.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/font-awesome/_bordered-pulled.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_breadcrumbs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/modules/colors/_browns.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_button-groups.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_buttons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_carousel.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/controllers/_carrier-wizard.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/_chosen.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_close.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_code.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/modules/_colors.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/partials/_commons.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_component-animations.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/partials/_content.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/font-awesome/_core.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/controllers/_customer-thread.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/orders/_customized_data.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/controllers/_dashboard.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/partials/_date-range-picker.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/orders/_discount_form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/orders/_documents.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_dropdowns.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/font-awesome/_extras.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/font-awesome/_fixed-width.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/font-awesome/_font-awesome.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/partials/_footer.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/partials/_forms.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_forms.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_glyphicons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/modules/colors/_grays.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/modules/colors/_greens.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_grid.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/_growl.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/partials/_header.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/partials/_icons.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/font-awesome/_icons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_input-groups.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_jumbotron.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/partials/_kpi.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_labels.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/_ladda.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/font-awesome/_larger.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/modules/colors/_limes.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_list-group.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/font-awesome/_list.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/controllers/_login.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_media.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/modules/_mixins.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/font-awesome/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_modals.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/controllers/_modules.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/partials/_multistore.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/partials/_nav.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_navbar.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_navs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/orders/_new_product.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_normalize.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/modules/colors/_oranges.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_pager.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_pagination.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_panels.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/font-awesome/_path.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/modules/colors/_peaches.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/modules/colors/_pinks.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_popovers.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/modules/colors/_preboot.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_print.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/orders/_print_pdf_icon.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/outstanding/_print_pdf_icon.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/slip/_print_pdf_icon.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/orders/_product_line.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_progress-bars.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/modules/colors/_purples.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/modules/colors/_reds.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_responsive-utilities.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/font-awesome/_rotated-flipped.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/partials/_rtl.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_scaffolding.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/controllers/_search.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/orders/_shipping.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/font-awesome/_spinning.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/font-awesome/_stacked.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/partials/_switch.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/partials/_tables.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_tables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/modules/colors/_tans.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_theme.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_thumbnails.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/partials/_tinymce.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/partials/_toolbar.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_tooltip.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/controllers/_translations.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/partials/_tree.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/modules/colors/_turquoise.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_type.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_utilities.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/modules/_variables.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/font-awesome/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/modules/_web-fonts.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/bootstrap-sass/_wells.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/modules/colors/_whites.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/modules/colors/_yellows.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/cart_rules/actions.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/css/schemes/admin-theme-blue.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/schemes/admin-theme-blue.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/css/schemes/admin-theme-contrast.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/schemes/admin-theme-contrast.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/css/schemes/admin-theme-flex.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/schemes/admin-theme-flex.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/css/schemes/admin-theme-fruit.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/schemes/admin-theme-fruit.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/css/schemes/admin-theme-prune.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/schemes/admin-theme-prune.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/css/admin-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/admin-theme.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/admin-theme.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/vendor/bootstrap/affix.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/helpers/uploader/ajax.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/uploader/ajax.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/vendor/bootstrap/alert.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/associations.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/form/assoshop.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/helpers/uploader/attachment_ajax.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/attachments.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/vendor/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/vendor/bootstrap/button.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/calendar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/referrers/calendar.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stats/calendar.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/calendar/calendar.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/vendor/bootstrap/carousel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/multishop/check_fields.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/multishop/checkbox.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/vendor/bootstrap/collapse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/combinations.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/cart_rules/conditions.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/config.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/modules/configuration_bar.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/modules/configure.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/content.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/addons_catalog/content.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/attribute_generator/content.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/cms_content/content.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/emails/content.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/images/content.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/localization/content.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/login/content.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/modules/content.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/not_found/content.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/shop/content.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/shop_group/content.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/shop_url/content.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/customization.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/date-range-picker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/doc.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/vendor/bootstrap/dropdown.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/logs/employee_field.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stats/engines.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/vendor/enquire.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/error.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/modules/favorites.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/features.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/modules/filters.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/footer.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/footer_toolbar.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/cart_rules/form.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/access/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/addresses/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/attributes/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/attributes_groups/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/carrier_wizard/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/carriers/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/cart_rules/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/categories/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/cms/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/cms_categories/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/countries/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/employees/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/feature_value/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/features/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/groups/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/import/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/invoices/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/languages/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/modules_positions/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/orders/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/performance/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/referrers/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/request_sql/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/return/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/scenes/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/shop/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/shop_group/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/shop_url/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/slip/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/specific_price_rule/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/statuses/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stores/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/supply_orders/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/supply_orders_change_state/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/tags/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/tax_rules/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/webservice/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/form/form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/form/form_category.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/orders/form_customization_feedback.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/form_date_range_picker.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/form/form_group.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/carrier_wizard/helpers/form/form_ranges.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/referrers/form_settings.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/form_submit_ajax.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/dataviz/graph.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/login/header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/images.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/themes/helpers/view/importtheme_view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/css/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/css/vendor/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/img/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/modules/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/partials/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/sass/vendor/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/access/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/access/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/access/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/addons_catalog/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/addresses/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/addresses/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/addresses/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/addresses/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/attachments/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/attribute_generator/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/attributes/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/attributes/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/attributes/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/attributes/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/attributes_groups/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/attributes_groups/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/attributes_groups/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/attributes_groups/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/attributes_groups/helpers/view/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/backup/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/backup/download/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/backup/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/backup/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/backup/helpers/view/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/carrier_wizard/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/carrier_wizard/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/carrier_wizard/helpers/view/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/carriers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/carriers/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/carriers/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/cart_rules/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/cart_rules/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/cart_rules/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/carts/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/carts/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/carts/helpers/view/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/categories/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/categories/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/categories/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/categories/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/cms/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/cms/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/cms/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/cms_categories/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/cms_categories/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/cms_categories/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/cms_content/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/countries/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/countries/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/countries/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/countries/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/customer_threads/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/customer_threads/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/customer_threads/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/customer_threads/helpers/options/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/customer_threads/helpers/view/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/customers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/customers/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/customers/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/customers/helpers/view/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/dashboard/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/dashboard/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/dashboard/helpers/view/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/emails/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/employees/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/employees/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/employees/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/feature_value/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/feature_value/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/feature_value/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/features/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/features/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/features/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/geolocation/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/geolocation/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/geolocation/helpers/options/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/groups/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/groups/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/groups/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/groups/helpers/tree/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/groups/helpers/view/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/images/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/import/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/import/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/import/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/import/helpers/view/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/information/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/information/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/information/helpers/view/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/invoices/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/invoices/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/invoices/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/languages/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/languages/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/languages/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/localization/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/login/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/logs/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/logs/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/logs/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/maintenance/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/maintenance/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/maintenance/helpers/options/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/manufacturers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/manufacturers/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/manufacturers/helpers/view/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/meta/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/meta/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/meta/helpers/options/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/modules/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/modules_positions/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/not_found/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/order_preferences/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/order_preferences/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/order_preferences/helpers/options/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/orders/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/orders/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/orders/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/orders/helpers/view/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/outstanding/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/payment/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/payment/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/payment/helpers/view/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/performance/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/performance/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/performance/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/preferences/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/preferences/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/preferences/helpers/options/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/combination/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/combination/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/combination/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/helpers/tree/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/helpers/uploader/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/multishop/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/referrers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/referrers/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/referrers/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/referrers/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/referrers/helpers/view/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/request_sql/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/request_sql/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/request_sql/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/request_sql/helpers/view/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/return/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/return/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/return/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/scenes/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/scenes/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/scenes/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/scenes/helpers/tree/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/search/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/search/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/search/helpers/view/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/shop/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/shop/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/shop/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/shop/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/shop_group/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/shop_group/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/shop_group/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/shop_url/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/shop_url/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/shop_url/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/shop_url/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/slip/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/slip/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/slip/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/specific_price_rule/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/specific_price_rule/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/specific_price_rule/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/states/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stats/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stats/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stats/helpers/view/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/statuses/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/statuses/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/statuses/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stock_cover/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stock_cover/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stock_cover/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stock_instant_state/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stock_instant_state/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stock_instant_state/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stock_mvt/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stock_mvt/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stock_mvt/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stores/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stores/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stores/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stores/helpers/options/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/suppliers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/suppliers/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/suppliers/helpers/view/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/supply_orders/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/supply_orders/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/supply_orders/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/supply_orders/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/supply_orders/helpers/view/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/supply_orders_change_state/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/supply_orders_change_state/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/supply_orders_change_state/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/supply_orders_receipt_history/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/supply_orders_receipt_history/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/supply_orders_receipt_history/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/tags/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/tags/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/tags/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/tax_rules/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/tax_rules/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/tax_rules/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/tax_rules/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/tax_rules_group/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/tax_rules_group/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/tax_rules_group/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/themes/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/themes/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/themes/helpers/options/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/themes/helpers/view/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/tracking/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/tracking/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/tracking/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/translations/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/translations/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/translations/helpers/view/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/warehouses/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/warehouses/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/warehouses/helpers/view/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/webservice/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/webservice/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/webservice/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/calendar/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/dataviz/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/form/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/kpi/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/modules_list/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/options/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/tree/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/uploader/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/view/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/cart_rules/informations.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/informations.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/input_text_lang.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/invalid_token.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/vendor/jquery-passy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/jquery.fileupload-image.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/jquery.fileupload-process.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/jquery.fileupload-validate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/jquery.fileupload.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/jquery.iframe-transport.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/modules/js.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/kpi/kpi.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/layout-ajax.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/layout-export.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/layout.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/login/layout.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/modules/list.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/list/list.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/modules_list/list.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/list/list_action_addstock.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/list/list_action_default.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/attachments/list_action_delete.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/shop/helpers/list/list_action_delete.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/list/list_action_delete.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/list/list_action_details.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/list/list_action_duplicate.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/tax_rules/helpers/list/list_action_edit.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/list/list_action_edit.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/list/list_action_enable.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/request_sql/list_action_export.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/list/list_action_removestock.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/list/list_action_supplier_order_receipt.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/list/list_action_supply_order_change_state.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/list/list_action_supply_order_create_from_template.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/list/list_action_supply_order_receipt.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/list/list_action_transferstock.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/list/list_action_view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/attributes/helpers/list/list_content.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/carriers/helpers/list/list_content.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/shop/helpers/list/list_content.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/shop_url/helpers/list/list_content.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/tax_rules/helpers/list/list_content.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/list/list_content.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/countries/helpers/list/list_footer.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/combination/helpers/list/list_footer.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/states/helpers/list/list_footer.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/supply_orders_receipt_history/helpers/list/list_footer.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/tax_rules/helpers/list/list_footer.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/list/list_footer.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/addresses/helpers/list/list_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/attributes_groups/helpers/list/list_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/backup/helpers/list/list_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/cart_rules/helpers/list/list_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/categories/helpers/list/list_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/customer_threads/helpers/list/list_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/customers/helpers/list/list_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/logs/helpers/list/list_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/orders/helpers/list/list_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/combination/helpers/list/list_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/helpers/list/list_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/referrers/helpers/list/list_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stock_cover/helpers/list/list_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stock_instant_state/helpers/list/list_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stock_mvt/helpers/list/list_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/supply_orders/helpers/list/list_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/supply_orders_receipt_history/helpers/list/list_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/tax_rules/helpers/list/list_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/tracking/helpers/list/list_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/list/list_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/modules_positions/list_modules.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/modules/login_addons.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/carrier_wizard/logo.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/translations/helpers/view/main.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/vendor/matchMedia.addListener.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/vendor/matchMedia.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stats/menu.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/customer_threads/message.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/customer_threads/helpers/view/message.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/vendor/bootstrap/modal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/customer_threads/helpers/view/modal.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/modules_list/modal.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/modernizr-loads.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/vendor/modernizr.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/vendor/moment-with-langs.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/nav.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/css/vendor/nv.d3.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/vendor/nv.d3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/customer_threads/helpers/options/options.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/geolocation/helpers/options/options.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/maintenance/helpers/options/options.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/meta/helpers/options/options.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/order_preferences/helpers/options/options.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/preferences/helpers/options/options.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stores/helpers/options/options.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/themes/helpers/options/options.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/options/options.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/css/overrides.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/pack.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/modules/page.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/page_header_toolbar.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/modules/page_header_toolbar.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/vendor/bootstrap/popover.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/prices.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/cart_rules/product_rule.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/cart_rules/product_rule_group.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/cart_rules/product_rule_itemlist.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/quantities.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/modules/quickview.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/required_fields.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/payment/restrictions.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/kpi/row.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/vendor/bootstrap/scrollspy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/seo.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/shipping.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/shop/helpers/tree/shop_tree_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/shop/helpers/tree/shop_tree_node_folder.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/shop/helpers/tree/shop_tree_node_item.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/uploader/simple.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/specific_prices_shop_update.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stats/stats.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/carrier_wizard/summary.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/suppliers.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/vendor/bootstrap/tab.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/modules/tab_module_line.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/modules/tab_modules_list.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/textarea_lang.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/customer_threads/helpers/view/timeline_item.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/toolbar.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/vendor/bootstrap/tooltip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/vendor/bootstrap/transition.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/translations/helpers/view/translation_errors.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/translations/helpers/view/translation_form.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/translations/helpers/view/translation_mails.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/translations/helpers/view/translation_modules.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/tree.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/tree/tree.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/helpers/tree/tree_associated_categories.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/helpers/tree/tree_associated_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/groups/helpers/tree/tree_categories.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/helpers/tree/tree_categories.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/tree/tree_categories.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/helpers/tree/tree_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/tree/tree_header.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/tree/tree_node_folder.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/scenes/helpers/tree/tree_node_folder_checkbox.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/tree/tree_node_folder_checkbox.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/tree/tree_node_folder_checkbox_shops.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/groups/helpers/tree/tree_node_folder_radio.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/tree/tree_node_folder_radio.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/tree/tree_node_item.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/scenes/helpers/tree/tree_node_item_checkbox.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/tree/tree_node_item_checkbox.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/tree/tree_node_item_checkbox_shops.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/groups/helpers/tree/tree_node_item_radio.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/tree/tree_node_item_radio.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/tree/tree_shops.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/helpers/tree/tree_toolbar.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/tree/tree_toolbar.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/tree/tree_toolbar_link.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/tree/tree_toolbar_search.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/js/vendor/typeahead.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/backup/download/view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/backup/helpers/view/view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/carrier_wizard/helpers/view/view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/carts/helpers/view/view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/customer_threads/helpers/view/view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/customers/helpers/view/view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/dashboard/helpers/view/view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/groups/helpers/view/view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/import/helpers/view/view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/information/helpers/view/view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/manufacturers/helpers/view/view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/marketing/helpers/view/view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/orders/helpers/view/view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/payment/helpers/view/view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/referrers/helpers/view/view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/request_sql/helpers/view/view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/search/helpers/view/view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/stats/helpers/view/view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/suppliers/helpers/view/view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/supply_orders/helpers/view/view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/themes/helpers/view/view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/warehouses/helpers/view/view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/helpers/view/view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/customer_threads/helpers/view/view_.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/helpers/uploader/virtual_product.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/virtualproduct.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/products/warehouses.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ps16/themes/FOTheme/template/controllers/modules/warning_module.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps16/.gitignore" afterPath="$PROJECT_DIR$/ps16/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps16/classes/controller/AdminController.php" afterPath="$PROJECT_DIR$/ps16/classes/controller/AdminController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps16/override/controllers/front/ProductsPanelController.php" afterPath="$PROJECT_DIR$/ps16/override/controllers/front/ProductsPanelController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ps16/config/defines.inc.php" afterPath="$PROJECT_DIR$/ps16/config/defines.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artxchange.iml" afterPath="$PROJECT_DIR$/.idea/artxchange.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="artxchange.iws" />
@@ -782,82 +25,7 @@
     <favorites_list name="artxchange" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="allproducts.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps16/modules/testmodule/controllers/front/allproducts.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="46" selection-start="1212" selection-end="1212" vertical-scroll-proportion="-10.105263" vertical-offset="0" max-vertical-offset="738">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductsPanelController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps16/override/controllers/front/ProductsPanelController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="288" column="60" selection-start="12043" selection-end="12043" vertical-scroll-proportion="-7.111111" vertical-offset="4992" max-vertical-offset="7110">
-              <folding>
-                <element signature="e#6#768#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.inc.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps16/config/config.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="52" selection-start="3830" selection-end="3835" vertical-scroll-proportion="-3.1929824" vertical-offset="1294" max-vertical-offset="3798">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminProductsController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps16/controllers/admin/AdminProductsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2273" column="8" selection-start="87930" selection-end="87930" vertical-scroll-proportion="-1.6666666" vertical-offset="40405" max-vertical-offset="83970">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Hook.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps16/classes/Hook.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="409" column="0" selection-start="12575" selection-end="12575" vertical-scroll-proportion="-1.6666666" vertical-offset="6853" max-vertical-offset="13590">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FrontController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps16/classes/controller/FrontController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="0" selection-start="2441" selection-end="2441" vertical-scroll-proportion="-24.296297" vertical-offset="730" max-vertical-offset="22986">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ps16/classes/controller/AdminController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="194" column="13" selection-start="5699" selection-end="5699" vertical-scroll-proportion="0.620339" vertical-offset="2895" max-vertical-offset="64152">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Employee.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ps16/classes/Employee.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="349" column="0" selection-start="10887" selection-end="10887" vertical-scroll-proportion="-4.962963" vertical-offset="5734" max-vertical-offset="7308">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -868,16 +36,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/ps16/override/controllers/front/AuthController.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/ps16/classes/Product.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/ps16/override/controllers/front/AuthController.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/ps16/override/controllers/front/ProductsPanelController.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/ps16/classes/ObjectModel.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/ps15/override/controllers/admin/AdminCustomersController.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/ps16/classes/controller/AdminController.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/ps16/override/controllers/admin/AdminCustomersController.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/ps15/override/classes/Customer.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/ps15/override/controllers/front/AuthController.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/ps16/override/controllers/admin/AdminCustomersController.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/ps16/controllers/admin/AdminProductsController.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/ps15/override/controllers/front/AuthController.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -935,8 +103,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="64" />
     <option name="y" value="-4" />
-    <option name="width" value="1303" />
-    <option name="height" value="773" />
+    <option name="width" value="1537" />
+    <option name="height" value="905" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1013,7 +181,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1042,30 +209,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ps16" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="artxchange" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="artxchange" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ps16" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
+              <option name="myItemId" value="drupal" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1112,10 +262,10 @@
     <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="CHROME" server_name="192.168.219.135" start_url="">
       <method />
     </configuration>
-    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug">
+    <configuration default="true" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request">
       <method />
     </configuration>
-    <configuration default="true" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request">
+    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug">
       <method />
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
@@ -1195,16 +345,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
+    <frame x="64" y="-4" width="1537" height="905" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756326" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756326" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288948" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2044581" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24980783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2095366" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29955292" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32356858" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1213,9 +362,10 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1264,18 +414,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/override/controllers/admin/AdminCustomersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="23" selection-start="3121" selection-end="3121" vertical-scroll-proportion="0.7619048" vertical-offset="1312" max-vertical-offset="19332">
-          <folding>
-            <element signature="e#6#974#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="96" column="23" selection-start="3121" selection-end="3121" vertical-scroll-proportion="0.7619048" vertical-offset="1312" max-vertical-offset="19332" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/override/controllers/admin/AdminCustomersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="297" column="43" selection-start="10576" selection-end="10587" vertical-scroll-proportion="-4.140351" vertical-offset="4696" max-vertical-offset="17028">
-          <folding />
-        </state>
+        <state line="297" column="43" selection-start="10576" selection-end="10587" vertical-scroll-proportion="-4.140351" vertical-offset="4696" max-vertical-offset="17028" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/controllers/front/AuthController.php">
@@ -1295,16 +439,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/artxchange_db.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2898" column="2" selection-start="424202" selection-end="424202" vertical-scroll-proportion="0.61518323" vertical-offset="51929" max-vertical-offset="139050">
-          <folding />
-        </state>
+        <state line="2898" column="2" selection-start="424202" selection-end="424202" vertical-scroll-proportion="0.61518323" vertical-offset="51929" max-vertical-offset="139050" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/admin7018/ajax.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="976" selection-end="976" vertical-scroll-proportion="0.09375" vertical-offset="0" max-vertical-offset="1944">
-          <folding />
-        </state>
+        <state line="26" column="0" selection-start="976" selection-end="976" vertical-scroll-proportion="0.09375" vertical-offset="0" max-vertical-offset="1944" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/classes/Customer.php">
@@ -1321,9 +461,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="26" selection-start="754" selection-end="754" vertical-scroll-proportion="0.39419794" vertical-offset="489" max-vertical-offset="3924">
-          <folding />
-        </state>
+        <state line="40" column="26" selection-start="754" selection-end="754" vertical-scroll-proportion="0.39419794" vertical-offset="489" max-vertical-offset="3924" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/override/classes/Customer.php">
@@ -1345,16 +483,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/modules/blocknewsletter/blocknewsletter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="529" column="25" selection-start="17023" selection-end="17038" vertical-scroll-proportion="0.7004992" vertical-offset="8687" max-vertical-offset="9288">
-          <folding />
-        </state>
+        <state line="529" column="25" selection-start="17023" selection-end="17038" vertical-scroll-proportion="0.7004992" vertical-offset="8687" max-vertical-offset="9288" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/override/classes/Customer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="211" column="23" selection-start="7634" selection-end="7637" vertical-scroll-proportion="-0.09457093" vertical-offset="3438" max-vertical-offset="15714">
-          <folding />
-        </state>
+        <state line="211" column="23" selection-start="7634" selection-end="7637" vertical-scroll-proportion="-0.09457093" vertical-offset="3438" max-vertical-offset="15714" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/admincp/ajaxfilemanager/jscripts/ajaximageeditor_c.js">
@@ -1364,9 +498,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/classes/controller/FrontController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="283" column="68" selection-start="9875" selection-end="9875" vertical-scroll-proportion="0.6619718" vertical-offset="4445" max-vertical-offset="20430">
-          <folding />
-        </state>
+        <state line="283" column="68" selection-start="9875" selection-end="9875" vertical-scroll-proportion="0.6619718" vertical-offset="4445" max-vertical-offset="20430" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/themes/artxchange/product.tpl">
@@ -1376,9 +508,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/themes/artxchange/history.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="12" selection-start="495" selection-end="495" vertical-scroll-proportion="0.40625" vertical-offset="0" max-vertical-offset="2322">
-          <folding />
-        </state>
+        <state line="13" column="12" selection-start="495" selection-end="495" vertical-scroll-proportion="0.40625" vertical-offset="0" max-vertical-offset="2322" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps15/admincp/ajaxfilemanager/jscripts/ajaximageeditor.js">
@@ -1393,215 +523,147 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/modules/testmodule/css/testmodule.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="1" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="216">
-          <folding />
-        </state>
+        <state line="6" column="1" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="216" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/modules/testmodule/views/templates/front/allproducts.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="171" column="5" selection-start="12255" selection-end="12255" vertical-scroll-proportion="0.0" vertical-offset="2410" max-vertical-offset="3186">
-          <folding />
-        </state>
+        <state line="171" column="5" selection-start="12255" selection-end="12255" vertical-scroll-proportion="0.0" vertical-offset="2410" max-vertical-offset="3186" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/classes/Product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1722" column="62" selection-start="55879" selection-end="55879" vertical-scroll-proportion="1.9916805" vertical-offset="29385" max-vertical-offset="100584">
-          <folding />
-        </state>
+        <state line="1722" column="62" selection-start="55879" selection-end="55879" vertical-scroll-proportion="1.9916805" vertical-offset="29385" max-vertical-offset="100584" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/controllers/front/AddressController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="7" selection-start="1179" selection-end="1179" vertical-scroll-proportion="0.3294509" vertical-offset="0" max-vertical-offset="6516">
-          <folding />
-        </state>
+        <state line="34" column="7" selection-start="1179" selection-end="1179" vertical-scroll-proportion="0.3294509" vertical-offset="0" max-vertical-offset="6516" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/classes/controller/ModuleFrontController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.58802176" vertical-offset="324" max-vertical-offset="1152">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.58802176" vertical-offset="324" max-vertical-offset="1152" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/modules/testmodule/testmodule.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="286" max-vertical-offset="900">
-          <folding>
-            <marker date="1361157206000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..ps_product..." />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="286" max-vertical-offset="900" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/controllers/front/MyAccountController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="27" selection-start="1096" selection-end="1112" vertical-scroll-proportion="0.21875" vertical-offset="0" max-vertical-offset="756">
-          <folding />
-        </state>
+        <state line="30" column="27" selection-start="1096" selection-end="1112" vertical-scroll-proportion="0.21875" vertical-offset="0" max-vertical-offset="756" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/controllers/front/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="51" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.09457093" vertical-offset="0" max-vertical-offset="12312">
-          <folding />
-        </state>
+        <state line="26" column="51" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.09457093" vertical-offset="0" max-vertical-offset="12312" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/override/controllers/front/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="443" column="0" selection-start="18457" selection-end="18457" vertical-scroll-proportion="-295.33334" vertical-offset="0" max-vertical-offset="13212">
-          <folding>
-            <element signature="e#6#974#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="443" column="0" selection-start="18457" selection-end="18457" vertical-scroll-proportion="-295.33334" vertical-offset="0" max-vertical-offset="13212" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/controllers/front/ProductsPanelController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="0.058631923" vertical-offset="0" max-vertical-offset="614">
-          <folding />
-        </state>
+        <state line="2" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="0.058631923" vertical-offset="0" max-vertical-offset="614" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/controllers/admin/AdminAddressesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="30" selection-start="1642" selection-end="1642" vertical-scroll-proportion="-0.13688213" vertical-offset="486" max-vertical-offset="8622">
-          <folding />
-        </state>
+        <state line="46" column="30" selection-start="1642" selection-end="1642" vertical-scroll-proportion="-0.13688213" vertical-offset="486" max-vertical-offset="8622" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/controllers/front/OrderOpcController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="4" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.21875" vertical-offset="0" max-vertical-offset="12366">
-          <folding />
-        </state>
+        <state line="30" column="4" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.21875" vertical-offset="0" max-vertical-offset="12366" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/controllers/front/HistoryController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="11" selection-start="1129" selection-end="1129" vertical-scroll-proportion="-0.45500848" vertical-offset="412" max-vertical-offset="1026">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps16/modules/testmodule/controllers/front/allproducts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="46" selection-start="1212" selection-end="1212" vertical-scroll-proportion="-10.105263" vertical-offset="0" max-vertical-offset="738">
-          <folding />
-        </state>
+        <state line="31" column="11" selection-start="1129" selection-end="1129" vertical-scroll-proportion="-0.45500848" vertical-offset="412" max-vertical-offset="1026" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/config/defines.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="34" selection-start="2112" selection-end="2112" vertical-scroll-proportion="0.33333334" vertical-offset="632" max-vertical-offset="3006">
-          <folding />
-        </state>
+        <state line="68" column="34" selection-start="2112" selection-end="2112" vertical-scroll-proportion="0.33333334" vertical-offset="632" max-vertical-offset="3006" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/controllers/front/CartController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="56" selection-start="112" selection-end="112" vertical-scroll-proportion="0.1978022" vertical-offset="0" max-vertical-offset="6822">
-          <folding />
-        </state>
+        <state line="6" column="56" selection-start="112" selection-end="112" vertical-scroll-proportion="0.1978022" vertical-offset="0" max-vertical-offset="6822" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/modules/paypalusa/backward_compatibility/Context.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="11" selection-start="2127" selection-end="2127" vertical-scroll-proportion="2.1125226" vertical-offset="294" max-vertical-offset="5940">
-          <folding />
-        </state>
+        <state line="104" column="11" selection-start="2127" selection-end="2127" vertical-scroll-proportion="2.1125226" vertical-offset="294" max-vertical-offset="5940" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/classes/controller/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="24" selection-start="1426" selection-end="1430" vertical-scroll-proportion="0.33205375" vertical-offset="853" max-vertical-offset="8514">
-          <folding>
-            <element signature="e#6#974#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="57" column="24" selection-start="1426" selection-end="1430" vertical-scroll-proportion="0.33205375" vertical-offset="853" max-vertical-offset="8514" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/classes/Dispatcher.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="392" column="65" selection-start="13483" selection-end="13490" vertical-scroll-proportion="0.33333334" vertical-offset="6460" max-vertical-offset="14616">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps16/classes/Hook.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="409" column="0" selection-start="12575" selection-end="12575" vertical-scroll-proportion="-1.6666666" vertical-offset="6853" max-vertical-offset="13590">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps16/classes/Employee.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="349" column="0" selection-start="10887" selection-end="10887" vertical-scroll-proportion="-4.962963" vertical-offset="5734" max-vertical-offset="7308">
-          <folding />
-        </state>
+        <state line="392" column="65" selection-start="13483" selection-end="13490" vertical-scroll-proportion="0.33333334" vertical-offset="6460" max-vertical-offset="14616" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/admin7018/grider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="11" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.1306715" vertical-offset="0" max-vertical-offset="1674">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps16/classes/controller/FrontController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="0" selection-start="2441" selection-end="2441" vertical-scroll-proportion="-24.296297" vertical-offset="730" max-vertical-offset="22986">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ps16/controllers/admin/AdminProductsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2273" column="8" selection-start="87930" selection-end="87930" vertical-scroll-proportion="-1.6666666" vertical-offset="40405" max-vertical-offset="83970">
-          <folding />
-        </state>
+        <state line="27" column="11" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.1306715" vertical-offset="0" max-vertical-offset="1674" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/classes/ObjectModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="458" column="0" selection-start="13517" selection-end="13517" vertical-scroll-proportion="3.88" vertical-offset="6886" max-vertical-offset="30204">
-          <folding>
-            <element signature="e#6#974#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="458" column="0" selection-start="13517" selection-end="13517" vertical-scroll-proportion="3.88" vertical-offset="6886" max-vertical-offset="30204" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/themes/FOTheme/js/vendor/bootstrap/tab.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="29" selection-start="568" selection-end="568" vertical-scroll-proportion="0.30361447" vertical-offset="54" max-vertical-offset="2250">
-          <folding />
-        </state>
+        <state line="16" column="29" selection-start="568" selection-end="568" vertical-scroll-proportion="0.30361447" vertical-offset="54" max-vertical-offset="2250" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ps16/config/config.inc.php">
+    <entry file="file://$PROJECT_DIR$/ps16/controllers/admin/AdminProductsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="52" selection-start="3830" selection-end="3835" vertical-scroll-proportion="-3.1929824" vertical-offset="1294" max-vertical-offset="3798">
-          <folding />
-        </state>
+        <state line="2277" column="30" selection-start="88175" selection-end="88175" vertical-scroll-proportion="0.125" vertical-offset="40914" max-vertical-offset="84384" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ps16/override/controllers/front/ProductsPanelController.php">
+    <entry file="file://$PROJECT_DIR$/ps16/classes/Hook.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="288" column="60" selection-start="12043" selection-end="12043" vertical-scroll-proportion="-7.111111" vertical-offset="4992" max-vertical-offset="7110">
-          <folding>
-            <element signature="e#6#768#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="409" column="0" selection-start="12575" selection-end="12575" vertical-scroll-proportion="0.0" vertical-offset="7362" max-vertical-offset="14004" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps16/classes/controller/FrontController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="0" selection-start="2441" selection-end="2441" vertical-scroll-proportion="0.0" vertical-offset="1800" max-vertical-offset="23400" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ps16/classes/controller/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="194" column="13" selection-start="5699" selection-end="5699" vertical-scroll-proportion="0.620339" vertical-offset="2895" max-vertical-offset="64152">
-          <folding />
-        </state>
+        <state line="224" column="0" selection-start="6661" selection-end="6661" vertical-scroll-proportion="1.600726" vertical-offset="2736" max-vertical-offset="64152" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps16/config/config.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="52" selection-start="3830" selection-end="3835" vertical-scroll-proportion="0.0" vertical-offset="1890" max-vertical-offset="4212" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps16/override/controllers/front/ProductsPanelController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="288" column="60" selection-start="12043" selection-end="12043" vertical-scroll-proportion="0.31946754" vertical-offset="4992" max-vertical-offset="7110" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps16/modules/testmodule/controllers/front/allproducts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="46" selection-start="1212" selection-end="1212" vertical-scroll-proportion="0.73044926" vertical-offset="137" max-vertical-offset="738" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ps16/classes/Employee.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="349" column="0" selection-start="10887" selection-end="10887" vertical-scroll-proportion="0.0" vertical-offset="6282" max-vertical-offset="7722" />
       </provider>
     </entry>
   </component>
