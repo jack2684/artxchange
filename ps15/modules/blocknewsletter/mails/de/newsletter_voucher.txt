@@ -1,8 +1,0 @@
-Hallo,
-
-Sie haben unseren Newsletter abonniert. Als Dankeschön erhalten Sie den folgenden Gutschein: {discount}
-
-{shop_name} - {shop_url}
-
-
-{shop_name} powered by PrestaShop™ 

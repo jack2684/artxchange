@@ -1,9 +1,0 @@
-Salve {firstname} {lastname},
-
-Un nuovo ordine è stato generato per te.
-
-Vai a {order_link} per finalizzare il pagamento.
-
-{shop_name} - {shop_url}
-
-{shop_url} powered by PrestaShop™

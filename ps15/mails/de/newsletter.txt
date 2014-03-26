@@ -1,5 +1,0 @@
-Newsletter von {shop_name}
-
-{message}
-
-{shop_url} powered by PrestaShop™

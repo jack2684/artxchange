@@ -1,9 +1,0 @@
-Salve {firstname} {lastname},
-
-Abbiamo aggiornato lo stato del tuo buono di restituzione n.{id_order_return}, il nuovo stato è: "{state_order_return}"
-
-Puoi rivedere questo ordine nella sezione "Cronologia ordine" del tuo account cliccando su "Il mio account" nel nostro sito.
-
-{shop_name} - {shop_url}
-
-{shop_url} powered by PrestaShop™

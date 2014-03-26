@@ -1,5 +1,0 @@
-{reply}
-
-Non rispondere a questo messaggio tramite email, il tuo messaggio non ci arriverebbe.
-
-Per poter rispondere, usa il seguente link: {link}

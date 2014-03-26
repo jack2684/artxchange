@@ -1,9 +1,0 @@
-Salve,
-
-Avviso: è stato registrato un nuovo messaggio di avviso nel tuo Back Office.
-
-Puoi controllarlo nella sezione "Parametri Avanzati" > "Log" del tuo Back Office.
-
-{shop_name} - {shop_url}
-
-{shop_url} powered by PrestaShop™
