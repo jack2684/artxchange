@@ -1,0 +1,11 @@
+;$Id$
+
+name = GjjFirst
+description = A first module.
+package = Drupal 7 Development
+core = 7.x
+files[] = gjjfirst.module
+files[] = gjjfirst.test
+
+;dependencies[] = autoload
+;php = 5.4
