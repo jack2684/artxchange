@@ -1,0 +1,19 @@
+<?php
+// $Id$
+/**
+ * @file
+ * User Warn module file
+ *
+ * This module allows site administrators to send a stock warning
+ * e-mail to a specified user or users through the admin interface.  * Administrators
+ * can configure the default e-mail including token replacement.
+ */
+/**
+ * Implement hook_help().
+ */
+function user_warn_help($path, $arg) {
+    if ($path == 'admin/help#user_warn') {
+        return t('User Warn allows site adminitrators to send a standard
+e-mail to site users to notify them of improper behavior.');
+    }
+}
