@@ -2,11 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26fadfb4-8239-44a2-8a4f-0e304f6f31b2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ubercart/sites/all/modules/custom/gjjwarn/gjj_warn.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ubercart/sites/all/modules/custom/gjjwarn/gjj_warn.module" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libreplan_1.3.0-1_amd64.deb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libreplan_1.3.0-1_i386.deb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ubercart/sites/all/modules/custom/user/user-picture.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ubercart/sites/all/modules/custom/user/user-profile-category.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ubercart/sites/all/modules/custom/user/user-profile-item.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ubercart/sites/all/modules/custom/user/user-profile.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ubercart/sites/all/modules/custom/user/user-rtl.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ubercart/sites/all/modules/custom/user/user.admin.inc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ubercart/sites/all/modules/custom/user/user.api.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ubercart/sites/all/modules/custom/user/user.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ubercart/sites/all/modules/custom/user/user.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ubercart/sites/all/modules/custom/user/user.install" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ubercart/sites/all/modules/custom/user/user.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ubercart/sites/all/modules/custom/user/user.module" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ubercart/sites/all/modules/custom/user/user.pages.inc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ubercart/sites/all/modules/custom/user/user.permissions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ubercart/sites/all/modules/custom/user/user.test" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ubercart/sites/all/modules/custom/user/user.tokens.inc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ubercart/sites/all/modules/custom/user/tests/user_form_test.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ubercart/sites/all/modules/custom/user/tests/user_form_test.module" />
     </list>
     <ignored path="artxchange.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +41,17 @@
     <favorites_list name="artxchange" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="user_form_test.info" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ubercart/sites/all/modules/custom/user/tests/user_form_test.info">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -310,7 +333,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="trails" />
+              <option name="myItemId" value="user" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -344,7 +367,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tips" />
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -377,10 +404,6 @@
               <option name="myItemId" value="custom" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scaffolding" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -396,19 +419,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="custom" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -462,10 +473,10 @@
     <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="CHROME" server_name="192.168.219.135" start_url="">
       <method />
     </configuration>
-    <configuration default="true" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request">
+    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug">
       <method />
     </configuration>
-    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug">
+    <configuration default="true" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request">
       <method />
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
@@ -546,14 +557,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1537" height="905" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756326" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756326" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288948" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24916051" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24647415" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24983211" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25384617" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32356858" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -764,6 +775,13 @@
     <entry file="file://$PROJECT_DIR$/ubercart/sites/all/modules/custom/gjjwarn/gjj_warn.info">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="26" selection-start="175" selection-end="175" vertical-scroll-proportion="0.144" vertical-offset="0" max-vertical-offset="750" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ubercart/sites/all/modules/custom/user/tests/user_form_test.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
