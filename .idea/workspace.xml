@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26fadfb4-8239-44a2-8a4f-0e304f6f31b2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ubercart/sites/all/modules/custom/pages/pages.module" afterPath="$PROJECT_DIR$/ubercart/sites/all/modules/custom/pages/pages.module" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupal/modules/user/user.module" afterPath="$PROJECT_DIR$/drupal/modules/user/user.module" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="artxchange.iws" />
@@ -28,32 +25,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="user.module" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/drupal/modules/user/user.module">
+      <file leaf-file-name="artx_user.module" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/custom/artx/artx_user/artx_user.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1646" column="34" selection-start="61561" selection-end="61561" vertical-scroll-proportion="0.7644231" vertical-offset="29310" max-vertical-offset="72810">
+            <state line="12" column="41" selection-start="260" selection-end="260" vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="1080">
               <folding>
-                <element signature="e#7#74#0" expanded="true" />
-                <marker date="1396576671078" expanded="true" signature="11279:11331" placeholder="SELECT uid F..." />
-                <marker date="1396576671078" expanded="true" signature="13557:13669" placeholder="SELECT r.rid..." />
-                <marker date="1396576671078" expanded="true" signature="23293:23321" placeholder="SELECT MAX(u..." />
-                <marker date="1396576671078" expanded="true" signature="29849:29916" placeholder="SELECT rid, ..." />
-                <marker date="1396576671078" expanded="true" signature="53402:53487" placeholder="SELECT uid, ..." />
-                <marker date="1396576671078" expanded="true" signature="54117:54209" placeholder="SELECT COUNT..." />
-                <marker date="1396576671078" expanded="true" signature="54622:54829" placeholder="SELECT u.uid..." />
-                <marker date="1396576671078" expanded="true" signature="74557:74622" placeholder="SELECT modul..." />
-                <marker date="1396576671078" expanded="true" signature="78977:79032" placeholder="SELECT * FRO..." />
-                <marker date="1396576671078" expanded="true" signature="115578:115618" placeholder="SELECT name ..." />
-                <marker date="1396576671078" expanded="true" signature="128982:129047" placeholder="SELECT uid, ..." />
+                <element signature="e#6#63#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pages.module" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ubercart/sites/all/modules/custom/pages/pages.module">
+      <file leaf-file-name="commerce_product.module" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/commerce/modules/product/commerce_product.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="1107" selection-end="1490" vertical-scroll-proportion="-1.6140351" vertical-offset="574" max-vertical-offset="3870">
+            <state line="20" column="4" selection-start="556" selection-end="556" vertical-scroll-proportion="0.6905371" vertical-offset="0" max-vertical-offset="17478">
+              <folding>
+                <marker date="1395284865834" expanded="true" signature="19103:19161" placeholder="SELECT produ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="commerce_product.info" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/commerce/modules/product/commerce_product.info">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="0" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="702">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="commerce_product_ui.module" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/commerce/modules/product/commerce_product_ui.module">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="286" column="16" selection-start="9940" selection-end="9940" vertical-scroll-proportion="-8.851851" vertical-offset="4873" max-vertical-offset="9738">
+              <folding>
+                <marker date="1395284865838" expanded="true" signature="10313:10350" placeholder="SELECT * FRO..." />
+                <marker date="1395284865838" expanded="true" signature="14435:14494" placeholder="SELECT type ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="commerce_kickstart_user.module" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/commerce_kickstart/commerce_kickstart_user/commerce_kickstart_user.module">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="50" selection-start="760" selection-end="760" vertical-scroll-proportion="-5.0526314" vertical-offset="0" max-vertical-offset="4860">
               <folding />
             </state>
           </provider>
@@ -69,10 +87,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/drupal/modules/user/user.module" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/tools/profiling/Tools.php" />
         <option value="$PROJECT_DIR$/themes/leoconv/authentication.tpl" />
         <option value="$PROJECT_DIR$/override/controllers/front/AuthController.php" />
         <option value="$PROJECT_DIR$/controllers/front/AuthController.php" />
@@ -117,6 +137,13 @@
         <option value="$PROJECT_DIR$/ubercart/sites/all/modules/custom/tips/tips.module" />
         <option value="$PROJECT_DIR$/ubercart/sites/all/modules/custom/pages/pages.module" />
         <option value="$PROJECT_DIR$/drupal/modules/user/user.module" />
+        <option value="$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/commerce_kickstart/commerce_kickstart_user/commerce_kickstart_user.module" />
+        <option value="$PROJECT_DIR$/drupal/sites/all/modules/custom/commerce_kickstart/commerce_kickstart_user/commerce_kickstart_user.module" />
+        <option value="$PROJECT_DIR$/drupal/sites/all/modules/custom/user/user.module" />
+        <option value="$PROJECT_DIR$/drupal/sites/all/modules/custom/artx/artx_user/commerce_kickstart_user.info" />
+        <option value="$PROJECT_DIR$/drupal/sites/all/modules/custom/artx/artx_user/artx_user.info" />
+        <option value="$PROJECT_DIR$/drupal/sites/all/modules/custom/artx/artx_user/artx_user.module" />
+        <option value="$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/commerce/modules/product/commerce_product.module" />
       </list>
     </option>
   </component>
@@ -138,6 +165,7 @@
         </path_mappings>
       </server>
       <server host="192.168.8.139" name="192.168.8.139" />
+      <server host="192.168.8.140" name="192.168.8.140" />
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
@@ -229,6 +257,136 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="ubercart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sites" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ubercart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sites" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="all" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ubercart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sites" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="all" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ubercart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sites" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="all" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="custom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ubercart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sites" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="all" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="custom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="drupal" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -244,6 +402,130 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="drupal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="profiles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drupal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="profiles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce_kickstart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drupal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="profiles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce_kickstart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contrib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drupal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="profiles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce_kickstart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contrib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drupal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="profiles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce_kickstart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contrib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -265,11 +547,31 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="profiles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce_kickstart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
+              <option name="myItemId" value="contrib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -283,7 +585,57 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bam-rp-d7-dev-core-concepts" />
+              <option name="myItemId" value="drupal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="profiles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce_kickstart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce_kickstart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drupal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="profiles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce_kickstart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce_kickstart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commerce_kickstart_user" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -294,8 +646,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistory" value="admincustomer&#10;function.l.php&#10;LICENSE.txt&#10;Controller.php&#10;FrontController&#10;authentication.tpl&#10;account-creation" />
-    <property name="options.lastSelected" value="preferences.sourceCode" />
+    <property name="SearchEverywhereHistory" value="&#10;admincustomer&#10;function.l.php&#10;LICENSE.txt&#10;Controller.php&#10;FrontController&#10;authentication.tpl&#10;account-creation" />
+    <property name="options.lastSelected" value="preferences.sourceCode.PHP" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -308,11 +660,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/drupal/sites/all/modules/custom/artx/artx_user" />
+      <recent name="$PROJECT_DIR$/drupal/sites/all/modules/custom/commerce_kickstart" />
+      <recent name="$PROJECT_DIR$/drupal/sites/all/modules/custom" />
       <recent name="$PROJECT_DIR$/ubercart/sites/all/modules/custom" />
       <recent name="$PROJECT_DIR$/ubercart/sites/all/modules/custom/first" />
-      <recent name="$PROJECT_DIR$/ps16/themes" />
-      <recent name="$PROJECT_DIR$/ps16/override/controllers/front" />
-      <recent name="$PROJECT_DIR$/ps16/themes/artxchange" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/drupal/sites/default/custom/first" />
@@ -421,15 +773,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1537" height="905" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756326" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756326" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288948" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44102564" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24916051" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24983211" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33846155" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32975152" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33846155" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32356858" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -437,7 +790,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53333336" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -503,7 +855,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="87" />
+      <option name="time" value="96" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -684,29 +1036,134 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/drupal/modules/user/user.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1626" column="40" selection-start="60882" selection-end="60882" vertical-scroll-proportion="-0.100961536" vertical-offset="29310" max-vertical-offset="72810">
+          <folding>
+            <element signature="e#7#74#0" expanded="true" />
+            <marker date="1396579859766" expanded="true" signature="-1:-1" placeholder="SELECT uid F..." />
+            <marker date="1396579859766" expanded="true" signature="-1:-1" placeholder="SELECT uid F..." />
+            <marker date="1396579859766" expanded="true" signature="-1:-1" placeholder="SELECT r.rid..." />
+            <marker date="1396579859766" expanded="true" signature="-1:-1" placeholder="SELECT r.rid..." />
+            <marker date="1396579859766" expanded="true" signature="-1:-1" placeholder="SELECT MAX(u..." />
+            <marker date="1396579859766" expanded="true" signature="-1:-1" placeholder="SELECT rid, ..." />
+            <marker date="1396579859766" expanded="true" signature="-1:-1" placeholder="SELECT rid, ..." />
+            <marker date="1396579859766" expanded="true" signature="-1:-1" placeholder="SELECT uid, ..." />
+            <marker date="1396579859766" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
+            <marker date="1396579859766" expanded="true" signature="-1:-1" placeholder="SELECT u.uid..." />
+            <marker date="1396579859766" expanded="true" signature="-1:-1" placeholder="SELECT modul..." />
+            <marker date="1396579859766" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1396579859766" expanded="true" signature="-1:-1" placeholder="SELECT name ..." />
+            <marker date="1396579859766" expanded="true" signature="-1:-1" placeholder="SELECT name ..." />
+            <marker date="1396579859766" expanded="true" signature="-1:-1" placeholder="SELECT uid, ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ubercart/modules/block/block.install">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="339" column="20" selection-start="11313" selection-end="11313" vertical-scroll-proportion="0.5171233" vertical-offset="5951" max-vertical-offset="8694">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ubercart/sites/all/modules/custom/pages/pages.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1107" selection-end="1490" vertical-scroll-proportion="-1.6140351" vertical-offset="574" max-vertical-offset="3870">
+        <state line="34" column="22" selection-start="1064" selection-end="1064" vertical-scroll-proportion="-0.96183205" vertical-offset="1242" max-vertical-offset="3870">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drupal/modules/user/user.module">
+    <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/custom/scaffolding/scaffolding.info">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1646" column="34" selection-start="61561" selection-end="61561" vertical-scroll-proportion="0.7644231" vertical-offset="29310" max-vertical-offset="72810">
+        <state line="10" column="22" selection-start="331" selection-end="331" vertical-scroll-proportion="0.25714287" vertical-offset="0" max-vertical-offset="700">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/connector/modules/connector_action_default_register_form/connector_action_default_register_form.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="0" selection-start="1196" selection-end="1196" vertical-scroll-proportion="1.42711" vertical-offset="0" max-vertical-offset="2052">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/custom/artx/artx_user/artx_user.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="317" selection-end="317" vertical-scroll-proportion="0.4814815" vertical-offset="0" max-vertical-offset="486">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/build-commerce-kickstart.make">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="575">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/commerce_kickstart/commerce_kickstart_user/commerce_kickstart_user.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="50" selection-start="760" selection-end="760" vertical-scroll-proportion="-5.0526314" vertical-offset="0" max-vertical-offset="4860">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/commerce/modules/product/commerce_product_ui.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/commerce/modules/product/commerce_product_ui.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="286" column="16" selection-start="9940" selection-end="9940" vertical-scroll-proportion="-8.851851" vertical-offset="4873" max-vertical-offset="9738">
           <folding>
-            <element signature="e#7#74#0" expanded="true" />
-            <marker date="1396576671078" expanded="true" signature="11279:11331" placeholder="SELECT uid F..." />
-            <marker date="1396576671078" expanded="true" signature="13557:13669" placeholder="SELECT r.rid..." />
-            <marker date="1396576671078" expanded="true" signature="23293:23321" placeholder="SELECT MAX(u..." />
-            <marker date="1396576671078" expanded="true" signature="29849:29916" placeholder="SELECT rid, ..." />
-            <marker date="1396576671078" expanded="true" signature="53402:53487" placeholder="SELECT uid, ..." />
-            <marker date="1396576671078" expanded="true" signature="54117:54209" placeholder="SELECT COUNT..." />
-            <marker date="1396576671078" expanded="true" signature="54622:54829" placeholder="SELECT u.uid..." />
-            <marker date="1396576671078" expanded="true" signature="74557:74622" placeholder="SELECT modul..." />
-            <marker date="1396576671078" expanded="true" signature="78977:79032" placeholder="SELECT * FRO..." />
-            <marker date="1396576671078" expanded="true" signature="115578:115618" placeholder="SELECT name ..." />
-            <marker date="1396576671078" expanded="true" signature="128982:129047" placeholder="SELECT uid, ..." />
+            <marker date="1395284865838" expanded="true" signature="10313:10350" placeholder="SELECT * FRO..." />
+            <marker date="1395284865838" expanded="true" signature="14435:14494" placeholder="SELECT type ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/commerce/modules/product/commerce_product.info.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-5.559322" vertical-offset="1968" max-vertical-offset="2322">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/commerce_kickstart/commerce_kickstart_user/commerce_kickstart_user.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.5511811" vertical-offset="591" max-vertical-offset="972">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/custom/artx/artx_user/artx_user.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="41" selection-start="260" selection-end="260" vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="1080">
+          <folding>
+            <element signature="e#6#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/commerce/modules/product/commerce_product.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.0" vertical-offset="321" max-vertical-offset="702">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/commerce/modules/product/commerce_product.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="4" selection-start="556" selection-end="556" vertical-scroll-proportion="0.6905371" vertical-offset="0" max-vertical-offset="17478">
+          <folding>
+            <marker date="1395284865834" expanded="true" signature="19103:19161" placeholder="SELECT produ..." />
           </folding>
         </state>
       </provider>
