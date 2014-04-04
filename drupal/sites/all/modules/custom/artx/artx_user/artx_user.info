@@ -1,0 +1,13 @@
+name = Artxchange User
+description = Provides user related functionality.
+core = 7.x
+package = Artxchange
+php = 5.2.4
+dependencies[] = commerce_kickstart_user
+
+; Information added by Drupal.org packaging script on 2014-03-12 -- what?
+version = "7.x-2.13"
+core = "7.x"
+project = "artxchange"
+datestamp = "1394608130"
+
