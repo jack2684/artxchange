@@ -1635,6 +1635,17 @@ function user_menu() {
     'access callback' => 'user_register_access',
     'type' => MENU_LOCAL_TASK,
   );
+    $items['pages/render-array/tab1'] = array(
+        'type' => MENU_DEFAULT_LOCAL_TASK,
+        'title' => 'Tab 1',
+    );
+    $items['pages/render-array/tab2'] = array(
+        'title' => 'Tab 2',
+        'description' => 'Demonstrating secondary tabs.',
+        'page callback' => 'pages_render_array',
+        'access callback' => TRUE,
+        'type' => MENU_LOCAL_TASK,
+    );
 
   $items['user/password'] = array(
     'title' => 'Request new password',
