@@ -17,7 +17,7 @@ function commerce_kickstart_user_menu_alter(&$items) {
   $items['user/%user/view']['title arguments'] = array(1);
   $items['user/%user/edit']['title'] = 'Update email/password';
   $items['user']['type'] = MENU_CALLBACK;
-  $items['user/register']['type'] = MENU_CALLBACK;
+//  $items['user/register']['type'] = MENU_CALLBACK;
   $items['user/password']['type'] = MENU_CALLBACK;
 }
 
