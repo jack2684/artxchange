@@ -39,6 +39,7 @@ function artx_user_menu_alter(&$items) {
     'access callback' => 'user_register_access',
     'type' => MENU_LOCAL_TASK,
   );
+  return;
 }
 
 /**
@@ -52,4 +53,20 @@ function artx_user_menu_alter(&$items) {
 function user_register_form_empty($form, &$form_state)
 {
   return $form;
+}
+
+/**
+ * Implement hook_modules_implement_alter
+ *
+ * @param $implementations
+ * @param $hook
+ */
+function artx_user_module_implements_alter(&$implementations, $hook)
+{
+  if($hook == "menu_alter")
+  {
+    unset($implementations['artx_user']);
+    $mymodule = array('artx_user' => false);
+    $implementations = $implementations + $mymodule; // Also could use array_merge
+  }
 }
