@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Defines the core Commerce product entity, including the entity itself, the
+ * bundle definitions (product types), and various API functions to manage
+ * products and interact with them through forms and autocompletes.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function artx_product_menu() {
+
+  // Add a product.
+  $items['commerce/products/add'] = array(
+    'title' => 'Add a product',
+    'description' => 'Add a new product for sale.',
+    'page callback' => 'artx_product_ui_add_page',
+    'access callback' => TRUE,
+//    'access callback' => 'commerce_product_ui_product_add_any_access',
+    'weight' => 10,
+    'file' => 'includes/artx_product_ui.products.inc',
+  );
+  foreach (commerce_product_types() as $type => $product_type) {
+    $items['commerce/products/add/' . strtr($type, array('_' => '-'))] = array(
+      'title' => 'Create !name',
+      'title arguments' => array('!name' => $product_type['name']),
+      'description' => $product_type['description'],
+      'page callback' => 'commerce_product_ui_product_form_wrapper',
+      'page arguments' => array(commerce_product_new($type)),
+      'access callback' => TRUE,
+//      'access callback' => 'commerce_product_access',
+//      'access arguments' => array('create', commerce_product_new($type)),
+      'file' => 'includes/commerce_product_ui.products.inc',
+    );
+  }
+
+  return $items;
+}

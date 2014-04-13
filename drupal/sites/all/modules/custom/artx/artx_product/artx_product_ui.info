@@ -10,4 +10,3 @@ version = "7.x-2.13"
 core = "7.x"
 project = "artxchange"
 datestamp = "1394608130"
-
