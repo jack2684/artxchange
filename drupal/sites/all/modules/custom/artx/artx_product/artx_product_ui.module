@@ -22,13 +22,13 @@ function artx_product_menu()
 //    'access callback' => 'commerce_product_ui_product_add_any_access',
     'weight' => 10,
   );
-  foreach (commerce_product_types() as $type => $product_type) {
+  foreach (artx_product_types() as $type => $product_type) {
     $items['commerce/products/add/' . strtr($type, array('_' => '-'))] = array(
       'title' => 'Create !name',
       'title arguments' => array('!name' => $product_type['name']),
       'description' => $product_type['description'],
       'page callback' => 'artx_product_ui_product_form_wrapper',
-      'page arguments' => array(commerce_product_new($type)),
+      'page arguments' => array(artx_product_new($type)),
       'access callback' => TRUE,
 //      'access callback' => 'commerce_product_access',
 //      'access arguments' => array('create', commerce_product_new($type)),
@@ -44,7 +44,7 @@ function artx_product_menu()
 function artx_product_ui_add_page()
 {
   if (module_exists('commerce_product_ui')) {
-    module_load_include('inc', 'commerce_product_ui', 'commerce_product_ui.products');
+    module_load_include('inc', 'commerce_product_ui', 'includes/commerce_product_ui.products');
     if (function_exists('commerce_product_ui_add_page'))
       return commerce_product_ui_add_page();
     else
@@ -65,9 +65,16 @@ function artx_product_ui_add_page()
  */
 function artx_product_ui_product_form_wrapper($product)
 {
-  if (module_exists('commerce_product_ui') && function_exists('commerce_product_ui_product_form_wrapper')) {
-    return commerce_product_ui_product_form_wrapper($product);
+  if (module_exists('commerce_product_ui')) {
+    module_load_include('inc', 'commerce_product_ui', 'includes/commerce_product_ui.products');
+    if (function_exists('commerce_product_ui_product_form_wrapper'))
+      return commerce_product_ui_product_form_wrapper($product);
+    else
+      log2watchdog('function not found', __FUNCTION__);
+  } else {
+    log2watchdog('module not found', __FUNCTION__);
   }
+  return null;
 }
 
 /**
@@ -81,11 +88,40 @@ function artx_product_ui_product_form_wrapper($product)
  */
 function artx_product_new($type = '')
 {
-  if (module_exists('commerce_product') && function_exists('commerce_product_new')) {
-    return commerce_product_new($product);
+  if (module_exists('commerce_product')) {
+    module_load_include('module', 'commerce_product');
+    if (function_exists('commerce_product_new'))
+      return commerce_product_new($type);
+    else
+      log2watchdog('function not found', __FUNCTION__);
+  } else {
+    log2watchdog('module not found', __FUNCTION__);
   }
+  return null;
 }
 
+/**
+ * Returns an array of product type arrays keyed by type.
+ */
+function artx_product_types() {
+  if (module_exists('commerce_product')) {
+    module_load_include('module', 'commerce_product');
+    if (function_exists('commerce_product_types'))
+      return commerce_product_types();
+    else
+      log2watchdog('function not found', __FUNCTION__);
+  } else {
+    log2watchdog('module not found', __FUNCTION__);
+  }
+  return null;
+}
+
+/**
+ * wrapper of watchdog function to log the errors
+ *
+ * @param $err_type
+ * @param $functionname
+ */
 function log2watchdog($err_type, $functionname)
 {
   watchdog($err_type,
