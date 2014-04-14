@@ -10,7 +10,8 @@
 /**
  * Implements hook_menu().
  */
-function artx_product_menu() {
+function artx_product_menu()
+{
 
   // Add a product.
   $items['commerce/products/add'] = array(
@@ -40,11 +41,16 @@ function artx_product_menu() {
 /**
  * Menu callback: display a list of product types that the user can create.
  */
-function artx_product_ui_add_page() {
+function artx_product_ui_add_page()
+{
   if (module_exists('commerce_product_ui')) {
-    module_load_include('inc', 'commerce_product_ui', 'includes/commerce_product_ui.products');
-    if(function_exists('commerce_product_ui_add_page'))
+    module_load_include('inc', 'commerce_product_ui', 'commerce_product_ui.products');
+    if (function_exists('commerce_product_ui_add_page'))
       return commerce_product_ui_add_page();
+    else
+      log2watchdog('function not found', __FUNCTION__);
+  } else {
+    log2watchdog('module not found', __FUNCTION__);
   }
   return null;
 }
@@ -57,7 +63,8 @@ function artx_product_ui_add_page() {
  *
  * @see commerce_product_product_form()
  */
-function artx_product_ui_product_form_wrapper($product) {
+function artx_product_ui_product_form_wrapper($product)
+{
   if (module_exists('commerce_product_ui') && function_exists('commerce_product_ui_product_form_wrapper')) {
     return commerce_product_ui_product_form_wrapper($product);
   }
@@ -72,8 +79,15 @@ function artx_product_ui_product_form_wrapper($product) {
  * @return
  *   A product object with all default fields initialized.
  */
-function artx_product_new($type = '') {
+function artx_product_new($type = '')
+{
   if (module_exists('commerce_product') && function_exists('commerce_product_new')) {
     return commerce_product_new($product);
   }
+}
+
+function log2watchdog($err_type, $functionname)
+{
+  watchdog($err_type,
+    'filename: '.basename(__FILE__).";\n functionname:".$functionname);
 }
