@@ -116,6 +116,8 @@ function artx_product_types() {
   return null;
 }
 
+
+
 /**
  * wrapper of watchdog function to log the errors
  *
