@@ -20,21 +20,60 @@ function artx_product_menu() {
     'access callback' => TRUE,
 //    'access callback' => 'commerce_product_ui_product_add_any_access',
     'weight' => 10,
-    'file' => 'includes/artx_product_ui.products.inc',
   );
   foreach (commerce_product_types() as $type => $product_type) {
     $items['commerce/products/add/' . strtr($type, array('_' => '-'))] = array(
       'title' => 'Create !name',
       'title arguments' => array('!name' => $product_type['name']),
       'description' => $product_type['description'],
-      'page callback' => 'commerce_product_ui_product_form_wrapper',
+      'page callback' => 'artx_product_ui_product_form_wrapper',
       'page arguments' => array(commerce_product_new($type)),
       'access callback' => TRUE,
 //      'access callback' => 'commerce_product_access',
 //      'access arguments' => array('create', commerce_product_new($type)),
-      'file' => 'includes/commerce_product_ui.products.inc',
     );
   }
 
   return $items;
+}
+
+/**
+ * Menu callback: display a list of product types that the user can create.
+ */
+function artx_product_ui_add_page() {
+  if (module_exists('commerce_product_ui')) {
+    module_load_include('inc', 'commerce_product_ui', 'includes/commerce_product_ui.products');
+    if(function_exists('commerce_product_ui_add_page'))
+      return commerce_product_ui_add_page();
+  }
+  return null;
+}
+
+/**
+ * Form callback wrapper: create or edit a product.
+ *
+ * @param $product
+ *   The product object being edited by this form.
+ *
+ * @see commerce_product_product_form()
+ */
+function artx_product_ui_product_form_wrapper($product) {
+  if (module_exists('commerce_product_ui') && function_exists('commerce_product_ui_product_form_wrapper')) {
+    return commerce_product_ui_product_form_wrapper($product);
+  }
+}
+
+/**
+ * Returns an initialized product object.
+ *
+ * @param $type
+ *   The machine-readable type of the product.
+ *
+ * @return
+ *   A product object with all default fields initialized.
+ */
+function artx_product_new($type = '') {
+  if (module_exists('commerce_product') && function_exists('commerce_product_new')) {
+    return commerce_product_new($product);
+  }
 }
