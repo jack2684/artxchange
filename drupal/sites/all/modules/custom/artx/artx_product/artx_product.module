@@ -35,6 +35,20 @@ function artx_product_menu()
     );
   }
 
+  // The overriden node/add type listing.
+  $base = array(
+    'page callback' => 'node_add_page',
+//    'access callback' => '_node_add_access',
+    'access callback' => TRUE,
+    'file' => 'node.pages.inc',
+    'file path' => drupal_get_path('module', 'node'),
+  );
+  $items['node/add/add-art'] = array(
+      'title' => 'Add art work',
+      'parent' => 'admin/commerce/manage-products/actions',
+      'type' => MENU_LOCAL_TASK | MENU_NORMAL_ITEM,
+    ) + $base;
+
   return $items;
 }
 
@@ -115,8 +129,6 @@ function artx_product_types() {
   }
   return null;
 }
-
-
 
 /**
  * wrapper of watchdog function to log the errors
