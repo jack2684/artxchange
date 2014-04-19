@@ -37,19 +37,32 @@ function artx_product_menu()
 
   // The overriden node/add type listing.
   $base = array(
-    'page callback' => 'node_add_page',
+    'page callback' => 'artx_product_add_page',
 //    'access callback' => '_node_add_access',
     'access callback' => TRUE,
-    'file' => 'node.pages.inc',
-    'file path' => drupal_get_path('module', 'node'),
   );
   $items['node/add/add-art'] = array(
       'title' => 'Add art work',
       'parent' => 'admin/commerce/manage-products/actions',
+//      'type' => MENU_NORMAL_ITEM,
       'type' => MENU_LOCAL_TASK | MENU_NORMAL_ITEM,
     ) + $base;
 
   return $items;
+}
+
+/**
+ * Menu callback:
+ */
+function artx_product_add_page() {
+  $item = menu_get_item();
+  $content = system_admin_menu_block($item);
+  // Bypass the node/add listing if only one content type is available.
+  if (count($content) == 1) {
+    $item = array_shift($content);
+    drupal_goto($item['href']);
+  }
+  return theme('artx_product_add_list', array('content' => $content));
 }
 
 /**
@@ -131,6 +144,44 @@ function artx_product_types() {
 }
 
 /**
+ * Implements hook_theme().
+ */
+function artx_product_theme() {
+  return array(
+    'artx_product_add_list' => array(
+      'variables' => array('content' => NULL),
+    ),
+  );
+}
+
+/**
+ * Returns HTML for a list of available node types for node creation.
+ *
+ * @param $variables
+ *   An associative array containing:
+ *   - content: An array of content types.
+ *
+ * @ingroup themeable
+ */
+function theme_artx_product_add_list($variables) {
+  $content = $variables['content'];
+  $output = '';
+
+  if ($content) {
+    $output = '<dl class="art-type-list">';
+    foreach ($content as $item) {
+      $output .= '<dt>' . l($item['title'], $item['href'], $item['localized_options']) . '</dt>';
+      $output .= '<dd>' . filter_xss_admin($item['description']) . '</dd>';
+    }
+    $output .= '</dl>';
+  }
+  else {
+    $output = '<p>' . t('You have not created any content types yet. Go to the <a href="@create-content">content type creation page</a> to add a new content type.', array('@create-content' => url('admin/structure/types/add'))) . '</p>';
+  }
+  return $output;
+}
+
+/**
  * wrapper of watchdog function to log the errors
  *
  * @param $err_type
@@ -140,4 +191,34 @@ function log2watchdog($err_type, $functionname)
 {
   watchdog($err_type,
     'filename: '.basename(__FILE__).";\n functionname:".$functionname);
+}
+
+/**
+ * Implements MODULE_preprocess_HOOK().
+ *
+ * For more information, see:
+ * http://api.drupal.org/api/drupal/modules--system--theme.api.php/function/hook_preprocess_HOOK/7
+ */
+function artx_product_preprocess_page(&$vars) {
+  $options = array(
+    'group' => CSS_THEME,
+    'every_page' => TRUE
+  );
+  drupal_add_css(drupal_get_path('module', 'artx_product') . '/css/artx_product.css', $options);
+  $vars['styles'] = drupal_get_css();
+}
+/**
+ * Implement hook_modules_implement_alter
+ *
+ * @param $implementations
+ * @param $hook
+ */
+function artx_product_module_implements_alter(&$implementations, $hook)
+{
+//  if($hook == "preprocess_HOOK")
+//  {
+//    unset($implementations['artx_product']);
+//    $mymodule = array('artx_product' => false);
+//    $implementations = $implementations + $mymodule; // Also could use array_merge
+//  }
 }
