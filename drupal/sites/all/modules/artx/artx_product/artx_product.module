@@ -42,13 +42,25 @@ function artx_product_menu()
     'access callback' => TRUE,
   );
   $items['node/add/add-art'] = array(
-      'title' => 'Add art work',
+      'title' => 'Add an art work',
       'parent' => 'admin/commerce/manage-products/actions',
 //      'type' => MENU_NORMAL_ITEM,
       'type' => MENU_LOCAL_TASK | MENU_NORMAL_ITEM,
     ) + $base;
 
   return $items;
+}
+
+/**
+ * Implements hook_menu_alter().
+ */
+function artx_product_menu_alter(&$items) {
+  if (isset($items['node/add/add-product'])) {
+    unset($items['node/add/add-product']);
+  }
+  if (isset($items['node/add/add-content'])) {
+    unset($items['node/add/add-content']);
+  }
 }
 
 /**
@@ -215,7 +227,7 @@ function artx_product_preprocess_page(&$vars) {
  */
 function artx_product_module_implements_alter(&$implementations, $hook)
 {
-//  if($hook == "preprocess_HOOK")
+//  if($hook == "menu_alter")
 //  {
 //    unset($implementations['artx_product']);
 //    $mymodule = array('artx_product' => false);
