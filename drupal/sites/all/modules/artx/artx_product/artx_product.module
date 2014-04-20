@@ -18,7 +18,7 @@ function artx_product_menu()
     'title' => 'Add a product',
     'description' => 'Add a new product for sale.',
     'page callback' => 'artx_product_ui_add_page',
-    'access callback' => TRUE,
+//    'access callback' => TRUE,
 //    'access callback' => 'commerce_product_ui_product_add_any_access',
     'weight' => 10,
   );
@@ -29,7 +29,7 @@ function artx_product_menu()
       'description' => $product_type['description'],
       'page callback' => 'artx_product_ui_product_form_wrapper',
       'page arguments' => array(artx_product_new($type)),
-      'access callback' => TRUE,
+//      'access callback' => TRUE,
 //      'access callback' => 'commerce_product_access',
 //      'access arguments' => array('create', commerce_product_new($type)),
     );
@@ -38,8 +38,7 @@ function artx_product_menu()
   // The overriden node/add type listing.
   $base = array(
     'page callback' => 'artx_product_add_page',
-//    'access callback' => '_node_add_access',
-    'access callback' => TRUE,
+    'access callback' => '_art_add_access',
   );
   $items['node/add/add-art'] = array(
       'title' => 'Add an art work',
@@ -49,6 +48,58 @@ function artx_product_menu()
     ) + $base;
 
   return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function artx_product_permission() {
+  $perms = array(
+    'registed user content types' => array(
+      'title' => t('Registed user content types'),
+      'restrict access' => TRUE,
+    ),
+  );
+
+  if (module_exists('node')) {
+    module_load_include('module', 'node', 'node');
+    if (function_exists('node_permissions_get_configured_types')){
+      // Generate standard node permissions for all applicable node types.
+      foreach (node_permissions_get_configured_types() as $type) {
+        $perms += node_list_permissions($type);
+      }
+    }
+    else
+      log2watchdog('function not found', __FUNCTION__);
+  } else {
+    log2watchdog('module not found', __FUNCTION__);
+  }
+
+  return $perms;
+}
+
+/**
+ * Access callback: Checks whether the user has permission to add a node.
+ *
+ * @return
+ *   TRUE if the user has add permission, otherwise FALSE.
+ *
+ * @see node_menu()
+ */
+function _art_add_access() {
+  $types = node_type_get_types();
+  foreach ($types as $type) {
+    if (node_hook($type->type, 'form') && node_access('create', $type->type)) {
+      return TRUE;
+    }
+  }
+  if (user_access('registed user content types')) {
+    // There are no content types defined that the user has permission to create,
+    // but the user does have the permission to administer the content types, so
+    // grant them access to the page anyway.
+    return TRUE;
+  }
+  return FALSE;
 }
 
 /**
