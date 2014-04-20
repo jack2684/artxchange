@@ -1,0 +1,31 @@
+<?php
+/**
+ * @file
+ * Code for the Artxchange User feature.
+ */
+
+/**
+ * Implements hook_menu_alter().
+ */
+function artx_gallery_menu() {
+  $items['user/gallery'] = array(
+    'title' => 'Gallery',
+    'description' => 'Menu system example using an argument.',
+    'page callback' => 'artx_gallery_argument',
+    'access callback' => TRUE,
+    'type' => MENU_LOCAL_TASK,
+  );
+  return $items;
+}
+
+/**
+ * Menu callback; page callback returning an argument.
+ */
+function artx_gallery_argument($arg1) {
+  $build['argument_paragraph'] = array(
+    '#type' => 'markup',
+    '#markup' => '<p>' . t('The argument passed was @arg1.', array('@arg1' => $arg1)) . '</p>',
+  );
+
+  return $build;
+}
