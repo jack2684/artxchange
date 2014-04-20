@@ -12,11 +12,13 @@ dl.art-type-list dt {
     list-style-type: none;
     list-style-image: none;
     /*background-color: red;*/
+    margin: 11px;
 }
 dl.art-type-list dt:first-child {
     border-top: 0;
 }
+/*
 
 div.content {
     padding: 20px;
-}
+}*/
