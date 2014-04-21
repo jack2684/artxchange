@@ -12,7 +12,8 @@ function artx_gallery_menu()
   $items['gallery'] = array(
     'title' => 'Gallery',
     'description' => 'Menu system example using an argument.',
-    'page callback' => 'artx_gallery_argument',
+    'page callback' => 'mymodule_page',
+//    'page callback' => 'artx_gallery_argument',
     'access callback' => TRUE,
     'type' => MENU_LOCAL_TASK,
   );
@@ -24,17 +25,37 @@ function artx_gallery_menu()
  */
 function artx_gallery_argument($arg1 = "")
 {
-  if ($arg1 == "") {
-    $build['argument_paragraph'] = array(
+  global $user;
+  if ($arg1 != "") {
+    $uid = $user->uid;
+    $content['argument_paragraph'] = array(
       '#type' => 'markup',
       '#markup' => '<p>' . t('The argument passed was @arg1.', array('@arg1' => $arg1)) . '</p>',
     );
   } else {
-    $build['argument_paragraph'] = array(
+    $content['argument_paragraph'] = array(
       '#type' => 'markup',
       '#markup' => '<p>' . t('These are the hottest gallery of the week:') . '</p>',
     );
   }
+  return theme('artx_gallery_default', $content);
+}
 
-  return $build;
+/**
+ * Implements hook_theme().
+ */
+function artx_gallery_theme($existing, $type, $theme, $path){
+  $themes = array(
+    'artx_gallery_default' => array(
+      'variables' => array('content' => "FOO"),
+      'template'  => 'default',
+    )
+  );
+  return $themes;
+}
+
+function mymodule_page(){
+
+  $content = array('content' => 'Or grep "function theme_" for more ideas.');
+  return theme('artx_gallery_default', $content);
 }

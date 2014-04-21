@@ -26,8 +26,8 @@ function lookandfeel_menu() {
  */
 function lookandfeel_examples_page() {
   $output = '';
-
-
+  
+  
   // Example of using theme_item_list() to generate a list from an array. To learn more, see:
   // http://api.drupal.org/api/drupal/includes--theme.inc/function/theme_item_list/7
   $output .= '<h2>Simple list</h2>';
@@ -37,8 +37,8 @@ function lookandfeel_examples_page() {
     'Alternately, simply visit <code>admin/config/development/performance</code>',
   );
   $output .= theme('item_list', array('items' => $items));
-
-
+  
+  
   // More complex example of theme_item_list().
   $output .= '<h2>Slightly more complex list</h2>';
   $items = array(
@@ -51,8 +51,8 @@ function lookandfeel_examples_page() {
     'type' => 'ol',
     'title' => t('How to clear the cache'),
   ));
-
-
+  
+  
   // Example of theme_table().
   $output .= '<h2>Table</h2>';
   $headers = array(t('Link'), t('Description'));
@@ -62,18 +62,18 @@ function lookandfeel_examples_page() {
   $rows[] = array(l('theme_more_link', 'http://is.gd/h0CRS'), 'Theme a "more" link.');
   $rows[] = array(l('theme_more_link', 'http://is.gd/h0CRS'), 'Theme a "more" link.');
   $output .= theme('table', array('header' => $headers, 'rows' => $rows));
-
-
+  
+  
   // Example of creating and calling "strike" theme function.
   $output .= '<h2>Custom "strike" theme function</h2>';
   $output .= theme('lookandfeel_strike', array('string' => 'Look in includes/theme.inc for example functions'));
-
-
+  
+  
   // Example of using a template file
   $output .= '<h2>Custom "striketwo" template file</h2>';
   $output .= theme('lookandfeel_striketwo', array('string' => 'Or grep "function theme_" for more ideas.'));
-
-
+  
+  
   return $output;
 }
 
