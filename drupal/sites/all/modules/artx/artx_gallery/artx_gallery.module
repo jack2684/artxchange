@@ -12,10 +12,17 @@ function artx_gallery_menu()
   $items['gallery'] = array(
     'title' => 'Gallery',
     'description' => 'Menu system example using an argument.',
+    'page callback' => 'artx_gallery_argument',
+//    'page callback' => 'artx_gallery_argument',
+    'access arguments' => array('access content'),
+//    'access callback' => TRUE,
+  );
+  $items['gallery2'] = array(
+    'title' => 'Gallery',
+    'description' => 'Menu system example using an argument.',
     'page callback' => 'mymodule_page',
 //    'page callback' => 'artx_gallery_argument',
     'access callback' => TRUE,
-    'type' => MENU_LOCAL_TASK,
   );
   return $items;
 }
@@ -28,17 +35,12 @@ function artx_gallery_argument($arg1 = "")
   global $user;
   if ($arg1 != "") {
     $uid = $user->uid;
-    $content['argument_paragraph'] = array(
-      '#type' => 'markup',
-      '#markup' => '<p>' . t('The argument passed was @arg1.', array('@arg1' => $arg1)) . '</p>',
-    );
+    $build['content'] =  '<p>' . t('The argument passed was @arg1.', array('@arg1' => $arg1)) . '</p>';
   } else {
-    $content['argument_paragraph'] = array(
-      '#type' => 'markup',
-      '#markup' => '<p>' . t('These are the hottest gallery of the week:') . '</p>',
-    );
+    $build['content'] =  '<p>' . t('These are the hottest gallery of the week:') . '</p>';
   }
-  return theme('artx_gallery_default', $content);
+  return "";
+  return theme('artx_gallery_default', $build);
 }
 
 /**
@@ -55,7 +57,5 @@ function artx_gallery_theme($existing, $type, $theme, $path){
 }
 
 function mymodule_page(){
-
-  $content = array('content' => 'Or grep "function theme_" for more ideas.');
-  return theme('artx_gallery_default', $content);
+  return theme('artx_gallery_default', array('content' => 'Or grep "function theme_" for more ideas.'));
 }
