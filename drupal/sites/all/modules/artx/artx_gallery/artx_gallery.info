@@ -1,5 +1,5 @@
 name = Artxchange Gallery
-description = Provides user related functionality.
+description = Provides gallery related functionality.
 core = 7.x
 package = Artxchange
 php = 5.2.4

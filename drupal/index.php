@@ -18,6 +18,11 @@ define('DRUPAL_ROOT', getcwd());
 
 require_once DRUPAL_ROOT . '/includes/bootstrap.inc';
 
+// following 3 lines are added by Junjie Guan, for debugging
+error_reporting(E_ALL);
+ini_set('display_errors', TRUE);
+ini_set('display_startup_errors', TRUE);
+
 try {
   drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
 }
