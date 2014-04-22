@@ -28,39 +28,56 @@ function artx_gallery_menu()
 }
 
 /**
- * Menu callback; page callback returning an argument.
+ * Get row data of art in user's gallery based on user name
+ *
+ * @param string $uname
  */
-function artx_gallery_argument($arg1 = "")
-{
-  $sql = "SELECT cp.product_id, cp.title, fm.uri\n";
-  $sql .= "FROM {commerce_product} cp\n";
-  $sql .= "JOIN {file_usage} fu\n";
-  $sql .= "ON fu.id=cp.product_id\n";
-  $sql .= "JOIN {file_managed} fm\n";
-  $sql .= "ON fu.fid=fm.fid\n";
-  $sql .= "WHERE cp.uid = 8\n";
+function artx_gallery_get_rows($usrname = "") {
+  $sql = "SELECT cp.product_id, cp.title, fm.uri";
+  $sql .= "\nFROM {commerce_product} cp";
+  $sql .= "\nJOIN {file_usage} fu";
+  $sql .= "\nON fu.id=cp.product_id";
+  $sql .= "\nJOIN {file_managed} fm";
+  $sql .= "\nON fu.fid=fm.fid";
+  $sql .= "\nJOIN {users} us";
+  $sql .= "\nON us.uid=cp.uid";
+  $sql .= "\nWHERE us.name = :usrname";
 
-//  $sql = "SELECT cp.product_id, cp.title\n";
-//  $sql .= "FROM {commerce_product} cp\n";
-
-  $result = db_query($sql);
+  $rows = array();
+  $result = db_query($sql, array(':usrname' => $usrname));
   if ($result) {
     while ($row = $result->fetchAssoc()) {
-      // Do something with:
-      //    $row['name']
-      //    $row['quantity']
-      $build['db'] = $row['product_id'];
+      $row['uri'] = file_create_url($row['uri']);
+      $rows[] = $row;
     }
   }
+  return $rows;
+}
 
-  global $user;
-  if ($arg1 != "") {
-    $uid = $user->uid;
-    $build['content'] = '<p>' . t('The argument passed was @arg1.', array('@arg1' => $arg1)) . '</p>';
+/**
+ * Menu callback; page callback returning an argument.
+ */
+function artx_gallery_argument($usrname = "")
+{
+  if ($usrname != "") {
+    $rows = artx_gallery_get_rows($usrname);
+    $header = array(
+      array('data' => t('Product id')),
+      array('data' => t('Product Name')),
+      array('data' => t('Image')),
+    );
+    $build['pager_table'] = array(
+      '#theme' => 'table',
+      '#header' => $header,
+      '#rows' => $rows,
+      '#empty' => t('There are no date formats found in the db'),
+    );
+    $build['pager_pager'] = array('#theme' => 'pager');
+    return $build;
   } else {
     $build['content'] = '<p>' . t('These are the hottest gallery of the week:') . '</p>';
+    return theme('artx_gallery_default', $build);
   }
-  return theme('artx_gallery_default', $build);
 }
 
 /**
