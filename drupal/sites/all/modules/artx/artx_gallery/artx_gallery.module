@@ -32,30 +32,52 @@ function artx_gallery_menu()
  */
 function artx_gallery_argument($arg1 = "")
 {
+  $sql = "SELECT cp.product_id, cp.title, fm.uri\n";
+  $sql .= "FROM {commerce_product} cp\n";
+  $sql .= "JOIN {file_usage} fu\n";
+  $sql .= "ON fu.id=cp.product_id\n";
+  $sql .= "JOIN {file_managed} fm\n";
+  $sql .= "ON fu.fid=fm.fid\n";
+  $sql .= "WHERE cp.uid = 8\n";
+
+//  $sql = "SELECT cp.product_id, cp.title\n";
+//  $sql .= "FROM {commerce_product} cp\n";
+
+  $result = db_query($sql);
+  if ($result) {
+    while ($row = $result->fetchAssoc()) {
+      // Do something with:
+      //    $row['name']
+      //    $row['quantity']
+      $build['db'] = $row['product_id'];
+    }
+  }
+
   global $user;
   if ($arg1 != "") {
     $uid = $user->uid;
-    $build['content'] =  '<p>' . t('The argument passed was @arg1.', array('@arg1' => $arg1)) . '</p>';
+    $build['content'] = '<p>' . t('The argument passed was @arg1.', array('@arg1' => $arg1)) . '</p>';
   } else {
-    $build['content'] =  '<p>' . t('These are the hottest gallery of the week:') . '</p>';
+    $build['content'] = '<p>' . t('These are the hottest gallery of the week:') . '</p>';
   }
-  return "";
   return theme('artx_gallery_default', $build);
 }
 
 /**
  * Implements hook_theme().
  */
-function artx_gallery_theme($existing, $type, $theme, $path){
+function artx_gallery_theme($existing, $type, $theme, $path)
+{
   $themes = array(
     'artx_gallery_default' => array(
       'variables' => array('content' => "FOO"),
-      'template'  => 'default',
+      'template' => 'default',
     )
   );
   return $themes;
 }
 
-function mymodule_page(){
+function mymodule_page()
+{
   return theme('artx_gallery_default', array('content' => 'Or grep "function theme_" for more ideas.'));
 }
