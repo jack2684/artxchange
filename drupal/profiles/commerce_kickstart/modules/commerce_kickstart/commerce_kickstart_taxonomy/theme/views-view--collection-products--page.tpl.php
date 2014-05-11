@@ -56,6 +56,7 @@
   </div>
   <?php endif; ?>
 
+  <?php dpm(ddebug_backtrace());?>
   <?php if ($rows): ?>
   <div class="view-content">
     <?php print $rows; ?>
