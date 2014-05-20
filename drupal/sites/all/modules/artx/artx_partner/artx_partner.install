@@ -1,0 +1,83 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function artx_partner_schema() {
+  $schema = array();
+
+  $schema['artx_partner'] = array(
+    'description' => 'The base table for artx_partner.',
+    'fields' => array(
+      'partner_id' => array(
+        'description' => 'The primary identifier for a wishlist.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'uid' => array(
+        'description' => 'User identifier.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'nid' => array(
+        'description' => 'Node identifier.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => FALSE,
+      ),
+      'product_id' => array(
+        'description' => 'Identifier for a product.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'reqtime' => array(
+        'description' => 'time stamp of the request',
+        'type' => 'datetime',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'restime' => array(
+        'description' => 'time stamp of the response to request',
+        'type' => 'datetime',
+        'unsigned' => TRUE,
+        'not null' => FALSE,
+      ),
+      'status' => array(
+        'description' => 'the status of the request, pending(0)/AC(1)/Rej(2)',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+    ),
+    'primary key' => array('partner_id'),
+    'unique keys' => array('unique' => array('uid', 'nid', 'product_id')),
+    'foreign keys' => array(
+      'owner' => array(
+        'table' => 'users',
+        'columns' => array('uid' => 'uid'),
+      ),
+      'product_display' => array(
+        'table' => 'node',
+        'columns' => array('nid' => 'nid'),
+      ),
+      'product' => array(
+        'table' => 'commerce_product',
+        'columns' => array('product_id' => 'product_id'),
+      ),
+    ),
+  );
+
+  return $schema;
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function commerce_wishlist_uninstall() {
+  // Removes the configuration
+  variable_del('commerce_partner_req_weight');
+}
