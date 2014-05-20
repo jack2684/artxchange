@@ -10,7 +10,7 @@ function artx_partner_schema() {
     'description' => 'The base table for artx_partner.',
     'fields' => array(
       'partner_id' => array(
-        'description' => 'The primary identifier for a wishlist.',
+        'description' => 'The primary identifier for a partnership.',
         'type' => 'serial',
         'unsigned' => TRUE,
         'not null' => TRUE,
@@ -24,7 +24,6 @@ function artx_partner_schema() {
       'nid' => array(
         'description' => 'Node identifier.',
         'type' => 'int',
-        'unsigned' => TRUE,
         'not null' => FALSE,
       ),
       'product_id' => array(
@@ -33,16 +32,22 @@ function artx_partner_schema() {
         'unsigned' => TRUE,
         'not null' => TRUE,
       ),
-      'reqtime' => array(
-        'description' => 'time stamp of the request',
-        'type' => 'datetime',
+      'product_uid' => array(
+        'description' => 'Identifier for a product.',
+        'type' => 'int',
         'unsigned' => TRUE,
         'not null' => TRUE,
       ),
+      'reqtime' => array(
+        'description' => 'time stamp of the request',
+        'type' => 'datetime:normal',
+        'mysql_type' => 'datetime',
+        'not null' => FALSE,
+      ),
       'restime' => array(
         'description' => 'time stamp of the response to request',
-        'type' => 'datetime',
-        'unsigned' => TRUE,
+        'type' => 'datetime:normal',
+        'mysql_type' => 'datetime',
         'not null' => FALSE,
       ),
       'status' => array(
@@ -74,10 +79,18 @@ function artx_partner_schema() {
   return $schema;
 }
 
+///**
+// * Implementation of hook_install().
+// */
+//function artx_partner_install() {
+//  drupal_install_schema('artx_partner');
+//}
+
 /**
  * Implements hook_uninstall().
  */
-function commerce_wishlist_uninstall() {
+function artx_partner_uninstall() {
   // Removes the configuration
+  drupal_uninstall_schema('artx_partner');
   variable_del('commerce_partner_req_weight');
 }

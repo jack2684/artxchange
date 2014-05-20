@@ -58,6 +58,7 @@ function artx_partner_permission() {
  */
 function artx_partner_form_alter(&$form, &$form_state, $form_id) {
   global $user;
+  $status = 0;
 
   if (strstr($form_id, 'commerce_cart_add_to_cart_form')) {
     // check if product is disabled
@@ -71,11 +72,16 @@ function artx_partner_form_alter(&$form, &$form_state, $form_id) {
     }
 
     $product_id = $form_state['default_product']->product_id;
+    $product_uid = $form_state['default_product']->uid;
     $nid = _artx_partner_get_context_entity_id($form_state['context']);
-    $in_partnerlist = artx_partner_in_partnerlist($user->uid, $product_id);
-    $link_exists = _artx_partner_link($user->uid);
+    $in_partnerlist = artx_partner_in_partnerlist($user->uid, $product_id, $status);
+    $link_exists = _artx_partner_link($user->uid, $status);
 
-    $url = 'partner-actions/nojs/add/' . $user->uid . '/' . $product_id . '/' . $nid;
+    $url = 'partner-actions/nojs/add/'
+      . $user->uid . '/'
+      . $product_id . '/'
+      . $nid . '/'
+      . $product_uid;
     $params = array(
       'attributes' => array(
         'class' => array('ajax' => 'use-ajax', 'add-to-partnerlist'),
@@ -145,7 +151,7 @@ function artx_partner_delete($user, $partner_id) {
 /**
  * Verify if this prodcut has been added to partner list
  */
-function artx_partner_in_partnerlist($uid, $product_id, $nid = NULL) {
+function artx_partner_in_partnerlist($uid, $product_id, &$status, $nid = NULL) {
 
   $conditions = db_and();
   $conditions->condition('uid', $uid);
@@ -157,11 +163,16 @@ function artx_partner_in_partnerlist($uid, $product_id, $nid = NULL) {
 
   $result = db_select('artx_partner', 'ap')
     ->addTag('partnerlist')
-    ->fields('ap', array('partner_id'))
+    ->fields('ap', array('partner_id', 'status'))
     ->condition($conditions)
     ->execute()
     ->fetchAssoc();
-  return isset ($result['partner_id']);
+
+  if (isset ($result['partner_id'])){
+    $status = $result['status'];
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -182,6 +193,7 @@ function artx_partner_operations() {
         $fields = array('uid' => $args[2],
           'product_id' => $args[3],
           'nid' => $args[4],
+          'product_uid' => $args[5],
           'reqtime' => $datetime);
         artx_partner_add_product($fields);
         break;
@@ -216,8 +228,9 @@ function artx_partner_add_product($fields) {
 /**
  * Returns html of "Already in partnership" link. TODO: themeable?
  */
-function _artx_partner_link($uid) {
-  return t('Already in <a class="in-partnerlist" target="_blank" href="@url">partnership</a>', array(
+function _artx_partner_link($uid, $status) {
+  if($status == 0)
+  return t('Request is sent, view <a class="in-partnerlist" target="_blank" href="@url">partnerships</a>', array(
     '@url' => url('user/' . $uid . '/partnerlist')));
 }
 
