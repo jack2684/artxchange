@@ -43,7 +43,6 @@ function artx_product_menu()
   $items['node/add/add-art'] = array(
       'title' => 'Add an art work',
       'parent' => 'admin/commerce/manage-products/actions',
-//      'type' => MENU_NORMAL_ITEM,
       'type' => MENU_LOCAL_TASK | MENU_NORMAL_ITEM,
     ) + $base;
 

@@ -8,7 +8,8 @@
 /**
  * Implements hook_menu().
  */
-function artx_partner_menu() {
+function artx_partner_menu()
+{
   $items = array();
 
   $items['user/%user/partner/delete/%'] = array(
@@ -34,13 +35,22 @@ function artx_partner_menu() {
     'type' => MENU_CALLBACK,
   );
 
+  $items['user/%/partners'] = array(
+    'page callback' => 'artx_partner_view',
+    'page arguments' => array(1),
+    'description' => 'View all the pending/accepted partnerships',
+    'access arguments' => TRUE,
+    'type' => MENU_LOCAL_TASK,
+  );
+
   return $items;
 }
 
 /**
  * Implements hook_permission().
  */
-function artx_partner_permission() {
+function artx_partner_permission()
+{
   return array(
     'view own partner request list' => array(
       'title' => t('View own artx_partner request list'),
@@ -56,9 +66,10 @@ function artx_partner_permission() {
 /**
  * Implements hook_form_alter().
  */
-function artx_partner_form_alter(&$form, &$form_state, $form_id) {
+function artx_partner_form_alter(&$form, &$form_state, $form_id)
+{
   global $user;
-  $status = 0;
+  if (!$user->uid) return;
 
   if (strstr($form_id, 'commerce_cart_add_to_cart_form')) {
     // check if product is disabled
@@ -70,60 +81,146 @@ function artx_partner_form_alter(&$form, &$form_state, $form_id) {
         return;
       }
     }
+    if (in_array("orgranization", $user->roles)
+      || in_array("administrator", $user->roles)
+    ) {
+      _artx_partner_form_alter_org($form, $form_state, $form_id);
+    } else {
+      _artx_partner_form_alter_artist($form, $form_state, $form_id);
+    }
+  }
+}
 
-    $product_id = $form_state['default_product']->product_id;
-    $product_uid = $form_state['default_product']->uid;
-    $nid = _artx_partner_get_context_entity_id($form_state['context']);
-    $in_partnerlist = artx_partner_in_partnerlist($user->uid, $product_id, $status);
-    $link_exists = _artx_partner_link($user->uid, $status);
+function _artx_partner_form_alter_artist(&$form, &$form_state, $form_id)
+{
+  global $user;
+  $status = 0;
 
-    $url = 'partner-actions/nojs/add/'
-      . $user->uid . '/'
-      . $product_id . '/'
-      . $nid . '/'
-      . $product_uid;
+  $product_id = $form_state['default_product']->product_id;
+  $owner_uid = $form_state['default_product']->uid;
+  $nid = _artx_partner_get_context_entity_id($form_state['context']);
+  $invitationCnt = artx_partner_invitelist_length($user->uid, $product_id, $status);
+
+  if ($status == 1) {
+    // if partnership is established
+    $url = 'gallery/' . $user->uid;
     $params = array(
       'attributes' => array(
-        'class' => array('ajax' => 'use-ajax', 'add-to-partnerlist'),
-        'id' => 'add-partnerlist-' . $product_id
+        'class' => array('ajax' => 'use-ajax', 'view-partnerlist'),
+        'id' => 'view-partnerlist-' . $product_id
       ),
       'query' => array(
         'destination' => $_GET['q'], 'token' => drupal_get_token()
       ),
     );
-
-    if (!$user->uid) {
-      unset($params['attributes']['class']['ajax'], $params['query']);
-      $params['query']['product_id'] = $product_id;
-      $params['query']['nid'] = $nid;
-      $params['query']['original_url'] = $_GET['q'];
-      $url = 'user/login';
+    if ($invitationCnt == 0) {
+      $partnerMsg = l(t('0 partner request'), $url, $params);
+    } else {
+      $partnerMsg = l($invitationCnt, $url, $params) . t(' partner request');
     }
-
-    $link = l(t('Send partner request'), $url, $params);
-
-    if ($in_partnerlist) $link = $link_exists;
-
-    $form['add_to_partnerlist'] = array(
-      '#markup' => $link,
-      '#weight' => variable_get('commerce_partner_req_weight', 14),
+  } else {
+    // if partnership is not established yet
+    $url = 'user/' . $user->uid . '/partners';
+    $params = array(
+      'attributes' => array(
+        'class' => array('ajax' => 'use-ajax', 'view-partnerlist'),
+        'id' => 'view-partnerlist-' . $product_id
+      ),
+      'query' => array(
+        'destination' => $_GET['q'], 'token' => drupal_get_token()
+      ),
     );
-
-    $access = TRUE;
-    $form['add_to_partnerlist']['#access'] = $access;
+    if ($invitationCnt == 0) {
+      $partnerMsg = t('0 partner request');
+    } else {
+      $partnerMsg = t('@cnt partner request - ', array('@cnt' => $invitationCnt)) . l("view", $url, $params);
+    }
   }
+
+  $form['view_partners'] = array(
+    '#markup' => $partnerMsg,
+    '#weight' => variable_get('commerce_partner_req_weight', 14),
+  );
+}
+
+function _artx_partner_form_alter_org(&$form, &$form_state, $form_id)
+{
+  global $user;
+  $status = 0;
+
+  $product_id = $form_state['default_product']->product_id;
+  $owner_uid = $form_state['default_product']->uid;
+  $nid = _artx_partner_get_context_entity_id($form_state['context']);
+  $in_partnerlist = artx_partner_in_sentlist($user->uid, $product_id, $status);
+  $link_exists = _artx_partner_link($user->uid, $status);
+
+  $url = 'partner-actions/nojs/add/'
+    . $user->uid . '/'
+    . $product_id . '/'
+    . $nid . '/'
+    . $owner_uid;
+  $params = array(
+    'attributes' => array(
+      'class' => array('ajax' => 'use-ajax', 'add-to-partnerlist'),
+      'id' => 'add-partnerlist-' . $product_id
+    ),
+    'query' => array(
+      'destination' => $_GET['q'], 'token' => drupal_get_token()
+    ),
+  );
+
+  if (!$user->uid) {
+    unset($params['attributes']['class']['ajax'], $params['query']);
+    $params['query']['product_id'] = $product_id;
+    $params['query']['nid'] = $nid;
+    $params['query']['original_url'] = $_GET['q'];
+    $url = 'user/login';
+  }
+
+  $link = l(t('Send partner request'), $url, $params);
+
+  if ($in_partnerlist) $link = $link_exists;
+
+  $form['add_to_partnerlist'] = array(
+    '#markup' => $link,
+    '#weight' => variable_get('commerce_partner_req_weight', 14),
+  );
+
+  $access = TRUE;
+  $form['add_to_partnerlist']['#access'] = $access;
+
 
   if ($form_id == 'user_login' && !empty($_GET['product_id'])) {
     $form['#submit'][] = '_artx_partner_user_login';
   }
 }
 
+function artx_partner_view($uid)
+{
+  global $user;
+  $sql = "SELECT ap.partner_id, ap.sender_uid, ap.owner_uid, ap.reqtime, ap.status, ap.nid, us.name";
+  $sql .= "\nFROM {artx_partner} ap";
+  $sql .= "\nJOIN {users} us";
+  $sql .= "\nON us.uid=ap.sender_uid";
+  $sql .= "\nWHERE ap.owner_uid = :uid";
+
+  $rows = array();
+  $result = db_query($sql, array(':uid' => $user->uid));
+  if ($result) {
+    while ($row = $result->fetchAssoc()) {
+      $rows[] = $row;
+    }
+  }
+  return $rows;
+}
+
 /**
  *
  */
-function _artx_partner_user_login($form, &$form_state) {
-  if (!empty($form_state['uid'])) {
-    $url = 'partner-actions/nojs/add/' . $form_state['uid'] . '/' . $_GET['product_id'] . '/' . $_GET['nid'];
+function _artx_partner_user_login($form, &$form_state)
+{
+  if (!empty($form_state['sender_uid'])) {
+    $url = 'partner-actions/nojs/add/' . $form_state['sender_uid'] . '/' . $_GET['product_id'] . '/' . $_GET['nid'];
     $form_state['redirect'] = array(
       $url,
       array(
@@ -139,22 +236,39 @@ function _artx_partner_user_login($form, &$form_state) {
 /**
  * Access callback: Delete the partnership product
  */
-function artx_partner_delete($user, $partner_id) {
+function artx_partner_delete($user, $partner_id)
+{
   db_delete('artx_partner')
     ->condition('partner_id', $partner_id)
     ->execute();
 
   drupal_set_message(t('The product has been deleted from your partner list.'));
-  drupal_goto('user/'. $user->uid .'/partnerlist');
+  drupal_goto('user/' . $user->uid . '/partners');
+}
+
+function artx_partner_invitelist_length($uid, $product_id, &$status, $nid = NULL)
+{
+  global $user;
+  $sql = "SELECT COUNT(ap.owner_uid)";
+  $sql .= "\nFROM {artx_partner} ap";
+  $sql .= "\nWHERE ap.owner_uid = :uid";
+
+  $result = db_query($sql, array(':uid' => $user->uid));
+  $cnt = 0;
+  if ($result) {
+    $cnt = $result->fetchAssoc();
+  }
+  return array_shift(array_values($cnt));
 }
 
 /**
  * Verify if this prodcut has been added to partner list
  */
-function artx_partner_in_partnerlist($uid, $product_id, &$status, $nid = NULL) {
+function artx_partner_in_sentlist($uid, $product_id, &$status, $nid = NULL)
+{
 
   $conditions = db_and();
-  $conditions->condition('uid', $uid);
+  $conditions->condition('sender_uid', $uid);
   $conditions->condition('product_id', $product_id);
 
   if ($nid) {
@@ -168,7 +282,7 @@ function artx_partner_in_partnerlist($uid, $product_id, &$status, $nid = NULL) {
     ->execute()
     ->fetchAssoc();
 
-  if (isset ($result['partner_id'])){
+  if (isset ($result['partner_id'])) {
     $status = $result['status'];
     return true;
   }
@@ -178,22 +292,25 @@ function artx_partner_in_partnerlist($uid, $product_id, &$status, $nid = NULL) {
 /**
  * Menu callback: Perform various actions (add to partnerlist etc)
  */
-function artx_partner_operations() {
+function artx_partner_operations()
+{
 
   $args = func_get_args();
   $datetime = date("Y-m-d H:i:s", time());
+  $status = 0;
 
   if ((isset($args[0]) && isset($args[1]) &&
-      isset($args[2]) && isset($args[3])) && (isset($_GET['token']) && drupal_valid_token($_GET['token']))) {
+      isset($args[2]) && isset($args[3])) && (isset($_GET['token']) && drupal_valid_token($_GET['token']))
+  ) {
     switch ($args[1]) {
       case 'add' :
-        if (artx_partner_in_partnerlist($args[2], $args[3], $args[4])) {
+        if (artx_partner_in_sentlist($args[2], $args[3], $args[4], $status)) {
           return;
         }
-        $fields = array('uid' => $args[2],
+        $fields = array('sender_uid' => $args[2],
           'product_id' => $args[3],
           'nid' => $args[4],
-          'product_uid' => $args[5],
+          'owner_uid' => $args[5],
           'reqtime' => $datetime);
         artx_partner_add_product($fields);
         break;
@@ -203,14 +320,13 @@ function artx_partner_operations() {
       $commands = array();
       switch ($args[1]) {
         case 'add' :
-          $link = _artx_partner_link($args[2]);
+          $link = _artx_partner_link($args[2], $status);
           $commands[] = ajax_command_replace('a#add-partnerlist-' . $args[3], $link);
           break;
       }
       ajax_deliver(array('#type' => 'ajax', '#commands' => $commands));
-    }
-    else {
-      $destination  = isset($_GET['destination']) ? $_GET['destination'] : '';
+    } else {
+      $destination = isset($_GET['destination']) ? $_GET['destination'] : '';
       drupal_goto($destination);
     }
   }
@@ -219,7 +335,8 @@ function artx_partner_operations() {
 /**
  * Adds product to partner list
  */
-function artx_partner_add_product($fields) {
+function artx_partner_add_product($fields)
+{
   return db_insert('artx_partner')
     ->fields($fields)
     ->execute();
@@ -228,10 +345,16 @@ function artx_partner_add_product($fields) {
 /**
  * Returns html of "Already in partnership" link. TODO: themeable?
  */
-function _artx_partner_link($uid, $status) {
-  if($status == 0)
-  return t('Request is sent, view <a class="in-partnerlist" target="_blank" href="@url">partnerships</a>', array(
-    '@url' => url('user/' . $uid . '/partnerlist')));
+function _artx_partner_link($uid, $status = 0)
+{
+  switch ($status) {
+    case 0:
+      return t('Request is sent, view <a class="in-partnerlist" target="_blank" href="@url">partnerships</a>', array(
+        '@url' => url('user/' . $uid . '/partners')));
+    case 1:
+      return t('This art work is in partnership, view <a class="in-partnerlist" target="_blank" href="@url">partnerships</a>', array(
+        '@url' => url('user/' . $uid . '/partners')));
+  }
 }
 
 /**
@@ -242,13 +365,13 @@ function _artx_partner_link($uid, $status) {
  * @return mixed
  *   An entity ID. NULL if couldn't figure out the entity ID.
  */
-function _artx_partner_get_context_entity_id($context) {
+function _artx_partner_get_context_entity_id($context)
+{
   // TODO: What if it's not a node?
   if ($context['entity_type'] == 'node') {
     if (isset($context['entity'])) {
       return $context['entity']->nid;
-    }
-    elseif (isset($context['entity_id'])) {
+    } elseif (isset($context['entity_id'])) {
       return $context['entity_id'];
     }
   }

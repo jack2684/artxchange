@@ -15,7 +15,7 @@ function artx_partner_schema() {
         'unsigned' => TRUE,
         'not null' => TRUE,
       ),
-      'uid' => array(
+      'sender_uid' => array(
         'description' => 'User identifier.',
         'type' => 'int',
         'unsigned' => TRUE,
@@ -32,7 +32,7 @@ function artx_partner_schema() {
         'unsigned' => TRUE,
         'not null' => TRUE,
       ),
-      'product_uid' => array(
+      'owner_uid' => array(
         'description' => 'Identifier for a product.',
         'type' => 'int',
         'unsigned' => TRUE,
@@ -57,13 +57,20 @@ function artx_partner_schema() {
         'not null' => TRUE,
         'default' => 0,
       ),
+      'percent' => array(
+        'description' => 'The percentage of profits that goes to non-profit',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 50,
+      ),
     ),
     'primary key' => array('partner_id'),
-    'unique keys' => array('unique' => array('uid', 'nid', 'product_id')),
+    'unique keys' => array('unique' => array('sender_uid', 'nid', 'product_id')),
     'foreign keys' => array(
       'owner' => array(
         'table' => 'users',
-        'columns' => array('uid' => 'uid'),
+        'columns' => array('sender_uid' => 'uid'),
       ),
       'product_display' => array(
         'table' => 'node',

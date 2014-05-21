@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26fadfb4-8239-44a2-8a4f-0e304f6f31b2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.install" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.module" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_product/artx_product.info" afterPath="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_product/artx_product.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_product/artx_product.install" afterPath="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_product/artx_product.install" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.install" afterPath="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.install" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.module" afterPath="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.module" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_product/artx_product.module" afterPath="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_product/artx_product.module" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_gallery/default.tpl.php" afterPath="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_gallery/default.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_gallery/gallery.tpl.php" afterPath="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_gallery/gallery.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="artxchange.iws" />
@@ -36,7 +31,7 @@
       <file leaf-file-name="commerce_wishlist.module" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/contrib/commerce_wishlist/commerce_wishlist.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="123" column="19" selection-start="3503" selection-end="3523" vertical-scroll-proportion="-2.3508773" vertical-offset="2026" max-vertical-offset="6822">
+            <state line="47" column="0" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.0" vertical-offset="846" max-vertical-offset="6876">
               <folding />
             </state>
           </provider>
@@ -45,25 +40,7 @@
       <file leaf-file-name="commerce_wishlist.views_default.inc" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/contrib/commerce_wishlist/includes/views/commerce_wishlist.views_default.inc">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="63" selection-start="3159" selection-end="3159" vertical-scroll-proportion="-5.0526314" vertical-offset="1026" max-vertical-offset="6264">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="commerce_wishlist.admin.inc" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/contrib/commerce_wishlist/commerce_wishlist.admin.inc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="760" selection-end="760" vertical-scroll-proportion="-12.962963" vertical-offset="10" max-vertical-offset="828">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="commerce_wishlist.install" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/contrib/commerce_wishlist/commerce_wishlist.install">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="43" selection-start="2321" selection-end="2321" vertical-scroll-proportion="-8.087719" vertical-offset="1051" max-vertical-offset="1656">
+            <state line="304" column="65" selection-start="21960" selection-end="21960" vertical-scroll-proportion="0.0" vertical-offset="5472" max-vertical-offset="6300">
               <folding />
             </state>
           </provider>
@@ -72,7 +49,7 @@
       <file leaf-file-name="artx_partner.install" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.install">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="17" selection-start="221" selection-end="231" vertical-scroll-proportion="-0.6315789" vertical-offset="162" max-vertical-offset="1584">
+            <state line="64" column="24" selection-start="1866" selection-end="1866" vertical-scroll-proportion="0.0" vertical-offset="1152" max-vertical-offset="1944">
               <folding />
             </state>
           </provider>
@@ -81,7 +58,7 @@
       <file leaf-file-name="artx_partner.module" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="26" selection-start="3429" selection-end="3429" vertical-scroll-proportion="0.33333334" vertical-offset="1846" max-vertical-offset="4464">
+            <state line="273" column="13" selection-start="7764" selection-end="7764" vertical-scroll-proportion="7.1737227" vertical-offset="0" max-vertical-offset="6912">
               <folding>
                 <element signature="e#7#80#0" expanded="true" />
               </folding>
@@ -89,11 +66,42 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="artwork.pages.inc" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/contrib/artwork-master/artwork.pages.inc">
+      <file leaf-file-name="artx_product.module" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_product/artx_product.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="3" selection-start="865" selection-end="865" vertical-scroll-proportion="-0.6315789" vertical-offset="594" max-vertical-offset="4320">
+            <state line="103" column="3" selection-start="3043" selection-end="3043" vertical-scroll-proportion="0.0" vertical-offset="1854" max-vertical-offset="5238">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="artx_gallery.module" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_gallery/artx_gallery.module">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="20" selection-start="979" selection-end="1017" vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="1890">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="artx_user.module" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_user/artx_user.module">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="52" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.0" vertical-offset="666" max-vertical-offset="1386">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.inc" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drupal/includes/module.inc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1101" column="3" selection-start="40946" selection-end="40946" vertical-scroll-proportion="0.0" vertical-offset="19818" max-vertical-offset="19962">
+              <folding>
+                <marker date="1398028310501" expanded="true" signature="4469:4589" placeholder="SELECT name,..." />
+                <marker date="1398028310501" expanded="true" signature="5939:6048" placeholder="SELECT * FRO..." />
+                <marker date="1398028310501" expanded="true" signature="15316:15379" placeholder="SELECT statu..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -101,27 +109,7 @@
       <file leaf-file-name="commerce_wishlist.views.inc" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/contrib/commerce_wishlist/includes/views/commerce_wishlist.views.inc">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="40" selection-start="428" selection-end="428" vertical-scroll-proportion="-5.6842103" vertical-offset="0" max-vertical-offset="2034">
-              <folding>
-                <element signature="e#7#59#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="commerce_kickstart_search.views_default.inc" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/commerce_kickstart/commerce_kickstart_search/commerce_kickstart_search.views_default.inc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="7" selection-start="977" selection-end="978" vertical-scroll-proportion="-2.3508773" vertical-offset="316" max-vertical-offset="1458">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="commerce_wishlist_handler_field_product_link_delete.inc" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/contrib/commerce_wishlist/includes/views/handlers/commerce_wishlist_handler_field_product_link_delete.inc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="57" selection-start="90" selection-end="141" vertical-scroll-proportion="-1.5789474" vertical-offset="0" max-vertical-offset="918">
+            <state line="78" column="28" selection-start="2309" selection-end="2309" vertical-scroll-proportion="0.0" vertical-offset="1404" max-vertical-offset="2034">
               <folding />
             </state>
           </provider>
@@ -151,8 +139,8 @@
     <setting file="file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_product/artx_product.module" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/commerce/modules/product/commerce_product_ui.module" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/commerce/modules/product/commerce_product.module" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/commerce/modules/cart/commerce_cart.module" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/drupal/modules/taxonomy/taxonomy.pages.inc" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/commerce/modules/cart/commerce_cart.module" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/drupal/includes/theme.inc" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/views/plugins/views_plugin_style.inc" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
   </component>
@@ -190,7 +178,6 @@
         <option value="$PROJECT_DIR$/drupal/sites/all/themes/artx_theme/css/artx.css" />
         <option value="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_product/css/artx.css" />
         <option value="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_product/css/artx_product.css" />
-        <option value="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_product/artx_product.module" />
         <option value="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_gallery/artx_gallery.info" />
         <option value="$PROJECT_DIR$/drupal/index.php" />
         <option value="$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/commerce_kickstart/commerce_kickstart_taxonomy/commerce_kickstart_taxonomy.module" />
@@ -207,8 +194,9 @@
         <option value="$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/commerce_kickstart/commerce_kickstart_product_ui/theme/node--product--type--product--list.tpl.php" />
         <option value="$PROJECT_DIR$/drupal/sites/all/modules/contrib/commerce_wishlist/includes/views/commerce_wishlist.views.inc" />
         <option value="$PROJECT_DIR$/drupal/sites/all/modules/contrib/commerce_wishlist/includes/views/commerce_wishlist.views_default.inc" />
-        <option value="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.install" />
         <option value="$PROJECT_DIR$/drupal/sites/all/modules/contrib/commerce_wishlist/commerce_wishlist.module" />
+        <option value="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.install" />
+        <option value="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_product/artx_product.module" />
         <option value="$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.module" />
       </list>
     </option>
@@ -385,6 +373,11 @@
             <id>XSLT</id>
           </State>
         </expanded-state>
+        <selected-state>
+          <State>
+            <id>PhpParamsInspection</id>
+          </State>
+        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -952,78 +945,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="contrib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="artxchange" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="artxchange" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drupal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="profiles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commerce_kickstart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contrib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="handlers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="artxchange" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="artxchange" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drupal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="profiles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commerce_kickstart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="commerce_kickstart" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1077,6 +998,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bam-rp-d7-dev-core-concepts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bam-rp-d7-dev-core-concepts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artxchange" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bam-rp-d7-dev-core-concepts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="steps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1426,7 +1401,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistory" value=":&#10;template&#10;.&#10;admincustomer&#10;function.l.php&#10;LICENSE.txt&#10;Controller.php&#10;FrontController&#10;authentication.tpl&#10;account-creation" />
+    <property name="SearchEverywhereHistory" value="&#10;:&#10;template&#10;.&#10;admincustomer&#10;function.l.php&#10;LICENSE.txt&#10;Controller.php&#10;FrontController&#10;authentication.tpl&#10;account-creation" />
     <property name="options.lastSelected" value="appearance" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -1472,10 +1447,10 @@
     <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="CHROME" server_name="192.168.219.135" start_url="">
       <method />
     </configuration>
-    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug">
+    <configuration default="true" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request">
       <method />
     </configuration>
-    <configuration default="true" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request">
+    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug">
       <method />
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
@@ -1558,21 +1533,21 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32611465" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32738853" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32738853" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2602564" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2753526" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3707186" sideWeight="0.4991511" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3628205" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32706514" sideWeight="0.4991511" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36239102" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32639354" sideWeight="0.5008489" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32356858" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2602564" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1590,9 +1565,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24916051" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34293368" sideWeight="0.4991511" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1626,16 +1601,6 @@
           <option name="timeStamp" value="285" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.module</url>
-          <line>36</line>
-          <option name="timeStamp" value="290" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/drupal/sites/all/modules/contrib/commerce_wishlist/includes/views/commerce_wishlist.views.inc</url>
-          <line>104</line>
-          <option name="timeStamp" value="296" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/drupal/sites/all/modules/contrib/commerce_wishlist/commerce_wishlist.module</url>
           <line>334</line>
           <option name="timeStamp" value="297" />
@@ -1651,20 +1616,45 @@
           <option name="timeStamp" value="301" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/drupal/sites/all/modules/contrib/commerce_wishlist/commerce_wishlist.module</url>
-          <line>47</line>
-          <option name="timeStamp" value="306" />
+          <url>file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.install</url>
+          <line>101</line>
+          <option name="timeStamp" value="310" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/drupal/sites/all/modules/contrib/commerce_wishlist/includes/views/commerce_wishlist.views_default.inc</url>
-          <line>342</line>
-          <option name="timeStamp" value="308" />
+          <url>file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.module</url>
+          <line>314</line>
+          <option name="timeStamp" value="313" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.module</url>
+          <line>284</line>
+          <option name="timeStamp" value="316" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.module</url>
+          <line>105</line>
+          <option name="timeStamp" value="319" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.module</url>
+          <line>103</line>
+          <option name="timeStamp" value="321" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.module</url>
+          <line>210</line>
+          <option name="timeStamp" value="324" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.module</url>
+          <line>208</line>
+          <option name="timeStamp" value="325" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="309" />
+      <option name="time" value="327" />
     </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
@@ -1680,31 +1670,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/themes/omega/omega/templates/region--content.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="253" selection-end="253" vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="378" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drupal/modules/system/page.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="31" selection-start="5816" selection-end="5816" vertical-scroll-proportion="-6.5555553" vertical-offset="903" max-vertical-offset="1656" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/custom/lookandfeel/lookandfeel.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="50" selection-start="357" selection-end="408" vertical-scroll-proportion="-5.0" vertical-offset="36" max-vertical-offset="1980" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drupal/includes/bootstrap.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2333" column="33" selection-start="79639" selection-end="79639" vertical-scroll-proportion="-2.148148" vertical-offset="41882" max-vertical-offset="62820" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drupal/modules/image/image.field.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="567" column="0" selection-start="18992" selection-end="18992" vertical-scroll-proportion="-6.240741" vertical-offset="9815" max-vertical-offset="11610" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/drupal/includes/pager.inc">
       <provider selected="true" editor-type-id="text-editor">
         <state line="319" column="20" selection-start="10820" selection-end="10831" vertical-scroll-proportion="-4.5740743" vertical-offset="5441" max-vertical-offset="12006" />
@@ -1734,9 +1699,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="972" selection-end="972" vertical-scroll-proportion="0.0" vertical-offset="666" max-vertical-offset="792">
-          <folding />
-        </state>
+        <state line="37" column="0" selection-start="972" selection-end="972" vertical-scroll-proportion="0.0" vertical-offset="666" max-vertical-offset="792" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/commerce_kickstart/commerce_kickstart_taxonomy/theme/views-view--collection-products--page.tpl.php">
@@ -1746,9 +1709,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/views/plugins/views_plugin_display_page.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="229" column="0" selection-start="7818" selection-end="7818" vertical-scroll-proportion="0.0" vertical-offset="4122" max-vertical-offset="10350">
-          <folding />
-        </state>
+        <state line="229" column="0" selection-start="7818" selection-end="7818" vertical-scroll-proportion="0.0" vertical-offset="4122" max-vertical-offset="10350" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/includes/common.inc">
@@ -1760,30 +1721,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/views/handlers/views_handler_area_view.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="0" selection-start="2377" selection-end="2377" vertical-scroll-proportion="0.5943662" vertical-offset="892" max-vertical-offset="1602">
-          <folding />
-        </state>
+        <state line="73" column="0" selection-start="2377" selection-end="2377" vertical-scroll-proportion="0.5943662" vertical-offset="892" max-vertical-offset="1602" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/views/plugins/views_plugin_display.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2609" column="44" selection-start="95859" selection-end="95859" vertical-scroll-proportion="0.0" vertical-offset="46962" max-vertical-offset="55458">
-          <folding />
-        </state>
+        <state line="2609" column="44" selection-start="95859" selection-end="95859" vertical-scroll-proportion="0.0" vertical-offset="46962" max-vertical-offset="55458" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/views/views.info">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="289" column="38" selection-start="16219" selection-end="16219" vertical-scroll-proportion="0.63578945" vertical-offset="4900" max-vertical-offset="5868">
-          <folding />
-        </state>
+        <state line="289" column="38" selection-start="16219" selection-end="16219" vertical-scroll-proportion="0.63578945" vertical-offset="4900" max-vertical-offset="5868" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/views/includes/view.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="13" selection-start="1958" selection-end="1965" vertical-scroll-proportion="0.0" vertical-offset="1818" max-vertical-offset="47934">
-          <folding />
-        </state>
+        <state line="101" column="13" selection-start="1958" selection-end="1965" vertical-scroll-proportion="0.0" vertical-offset="1818" max-vertical-offset="47934" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/views/theme/theme.inc">
@@ -1795,254 +1748,218 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/commerce/modules/product/commerce_product.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="666" column="56" selection-start="19131" selection-end="19131" vertical-scroll-proportion="0.63065696" vertical-offset="11466" max-vertical-offset="17478">
-          <folding>
-            <marker date="1398028310897" expanded="true" signature="-1:-1" placeholder="SELECT produ..." />
-          </folding>
-        </state>
+        <state line="666" column="56" selection-start="19131" selection-end="19131" vertical-scroll-proportion="0.63065696" vertical-offset="11466" max-vertical-offset="17478" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/views/plugins/views_plugin_style.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="380" column="0" selection-start="12785" selection-end="12785" vertical-scroll-proportion="0.42288557" vertical-offset="6616" max-vertical-offset="10818">
-          <folding />
-        </state>
+        <state line="380" column="0" selection-start="12785" selection-end="12785" vertical-scroll-proportion="0.42288557" vertical-offset="6616" max-vertical-offset="10818" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/commerce/modules/cart/commerce_cart.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1985" column="43" selection-start="77019" selection-end="77019" vertical-scroll-proportion="0.4744318" vertical-offset="35455" max-vertical-offset="49140">
-          <folding>
-            <marker date="1398028310873" expanded="true" signature="-1:-1" placeholder="SELECT order..." />
-            <marker date="1398028310873" expanded="true" signature="-1:-1" placeholder="SELECT order..." />
-          </folding>
-        </state>
+        <state line="1985" column="43" selection-start="77019" selection-end="77019" vertical-scroll-proportion="0.4744318" vertical-offset="35455" max-vertical-offset="49140" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/includes/theme.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="787" column="11" selection-start="28175" selection-end="28175" vertical-scroll-proportion="0.8567639" vertical-offset="13735" max-vertical-offset="52524">
-          <folding />
-        </state>
+        <state line="787" column="11" selection-start="28175" selection-end="28175" vertical-scroll-proportion="0.8567639" vertical-offset="13735" max-vertical-offset="52524" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/commerce_kickstart/commerce_kickstart_product/commerce_kickstart_product.features.field.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5094" column="22" selection-start="141985" selection-end="141985" vertical-scroll-proportion="0.7692308" vertical-offset="91338" max-vertical-offset="141174">
-          <folding />
-        </state>
+        <state line="5094" column="22" selection-start="141985" selection-end="141985" vertical-scroll-proportion="0.7692308" vertical-offset="91338" max-vertical-offset="141174" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/commerce_kickstart/commerce_kickstart_product_ui/commerce_kickstart_product_ui.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="39" selection-start="1039" selection-end="1073" vertical-scroll-proportion="0.67164177" vertical-offset="324" max-vertical-offset="3870">
-          <folding />
-        </state>
+        <state line="36" column="39" selection-start="1039" selection-end="1073" vertical-scroll-proportion="0.67164177" vertical-offset="324" max-vertical-offset="3870" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/commerce_kickstart.install">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="322" column="7" selection-start="12892" selection-end="12892" vertical-scroll-proportion="0.39578456" vertical-offset="5573" max-vertical-offset="20124">
-          <folding />
-        </state>
+        <state line="322" column="7" selection-start="12892" selection-end="12892" vertical-scroll-proportion="0.39578456" vertical-offset="5573" max-vertical-offset="20124" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/commerce_kickstart/commerce_kickstart_product/commerce_kickstart_product.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="14" selection-start="124" selection-end="150" vertical-scroll-proportion="0.1264637" vertical-offset="0" max-vertical-offset="1422">
-          <folding />
-        </state>
+        <state line="7" column="14" selection-start="124" selection-end="150" vertical-scroll-proportion="0.1264637" vertical-offset="0" max-vertical-offset="1422" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/views/views.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="3" selection-start="686" selection-end="686" vertical-scroll-proportion="0.46370023" vertical-offset="126" max-vertical-offset="45594">
-          <folding>
-            <marker date="1398028311461" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-          </folding>
-        </state>
+        <state line="25" column="3" selection-start="686" selection-end="686" vertical-scroll-proportion="0.46370023" vertical-offset="126" max-vertical-offset="45594" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_gallery/artx_gallery.info">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.info">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="24" selection-start="346" selection-end="346" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
-          <folding />
-        </state>
+        <state line="13" column="0" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/includes/menu.inc">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2755" column="7" selection-start="100543" selection-end="100543" vertical-scroll-proportion="0.46766168" vertical-offset="49348" max-vertical-offset="70092">
-          <folding>
-            <marker date="1398028310501" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1398028310501" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1398028310501" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1398028310501" expanded="true" signature="-1:-1" placeholder="SELECT mlid ..." />
-            <marker date="1398028310501" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1398028310501" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1398028310501" expanded="true" signature="-1:-1" placeholder="SELECT menu_..." />
-            <marker date="1398028310501" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1398028310501" expanded="true" signature="-1:-1" placeholder="SELECT menu_..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/commerce_kickstart/commerce_kickstart_product_ui/theme/node--product--type--product--list.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="196" selection-end="196" vertical-scroll-proportion="0.26024097" vertical-offset="0" max-vertical-offset="415">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_product/artx_product.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="1632" selection-end="1632" vertical-scroll-proportion="1.7380353" vertical-offset="84" max-vertical-offset="5166">
-          <folding />
-        </state>
+        <state line="6" column="0" selection-start="196" selection-end="196" vertical-scroll-proportion="0.26024097" vertical-offset="0" max-vertical-offset="415" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/modules/system/system.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2765" column="23" selection-start="97818" selection-end="97818" vertical-scroll-proportion="0.579602" vertical-offset="49483" max-vertical-offset="72540">
-          <folding>
-            <marker date="1398028310593" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1398028310593" expanded="true" signature="-1:-1" placeholder="SELECT mlid,..." />
-            <marker date="1398028310593" expanded="true" signature="-1:-1" placeholder="SELECT filen..." />
-            <marker date="1398028310593" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1398028310593" expanded="true" signature="-1:-1" placeholder="SELECT fid F..." />
-            <marker date="1398028310593" expanded="true" signature="-1:-1" placeholder="SELECT df.df..." />
-            <marker date="1398028310593" expanded="true" signature="-1:-1" placeholder="SELECT forma..." />
-            <marker date="1398028310593" expanded="true" signature="-1:-1" placeholder="SELECT dft.t..." />
-            <marker date="1398028310593" expanded="true" signature="-1:-1" placeholder="SELECT df.df..." />
-            <marker date="1398028310593" expanded="true" signature="-1:-1" placeholder="SELECT 1 FRO..." />
-          </folding>
-        </state>
+        <state line="2765" column="23" selection-start="97818" selection-end="97818" vertical-scroll-proportion="0.579602" vertical-offset="49483" max-vertical-offset="72540" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/views/handlers/views_handler_filter_numeric.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="34" selection-start="181" selection-end="209" vertical-scroll-proportion="0.23649634" vertical-offset="0" max-vertical-offset="5904">
-          <folding />
-        </state>
+        <state line="12" column="34" selection-start="181" selection-end="209" vertical-scroll-proportion="0.23649634" vertical-offset="0" max-vertical-offset="5904" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/views/handlers/views_handler_field_numeric.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="43" selection-start="339" selection-end="339" vertical-scroll-proportion="0.34160584" vertical-offset="0" max-vertical-offset="2520">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_gallery/artx_gallery.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="8" selection-start="139" selection-end="145" vertical-scroll-proportion="-0.19336219" vertical-offset="278" max-vertical-offset="1836">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_user/artx_user.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="37" selection-start="137" selection-end="143" vertical-scroll-proportion="0.15584415" vertical-offset="0" max-vertical-offset="1332">
-          <folding />
-        </state>
+        <state line="16" column="43" selection-start="339" selection-end="339" vertical-scroll-proportion="0.34160584" vertical-offset="0" max-vertical-offset="2520" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/CHANGELOG.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="306" column="23" selection-start="17498" selection-end="17498" vertical-scroll-proportion="0.0" vertical-offset="5339" max-vertical-offset="33102">
-          <folding />
-        </state>
+        <state line="306" column="23" selection-start="17498" selection-end="17498" vertical-scroll-proportion="0.0" vertical-offset="5339" max-vertical-offset="33102" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/contrib/commerce/modules/customer/commerce_customer.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="11" selection-start="608" selection-end="608" vertical-scroll-proportion="-7.3333335" vertical-offset="108" max-vertical-offset="26226">
-          <folding />
-        </state>
+        <state line="21" column="11" selection-start="608" selection-end="608" vertical-scroll-proportion="-7.3333335" vertical-offset="108" max-vertical-offset="26226" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/contrib/artwork-master/artwork.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="40" selection-start="3414" selection-end="3430" vertical-scroll-proportion="-2.5614035" vertical-offset="2338" max-vertical-offset="6894">
-          <folding />
-        </state>
+        <state line="138" column="40" selection-start="3414" selection-end="3430" vertical-scroll-proportion="-2.5614035" vertical-offset="2338" max-vertical-offset="6894" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/contrib/artwork-master/artwork.pages.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="3" selection-start="865" selection-end="865" vertical-scroll-proportion="-0.6315789" vertical-offset="594" max-vertical-offset="4320">
-          <folding />
-        </state>
+        <state line="35" column="3" selection-start="865" selection-end="865" vertical-scroll-proportion="-0.6315789" vertical-offset="594" max-vertical-offset="4320" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/profiles/commerce_kickstart/modules/commerce_kickstart/commerce_kickstart_search/commerce_kickstart_search.views_default.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="7" selection-start="977" selection-end="978" vertical-scroll-proportion="-2.3508773" vertical-offset="316" max-vertical-offset="1458">
-          <folding />
-        </state>
+        <state line="28" column="7" selection-start="977" selection-end="978" vertical-scroll-proportion="-2.3508773" vertical-offset="316" max-vertical-offset="1458" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/contrib/commerce_wishlist/includes/views/handlers/commerce_wishlist_handler_field_product_link_delete.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="57" selection-start="90" selection-end="141" vertical-scroll-proportion="-1.5789474" vertical-offset="0" max-vertical-offset="918">
+        <state line="5" column="57" selection-start="90" selection-end="141" vertical-scroll-proportion="-1.5789474" vertical-offset="0" max-vertical-offset="918" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/contrib/commerce_wishlist/commerce_wishlist.admin.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="760" selection-end="760" vertical-scroll-proportion="-12.962963" vertical-offset="10" max-vertical-offset="828" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="24" selection-start="346" selection-end="346" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/contrib/commerce_wishlist/commerce_wishlist.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="12" selection-start="289" selection-end="291" vertical-scroll-proportion="-4.3" vertical-offset="87" max-vertical-offset="504" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/contrib/commerce_wishlist/commerce_wishlist.install">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="0" selection-start="1639" selection-end="1639" vertical-scroll-proportion="-2.9649122" vertical-offset="983" max-vertical-offset="1656" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupal/includes/module.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1101" column="3" selection-start="40946" selection-end="40946" vertical-scroll-proportion="0.0" vertical-offset="19818" max-vertical-offset="19962">
+          <folding>
+            <marker date="1398028310501" expanded="true" signature="4469:4589" placeholder="SELECT name,..." />
+            <marker date="1398028310501" expanded="true" signature="5939:6048" placeholder="SELECT * FRO..." />
+            <marker date="1398028310501" expanded="true" signature="15316:15379" placeholder="SELECT statu..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/contrib/commerce_wishlist/commerce_wishlist.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="0" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.0" vertical-offset="846" max-vertical-offset="6876">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/contrib/commerce_wishlist/includes/views/commerce_wishlist.views.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="40" selection-start="428" selection-end="428" vertical-scroll-proportion="-5.6842103" vertical-offset="0" max-vertical-offset="2034">
-          <folding>
-            <element signature="e#7#59#0" expanded="true" />
-          </folding>
+        <state line="78" column="28" selection-start="2309" selection-end="2309" vertical-scroll-proportion="0.0" vertical-offset="1404" max-vertical-offset="2034">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_user/artx_user.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="52" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.0" vertical-offset="666" max-vertical-offset="1386">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/contrib/commerce_wishlist/includes/views/commerce_wishlist.views_default.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="63" selection-start="3159" selection-end="3159" vertical-scroll-proportion="-5.0526314" vertical-offset="1026" max-vertical-offset="6264">
+        <state line="304" column="65" selection-start="21960" selection-end="21960" vertical-scroll-proportion="0.0" vertical-offset="5472" max-vertical-offset="6300">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/contrib/commerce_wishlist/commerce_wishlist.install">
+    <entry file="file://$PROJECT_DIR$/bam-rp-d7-dev-core-concepts/pages/steps/06.pages.module.placeholders.step">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="43" selection-start="2321" selection-end="2321" vertical-scroll-proportion="-8.087719" vertical-offset="1051" max-vertical-offset="1656">
-          <folding />
-        </state>
+        <state line="15" column="3" selection-start="344" selection-end="344" vertical-scroll-proportion="0.39800996" vertical-offset="30" max-vertical-offset="2340" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/contrib/commerce_wishlist/commerce_wishlist.admin.inc">
+    <entry file="file://$PROJECT_DIR$/bam-rp-d7-dev-core-concepts/pages/steps/05.pages.module.arguments.step">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="760" selection-end="760" vertical-scroll-proportion="-12.962963" vertical-offset="10" max-vertical-offset="828">
-          <folding />
-        </state>
+        <state line="111" column="23" selection-start="3013" selection-end="3027" vertical-scroll-proportion="0.62738854" vertical-offset="1604" max-vertical-offset="2232" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bam-rp-d7-dev-core-concepts/pages/steps/07.pages.module.object-loading.step">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="152" column="1" selection-start="4180" selection-end="4180" vertical-scroll-proportion="0.50382847" vertical-offset="2407" max-vertical-offset="3060" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.install">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="17" selection-start="221" selection-end="231" vertical-scroll-proportion="-0.6315789" vertical-offset="162" max-vertical-offset="1584">
+        <state line="64" column="24" selection-start="1866" selection-end="1866" vertical-scroll-proportion="0.0" vertical-offset="1152" max-vertical-offset="1944">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/contrib/commerce_wishlist/commerce_wishlist.module">
+    <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_gallery/artx_gallery.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="19" selection-start="3503" selection-end="3523" vertical-scroll-proportion="-2.3508773" vertical-offset="2026" max-vertical-offset="6822">
+        <state line="38" column="20" selection-start="979" selection-end="1017" vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="1890">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_product/artx_product.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="3" selection-start="3043" selection-end="3043" vertical-scroll-proportion="0.0" vertical-offset="1854" max-vertical-offset="5238">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drupal/sites/all/modules/artx/artx_partner/artx_partner.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="26" selection-start="3429" selection-end="3429" vertical-scroll-proportion="0.33333334" vertical-offset="1846" max-vertical-offset="4464">
+        <state line="273" column="13" selection-start="7764" selection-end="7764" vertical-scroll-proportion="7.1737227" vertical-offset="0" max-vertical-offset="6912">
           <folding>
             <element signature="e#7#80#0" expanded="true" />
           </folding>
